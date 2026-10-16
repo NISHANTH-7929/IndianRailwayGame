@@ -1,0 +1,44 @@
+{
+  "assetId": "egmoretower4m",
+  "description": "Original Egmore architectural study with platform-facing facade details; estimated dimensions, visual acceptance pending",
+  "displayName": "EgmoreTower4m",
+  "files": [
+    {
+      "bytes": 6999680,
+      "kind": "model",
+      "path": "model.glb",
+      "sha256": "49d095dded235e19c56fc054db3809abc52caeb1076a4311faf17b28b049c329"
+    },
+    {
+      "bytes": 3421,
+      "kind": "metadata",
+      "path": "metadata.json",
+      "sha256": "3e9d0c9cde8422dbc59519cb26b1b9b391a0eda3621b4374d00fe2ff60db237f"
+    },
+    {
+      "bytes": 623,
+      "kind": "provenance",
+      "path": "provenance.json",
+      "sha256": "44d4d69fd263f84fcab77783bcb21efeb3499b525fb3e88fe963bfccad3a2389"
+    },
+    {
+      "bytes": 4319,
+      "kind": "validation",
+      "path": "validation.json",
+      "sha256": "19af819aa0f76bbcd6c0afeee5ba5be24f7d527d51145bbe1fe4972f27843a3b"
+    }
+  ],
+  "license": "LicenseRef-ProjectOriginal",
+  "model": "model.glb",
+  "packageId": "pkg_984b0d060c67173bde64091a",
+  "provenance": {
+    "origin": "authored"
+  },
+  "schema": "game_dev.asset_package.v1",
+  "validation": {
+    "errorCount": 0,
+    "passed": true,
+    "warningCount": 0
+  },
+  "version": "1.2.0"
+}

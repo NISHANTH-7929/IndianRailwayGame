@@ -1,0 +1,609 @@
+{
+  "bounds_min": [
+    -1.5547795295715332,
+    -10.665215492248535,
+    -0.0010409210808575153
+  ],
+  "bounds_max": [
+    1.5596716403961182,
+    10.665215492248535,
+    5.8950042724609375
+  ],
+  "dimensions": [
+    3.1144511699676514,
+    21.33043098449707,
+    5.896045207977295
+  ],
+  "objects": [
+    {
+      "name": "Cube.006",
+      "dimensions": [
+        3.112071990966797,
+        20.021240234375,
+        1.8263158798217773
+      ],
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "triangles": 4120,
+      "materials": [
+        "main"
+      ]
+    },
+    {
+      "name": "Cube.011",
+      "dimensions": [
+        2.332341432571411,
+        19.561325073242188,
+        0.6131558418273926
+      ],
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "triangles": 1800,
+      "materials": [
+        "booggy"
+      ]
+    },
+    {
+      "name": "Cube.012",
+      "dimensions": [
+        2.241257905960083,
+        19.730220794677734,
+        0.42945241928100586
+      ],
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "triangles": 7224,
+      "materials": [
+        "mainupper"
+      ]
+    },
+    {
+      "name": "Cube.013",
+      "dimensions": [
+        3.0724780559539795,
+        18.7561092376709,
+        0.5979962348937988
+      ],
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "triangles": 1168,
+      "materials": [
+        "black"
+      ]
+    },
+    {
+      "name": "Cube.014",
+      "dimensions": [
+        2.3857555389404297,
+        19.34951400756836,
+        0.10005664825439453
+      ],
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "triangles": 552,
+      "materials": [
+        "booggy"
+      ]
+    },
+    {
+      "name": "Plane.005",
+      "dimensions": [
+        2.671419620513916,
+        13.474806785583496,
+        3.9674811363220215
+      ],
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "triangles": 2706,
+      "materials": [
+        "ironupperwhi"
+      ]
+    },
+    {
+      "name": "Cylinder.001",
+      "dimensions": [
+        2.03053617477417,
+        12.657958984375,
+        0.6120707988739014
+      ],
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "triangles": 1604,
+      "materials": [
+        "cable"
+      ]
+    },
+    {
+      "name": "Cylinder.002",
+      "dimensions": [
+        0.11862453818321228,
+        0.8536300659179688,
+        0.0279998779296875
+      ],
+      "location": [
+        0.0,
+        -0.0011650323867797852,
+        0.0
+      ],
+      "triangles": 96,
+      "materials": []
+    },
+    {
+      "name": "Cylinder.003",
+      "dimensions": [
+        0.1492111086845398,
+        0.1666545867919922,
+        0.1303539276123047
+      ],
+      "location": [
+        0.0,
+        -0.0011650323867797852,
+        -0.1868225336074829
+      ],
+      "triangles": 596,
+      "materials": []
+    },
+    {
+      "name": "Cube.015",
+      "dimensions": [
+        2.4421114921569824,
+        8.55128288269043,
+        0.3304867744445801
+      ],
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "triangles": 45387,
+      "materials": [
+        "black"
+      ]
+    },
+    {
+      "name": "Cube.016",
+      "dimensions": [
+        0.22527426481246948,
+        17.45647430419922,
+        0.18717336654663086
+      ],
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "triangles": 24,
+      "materials": []
+    },
+    {
+      "name": "Circle.001",
+      "dimensions": [
+        1.6529481410980225,
+        1.5965466499328613,
+        0.42050614953041077
+      ],
+      "location": [
+        0.3427716791629791,
+        -5.5586113929748535,
+        3.7278525829315186
+      ],
+      "triangles": 440,
+      "materials": []
+    },
+    {
+      "name": "Circle.002",
+      "dimensions": [
+        2.238442897796631,
+        13.575607299804688,
+        0.599256157875061
+      ],
+      "location": [
+        -0.8876627683639526,
+        -0.4569501578807831,
+        3.6875171661376953
+      ],
+      "triangles": 7202,
+      "materials": [
+        "insulators"
+      ]
+    },
+    {
+      "name": "Circle.003",
+      "dimensions": [
+        0.11208255589008331,
+        0.11323514580726624,
+        0.0470024049282074
+      ],
+      "location": [
+        -0.8876627683639526,
+        -0.4569501578807831,
+        3.6875171661376953
+      ],
+      "triangles": 66,
+      "materials": []
+    },
+    {
+      "name": "Cube.017",
+      "dimensions": [
+        2.863557815551758,
+        3.9542183876037598,
+        3.8230013847351074
+      ],
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "triangles": 4920,
+      "materials": [
+        "ironupperblk"
+      ]
+    },
+    {
+      "name": "Plane.006",
+      "dimensions": [
+        3.000805377960205,
+        19.980485916137695,
+        0.0
+      ],
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "triangles": 18,
+      "materials": [
+        "dark"
+      ]
+    },
+    {
+      "name": "Cube.018",
+      "dimensions": [
+        3.0766406059265137,
+        19.524812698364258,
+        0.6018800735473633
+      ],
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "triangles": 272,
+      "materials": [
+        "Material.003"
+      ]
+    },
+    {
+      "name": "Cube.020",
+      "dimensions": [
+        3.1095590591430664,
+        16.61432647705078,
+        0.5482254028320312
+      ],
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "triangles": 128,
+      "materials": [
+        "black"
+      ]
+    },
+    {
+      "name": "Circle.007",
+      "dimensions": [
+        0.4628450274467468,
+        19.75672149658203,
+        0.19661283493041992
+      ],
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "triangles": 384,
+      "materials": [
+        "Material.003"
+      ]
+    },
+    {
+      "name": "Plane.008",
+      "dimensions": [
+        2.2970879077911377,
+        20.172521591186523,
+        0.9711483716964722
+      ],
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "triangles": 672,
+      "materials": [
+        "mainupper"
+      ]
+    },
+    {
+      "name": "Cube.021",
+      "dimensions": [
+        3.1009819507598877,
+        21.33043098449707,
+        1.5706050395965576
+      ],
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "triangles": 190869,
+      "materials": [
+        "booggy"
+      ]
+    },
+    {
+      "name": "Cube.022",
+      "dimensions": [
+        2.1421070098876953,
+        19.74260711669922,
+        0.2944638729095459
+      ],
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "triangles": 880,
+      "materials": [
+        "Material.003"
+      ]
+    },
+    {
+      "name": "Cube.023",
+      "dimensions": [
+        2.072331428527832,
+        0.004111289978027344,
+        0.05531191825866699
+      ],
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "triangles": 46,
+      "materials": [
+        "redmit"
+      ]
+    },
+    {
+      "name": "Cube.026",
+      "dimensions": [
+        3.044969081878662,
+        0.8991804122924805,
+        1.4492151737213135
+      ],
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "triangles": 144,
+      "materials": [
+        "steel"
+      ]
+    },
+    {
+      "name": "Plane.009",
+      "dimensions": [
+        2.4275784492492676,
+        19.746675491333008,
+        0.7308962345123291
+      ],
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "triangles": 8016,
+      "materials": [
+        "black"
+      ]
+    },
+    {
+      "name": "Plane.010",
+      "dimensions": [
+        3.044969081878662,
+        0.8991804122924805,
+        1.4492151737213135
+      ],
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "triangles": 144,
+      "materials": [
+        "mainupper"
+      ]
+    },
+    {
+      "name": "Plane.011",
+      "dimensions": [
+        3.0599100589752197,
+        20.466217041015625,
+        2.9636316299438477
+      ],
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "triangles": 3898,
+      "materials": [
+        "mainupper"
+      ]
+    },
+    {
+      "name": "Plane.012",
+      "dimensions": [
+        2.059152841567993,
+        13.481117248535156,
+        2.1233677864074707
+      ],
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "triangles": 6104,
+      "materials": [
+        "Material.003"
+      ]
+    },
+    {
+      "name": "Cube.027",
+      "dimensions": [
+        2.064652442932129,
+        1.9073486328125e-06,
+        0.04449915885925293
+      ],
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "triangles": 44,
+      "materials": [
+        "whitemeit"
+      ]
+    }
+  ],
+  "triangles": 289524,
+  "images": [
+    {
+      "name": "booggy_Base_color",
+      "size": [
+        2048,
+        2048
+      ],
+      "path": "D:\\Project\\IndianRailwayGame\\04_Assets\\S8\\Acquired\\WAG9_Selected\\Original\\booggy_Base_color.png"
+    },
+    {
+      "name": "booggy_Metallic.png-booggy_Roughness.png",
+      "size": [
+        2048,
+        2048
+      ],
+      "path": "D:\\Project\\IndianRailwayGame\\04_Assets\\S8\\Acquired\\WAG9_Selected\\Original\\booggy_Metallic_png-booggy_Roughness_png.png"
+    },
+    {
+      "name": "booggy_Normal",
+      "size": [
+        2048,
+        2048
+      ],
+      "path": "D:\\Project\\IndianRailwayGame\\04_Assets\\S8\\Acquired\\WAG9_Selected\\Original\\booggy_Normal.png"
+    },
+    {
+      "name": "ironupperblk_Base_color",
+      "size": [
+        2048,
+        2048
+      ],
+      "path": "D:\\Project\\IndianRailwayGame\\04_Assets\\S8\\Acquired\\WAG9_Selected\\Original\\ironupperblk_Base_color.png"
+    },
+    {
+      "name": "ironupperblk_Metallic.png-ironupperblk_Roughness.png",
+      "size": [
+        2048,
+        2048
+      ],
+      "path": "D:\\Project\\IndianRailwayGame\\04_Assets\\S8\\Acquired\\WAG9_Selected\\Original\\ironupperblk_Metallic_png-ironupperblk_Roughness_png.png"
+    },
+    {
+      "name": "ironupperblk_Normal",
+      "size": [
+        2048,
+        2048
+      ],
+      "path": "D:\\Project\\IndianRailwayGame\\04_Assets\\S8\\Acquired\\WAG9_Selected\\Original\\ironupperblk_Normal.png"
+    },
+    {
+      "name": "ironupperwhi_Base_color",
+      "size": [
+        2048,
+        2048
+      ],
+      "path": "D:\\Project\\IndianRailwayGame\\04_Assets\\S8\\Acquired\\WAG9_Selected\\Original\\ironupperwhi_Base_color.png"
+    },
+    {
+      "name": "ironupperwhi_Metallic.png-ironupperwhi_Roughness.png",
+      "size": [
+        2048,
+        2048
+      ],
+      "path": "D:\\Project\\IndianRailwayGame\\04_Assets\\S8\\Acquired\\WAG9_Selected\\Original\\ironupperwhi_Metallic_png-ironupperwhi_Roughness_png.png"
+    },
+    {
+      "name": "ironupperwhi_Normal",
+      "size": [
+        2048,
+        2048
+      ],
+      "path": "D:\\Project\\IndianRailwayGame\\04_Assets\\S8\\Acquired\\WAG9_Selected\\Original\\ironupperwhi_Normal.png"
+    },
+    {
+      "name": "mainupper_Base_color",
+      "size": [
+        2048,
+        2048
+      ],
+      "path": "D:\\Project\\IndianRailwayGame\\04_Assets\\S8\\Acquired\\WAG9_Selected\\Original\\mainupper_Base_color.png"
+    },
+    {
+      "name": "mainupper_Metallic.png-mainupper_Roughness.png",
+      "size": [
+        2048,
+        2048
+      ],
+      "path": "D:\\Project\\IndianRailwayGame\\04_Assets\\S8\\Acquired\\WAG9_Selected\\Original\\mainupper_Metallic_png-mainupper_Roughness_png.png"
+    },
+    {
+      "name": "mainupper_Normal",
+      "size": [
+        2048,
+        2048
+      ],
+      "path": "D:\\Project\\IndianRailwayGame\\04_Assets\\S8\\Acquired\\WAG9_Selected\\Original\\mainupper_Normal.png"
+    },
+    {
+      "name": "wag9basefinal",
+      "size": [
+        1584,
+        385
+      ],
+      "path": "D:\\Project\\IndianRailwayGame\\04_Assets\\S8\\Acquired\\WAG9_Selected\\Original\\wag9basefinal.png"
+    }
+  ]
+}

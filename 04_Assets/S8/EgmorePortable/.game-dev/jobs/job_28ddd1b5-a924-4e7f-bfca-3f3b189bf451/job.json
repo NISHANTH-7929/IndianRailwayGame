@@ -1,0 +1,24 @@
+{
+  "schema": "game_dev.job.v1",
+  "id": "job_28ddd1b5-a924-4e7f-bfca-3f3b189bf451",
+  "operation": "package.verify",
+  "status": "completed",
+  "request": {
+    "positionals": [
+      "package",
+      "verify",
+      "D:\\Project\\IndianRailwayGame\\04_Assets\\S8\\EgmorePortable\\.game-dev\\packages\\egmoreballast3m\\1.1.0"
+    ],
+    "flags": {
+      "output-dir": "04_Assets/S8/EgmorePortable"
+    }
+  },
+  "attempts": 1,
+  "eventCount": 1,
+  "artifacts": [],
+  "createdAt": "2026-10-04T08:04:21.843Z",
+  "updatedAt": "2026-10-04T08:04:21.948Z",
+  "startedAt": "2026-10-04T08:04:21.874Z",
+  "completedAt": "2026-10-04T08:04:21.948Z",
+  "receiptPath": "D:\\Project\\IndianRailwayGame\\04_Assets\\S8\\EgmorePortable\\.game-dev\\jobs\\job_28ddd1b5-a924-4e7f-bfca-3f3b189bf451\\receipt.json"
+}

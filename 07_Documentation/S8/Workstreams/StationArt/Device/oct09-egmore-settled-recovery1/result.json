@@ -1,0 +1,33 @@
+{
+  "passed": true,
+  "apk": "D:\\Project\\IndianRailwayGame\\08_Builds\\S8_EgmoreService_20261009-144106\\Android_ASTC\\MyProject-arm64.apk",
+  "apkSha256": "92c96bdd077445973a7d05fcfefb5a82444f8924a11a8b52dd2fdba89fd2f5f9",
+  "cases": {
+    "egmore": {
+      "passed": true,
+      "checks": {
+        "identity": true,
+        "fingerprint": true,
+        "service": true,
+        "paused": true,
+        "unblocked": true,
+        "valid": true,
+        "recreated": true,
+        "generation": true,
+        "egmore_identity": true,
+        "egmore_ready": true,
+        "signals_ready": true,
+        "locomotives_ready": true
+      },
+      "fingerprint": "dcdde9a4ed3db7b7",
+      "reference": "pre-existing isolated last-checkpoint.json"
+    }
+  },
+  "restorationErrors": [],
+  "stopRestored": true,
+  "commandlineRestored": true,
+  "wakeRestored": true,
+  "savesUnchanged": true,
+  "artifactUnchanged": true,
+  "installedApkUnchanged": true
+}

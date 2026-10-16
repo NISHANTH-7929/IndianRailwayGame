@@ -1,0 +1,829 @@
+{
+  "asset_id": "Coach.LHB.Acquired01",
+  "content_id": "IR-S8-LHB-3A-1",
+  "definition_id": 3001,
+  "version": 1,
+  "body_length_m": 23.54,
+  "coupled_length_m": 24,
+  "coupling_gap_m": 0,
+  "bogie_offsets_m": [
+    7.45,
+    -7.45
+  ],
+  "bogie_wheelbase_m": 2.56,
+  "wheel_diameter_m": 0.915,
+  "status": "candidate; acceptance requires visual/Unreal/device checks",
+  "corrections": [
+    {
+      "source_object": "Cube",
+      "part": "Body"
+    },
+    {
+      "source_object": "Plane",
+      "part": "Body"
+    },
+    {
+      "source_object": "Plane.001",
+      "part": "Body"
+    },
+    {
+      "source_object": "NurbsPath.001",
+      "part": "Body"
+    },
+    {
+      "source_object": "NurbsPath.003",
+      "part": "Body"
+    },
+    {
+      "source_object": "Plane.002",
+      "part": "Body"
+    },
+    {
+      "source_object": "Plane.003",
+      "part": "Body"
+    },
+    {
+      "source_object": "Plane.004",
+      "part": "Body"
+    },
+    {
+      "source_object": "Plane.006",
+      "part": "Body"
+    },
+    {
+      "source_object": "Cube.001",
+      "part": "Body"
+    },
+    {
+      "source_object": "Cube.002",
+      "part": "Body"
+    },
+    {
+      "source_object": "Circle",
+      "part": "Body"
+    },
+    {
+      "source_object": "Circle.001",
+      "part": "Body"
+    },
+    {
+      "source_object": "Circle.002",
+      "part": "Body"
+    },
+    {
+      "source_object": "Circle.003",
+      "part": "Body"
+    },
+    {
+      "source_object": "Bolt",
+      "part": "Body"
+    },
+    {
+      "source_object": "Bolt.001",
+      "part": "Body"
+    },
+    {
+      "source_object": "Bolt.002",
+      "part": "Body"
+    },
+    {
+      "source_object": "Bolt.003",
+      "part": "Body"
+    },
+    {
+      "source_object": "Beam",
+      "part": "Body"
+    },
+    {
+      "source_object": "Cylinder.001",
+      "part": "Body"
+    },
+    {
+      "source_object": "Cylinder.002",
+      "part": "Body"
+    },
+    {
+      "source_object": "Cylinder.003",
+      "part": "Body"
+    },
+    {
+      "source_object": "Cylinder.004",
+      "part": "Body"
+    },
+    {
+      "source_object": "Cylinder.005",
+      "part": "Body"
+    },
+    {
+      "source_object": "Cylinder.006",
+      "part": "Body"
+    },
+    {
+      "source_object": "Cube.003",
+      "part": "Body"
+    },
+    {
+      "source_object": "Cube.004",
+      "part": "Body"
+    },
+    {
+      "source_object": "NurbsPath.004",
+      "part": "Body"
+    },
+    {
+      "source_object": "Cube.005",
+      "part": "Body"
+    },
+    {
+      "source_object": "Cube.006",
+      "part": "Body"
+    },
+    {
+      "source_object": "NurbsPath.006",
+      "part": "Body"
+    },
+    {
+      "source_object": "Cube.007",
+      "part": "Body"
+    },
+    {
+      "source_object": "Cylinder.009",
+      "part": "Bogie0"
+    },
+    {
+      "source_object": "Cylinder.010",
+      "part": "Bogie0"
+    },
+    {
+      "source_object": "Cylinder.007",
+      "part": "Bogie0"
+    },
+    {
+      "source_object": "Bolt.005",
+      "part": "Bogie0"
+    },
+    {
+      "source_object": "Bolt.008",
+      "part": "Bogie0"
+    },
+    {
+      "source_object": "Cylinder.011",
+      "part": "Wheel3"
+    },
+    {
+      "source_object": "Cube.008",
+      "part": "Body"
+    },
+    {
+      "source_object": "Cylinder.012",
+      "part": "Wheel2"
+    },
+    {
+      "source_object": "Bolt.004",
+      "part": "Bogie1"
+    },
+    {
+      "source_object": "Bolt.006",
+      "part": "Bogie1"
+    },
+    {
+      "source_object": "Cube.009",
+      "part": "Body"
+    },
+    {
+      "source_object": "Bolt.007",
+      "part": "Bogie1"
+    },
+    {
+      "source_object": "Bolt.009",
+      "part": "Bogie1"
+    },
+    {
+      "source_object": "Cube.010",
+      "part": "Body"
+    },
+    {
+      "source_object": "Bolt.010",
+      "part": "Bogie0"
+    },
+    {
+      "source_object": "Bolt.011",
+      "part": "Bogie0"
+    },
+    {
+      "source_object": "Cube.011",
+      "part": "Body"
+    },
+    {
+      "source_object": "Cube.012",
+      "part": "Body"
+    },
+    {
+      "source_object": "NurbsPath.005",
+      "part": "Body"
+    },
+    {
+      "source_object": "Cube.013",
+      "part": "Body"
+    },
+    {
+      "source_object": "Cube.014",
+      "part": "Body"
+    },
+    {
+      "source_object": "Cube.015",
+      "part": "Body"
+    },
+    {
+      "source_object": "NurbsPath.007",
+      "part": "Body"
+    },
+    {
+      "source_object": "NurbsPath.008",
+      "part": "Body"
+    },
+    {
+      "source_object": "Cube.032",
+      "part": "Body"
+    },
+    {
+      "source_object": "Cube.033",
+      "part": "Body"
+    },
+    {
+      "source_object": "Cylinder.026",
+      "part": "Wheel0"
+    },
+    {
+      "source_object": "NurbsPath",
+      "part": "Body"
+    },
+    {
+      "source_object": "Cube.034",
+      "part": "Body"
+    },
+    {
+      "source_object": "Cube.035",
+      "part": "Body"
+    },
+    {
+      "source_object": "Cylinder.027",
+      "part": "Wheel3"
+    },
+    {
+      "source_object": "Cylinder.028",
+      "part": "Wheel2"
+    },
+    {
+      "source_object": "Cylinder.029",
+      "part": "Wheel0"
+    },
+    {
+      "source_object": "Cylinder.008",
+      "part": "Wheel1"
+    },
+    {
+      "source_object": "Cylinder.030",
+      "part": "Wheel1"
+    },
+    {
+      "source_object": "Plane.005",
+      "part": "Body"
+    },
+    {
+      "source_object": "Plane.014",
+      "part": "Body"
+    },
+    {
+      "source_object": "Plane.015",
+      "part": "Body"
+    },
+    {
+      "source_object": "Cube.016",
+      "part": "Body"
+    },
+    {
+      "source_object": "NurbsPath.016",
+      "part": "Body"
+    },
+    {
+      "source_object": "Torus",
+      "part": "Body"
+    },
+    {
+      "source_object": "Torus.001",
+      "part": "Body"
+    },
+    {
+      "source_object": "Cube.043",
+      "part": "Body"
+    }
+  ],
+  "parts": [
+    {
+      "name": "Body",
+      "role": "body",
+      "fbx": "Parts/SM_LHB3A_Body_LOD0.fbx",
+      "location_cm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "triangles": 137097,
+      "material_slots": 22,
+      "local_bounds_m": [
+        [
+          -12.0,
+          -1.628000020980835,
+          0.171012282371521
+        ],
+        [
+          12.0,
+          1.628000020980835,
+          4.25
+        ]
+      ]
+    },
+    {
+      "name": "Bogie0",
+      "role": "bogie",
+      "fbx": "Parts/SM_LHB3A_Bogie0_LOD0.fbx",
+      "location_cm": [
+        -744.9999809265137,
+        0.0,
+        0.0
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "triangles": 19592,
+      "material_slots": 3,
+      "local_bounds_m": [
+        [
+          -1.8979721069335938,
+          -0.9724397659301758,
+          0.41860532760620117
+        ],
+        [
+          1.8761334419250488,
+          0.8754430413246155,
+          0.7535299062728882
+        ]
+      ]
+    },
+    {
+      "name": "Wheel3",
+      "role": "wheel",
+      "fbx": "Parts/SM_LHB3A_Wheel3_LOD0.fbx",
+      "location_cm": [
+        872.9999542236328,
+        0.0,
+        45.750001072883606
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "triangles": 6468,
+      "material_slots": 2,
+      "local_bounds_m": [
+        [
+          -0.4974355697631836,
+          -1.0676718950271606,
+          -0.49743616580963135
+        ],
+        [
+          0.4974365234375,
+          1.067671775817871,
+          0.49743619561195374
+        ]
+      ]
+    },
+    {
+      "name": "Wheel2",
+      "role": "wheel",
+      "fbx": "Parts/SM_LHB3A_Wheel2_LOD0.fbx",
+      "location_cm": [
+        617.0000076293945,
+        0.0,
+        45.750001072883606
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "triangles": 6468,
+      "material_slots": 2,
+      "local_bounds_m": [
+        [
+          -0.4974360466003418,
+          -1.0676718950271606,
+          -0.49743616580963135
+        ],
+        [
+          0.4974360466003418,
+          1.0676718950271606,
+          0.49743619561195374
+        ]
+      ]
+    },
+    {
+      "name": "Bogie1",
+      "role": "bogie",
+      "fbx": "Parts/SM_LHB3A_Bogie1_LOD0.fbx",
+      "location_cm": [
+        744.9999809265137,
+        0.0,
+        0.0
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "triangles": 18288,
+      "material_slots": 1,
+      "local_bounds_m": [
+        [
+          -1.886202335357666,
+          -0.9724397659301758,
+          0.5860414505004883
+        ],
+        [
+          1.8665218353271484,
+          0.8754430413246155,
+          0.7535299062728882
+        ]
+      ]
+    },
+    {
+      "name": "Wheel0",
+      "role": "wheel",
+      "fbx": "Parts/SM_LHB3A_Wheel0_LOD0.fbx",
+      "location_cm": [
+        -872.9999542236328,
+        0.0,
+        45.750001072883606
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "triangles": 7580,
+      "material_slots": 2,
+      "local_bounds_m": [
+        [
+          -0.4974365234375,
+          -1.0408190488815308,
+          -0.49743616580963135
+        ],
+        [
+          0.4974355697631836,
+          1.040818691253662,
+          0.49743619561195374
+        ]
+      ]
+    },
+    {
+      "name": "Wheel1",
+      "role": "wheel",
+      "fbx": "Parts/SM_LHB3A_Wheel1_LOD0.fbx",
+      "location_cm": [
+        -617.0000076293945,
+        0.0,
+        45.750001072883606
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "triangles": 7580,
+      "material_slots": 2,
+      "local_bounds_m": [
+        [
+          -0.4974365234375,
+          -1.0356760025024414,
+          -0.4944644868373871
+        ],
+        [
+          0.4974360466003418,
+          1.0356758832931519,
+          0.5004079341888428
+        ]
+      ]
+    }
+  ],
+  "materials": [
+    {
+      "name": "Material.019",
+      "base_color": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "vertex_color": true
+    },
+    {
+      "name": "Material.027",
+      "base_color": [
+        0.06284482777118683,
+        0.06284482777118683,
+        0.06284482777118683,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "vertex_color": true
+    },
+    {
+      "name": "Material.002",
+      "base_color": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "vertex_color": true
+    },
+    {
+      "name": "Material.023",
+      "base_color": [
+        0.15319125354290009,
+        0.12021232396364212,
+        0.0,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "vertex_color": true
+    },
+    {
+      "name": "Material.006",
+      "base_color": [
+        0.17985060811042786,
+        0.2803638279438019,
+        0.36264264583587646,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "vertex_color": true
+    },
+    {
+      "name": "Material.017",
+      "base_color": [
+        0.6931279301643372,
+        0.8000000715255737,
+        0.0,
+        1.0
+      ],
+      "metallic": 0.5137614607810974,
+      "roughness": 0.7798165082931519,
+      "vertex_color": true
+    },
+    {
+      "name": "Material",
+      "base_color": [
+        0.111263707280159,
+        0.10291757434606552,
+        0.12260700762271881,
+        1.0
+      ],
+      "metallic": 0.2844036817550659,
+      "roughness": 0.38,
+      "vertex_color": true
+    },
+    {
+      "name": "Material.011",
+      "base_color": [
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "vertex_color": true
+    },
+    {
+      "name": "Material.020",
+      "base_color": [
+        0.0756402313709259,
+        0.0756402313709259,
+        0.0756402313709259,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "vertex_color": true
+    },
+    {
+      "name": "Material.004",
+      "base_color": [
+        0.8000000715255737,
+        0.0,
+        0.02905309572815895,
+        1.0
+      ],
+      "metallic": 1.0,
+      "roughness": 0.5458716154098511,
+      "vertex_color": true
+    },
+    {
+      "name": "Material.028",
+      "base_color": [
+        0.8000000715255737,
+        0.0,
+        0.025148600339889526,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "vertex_color": true
+    },
+    {
+      "name": "Material.015",
+      "base_color": [
+        0.17877079546451569,
+        0.17877079546451569,
+        0.17877079546451569,
+        1.0
+      ],
+      "metallic": 0.6972476840019226,
+      "roughness": 0.5,
+      "vertex_color": true
+    },
+    {
+      "name": "Material.024",
+      "base_color": [
+        0.012929053977131844,
+        0.304978609085083,
+        0.0,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "vertex_color": true
+    },
+    {
+      "name": "Material.018",
+      "base_color": [
+        0.6827699542045593,
+        0.6827699542045593,
+        0.6827699542045593,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "vertex_color": true
+    },
+    {
+      "name": "Material.026",
+      "base_color": [
+        0.13361375033855438,
+        0.13361375033855438,
+        0.13361375033855438,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "vertex_color": true
+    },
+    {
+      "name": "Material.001",
+      "base_color": [
+        0.0783676728606224,
+        0.010856375098228455,
+        0.0007840825710445642,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "vertex_color": true
+    },
+    {
+      "name": "LHB_Lettering",
+      "base_color": [
+        0.800000011920929,
+        0.800000011920929,
+        0.7200000286102295,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "vertex_color": true
+    },
+    {
+      "name": "Material.012",
+      "base_color": [
+        0.003316673915833235,
+        0.003316673915833235,
+        0.003316673915833235,
+        1.0
+      ],
+      "metallic": 0.6945454478263855,
+      "roughness": 0.38,
+      "vertex_color": true
+    },
+    {
+      "name": "Material.021",
+      "base_color": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "vertex_color": true
+    },
+    {
+      "name": "Material.029",
+      "base_color": [
+        1.0,
+        0.14663515985012054,
+        0.0,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "vertex_color": true
+    },
+    {
+      "name": "Material.005",
+      "base_color": [
+        0.1491519808769226,
+        0.0,
+        0.0008004496339708567,
+        1.0
+      ],
+      "metallic": 0.9266055226325989,
+      "roughness": 0.5,
+      "vertex_color": true
+    },
+    {
+      "name": "Material.016",
+      "base_color": [
+        0.20186902582645416,
+        0.20186902582645416,
+        0.20186902582645416,
+        1.0
+      ],
+      "metallic": 1.0,
+      "roughness": 0.5,
+      "vertex_color": true
+    }
+  ],
+  "triangles": 203073
+}

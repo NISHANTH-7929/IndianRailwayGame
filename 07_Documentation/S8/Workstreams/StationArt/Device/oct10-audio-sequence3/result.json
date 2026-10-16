@@ -1,0 +1,19 @@
+{
+  "smokeCompleted": true,
+  "gameplayValidated": false,
+  "serviceCompletionValidated": false,
+  "apk": "D:\\Project\\IndianRailwayGame\\08_Builds\\S8_EgmoreService_20261010-082112\\Android_ASTC\\MyProject-arm64.apk",
+  "apkSha256": "8889bf472b52ed3a8bf675d2c7e706e18b92a41dcdc1aa40a2eee171e79bd4cb",
+  "map": "/Game/IndianRailway/S8/Egmore/L_RailService_Egmore",
+  "flags": "-S8Egmore -S8Station -S8LHB -S8AssetReview -S8AudioReview -S8Cab",
+  "durationSeconds": 150,
+  "restorationErrors": [],
+  "readySamples": 24,
+  "stopRestored": true,
+  "commandlineRestored": true,
+  "telemetryRestored": true,
+  "wakeRestored": true,
+  "savesUnchanged": true,
+  "artifactUnchanged": true,
+  "installedApkUnchanged": true
+}

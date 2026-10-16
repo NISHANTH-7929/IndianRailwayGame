@@ -1,0 +1,22 @@
+{
+  "AssetId": "Loco.WAP7.Acquired01",
+  "AssetName": "WAP 7 Indian Locomotive Low Poly model",
+  "Category": "locomotive",
+  "Creator": "knitro_vedant",
+  "Source": "Sketchfab; user-provided official original download",
+  "SourceReference": "https://sketchfab.com/3d-models/1935cec9ac9446e3b2524ad73f0902a4",
+  "AcquisitionDate": "2026-10-01",
+  "License": "Creative Commons Attribution 4.0 International",
+  "CommercialUse": "verified",
+  "ModificationPermission": "verified",
+  "RedistributionRestrictions": "CC BY 4.0: retain attribution, license link and indicate modifications; no additional restrictions on licensed material.",
+  "AttributionRequirement": "Credit knitro_vedant, link model and https://creativecommons.org/licenses/by/4.0/, identify modifications.",
+  "OriginalArchive": "wap-7-indian-locomotive-low-poly-model.zip; SHA256 in archive-sha256.txt",
+  "ModifiedAssetReference": "Prepared/assembly.json; pending export",
+  "VerificationStatus": "approved",
+  "VerificationEvidence": [
+    "listing-metadata.json",
+    "archive-sha256.txt"
+  ],
+  "Notes": "License metadata verified from official Sketchfab API. No warranty of creator ownership beyond source declaration. Original imported unmodified into WAP7_Original.blend. Source filenames uvwag9 are retained as supplied; downloaded listing identifies WAP7."
+}

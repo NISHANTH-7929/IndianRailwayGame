@@ -1,0 +1,1 @@
+adb: error: failed to copy 'D:\Project\IndianRailwayGame\08_Builds\S8_EgmoreScene02_20261008-143136\Android_ASTC\MyProject-arm64.apk' to '/data/local/tmp/MyProject-arm64.apk': no response: Broken pipe

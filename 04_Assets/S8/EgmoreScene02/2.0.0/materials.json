@@ -1,0 +1,364 @@
+[
+  {
+    "doubleSided": true,
+    "name": "EgmoreLime",
+    "normalTexture": {
+      "uri": "Textures/d05c9426fde2b947a6c2.png"
+    },
+    "pbrMetallicRoughness": {
+      "baseColorTexture": {
+        "uri": "Textures/8eb210969520453feda6.png"
+      },
+      "metallicRoughnessTexture": {
+        "uri": "Textures/3dec4eebd0a20167ff6f.png"
+      }
+    }
+  },
+  {
+    "doubleSided": true,
+    "name": "Galvanized",
+    "normalTexture": {
+      "uri": "Textures/3649fd878722bdfbbef3.png"
+    },
+    "pbrMetallicRoughness": {
+      "baseColorTexture": {
+        "uri": "Textures/75c719f7d79c62454848.png"
+      },
+      "metallicRoughnessTexture": {
+        "uri": "Textures/d4fa01f35a4fb816adf0.png"
+      }
+    }
+  },
+  {
+    "doubleSided": true,
+    "name": "Steel",
+    "normalTexture": {
+      "uri": "Textures/2372d5c61aa4ff81e311.png"
+    },
+    "pbrMetallicRoughness": {
+      "baseColorTexture": {
+        "uri": "Textures/c362f859280f76264d88.png"
+      },
+      "metallicRoughnessTexture": {
+        "uri": "Textures/257d35645684ec7f80f8.png"
+      }
+    }
+  },
+  {
+    "doubleSided": true,
+    "name": "EgmoreBlue",
+    "normalTexture": {
+      "uri": "Textures/2af288041b13d4745df4.png"
+    },
+    "pbrMetallicRoughness": {
+      "baseColorTexture": {
+        "uri": "Textures/6ddc96d4e01d96e893a2.png"
+      },
+      "metallicRoughnessTexture": {
+        "uri": "Textures/3e99090685a06842e4f9.png"
+      }
+    }
+  },
+  {
+    "doubleSided": true,
+    "name": "Cream",
+    "normalTexture": {
+      "uri": "Textures/dbcc446ee496fc0ab092.png"
+    },
+    "pbrMetallicRoughness": {
+      "baseColorTexture": {
+        "uri": "Textures/d82481cca550c82d28f1.png"
+      },
+      "metallicRoughnessTexture": {
+        "uri": "Textures/e003cb1dc6b42a591c71.png"
+      }
+    }
+  },
+  {
+    "doubleSided": true,
+    "name": "EgmoreRed",
+    "normalTexture": {
+      "uri": "Textures/d455a4e094df51ad2cf3.png"
+    },
+    "pbrMetallicRoughness": {
+      "baseColorTexture": {
+        "uri": "Textures/b72b99cd525dc526e3e9.png"
+      },
+      "metallicRoughnessTexture": {
+        "uri": "Textures/bbc965c759ab5fbec684.png"
+      }
+    }
+  },
+  {
+    "doubleSided": true,
+    "name": "Glass",
+    "normalTexture": {
+      "uri": "Textures/7a6037e152bb050dd11e.png"
+    },
+    "pbrMetallicRoughness": {
+      "baseColorTexture": {
+        "uri": "Textures/1377d334c8f5f6596aa3.png"
+      },
+      "metallicRoughnessTexture": {
+        "uri": "Textures/8d5c25f807346dd8cdea.png"
+      }
+    }
+  },
+  {
+    "doubleSided": true,
+    "name": "Wood",
+    "normalTexture": {
+      "uri": "Textures/b16a5b1368aa8ac616eb.png"
+    },
+    "pbrMetallicRoughness": {
+      "baseColorTexture": {
+        "uri": "Textures/4f51d126262ea6e4e40c.png"
+      },
+      "metallicRoughnessTexture": {
+        "uri": "Textures/15f4b99d7c650f5e46f6.png"
+      }
+    }
+  },
+  {
+    "doubleSided": true,
+    "name": "Concrete",
+    "normalTexture": {
+      "uri": "Textures/0fcfb2c975740a075018.png"
+    },
+    "pbrMetallicRoughness": {
+      "baseColorTexture": {
+        "uri": "Textures/0b4a8529f79f19549b2a.png"
+      },
+      "metallicRoughnessTexture": {
+        "uri": "Textures/e7d448f98bf95b624fcf.png"
+      }
+    }
+  },
+  {
+    "doubleSided": true,
+    "name": "Black",
+    "normalTexture": {
+      "uri": "Textures/4c52c411817eb1c823a0.png"
+    },
+    "pbrMetallicRoughness": {
+      "baseColorTexture": {
+        "uri": "Textures/08e843d0b125c01eee38.png"
+      },
+      "metallicRoughnessTexture": {
+        "uri": "Textures/fbc595238062e99d70bc.png"
+      }
+    }
+  },
+  {
+    "doubleSided": true,
+    "name": "Yellow",
+    "normalTexture": {
+      "uri": "Textures/f7d19792e2d281ea4c7f.png"
+    },
+    "pbrMetallicRoughness": {
+      "baseColorTexture": {
+        "uri": "Textures/8ea65391e496591bd207.png"
+      },
+      "metallicRoughnessTexture": {
+        "uri": "Textures/6aa7813c32d9da6ff351.png"
+      }
+    }
+  },
+  {
+    "doubleSided": true,
+    "name": "Concrete.001",
+    "normalTexture": {
+      "uri": "Textures/0fcfb2c975740a075018.png"
+    },
+    "pbrMetallicRoughness": {
+      "baseColorTexture": {
+        "uri": "Textures/0b4a8529f79f19549b2a.png"
+      },
+      "metallicRoughnessTexture": {
+        "uri": "Textures/e7d448f98bf95b624fcf.png"
+      }
+    }
+  },
+  {
+    "doubleSided": true,
+    "name": "EgmoreName",
+    "pbrMetallicRoughness": {
+      "baseColorTexture": {
+        "uri": "Textures/6ccda1d05c9fe657ce35.png"
+      },
+      "metallicFactor": 0,
+      "roughnessFactor": 0.75
+    }
+  },
+  {
+    "doubleSided": true,
+    "name": "PlatformTile",
+    "normalTexture": {
+      "uri": "Textures/7a1fefd9d609a1da7c65.png"
+    },
+    "pbrMetallicRoughness": {
+      "baseColorTexture": {
+        "uri": "Textures/76b09f027b1c7b39b1f5.png"
+      },
+      "metallicFactor": 0,
+      "metallicRoughnessTexture": {
+        "uri": "Textures/c4585dd1aef6772b00e4.png"
+      }
+    }
+  },
+  {
+    "doubleSided": true,
+    "name": "RailHead",
+    "pbrMetallicRoughness": {
+      "baseColorFactor": [
+        0.3499999940395355,
+        0.38999998569488525,
+        0.41999998688697815,
+        1
+      ],
+      "metallicFactor": 0.8500000238418579,
+      "roughnessFactor": 0.23999999463558197
+    }
+  },
+  {
+    "doubleSided": true,
+    "name": "RailRust",
+    "pbrMetallicRoughness": {
+      "baseColorFactor": [
+        0.20000000298023224,
+        0.0949999988079071,
+        0.05000000074505806,
+        1
+      ],
+      "metallicFactor": 0.3499999940395355,
+      "roughnessFactor": 0.8100000023841858
+    }
+  },
+  {
+    "doubleSided": true,
+    "name": "EgmoreStone",
+    "normalTexture": {
+      "uri": "Textures/519efb3d5eab63179d2b.png"
+    },
+    "pbrMetallicRoughness": {
+      "baseColorTexture": {
+        "uri": "Textures/bdddb0b8791ce1c1de7f.png"
+      },
+      "metallicRoughnessTexture": {
+        "uri": "Textures/d95a5baa190523b6bc85.png"
+      }
+    }
+  },
+  {
+    "doubleSided": true,
+    "name": "Asphalt",
+    "pbrMetallicRoughness": {
+      "baseColorFactor": [
+        0.10499999672174454,
+        0.11500000208616257,
+        0.11999999731779099,
+        1
+      ],
+      "metallicFactor": 0,
+      "roughnessFactor": 0.949999988079071
+    }
+  },
+  {
+    "doubleSided": true,
+    "name": "Insulator",
+    "pbrMetallicRoughness": {
+      "baseColorFactor": [
+        0.18000000715255737,
+        0.07000000029802322,
+        0.029999999329447746,
+        1
+      ],
+      "metallicFactor": 0,
+      "roughnessFactor": 0.30000001192092896
+    }
+  },
+  {
+    "doubleSided": true,
+    "name": "LampDiffuser",
+    "pbrMetallicRoughness": {
+      "baseColorFactor": [
+        0.8500000238418579,
+        0.8299999833106995,
+        0.6700000166893005,
+        1
+      ],
+      "metallicFactor": 0,
+      "roughnessFactor": 0.3499999940395355
+    }
+  },
+  {
+    "doubleSided": true,
+    "name": "Bark",
+    "pbrMetallicRoughness": {
+      "baseColorFactor": [
+        0.1599999964237213,
+        0.0949999988079071,
+        0.04500000178813934,
+        1
+      ],
+      "metallicFactor": 0,
+      "roughnessFactor": 0.949999988079071
+    }
+  },
+  {
+    "doubleSided": true,
+    "name": "LeafLight",
+    "pbrMetallicRoughness": {
+      "baseColorFactor": [
+        0.11999999731779099,
+        0.2199999988079071,
+        0.054999999701976776,
+        1
+      ],
+      "metallicFactor": 0,
+      "roughnessFactor": 0.8500000238418579
+    }
+  },
+  {
+    "doubleSided": true,
+    "name": "LeafDark",
+    "pbrMetallicRoughness": {
+      "baseColorFactor": [
+        0.06499999761581421,
+        0.14000000059604645,
+        0.03500000014901161,
+        1
+      ],
+      "metallicFactor": 0,
+      "roughnessFactor": 0.8999999761581421
+    }
+  },
+  {
+    "doubleSided": true,
+    "name": "UrbanOchre",
+    "pbrMetallicRoughness": {
+      "baseColorFactor": [
+        0.5199999809265137,
+        0.41999998688697815,
+        0.28999999165534973,
+        1
+      ],
+      "metallicFactor": 0,
+      "roughnessFactor": 0.8799999952316284
+    }
+  },
+  {
+    "doubleSided": true,
+    "name": "UrbanGrey",
+    "pbrMetallicRoughness": {
+      "baseColorFactor": [
+        0.41999998688697815,
+        0.4300000071525574,
+        0.38999998569488525,
+        1
+      ],
+      "metallicFactor": 0,
+      "roughnessFactor": 0.8999999761581421
+    }
+  }
+]

@@ -1,0 +1,26 @@
+{
+  "passed": false,
+  "normalSavesUnchanged": true,
+  "before": {
+    "D:\\Project\\IndianRailwayGame\\03_UnrealProject\\MyProject\\Saved\\S7\\checkpoint-0.irs": null,
+    "D:\\Project\\IndianRailwayGame\\03_UnrealProject\\MyProject\\Saved\\S8\\Egmore\\Service\\checkpoint-0.irs": null,
+    "D:\\Project\\IndianRailwayGame\\03_UnrealProject\\MyProject\\Saved\\S7\\checkpoint-1.irs": null,
+    "D:\\Project\\IndianRailwayGame\\03_UnrealProject\\MyProject\\Saved\\S8\\Station\\Service\\checkpoint-0.irs": null,
+    "D:\\Project\\IndianRailwayGame\\03_UnrealProject\\MyProject\\Saved\\S8\\LHB\\Service\\checkpoint-1.irs": null,
+    "D:\\Project\\IndianRailwayGame\\03_UnrealProject\\MyProject\\Saved\\S8\\LHB\\Service\\checkpoint-0.irs": null,
+    "D:\\Project\\IndianRailwayGame\\03_UnrealProject\\MyProject\\Saved\\S8\\Egmore\\Service\\checkpoint-1.irs": null,
+    "D:\\Project\\IndianRailwayGame\\03_UnrealProject\\MyProject\\Saved\\S8\\Station\\Service\\checkpoint-1.irs": null
+  },
+  "after": {
+    "D:\\Project\\IndianRailwayGame\\03_UnrealProject\\MyProject\\Saved\\S7\\checkpoint-0.irs": null,
+    "D:\\Project\\IndianRailwayGame\\03_UnrealProject\\MyProject\\Saved\\S8\\Egmore\\Service\\checkpoint-0.irs": null,
+    "D:\\Project\\IndianRailwayGame\\03_UnrealProject\\MyProject\\Saved\\S7\\checkpoint-1.irs": null,
+    "D:\\Project\\IndianRailwayGame\\03_UnrealProject\\MyProject\\Saved\\S8\\Station\\Service\\checkpoint-0.irs": null,
+    "D:\\Project\\IndianRailwayGame\\03_UnrealProject\\MyProject\\Saved\\S8\\LHB\\Service\\checkpoint-1.irs": null,
+    "D:\\Project\\IndianRailwayGame\\03_UnrealProject\\MyProject\\Saved\\S8\\LHB\\Service\\checkpoint-0.irs": null,
+    "D:\\Project\\IndianRailwayGame\\03_UnrealProject\\MyProject\\Saved\\S8\\Egmore\\Service\\checkpoint-1.irs": null,
+    "D:\\Project\\IndianRailwayGame\\03_UnrealProject\\MyProject\\Saved\\S8\\Station\\Service\\checkpoint-1.irs": null
+  },
+  "scope": "NullRHI readiness smoke only, not visual or completed service",
+  "processStopped": true
+}

@@ -1,0 +1,83 @@
+{
+  "version": 2,
+  "origin": "Original local procedural audio; no external source samples",
+  "generator": "generate_audio.py",
+  "seed": 20261013,
+  "numpyVersion": "2.4.6",
+  "license": "CC0-1.0",
+  "licenseNote": "Original generated supplemental waveforms dedicated to CC0; existing Pixabay sources retain their own license.",
+  "prompt": "Generic railway supplemental motor, coasting, curve/brake friction, brake release and emergency air sounds.",
+  "negativePrompt": "No claim of authentic WAP-7 recording, no speech, music, licensed sample reuse or artificial wheel-slip telemetry.",
+  "clips": [
+    {
+      "name": "Motor",
+      "prepared": "Prepared/SW_Motor.wav",
+      "asset": "/Game/IndianRailway/S8/Audio/RealismV2/SW_Motor",
+      "looping": true,
+      "durationSeconds": 8.0,
+      "sampleRate": 48000,
+      "channels": 1,
+      "peak": 0.6199951171875,
+      "rms": 0.22670761816010707,
+      "loopSeamDelta": 0.001251220703125,
+      "sha256": "4b7980644085d2ec0077a01936a36bf5be12bf607a41e6c8e9ee70f386b297a1",
+      "description": "Generic electric traction hum/whine; speed pitch and real traction load gain."
+    },
+    {
+      "name": "Coast",
+      "prepared": "Prepared/SW_Coast.wav",
+      "asset": "/Game/IndianRailway/S8/Audio/RealismV2/SW_Coast",
+      "looping": true,
+      "durationSeconds": 8.0,
+      "sampleRate": 48000,
+      "channels": 1,
+      "peak": 0.6199951171875,
+      "rms": 0.1263829394234605,
+      "loopSeamDelta": 0.00347900390625,
+      "sha256": "248b54feed5a47ea473cc3a32afb12d360aeb7cf91e6b1c6efd4d0192b5ee989",
+      "description": "Generic aerodynamic and unpowered running texture."
+    },
+    {
+      "name": "Squeal",
+      "prepared": "Prepared/SW_Squeal.wav",
+      "asset": "/Game/IndianRailway/S8/Audio/RealismV2/SW_Squeal",
+      "looping": true,
+      "durationSeconds": 8.0,
+      "sampleRate": 48000,
+      "channels": 1,
+      "peak": 0.6199951171875,
+      "rms": 0.1909236906075562,
+      "loopSeamDelta": 0.053131103515625,
+      "sha256": "4d6f997b03c244e7fac0325181fd1dfac47b947658b0e396b75fc65f2a09952d",
+      "description": "Restrained metallic curve/brake-friction approximation; not measured wheel slip."
+    },
+    {
+      "name": "BrakeRelease",
+      "prepared": "Prepared/SW_BrakeRelease.wav",
+      "asset": "/Game/IndianRailway/S8/Audio/RealismV2/SW_BrakeRelease",
+      "looping": false,
+      "durationSeconds": 2.6,
+      "sampleRate": 48000,
+      "channels": 1,
+      "peak": 0.6199951171875,
+      "rms": 0.07014534683604094,
+      "loopSeamDelta": 0.0,
+      "sha256": "284af7541a6ea84aed8148543b98be997b1cf48b7f7fc3377cf63a702091084c",
+      "description": "Short pneumatic release hiss; no simulated pressure implied."
+    },
+    {
+      "name": "Emergency",
+      "prepared": "Prepared/SW_Emergency.wav",
+      "asset": "/Game/IndianRailway/S8/Audio/RealismV2/SW_Emergency",
+      "looping": false,
+      "durationSeconds": 5.4,
+      "sampleRate": 48000,
+      "channels": 1,
+      "peak": 0.6199951171875,
+      "rms": 0.06092898373645662,
+      "loopSeamDelta": 0.0,
+      "sha256": "dcab287dda51ea97119f3b6366b00bcd62c86f30e4fa3934a85bb759906c11b2",
+      "description": "Longer broadband emergency vent; once per applied emergency latch."
+    }
+  ]
+}

@@ -1,0 +1,171 @@
+{
+  "animationCount": 0,
+  "categories": [
+    {
+      "uid": "22a2f677efad4d7bbca5ad45f9b5868e",
+      "name": "Cars & Vehicles",
+      "slug": "cars-vehicles",
+      "uri": "https://api.sketchfab.com/v3/categories/22a2f677efad4d7bbca5ad45f9b5868e",
+      "icon": "https://static.sketchfab.com/static/builds/web/dist/static/assets/images/icons/categories/45dd0cc0860ac57fcd63bde1cc3f2b7c-v2.svg",
+      "thumbnails": [
+        {
+          "width": "512",
+          "height": "288",
+          "url": "https://static.sketchfab.com/categories/22a2f677efad4d7bbca5ad45f9b5868e/512x288.png"
+        },
+        {
+          "width": "800",
+          "height": "450",
+          "url": "https://static.sketchfab.com/categories/22a2f677efad4d7bbca5ad45f9b5868e/800x450.png"
+        }
+      ]
+    },
+    {
+      "uid": "c51b29706d4e4e93a82e5eea7cbe6f91",
+      "name": "Places & Travel",
+      "slug": "places-travel",
+      "uri": "https://api.sketchfab.com/v3/categories/c51b29706d4e4e93a82e5eea7cbe6f91",
+      "icon": "https://static.sketchfab.com/static/builds/web/dist/static/assets/images/icons/categories/49547fe422db0fdef3c06c199f367b2a-v2.svg",
+      "thumbnails": [
+        {
+          "width": "512",
+          "height": "288",
+          "url": "https://static.sketchfab.com/categories/c51b29706d4e4e93a82e5eea7cbe6f91/512x288.png"
+        },
+        {
+          "width": "800",
+          "height": "450",
+          "url": "https://static.sketchfab.com/categories/c51b29706d4e4e93a82e5eea7cbe6f91/800x450.png"
+        }
+      ]
+    }
+  ],
+  "commentCount": 2,
+  "createdAt": "2026-01-26T03:53:33.058116",
+  "embedUrl": "https://sketchfab.com/models/665150d63c6146e0b361c1020a87074e/embed",
+  "faceCount": 289524,
+  "isAgeRestricted": false,
+  "license": {
+    "uri": "https://api.sketchfab.com/v3/licenses/322a749bcfa841b29dff1e8a1bb74b0b",
+    "label": "CC Attribution",
+    "fullName": "Creative Commons Attribution",
+    "requirements": "Author must be credited. Commercial use is allowed.",
+    "url": "http://creativecommons.org/licenses/by/4.0/",
+    "slug": "by"
+  },
+  "likeCount": 53,
+  "name": "Wag 9 Indian Locomotive Lowpoly count",
+  "publishedAt": "2026-01-26T03:57:58.908249",
+  "soundCount": 0,
+  "staffpickedAt": null,
+  "tags": [
+    {
+      "name": "indianrailway",
+      "slug": "indianrailway",
+      "uri": "https://api.sketchfab.com/v3/tags/indianrailway"
+    },
+    {
+      "name": "wag9",
+      "slug": "wag9",
+      "uri": "https://api.sketchfab.com/v3/tags/wag9"
+    }
+  ],
+  "thumbnails": {
+    "images": [
+      {
+        "uid": "aae831de578a430bb037e9d7849e218f",
+        "width": 1920,
+        "height": 1080,
+        "size": 340503,
+        "url": "https://media.sketchfab.com/models/665150d63c6146e0b361c1020a87074e/thumbnails/6b893ced15f94b55a0409f0ad5d8d9da/bf8d332769f14e97a75d3439554272ff.jpeg"
+      },
+      {
+        "uid": "86c9408a537c4a58b283347011d2c957",
+        "width": 1024,
+        "height": 576,
+        "size": 102837,
+        "url": "https://media.sketchfab.com/models/665150d63c6146e0b361c1020a87074e/thumbnails/6b893ced15f94b55a0409f0ad5d8d9da/560b61a025824ecbbfd5e38efed7442b.jpeg"
+      },
+      {
+        "uid": "f52ce210e4464cabafe368e9670224ec",
+        "width": 720,
+        "height": 405,
+        "size": 58131,
+        "url": "https://media.sketchfab.com/models/665150d63c6146e0b361c1020a87074e/thumbnails/6b893ced15f94b55a0409f0ad5d8d9da/7a726e033e7c40b7b26dd9dc3a3fd833.jpeg"
+      },
+      {
+        "uid": "eb37ecde9b3a414fad55a33d91d693a9",
+        "width": 256,
+        "height": 144,
+        "size": 11275,
+        "url": "https://media.sketchfab.com/models/665150d63c6146e0b361c1020a87074e/thumbnails/6b893ced15f94b55a0409f0ad5d8d9da/d1338f12a7d34140ba42c67f6903362d.jpeg"
+      },
+      {
+        "uid": "27515df14c264a358422f6fa2c128f0a",
+        "width": 64,
+        "height": 36,
+        "size": 1789,
+        "url": "https://media.sketchfab.com/models/665150d63c6146e0b361c1020a87074e/thumbnails/6b893ced15f94b55a0409f0ad5d8d9da/11a8fb56114447b1b34eb87c26c3b358.jpeg"
+      }
+    ]
+  },
+  "uid": "665150d63c6146e0b361c1020a87074e",
+  "uri": "https://api.sketchfab.com/v3/models/665150d63c6146e0b361c1020a87074e",
+  "user": {
+    "uid": "34007b37ab6f47c48c23e0a72cbbfd12",
+    "username": "knitro_vedant",
+    "displayName": "knitro_vedant",
+    "account": "basic",
+    "profileUrl": "https://sketchfab.com/knitro_vedant",
+    "avatar": {
+      "uid": "52ee40d9d74f45a4a123e5fee4292356",
+      "uri": "https://api.sketchfab.com/v3/avatars/52ee40d9d74f45a4a123e5fee4292356",
+      "images": [
+        {
+          "width": 32,
+          "height": 32,
+          "size": 1961,
+          "url": "https://media.sketchfab.com/avatars/52ee40d9d74f45a4a123e5fee4292356/dccd16de8e23490f9d71695a5bb5fc88.png"
+        },
+        {
+          "width": 48,
+          "height": 48,
+          "size": 4243,
+          "url": "https://media.sketchfab.com/avatars/52ee40d9d74f45a4a123e5fee4292356/7ed099fc3cb140a6ad4b2eb6afe01faf.png"
+        },
+        {
+          "width": 90,
+          "height": 90,
+          "size": 14551,
+          "url": "https://media.sketchfab.com/avatars/52ee40d9d74f45a4a123e5fee4292356/a35c4e8a851846a7a3213e9c526301b8.png"
+        },
+        {
+          "width": 100,
+          "height": 100,
+          "size": 17792,
+          "url": "https://media.sketchfab.com/avatars/52ee40d9d74f45a4a123e5fee4292356/0a5e6d17f5f3472299ac9fbae1d87537.png"
+        }
+      ]
+    },
+    "uri": "https://api.sketchfab.com/v3/users/34007b37ab6f47c48c23e0a72cbbfd12"
+  },
+  "vertexCount": 155023,
+  "viewCount": 3131,
+  "viewerUrl": "https://sketchfab.com/3d-models/wag-9-indian-locomotive-lowpoly-count-665150d63c6146e0b361c1020a87074e",
+  "isDownloadable": true,
+  "isProtected": false,
+  "description": "A WAG-9 is a powerful, three-phase AC electric locomotive used by Indian Railways for hauling heavy freight trains, with its name breaking down to W (Broad Gauge), A (AC Current), G (Goods service), and 9 (9th generation). Developed with support from ABB, it's a backbone for freight transport, known for its high horsepower (around 6000 HP in base form), robust design, and regenerative braking, with variants like the WAG-9H (heavier) and WAG-9HH (higher power) for increased performance\n\nwag9, indian railways, wag 7",
+  "price": null,
+  "downloadCount": 695,
+  "editorUrl": "https://sketchfab.com/models/665150d63c6146e0b361c1020a87074e/edit",
+  "status": {
+    "warning": {},
+    "processing": "SUCCEEDED"
+  },
+  "source": "website",
+  "hasCommentsDisabled": false,
+  "updatedAt": "2026-06-15T02:57:24.973714",
+  "pbrType": "metalness",
+  "textureCount": 17,
+  "materialCount": 14
+}

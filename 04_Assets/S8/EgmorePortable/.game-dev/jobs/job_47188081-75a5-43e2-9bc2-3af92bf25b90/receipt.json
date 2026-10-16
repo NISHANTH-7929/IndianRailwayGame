@@ -1,0 +1,44 @@
+{
+  "schema": "game_dev.receipt.v1",
+  "operation": "package.build",
+  "result": {
+    "schema": "game_dev.package_build_result.v1",
+    "packageId": "pkg_f58fa71d092ec01e07a97f43",
+    "packagePath": "D:\\Project\\IndianRailwayGame\\04_Assets\\S8\\EgmorePortable\\.game-dev\\packages\\egmoredrain3m\\1.1.0",
+    "manifestPath": "D:\\Project\\IndianRailwayGame\\04_Assets\\S8\\EgmorePortable\\.game-dev\\packages\\egmoredrain3m\\1.1.0\\manifest.json",
+    "receiptPath": "D:\\Project\\IndianRailwayGame\\04_Assets\\S8\\EgmorePortable\\.game-dev\\packages\\egmoredrain3m\\1.1.0\\receipt.json",
+    "manifestSha256": "238f4c05e7c0866cc9bc2a90346cfe951d2634a507776363934974cc1e81fbc6",
+    "reused": false,
+    "validation": {
+      "passed": true,
+      "errorCount": 0,
+      "warningCount": 0
+    },
+    "catalog": {
+      "packageId": "pkg_f58fa71d092ec01e07a97f43",
+      "assetId": "egmoredrain3m",
+      "version": "1.1.0",
+      "displayName": "EgmoreDrain3m",
+      "description": "Original metric Egmore study module; estimated dimensions, visual acceptance and Android integration pending",
+      "license": "LicenseRef-ProjectOriginal",
+      "packagePath": "D:\\Project\\IndianRailwayGame\\04_Assets\\S8\\EgmorePortable\\.game-dev\\packages\\egmoredrain3m\\1.1.0",
+      "modelPath": "D:\\Project\\IndianRailwayGame\\04_Assets\\S8\\EgmorePortable\\.game-dev\\packages\\egmoredrain3m\\1.1.0\\model.glb",
+      "modelSha256": "1c06e17936e03eed5c24357c22778567b9dc99e19f9e8cfb94f83fe81fce7adf",
+      "manifestSha256": "238f4c05e7c0866cc9bc2a90346cfe951d2634a507776363934974cc1e81fbc6",
+      "validationPassed": true,
+      "validationErrors": 0,
+      "validationWarnings": 0,
+      "origin": "authored",
+      "indexedAt": "2026-10-04T08:04:26.462Z"
+    },
+    "evidence": {
+      "portableGlbCopiedAndHashed": true,
+      "staticInspectionCompleted": true,
+      "policyValidationCompleted": true,
+      "blenderNormalizationPerformed": false,
+      "gpuImportTestPerformed": false,
+      "humanVisualReviewPerformed": false
+    }
+  },
+  "completedAt": "2026-10-04T08:04:26.468Z"
+}

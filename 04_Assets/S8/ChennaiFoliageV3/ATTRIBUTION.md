@@ -1,0 +1,1 @@
+Original project-authored procedural folded-leaf geometry. No remote model, texture, font, or photographic pixels used. Representative tropical broadleaf foliage; not a certified botanical species replica. Retained V2 is unchanged.

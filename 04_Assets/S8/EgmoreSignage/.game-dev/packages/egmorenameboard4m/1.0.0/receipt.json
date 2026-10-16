@@ -1,0 +1,23 @@
+{
+  "completedAt": "2026-10-05T03:38:45.331Z",
+  "destination": {
+    "assetId": "egmorenameboard4m",
+    "version": "1.0.0"
+  },
+  "evidence": {
+    "blenderNormalizationPerformed": false,
+    "gpuImportTestPerformed": false,
+    "humanVisualReviewPerformed": false,
+    "modelBytesCopiedAndHashed": true,
+    "policyValidationCompleted": true,
+    "staticInspectionCompleted": true
+  },
+  "manifestSha256": "9b0b216f13e0a912e6efc4f6e0001e9eb19918a0d1036e8176bd068681c52c85",
+  "packageId": "pkg_a437ebe1d73fd01878bbbb37",
+  "schema": "game_dev.package_receipt.v1",
+  "source": {
+    "bytes": 3651388,
+    "fileName": "EgmoreNameboard4m.glb",
+    "sha256": "d4063fda3bb2997f5a70e767ddc7ee38dc2db0de5d696d9a859036d9f6dc9045"
+  }
+}

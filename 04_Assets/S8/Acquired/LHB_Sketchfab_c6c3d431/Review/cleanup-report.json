@@ -1,0 +1,601 @@
+{
+  "status": "UNACCEPTED: source-scale cleanup study only",
+  "changes": [
+    {
+      "object": "Cylinder.007",
+      "change": "disable render subdivision for comparison",
+      "levels_before": 2,
+      "render_levels_before": 2
+    },
+    {
+      "object": "Cylinder.011",
+      "change": "disable render subdivision for comparison",
+      "levels_before": 2,
+      "render_levels_before": 2
+    },
+    {
+      "object": "Cylinder.012",
+      "change": "disable render subdivision for comparison",
+      "levels_before": 2,
+      "render_levels_before": 2
+    },
+    {
+      "object": "Cylinder.029",
+      "change": "disable render subdivision for comparison",
+      "levels_before": 2,
+      "render_levels_before": 2
+    },
+    {
+      "object": "Cylinder.008",
+      "change": "disable render subdivision for comparison",
+      "levels_before": 2,
+      "render_levels_before": 2
+    }
+  ],
+  "objects": [
+    {
+      "name": "Cube",
+      "before": 30428,
+      "after": 30428
+    },
+    {
+      "name": "Plane",
+      "before": 20,
+      "after": 20
+    },
+    {
+      "name": "Plane.001",
+      "before": 2,
+      "after": 2
+    },
+    {
+      "name": "NurbsPath.001",
+      "before": 24864,
+      "after": 24864
+    },
+    {
+      "name": "NurbsPath.003",
+      "before": 24864,
+      "after": 24864
+    },
+    {
+      "name": "Plane.002",
+      "before": 24,
+      "after": 24
+    },
+    {
+      "name": "Plane.003",
+      "before": 2,
+      "after": 2
+    },
+    {
+      "name": "Plane.004",
+      "before": 52,
+      "after": 52
+    },
+    {
+      "name": "Plane.006",
+      "before": 2,
+      "after": 2
+    },
+    {
+      "name": "Cube.001",
+      "before": 1666,
+      "after": 1666
+    },
+    {
+      "name": "Cube.002",
+      "before": 116,
+      "after": 116
+    },
+    {
+      "name": "Circle",
+      "before": 286,
+      "after": 286
+    },
+    {
+      "name": "Circle.001",
+      "before": 558,
+      "after": 558
+    },
+    {
+      "name": "Circle.002",
+      "before": 94,
+      "after": 94
+    },
+    {
+      "name": "Circle.003",
+      "before": 94,
+      "after": 94
+    },
+    {
+      "name": "Bolt",
+      "before": 4970,
+      "after": 4574
+    },
+    {
+      "name": "Bolt.001",
+      "before": 4970,
+      "after": 4574
+    },
+    {
+      "name": "Bolt.002",
+      "before": 4970,
+      "after": 4574
+    },
+    {
+      "name": "Bolt.003",
+      "before": 4970,
+      "after": 4574
+    },
+    {
+      "name": "Beam",
+      "before": 996,
+      "after": 996
+    },
+    {
+      "name": "Cylinder.001",
+      "before": 1772,
+      "after": 1772
+    },
+    {
+      "name": "Cylinder.002",
+      "before": 1468,
+      "after": 1468
+    },
+    {
+      "name": "Cylinder.003",
+      "before": 1468,
+      "after": 1468
+    },
+    {
+      "name": "Cylinder.004",
+      "before": 1468,
+      "after": 1468
+    },
+    {
+      "name": "Cylinder.005",
+      "before": 1468,
+      "after": 1468
+    },
+    {
+      "name": "Cylinder.006",
+      "before": 1556,
+      "after": 1556
+    },
+    {
+      "name": "Cube.003",
+      "before": 1204,
+      "after": 1204
+    },
+    {
+      "name": "Cube.004",
+      "before": 116,
+      "after": 116
+    },
+    {
+      "name": "NurbsPath.004",
+      "before": 840,
+      "after": 840
+    },
+    {
+      "name": "Cube.005",
+      "before": 140,
+      "after": 140
+    },
+    {
+      "name": "Cube.006",
+      "before": 60,
+      "after": 60
+    },
+    {
+      "name": "NurbsPath.006",
+      "before": 552,
+      "after": 552
+    },
+    {
+      "name": "Cube.007",
+      "before": 1876,
+      "after": 1876
+    },
+    {
+      "name": "Cylinder.009",
+      "before": 124,
+      "after": 124
+    },
+    {
+      "name": "Cylinder.010",
+      "before": 992,
+      "after": 992
+    },
+    {
+      "name": "Cylinder.007",
+      "before": 188,
+      "after": 188
+    },
+    {
+      "name": "Bolt.005",
+      "before": 39760,
+      "after": 36588
+    },
+    {
+      "name": "Bolt.008",
+      "before": 39760,
+      "after": 36592
+    },
+    {
+      "name": "Cylinder.011",
+      "before": 4920,
+      "after": 4920
+    },
+    {
+      "name": "Cube.008",
+      "before": 1876,
+      "after": 1876
+    },
+    {
+      "name": "Cylinder.012",
+      "before": 4920,
+      "after": 4920
+    },
+    {
+      "name": "Bolt.004",
+      "before": 39760,
+      "after": 36588
+    },
+    {
+      "name": "Bolt.006",
+      "before": 39760,
+      "after": 36592
+    },
+    {
+      "name": "Cube.009",
+      "before": 1876,
+      "after": 1876
+    },
+    {
+      "name": "Bolt.007",
+      "before": 39760,
+      "after": 36588
+    },
+    {
+      "name": "Bolt.009",
+      "before": 39760,
+      "after": 36592
+    },
+    {
+      "name": "Cube.010",
+      "before": 1876,
+      "after": 1876
+    },
+    {
+      "name": "Bolt.010",
+      "before": 39760,
+      "after": 36588
+    },
+    {
+      "name": "Bolt.011",
+      "before": 39760,
+      "after": 36592
+    },
+    {
+      "name": "Cube.011",
+      "before": 180,
+      "after": 180
+    },
+    {
+      "name": "Cube.012",
+      "before": 60,
+      "after": 60
+    },
+    {
+      "name": "NurbsPath.005",
+      "before": 552,
+      "after": 552
+    },
+    {
+      "name": "Cube.013",
+      "before": 1670,
+      "after": 1670
+    },
+    {
+      "name": "Cube.014",
+      "before": 116,
+      "after": 116
+    },
+    {
+      "name": "Cube.015",
+      "before": 1256,
+      "after": 1256
+    },
+    {
+      "name": "NurbsPath.007",
+      "before": 7680,
+      "after": 7680
+    },
+    {
+      "name": "NurbsPath.008",
+      "before": 1128,
+      "after": 1128
+    },
+    {
+      "name": "Cube.032",
+      "before": 490,
+      "after": 490
+    },
+    {
+      "name": "Cube.033",
+      "before": 4902,
+      "after": 4902
+    },
+    {
+      "name": "Cylinder.026",
+      "before": 1548,
+      "after": 1548
+    },
+    {
+      "name": "NurbsPath",
+      "before": 1128,
+      "after": 1128
+    },
+    {
+      "name": "Cube.034",
+      "before": 490,
+      "after": 490
+    },
+    {
+      "name": "Cube.035",
+      "before": 4483,
+      "after": 4483
+    },
+    {
+      "name": "Cylinder.027",
+      "before": 1548,
+      "after": 1548
+    },
+    {
+      "name": "Cylinder.028",
+      "before": 1548,
+      "after": 1548
+    },
+    {
+      "name": "Cylinder.029",
+      "before": 6032,
+      "after": 6032
+    },
+    {
+      "name": "Cylinder.008",
+      "before": 6032,
+      "after": 6032
+    },
+    {
+      "name": "Cylinder.030",
+      "before": 1548,
+      "after": 1548
+    },
+    {
+      "name": "Plane.005",
+      "before": 2,
+      "after": 2
+    },
+    {
+      "name": "Plane.014",
+      "before": 2,
+      "after": 2
+    },
+    {
+      "name": "Plane.015",
+      "before": 10,
+      "after": 10
+    },
+    {
+      "name": "Cube.016",
+      "before": 178,
+      "after": 178
+    },
+    {
+      "name": "Text.002",
+      "before": 343,
+      "after": 343
+    },
+    {
+      "name": "NurbsPath.016",
+      "before": 0,
+      "after": 0
+    },
+    {
+      "name": "Text.003",
+      "before": 32,
+      "after": 32
+    },
+    {
+      "name": "Text.004",
+      "before": 0,
+      "after": 0
+    },
+    {
+      "name": "Text.005",
+      "before": 0,
+      "after": 0
+    },
+    {
+      "name": "Text.009",
+      "before": 0,
+      "after": 0
+    },
+    {
+      "name": "Text.011",
+      "before": 391,
+      "after": 391
+    },
+    {
+      "name": "Text.012",
+      "before": 285,
+      "after": 285
+    },
+    {
+      "name": "Text.013",
+      "before": 354,
+      "after": 354
+    },
+    {
+      "name": "Text.014",
+      "before": 426,
+      "after": 426
+    },
+    {
+      "name": "Text.015",
+      "before": 283,
+      "after": 283
+    },
+    {
+      "name": "Text.016",
+      "before": 196,
+      "after": 196
+    },
+    {
+      "name": "Text.006",
+      "before": 319,
+      "after": 319
+    },
+    {
+      "name": "Text.007",
+      "before": 392,
+      "after": 392
+    },
+    {
+      "name": "Text.008",
+      "before": 521,
+      "after": 521
+    },
+    {
+      "name": "Text.010",
+      "before": 425,
+      "after": 425
+    },
+    {
+      "name": "Text.017",
+      "before": 296,
+      "after": 296
+    },
+    {
+      "name": "Text.018",
+      "before": 125,
+      "after": 125
+    },
+    {
+      "name": "Text.019",
+      "before": 125,
+      "after": 125
+    },
+    {
+      "name": "Torus",
+      "before": 1152,
+      "after": 1152
+    },
+    {
+      "name": "Text.021",
+      "before": 32,
+      "after": 32
+    },
+    {
+      "name": "Text.022",
+      "before": 1726,
+      "after": 1726
+    },
+    {
+      "name": "Text.025",
+      "before": 330,
+      "after": 330
+    },
+    {
+      "name": "Torus.001",
+      "before": 1152,
+      "after": 1152
+    },
+    {
+      "name": "Text.029",
+      "before": 296,
+      "after": 296
+    },
+    {
+      "name": "Text.030",
+      "before": 425,
+      "after": 425
+    },
+    {
+      "name": "Text.031",
+      "before": 521,
+      "after": 521
+    },
+    {
+      "name": "Text.032",
+      "before": 392,
+      "after": 392
+    },
+    {
+      "name": "Text.033",
+      "before": 319,
+      "after": 319
+    },
+    {
+      "name": "Text.034",
+      "before": 391,
+      "after": 391
+    },
+    {
+      "name": "Text.035",
+      "before": 285,
+      "after": 285
+    },
+    {
+      "name": "Text.036",
+      "before": 354,
+      "after": 354
+    },
+    {
+      "name": "Text.037",
+      "before": 426,
+      "after": 426
+    },
+    {
+      "name": "Text.038",
+      "before": 283,
+      "after": 283
+    },
+    {
+      "name": "Text.028",
+      "before": 196,
+      "after": 196
+    },
+    {
+      "name": "Text.079",
+      "before": 0,
+      "after": 0
+    },
+    {
+      "name": "Text.080",
+      "before": 0,
+      "after": 0
+    },
+    {
+      "name": "Text.081",
+      "before": 0,
+      "after": 0
+    },
+    {
+      "name": "Cube.043",
+      "before": 178,
+      "after": 178
+    }
+  ],
+  "triangles": 481398,
+  "dimensions_corrected": false,
+  "lods_prepared": false,
+  "runtime_integrated": false,
+  "notes": [
+    "Single coach selected by inspected bounds; review selection before production.",
+    "Font fallback is visible in this study; source font missing, lettering not accepted.",
+    "No final triangle budget. No dimensions or bogie pivots invented."
+  ]
+}

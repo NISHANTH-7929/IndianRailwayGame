@@ -1,0 +1,642 @@
+[
+  {
+    "tick": 2803,
+    "station": "Approaching",
+    "head": 526.7525137226695,
+    "speed": 0,
+    "power": 0,
+    "brake": 0.5
+  },
+  {
+    "tick": 2926,
+    "station": "Approaching",
+    "head": 526.7525137226695,
+    "speed": 0,
+    "power": 0,
+    "brake": 0
+  },
+  {
+    "tick": 2957,
+    "station": "Approaching",
+    "head": 526.7560283820179,
+    "speed": 0.024861093914449683,
+    "power": 0.25,
+    "brake": 0
+  },
+  {
+    "tick": 2987,
+    "station": "Approaching",
+    "head": 526.825472220206,
+    "speed": 0.11402585389535527,
+    "power": 0.25,
+    "brake": 0
+  },
+  {
+    "tick": 3025,
+    "station": "Approaching",
+    "head": 527.0414297094936,
+    "speed": 0.22695674748066935,
+    "power": 0.25,
+    "brake": 0
+  },
+  {
+    "tick": 3047,
+    "station": "Approaching",
+    "head": 527.2318346229835,
+    "speed": 0.2923278936173221,
+    "power": 0.25,
+    "brake": 0
+  },
+  {
+    "tick": 3078,
+    "station": "Approaching",
+    "head": 527.5814918466494,
+    "speed": 0.3844241679943615,
+    "power": 0.25,
+    "brake": 0
+  },
+  {
+    "tick": 3108,
+    "station": "Approaching",
+    "head": 528.0104685221849,
+    "speed": 0.4735246032816933,
+    "power": 0.25,
+    "brake": 0
+  },
+  {
+    "tick": 3138,
+    "station": "Approaching",
+    "head": 528.5285309239746,
+    "speed": 0.5625946679863454,
+    "power": 0.25,
+    "brake": 0
+  },
+  {
+    "tick": 3169,
+    "station": "Approaching",
+    "head": 529.1574162287595,
+    "speed": 0.6545957558759844,
+    "power": 0.25,
+    "brake": 0
+  },
+  {
+    "tick": 3169,
+    "station": "Approaching",
+    "head": 529.1574162287595,
+    "speed": 0.6545957558759844,
+    "power": 0.25,
+    "brake": 0
+  },
+  {
+    "tick": 3199,
+    "station": "Approaching",
+    "head": 529.8565110616394,
+    "speed": 0.7435864454263144,
+    "power": 0.25,
+    "brake": 0
+  },
+  {
+    "tick": 3229,
+    "station": "Approaching",
+    "head": 530.6445732163392,
+    "speed": 0.8325294520560435,
+    "power": 0.25,
+    "brake": 0
+  },
+  {
+    "tick": 3259,
+    "station": "Approaching",
+    "head": 531.5215521665084,
+    "speed": 0.9214190910602669,
+    "power": 0.25,
+    "brake": 0
+  },
+  {
+    "tick": 3290,
+    "station": "Approaching",
+    "head": 532.5211160298052,
+    "speed": 1.013209628573428,
+    "power": 0.25,
+    "brake": 0
+  },
+  {
+    "tick": 3325,
+    "station": "Approaching",
+    "head": 533.7636076298012,
+    "speed": 1.1167605183952247,
+    "power": 0.25,
+    "brake": 0
+  },
+  {
+    "tick": 3350,
+    "station": "Approaching",
+    "head": 534.725039070592,
+    "speed": 1.1906664110448255,
+    "power": 0.25,
+    "brake": 0
+  },
+  {
+    "tick": 3381,
+    "station": "Approaching",
+    "head": 536.0027125358997,
+    "speed": 1.2822359218437407,
+    "power": 0.25,
+    "brake": 0
+  },
+  {
+    "tick": 3411,
+    "station": "Approaching",
+    "head": 537.3292217218157,
+    "speed": 1.370768345007274,
+    "power": 0.25,
+    "brake": 0
+  },
+  {
+    "tick": 3441,
+    "station": "Approaching",
+    "head": 538.7442200394702,
+    "speed": 1.4592132581957702,
+    "power": 0.25,
+    "brake": 0
+  },
+  {
+    "tick": 3441,
+    "station": "Approaching",
+    "head": 538.7442200394702,
+    "speed": 1.4592132581957702,
+    "power": 0.25,
+    "brake": 0
+  },
+  {
+    "tick": 3472,
+    "station": "Approaching",
+    "head": 540.2992517582309,
+    "speed": 1.5505084978860382,
+    "power": 0.25,
+    "brake": 0
+  },
+  {
+    "tick": 3502,
+    "station": "Approaching",
+    "head": 541.8938936399823,
+    "speed": 1.638758360386969,
+    "power": 0.25,
+    "brake": 0
+  },
+  {
+    "tick": 3532,
+    "station": "Approaching",
+    "head": 543.576733694896,
+    "speed": 1.7269039293820976,
+    "power": 0.25,
+    "brake": 0
+  },
+  {
+    "tick": 3562,
+    "station": "Approaching",
+    "head": 545.347664886399,
+    "speed": 1.8149397232454305,
+    "power": 0.25,
+    "brake": 0
+  },
+  {
+    "tick": 3593,
+    "station": "Approaching",
+    "head": 547.2700521969518,
+    "speed": 1.9057889256871952,
+    "power": 0.25,
+    "brake": 0
+  },
+  {
+    "tick": 3625,
+    "station": "Approaching",
+    "head": 549.3528499086074,
+    "speed": 1.9994333463237384,
+    "power": 0.25,
+    "brake": 0
+  },
+  {
+    "tick": 3653,
+    "station": "Approaching",
+    "head": 551.2447786995541,
+    "speed": 2.030576953007457,
+    "power": 0,
+    "brake": 0
+  },
+  {
+    "tick": 3684,
+    "station": "Approaching",
+    "head": 553.3342425082448,
+    "speed": 2.0135508261475867,
+    "power": 0,
+    "brake": 0
+  },
+  {
+    "tick": 3714,
+    "station": "Approaching",
+    "head": 555.339565076546,
+    "speed": 1.9970982780206596,
+    "power": 0,
+    "brake": 0
+  },
+  {
+    "tick": 3746,
+    "station": "Approaching",
+    "head": 557.4604551231283,
+    "speed": 1.9795750292266148,
+    "power": 0,
+    "brake": 0
+  },
+  {
+    "tick": 3777,
+    "station": "Approaching",
+    "head": 559.4972562503573,
+    "speed": 1.9626248529274657,
+    "power": 0,
+    "brake": 0
+  },
+  {
+    "tick": 3777,
+    "station": "Approaching",
+    "head": 559.4972562503573,
+    "speed": 1.9626248529274657,
+    "power": 0,
+    "brake": 0
+  },
+  {
+    "tick": 3807,
+    "station": "Approaching",
+    "head": 561.4516892940256,
+    "speed": 1.9462450841921168,
+    "power": 0,
+    "brake": 0
+  },
+  {
+    "tick": 3837,
+    "station": "Approaching",
+    "head": 563.3897540934531,
+    "speed": 1.929888326844103,
+    "power": 0,
+    "brake": 0
+  },
+  {
+    "tick": 3867,
+    "station": "Approaching",
+    "head": 565.3114735472848,
+    "speed": 1.9135543555859948,
+    "power": 0,
+    "brake": 0
+  },
+  {
+    "tick": 3927,
+    "station": "Approaching",
+    "head": 569.133026420989,
+    "speed": 1.9559182830419815,
+    "power": 0.25,
+    "brake": 0
+  },
+  {
+    "tick": 3957,
+    "station": "Approaching",
+    "head": 571.1168067175968,
+    "speed": 1.986025622140486,
+    "power": 0,
+    "brake": 0
+  },
+  {
+    "tick": 3987,
+    "station": "Approaching",
+    "head": 573.0946238982883,
+    "speed": 1.9696126429818377,
+    "power": 0,
+    "brake": 0
+  },
+  {
+    "tick": 4017,
+    "station": "Approaching",
+    "head": 575.0560397860912,
+    "speed": 1.9532229984902518,
+    "power": 0,
+    "brake": 0
+  },
+  {
+    "tick": 4047,
+    "station": "Approaching",
+    "head": 577.0010776021182,
+    "speed": 1.9368564617472024,
+    "power": 0,
+    "brake": 0
+  },
+  {
+    "tick": 4078,
+    "station": "Approaching",
+    "head": 578.9937683614157,
+    "speed": 1.9199684099341199,
+    "power": 0,
+    "brake": 0
+  },
+  {
+    "tick": 4109,
+    "station": "Approaching",
+    "head": 580.9724308063682,
+    "speed": 1.92948932855371,
+    "power": 0.25,
+    "brake": 0
+  },
+  {
+    "tick": 4140,
+    "station": "Approaching",
+    "head": 583.0118097524911,
+    "speed": 2.0042041042137995,
+    "power": 0,
+    "brake": 0
+  },
+  {
+    "tick": 4170,
+    "station": "Approaching",
+    "head": 585.0077923585407,
+    "speed": 1.9877650537328722,
+    "power": 0,
+    "brake": 0
+  },
+  {
+    "tick": 4201,
+    "station": "Approaching",
+    "head": 587.0530502666624,
+    "speed": 1.9708028116458507,
+    "power": 0,
+    "brake": 0
+  },
+  {
+    "tick": 4230,
+    "station": "Approaching",
+    "head": 588.9504993295286,
+    "speed": 1.9549574854518106,
+    "power": 0,
+    "brake": 0
+  },
+  {
+    "tick": 4261,
+    "station": "Approaching",
+    "head": 590.961880942183,
+    "speed": 1.9380432757223076,
+    "power": 0,
+    "brake": 0
+  },
+  {
+    "tick": 4291,
+    "station": "Approaching",
+    "head": 592.8917496674235,
+    "speed": 1.921697968162808,
+    "power": 0,
+    "brake": 0
+  },
+  {
+    "tick": 4291,
+    "station": "Approaching",
+    "head": 592.8917496674235,
+    "speed": 1.921697968162808,
+    "power": 0,
+    "brake": 0
+  },
+  {
+    "tick": 4322,
+    "station": "Approaching",
+    "head": 594.8687878900291,
+    "speed": 1.9048316342603382,
+    "power": 0,
+    "brake": 0
+  },
+  {
+    "tick": 4383,
+    "station": "Approaching",
+    "head": 598.7328777226999,
+    "speed": 1.9432084319184786,
+    "power": 0.25,
+    "brake": 0
+  },
+  {
+    "tick": 4413,
+    "station": "Approaching",
+    "head": 600.7019788102733,
+    "speed": 1.969864424474955,
+    "power": 0,
+    "brake": 0
+  },
+  {
+    "tick": 4444,
+    "station": "Approaching",
+    "head": 602.7287530162461,
+    "speed": 1.9529284894033363,
+    "power": 0,
+    "brake": 0
+  },
+  {
+    "tick": 4474,
+    "station": "Approaching",
+    "head": 604.6734965302528,
+    "speed": 1.936562366117701,
+    "power": 0,
+    "brake": 0
+  },
+  {
+    "tick": 4504,
+    "station": "Approaching",
+    "head": 606.6018853786791,
+    "speed": 1.9202191207519619,
+    "power": 0,
+    "brake": 0
+  },
+  {
+    "tick": 4525,
+    "station": "Approaching",
+    "head": 607.9420387464988,
+    "speed": 1.908792341022627,
+    "power": 0,
+    "brake": 0
+  },
+  {
+    "tick": 4564,
+    "station": "Approaching",
+    "head": 610.4140374192364,
+    "speed": 1.9174561983944343,
+    "power": 0.25,
+    "brake": 0
+  },
+  {
+    "tick": 4594,
+    "station": "Approaching",
+    "head": 612.375393631378,
+    "speed": 2.0052355401375506,
+    "power": 0.25,
+    "brake": 0
+  },
+  {
+    "tick": 4624,
+    "station": "Approaching",
+    "head": 614.4201187047703,
+    "speed": 2.063032596096299,
+    "power": 0,
+    "brake": 0
+  },
+  {
+    "tick": 4654,
+    "station": "Approaching",
+    "head": 616.474886732246,
+    "speed": 2.0465075421570558,
+    "power": 0,
+    "brake": 0
+  },
+  {
+    "tick": 4685,
+    "station": "Approaching",
+    "head": 618.5807996669737,
+    "speed": 2.029457294921475,
+    "power": 0,
+    "brake": 0
+  },
+  {
+    "tick": 4715,
+    "station": "Approaching",
+    "head": 620.6020171278383,
+    "speed": 2.012981631437071,
+    "power": 0,
+    "brake": 0
+  },
+  {
+    "tick": 4746,
+    "station": "Approaching",
+    "head": 622.6733127778621,
+    "speed": 1.9959819258727867,
+    "power": 0,
+    "brake": 0
+  },
+  {
+    "tick": 4777,
+    "station": "Approaching",
+    "head": 624.7270551630078,
+    "speed": 1.979007528247616,
+    "power": 0,
+    "brake": 0
+  },
+  {
+    "tick": 4807,
+    "station": "Approaching",
+    "head": 626.6978592586756,
+    "speed": 1.9626045506165937,
+    "power": 0,
+    "brake": 0
+  },
+  {
+    "tick": 4825,
+    "station": "Approaching",
+    "head": 627.8724723878704,
+    "speed": 1.9527739325729823,
+    "power": 0,
+    "brake": 0
+  },
+  {
+    "tick": 4837,
+    "station": "Approaching",
+    "head": 628.6522720143771,
+    "speed": 1.9462248105229722,
+    "power": 0,
+    "brake": 0
+  },
+  {
+    "tick": 4867,
+    "station": "Approaching",
+    "head": 630.5903165543397,
+    "speed": 1.9298680815369336,
+    "power": 0,
+    "brake": 0
+  },
+  {
+    "tick": 4897,
+    "station": "Approaching",
+    "head": 632.5120157769284,
+    "speed": 1.9135341383624456,
+    "power": 0,
+    "brake": 0
+  },
+  {
+    "tick": 4957,
+    "station": "Approaching",
+    "head": 636.3224796744445,
+    "speed": 1.9385519206532829,
+    "power": 0.25,
+    "brake": 0
+  },
+  {
+    "tick": 5019,
+    "station": "Approaching",
+    "head": 640.4207637735134,
+    "speed": 1.9789234824041921,
+    "power": 0,
+    "brake": 0
+  },
+  {
+    "tick": 5019,
+    "station": "Approaching",
+    "head": 640.4207637735134,
+    "speed": 1.9789234824041921,
+    "power": 0,
+    "brake": 0
+  },
+  {
+    "tick": 5049,
+    "station": "Approaching",
+    "head": 642.3914838832145,
+    "speed": 1.9625206243323006,
+    "power": 0,
+    "brake": 0
+  },
+  {
+    "tick": 5080,
+    "station": "Approaching",
+    "head": 644.4106750455167,
+    "speed": 1.9455954127814379,
+    "power": 0,
+    "brake": 0
+  },
+  {
+    "tick": 5125,
+    "station": "Approaching",
+    "head": 647.3106678328732,
+    "speed": 1.9210701953045548,
+    "power": 0,
+    "brake": 0
+  },
+  {
+    "tick": 5140,
+    "station": "Approaching",
+    "head": 648.2691617704082,
+    "speed": 1.912906492685029,
+    "power": 0,
+    "brake": 0
+  },
+  {
+    "tick": 5200,
+    "station": "Approaching",
+    "head": 652.0824446146455,
+    "speed": 1.9448649714916157,
+    "power": 0.25,
+    "brake": 0
+  },
+  {
+    "tick": 5261,
+    "station": "Approaching",
+    "head": 656.1032339781974,
+    "speed": 1.96843874339217,
+    "power": 0,
+    "brake": 0
+  },
+  {
+    "tick": 5291,
+    "station": "Approaching",
+    "head": 658.0634767985212,
+    "speed": 1.9520507604176869,
+    "power": 0,
+    "brake": 0
+  }
+]

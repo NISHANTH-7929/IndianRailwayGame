@@ -1,0 +1,59 @@
+{
+  "schema": "game_dev.receipt.v1",
+  "operation": "package.verify",
+  "result": {
+    "schema": "game_dev.package_verification.v1",
+    "packagePath": "D:\\Project\\IndianRailwayGame\\04_Assets\\S8\\EgmorePortable\\.game-dev\\packages\\egmoreceilingfan\\1.3.0",
+    "manifest": {
+      "assetId": "egmoreceilingfan",
+      "description": "Original Egmore study with rear facade and aggregate ballast material; estimated dimensions, visual acceptance pending",
+      "displayName": "EgmoreCeilingFan",
+      "files": [
+        {
+          "bytes": 3542572,
+          "kind": "model",
+          "path": "model.glb",
+          "sha256": "521a5d394f21e1c64a382883a34b910b76fdafbe5144c4c6975d4eddaeed54f5"
+        },
+        {
+          "bytes": 2976,
+          "kind": "metadata",
+          "path": "metadata.json",
+          "sha256": "57843e1abf5321983908b4fe4503a7d48b2dde9b194f66314ce81b0412f96689"
+        },
+        {
+          "bytes": 626,
+          "kind": "provenance",
+          "path": "provenance.json",
+          "sha256": "886170438b24caccae1dfcea62c20da91d775c979e28d4ad605ea1498d248838"
+        },
+        {
+          "bytes": 4300,
+          "kind": "validation",
+          "path": "validation.json",
+          "sha256": "ae88cd8a5fdf7f26969dad1651f864fbc41055ff9356de5107c8435205a60356"
+        }
+      ],
+      "license": "LicenseRef-ProjectOriginal",
+      "model": "model.glb",
+      "packageId": "pkg_58a8fa1b1aba1ea23d6d8405",
+      "provenance": {
+        "origin": "authored"
+      },
+      "schema": "game_dev.asset_package.v1",
+      "validation": {
+        "errorCount": 0,
+        "passed": true,
+        "warningCount": 0
+      },
+      "version": "1.3.0"
+    },
+    "hashesVerified": true,
+    "evidence": {
+      "packageBytesVerified": true,
+      "gpuImportTestPerformed": false,
+      "humanVisualReviewPerformed": false
+    }
+  },
+  "completedAt": "2026-10-04T09:07:55.114Z"
+}

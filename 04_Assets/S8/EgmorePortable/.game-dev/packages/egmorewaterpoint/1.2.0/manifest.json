@@ -1,0 +1,44 @@
+{
+  "assetId": "egmorewaterpoint",
+  "description": "Original Egmore architectural study with platform-facing facade details; estimated dimensions, visual acceptance pending",
+  "displayName": "EgmoreWaterPoint",
+  "files": [
+    {
+      "bytes": 6221272,
+      "kind": "model",
+      "path": "model.glb",
+      "sha256": "0d2cec76e6072b563dc70b79864989f312c2b0d709de35672a6dff7b5a5402c0"
+    },
+    {
+      "bytes": 3900,
+      "kind": "metadata",
+      "path": "metadata.json",
+      "sha256": "0940096e0bbeb2da9f10a9444429b99c3a5a219c5f72f4dd6d376cdb48d182ab"
+    },
+    {
+      "bytes": 626,
+      "kind": "provenance",
+      "path": "provenance.json",
+      "sha256": "bd07cf11990239239ae12ecb660939ae6aa103300bd27bfe0fdd02564feacd0e"
+    },
+    {
+      "bytes": 4319,
+      "kind": "validation",
+      "path": "validation.json",
+      "sha256": "e52041ed733021bfaa76d706d662af9118334352e1dda9776db62b7403904a6f"
+    }
+  ],
+  "license": "LicenseRef-ProjectOriginal",
+  "model": "model.glb",
+  "packageId": "pkg_8a188c51c47a8858faffca0d",
+  "provenance": {
+    "origin": "authored"
+  },
+  "schema": "game_dev.asset_package.v1",
+  "validation": {
+    "errorCount": 0,
+    "passed": true,
+    "warningCount": 0
+  },
+  "version": "1.2.0"
+}

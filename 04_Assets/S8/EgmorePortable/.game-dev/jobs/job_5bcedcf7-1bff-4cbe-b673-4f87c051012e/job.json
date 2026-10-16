@@ -1,0 +1,60 @@
+{
+  "schema": "game_dev.job.v1",
+  "id": "job_5bcedcf7-1bff-4cbe-b673-4f87c051012e",
+  "operation": "package.build",
+  "status": "completed",
+  "request": {
+    "positionals": [
+      "package",
+      "build",
+      "D:\\Project\\IndianRailwayGame\\04_Assets\\S8\\EgmorePortable\\v2-ballast\\EgmorePlatformBench.glb"
+    ],
+    "flags": {
+      "output-dir": "04_Assets/S8/EgmorePortable"
+    },
+    "input": {
+      "policy": {
+        "requireUVs": true,
+        "requireNormals": true,
+        "requireTangentsWithNormalMap": true,
+        "requireBaseColorTexture": true,
+        "minTextureSize": 512,
+        "requirePowerOfTwoTextures": true,
+        "maxDimensionMeters": 15,
+        "minDimensionMeters": 0.001
+      },
+      "description": "Original metric Egmore study module; estimated dimensions, visual acceptance and Android integration pending",
+      "name": "EgmorePlatformBench",
+      "license": "LicenseRef-ProjectOriginal",
+      "provenance": {
+        "sourceUri": "04_Assets/S8/EgmoreKit/EgmoreKit.blend",
+        "notes": "Independent geometry and procedural PBR. No photographic pixels. Reference credits: 07_Documentation/S8/EGMORE_REFERENCE_REGISTER.md. Portable export triangulates polygons and includes tangents; runtime FBX remains separate. LicenseRef-ProjectOriginal records project authorship, not a public redistribution license.",
+        "author": "[redacted]",
+        "origin": "authored"
+      },
+      "version": "1.1.0"
+    }
+  },
+  "attempts": 1,
+  "eventCount": 2,
+  "artifacts": [
+    {
+      "path": "D:\\Project\\IndianRailwayGame\\04_Assets\\S8\\EgmorePortable\\.game-dev\\packages\\egmoreplatformbench\\1.1.0",
+      "kind": "asset_package"
+    },
+    {
+      "path": "D:\\Project\\IndianRailwayGame\\04_Assets\\S8\\EgmorePortable\\.game-dev\\packages\\egmoreplatformbench\\1.1.0\\manifest.json",
+      "kind": "manifest",
+      "sha256": "1eb3eeac90f42cb6487ad3a1ebafee22bbbc857b73bd4f21def8195d827dc4f4"
+    },
+    {
+      "path": "D:\\Project\\IndianRailwayGame\\04_Assets\\S8\\EgmorePortable\\.game-dev\\packages\\egmoreplatformbench\\1.1.0\\receipt.json",
+      "kind": "receipt"
+    }
+  ],
+  "createdAt": "2026-10-04T08:04:30.314Z",
+  "updatedAt": "2026-10-04T08:04:30.485Z",
+  "startedAt": "2026-10-04T08:04:30.342Z",
+  "completedAt": "2026-10-04T08:04:30.485Z",
+  "receiptPath": "D:\\Project\\IndianRailwayGame\\04_Assets\\S8\\EgmorePortable\\.game-dev\\jobs\\job_5bcedcf7-1bff-4cbe-b673-4f87c051012e\\receipt.json"
+}

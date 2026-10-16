@@ -1,0 +1,59 @@
+{
+  "schema": "game_dev.receipt.v1",
+  "operation": "package.verify",
+  "result": {
+    "schema": "game_dev.package_verification.v1",
+    "packagePath": "D:\\Project\\IndianRailwayGame\\04_Assets\\S8\\EgmorePortable\\.game-dev\\packages\\egmoreentrance9m\\1.2.0",
+    "manifest": {
+      "assetId": "egmoreentrance9m",
+      "description": "Original Egmore architectural study with platform-facing facade details; estimated dimensions, visual acceptance pending",
+      "displayName": "EgmoreEntrance9m",
+      "files": [
+        {
+          "bytes": 4840272,
+          "kind": "model",
+          "path": "model.glb",
+          "sha256": "045f3997aa4ccccff6073ac578eb106db80b5074630b2f93b5f844cd680bc643"
+        },
+        {
+          "bytes": 2982,
+          "kind": "metadata",
+          "path": "metadata.json",
+          "sha256": "2d17751b10f09d08fad015973d1c900fa332eed304cb750cf876b94635d51a36"
+        },
+        {
+          "bytes": 626,
+          "kind": "provenance",
+          "path": "provenance.json",
+          "sha256": "cb73c3d31b996ada052a4a707c605cad283c5e75e8785a72e0873db1bd805928"
+        },
+        {
+          "bytes": 4318,
+          "kind": "validation",
+          "path": "validation.json",
+          "sha256": "2b2c8694d26953126577f824d800d988d12d5104ee76fe21f3d803793e093b19"
+        }
+      ],
+      "license": "LicenseRef-ProjectOriginal",
+      "model": "model.glb",
+      "packageId": "pkg_9d4ddf6320b0a69e847208ce",
+      "provenance": {
+        "origin": "authored"
+      },
+      "schema": "game_dev.asset_package.v1",
+      "validation": {
+        "errorCount": 0,
+        "passed": true,
+        "warningCount": 0
+      },
+      "version": "1.2.0"
+    },
+    "hashesVerified": true,
+    "evidence": {
+      "packageBytesVerified": true,
+      "gpuImportTestPerformed": false,
+      "humanVisualReviewPerformed": false
+    }
+  },
+  "completedAt": "2026-10-04T08:44:34.926Z"
+}

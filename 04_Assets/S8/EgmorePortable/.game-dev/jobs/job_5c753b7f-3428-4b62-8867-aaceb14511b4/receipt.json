@@ -1,0 +1,44 @@
+{
+  "schema": "game_dev.receipt.v1",
+  "operation": "package.build",
+  "result": {
+    "schema": "game_dev.package_build_result.v1",
+    "packageId": "pkg_f4c3b577026fc57ba25940ac",
+    "packagePath": "D:\\Project\\IndianRailwayGame\\04_Assets\\S8\\EgmorePortable\\.game-dev\\packages\\egmoredome\\1.0.0",
+    "manifestPath": "D:\\Project\\IndianRailwayGame\\04_Assets\\S8\\EgmorePortable\\.game-dev\\packages\\egmoredome\\1.0.0\\manifest.json",
+    "receiptPath": "D:\\Project\\IndianRailwayGame\\04_Assets\\S8\\EgmorePortable\\.game-dev\\packages\\egmoredome\\1.0.0\\receipt.json",
+    "manifestSha256": "dd2acbf96b6d31427086ea939c0ec81ded803a04208d614f6f32c42512ce4a89",
+    "reused": false,
+    "validation": {
+      "passed": true,
+      "errorCount": 0,
+      "warningCount": 0
+    },
+    "catalog": {
+      "packageId": "pkg_f4c3b577026fc57ba25940ac",
+      "assetId": "egmoredome",
+      "version": "1.0.0",
+      "displayName": "EgmoreDome",
+      "description": "Original metric Egmore study module; estimated dimensions, visual acceptance and Android integration pending",
+      "license": "LicenseRef-ProjectOriginal",
+      "packagePath": "D:\\Project\\IndianRailwayGame\\04_Assets\\S8\\EgmorePortable\\.game-dev\\packages\\egmoredome\\1.0.0",
+      "modelPath": "D:\\Project\\IndianRailwayGame\\04_Assets\\S8\\EgmorePortable\\.game-dev\\packages\\egmoredome\\1.0.0\\model.glb",
+      "modelSha256": "dfafa1f6de0782bf39436bccdf8d6d19a480a4b3d4cfd706315676707221eba2",
+      "manifestSha256": "dd2acbf96b6d31427086ea939c0ec81ded803a04208d614f6f32c42512ce4a89",
+      "validationPassed": true,
+      "validationErrors": 0,
+      "validationWarnings": 0,
+      "origin": "authored",
+      "indexedAt": "2026-10-04T03:26:20.821Z"
+    },
+    "evidence": {
+      "portableGlbCopiedAndHashed": true,
+      "staticInspectionCompleted": true,
+      "policyValidationCompleted": true,
+      "blenderNormalizationPerformed": false,
+      "gpuImportTestPerformed": false,
+      "humanVisualReviewPerformed": false
+    }
+  },
+  "completedAt": "2026-10-04T03:26:20.825Z"
+}

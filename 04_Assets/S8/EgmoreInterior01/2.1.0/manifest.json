@@ -1,0 +1,1069 @@
+{
+  "version": "2.1.0",
+  "assetFamilyId": "Station.Egmore.Interior.01",
+  "status": "ready-additive-source-review",
+  "baseVersion": "2.0.0",
+  "baseSceneSha256": "c09777218b90a8d796f4a7a92f90e76905e41f1684d38378ab3712d014766cda",
+  "baseSourceSha256": "3ce09338aa4143727802b72f2eb1fff39bb3ab7e2a9757c633aa7a25df3436be",
+  "units": "metres",
+  "basis": "same as v2; Blender Z up, GLB standard Y up",
+  "modules": [
+    {
+      "module": "PlatformNumber1",
+      "assetId": "Station.Egmore.Interior.01.PlatformNumber1",
+      "lods": [
+        {
+          "level": 0,
+          "triangles": 1180,
+          "glb": "Modules/PlatformNumber1_LOD0.glb",
+          "fbx": "Modules/PlatformNumber1_LOD0.fbx",
+          "policy": "retain text silhouette; cull sign below readable screen size"
+        },
+        {
+          "level": 1,
+          "triangles": 1180,
+          "glb": "Modules/PlatformNumber1_LOD1.glb",
+          "fbx": "Modules/PlatformNumber1_LOD1.fbx",
+          "policy": "retain text silhouette; cull sign below readable screen size"
+        },
+        {
+          "level": 2,
+          "triangles": 1180,
+          "glb": "Modules/PlatformNumber1_LOD2.glb",
+          "fbx": "Modules/PlatformNumber1_LOD2.fbx",
+          "policy": "retain text silhouette; cull sign below readable screen size"
+        }
+      ],
+      "boundsM": [
+        [
+          -0.824999988079071,
+          -0.056800004094839096,
+          -0.33000001311302185
+        ],
+        [
+          0.824999988079071,
+          0.05680004879832268,
+          0.9749999642372131
+        ]
+      ]
+    },
+    {
+      "module": "PlatformNumber2",
+      "assetId": "Station.Egmore.Interior.01.PlatformNumber2",
+      "lods": [
+        {
+          "level": 0,
+          "triangles": 1412,
+          "glb": "Modules/PlatformNumber2_LOD0.glb",
+          "fbx": "Modules/PlatformNumber2_LOD0.fbx",
+          "policy": "retain text silhouette; cull sign below readable screen size"
+        },
+        {
+          "level": 1,
+          "triangles": 1412,
+          "glb": "Modules/PlatformNumber2_LOD1.glb",
+          "fbx": "Modules/PlatformNumber2_LOD1.fbx",
+          "policy": "retain text silhouette; cull sign below readable screen size"
+        },
+        {
+          "level": 2,
+          "triangles": 1412,
+          "glb": "Modules/PlatformNumber2_LOD2.glb",
+          "fbx": "Modules/PlatformNumber2_LOD2.fbx",
+          "policy": "retain text silhouette; cull sign below readable screen size"
+        }
+      ],
+      "boundsM": [
+        [
+          -0.824999988079071,
+          -0.056800007820129395,
+          -0.33000001311302185
+        ],
+        [
+          0.824999988079071,
+          0.05680004879832268,
+          0.9749999642372131
+        ]
+      ]
+    },
+    {
+      "module": "PlatformNumber3",
+      "assetId": "Station.Egmore.Interior.01.PlatformNumber3",
+      "lods": [
+        {
+          "level": 0,
+          "triangles": 1556,
+          "glb": "Modules/PlatformNumber3_LOD0.glb",
+          "fbx": "Modules/PlatformNumber3_LOD0.fbx",
+          "policy": "retain text silhouette; cull sign below readable screen size"
+        },
+        {
+          "level": 1,
+          "triangles": 1556,
+          "glb": "Modules/PlatformNumber3_LOD1.glb",
+          "fbx": "Modules/PlatformNumber3_LOD1.fbx",
+          "policy": "retain text silhouette; cull sign below readable screen size"
+        },
+        {
+          "level": 2,
+          "triangles": 1556,
+          "glb": "Modules/PlatformNumber3_LOD2.glb",
+          "fbx": "Modules/PlatformNumber3_LOD2.fbx",
+          "policy": "retain text silhouette; cull sign below readable screen size"
+        }
+      ],
+      "boundsM": [
+        [
+          -0.824999988079071,
+          -0.056800007820129395,
+          -0.33000001311302185
+        ],
+        [
+          0.824999988079071,
+          0.05680004879832268,
+          0.9749999642372131
+        ]
+      ]
+    },
+    {
+      "module": "ExitFootbridge",
+      "assetId": "Station.Egmore.Interior.01.ExitFootbridge",
+      "lods": [
+        {
+          "level": 0,
+          "triangles": 2164,
+          "glb": "Modules/ExitFootbridge_LOD0.glb",
+          "fbx": "Modules/ExitFootbridge_LOD0.fbx",
+          "policy": "retain text silhouette; cull sign below readable screen size"
+        },
+        {
+          "level": 1,
+          "triangles": 2164,
+          "glb": "Modules/ExitFootbridge_LOD1.glb",
+          "fbx": "Modules/ExitFootbridge_LOD1.fbx",
+          "policy": "retain text silhouette; cull sign below readable screen size"
+        },
+        {
+          "level": 2,
+          "triangles": 2164,
+          "glb": "Modules/ExitFootbridge_LOD2.glb",
+          "fbx": "Modules/ExitFootbridge_LOD2.fbx",
+          "policy": "retain text silhouette; cull sign below readable screen size"
+        }
+      ],
+      "boundsM": [
+        [
+          -0.824999988079071,
+          -0.056800007820129395,
+          -0.33000001311302185
+        ],
+        [
+          0.824999988079071,
+          0.05680007115006447,
+          0.9749999642372131
+        ]
+      ]
+    },
+    {
+      "module": "CanopyLight",
+      "assetId": "Station.Egmore.Interior.01.CanopyLight",
+      "lods": [
+        {
+          "level": 0,
+          "triangles": 24,
+          "glb": "Modules/CanopyLight_LOD0.glb",
+          "fbx": "Modules/CanopyLight_LOD0.fbx",
+          "policy": "retain text silhouette; cull sign below readable screen size"
+        },
+        {
+          "level": 1,
+          "triangles": 24,
+          "glb": "Modules/CanopyLight_LOD1.glb",
+          "fbx": "Modules/CanopyLight_LOD1.fbx",
+          "policy": "retain text silhouette; cull sign below readable screen size"
+        },
+        {
+          "level": 2,
+          "triangles": 24,
+          "glb": "Modules/CanopyLight_LOD2.glb",
+          "fbx": "Modules/CanopyLight_LOD2.fbx",
+          "policy": "retain text silhouette; cull sign below readable screen size"
+        }
+      ],
+      "boundsM": [
+        [
+          -0.625,
+          -0.10000000149011612,
+          -0.06399999558925629
+        ],
+        [
+          0.625,
+          0.10000000149011612,
+          0.04500000178813934
+        ]
+      ]
+    }
+  ],
+  "placements": [
+    {
+      "stableId": "EGI.PlatformNumber1.000",
+      "module": "PlatformNumber1",
+      "positionM": [
+        -78,
+        -5.675,
+        4.5
+      ],
+      "rotationZDeg": 90,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "stableId": "EGI.PlatformNumber1.001",
+      "module": "PlatformNumber1",
+      "positionM": [
+        -30,
+        -5.675,
+        4.5
+      ],
+      "rotationZDeg": 90,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "stableId": "EGI.PlatformNumber1.002",
+      "module": "PlatformNumber1",
+      "positionM": [
+        18,
+        -5.675,
+        4.5
+      ],
+      "rotationZDeg": 90,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "stableId": "EGI.PlatformNumber1.003",
+      "module": "PlatformNumber1",
+      "positionM": [
+        84,
+        -5.675,
+        4.5
+      ],
+      "rotationZDeg": 90,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "stableId": "EGI.ExitFootbridge.004",
+      "module": "ExitFootbridge",
+      "positionM": [
+        42,
+        -5.675,
+        4.5
+      ],
+      "rotationZDeg": 90,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "stableId": "EGI.CanopyLight.005",
+      "module": "CanopyLight",
+      "positionM": [
+        -90,
+        -5.675,
+        5.03
+      ],
+      "rotationZDeg": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "stableId": "EGI.CanopyLight.006",
+      "module": "CanopyLight",
+      "positionM": [
+        -78,
+        -5.675,
+        5.03
+      ],
+      "rotationZDeg": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "stableId": "EGI.CanopyLight.007",
+      "module": "CanopyLight",
+      "positionM": [
+        -66,
+        -5.675,
+        5.03
+      ],
+      "rotationZDeg": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "stableId": "EGI.CanopyLight.008",
+      "module": "CanopyLight",
+      "positionM": [
+        -54,
+        -5.675,
+        5.03
+      ],
+      "rotationZDeg": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "stableId": "EGI.CanopyLight.009",
+      "module": "CanopyLight",
+      "positionM": [
+        -42,
+        -5.675,
+        5.03
+      ],
+      "rotationZDeg": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "stableId": "EGI.CanopyLight.010",
+      "module": "CanopyLight",
+      "positionM": [
+        -30,
+        -5.675,
+        5.03
+      ],
+      "rotationZDeg": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "stableId": "EGI.CanopyLight.011",
+      "module": "CanopyLight",
+      "positionM": [
+        -18,
+        -5.675,
+        5.03
+      ],
+      "rotationZDeg": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "stableId": "EGI.CanopyLight.012",
+      "module": "CanopyLight",
+      "positionM": [
+        -6,
+        -5.675,
+        5.03
+      ],
+      "rotationZDeg": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "stableId": "EGI.CanopyLight.013",
+      "module": "CanopyLight",
+      "positionM": [
+        6,
+        -5.675,
+        5.03
+      ],
+      "rotationZDeg": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "stableId": "EGI.CanopyLight.014",
+      "module": "CanopyLight",
+      "positionM": [
+        18,
+        -5.675,
+        5.03
+      ],
+      "rotationZDeg": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "stableId": "EGI.CanopyLight.015",
+      "module": "CanopyLight",
+      "positionM": [
+        30,
+        -5.675,
+        5.03
+      ],
+      "rotationZDeg": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "stableId": "EGI.CanopyLight.016",
+      "module": "CanopyLight",
+      "positionM": [
+        42,
+        -5.675,
+        5.03
+      ],
+      "rotationZDeg": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "stableId": "EGI.CanopyLight.017",
+      "module": "CanopyLight",
+      "positionM": [
+        78,
+        -5.675,
+        5.03
+      ],
+      "rotationZDeg": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "stableId": "EGI.CanopyLight.018",
+      "module": "CanopyLight",
+      "positionM": [
+        90,
+        -5.675,
+        5.03
+      ],
+      "rotationZDeg": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "stableId": "EGI.PlatformNumber2.019",
+      "module": "PlatformNumber2",
+      "positionM": [
+        -78,
+        10.675,
+        4.5
+      ],
+      "rotationZDeg": 90,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "stableId": "EGI.PlatformNumber2.020",
+      "module": "PlatformNumber2",
+      "positionM": [
+        -30,
+        10.675,
+        4.5
+      ],
+      "rotationZDeg": 90,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "stableId": "EGI.PlatformNumber2.021",
+      "module": "PlatformNumber2",
+      "positionM": [
+        18,
+        10.675,
+        4.5
+      ],
+      "rotationZDeg": 90,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "stableId": "EGI.PlatformNumber2.022",
+      "module": "PlatformNumber2",
+      "positionM": [
+        84,
+        10.675,
+        4.5
+      ],
+      "rotationZDeg": 90,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "stableId": "EGI.ExitFootbridge.023",
+      "module": "ExitFootbridge",
+      "positionM": [
+        42,
+        10.675,
+        4.5
+      ],
+      "rotationZDeg": 90,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "stableId": "EGI.CanopyLight.024",
+      "module": "CanopyLight",
+      "positionM": [
+        -90,
+        10.675,
+        5.03
+      ],
+      "rotationZDeg": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "stableId": "EGI.CanopyLight.025",
+      "module": "CanopyLight",
+      "positionM": [
+        -78,
+        10.675,
+        5.03
+      ],
+      "rotationZDeg": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "stableId": "EGI.CanopyLight.026",
+      "module": "CanopyLight",
+      "positionM": [
+        -66,
+        10.675,
+        5.03
+      ],
+      "rotationZDeg": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "stableId": "EGI.CanopyLight.027",
+      "module": "CanopyLight",
+      "positionM": [
+        -54,
+        10.675,
+        5.03
+      ],
+      "rotationZDeg": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "stableId": "EGI.CanopyLight.028",
+      "module": "CanopyLight",
+      "positionM": [
+        -42,
+        10.675,
+        5.03
+      ],
+      "rotationZDeg": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "stableId": "EGI.CanopyLight.029",
+      "module": "CanopyLight",
+      "positionM": [
+        -30,
+        10.675,
+        5.03
+      ],
+      "rotationZDeg": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "stableId": "EGI.CanopyLight.030",
+      "module": "CanopyLight",
+      "positionM": [
+        -18,
+        10.675,
+        5.03
+      ],
+      "rotationZDeg": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "stableId": "EGI.CanopyLight.031",
+      "module": "CanopyLight",
+      "positionM": [
+        -6,
+        10.675,
+        5.03
+      ],
+      "rotationZDeg": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "stableId": "EGI.CanopyLight.032",
+      "module": "CanopyLight",
+      "positionM": [
+        6,
+        10.675,
+        5.03
+      ],
+      "rotationZDeg": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "stableId": "EGI.CanopyLight.033",
+      "module": "CanopyLight",
+      "positionM": [
+        18,
+        10.675,
+        5.03
+      ],
+      "rotationZDeg": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "stableId": "EGI.CanopyLight.034",
+      "module": "CanopyLight",
+      "positionM": [
+        30,
+        10.675,
+        5.03
+      ],
+      "rotationZDeg": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "stableId": "EGI.CanopyLight.035",
+      "module": "CanopyLight",
+      "positionM": [
+        42,
+        10.675,
+        5.03
+      ],
+      "rotationZDeg": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "stableId": "EGI.CanopyLight.036",
+      "module": "CanopyLight",
+      "positionM": [
+        78,
+        10.675,
+        5.03
+      ],
+      "rotationZDeg": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "stableId": "EGI.CanopyLight.037",
+      "module": "CanopyLight",
+      "positionM": [
+        90,
+        10.675,
+        5.03
+      ],
+      "rotationZDeg": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "stableId": "EGI.PlatformNumber3.038",
+      "module": "PlatformNumber3",
+      "positionM": [
+        -78,
+        27.025,
+        4.5
+      ],
+      "rotationZDeg": 90,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "stableId": "EGI.PlatformNumber3.039",
+      "module": "PlatformNumber3",
+      "positionM": [
+        -30,
+        27.025,
+        4.5
+      ],
+      "rotationZDeg": 90,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "stableId": "EGI.PlatformNumber3.040",
+      "module": "PlatformNumber3",
+      "positionM": [
+        18,
+        27.025,
+        4.5
+      ],
+      "rotationZDeg": 90,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "stableId": "EGI.PlatformNumber3.041",
+      "module": "PlatformNumber3",
+      "positionM": [
+        84,
+        27.025,
+        4.5
+      ],
+      "rotationZDeg": 90,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "stableId": "EGI.ExitFootbridge.042",
+      "module": "ExitFootbridge",
+      "positionM": [
+        42,
+        27.025,
+        4.5
+      ],
+      "rotationZDeg": 90,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "stableId": "EGI.CanopyLight.043",
+      "module": "CanopyLight",
+      "positionM": [
+        -90,
+        27.025,
+        5.03
+      ],
+      "rotationZDeg": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "stableId": "EGI.CanopyLight.044",
+      "module": "CanopyLight",
+      "positionM": [
+        -78,
+        27.025,
+        5.03
+      ],
+      "rotationZDeg": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "stableId": "EGI.CanopyLight.045",
+      "module": "CanopyLight",
+      "positionM": [
+        -66,
+        27.025,
+        5.03
+      ],
+      "rotationZDeg": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "stableId": "EGI.CanopyLight.046",
+      "module": "CanopyLight",
+      "positionM": [
+        -54,
+        27.025,
+        5.03
+      ],
+      "rotationZDeg": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "stableId": "EGI.CanopyLight.047",
+      "module": "CanopyLight",
+      "positionM": [
+        -42,
+        27.025,
+        5.03
+      ],
+      "rotationZDeg": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "stableId": "EGI.CanopyLight.048",
+      "module": "CanopyLight",
+      "positionM": [
+        -30,
+        27.025,
+        5.03
+      ],
+      "rotationZDeg": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "stableId": "EGI.CanopyLight.049",
+      "module": "CanopyLight",
+      "positionM": [
+        -18,
+        27.025,
+        5.03
+      ],
+      "rotationZDeg": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "stableId": "EGI.CanopyLight.050",
+      "module": "CanopyLight",
+      "positionM": [
+        -6,
+        27.025,
+        5.03
+      ],
+      "rotationZDeg": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "stableId": "EGI.CanopyLight.051",
+      "module": "CanopyLight",
+      "positionM": [
+        6,
+        27.025,
+        5.03
+      ],
+      "rotationZDeg": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "stableId": "EGI.CanopyLight.052",
+      "module": "CanopyLight",
+      "positionM": [
+        18,
+        27.025,
+        5.03
+      ],
+      "rotationZDeg": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "stableId": "EGI.CanopyLight.053",
+      "module": "CanopyLight",
+      "positionM": [
+        30,
+        27.025,
+        5.03
+      ],
+      "rotationZDeg": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "stableId": "EGI.CanopyLight.054",
+      "module": "CanopyLight",
+      "positionM": [
+        42,
+        27.025,
+        5.03
+      ],
+      "rotationZDeg": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "stableId": "EGI.CanopyLight.055",
+      "module": "CanopyLight",
+      "positionM": [
+        78,
+        27.025,
+        5.03
+      ],
+      "rotationZDeg": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "stableId": "EGI.CanopyLight.056",
+      "module": "CanopyLight",
+      "positionM": [
+        90,
+        27.025,
+        5.03
+      ],
+      "rotationZDeg": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    }
+  ],
+  "baseUnchanged": true,
+  "platformNumbers": "Representative scene labels 1/2/3, not a surveyed real Egmore platform assignment. Integrator must bind labels to scenario.",
+  "runtimeLightingValidated": false,
+  "sourcePreviewOnly": true,
+  "expandedTriangles": 24092
+}

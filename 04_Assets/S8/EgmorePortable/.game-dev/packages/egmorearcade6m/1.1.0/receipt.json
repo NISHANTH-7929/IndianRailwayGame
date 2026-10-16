@@ -1,0 +1,23 @@
+{
+  "completedAt": "2026-10-04T08:04:19.881Z",
+  "destination": {
+    "assetId": "egmorearcade6m",
+    "version": "1.1.0"
+  },
+  "evidence": {
+    "blenderNormalizationPerformed": false,
+    "gpuImportTestPerformed": false,
+    "humanVisualReviewPerformed": false,
+    "modelBytesCopiedAndHashed": true,
+    "policyValidationCompleted": true,
+    "staticInspectionCompleted": true
+  },
+  "manifestSha256": "1a06750a21157efb54f50ce8391f49744aa73ebd0b5c5dd970423f1cd79faadd",
+  "packageId": "pkg_2bb511da3df208f3ff73474a",
+  "schema": "game_dev.package_receipt.v1",
+  "source": {
+    "bytes": 7806184,
+    "fileName": "EgmoreArcade6m.glb",
+    "sha256": "e9eba7602a904a98ae449b08ec26e425ba2c2dda80f47ee58b7b31a1d8e0f181"
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "version": 2,
+  "units": "metres",
+  "axis": "X longitudinal Y axle Z vertical",
+  "parts": [
+    {
+      "name": "SM_WAP7_Frame_Front",
+      "triangles": 112182,
+      "materials": [
+        "mainupper",
+        "booggy"
+      ],
+      "removed_vertices": 20849,
+      "axles_m": [
+        3.7941656,
+        5.8503966,
+        7.9066277
+      ],
+      "source": "WAP7_Selected/Prepared/WAP7_Selected.blend; retained original licence applies"
+    },
+    {
+      "name": "SM_WAP7_Frame_Rear",
+      "triangles": 112142,
+      "materials": [
+        "mainupper",
+        "booggy"
+      ],
+      "removed_vertices": 20835,
+      "axles_m": [
+        -7.8839245,
+        -5.8276935,
+        -3.7714624
+      ],
+      "source": "WAP7_Selected/Prepared/WAP7_Selected.blend; retained original licence applies"
+    },
+    {
+      "name": "SM_LHB_Wheelset",
+      "triangles": 11724,
+      "materials": [
+        "WheelWeb",
+        "WheelTread",
+        "WheelHub",
+        "Witness"
+      ],
+      "radius_m": 0.4575,
+      "back_to_back_m": 1.6,
+      "rail_head_centres_m": 1.746
+    },
+    {
+      "name": "SM_WAP7_Wheelset",
+      "triangles": 10188,
+      "materials": [
+        "WheelWeb",
+        "WheelTread",
+        "WheelHub",
+        "Witness"
+      ],
+      "radius_m": 0.546,
+      "back_to_back_m": 1.596,
+      "rail_head_centres_m": 1.746
+    }
+  ],
+  "original_wheel_geometry": true
+}

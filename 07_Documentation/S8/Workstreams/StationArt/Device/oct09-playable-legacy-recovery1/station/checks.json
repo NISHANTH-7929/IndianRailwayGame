@@ -1,0 +1,12 @@
+{
+  "identity": true,
+  "fingerprint": true,
+  "service": true,
+  "paused": true,
+  "unblocked": true,
+  "valid": true,
+  "recreated": true,
+  "station_recreated": true,
+  "lhb_recreated": true,
+  "proxy_count_correct": true
+}

@@ -1,0 +1,4471 @@
+{
+  "status": "PASS",
+  "checks": [
+    {
+      "check": "EgmoreWaterPoint.LOD0.attributes",
+      "pass": true,
+      "detail": {
+        "uv": true,
+        "normals": true,
+        "finite": true,
+        "tangentsForNormalMaps": true,
+        "degenerateTriangles": 0
+      }
+    },
+    {
+      "check": "EgmoreWaterPoint.LOD0.triangles",
+      "pass": true,
+      "detail": {
+        "exported": 3100,
+        "declared": 3100
+      }
+    },
+    {
+      "check": "EgmoreWaterPoint.LOD1.attributes",
+      "pass": true,
+      "detail": {
+        "uv": true,
+        "normals": true,
+        "finite": true,
+        "tangentsForNormalMaps": true,
+        "degenerateTriangles": 0
+      }
+    },
+    {
+      "check": "EgmoreWaterPoint.LOD1.triangles",
+      "pass": true,
+      "detail": {
+        "exported": 1550,
+        "declared": 1550
+      }
+    },
+    {
+      "check": "EgmoreWaterPoint.LOD2.attributes",
+      "pass": true,
+      "detail": {
+        "uv": true,
+        "normals": true,
+        "finite": true,
+        "tangentsForNormalMaps": true,
+        "degenerateTriangles": 0
+      }
+    },
+    {
+      "check": "EgmoreWaterPoint.LOD2.triangles",
+      "pass": true,
+      "detail": {
+        "exported": 620,
+        "declared": 620
+      }
+    },
+    {
+      "check": "EgmoreWaterPoint.LODReduction",
+      "pass": true,
+      "detail": [
+        3100,
+        1550,
+        620
+      ]
+    },
+    {
+      "check": "EgmoreTower4m.LOD0.attributes",
+      "pass": true,
+      "detail": {
+        "uv": true,
+        "normals": true,
+        "finite": true,
+        "tangentsForNormalMaps": true,
+        "degenerateTriangles": 0
+      }
+    },
+    {
+      "check": "EgmoreTower4m.LOD0.triangles",
+      "pass": true,
+      "detail": {
+        "exported": 16220,
+        "declared": 16220
+      }
+    },
+    {
+      "check": "EgmoreTower4m.LOD1.attributes",
+      "pass": true,
+      "detail": {
+        "uv": true,
+        "normals": true,
+        "finite": true,
+        "tangentsForNormalMaps": true,
+        "degenerateTriangles": 0
+      }
+    },
+    {
+      "check": "EgmoreTower4m.LOD1.triangles",
+      "pass": true,
+      "detail": {
+        "exported": 8110,
+        "declared": 8110
+      }
+    },
+    {
+      "check": "EgmoreTower4m.LOD2.attributes",
+      "pass": true,
+      "detail": {
+        "uv": true,
+        "normals": true,
+        "finite": true,
+        "tangentsForNormalMaps": true,
+        "degenerateTriangles": 0
+      }
+    },
+    {
+      "check": "EgmoreTower4m.LOD2.triangles",
+      "pass": true,
+      "detail": {
+        "exported": 3211,
+        "declared": 3211
+      }
+    },
+    {
+      "check": "EgmoreTower4m.LODReduction",
+      "pass": true,
+      "detail": [
+        16220,
+        8110,
+        3211
+      ]
+    },
+    {
+      "check": "EgmorePlatformBench.LOD0.attributes",
+      "pass": true,
+      "detail": {
+        "uv": true,
+        "normals": true,
+        "finite": true,
+        "tangentsForNormalMaps": true,
+        "degenerateTriangles": 0
+      }
+    },
+    {
+      "check": "EgmorePlatformBench.LOD0.triangles",
+      "pass": true,
+      "detail": {
+        "exported": 1620,
+        "declared": 1620
+      }
+    },
+    {
+      "check": "EgmorePlatformBench.LOD1.attributes",
+      "pass": true,
+      "detail": {
+        "uv": true,
+        "normals": true,
+        "finite": true,
+        "tangentsForNormalMaps": true,
+        "degenerateTriangles": 0
+      }
+    },
+    {
+      "check": "EgmorePlatformBench.LOD1.triangles",
+      "pass": true,
+      "detail": {
+        "exported": 810,
+        "declared": 810
+      }
+    },
+    {
+      "check": "EgmorePlatformBench.LOD2.attributes",
+      "pass": true,
+      "detail": {
+        "uv": true,
+        "normals": true,
+        "finite": true,
+        "tangentsForNormalMaps": true,
+        "degenerateTriangles": 0
+      }
+    },
+    {
+      "check": "EgmorePlatformBench.LOD2.triangles",
+      "pass": true,
+      "detail": {
+        "exported": 324,
+        "declared": 324
+      }
+    },
+    {
+      "check": "EgmorePlatformBench.LODReduction",
+      "pass": true,
+      "detail": [
+        1620,
+        810,
+        324
+      ]
+    },
+    {
+      "check": "EgmoreLitterBins.LOD0.attributes",
+      "pass": true,
+      "detail": {
+        "uv": true,
+        "normals": true,
+        "finite": true,
+        "tangentsForNormalMaps": true,
+        "degenerateTriangles": 0
+      }
+    },
+    {
+      "check": "EgmoreLitterBins.LOD0.triangles",
+      "pass": true,
+      "detail": {
+        "exported": 860,
+        "declared": 860
+      }
+    },
+    {
+      "check": "EgmoreLitterBins.LOD1.attributes",
+      "pass": true,
+      "detail": {
+        "uv": true,
+        "normals": true,
+        "finite": true,
+        "tangentsForNormalMaps": true,
+        "degenerateTriangles": 0
+      }
+    },
+    {
+      "check": "EgmoreLitterBins.LOD1.triangles",
+      "pass": true,
+      "detail": {
+        "exported": 430,
+        "declared": 430
+      }
+    },
+    {
+      "check": "EgmoreLitterBins.LOD2.attributes",
+      "pass": true,
+      "detail": {
+        "uv": true,
+        "normals": true,
+        "finite": true,
+        "tangentsForNormalMaps": true,
+        "degenerateTriangles": 0
+      }
+    },
+    {
+      "check": "EgmoreLitterBins.LOD2.triangles",
+      "pass": true,
+      "detail": {
+        "exported": 172,
+        "declared": 172
+      }
+    },
+    {
+      "check": "EgmoreLitterBins.LODReduction",
+      "pass": true,
+      "detail": [
+        860,
+        430,
+        172
+      ]
+    },
+    {
+      "check": "EgmoreEntrance9m.LOD0.attributes",
+      "pass": true,
+      "detail": {
+        "uv": true,
+        "normals": true,
+        "finite": true,
+        "tangentsForNormalMaps": true,
+        "degenerateTriangles": 0
+      }
+    },
+    {
+      "check": "EgmoreEntrance9m.LOD0.triangles",
+      "pass": true,
+      "detail": {
+        "exported": 14068,
+        "declared": 14068
+      }
+    },
+    {
+      "check": "EgmoreEntrance9m.LOD1.attributes",
+      "pass": true,
+      "detail": {
+        "uv": true,
+        "normals": true,
+        "finite": true,
+        "tangentsForNormalMaps": true,
+        "degenerateTriangles": 0
+      }
+    },
+    {
+      "check": "EgmoreEntrance9m.LOD1.triangles",
+      "pass": true,
+      "detail": {
+        "exported": 7034,
+        "declared": 7034
+      }
+    },
+    {
+      "check": "EgmoreEntrance9m.LOD2.attributes",
+      "pass": true,
+      "detail": {
+        "uv": true,
+        "normals": true,
+        "finite": true,
+        "tangentsForNormalMaps": true,
+        "degenerateTriangles": 0
+      }
+    },
+    {
+      "check": "EgmoreEntrance9m.LOD2.triangles",
+      "pass": true,
+      "detail": {
+        "exported": 2811,
+        "declared": 2811
+      }
+    },
+    {
+      "check": "EgmoreEntrance9m.LODReduction",
+      "pass": true,
+      "detail": [
+        14068,
+        7034,
+        2811
+      ]
+    },
+    {
+      "check": "EgmoreDrain3m.LOD0.attributes",
+      "pass": true,
+      "detail": {
+        "uv": true,
+        "normals": true,
+        "finite": true,
+        "tangentsForNormalMaps": true,
+        "degenerateTriangles": 0
+      }
+    },
+    {
+      "check": "EgmoreDrain3m.LOD0.triangles",
+      "pass": true,
+      "detail": {
+        "exported": 362,
+        "declared": 362
+      }
+    },
+    {
+      "check": "EgmoreDrain3m.LOD1.attributes",
+      "pass": true,
+      "detail": {
+        "uv": true,
+        "normals": true,
+        "finite": true,
+        "tangentsForNormalMaps": true,
+        "degenerateTriangles": 0
+      }
+    },
+    {
+      "check": "EgmoreDrain3m.LOD1.triangles",
+      "pass": true,
+      "detail": {
+        "exported": 180,
+        "declared": 180
+      }
+    },
+    {
+      "check": "EgmoreDrain3m.LOD2.attributes",
+      "pass": true,
+      "detail": {
+        "uv": true,
+        "normals": true,
+        "finite": true,
+        "tangentsForNormalMaps": true,
+        "degenerateTriangles": 0
+      }
+    },
+    {
+      "check": "EgmoreDrain3m.LOD2.triangles",
+      "pass": true,
+      "detail": {
+        "exported": 48,
+        "declared": 48
+      }
+    },
+    {
+      "check": "EgmoreDrain3m.LODReduction",
+      "pass": true,
+      "detail": [
+        362,
+        180,
+        48
+      ]
+    },
+    {
+      "check": "EgmoreDome.LOD0.attributes",
+      "pass": true,
+      "detail": {
+        "uv": true,
+        "normals": true,
+        "finite": true,
+        "tangentsForNormalMaps": true,
+        "degenerateTriangles": 0
+      }
+    },
+    {
+      "check": "EgmoreDome.LOD0.triangles",
+      "pass": true,
+      "detail": {
+        "exported": 908,
+        "declared": 908
+      }
+    },
+    {
+      "check": "EgmoreDome.LOD1.attributes",
+      "pass": true,
+      "detail": {
+        "uv": true,
+        "normals": true,
+        "finite": true,
+        "tangentsForNormalMaps": true,
+        "degenerateTriangles": 0
+      }
+    },
+    {
+      "check": "EgmoreDome.LOD1.triangles",
+      "pass": true,
+      "detail": {
+        "exported": 454,
+        "declared": 454
+      }
+    },
+    {
+      "check": "EgmoreDome.LOD2.attributes",
+      "pass": true,
+      "detail": {
+        "uv": true,
+        "normals": true,
+        "finite": true,
+        "tangentsForNormalMaps": true,
+        "degenerateTriangles": 0
+      }
+    },
+    {
+      "check": "EgmoreDome.LOD2.triangles",
+      "pass": true,
+      "detail": {
+        "exported": 180,
+        "declared": 180
+      }
+    },
+    {
+      "check": "EgmoreDome.LODReduction",
+      "pass": true,
+      "detail": [
+        908,
+        454,
+        180
+      ]
+    },
+    {
+      "check": "EgmoreCeilingFan.LOD0.attributes",
+      "pass": true,
+      "detail": {
+        "uv": true,
+        "normals": true,
+        "finite": true,
+        "tangentsForNormalMaps": true,
+        "degenerateTriangles": 0
+      }
+    },
+    {
+      "check": "EgmoreCeilingFan.LOD0.triangles",
+      "pass": true,
+      "detail": {
+        "exported": 416,
+        "declared": 416
+      }
+    },
+    {
+      "check": "EgmoreCeilingFan.LOD1.attributes",
+      "pass": true,
+      "detail": {
+        "uv": true,
+        "normals": true,
+        "finite": true,
+        "tangentsForNormalMaps": true,
+        "degenerateTriangles": 0
+      }
+    },
+    {
+      "check": "EgmoreCeilingFan.LOD1.triangles",
+      "pass": true,
+      "detail": {
+        "exported": 208,
+        "declared": 208
+      }
+    },
+    {
+      "check": "EgmoreCeilingFan.LOD2.attributes",
+      "pass": true,
+      "detail": {
+        "uv": true,
+        "normals": true,
+        "finite": true,
+        "tangentsForNormalMaps": true,
+        "degenerateTriangles": 0
+      }
+    },
+    {
+      "check": "EgmoreCeilingFan.LOD2.triangles",
+      "pass": true,
+      "detail": {
+        "exported": 82,
+        "declared": 82
+      }
+    },
+    {
+      "check": "EgmoreCeilingFan.LODReduction",
+      "pass": true,
+      "detail": [
+        416,
+        208,
+        82
+      ]
+    },
+    {
+      "check": "EgmoreCanopy6m.LOD0.attributes",
+      "pass": true,
+      "detail": {
+        "uv": true,
+        "normals": true,
+        "finite": true,
+        "tangentsForNormalMaps": true,
+        "degenerateTriangles": 0
+      }
+    },
+    {
+      "check": "EgmoreCanopy6m.LOD0.triangles",
+      "pass": true,
+      "detail": {
+        "exported": 3394,
+        "declared": 3394
+      }
+    },
+    {
+      "check": "EgmoreCanopy6m.LOD1.attributes",
+      "pass": true,
+      "detail": {
+        "uv": true,
+        "normals": true,
+        "finite": true,
+        "tangentsForNormalMaps": true,
+        "degenerateTriangles": 0
+      }
+    },
+    {
+      "check": "EgmoreCanopy6m.LOD1.triangles",
+      "pass": true,
+      "detail": {
+        "exported": 1694,
+        "declared": 1694
+      }
+    },
+    {
+      "check": "EgmoreCanopy6m.LOD2.attributes",
+      "pass": true,
+      "detail": {
+        "uv": true,
+        "normals": true,
+        "finite": true,
+        "tangentsForNormalMaps": true,
+        "degenerateTriangles": 0
+      }
+    },
+    {
+      "check": "EgmoreCanopy6m.LOD2.triangles",
+      "pass": true,
+      "detail": {
+        "exported": 646,
+        "declared": 646
+      }
+    },
+    {
+      "check": "EgmoreCanopy6m.LODReduction",
+      "pass": true,
+      "detail": [
+        3394,
+        1694,
+        646
+      ]
+    },
+    {
+      "check": "EgmoreArcade6m.LOD0.attributes",
+      "pass": true,
+      "detail": {
+        "uv": true,
+        "normals": true,
+        "finite": true,
+        "tangentsForNormalMaps": true,
+        "degenerateTriangles": 0
+      }
+    },
+    {
+      "check": "EgmoreArcade6m.LOD0.triangles",
+      "pass": true,
+      "detail": {
+        "exported": 15900,
+        "declared": 15900
+      }
+    },
+    {
+      "check": "EgmoreArcade6m.LOD1.attributes",
+      "pass": true,
+      "detail": {
+        "uv": true,
+        "normals": true,
+        "finite": true,
+        "tangentsForNormalMaps": true,
+        "degenerateTriangles": 0
+      }
+    },
+    {
+      "check": "EgmoreArcade6m.LOD1.triangles",
+      "pass": true,
+      "detail": {
+        "exported": 7950,
+        "declared": 7950
+      }
+    },
+    {
+      "check": "EgmoreArcade6m.LOD2.attributes",
+      "pass": true,
+      "detail": {
+        "uv": true,
+        "normals": true,
+        "finite": true,
+        "tangentsForNormalMaps": true,
+        "degenerateTriangles": 0
+      }
+    },
+    {
+      "check": "EgmoreArcade6m.LOD2.triangles",
+      "pass": true,
+      "detail": {
+        "exported": 3015,
+        "declared": 3015
+      }
+    },
+    {
+      "check": "EgmoreArcade6m.LODReduction",
+      "pass": true,
+      "detail": [
+        15900,
+        7950,
+        3015
+      ]
+    },
+    {
+      "check": "EgmoreNameboard4m.LOD0.attributes",
+      "pass": true,
+      "detail": {
+        "uv": true,
+        "normals": true,
+        "finite": true,
+        "tangentsForNormalMaps": true,
+        "degenerateTriangles": 0
+      }
+    },
+    {
+      "check": "EgmoreNameboard4m.LOD0.triangles",
+      "pass": true,
+      "detail": {
+        "exported": 760,
+        "declared": 760
+      }
+    },
+    {
+      "check": "EgmoreNameboard4m.LOD1.attributes",
+      "pass": true,
+      "detail": {
+        "uv": true,
+        "normals": true,
+        "finite": true,
+        "tangentsForNormalMaps": true,
+        "degenerateTriangles": 0
+      }
+    },
+    {
+      "check": "EgmoreNameboard4m.LOD1.triangles",
+      "pass": true,
+      "detail": {
+        "exported": 380,
+        "declared": 380
+      }
+    },
+    {
+      "check": "EgmoreNameboard4m.LOD2.attributes",
+      "pass": true,
+      "detail": {
+        "uv": true,
+        "normals": true,
+        "finite": true,
+        "tangentsForNormalMaps": true,
+        "degenerateTriangles": 0
+      }
+    },
+    {
+      "check": "EgmoreNameboard4m.LOD2.triangles",
+      "pass": true,
+      "detail": {
+        "exported": 152,
+        "declared": 152
+      }
+    },
+    {
+      "check": "EgmoreNameboard4m.LODReduction",
+      "pass": true,
+      "detail": [
+        760,
+        380,
+        152
+      ]
+    },
+    {
+      "check": "Platform6x8m.LOD0.attributes",
+      "pass": true,
+      "detail": {
+        "uv": true,
+        "normals": true,
+        "finite": true,
+        "tangentsForNormalMaps": true,
+        "degenerateTriangles": 0
+      }
+    },
+    {
+      "check": "Platform6x8m.LOD0.triangles",
+      "pass": true,
+      "detail": {
+        "exported": 70,
+        "declared": 70
+      }
+    },
+    {
+      "check": "Platform6x8m.LOD1.attributes",
+      "pass": true,
+      "detail": {
+        "uv": true,
+        "normals": true,
+        "finite": true,
+        "tangentsForNormalMaps": true,
+        "degenerateTriangles": 0
+      }
+    },
+    {
+      "check": "Platform6x8m.LOD1.triangles",
+      "pass": true,
+      "detail": {
+        "exported": 70,
+        "declared": 70
+      }
+    },
+    {
+      "check": "Platform6x8m.LOD2.attributes",
+      "pass": true,
+      "detail": {
+        "uv": true,
+        "normals": true,
+        "finite": true,
+        "tangentsForNormalMaps": true,
+        "degenerateTriangles": 0
+      }
+    },
+    {
+      "check": "Platform6x8m.LOD2.triangles",
+      "pass": true,
+      "detail": {
+        "exported": 70,
+        "declared": 70
+      }
+    },
+    {
+      "check": "Platform6x8m.LODReduction",
+      "pass": true,
+      "detail": [
+        70,
+        70,
+        70
+      ]
+    },
+    {
+      "check": "Track6m.LOD0.attributes",
+      "pass": true,
+      "detail": {
+        "uv": true,
+        "normals": true,
+        "finite": true,
+        "tangentsForNormalMaps": true,
+        "degenerateTriangles": 0
+      }
+    },
+    {
+      "check": "Track6m.LOD0.triangles",
+      "pass": true,
+      "detail": {
+        "exported": 672,
+        "declared": 672
+      }
+    },
+    {
+      "check": "Track6m.LOD1.attributes",
+      "pass": true,
+      "detail": {
+        "uv": true,
+        "normals": true,
+        "finite": true,
+        "tangentsForNormalMaps": true,
+        "degenerateTriangles": 0
+      }
+    },
+    {
+      "check": "Track6m.LOD1.triangles",
+      "pass": true,
+      "detail": {
+        "exported": 336,
+        "declared": 336
+      }
+    },
+    {
+      "check": "Track6m.LOD2.attributes",
+      "pass": true,
+      "detail": {
+        "uv": true,
+        "normals": true,
+        "finite": true,
+        "tangentsForNormalMaps": true,
+        "degenerateTriangles": 0
+      }
+    },
+    {
+      "check": "Track6m.LOD2.triangles",
+      "pass": true,
+      "detail": {
+        "exported": 88,
+        "declared": 88
+      }
+    },
+    {
+      "check": "Track6m.LODReduction",
+      "pass": true,
+      "detail": [
+        672,
+        336,
+        88
+      ]
+    },
+    {
+      "check": "Ballast6m.LOD0.attributes",
+      "pass": true,
+      "detail": {
+        "uv": true,
+        "normals": true,
+        "finite": true,
+        "tangentsForNormalMaps": true,
+        "degenerateTriangles": 0
+      }
+    },
+    {
+      "check": "Ballast6m.LOD0.triangles",
+      "pass": true,
+      "detail": {
+        "exported": 12,
+        "declared": 12
+      }
+    },
+    {
+      "check": "Ballast6m.LOD1.attributes",
+      "pass": true,
+      "detail": {
+        "uv": true,
+        "normals": true,
+        "finite": true,
+        "tangentsForNormalMaps": true,
+        "degenerateTriangles": 0
+      }
+    },
+    {
+      "check": "Ballast6m.LOD1.triangles",
+      "pass": true,
+      "detail": {
+        "exported": 12,
+        "declared": 12
+      }
+    },
+    {
+      "check": "Ballast6m.LOD2.attributes",
+      "pass": true,
+      "detail": {
+        "uv": true,
+        "normals": true,
+        "finite": true,
+        "tangentsForNormalMaps": true,
+        "degenerateTriangles": 0
+      }
+    },
+    {
+      "check": "Ballast6m.LOD2.triangles",
+      "pass": true,
+      "detail": {
+        "exported": 12,
+        "declared": 12
+      }
+    },
+    {
+      "check": "Ballast6m.LODReduction",
+      "pass": true,
+      "detail": [
+        12,
+        12,
+        12
+      ]
+    },
+    {
+      "check": "BallastScatter6m.LOD0.attributes",
+      "pass": true,
+      "detail": {
+        "uv": true,
+        "normals": true,
+        "finite": true,
+        "tangentsForNormalMaps": true,
+        "degenerateTriangles": 0
+      }
+    },
+    {
+      "check": "BallastScatter6m.LOD0.triangles",
+      "pass": true,
+      "detail": {
+        "exported": 960,
+        "declared": 960
+      }
+    },
+    {
+      "check": "BallastScatter6m.LOD1.attributes",
+      "pass": true,
+      "detail": {
+        "uv": true,
+        "normals": true,
+        "finite": true,
+        "tangentsForNormalMaps": true,
+        "degenerateTriangles": 0
+      }
+    },
+    {
+      "check": "BallastScatter6m.LOD1.triangles",
+      "pass": true,
+      "detail": {
+        "exported": 480,
+        "declared": 480
+      }
+    },
+    {
+      "check": "BallastScatter6m.LOD2.attributes",
+      "pass": true,
+      "detail": {
+        "uv": true,
+        "normals": true,
+        "finite": true,
+        "tangentsForNormalMaps": true,
+        "degenerateTriangles": 0
+      }
+    },
+    {
+      "check": "BallastScatter6m.LOD2.triangles",
+      "pass": true,
+      "detail": {
+        "exported": 167,
+        "declared": 167
+      }
+    },
+    {
+      "check": "BallastScatter6m.LODReduction",
+      "pass": true,
+      "detail": [
+        960,
+        480,
+        167
+      ]
+    },
+    {
+      "check": "GroundTile24m.LOD0.attributes",
+      "pass": true,
+      "detail": {
+        "uv": true,
+        "normals": true,
+        "finite": true,
+        "tangentsForNormalMaps": true,
+        "degenerateTriangles": 0
+      }
+    },
+    {
+      "check": "GroundTile24m.LOD0.triangles",
+      "pass": true,
+      "detail": {
+        "exported": 12,
+        "declared": 12
+      }
+    },
+    {
+      "check": "GroundTile24m.LOD1.attributes",
+      "pass": true,
+      "detail": {
+        "uv": true,
+        "normals": true,
+        "finite": true,
+        "tangentsForNormalMaps": true,
+        "degenerateTriangles": 0
+      }
+    },
+    {
+      "check": "GroundTile24m.LOD1.triangles",
+      "pass": true,
+      "detail": {
+        "exported": 12,
+        "declared": 12
+      }
+    },
+    {
+      "check": "GroundTile24m.LOD2.attributes",
+      "pass": true,
+      "detail": {
+        "uv": true,
+        "normals": true,
+        "finite": true,
+        "tangentsForNormalMaps": true,
+        "degenerateTriangles": 0
+      }
+    },
+    {
+      "check": "GroundTile24m.LOD2.triangles",
+      "pass": true,
+      "detail": {
+        "exported": 12,
+        "declared": 12
+      }
+    },
+    {
+      "check": "GroundTile24m.LODReduction",
+      "pass": true,
+      "detail": [
+        12,
+        12,
+        12
+      ]
+    },
+    {
+      "check": "RoadTile12m.LOD0.attributes",
+      "pass": true,
+      "detail": {
+        "uv": true,
+        "normals": true,
+        "finite": true,
+        "tangentsForNormalMaps": true,
+        "degenerateTriangles": 0
+      }
+    },
+    {
+      "check": "RoadTile12m.LOD0.triangles",
+      "pass": true,
+      "detail": {
+        "exported": 24,
+        "declared": 24
+      }
+    },
+    {
+      "check": "RoadTile12m.LOD1.attributes",
+      "pass": true,
+      "detail": {
+        "uv": true,
+        "normals": true,
+        "finite": true,
+        "tangentsForNormalMaps": true,
+        "degenerateTriangles": 0
+      }
+    },
+    {
+      "check": "RoadTile12m.LOD1.triangles",
+      "pass": true,
+      "detail": {
+        "exported": 24,
+        "declared": 24
+      }
+    },
+    {
+      "check": "RoadTile12m.LOD2.attributes",
+      "pass": true,
+      "detail": {
+        "uv": true,
+        "normals": true,
+        "finite": true,
+        "tangentsForNormalMaps": true,
+        "degenerateTriangles": 0
+      }
+    },
+    {
+      "check": "RoadTile12m.LOD2.triangles",
+      "pass": true,
+      "detail": {
+        "exported": 24,
+        "declared": 24
+      }
+    },
+    {
+      "check": "RoadTile12m.LODReduction",
+      "pass": true,
+      "detail": [
+        24,
+        24,
+        24
+      ]
+    },
+    {
+      "check": "Forecourt6m.LOD0.attributes",
+      "pass": true,
+      "detail": {
+        "uv": true,
+        "normals": true,
+        "finite": true,
+        "tangentsForNormalMaps": true,
+        "degenerateTriangles": 0
+      }
+    },
+    {
+      "check": "Forecourt6m.LOD0.triangles",
+      "pass": true,
+      "detail": {
+        "exported": 24,
+        "declared": 24
+      }
+    },
+    {
+      "check": "Forecourt6m.LOD1.attributes",
+      "pass": true,
+      "detail": {
+        "uv": true,
+        "normals": true,
+        "finite": true,
+        "tangentsForNormalMaps": true,
+        "degenerateTriangles": 0
+      }
+    },
+    {
+      "check": "Forecourt6m.LOD1.triangles",
+      "pass": true,
+      "detail": {
+        "exported": 24,
+        "declared": 24
+      }
+    },
+    {
+      "check": "Forecourt6m.LOD2.attributes",
+      "pass": true,
+      "detail": {
+        "uv": true,
+        "normals": true,
+        "finite": true,
+        "tangentsForNormalMaps": true,
+        "degenerateTriangles": 0
+      }
+    },
+    {
+      "check": "Forecourt6m.LOD2.triangles",
+      "pass": true,
+      "detail": {
+        "exported": 24,
+        "declared": 24
+      }
+    },
+    {
+      "check": "Forecourt6m.LODReduction",
+      "pass": true,
+      "detail": [
+        24,
+        24,
+        24
+      ]
+    },
+    {
+      "check": "BridgeStairs.LOD0.attributes",
+      "pass": true,
+      "detail": {
+        "uv": true,
+        "normals": true,
+        "finite": true,
+        "tangentsForNormalMaps": true,
+        "degenerateTriangles": 0
+      }
+    },
+    {
+      "check": "BridgeStairs.LOD0.triangles",
+      "pass": true,
+      "detail": {
+        "exported": 728,
+        "declared": 728
+      }
+    },
+    {
+      "check": "BridgeStairs.LOD1.attributes",
+      "pass": true,
+      "detail": {
+        "uv": true,
+        "normals": true,
+        "finite": true,
+        "tangentsForNormalMaps": true,
+        "degenerateTriangles": 0
+      }
+    },
+    {
+      "check": "BridgeStairs.LOD1.triangles",
+      "pass": true,
+      "detail": {
+        "exported": 332,
+        "declared": 332
+      }
+    },
+    {
+      "check": "BridgeStairs.LOD2.attributes",
+      "pass": true,
+      "detail": {
+        "uv": true,
+        "normals": true,
+        "finite": true,
+        "tangentsForNormalMaps": true,
+        "degenerateTriangles": 0
+      }
+    },
+    {
+      "check": "BridgeStairs.LOD2.triangles",
+      "pass": true,
+      "detail": {
+        "exported": 112,
+        "declared": 112
+      }
+    },
+    {
+      "check": "BridgeStairs.LODReduction",
+      "pass": true,
+      "detail": [
+        728,
+        332,
+        112
+      ]
+    },
+    {
+      "check": "BridgeDeck6m.LOD0.attributes",
+      "pass": true,
+      "detail": {
+        "uv": true,
+        "normals": true,
+        "finite": true,
+        "tangentsForNormalMaps": true,
+        "degenerateTriangles": 0
+      }
+    },
+    {
+      "check": "BridgeDeck6m.LOD0.triangles",
+      "pass": true,
+      "detail": {
+        "exported": 276,
+        "declared": 276
+      }
+    },
+    {
+      "check": "BridgeDeck6m.LOD1.attributes",
+      "pass": true,
+      "detail": {
+        "uv": true,
+        "normals": true,
+        "finite": true,
+        "tangentsForNormalMaps": true,
+        "degenerateTriangles": 0
+      }
+    },
+    {
+      "check": "BridgeDeck6m.LOD1.triangles",
+      "pass": true,
+      "detail": {
+        "exported": 131,
+        "declared": 131
+      }
+    },
+    {
+      "check": "BridgeDeck6m.LOD2.attributes",
+      "pass": true,
+      "detail": {
+        "uv": true,
+        "normals": true,
+        "finite": true,
+        "tangentsForNormalMaps": true,
+        "degenerateTriangles": 0
+      }
+    },
+    {
+      "check": "BridgeDeck6m.LOD2.triangles",
+      "pass": true,
+      "detail": {
+        "exported": 33,
+        "declared": 33
+      }
+    },
+    {
+      "check": "BridgeDeck6m.LODReduction",
+      "pass": true,
+      "detail": [
+        276,
+        131,
+        33
+      ]
+    },
+    {
+      "check": "BridgeDeckEntry-6.LOD0.attributes",
+      "pass": true,
+      "detail": {
+        "uv": true,
+        "normals": true,
+        "finite": true,
+        "tangentsForNormalMaps": true,
+        "degenerateTriangles": 0
+      }
+    },
+    {
+      "check": "BridgeDeckEntry-6.LOD0.triangles",
+      "pass": true,
+      "detail": {
+        "exported": 300,
+        "declared": 300
+      }
+    },
+    {
+      "check": "BridgeDeckEntry-6.LOD1.attributes",
+      "pass": true,
+      "detail": {
+        "uv": true,
+        "normals": true,
+        "finite": true,
+        "tangentsForNormalMaps": true,
+        "degenerateTriangles": 0
+      }
+    },
+    {
+      "check": "BridgeDeckEntry-6.LOD1.triangles",
+      "pass": true,
+      "detail": {
+        "exported": 146,
+        "declared": 146
+      }
+    },
+    {
+      "check": "BridgeDeckEntry-6.LOD2.attributes",
+      "pass": true,
+      "detail": {
+        "uv": true,
+        "normals": true,
+        "finite": true,
+        "tangentsForNormalMaps": true,
+        "degenerateTriangles": 0
+      }
+    },
+    {
+      "check": "BridgeDeckEntry-6.LOD2.triangles",
+      "pass": true,
+      "detail": {
+        "exported": 38,
+        "declared": 38
+      }
+    },
+    {
+      "check": "BridgeDeckEntry-6.LODReduction",
+      "pass": true,
+      "detail": [
+        300,
+        146,
+        38
+      ]
+    },
+    {
+      "check": "BridgeDeckEntry12.LOD0.attributes",
+      "pass": true,
+      "detail": {
+        "uv": true,
+        "normals": true,
+        "finite": true,
+        "tangentsForNormalMaps": true,
+        "degenerateTriangles": 0
+      }
+    },
+    {
+      "check": "BridgeDeckEntry12.LOD0.triangles",
+      "pass": true,
+      "detail": {
+        "exported": 300,
+        "declared": 300
+      }
+    },
+    {
+      "check": "BridgeDeckEntry12.LOD1.attributes",
+      "pass": true,
+      "detail": {
+        "uv": true,
+        "normals": true,
+        "finite": true,
+        "tangentsForNormalMaps": true,
+        "degenerateTriangles": 0
+      }
+    },
+    {
+      "check": "BridgeDeckEntry12.LOD1.triangles",
+      "pass": true,
+      "detail": {
+        "exported": 146,
+        "declared": 146
+      }
+    },
+    {
+      "check": "BridgeDeckEntry12.LOD2.attributes",
+      "pass": true,
+      "detail": {
+        "uv": true,
+        "normals": true,
+        "finite": true,
+        "tangentsForNormalMaps": true,
+        "degenerateTriangles": 0
+      }
+    },
+    {
+      "check": "BridgeDeckEntry12.LOD2.triangles",
+      "pass": true,
+      "detail": {
+        "exported": 38,
+        "declared": 38
+      }
+    },
+    {
+      "check": "BridgeDeckEntry12.LODReduction",
+      "pass": true,
+      "detail": [
+        300,
+        146,
+        38
+      ]
+    },
+    {
+      "check": "BridgeDeckEntry30.LOD0.attributes",
+      "pass": true,
+      "detail": {
+        "uv": true,
+        "normals": true,
+        "finite": true,
+        "tangentsForNormalMaps": true,
+        "degenerateTriangles": 0
+      }
+    },
+    {
+      "check": "BridgeDeckEntry30.LOD0.triangles",
+      "pass": true,
+      "detail": {
+        "exported": 252,
+        "declared": 252
+      }
+    },
+    {
+      "check": "BridgeDeckEntry30.LOD1.attributes",
+      "pass": true,
+      "detail": {
+        "uv": true,
+        "normals": true,
+        "finite": true,
+        "tangentsForNormalMaps": true,
+        "degenerateTriangles": 0
+      }
+    },
+    {
+      "check": "BridgeDeckEntry30.LOD1.triangles",
+      "pass": true,
+      "detail": {
+        "exported": 122,
+        "declared": 122
+      }
+    },
+    {
+      "check": "BridgeDeckEntry30.LOD2.attributes",
+      "pass": true,
+      "detail": {
+        "uv": true,
+        "normals": true,
+        "finite": true,
+        "tangentsForNormalMaps": true,
+        "degenerateTriangles": 0
+      }
+    },
+    {
+      "check": "BridgeDeckEntry30.LOD2.triangles",
+      "pass": true,
+      "detail": {
+        "exported": 31,
+        "declared": 31
+      }
+    },
+    {
+      "check": "BridgeDeckEntry30.LODReduction",
+      "pass": true,
+      "detail": [
+        252,
+        122,
+        31
+      ]
+    },
+    {
+      "check": "BridgePier.LOD0.attributes",
+      "pass": true,
+      "detail": {
+        "uv": true,
+        "normals": true,
+        "finite": true,
+        "tangentsForNormalMaps": true,
+        "degenerateTriangles": 0
+      }
+    },
+    {
+      "check": "BridgePier.LOD0.triangles",
+      "pass": true,
+      "detail": {
+        "exported": 12,
+        "declared": 12
+      }
+    },
+    {
+      "check": "BridgePier.LOD1.attributes",
+      "pass": true,
+      "detail": {
+        "uv": true,
+        "normals": true,
+        "finite": true,
+        "tangentsForNormalMaps": true,
+        "degenerateTriangles": 0
+      }
+    },
+    {
+      "check": "BridgePier.LOD1.triangles",
+      "pass": true,
+      "detail": {
+        "exported": 12,
+        "declared": 12
+      }
+    },
+    {
+      "check": "BridgePier.LOD2.attributes",
+      "pass": true,
+      "detail": {
+        "uv": true,
+        "normals": true,
+        "finite": true,
+        "tangentsForNormalMaps": true,
+        "degenerateTriangles": 0
+      }
+    },
+    {
+      "check": "BridgePier.LOD2.triangles",
+      "pass": true,
+      "detail": {
+        "exported": 12,
+        "declared": 12
+      }
+    },
+    {
+      "check": "BridgePier.LODReduction",
+      "pass": true,
+      "detail": [
+        12,
+        12,
+        12
+      ]
+    },
+    {
+      "check": "OHEPortal.LOD0.attributes",
+      "pass": true,
+      "detail": {
+        "uv": true,
+        "normals": true,
+        "finite": true,
+        "tangentsForNormalMaps": true,
+        "degenerateTriangles": 0
+      }
+    },
+    {
+      "check": "OHEPortal.LOD0.triangles",
+      "pass": true,
+      "detail": {
+        "exported": 1152,
+        "declared": 1152
+      }
+    },
+    {
+      "check": "OHEPortal.LOD1.attributes",
+      "pass": true,
+      "detail": {
+        "uv": true,
+        "normals": true,
+        "finite": true,
+        "tangentsForNormalMaps": true,
+        "degenerateTriangles": 0
+      }
+    },
+    {
+      "check": "OHEPortal.LOD1.triangles",
+      "pass": true,
+      "detail": {
+        "exported": 572,
+        "declared": 572
+      }
+    },
+    {
+      "check": "OHEPortal.LOD2.attributes",
+      "pass": true,
+      "detail": {
+        "uv": true,
+        "normals": true,
+        "finite": true,
+        "tangentsForNormalMaps": true,
+        "degenerateTriangles": 0
+      }
+    },
+    {
+      "check": "OHEPortal.LOD2.triangles",
+      "pass": true,
+      "detail": {
+        "exported": 190,
+        "declared": 190
+      }
+    },
+    {
+      "check": "OHEPortal.LODReduction",
+      "pass": true,
+      "detail": [
+        1152,
+        572,
+        190
+      ]
+    },
+    {
+      "check": "Wire18m.LOD0.attributes",
+      "pass": true,
+      "detail": {
+        "uv": true,
+        "normals": true,
+        "finite": true,
+        "tangentsForNormalMaps": true,
+        "degenerateTriangles": 0
+      }
+    },
+    {
+      "check": "Wire18m.LOD0.triangles",
+      "pass": true,
+      "detail": {
+        "exported": 48,
+        "declared": 48
+      }
+    },
+    {
+      "check": "Wire18m.LOD1.attributes",
+      "pass": true,
+      "detail": {
+        "uv": true,
+        "normals": true,
+        "finite": true,
+        "tangentsForNormalMaps": true,
+        "degenerateTriangles": 0
+      }
+    },
+    {
+      "check": "Wire18m.LOD1.triangles",
+      "pass": true,
+      "detail": {
+        "exported": 48,
+        "declared": 48
+      }
+    },
+    {
+      "check": "Wire18m.LOD2.attributes",
+      "pass": true,
+      "detail": {
+        "uv": true,
+        "normals": true,
+        "finite": true,
+        "tangentsForNormalMaps": true,
+        "degenerateTriangles": 0
+      }
+    },
+    {
+      "check": "Wire18m.LOD2.triangles",
+      "pass": true,
+      "detail": {
+        "exported": 48,
+        "declared": 48
+      }
+    },
+    {
+      "check": "Wire18m.LODReduction",
+      "pass": true,
+      "detail": [
+        48,
+        48,
+        48
+      ]
+    },
+    {
+      "check": "Cabinet.LOD0.attributes",
+      "pass": true,
+      "detail": {
+        "uv": true,
+        "normals": true,
+        "finite": true,
+        "tangentsForNormalMaps": true,
+        "degenerateTriangles": 0
+      }
+    },
+    {
+      "check": "Cabinet.LOD0.triangles",
+      "pass": true,
+      "detail": {
+        "exported": 48,
+        "declared": 48
+      }
+    },
+    {
+      "check": "Cabinet.LOD1.attributes",
+      "pass": true,
+      "detail": {
+        "uv": true,
+        "normals": true,
+        "finite": true,
+        "tangentsForNormalMaps": true,
+        "degenerateTriangles": 0
+      }
+    },
+    {
+      "check": "Cabinet.LOD1.triangles",
+      "pass": true,
+      "detail": {
+        "exported": 48,
+        "declared": 48
+      }
+    },
+    {
+      "check": "Cabinet.LOD2.attributes",
+      "pass": true,
+      "detail": {
+        "uv": true,
+        "normals": true,
+        "finite": true,
+        "tangentsForNormalMaps": true,
+        "degenerateTriangles": 0
+      }
+    },
+    {
+      "check": "Cabinet.LOD2.triangles",
+      "pass": true,
+      "detail": {
+        "exported": 48,
+        "declared": 48
+      }
+    },
+    {
+      "check": "Cabinet.LODReduction",
+      "pass": true,
+      "detail": [
+        48,
+        48,
+        48
+      ]
+    },
+    {
+      "check": "CableDuct6m.LOD0.attributes",
+      "pass": true,
+      "detail": {
+        "uv": true,
+        "normals": true,
+        "finite": true,
+        "tangentsForNormalMaps": true,
+        "degenerateTriangles": 0
+      }
+    },
+    {
+      "check": "CableDuct6m.LOD0.triangles",
+      "pass": true,
+      "detail": {
+        "exported": 84,
+        "declared": 84
+      }
+    },
+    {
+      "check": "CableDuct6m.LOD1.attributes",
+      "pass": true,
+      "detail": {
+        "uv": true,
+        "normals": true,
+        "finite": true,
+        "tangentsForNormalMaps": true,
+        "degenerateTriangles": 0
+      }
+    },
+    {
+      "check": "CableDuct6m.LOD1.triangles",
+      "pass": true,
+      "detail": {
+        "exported": 84,
+        "declared": 84
+      }
+    },
+    {
+      "check": "CableDuct6m.LOD2.attributes",
+      "pass": true,
+      "detail": {
+        "uv": true,
+        "normals": true,
+        "finite": true,
+        "tangentsForNormalMaps": true,
+        "degenerateTriangles": 0
+      }
+    },
+    {
+      "check": "CableDuct6m.LOD2.triangles",
+      "pass": true,
+      "detail": {
+        "exported": 84,
+        "declared": 84
+      }
+    },
+    {
+      "check": "CableDuct6m.LODReduction",
+      "pass": true,
+      "detail": [
+        84,
+        84,
+        84
+      ]
+    },
+    {
+      "check": "SignalUnbound.LOD0.attributes",
+      "pass": true,
+      "detail": {
+        "uv": true,
+        "normals": true,
+        "finite": true,
+        "tangentsForNormalMaps": true,
+        "degenerateTriangles": 0
+      }
+    },
+    {
+      "check": "SignalUnbound.LOD0.triangles",
+      "pass": true,
+      "detail": {
+        "exported": 540,
+        "declared": 540
+      }
+    },
+    {
+      "check": "SignalUnbound.LOD1.attributes",
+      "pass": true,
+      "detail": {
+        "uv": true,
+        "normals": true,
+        "finite": true,
+        "tangentsForNormalMaps": true,
+        "degenerateTriangles": 0
+      }
+    },
+    {
+      "check": "SignalUnbound.LOD1.triangles",
+      "pass": true,
+      "detail": {
+        "exported": 270,
+        "declared": 270
+      }
+    },
+    {
+      "check": "SignalUnbound.LOD2.attributes",
+      "pass": true,
+      "detail": {
+        "uv": true,
+        "normals": true,
+        "finite": true,
+        "tangentsForNormalMaps": true,
+        "degenerateTriangles": 0
+      }
+    },
+    {
+      "check": "SignalUnbound.LOD2.triangles",
+      "pass": true,
+      "detail": {
+        "exported": 92,
+        "declared": 92
+      }
+    },
+    {
+      "check": "SignalUnbound.LODReduction",
+      "pass": true,
+      "detail": [
+        540,
+        270,
+        92
+      ]
+    },
+    {
+      "check": "YardLamp.LOD0.attributes",
+      "pass": true,
+      "detail": {
+        "uv": true,
+        "normals": true,
+        "finite": true,
+        "tangentsForNormalMaps": true,
+        "degenerateTriangles": 0
+      }
+    },
+    {
+      "check": "YardLamp.LOD0.triangles",
+      "pass": true,
+      "detail": {
+        "exported": 72,
+        "declared": 72
+      }
+    },
+    {
+      "check": "YardLamp.LOD1.attributes",
+      "pass": true,
+      "detail": {
+        "uv": true,
+        "normals": true,
+        "finite": true,
+        "tangentsForNormalMaps": true,
+        "degenerateTriangles": 0
+      }
+    },
+    {
+      "check": "YardLamp.LOD1.triangles",
+      "pass": true,
+      "detail": {
+        "exported": 72,
+        "declared": 72
+      }
+    },
+    {
+      "check": "YardLamp.LOD2.attributes",
+      "pass": true,
+      "detail": {
+        "uv": true,
+        "normals": true,
+        "finite": true,
+        "tangentsForNormalMaps": true,
+        "degenerateTriangles": 0
+      }
+    },
+    {
+      "check": "YardLamp.LOD2.triangles",
+      "pass": true,
+      "detail": {
+        "exported": 72,
+        "declared": 72
+      }
+    },
+    {
+      "check": "YardLamp.LODReduction",
+      "pass": true,
+      "detail": [
+        72,
+        72,
+        72
+      ]
+    },
+    {
+      "check": "Boundary6m.LOD0.attributes",
+      "pass": true,
+      "detail": {
+        "uv": true,
+        "normals": true,
+        "finite": true,
+        "tangentsForNormalMaps": true,
+        "degenerateTriangles": 0
+      }
+    },
+    {
+      "check": "Boundary6m.LOD0.triangles",
+      "pass": true,
+      "detail": {
+        "exported": 60,
+        "declared": 60
+      }
+    },
+    {
+      "check": "Boundary6m.LOD1.attributes",
+      "pass": true,
+      "detail": {
+        "uv": true,
+        "normals": true,
+        "finite": true,
+        "tangentsForNormalMaps": true,
+        "degenerateTriangles": 0
+      }
+    },
+    {
+      "check": "Boundary6m.LOD1.triangles",
+      "pass": true,
+      "detail": {
+        "exported": 60,
+        "declared": 60
+      }
+    },
+    {
+      "check": "Boundary6m.LOD2.attributes",
+      "pass": true,
+      "detail": {
+        "uv": true,
+        "normals": true,
+        "finite": true,
+        "tangentsForNormalMaps": true,
+        "degenerateTriangles": 0
+      }
+    },
+    {
+      "check": "Boundary6m.LOD2.triangles",
+      "pass": true,
+      "detail": {
+        "exported": 60,
+        "declared": 60
+      }
+    },
+    {
+      "check": "Boundary6m.LODReduction",
+      "pass": true,
+      "detail": [
+        60,
+        60,
+        60
+      ]
+    },
+    {
+      "check": "TreeBroadleaf.LOD0.attributes",
+      "pass": true,
+      "detail": {
+        "uv": true,
+        "normals": true,
+        "finite": true,
+        "tangentsForNormalMaps": true,
+        "degenerateTriangles": 0
+      }
+    },
+    {
+      "check": "TreeBroadleaf.LOD0.triangles",
+      "pass": true,
+      "detail": {
+        "exported": 1944,
+        "declared": 1944
+      }
+    },
+    {
+      "check": "TreeBroadleaf.LOD1.attributes",
+      "pass": true,
+      "detail": {
+        "uv": true,
+        "normals": true,
+        "finite": true,
+        "tangentsForNormalMaps": true,
+        "degenerateTriangles": 0
+      }
+    },
+    {
+      "check": "TreeBroadleaf.LOD1.triangles",
+      "pass": true,
+      "detail": {
+        "exported": 963,
+        "declared": 963
+      }
+    },
+    {
+      "check": "TreeBroadleaf.LOD2.attributes",
+      "pass": true,
+      "detail": {
+        "uv": true,
+        "normals": true,
+        "finite": true,
+        "tangentsForNormalMaps": true,
+        "degenerateTriangles": 0
+      }
+    },
+    {
+      "check": "TreeBroadleaf.LOD2.triangles",
+      "pass": true,
+      "detail": {
+        "exported": 330,
+        "declared": 330
+      }
+    },
+    {
+      "check": "TreeBroadleaf.LODReduction",
+      "pass": true,
+      "detail": [
+        1944,
+        963,
+        330
+      ]
+    },
+    {
+      "check": "UrbanA.LOD0.attributes",
+      "pass": true,
+      "detail": {
+        "uv": true,
+        "normals": true,
+        "finite": true,
+        "tangentsForNormalMaps": true,
+        "degenerateTriangles": 0
+      }
+    },
+    {
+      "check": "UrbanA.LOD0.triangles",
+      "pass": true,
+      "detail": {
+        "exported": 168,
+        "declared": 168
+      }
+    },
+    {
+      "check": "UrbanA.LOD1.attributes",
+      "pass": true,
+      "detail": {
+        "uv": true,
+        "normals": true,
+        "finite": true,
+        "tangentsForNormalMaps": true,
+        "degenerateTriangles": 0
+      }
+    },
+    {
+      "check": "UrbanA.LOD1.triangles",
+      "pass": true,
+      "detail": {
+        "exported": 84,
+        "declared": 84
+      }
+    },
+    {
+      "check": "UrbanA.LOD2.attributes",
+      "pass": true,
+      "detail": {
+        "uv": true,
+        "normals": true,
+        "finite": true,
+        "tangentsForNormalMaps": true,
+        "degenerateTriangles": 0
+      }
+    },
+    {
+      "check": "UrbanA.LOD2.triangles",
+      "pass": true,
+      "detail": {
+        "exported": 19,
+        "declared": 19
+      }
+    },
+    {
+      "check": "UrbanA.LODReduction",
+      "pass": true,
+      "detail": [
+        168,
+        84,
+        19
+      ]
+    },
+    {
+      "check": "UrbanB.LOD0.attributes",
+      "pass": true,
+      "detail": {
+        "uv": true,
+        "normals": true,
+        "finite": true,
+        "tangentsForNormalMaps": true,
+        "degenerateTriangles": 0
+      }
+    },
+    {
+      "check": "UrbanB.LOD0.triangles",
+      "pass": true,
+      "detail": {
+        "exported": 240,
+        "declared": 240
+      }
+    },
+    {
+      "check": "UrbanB.LOD1.attributes",
+      "pass": true,
+      "detail": {
+        "uv": true,
+        "normals": true,
+        "finite": true,
+        "tangentsForNormalMaps": true,
+        "degenerateTriangles": 0
+      }
+    },
+    {
+      "check": "UrbanB.LOD1.triangles",
+      "pass": true,
+      "detail": {
+        "exported": 120,
+        "declared": 120
+      }
+    },
+    {
+      "check": "UrbanB.LOD2.attributes",
+      "pass": true,
+      "detail": {
+        "uv": true,
+        "normals": true,
+        "finite": true,
+        "tangentsForNormalMaps": true,
+        "degenerateTriangles": 0
+      }
+    },
+    {
+      "check": "UrbanB.LOD2.triangles",
+      "pass": true,
+      "detail": {
+        "exported": 30,
+        "declared": 30
+      }
+    },
+    {
+      "check": "UrbanB.LODReduction",
+      "pass": true,
+      "detail": [
+        240,
+        120,
+        30
+      ]
+    },
+    {
+      "check": "HeritageRoof6m.LOD0.attributes",
+      "pass": true,
+      "detail": {
+        "uv": true,
+        "normals": true,
+        "finite": true,
+        "tangentsForNormalMaps": true,
+        "degenerateTriangles": 0
+      }
+    },
+    {
+      "check": "HeritageRoof6m.LOD0.triangles",
+      "pass": true,
+      "detail": {
+        "exported": 12,
+        "declared": 12
+      }
+    },
+    {
+      "check": "HeritageRoof6m.LOD1.attributes",
+      "pass": true,
+      "detail": {
+        "uv": true,
+        "normals": true,
+        "finite": true,
+        "tangentsForNormalMaps": true,
+        "degenerateTriangles": 0
+      }
+    },
+    {
+      "check": "HeritageRoof6m.LOD1.triangles",
+      "pass": true,
+      "detail": {
+        "exported": 12,
+        "declared": 12
+      }
+    },
+    {
+      "check": "HeritageRoof6m.LOD2.attributes",
+      "pass": true,
+      "detail": {
+        "uv": true,
+        "normals": true,
+        "finite": true,
+        "tangentsForNormalMaps": true,
+        "degenerateTriangles": 0
+      }
+    },
+    {
+      "check": "HeritageRoof6m.LOD2.triangles",
+      "pass": true,
+      "detail": {
+        "exported": 12,
+        "declared": 12
+      }
+    },
+    {
+      "check": "HeritageRoof6m.LODReduction",
+      "pass": true,
+      "detail": [
+        12,
+        12,
+        12
+      ]
+    },
+    {
+      "check": "uniquePlacementIds",
+      "pass": true,
+      "detail": 1259
+    },
+    {
+      "check": "actualInsideHeadGauge",
+      "pass": true,
+      "detail": 1.6759999990463257
+    },
+    {
+      "check": "actualRailTop",
+      "pass": true,
+      "detail": 0.0
+    },
+    {
+      "check": "platformEdgeClearance",
+      "pass": true,
+      "detail": [
+        9.675,
+        1.675,
+        1.6749999999999998,
+        1.6750000000000007,
+        1.6749999999999972,
+        9.674999999999997
+      ]
+    },
+    {
+      "check": "stairsJoinDeckX",
+      "pass": true,
+      "detail": [
+        64.2,
+        64.2
+      ]
+    },
+    {
+      "check": "stairsJoinDeckZ",
+      "pass": true,
+      "detail": 7.56
+    },
+    {
+      "check": "sceneMeshNodeCount",
+      "pass": true,
+      "detail": {
+        "actual": 1259,
+        "expected": 1259
+      }
+    },
+    {
+      "check": "sourcePreviewCount",
+      "pass": true,
+      "detail": 6
+    }
+  ],
+  "exportInspection": [
+    {
+      "file": "Modules/EgmoreWaterPoint_LOD0.glb",
+      "triangles": 3100,
+      "boundsGltfM": [
+        [
+          -0.8999999761581421,
+          0.0,
+          -0.3499999940395355
+        ],
+        [
+          0.8999999761581421,
+          1.659999966621399,
+          0.5674999952316284
+        ]
+      ],
+      "materials": 5,
+      "images": 15,
+      "degenerateTriangles": 0,
+      "tangentsForNormalMaps": true
+    },
+    {
+      "file": "Modules/EgmoreWaterPoint_LOD1.glb",
+      "triangles": 1550,
+      "boundsGltfM": [
+        [
+          -0.8999999761581421,
+          0.0,
+          -0.3499999940395355
+        ],
+        [
+          0.8999999761581421,
+          1.659999966621399,
+          0.5674999952316284
+        ]
+      ],
+      "materials": 5,
+      "images": 15,
+      "degenerateTriangles": 0,
+      "tangentsForNormalMaps": true
+    },
+    {
+      "file": "Modules/EgmoreWaterPoint_LOD2.glb",
+      "triangles": 620,
+      "boundsGltfM": [
+        [
+          -0.897297739982605,
+          0.0028530657291412354,
+          -0.3472977876663208
+        ],
+        [
+          0.897297739982605,
+          1.6571470499038696,
+          0.5658555030822754
+        ]
+      ],
+      "materials": 5,
+      "images": 15,
+      "degenerateTriangles": 0,
+      "tangentsForNormalMaps": true
+    },
+    {
+      "file": "Modules/EgmoreTower4m_LOD0.glb",
+      "triangles": 16220,
+      "boundsGltfM": [
+        [
+          -2.5199999809265137,
+          0.0,
+          -4.035000324249268
+        ],
+        [
+          2.5200002193450928,
+          12.170000076293945,
+          0.7549996376037598
+        ]
+      ],
+      "materials": 4,
+      "images": 12,
+      "degenerateTriangles": 0,
+      "tangentsForNormalMaps": true
+    },
+    {
+      "file": "Modules/EgmoreTower4m_LOD1.glb",
+      "triangles": 8110,
+      "boundsGltfM": [
+        [
+          -2.5199997425079346,
+          0.0,
+          -4.032834529876709
+        ],
+        [
+          2.5199995040893555,
+          12.170000076293945,
+          0.7523388266563416
+        ]
+      ],
+      "materials": 4,
+      "images": 12,
+      "degenerateTriangles": 0,
+      "tangentsForNormalMaps": true
+    },
+    {
+      "file": "Modules/EgmoreTower4m_LOD2.glb",
+      "triangles": 3211,
+      "boundsGltfM": [
+        [
+          -2.515327215194702,
+          0.0,
+          -4.032834529876709
+        ],
+        [
+          2.515523672103882,
+          12.165375709533691,
+          0.7514222264289856
+        ]
+      ],
+      "materials": 4,
+      "images": 12,
+      "degenerateTriangles": 0,
+      "tangentsForNormalMaps": true
+    },
+    {
+      "file": "Modules/EgmorePlatformBench_LOD0.glb",
+      "triangles": 1620,
+      "boundsGltfM": [
+        [
+          -0.8999999761581421,
+          0.0,
+          -0.2775000035762787
+        ],
+        [
+          0.8999999761581421,
+          1.03000009059906,
+          0.2750000059604645
+        ]
+      ],
+      "materials": 4,
+      "images": 12,
+      "degenerateTriangles": 0,
+      "tangentsForNormalMaps": true
+    },
+    {
+      "file": "Modules/EgmorePlatformBench_LOD1.glb",
+      "triangles": 810,
+      "boundsGltfM": [
+        [
+          -0.8999999761581421,
+          0.0,
+          -0.2775000035762787
+        ],
+        [
+          0.8999999761581421,
+          1.03000009059906,
+          0.2750000059604645
+        ]
+      ],
+      "materials": 4,
+      "images": 12,
+      "degenerateTriangles": 0,
+      "tangentsForNormalMaps": true
+    },
+    {
+      "file": "Modules/EgmorePlatformBench_LOD2.glb",
+      "triangles": 324,
+      "boundsGltfM": [
+        [
+          -0.8974339962005615,
+          0.0027022352442145348,
+          -0.2750091552734375
+        ],
+        [
+          0.897297739982605,
+          1.027297854423523,
+          0.27250921726226807
+        ]
+      ],
+      "materials": 4,
+      "images": 12,
+      "degenerateTriangles": 0,
+      "tangentsForNormalMaps": true
+    },
+    {
+      "file": "Modules/EgmoreLitterBins_LOD0.glb",
+      "triangles": 860,
+      "boundsGltfM": [
+        [
+          -0.6050000190734863,
+          -0.03999999165534973,
+          -0.2549999952316284
+        ],
+        [
+          0.6050000190734863,
+          0.8999999761581421,
+          0.25999999046325684
+        ]
+      ],
+      "materials": 5,
+      "images": 15,
+      "degenerateTriangles": 0,
+      "tangentsForNormalMaps": true
+    },
+    {
+      "file": "Modules/EgmoreLitterBins_LOD1.glb",
+      "triangles": 430,
+      "boundsGltfM": [
+        [
+          -0.6050000190734863,
+          -0.03835546597838402,
+          -0.2549999952316284
+        ],
+        [
+          0.6050000190734863,
+          0.8999999761581421,
+          0.25750917196273804
+        ]
+      ],
+      "materials": 5,
+      "images": 15,
+      "degenerateTriangles": 0,
+      "tangentsForNormalMaps": true
+    },
+    {
+      "file": "Modules/EgmoreLitterBins_LOD2.glb",
+      "triangles": 172,
+      "boundsGltfM": [
+        [
+          -0.6054558157920837,
+          -0.03835546597838402,
+          -0.25545579195022583
+        ],
+        [
+          0.6038725972175598,
+          0.8999999761581421,
+          0.2563534677028656
+        ]
+      ],
+      "materials": 5,
+      "images": 15,
+      "degenerateTriangles": 0,
+      "tangentsForNormalMaps": true
+    },
+    {
+      "file": "Modules/EgmoreEntrance9m_LOD0.glb",
+      "triangles": 14068,
+      "boundsGltfM": [
+        [
+          -4.720000267028809,
+          0.0,
+          -3.700000047683716
+        ],
+        [
+          4.720000267028809,
+          11.889999389648438,
+          1.9200000762939453
+        ]
+      ],
+      "materials": 3,
+      "images": 9,
+      "degenerateTriangles": 0,
+      "tangentsForNormalMaps": true
+    },
+    {
+      "file": "Modules/EgmoreEntrance9m_LOD1.glb",
+      "triangles": 7034,
+      "boundsGltfM": [
+        [
+          -4.720000267028809,
+          0.0,
+          -3.700000047683716
+        ],
+        [
+          4.720000267028809,
+          11.889999389648438,
+          1.9200000762939453
+        ]
+      ],
+      "materials": 3,
+      "images": 9,
+      "degenerateTriangles": 0,
+      "tangentsForNormalMaps": true
+    },
+    {
+      "file": "Modules/EgmoreEntrance9m_LOD2.glb",
+      "triangles": 2811,
+      "boundsGltfM": [
+        [
+          -4.720000267028809,
+          0.003946737851947546,
+          -3.6960535049438477
+        ],
+        [
+          4.720000267028809,
+          11.897002220153809,
+          1.9200000762939453
+        ]
+      ],
+      "materials": 3,
+      "images": 9,
+      "degenerateTriangles": 0,
+      "tangentsForNormalMaps": true
+    },
+    {
+      "file": "Modules/EgmoreDrain3m_LOD0.glb",
+      "triangles": 362,
+      "boundsGltfM": [
+        [
+          0.0009548771777190268,
+          -0.19803589582443237,
+          -0.19301334023475647
+        ],
+        [
+          3.0,
+          0.022013342007994652,
+          0.19301334023475647
+        ]
+      ],
+      "materials": 2,
+      "images": 6,
+      "degenerateTriangles": 0,
+      "tangentsForNormalMaps": true
+    },
+    {
+      "file": "Modules/EgmoreDrain3m_LOD1.glb",
+      "triangles": 180,
+      "boundsGltfM": [
+        [
+          0.0009548771777190268,
+          -0.19617252051830292,
+          -0.19301334023475647
+        ],
+        [
+          2.9990451335906982,
+          0.022013342007994652,
+          0.19301334023475647
+        ]
+      ],
+      "materials": 2,
+      "images": 6,
+      "degenerateTriangles": 0,
+      "tangentsForNormalMaps": true
+    },
+    {
+      "file": "Modules/EgmoreDrain3m_LOD2.glb",
+      "triangles": 48,
+      "boundsGltfM": [
+        [
+          0.0009545537759549916,
+          -0.19617252051830292,
+          -0.18633396923542023
+        ],
+        [
+          2.9990060329437256,
+          0.022022997960448265,
+          0.18643006682395935
+        ]
+      ],
+      "materials": 2,
+      "images": 6,
+      "degenerateTriangles": 0,
+      "tangentsForNormalMaps": true
+    },
+    {
+      "file": "Modules/EgmoreDome_LOD0.glb",
+      "triangles": 908,
+      "boundsGltfM": [
+        [
+          -1.850000023841858,
+          0.0,
+          -1.850000023841858
+        ],
+        [
+          1.850000023841858,
+          3.1500000953674316,
+          1.850000023841858
+        ]
+      ],
+      "materials": 1,
+      "images": 3,
+      "degenerateTriangles": 0,
+      "tangentsForNormalMaps": true
+    },
+    {
+      "file": "Modules/EgmoreDome_LOD1.glb",
+      "triangles": 454,
+      "boundsGltfM": [
+        [
+          -1.850000023841858,
+          -8.42243116494501e-06,
+          -1.850000023841858
+        ],
+        [
+          1.850000023841858,
+          3.1500003337860107,
+          1.850000023841858
+        ]
+      ],
+      "materials": 1,
+      "images": 3,
+      "degenerateTriangles": 0,
+      "tangentsForNormalMaps": true
+    },
+    {
+      "file": "Modules/EgmoreDome_LOD2.glb",
+      "triangles": 180,
+      "boundsGltfM": [
+        [
+          -1.8458476066589355,
+          -6.321417458821088e-05,
+          -1.8458476066589355
+        ],
+        [
+          1.8458476066589355,
+          3.1500003337860107,
+          1.8458476066589355
+        ]
+      ],
+      "materials": 1,
+      "images": 3,
+      "degenerateTriangles": 0,
+      "tangentsForNormalMaps": true
+    },
+    {
+      "file": "Modules/EgmoreCeilingFan_LOD0.glb",
+      "triangles": 416,
+      "boundsGltfM": [
+        [
+          -0.3226907551288605,
+          -0.17000001668930054,
+          -0.4965527653694153
+        ],
+        [
+          0.5400000214576721,
+          0.7599999904632568,
+          0.49655279517173767
+        ]
+      ],
+      "materials": 3,
+      "images": 9,
+      "degenerateTriangles": 0,
+      "tangentsForNormalMaps": true
+    },
+    {
+      "file": "Modules/EgmoreCeilingFan_LOD1.glb",
+      "triangles": 208,
+      "boundsGltfM": [
+        [
+          -0.3237819969654083,
+          -0.17000001668930054,
+          -0.497454434633255
+        ],
+        [
+          0.5380567908287048,
+          0.7599999904632568,
+          0.4976440370082855
+        ]
+      ],
+      "materials": 3,
+      "images": 9,
+      "degenerateTriangles": 0,
+      "tangentsForNormalMaps": true
+    },
+    {
+      "file": "Modules/EgmoreCeilingFan_LOD2.glb",
+      "triangles": 82,
+      "boundsGltfM": [
+        [
+          -0.32508349418640137,
+          -0.17000001668930054,
+          -0.49894553422927856
+        ],
+        [
+          0.5391156077384949,
+          0.7599999904632568,
+          0.4972239136695862
+        ]
+      ],
+      "materials": 3,
+      "images": 9,
+      "degenerateTriangles": 0,
+      "tangentsForNormalMaps": true
+    },
+    {
+      "file": "Modules/EgmoreCanopy6m_LOD0.glb",
+      "triangles": 3394,
+      "boundsGltfM": [
+        [
+          -0.10000000894069672,
+          0.0,
+          -8.140000343322754
+        ],
+        [
+          6.100000381469727,
+          5.5920000076293945,
+          0.13999998569488525
+        ]
+      ],
+      "materials": 6,
+      "images": 18,
+      "degenerateTriangles": 0,
+      "tangentsForNormalMaps": true
+    },
+    {
+      "file": "Modules/EgmoreCanopy6m_LOD1.glb",
+      "triangles": 1694,
+      "boundsGltfM": [
+        [
+          -0.09678298979997635,
+          0.0015751904575154185,
+          -8.136322975158691
+        ],
+        [
+          6.096871852874756,
+          5.5920000076293945,
+          0.1367056667804718
+        ]
+      ],
+      "materials": 6,
+      "images": 18,
+      "degenerateTriangles": 0,
+      "tangentsForNormalMaps": true
+    },
+    {
+      "file": "Modules/EgmoreCanopy6m_LOD2.glb",
+      "triangles": 646,
+      "boundsGltfM": [
+        [
+          -0.09678298979997635,
+          0.00232093152590096,
+          -8.142342567443848
+        ],
+        [
+          6.096871852874756,
+          5.595957279205322,
+          0.1438468098640442
+        ]
+      ],
+      "materials": 6,
+      "images": 18,
+      "degenerateTriangles": 0,
+      "tangentsForNormalMaps": true
+    },
+    {
+      "file": "Modules/EgmoreArcade6m_LOD0.glb",
+      "triangles": 15900,
+      "boundsGltfM": [
+        [
+          -3.0,
+          0.0009867632761597633,
+          -1.2200005054473877
+        ],
+        [
+          3.0,
+          10.0649995803833,
+          0.5199999809265137
+        ]
+      ],
+      "materials": 4,
+      "images": 12,
+      "degenerateTriangles": 0,
+      "tangentsForNormalMaps": true
+    },
+    {
+      "file": "Modules/EgmoreArcade6m_LOD1.glb",
+      "triangles": 7950,
+      "boundsGltfM": [
+        [
+          -2.9964888095855713,
+          0.0009987619705498219,
+          -1.2157490253448486
+        ],
+        [
+          2.9964888095855713,
+          10.0649995803833,
+          0.5154201984405518
+        ]
+      ],
+      "materials": 4,
+      "images": 12,
+      "degenerateTriangles": 0,
+      "tangentsForNormalMaps": true
+    },
+    {
+      "file": "Modules/EgmoreArcade6m_LOD2.glb",
+      "triangles": 3015,
+      "boundsGltfM": [
+        [
+          -3.0112624168395996,
+          0.0009987619705498219,
+          -1.2270609140396118
+        ],
+        [
+          3.0114409923553467,
+          10.076147079467773,
+          0.5274631381034851
+        ]
+      ],
+      "materials": 4,
+      "images": 12,
+      "degenerateTriangles": 0,
+      "tangentsForNormalMaps": true
+    },
+    {
+      "file": "Modules/EgmoreNameboard4m_LOD0.glb",
+      "triangles": 760,
+      "boundsGltfM": [
+        [
+          -2.3299999237060547,
+          0.0,
+          -0.23000000417232513
+        ],
+        [
+          2.3299999237060547,
+          3.5999999046325684,
+          0.23000000417232513
+        ]
+      ],
+      "materials": 3,
+      "images": 7,
+      "degenerateTriangles": 0,
+      "tangentsForNormalMaps": true
+    },
+    {
+      "file": "Modules/EgmoreNameboard4m_LOD1.glb",
+      "triangles": 380,
+      "boundsGltfM": [
+        [
+          -2.3299999237060547,
+          0.0,
+          -0.23000000417232513
+        ],
+        [
+          2.3299999237060547,
+          3.5999999046325684,
+          0.23000000417232513
+        ]
+      ],
+      "materials": 3,
+      "images": 7,
+      "degenerateTriangles": 0,
+      "tangentsForNormalMaps": true
+    },
+    {
+      "file": "Modules/EgmoreNameboard4m_LOD2.glb",
+      "triangles": 152,
+      "boundsGltfM": [
+        [
+          -2.326854705810547,
+          0.002702227793633938,
+          -0.22750914096832275
+        ],
+        [
+          2.3264670372009277,
+          3.5972979068756104,
+          0.22750914096832275
+        ]
+      ],
+      "materials": 3,
+      "images": 7,
+      "degenerateTriangles": 0,
+      "tangentsForNormalMaps": true
+    },
+    {
+      "file": "Modules/Platform6x8m_LOD0.glb",
+      "triangles": 70,
+      "boundsGltfM": [
+        [
+          0.0,
+          0.0,
+          -8.0
+        ],
+        [
+          6.0,
+          0.8420000076293945,
+          -0.0
+        ]
+      ],
+      "materials": 4,
+      "images": 12,
+      "degenerateTriangles": 0,
+      "tangentsForNormalMaps": true
+    },
+    {
+      "file": "Modules/Platform6x8m_LOD1.glb",
+      "triangles": 70,
+      "boundsGltfM": [
+        [
+          0.0,
+          0.0,
+          -8.0
+        ],
+        [
+          6.0,
+          0.8420000076293945,
+          -0.0
+        ]
+      ],
+      "materials": 4,
+      "images": 12,
+      "degenerateTriangles": 0,
+      "tangentsForNormalMaps": true
+    },
+    {
+      "file": "Modules/Platform6x8m_LOD2.glb",
+      "triangles": 70,
+      "boundsGltfM": [
+        [
+          0.0,
+          0.0,
+          -8.0
+        ],
+        [
+          6.0,
+          0.8420000076293945,
+          -0.0
+        ]
+      ],
+      "materials": 4,
+      "images": 12,
+      "degenerateTriangles": 0,
+      "tangentsForNormalMaps": true
+    },
+    {
+      "file": "Modules/Track6m_LOD0.glb",
+      "triangles": 672,
+      "boundsGltfM": [
+        [
+          0.0,
+          -0.33500000834465027,
+          -1.375
+        ],
+        [
+          6.0,
+          0.0,
+          1.375
+        ]
+      ],
+      "materials": 3,
+      "images": 3,
+      "degenerateTriangles": 0,
+      "tangentsForNormalMaps": true
+    },
+    {
+      "file": "Modules/Track6m_LOD1.glb",
+      "triangles": 336,
+      "boundsGltfM": [
+        [
+          -0.0,
+          -0.33500000834465027,
+          -1.375
+        ],
+        [
+          6.0,
+          0.0,
+          1.375
+        ]
+      ],
+      "materials": 3,
+      "images": 3,
+      "degenerateTriangles": 0,
+      "tangentsForNormalMaps": true
+    },
+    {
+      "file": "Modules/Track6m_LOD2.glb",
+      "triangles": 88,
+      "boundsGltfM": [
+        [
+          -0.0,
+          -0.33500000834465027,
+          -1.375
+        ],
+        [
+          6.0,
+          -0.011250000447034836,
+          1.375
+        ]
+      ],
+      "materials": 3,
+      "images": 3,
+      "degenerateTriangles": 0,
+      "tangentsForNormalMaps": true
+    },
+    {
+      "file": "Modules/Ballast6m_LOD0.glb",
+      "triangles": 12,
+      "boundsGltfM": [
+        [
+          0.0,
+          -0.5600000023841858,
+          -1.9500000476837158
+        ],
+        [
+          6.0,
+          -0.33500000834465027,
+          1.9500000476837158
+        ]
+      ],
+      "materials": 1,
+      "images": 3,
+      "degenerateTriangles": 0,
+      "tangentsForNormalMaps": true
+    },
+    {
+      "file": "Modules/Ballast6m_LOD1.glb",
+      "triangles": 12,
+      "boundsGltfM": [
+        [
+          0.0,
+          -0.5600000023841858,
+          -1.9500000476837158
+        ],
+        [
+          6.0,
+          -0.33500000834465027,
+          1.9500000476837158
+        ]
+      ],
+      "materials": 1,
+      "images": 3,
+      "degenerateTriangles": 0,
+      "tangentsForNormalMaps": true
+    },
+    {
+      "file": "Modules/Ballast6m_LOD2.glb",
+      "triangles": 12,
+      "boundsGltfM": [
+        [
+          0.0,
+          -0.5600000023841858,
+          -1.9500000476837158
+        ],
+        [
+          6.0,
+          -0.33500000834465027,
+          1.9500000476837158
+        ]
+      ],
+      "materials": 1,
+      "images": 3,
+      "degenerateTriangles": 0,
+      "tangentsForNormalMaps": true
+    },
+    {
+      "file": "Modules/BallastScatter6m_LOD0.glb",
+      "triangles": 960,
+      "boundsGltfM": [
+        [
+          0.0744907483458519,
+          -0.5136373043060303,
+          -1.825302243232727
+        ],
+        [
+          5.806384086608887,
+          -0.2643399238586426,
+          1.852758765220642
+        ]
+      ],
+      "materials": 2,
+      "images": 6,
+      "degenerateTriangles": 0,
+      "tangentsForNormalMaps": true
+    },
+    {
+      "file": "Modules/BallastScatter6m_LOD1.glb",
+      "triangles": 480,
+      "boundsGltfM": [
+        [
+          0.07206899672746658,
+          -0.49878600239753723,
+          -1.8223373889923096
+        ],
+        [
+          5.805673122406006,
+          -0.2643399238586426,
+          1.846801996231079
+        ]
+      ],
+      "materials": 2,
+      "images": 6,
+      "degenerateTriangles": 0,
+      "tangentsForNormalMaps": true
+    },
+    {
+      "file": "Modules/BallastScatter6m_LOD2.glb",
+      "triangles": 167,
+      "boundsGltfM": [
+        [
+          0.08009303361177444,
+          -0.494069367647171,
+          -1.825899600982666
+        ],
+        [
+          5.811424255371094,
+          -0.2637929916381836,
+          1.8483638763427734
+        ]
+      ],
+      "materials": 2,
+      "images": 6,
+      "degenerateTriangles": 0,
+      "tangentsForNormalMaps": true
+    },
+    {
+      "file": "Modules/GroundTile24m_LOD0.glb",
+      "triangles": 12,
+      "boundsGltfM": [
+        [
+          0.0,
+          -0.8199999928474426,
+          -24.0
+        ],
+        [
+          24.0,
+          -0.5799999833106995,
+          -0.0
+        ]
+      ],
+      "materials": 1,
+      "images": 3,
+      "degenerateTriangles": 0,
+      "tangentsForNormalMaps": true
+    },
+    {
+      "file": "Modules/GroundTile24m_LOD1.glb",
+      "triangles": 12,
+      "boundsGltfM": [
+        [
+          0.0,
+          -0.8199999928474426,
+          -24.0
+        ],
+        [
+          24.0,
+          -0.5799999833106995,
+          -0.0
+        ]
+      ],
+      "materials": 1,
+      "images": 3,
+      "degenerateTriangles": 0,
+      "tangentsForNormalMaps": true
+    },
+    {
+      "file": "Modules/GroundTile24m_LOD2.glb",
+      "triangles": 12,
+      "boundsGltfM": [
+        [
+          0.0,
+          -0.8199999928474426,
+          -24.0
+        ],
+        [
+          24.0,
+          -0.5799999833106995,
+          -0.0
+        ]
+      ],
+      "materials": 1,
+      "images": 3,
+      "degenerateTriangles": 0,
+      "tangentsForNormalMaps": true
+    },
+    {
+      "file": "Modules/RoadTile12m_LOD0.glb",
+      "triangles": 24,
+      "boundsGltfM": [
+        [
+          0.0,
+          -0.5799999833106995,
+          -4.5
+        ],
+        [
+          12.0,
+          -0.019999999552965164,
+          4.5
+        ]
+      ],
+      "materials": 2,
+      "images": 3,
+      "degenerateTriangles": 0,
+      "tangentsForNormalMaps": true
+    },
+    {
+      "file": "Modules/RoadTile12m_LOD1.glb",
+      "triangles": 24,
+      "boundsGltfM": [
+        [
+          0.0,
+          -0.5799999833106995,
+          -4.5
+        ],
+        [
+          12.0,
+          -0.019999999552965164,
+          4.5
+        ]
+      ],
+      "materials": 2,
+      "images": 3,
+      "degenerateTriangles": 0,
+      "tangentsForNormalMaps": true
+    },
+    {
+      "file": "Modules/RoadTile12m_LOD2.glb",
+      "triangles": 24,
+      "boundsGltfM": [
+        [
+          0.0,
+          -0.5799999833106995,
+          -4.5
+        ],
+        [
+          12.0,
+          -0.019999999552965164,
+          4.5
+        ]
+      ],
+      "materials": 2,
+      "images": 3,
+      "degenerateTriangles": 0,
+      "tangentsForNormalMaps": true
+    },
+    {
+      "file": "Modules/Forecourt6m_LOD0.glb",
+      "triangles": 24,
+      "boundsGltfM": [
+        [
+          0.0,
+          -0.5799999833106995,
+          -3.5
+        ],
+        [
+          6.0,
+          0.1599999964237213,
+          3.5
+        ]
+      ],
+      "materials": 2,
+      "images": 6,
+      "degenerateTriangles": 0,
+      "tangentsForNormalMaps": true
+    },
+    {
+      "file": "Modules/Forecourt6m_LOD1.glb",
+      "triangles": 24,
+      "boundsGltfM": [
+        [
+          0.0,
+          -0.5799999833106995,
+          -3.5
+        ],
+        [
+          6.0,
+          0.1599999964237213,
+          3.5
+        ]
+      ],
+      "materials": 2,
+      "images": 6,
+      "degenerateTriangles": 0,
+      "tangentsForNormalMaps": true
+    },
+    {
+      "file": "Modules/Forecourt6m_LOD2.glb",
+      "triangles": 24,
+      "boundsGltfM": [
+        [
+          0.0,
+          -0.5799999833106995,
+          -3.5
+        ],
+        [
+          6.0,
+          0.1599999964237213,
+          3.5
+        ]
+      ],
+      "materials": 2,
+      "images": 6,
+      "degenerateTriangles": 0,
+      "tangentsForNormalMaps": true
+    },
+    {
+      "file": "Modules/BridgeStairs_LOD0.glb",
+      "triangles": 728,
+      "boundsGltfM": [
+        [
+          -0.020000003278255463,
+          -0.2199999988079071,
+          -1.252500057220459
+        ],
+        [
+          12.200000762939453,
+          7.739699363708496,
+          1.252500057220459
+        ]
+      ],
+      "materials": 2,
+      "images": 6,
+      "degenerateTriangles": 0,
+      "tangentsForNormalMaps": true
+    },
+    {
+      "file": "Modules/BridgeStairs_LOD1.glb",
+      "triangles": 332,
+      "boundsGltfM": [
+        [
+          -0.019999995827674866,
+          -0.2199999988079071,
+          -1.2524999380111694
+        ],
+        [
+          12.200000762939453,
+          7.720000267028809,
+          1.25
+        ]
+      ],
+      "materials": 2,
+      "images": 6,
+      "degenerateTriangles": 0,
+      "tangentsForNormalMaps": true
+    },
+    {
+      "file": "Modules/BridgeStairs_LOD2.glb",
+      "triangles": 112,
+      "boundsGltfM": [
+        [
+          -0.019999995827674866,
+          -0.2199999988079071,
+          -1.2524999380111694
+        ],
+        [
+          12.200000762939453,
+          7.720000267028809,
+          1.25
+        ]
+      ],
+      "materials": 2,
+      "images": 6,
+      "degenerateTriangles": 0,
+      "tangentsForNormalMaps": true
+    },
+    {
+      "file": "Modules/BridgeDeck6m_LOD0.glb",
+      "triangles": 276,
+      "boundsGltfM": [
+        [
+          -2.6521155834198,
+          -0.30000001192092896,
+          -3.0425000190734863
+        ],
+        [
+          2.6521155834198,
+          2.9319443702697754,
+          3.0425000190734863
+        ]
+      ],
+      "materials": 3,
+      "images": 9,
+      "degenerateTriangles": 0,
+      "tangentsForNormalMaps": true
+    },
+    {
+      "file": "Modules/BridgeDeck6m_LOD1.glb",
+      "triangles": 131,
+      "boundsGltfM": [
+        [
+          -2.6461730003356934,
+          -0.30000001192092896,
+          -3.0425002574920654
+        ],
+        [
+          2.6461732387542725,
+          2.9319443702697754,
+          3.0425002574920654
+        ]
+      ],
+      "materials": 3,
+      "images": 9,
+      "degenerateTriangles": 0,
+      "tangentsForNormalMaps": true
+    },
+    {
+      "file": "Modules/BridgeDeck6m_LOD2.glb",
+      "triangles": 33,
+      "boundsGltfM": [
+        [
+          -2.6461730003356934,
+          -0.30000001192092896,
+          -3.0425002574920654
+        ],
+        [
+          2.6461732387542725,
+          2.9319443702697754,
+          3.0425002574920654
+        ]
+      ],
+      "materials": 3,
+      "images": 9,
+      "degenerateTriangles": 0,
+      "tangentsForNormalMaps": true
+    },
+    {
+      "file": "Modules/BridgeDeckEntry-6_LOD0.glb",
+      "triangles": 300,
+      "boundsGltfM": [
+        [
+          -2.6521155834198,
+          -0.30000001192092896,
+          -3.0425000190734863
+        ],
+        [
+          2.6521155834198,
+          2.9319443702697754,
+          3.0425000190734863
+        ]
+      ],
+      "materials": 3,
+      "images": 9,
+      "degenerateTriangles": 0,
+      "tangentsForNormalMaps": true
+    },
+    {
+      "file": "Modules/BridgeDeckEntry-6_LOD1.glb",
+      "triangles": 146,
+      "boundsGltfM": [
+        [
+          -2.6461730003356934,
+          -0.30000001192092896,
+          -3.0425002574920654
+        ],
+        [
+          2.6521155834198,
+          2.9319443702697754,
+          3.0425002574920654
+        ]
+      ],
+      "materials": 3,
+      "images": 9,
+      "degenerateTriangles": 0,
+      "tangentsForNormalMaps": true
+    },
+    {
+      "file": "Modules/BridgeDeckEntry-6_LOD2.glb",
+      "triangles": 38,
+      "boundsGltfM": [
+        [
+          -2.6461730003356934,
+          -0.30000001192092896,
+          -3.0425002574920654
+        ],
+        [
+          2.6521155834198,
+          2.9319443702697754,
+          3.0425002574920654
+        ]
+      ],
+      "materials": 3,
+      "images": 9,
+      "degenerateTriangles": 0,
+      "tangentsForNormalMaps": true
+    },
+    {
+      "file": "Modules/BridgeDeckEntry12_LOD0.glb",
+      "triangles": 300,
+      "boundsGltfM": [
+        [
+          -2.6521155834198,
+          -0.30000001192092896,
+          -3.0425000190734863
+        ],
+        [
+          2.6521155834198,
+          2.9319443702697754,
+          3.0425000190734863
+        ]
+      ],
+      "materials": 3,
+      "images": 9,
+      "degenerateTriangles": 0,
+      "tangentsForNormalMaps": true
+    },
+    {
+      "file": "Modules/BridgeDeckEntry12_LOD1.glb",
+      "triangles": 146,
+      "boundsGltfM": [
+        [
+          -2.6461730003356934,
+          -0.30000001192092896,
+          -3.0425002574920654
+        ],
+        [
+          2.6521155834198,
+          2.9319443702697754,
+          3.0425002574920654
+        ]
+      ],
+      "materials": 3,
+      "images": 9,
+      "degenerateTriangles": 0,
+      "tangentsForNormalMaps": true
+    },
+    {
+      "file": "Modules/BridgeDeckEntry12_LOD2.glb",
+      "triangles": 38,
+      "boundsGltfM": [
+        [
+          -2.6461730003356934,
+          -0.30000001192092896,
+          -3.0425002574920654
+        ],
+        [
+          2.6521155834198,
+          2.9319443702697754,
+          3.0399999618530273
+        ]
+      ],
+      "materials": 3,
+      "images": 9,
+      "degenerateTriangles": 0,
+      "tangentsForNormalMaps": true
+    },
+    {
+      "file": "Modules/BridgeDeckEntry30_LOD0.glb",
+      "triangles": 252,
+      "boundsGltfM": [
+        [
+          -2.6521155834198,
+          -0.30000001192092896,
+          -3.0425000190734863
+        ],
+        [
+          2.6521155834198,
+          2.9319443702697754,
+          3.0425000190734863
+        ]
+      ],
+      "materials": 3,
+      "images": 9,
+      "degenerateTriangles": 0,
+      "tangentsForNormalMaps": true
+    },
+    {
+      "file": "Modules/BridgeDeckEntry30_LOD1.glb",
+      "triangles": 122,
+      "boundsGltfM": [
+        [
+          -2.6461730003356934,
+          -0.30000001192092896,
+          -3.0425002574920654
+        ],
+        [
+          2.6521155834198,
+          2.9319443702697754,
+          3.0425002574920654
+        ]
+      ],
+      "materials": 3,
+      "images": 9,
+      "degenerateTriangles": 0,
+      "tangentsForNormalMaps": true
+    },
+    {
+      "file": "Modules/BridgeDeckEntry30_LOD2.glb",
+      "triangles": 31,
+      "boundsGltfM": [
+        [
+          -2.6461730003356934,
+          -0.30000001192092896,
+          -3.0425000190734863
+        ],
+        [
+          2.6521155834198,
+          2.907660961151123,
+          3.0425002574920654
+        ]
+      ],
+      "materials": 3,
+      "images": 9,
+      "degenerateTriangles": 0,
+      "tangentsForNormalMaps": true
+    },
+    {
+      "file": "Modules/BridgePier_LOD0.glb",
+      "triangles": 12,
+      "boundsGltfM": [
+        [
+          -0.2750000059604645,
+          0.0,
+          -0.2750000059604645
+        ],
+        [
+          0.2750000059604645,
+          6.71999979019165,
+          0.2750000059604645
+        ]
+      ],
+      "materials": 1,
+      "images": 3,
+      "degenerateTriangles": 0,
+      "tangentsForNormalMaps": true
+    },
+    {
+      "file": "Modules/BridgePier_LOD1.glb",
+      "triangles": 12,
+      "boundsGltfM": [
+        [
+          -0.2750000059604645,
+          0.0,
+          -0.2750000059604645
+        ],
+        [
+          0.2750000059604645,
+          6.71999979019165,
+          0.2750000059604645
+        ]
+      ],
+      "materials": 1,
+      "images": 3,
+      "degenerateTriangles": 0,
+      "tangentsForNormalMaps": true
+    },
+    {
+      "file": "Modules/BridgePier_LOD2.glb",
+      "triangles": 12,
+      "boundsGltfM": [
+        [
+          -0.2750000059604645,
+          0.0,
+          -0.2750000059604645
+        ],
+        [
+          0.2750000059604645,
+          6.71999979019165,
+          0.2750000059604645
+        ]
+      ],
+      "materials": 1,
+      "images": 3,
+      "degenerateTriangles": 0,
+      "tangentsForNormalMaps": true
+    },
+    {
+      "file": "Modules/OHEPortal_LOD0.glb",
+      "triangles": 1152,
+      "boundsGltfM": [
+        [
+          -0.5,
+          -0.20000000298023224,
+          -33.5
+        ],
+        [
+          0.5,
+          7.245001316070557,
+          11.5
+        ]
+      ],
+      "materials": 4,
+      "images": 9,
+      "degenerateTriangles": 0,
+      "tangentsForNormalMaps": true
+    },
+    {
+      "file": "Modules/OHEPortal_LOD1.glb",
+      "triangles": 572,
+      "boundsGltfM": [
+        [
+          -0.5,
+          -0.20000000298023224,
+          -33.5
+        ],
+        [
+          0.5,
+          7.245001316070557,
+          11.5
+        ]
+      ],
+      "materials": 4,
+      "images": 9,
+      "degenerateTriangles": 0,
+      "tangentsForNormalMaps": true
+    },
+    {
+      "file": "Modules/OHEPortal_LOD2.glb",
+      "triangles": 190,
+      "boundsGltfM": [
+        [
+          -0.5,
+          -0.20000000298023224,
+          -33.5
+        ],
+        [
+          0.5,
+          7.245001316070557,
+          11.5
+        ]
+      ],
+      "materials": 4,
+      "images": 9,
+      "degenerateTriangles": 0,
+      "tangentsForNormalMaps": true
+    },
+    {
+      "file": "Modules/Wire18m_LOD0.glb",
+      "triangles": 48,
+      "boundsGltfM": [
+        [
+          -0.00026676285779103637,
+          5.493999481201172,
+          -0.008000197820365429
+        ],
+        [
+          18.000267028808594,
+          6.107995510101318,
+          0.008000196889042854
+        ]
+      ],
+      "materials": 1,
+      "images": 3,
+      "degenerateTriangles": 0,
+      "tangentsForNormalMaps": true
+    },
+    {
+      "file": "Modules/Wire18m_LOD1.glb",
+      "triangles": 48,
+      "boundsGltfM": [
+        [
+          -0.00026676285779103637,
+          5.493999481201172,
+          -0.008000197820365429
+        ],
+        [
+          18.000267028808594,
+          6.107995510101318,
+          0.008000196889042854
+        ]
+      ],
+      "materials": 1,
+      "images": 3,
+      "degenerateTriangles": 0,
+      "tangentsForNormalMaps": true
+    },
+    {
+      "file": "Modules/Wire18m_LOD2.glb",
+      "triangles": 48,
+      "boundsGltfM": [
+        [
+          -0.00026676285779103637,
+          5.493999481201172,
+          -0.008000197820365429
+        ],
+        [
+          18.000267028808594,
+          6.107995510101318,
+          0.008000196889042854
+        ]
+      ],
+      "materials": 1,
+      "images": 3,
+      "degenerateTriangles": 0,
+      "tangentsForNormalMaps": true
+    },
+    {
+      "file": "Modules/Cabinet_LOD0.glb",
+      "triangles": 48,
+      "boundsGltfM": [
+        [
+          -0.5,
+          0.0,
+          -0.44999998807907104
+        ],
+        [
+          0.5,
+          1.7000000476837158,
+          0.44999998807907104
+        ]
+      ],
+      "materials": 4,
+      "images": 12,
+      "degenerateTriangles": 0,
+      "tangentsForNormalMaps": true
+    },
+    {
+      "file": "Modules/Cabinet_LOD1.glb",
+      "triangles": 48,
+      "boundsGltfM": [
+        [
+          -0.5,
+          0.0,
+          -0.44999998807907104
+        ],
+        [
+          0.5,
+          1.7000000476837158,
+          0.44999998807907104
+        ]
+      ],
+      "materials": 4,
+      "images": 12,
+      "degenerateTriangles": 0,
+      "tangentsForNormalMaps": true
+    },
+    {
+      "file": "Modules/Cabinet_LOD2.glb",
+      "triangles": 48,
+      "boundsGltfM": [
+        [
+          -0.5,
+          0.0,
+          -0.44999998807907104
+        ],
+        [
+          0.5,
+          1.7000000476837158,
+          0.44999998807907104
+        ]
+      ],
+      "materials": 4,
+      "images": 12,
+      "degenerateTriangles": 0,
+      "tangentsForNormalMaps": true
+    },
+    {
+      "file": "Modules/CableDuct6m_LOD0.glb",
+      "triangles": 84,
+      "boundsGltfM": [
+        [
+          -0.006000000052154064,
+          0.0,
+          -0.18000000715255737
+        ],
+        [
+          6.0,
+          0.17800000309944153,
+          0.18000000715255737
+        ]
+      ],
+      "materials": 2,
+      "images": 6,
+      "degenerateTriangles": 0,
+      "tangentsForNormalMaps": true
+    },
+    {
+      "file": "Modules/CableDuct6m_LOD1.glb",
+      "triangles": 84,
+      "boundsGltfM": [
+        [
+          -0.006000000052154064,
+          0.0,
+          -0.18000000715255737
+        ],
+        [
+          6.0,
+          0.17800000309944153,
+          0.18000000715255737
+        ]
+      ],
+      "materials": 2,
+      "images": 6,
+      "degenerateTriangles": 0,
+      "tangentsForNormalMaps": true
+    },
+    {
+      "file": "Modules/CableDuct6m_LOD2.glb",
+      "triangles": 84,
+      "boundsGltfM": [
+        [
+          -0.006000000052154064,
+          0.0,
+          -0.18000000715255737
+        ],
+        [
+          6.0,
+          0.17800000309944153,
+          0.18000000715255737
+        ]
+      ],
+      "materials": 2,
+      "images": 6,
+      "degenerateTriangles": 0,
+      "tangentsForNormalMaps": true
+    },
+    {
+      "file": "Modules/SignalUnbound_LOD0.glb",
+      "triangles": 540,
+      "boundsGltfM": [
+        [
+          -0.3499999940395355,
+          0.0,
+          -0.3499999940395355
+        ],
+        [
+          0.3499999940395355,
+          4.474999904632568,
+          0.5049999952316284
+        ]
+      ],
+      "materials": 4,
+      "images": 12,
+      "degenerateTriangles": 0,
+      "tangentsForNormalMaps": true
+    },
+    {
+      "file": "Modules/SignalUnbound_LOD1.glb",
+      "triangles": 270,
+      "boundsGltfM": [
+        [
+          -0.3499999940395355,
+          0.0,
+          -0.3499999940395355
+        ],
+        [
+          0.3499999940395355,
+          4.474999904632568,
+          0.5049999952316284
+        ]
+      ],
+      "materials": 4,
+      "images": 12,
+      "degenerateTriangles": 0,
+      "tangentsForNormalMaps": true
+    },
+    {
+      "file": "Modules/SignalUnbound_LOD2.glb",
+      "triangles": 92,
+      "boundsGltfM": [
+        [
+          -0.3499999940395355,
+          0.0,
+          -0.3499999940395355
+        ],
+        [
+          0.3499999940395355,
+          4.474999904632568,
+          0.5049999952316284
+        ]
+      ],
+      "materials": 4,
+      "images": 12,
+      "degenerateTriangles": 0,
+      "tangentsForNormalMaps": true
+    },
+    {
+      "file": "Modules/YardLamp_LOD0.glb",
+      "triangles": 72,
+      "boundsGltfM": [
+        [
+          -0.32499998807907104,
+          0.0,
+          -0.32499998807907104
+        ],
+        [
+          0.32499998807907104,
+          5.725276470184326,
+          0.8500000238418579
+        ]
+      ],
+      "materials": 3,
+      "images": 6,
+      "degenerateTriangles": 0,
+      "tangentsForNormalMaps": true
+    },
+    {
+      "file": "Modules/YardLamp_LOD1.glb",
+      "triangles": 72,
+      "boundsGltfM": [
+        [
+          -0.32499998807907104,
+          0.0,
+          -0.32499998807907104
+        ],
+        [
+          0.32499998807907104,
+          5.725276470184326,
+          0.8500000238418579
+        ]
+      ],
+      "materials": 3,
+      "images": 6,
+      "degenerateTriangles": 0,
+      "tangentsForNormalMaps": true
+    },
+    {
+      "file": "Modules/YardLamp_LOD2.glb",
+      "triangles": 72,
+      "boundsGltfM": [
+        [
+          -0.32499998807907104,
+          0.0,
+          -0.32499998807907104
+        ],
+        [
+          0.32499998807907104,
+          5.725276470184326,
+          0.8500000238418579
+        ]
+      ],
+      "materials": 3,
+      "images": 6,
+      "degenerateTriangles": 0,
+      "tangentsForNormalMaps": true
+    },
+    {
+      "file": "Modules/Boundary6m_LOD0.glb",
+      "triangles": 60,
+      "boundsGltfM": [
+        [
+          -0.17499999701976776,
+          0.0,
+          -0.17499999701976776
+        ],
+        [
+          6.175000190734863,
+          1.7999999523162842,
+          0.17499999701976776
+        ]
+      ],
+      "materials": 2,
+      "images": 6,
+      "degenerateTriangles": 0,
+      "tangentsForNormalMaps": true
+    },
+    {
+      "file": "Modules/Boundary6m_LOD1.glb",
+      "triangles": 60,
+      "boundsGltfM": [
+        [
+          -0.17499999701976776,
+          0.0,
+          -0.17499999701976776
+        ],
+        [
+          6.175000190734863,
+          1.7999999523162842,
+          0.17499999701976776
+        ]
+      ],
+      "materials": 2,
+      "images": 6,
+      "degenerateTriangles": 0,
+      "tangentsForNormalMaps": true
+    },
+    {
+      "file": "Modules/Boundary6m_LOD2.glb",
+      "triangles": 60,
+      "boundsGltfM": [
+        [
+          -0.17499999701976776,
+          0.0,
+          -0.17499999701976776
+        ],
+        [
+          6.175000190734863,
+          1.7999999523162842,
+          0.17499999701976776
+        ]
+      ],
+      "materials": 2,
+      "images": 6,
+      "degenerateTriangles": 0,
+      "tangentsForNormalMaps": true
+    },
+    {
+      "file": "Modules/TreeBroadleaf_LOD0.glb",
+      "triangles": 1944,
+      "boundsGltfM": [
+        [
+          -3.1399123668670654,
+          0.0,
+          -3.1151604652404785
+        ],
+        [
+          3.3513550758361816,
+          6.7755513191223145,
+          3.1771390438079834
+        ]
+      ],
+      "materials": 3,
+      "images": 0,
+      "degenerateTriangles": 0,
+      "tangentsForNormalMaps": true
+    },
+    {
+      "file": "Modules/TreeBroadleaf_LOD1.glb",
+      "triangles": 963,
+      "boundsGltfM": [
+        [
+          -3.2002110481262207,
+          -0.0,
+          -3.1910388469696045
+        ],
+        [
+          3.4219627380371094,
+          6.717787742614746,
+          3.2703914642333984
+        ]
+      ],
+      "materials": 3,
+      "images": 0,
+      "degenerateTriangles": 0,
+      "tangentsForNormalMaps": true
+    },
+    {
+      "file": "Modules/TreeBroadleaf_LOD2.glb",
+      "triangles": 330,
+      "boundsGltfM": [
+        [
+          -3.222339153289795,
+          -0.0,
+          -3.203101634979248
+        ],
+        [
+          3.437303304672241,
+          6.717787742614746,
+          3.250467538833618
+        ]
+      ],
+      "materials": 3,
+      "images": 0,
+      "degenerateTriangles": 0,
+      "tangentsForNormalMaps": true
+    },
+    {
+      "file": "Modules/UrbanA_LOD0.glb",
+      "triangles": 168,
+      "boundsGltfM": [
+        [
+          -5.199999809265137,
+          0.0,
+          -3.700000047683716
+        ],
+        [
+          5.199999809265137,
+          8.125,
+          3.8499999046325684
+        ]
+      ],
+      "materials": 3,
+      "images": 6,
+      "degenerateTriangles": 0,
+      "tangentsForNormalMaps": true
+    },
+    {
+      "file": "Modules/UrbanA_LOD1.glb",
+      "triangles": 84,
+      "boundsGltfM": [
+        [
+          -5.199999809265137,
+          0.0,
+          -3.700000286102295
+        ],
+        [
+          5.199999809265137,
+          8.125,
+          3.8499999046325684
+        ]
+      ],
+      "materials": 3,
+      "images": 6,
+      "degenerateTriangles": 0,
+      "tangentsForNormalMaps": true
+    },
+    {
+      "file": "Modules/UrbanA_LOD2.glb",
+      "triangles": 19,
+      "boundsGltfM": [
+        [
+          -5.199999809265137,
+          -0.0,
+          -3.700000286102295
+        ],
+        [
+          5.199999809265137,
+          8.0,
+          3.8499999046325684
+        ]
+      ],
+      "materials": 3,
+      "images": 6,
+      "degenerateTriangles": 0,
+      "tangentsForNormalMaps": true
+    },
+    {
+      "file": "Modules/UrbanB_LOD0.glb",
+      "triangles": 240,
+      "boundsGltfM": [
+        [
+          -5.199999809265137,
+          0.0,
+          -3.700000047683716
+        ],
+        [
+          5.199999809265137,
+          11.125,
+          3.8499999046325684
+        ]
+      ],
+      "materials": 3,
+      "images": 6,
+      "degenerateTriangles": 0,
+      "tangentsForNormalMaps": true
+    },
+    {
+      "file": "Modules/UrbanB_LOD1.glb",
+      "triangles": 120,
+      "boundsGltfM": [
+        [
+          -5.199999809265137,
+          0.0,
+          -3.700000286102295
+        ],
+        [
+          5.199999809265137,
+          11.125,
+          3.8499999046325684
+        ]
+      ],
+      "materials": 3,
+      "images": 6,
+      "degenerateTriangles": 0,
+      "tangentsForNormalMaps": true
+    },
+    {
+      "file": "Modules/UrbanB_LOD2.glb",
+      "triangles": 30,
+      "boundsGltfM": [
+        [
+          -5.199999809265137,
+          0.0,
+          -3.700000286102295
+        ],
+        [
+          5.199999809265137,
+          11.125,
+          3.8499999046325684
+        ]
+      ],
+      "materials": 3,
+      "images": 6,
+      "degenerateTriangles": 0,
+      "tangentsForNormalMaps": true
+    },
+    {
+      "file": "Modules/HeritageRoof6m_LOD0.glb",
+      "triangles": 12,
+      "boundsGltfM": [
+        [
+          -3.0,
+          8.90999984741211,
+          -4.0
+        ],
+        [
+          3.0,
+          9.09000015258789,
+          4.0
+        ]
+      ],
+      "materials": 1,
+      "images": 3,
+      "degenerateTriangles": 0,
+      "tangentsForNormalMaps": true
+    },
+    {
+      "file": "Modules/HeritageRoof6m_LOD1.glb",
+      "triangles": 12,
+      "boundsGltfM": [
+        [
+          -3.0,
+          8.90999984741211,
+          -4.0
+        ],
+        [
+          3.0,
+          9.09000015258789,
+          4.0
+        ]
+      ],
+      "materials": 1,
+      "images": 3,
+      "degenerateTriangles": 0,
+      "tangentsForNormalMaps": true
+    },
+    {
+      "file": "Modules/HeritageRoof6m_LOD2.glb",
+      "triangles": 12,
+      "boundsGltfM": [
+        [
+          -3.0,
+          8.90999984741211,
+          -4.0
+        ],
+        [
+          3.0,
+          9.09000015258789,
+          4.0
+        ]
+      ],
+      "materials": 1,
+      "images": 3,
+      "degenerateTriangles": 0,
+      "tangentsForNormalMaps": true
+    }
+  ],
+  "limits": "Static source and binary export checks only. Visual review, Unreal import and device performance are separate gates."
+}

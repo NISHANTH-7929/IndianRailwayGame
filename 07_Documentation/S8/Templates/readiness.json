@@ -1,0 +1,100 @@
+{
+  "assetId": "Loco.Pending.01",
+  "checks": {
+    "stableAssetId": {
+      "status": "pending",
+      "evidence": [],
+      "reason": ""
+    },
+    "sourceRecorded": {
+      "status": "pending",
+      "evidence": [],
+      "reason": ""
+    },
+    "licenseVerified": {
+      "status": "pending",
+      "evidence": [],
+      "reason": ""
+    },
+    "commercialUseVerified": {
+      "status": "pending",
+      "evidence": [],
+      "reason": ""
+    },
+    "modificationRightsVerified": {
+      "status": "pending",
+      "evidence": [],
+      "reason": ""
+    },
+    "scale": {
+      "status": "pending",
+      "evidence": [],
+      "reason": ""
+    },
+    "orientation": {
+      "status": "pending",
+      "evidence": [],
+      "reason": ""
+    },
+    "pivot": {
+      "status": "pending",
+      "evidence": [],
+      "reason": ""
+    },
+    "materials": {
+      "status": "pending",
+      "evidence": [],
+      "reason": ""
+    },
+    "textures": {
+      "status": "pending",
+      "evidence": [],
+      "reason": ""
+    },
+    "lods": {
+      "status": "pending",
+      "evidence": [],
+      "reason": ""
+    },
+    "collisionProxy": {
+      "status": "pending",
+      "evidence": [],
+      "reason": ""
+    },
+    "animationBinding": {
+      "status": "pending",
+      "evidence": [],
+      "reason": ""
+    },
+    "audioBinding": {
+      "status": "pending",
+      "evidence": [],
+      "reason": ""
+    },
+    "streaming": {
+      "status": "pending",
+      "evidence": [],
+      "reason": ""
+    },
+    "platformTier": {
+      "status": "pending",
+      "evidence": [],
+      "reason": ""
+    },
+    "android": {
+      "status": "pending",
+      "evidence": [],
+      "reason": ""
+    },
+    "regression": {
+      "status": "pending",
+      "evidence": [],
+      "reason": ""
+    },
+    "finalApproval": {
+      "status": "pending",
+      "evidence": [],
+      "reason": ""
+    }
+  }
+}

@@ -1,0 +1,170 @@
+[
+  {
+    "seconds": 17.123753399937414,
+    "state": {
+      "family": "Station.Egmore.Scene.02",
+      "interior": "2.1.0",
+      "placements": 1316,
+      "modules": 40,
+      "view": 1,
+      "staticArtReview": true,
+      "gameplayBound": false
+    }
+  },
+  {
+    "seconds": 23.900659499922767,
+    "state": {
+      "family": "Station.Egmore.Scene.02",
+      "interior": "2.1.0",
+      "placements": 1316,
+      "modules": 40,
+      "view": 1,
+      "staticArtReview": true,
+      "gameplayBound": false
+    }
+  },
+  {
+    "seconds": 27.272075599990785,
+    "state": {
+      "family": "Station.Egmore.Scene.02",
+      "interior": "2.1.0",
+      "placements": 1316,
+      "modules": 40,
+      "view": 2,
+      "staticArtReview": true,
+      "gameplayBound": false
+    }
+  },
+  {
+    "seconds": 33.07251989992801,
+    "state": {
+      "family": "Station.Egmore.Scene.02",
+      "interior": "2.1.0",
+      "placements": 1316,
+      "modules": 40,
+      "view": 2,
+      "staticArtReview": true,
+      "gameplayBound": false
+    }
+  },
+  {
+    "seconds": 36.467997599975206,
+    "state": {
+      "family": "Station.Egmore.Scene.02",
+      "interior": "2.1.0",
+      "placements": 1316,
+      "modules": 40,
+      "view": 2,
+      "staticArtReview": true,
+      "gameplayBound": false
+    }
+  },
+  {
+    "seconds": 39.85988849995192,
+    "state": {
+      "family": "Station.Egmore.Scene.02",
+      "interior": "2.1.0",
+      "placements": 1316,
+      "modules": 40,
+      "view": 3,
+      "staticArtReview": true,
+      "gameplayBound": false
+    }
+  },
+  {
+    "seconds": 48.26205019990448,
+    "state": {
+      "family": "Station.Egmore.Scene.02",
+      "interior": "2.1.0",
+      "placements": 1316,
+      "modules": 40,
+      "view": 3,
+      "staticArtReview": true,
+      "gameplayBound": false
+    }
+  },
+  {
+    "seconds": 51.6304272999987,
+    "state": {
+      "family": "Station.Egmore.Scene.02",
+      "interior": "2.1.0",
+      "placements": 1316,
+      "modules": 40,
+      "view": 4,
+      "staticArtReview": true,
+      "gameplayBound": false
+    }
+  },
+  {
+    "seconds": 57.1674380999757,
+    "state": {
+      "family": "Station.Egmore.Scene.02",
+      "interior": "2.1.0",
+      "placements": 1316,
+      "modules": 40,
+      "view": 4,
+      "staticArtReview": true,
+      "gameplayBound": false
+    }
+  },
+  {
+    "seconds": 60.54316739994101,
+    "state": {
+      "family": "Station.Egmore.Scene.02",
+      "interior": "2.1.0",
+      "placements": 1316,
+      "modules": 40,
+      "view": 4,
+      "staticArtReview": true,
+      "gameplayBound": false
+    }
+  },
+  {
+    "seconds": 63.8461902999552,
+    "state": {
+      "family": "Station.Egmore.Scene.02",
+      "interior": "2.1.0",
+      "placements": 1316,
+      "modules": 40,
+      "view": 5,
+      "staticArtReview": true,
+      "gameplayBound": false
+    }
+  },
+  {
+    "seconds": 70.11635499994736,
+    "state": {
+      "family": "Station.Egmore.Scene.02",
+      "interior": "2.1.0",
+      "placements": 1316,
+      "modules": 40,
+      "view": 5,
+      "staticArtReview": true,
+      "gameplayBound": false
+    }
+  },
+  {
+    "seconds": 73.59048219991382,
+    "state": {
+      "family": "Station.Egmore.Scene.02",
+      "interior": "2.1.0",
+      "placements": 1316,
+      "modules": 40,
+      "view": 5,
+      "staticArtReview": true,
+      "gameplayBound": false
+    }
+  },
+  {
+    "seconds": 76.9671582999872,
+    "state": {
+      "family": "Station.Egmore.Scene.02",
+      "interior": "2.1.0",
+      "placements": 1316,
+      "modules": 40,
+      "view": 0,
+      "staticArtReview": true,
+      "gameplayBound": false
+    }
+  }
+]

@@ -1,0 +1,78 @@
+{
+  "assetId": "egmoredome",
+  "description": "Original Egmore study with rear facade and aggregate ballast material; estimated dimensions, visual acceptance pending",
+  "displayName": "EgmoreDome",
+  "inspection": {
+    "animationCount": 0,
+    "boundingBox": {
+      "max": [
+        1.850000023841858,
+        3.1500000953674316,
+        1.850000023841858
+      ],
+      "min": [
+        -1.850000023841858,
+        0,
+        -1.850000023841858
+      ],
+      "sizeMeters": [
+        3.700000047683716,
+        3.1500000953674316,
+        3.700000047683716
+      ]
+    },
+    "boundingBoxEmpty": false,
+    "fileBytes": 1271228,
+    "filePath": "model.glb",
+    "generator": "glTF-Transform v4.5.1",
+    "hasNormals": true,
+    "hasSkin": false,
+    "hasTangents": true,
+    "hasUVs": true,
+    "materialCount": 1,
+    "meshCount": 1,
+    "pbr": {
+      "hasBaseColorTexture": true,
+      "hasEmissiveTexture": false,
+      "hasMetallicRoughnessTexture": true,
+      "hasNormalTexture": true,
+      "hasOcclusionTexture": false
+    },
+    "primitiveCount": 1,
+    "sceneGraphFallback": false,
+    "textureCount": 3,
+    "textureResolutions": [
+      {
+        "bytes": 389735,
+        "height": 512,
+        "mimeType": "image/png",
+        "name": "T_EgmoreLime_N",
+        "width": 512
+      },
+      {
+        "bytes": 404082,
+        "height": 512,
+        "mimeType": "image/png",
+        "name": "T_EgmoreLime_BC",
+        "width": 512
+      },
+      {
+        "bytes": 428445,
+        "height": 512,
+        "mimeType": "image/png",
+        "name": "T_EgmoreLime_ORM",
+        "width": 512
+      }
+    ],
+    "triangleCount": 1004,
+    "undrawnMeshCount": 0,
+    "undrawnPrimitiveCount": 0,
+    "undrawnTriangleCount": 0,
+    "vertexCount": 856,
+    "warnings": [
+      "texture is below 1024px on an axis and will blur at close range: T_EgmoreLime_N (512x512), T_EgmoreLime_BC (512x512), T_EgmoreLime_ORM (512x512)"
+    ]
+  },
+  "license": "LicenseRef-ProjectOriginal",
+  "schema": "game_dev.asset_metadata.v1"
+}

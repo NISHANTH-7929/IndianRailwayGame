@@ -1,0 +1,361 @@
+{
+  "type": "object",
+  "properties": {
+    "assetId": {
+      "type": "string",
+      "pattern": "^[A-Z][A-Za-z0-9]*(\\.[A-Za-z0-9]+){2,}$"
+    },
+    "category": {
+      "enum": [
+        "locomotive",
+        "coach",
+        "wagon",
+        "formation",
+        "station",
+        "trackside",
+        "environment",
+        "building",
+        "vegetation",
+        "character",
+        "animation",
+        "audio",
+        "vfx",
+        "ui"
+      ]
+    },
+    "source": {
+      "type": "string",
+      "minLength": 1
+    },
+    "toolChain": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "preparation": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "description": {
+            "type": "string",
+            "minLength": 1
+          },
+          "effortMinutes": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "minimum": 0
+          },
+          "evidence": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        },
+        "required": [
+          "description",
+          "effortMinutes",
+          "evidence"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "manual": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "description": {
+            "type": "string",
+            "minLength": 1
+          },
+          "effortMinutes": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "minimum": 0
+          },
+          "evidence": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        },
+        "required": [
+          "description",
+          "effortMinutes",
+          "evidence"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "correction": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "description": {
+            "type": "string",
+            "minLength": 1
+          },
+          "effortMinutes": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "minimum": 0
+          },
+          "evidence": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        },
+        "required": [
+          "description",
+          "effortMinutes",
+          "evidence"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "integration": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "description": {
+            "type": "string",
+            "minLength": 1
+          },
+          "effortMinutes": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "minimum": 0
+          },
+          "evidence": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        },
+        "required": [
+          "description",
+          "effortMinutes",
+          "evidence"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "androidOptimization": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "description": {
+            "type": "string",
+            "minLength": 1
+          },
+          "effortMinutes": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "minimum": 0
+          },
+          "evidence": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        },
+        "required": [
+          "description",
+          "effortMinutes",
+          "evidence"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "testIterations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "description": {
+            "type": "string",
+            "minLength": 1
+          },
+          "effortMinutes": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "minimum": 0
+          },
+          "evidence": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        },
+        "required": [
+          "description",
+          "effortMinutes",
+          "evidence"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "failuresRework": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "description": {
+            "type": "string",
+            "minLength": 1
+          },
+          "effortMinutes": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "minimum": 0
+          },
+          "evidence": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        },
+        "required": [
+          "description",
+          "effortMinutes",
+          "evidence"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "aiAssistance": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "description": {
+            "type": "string",
+            "minLength": 1
+          },
+          "effortMinutes": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "minimum": 0
+          },
+          "evidence": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        },
+        "required": [
+          "description",
+          "effortMinutes",
+          "evidence"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "verification": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "description": {
+            "type": "string",
+            "minLength": 1
+          },
+          "effortMinutes": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "minimum": 0
+          },
+          "evidence": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        },
+        "required": [
+          "description",
+          "effortMinutes",
+          "evidence"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "finalAcceptedState": {
+      "enum": [
+        "not-started",
+        "pending",
+        "accepted",
+        "rejected"
+      ]
+    },
+    "acceptanceEvidence": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    }
+  },
+  "required": [
+    "assetId",
+    "category",
+    "source",
+    "toolChain",
+    "preparation",
+    "manual",
+    "correction",
+    "integration",
+    "androidOptimization",
+    "testIterations",
+    "failuresRework",
+    "aiAssistance",
+    "verification",
+    "finalAcceptedState",
+    "acceptanceEvidence"
+  ],
+  "additionalProperties": false,
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:indianrailway:s8:cost"
+}

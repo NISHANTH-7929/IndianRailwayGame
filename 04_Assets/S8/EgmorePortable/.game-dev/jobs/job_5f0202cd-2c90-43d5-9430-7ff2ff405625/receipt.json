@@ -1,0 +1,44 @@
+{
+  "schema": "game_dev.receipt.v1",
+  "operation": "package.build",
+  "result": {
+    "schema": "game_dev.package_build_result.v1",
+    "packageId": "pkg_d4278b7c361c9fc93610626f",
+    "packagePath": "D:\\Project\\IndianRailwayGame\\04_Assets\\S8\\EgmorePortable\\.game-dev\\packages\\egmoreplatformbench\\1.0.0",
+    "manifestPath": "D:\\Project\\IndianRailwayGame\\04_Assets\\S8\\EgmorePortable\\.game-dev\\packages\\egmoreplatformbench\\1.0.0\\manifest.json",
+    "receiptPath": "D:\\Project\\IndianRailwayGame\\04_Assets\\S8\\EgmorePortable\\.game-dev\\packages\\egmoreplatformbench\\1.0.0\\receipt.json",
+    "manifestSha256": "61e548b0c63d8061a2a150ec8f1fd7e3dc9d3a7ff81517581dfbf05f3394f21c",
+    "reused": false,
+    "validation": {
+      "passed": true,
+      "errorCount": 0,
+      "warningCount": 0
+    },
+    "catalog": {
+      "packageId": "pkg_d4278b7c361c9fc93610626f",
+      "assetId": "egmoreplatformbench",
+      "version": "1.0.0",
+      "displayName": "EgmorePlatformBench",
+      "description": "Original metric Egmore study module; estimated dimensions, visual acceptance and Android integration pending",
+      "license": "LicenseRef-ProjectOriginal",
+      "packagePath": "D:\\Project\\IndianRailwayGame\\04_Assets\\S8\\EgmorePortable\\.game-dev\\packages\\egmoreplatformbench\\1.0.0",
+      "modelPath": "D:\\Project\\IndianRailwayGame\\04_Assets\\S8\\EgmorePortable\\.game-dev\\packages\\egmoreplatformbench\\1.0.0\\model.glb",
+      "modelSha256": "00c1530482bd74c30b3760773f9b7648f59012b88b9b50bf163f6c62dcc4856f",
+      "manifestSha256": "61e548b0c63d8061a2a150ec8f1fd7e3dc9d3a7ff81517581dfbf05f3394f21c",
+      "validationPassed": true,
+      "validationErrors": 0,
+      "validationWarnings": 0,
+      "origin": "authored",
+      "indexedAt": "2026-10-04T03:26:23.660Z"
+    },
+    "evidence": {
+      "portableGlbCopiedAndHashed": true,
+      "staticInspectionCompleted": true,
+      "policyValidationCompleted": true,
+      "blenderNormalizationPerformed": false,
+      "gpuImportTestPerformed": false,
+      "humanVisualReviewPerformed": false
+    }
+  },
+  "completedAt": "2026-10-04T03:26:23.664Z"
+}

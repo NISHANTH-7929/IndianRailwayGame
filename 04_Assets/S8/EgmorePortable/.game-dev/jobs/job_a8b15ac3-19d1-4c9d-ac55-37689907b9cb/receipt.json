@@ -1,0 +1,44 @@
+{
+  "schema": "game_dev.receipt.v1",
+  "operation": "package.build",
+  "result": {
+    "schema": "game_dev.package_build_result.v1",
+    "packageId": "pkg_132ba404bcb17235d2647c33",
+    "packagePath": "D:\\Project\\IndianRailwayGame\\04_Assets\\S8\\EgmorePortable\\.game-dev\\packages\\egmoredrain3m\\1.3.0",
+    "manifestPath": "D:\\Project\\IndianRailwayGame\\04_Assets\\S8\\EgmorePortable\\.game-dev\\packages\\egmoredrain3m\\1.3.0\\manifest.json",
+    "receiptPath": "D:\\Project\\IndianRailwayGame\\04_Assets\\S8\\EgmorePortable\\.game-dev\\packages\\egmoredrain3m\\1.3.0\\receipt.json",
+    "manifestSha256": "991a779912e874265946fd18cc7dd4fd247b8dce4e00f4fed4763c7966272ae3",
+    "reused": false,
+    "validation": {
+      "passed": true,
+      "errorCount": 0,
+      "warningCount": 0
+    },
+    "catalog": {
+      "packageId": "pkg_132ba404bcb17235d2647c33",
+      "assetId": "egmoredrain3m",
+      "version": "1.3.0",
+      "displayName": "EgmoreDrain3m",
+      "description": "Original Egmore study with rear facade and aggregate ballast material; estimated dimensions, visual acceptance pending",
+      "license": "LicenseRef-ProjectOriginal",
+      "packagePath": "D:\\Project\\IndianRailwayGame\\04_Assets\\S8\\EgmorePortable\\.game-dev\\packages\\egmoredrain3m\\1.3.0",
+      "modelPath": "D:\\Project\\IndianRailwayGame\\04_Assets\\S8\\EgmorePortable\\.game-dev\\packages\\egmoredrain3m\\1.3.0\\model.glb",
+      "modelSha256": "e2f790b06658f5ea963ff68dbe7d82295d2da9278202c6d59bcb65f1fa657f35",
+      "manifestSha256": "991a779912e874265946fd18cc7dd4fd247b8dce4e00f4fed4763c7966272ae3",
+      "validationPassed": true,
+      "validationErrors": 0,
+      "validationWarnings": 0,
+      "origin": "authored",
+      "indexedAt": "2026-10-04T09:07:57.317Z"
+    },
+    "evidence": {
+      "portableGlbCopiedAndHashed": true,
+      "staticInspectionCompleted": true,
+      "policyValidationCompleted": true,
+      "blenderNormalizationPerformed": false,
+      "gpuImportTestPerformed": false,
+      "humanVisualReviewPerformed": false
+    }
+  },
+  "completedAt": "2026-10-04T09:07:57.325Z"
+}

@@ -1,0 +1,73 @@
+{
+  "schema": 1,
+  "contentId": "IR-S6-fixture-1",
+  "logicalContent": "Compiled S2 graph, long A and short B formations, S3 handling definitions, S4 operations fixture, S5 AI v1",
+  "boundary": {
+    "axis": "world X metres",
+    "value": 0,
+    "west": "x < 0",
+    "east": "x >= 0"
+  },
+  "shared": [
+    {
+      "asset": "/Game/IndianRailway/S2/M_S2_Body",
+      "essential": false,
+      "lifetime": "references from any resident chunk; never logical ownership"
+    }
+  ],
+  "chunks": [
+    {
+      "id": 1,
+      "rebindKey": "west",
+      "level": "/Game/IndianRailway/S6/L_ChunkA",
+      "essential": true,
+      "assets": [
+        "/Game/IndianRailway/S6/SM_ProxyA",
+        "/Game/IndianRailway/S6/M_ProxyA"
+      ],
+      "proxyInstances": 512,
+      "essentialAssets": [
+        "/Game/IndianRailway/S6/L_ChunkA",
+        "/Game/IndianRailway/S6/SM_ProxyA"
+      ],
+      "optionalAssets": [
+        "/Game/IndianRailway/S6/M_ProxyA",
+        "/Game/IndianRailway/S2/M_S2_Body"
+      ]
+    },
+    {
+      "id": 2,
+      "rebindKey": "east",
+      "level": "/Game/IndianRailway/S6/L_ChunkB",
+      "essential": true,
+      "assets": [
+        "/Game/IndianRailway/S6/SM_ProxyB",
+        "/Game/IndianRailway/S6/M_ProxyB"
+      ],
+      "proxyInstances": 512,
+      "essentialAssets": [
+        "/Game/IndianRailway/S6/L_ChunkB",
+        "/Game/IndianRailway/S6/SM_ProxyB"
+      ],
+      "optionalAssets": [
+        "/Game/IndianRailway/S6/M_ProxyB",
+        "/Game/IndianRailway/S2/M_S2_Body"
+      ]
+    }
+  ],
+  "ownership": "ULevel owns chunk Actor/components and mesh/material references; sole mutable railway owner remains URailSimulationSubsystem",
+  "optionalContent": "512 static scenery instances per chunk are measurement proxies; their absence must never grant or revoke railway authority",
+  "rebind": "TrainId/VehicleId from complete logical poses; SignalId/PointId from derived protected operations snapshot",
+  "limits": {
+    "residentChunks": 2,
+    "proxyInstances": 1024,
+    "minimumAheadMetres": 40,
+    "speedAheadSeconds": 8,
+    "rearMarginMetres": 30,
+    "lookBackMarginMetres": 60,
+    "cameraBandHalfWidthMetres": 160,
+    "cameraHorizontalFovDegrees": 45
+  },
+  "compatibility": "Exact schema/content ID only; unsupported versions retained and rejected. No coordinate-based topology migration.",
+  "status": "Validated on final APK: control/recovery 21/21, compatibility 10/10, completed frame profile and 450-second finite residency audit. Two-chunk technical prototype only."
+}

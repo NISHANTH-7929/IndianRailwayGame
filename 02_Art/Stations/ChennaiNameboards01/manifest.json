@@ -1,0 +1,151 @@
+{
+  "individualGlyphAtlas": false,
+  "stationNames": "Tamil from retained OSM railway station nodes; duplicate Tambaram removed at Sanatorium. Hindi transliterations except retained Mambalam/Guindy/Pallavaram/Tambaram tags; not exact surveyed board copies.",
+  "boards": [
+    {
+      "hindi": "चेन्नै एग्मोर",
+      "sha256": "2eb2715932a1d764072ebac64092a419fe1415d521ce926f97cf22ae177cde01",
+      "index": 0,
+      "tamil": "சென்னை எழும்பூர்",
+      "code": "MS",
+      "english": "Chennai Egmore",
+      "file": "T_Nameboard_00.png"
+    },
+    {
+      "hindi": "चेन्नै चेटपेट",
+      "sha256": "a4f3a5aeed61bbcd3b99cba06b6e06f076774b8213e869272a9b896ca618efc5",
+      "index": 1,
+      "tamil": "சேத்துப்பட்டு",
+      "code": "MSC",
+      "english": "Chennai Chetpet",
+      "file": "T_Nameboard_01.png"
+    },
+    {
+      "hindi": "नुंगम्बाक्कम",
+      "sha256": "00e5fef7d6a6b47a8e3883987912fc684ed35cab0ee8dcfad460741e491c0590",
+      "index": 2,
+      "tamil": "நுங்கம்பாக்கம்",
+      "code": "NBK",
+      "english": "Nungambakkam",
+      "file": "T_Nameboard_02.png"
+    },
+    {
+      "hindi": "कोडम्बाक्कम",
+      "sha256": "046cdbbd690dd6948c0f312fd13328335146c410d5a1b5ac7ba40680196957c9",
+      "index": 3,
+      "tamil": "கோடம்பாக்கம்",
+      "code": "MKK",
+      "english": "Kodambakkam",
+      "file": "T_Nameboard_03.png"
+    },
+    {
+      "hindi": "मांबलम",
+      "sha256": "902ce750d8d80ef76e0865a772488cf0e42ceed73912c2594cb420dbfb19b126",
+      "index": 4,
+      "tamil": "மாம்பலம்",
+      "code": "MBM",
+      "english": "Mambalam",
+      "file": "T_Nameboard_04.png"
+    },
+    {
+      "hindi": "सैदापेट",
+      "sha256": "de5baf0a234e451dc622dc259d20dedd958cd51406c167282629f63ecad940b1",
+      "index": 5,
+      "tamil": "சைதாப்பேட்டை",
+      "code": "SP",
+      "english": "Saidapet",
+      "file": "T_Nameboard_05.png"
+    },
+    {
+      "hindi": "गिंडी",
+      "sha256": "c70bd79a1f1e116b7468ad07fd088d1a54e4632275a2d0f43f3c398a126f2771",
+      "index": 6,
+      "tamil": "கிண்டி",
+      "code": "GDY",
+      "english": "Guindy",
+      "file": "T_Nameboard_06.png"
+    },
+    {
+      "hindi": "सेंट थॉमस माउंट",
+      "sha256": "a8c3918e981380a2f6ac0a900a223969e8844c38fd65e625a5a548428b9996ad",
+      "index": 7,
+      "tamil": "பரங்கிமலை",
+      "code": "STM",
+      "english": "St. Thomas Mount",
+      "file": "T_Nameboard_07.png"
+    },
+    {
+      "hindi": "पलवन्तांगल",
+      "sha256": "f4b2d17d4b1436aeddbacd4b7b5375ab83bcda3ecc5033006a8c6da38d150036",
+      "index": 8,
+      "tamil": "பழவந்தாங்கல்",
+      "code": "PZA",
+      "english": "Palavanthangal",
+      "file": "T_Nameboard_08.png"
+    },
+    {
+      "hindi": "मीनम्बाक्कम",
+      "sha256": "af2cb764087377d5a9f0b4f003e0ab053cc97ac4455455cb5bc1c2d8041723e6",
+      "index": 9,
+      "tamil": "மீனம்பாக்கம்",
+      "code": "MN",
+      "english": "Meenambakkam",
+      "file": "T_Nameboard_09.png"
+    },
+    {
+      "hindi": "तिरुसूलम",
+      "sha256": "952eae54de654b5f3844af3aadf6568b3a942c4dadac33bc5f43b1cea3a3b6bc",
+      "index": 10,
+      "tamil": "திருசூலம்",
+      "code": "TLM",
+      "english": "Tirusulam",
+      "file": "T_Nameboard_10.png"
+    },
+    {
+      "hindi": "पल्लावरम",
+      "sha256": "b6abe75a38e854b252ef653760d0e8c9ac3becda4525be0db498173d0f86804d",
+      "index": 11,
+      "tamil": "பல்லாவரம்",
+      "code": "PV",
+      "english": "Pallavaram",
+      "file": "T_Nameboard_11.png"
+    },
+    {
+      "hindi": "क्रोमपेट",
+      "sha256": "770d7f5ae862474364ce4edec4d14dcbf14e52ee8e2d4b121c14f7731a81bdbf",
+      "index": 12,
+      "tamil": "குரோம்பேட்டை",
+      "code": "CMP",
+      "english": "Chrompet",
+      "file": "T_Nameboard_12.png"
+    },
+    {
+      "hindi": "ताम्बरम सैनिटोरियम",
+      "sha256": "1042ca50c531673146a7334161426dd93b5e8f25c711f74f525dd7bcee011090",
+      "index": 13,
+      "tamil": "தாம்பரம் சானடோரியம்",
+      "code": "TBMS",
+      "english": "Tambaram Sanatorium",
+      "file": "T_Nameboard_13.png"
+    },
+    {
+      "hindi": "ताम्बरम",
+      "sha256": "42eeb12d0f02dfe51d18d13e4c4dc9140a1daca8db38ee84319ade17717e407a",
+      "index": 14,
+      "tamil": "தாம்பரம்",
+      "code": "TBM",
+      "english": "Tambaram",
+      "file": "T_Nameboard_14.png"
+    }
+  ],
+  "renderer": "Windows GDI+ shaped DrawString, installed Nirmala UI Bold",
+  "version": 1,
+  "fontRedistributed": false,
+  "osmAttribution": "© OpenStreetMap contributors, ODbL 1.0 https://www.openstreetmap.org/copyright",
+  "licenceSource": "https://learn.microsoft.com/en-us/typography/fonts/font-faq",
+  "licence": "Original project phrase artwork; font rights: Microsoft font redistribution FAQ, graphic files in games/apps",
+  "dimensions": [
+    2048,
+    512
+  ]
+}

@@ -1,0 +1,181 @@
+{
+  "animationCount": 0,
+  "categories": [
+    {
+      "uid": "22a2f677efad4d7bbca5ad45f9b5868e",
+      "name": "Cars & Vehicles",
+      "slug": "cars-vehicles",
+      "uri": "https://api.sketchfab.com/v3/categories/22a2f677efad4d7bbca5ad45f9b5868e",
+      "icon": "https://static.sketchfab.com/static/builds/web/dist/static/assets/images/icons/categories/45dd0cc0860ac57fcd63bde1cc3f2b7c-v2.svg",
+      "thumbnails": [
+        {
+          "width": "512",
+          "height": "288",
+          "url": "https://static.sketchfab.com/categories/22a2f677efad4d7bbca5ad45f9b5868e/512x288.png"
+        },
+        {
+          "width": "800",
+          "height": "450",
+          "url": "https://static.sketchfab.com/categories/22a2f677efad4d7bbca5ad45f9b5868e/800x450.png"
+        }
+      ]
+    },
+    {
+      "uid": "d7cebaeca8604ebab1480e413404b679",
+      "name": "Electronics & Gadgets",
+      "slug": "electronics-gadgets",
+      "uri": "https://api.sketchfab.com/v3/categories/d7cebaeca8604ebab1480e413404b679",
+      "icon": "https://static.sketchfab.com/static/builds/web/dist/static/assets/images/icons/categories/336c224334b7e53e277d236a8355e90a-v2.svg",
+      "thumbnails": [
+        {
+          "width": "512",
+          "height": "288",
+          "url": "https://static.sketchfab.com/categories/d7cebaeca8604ebab1480e413404b679/512x288.png"
+        },
+        {
+          "width": "800",
+          "height": "450",
+          "url": "https://static.sketchfab.com/categories/d7cebaeca8604ebab1480e413404b679/800x450.png"
+        }
+      ]
+    }
+  ],
+  "commentCount": 4,
+  "createdAt": "2026-02-05T17:33:21.36105",
+  "embedUrl": "https://sketchfab.com/models/1935cec9ac9446e3b2524ad73f0902a4/embed",
+  "faceCount": 225435,
+  "isAgeRestricted": false,
+  "license": {
+    "uri": "https://api.sketchfab.com/v3/licenses/322a749bcfa841b29dff1e8a1bb74b0b",
+    "label": "CC Attribution",
+    "fullName": "Creative Commons Attribution",
+    "requirements": "Author must be credited. Commercial use is allowed.",
+    "url": "http://creativecommons.org/licenses/by/4.0/",
+    "slug": "by"
+  },
+  "likeCount": 36,
+  "name": "WAP 7 Indian Locomotive Low Poly model",
+  "publishedAt": "2026-02-05T17:38:34.13349",
+  "soundCount": 0,
+  "staffpickedAt": null,
+  "tags": [
+    {
+      "name": "train",
+      "slug": "train",
+      "uri": "https://api.sketchfab.com/v3/tags/train"
+    },
+    {
+      "name": "wap7",
+      "slug": "wap7",
+      "uri": "https://api.sketchfab.com/v3/tags/wap7"
+    },
+    {
+      "name": "indianrailways",
+      "slug": "indianrailways",
+      "uri": "https://api.sketchfab.com/v3/tags/indianrailways"
+    },
+    {
+      "name": "indianlocomotive",
+      "slug": "indianlocomotive",
+      "uri": "https://api.sketchfab.com/v3/tags/indianlocomotive"
+    }
+  ],
+  "thumbnails": {
+    "images": [
+      {
+        "uid": "197b2fa883294a0e9808eac41c4bd243",
+        "width": 1920,
+        "height": 1080,
+        "size": 349225,
+        "url": "https://media.sketchfab.com/models/1935cec9ac9446e3b2524ad73f0902a4/thumbnails/19902a7a304344c886d00f1f53d446c4/e2155c4e4b9c465f8e0aa5bc68296854.jpeg"
+      },
+      {
+        "uid": "220be57d017a472b87516d6c69ff3758",
+        "width": 1024,
+        "height": 576,
+        "size": 99041,
+        "url": "https://media.sketchfab.com/models/1935cec9ac9446e3b2524ad73f0902a4/thumbnails/19902a7a304344c886d00f1f53d446c4/879f97e02ac04d8ba564e45e6a40c04f.jpeg"
+      },
+      {
+        "uid": "d69abc4237a64543bb3fce2c858e3189",
+        "width": 720,
+        "height": 405,
+        "size": 55665,
+        "url": "https://media.sketchfab.com/models/1935cec9ac9446e3b2524ad73f0902a4/thumbnails/19902a7a304344c886d00f1f53d446c4/74e2cd739fa64742bd0e9f43d3cc4fbf.jpeg"
+      },
+      {
+        "uid": "c23e61a73b634c68ae70bddd6589cc77",
+        "width": 256,
+        "height": 144,
+        "size": 10644,
+        "url": "https://media.sketchfab.com/models/1935cec9ac9446e3b2524ad73f0902a4/thumbnails/19902a7a304344c886d00f1f53d446c4/75c17e2b3d684c6b82c584c55641a789.jpeg"
+      },
+      {
+        "uid": "8c71bb5b5cc84118a66438ee476af6e3",
+        "width": 64,
+        "height": 36,
+        "size": 1711,
+        "url": "https://media.sketchfab.com/models/1935cec9ac9446e3b2524ad73f0902a4/thumbnails/19902a7a304344c886d00f1f53d446c4/c8d56477fd30450ba18e145d47102446.jpeg"
+      }
+    ]
+  },
+  "uid": "1935cec9ac9446e3b2524ad73f0902a4",
+  "uri": "https://api.sketchfab.com/v3/models/1935cec9ac9446e3b2524ad73f0902a4",
+  "user": {
+    "uid": "34007b37ab6f47c48c23e0a72cbbfd12",
+    "username": "knitro_vedant",
+    "displayName": "knitro_vedant",
+    "account": "basic",
+    "profileUrl": "https://sketchfab.com/knitro_vedant",
+    "avatar": {
+      "uid": "52ee40d9d74f45a4a123e5fee4292356",
+      "uri": "https://api.sketchfab.com/v3/avatars/52ee40d9d74f45a4a123e5fee4292356",
+      "images": [
+        {
+          "width": 32,
+          "height": 32,
+          "size": 1961,
+          "url": "https://media.sketchfab.com/avatars/52ee40d9d74f45a4a123e5fee4292356/dccd16de8e23490f9d71695a5bb5fc88.png"
+        },
+        {
+          "width": 48,
+          "height": 48,
+          "size": 4243,
+          "url": "https://media.sketchfab.com/avatars/52ee40d9d74f45a4a123e5fee4292356/7ed099fc3cb140a6ad4b2eb6afe01faf.png"
+        },
+        {
+          "width": 90,
+          "height": 90,
+          "size": 14551,
+          "url": "https://media.sketchfab.com/avatars/52ee40d9d74f45a4a123e5fee4292356/a35c4e8a851846a7a3213e9c526301b8.png"
+        },
+        {
+          "width": 100,
+          "height": 100,
+          "size": 17792,
+          "url": "https://media.sketchfab.com/avatars/52ee40d9d74f45a4a123e5fee4292356/0a5e6d17f5f3472299ac9fbae1d87537.png"
+        }
+      ]
+    },
+    "uri": "https://api.sketchfab.com/v3/users/34007b37ab6f47c48c23e0a72cbbfd12"
+  },
+  "vertexCount": 117781,
+  "viewCount": 5433,
+  "viewerUrl": "https://sketchfab.com/3d-models/wap-7-indian-locomotive-low-poly-model-1935cec9ac9446e3b2524ad73f0902a4",
+  "isDownloadable": true,
+  "isProtected": false,
+  "description": "The WAP-7 is a 6,000 HP, 25 kV AC electric passenger locomotive developed by Chittaranjan Locomotive Works (CLW) for Indian Railways, introduced in 2000. Designed for high-speed, long-distance service (up to 140 km/h, with potential for 160 km/h), it commonly powers prestigious trains like the Rajdhani and Shatabdi Express. It features three-phase technology, regenerative braking, and Hotel Load Converter (HOG) technology.",
+  "price": null,
+  "downloadCount": 1209,
+  "editorUrl": "https://sketchfab.com/models/1935cec9ac9446e3b2524ad73f0902a4/edit",
+  "status": {
+    "warning": {},
+    "processing": "SUCCEEDED"
+  },
+  "source": "website",
+  "hasCommentsDisabled": false,
+  "updatedAt": "2026-06-15T02:57:54.956562",
+  "pbrType": "metalness",
+  "textureCount": 17,
+  "materialCount": 14
+}

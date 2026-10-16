@@ -1,0 +1,23 @@
+{
+  "completedAt": "2026-10-04T08:44:35.758Z",
+  "destination": {
+    "assetId": "egmorelitterbins",
+    "version": "1.2.0"
+  },
+  "evidence": {
+    "blenderNormalizationPerformed": false,
+    "gpuImportTestPerformed": false,
+    "humanVisualReviewPerformed": false,
+    "modelBytesCopiedAndHashed": true,
+    "policyValidationCompleted": true,
+    "staticInspectionCompleted": true
+  },
+  "manifestSha256": "c82469946a1650b6209855ee43545f9d6c3a5d11937265ab436018a4aa75d5e5",
+  "packageId": "pkg_ccb798de7e1920dca5704ff0",
+  "schema": "game_dev.package_receipt.v1",
+  "source": {
+    "bytes": 5745668,
+    "fileName": "EgmoreLitterBins.glb",
+    "sha256": "3a6d770568bfa68775eca57c32d59b0a7e98418f8c505cd81e1fb59d1c35312c"
+  }
+}

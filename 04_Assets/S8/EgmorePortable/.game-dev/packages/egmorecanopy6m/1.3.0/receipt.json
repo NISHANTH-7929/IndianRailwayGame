@@ -1,0 +1,23 @@
+{
+  "completedAt": "2026-10-04T09:07:52.820Z",
+  "destination": {
+    "assetId": "egmorecanopy6m",
+    "version": "1.3.0"
+  },
+  "evidence": {
+    "blenderNormalizationPerformed": false,
+    "gpuImportTestPerformed": false,
+    "humanVisualReviewPerformed": false,
+    "modelBytesCopiedAndHashed": true,
+    "policyValidationCompleted": true,
+    "staticInspectionCompleted": true
+  },
+  "manifestSha256": "07f78b31fd1d85c6886488e6facb6a3d905531cef2641e70597e729ed6ee0441",
+  "packageId": "pkg_0df479c079bfd613ad507b0c",
+  "schema": "game_dev.package_receipt.v1",
+  "source": {
+    "bytes": 8141372,
+    "fileName": "EgmoreCanopy6m.glb",
+    "sha256": "e68fca7ab944104a5ab84079953506fe7f893d29c10c72611d6419fd4506b0ba"
+  }
+}

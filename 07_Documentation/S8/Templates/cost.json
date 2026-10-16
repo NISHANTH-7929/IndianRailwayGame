@@ -1,0 +1,17 @@
+{
+  "assetId": "Loco.Pending.01",
+  "category": "locomotive",
+  "source": "pending",
+  "toolChain": [],
+  "preparation": [],
+  "manual": [],
+  "correction": [],
+  "integration": [],
+  "androidOptimization": [],
+  "testIterations": [],
+  "failuresRework": [],
+  "aiAssistance": [],
+  "verification": [],
+  "finalAcceptedState": "not-started",
+  "acceptanceEvidence": []
+}

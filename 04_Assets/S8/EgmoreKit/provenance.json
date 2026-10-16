@@ -1,0 +1,254 @@
+[
+  {
+    "AssetId": "Station.Kit.EgmoreArcade6m",
+    "AssetName": "EgmoreArcade6m",
+    "Category": "station",
+    "Creator": "Project-authored procedural geometry and PBR",
+    "Source": "07_Documentation/S8/Tools/build_egmore_kit.py",
+    "SourceReference": "07_Documentation/S8/EGMORE_REFERENCE_REGISTER.md",
+    "AcquisitionDate": "2026-10-03",
+    "License": "Original geometry; no photographic pixels incorporated",
+    "CommercialUse": "verified",
+    "ModificationPermission": "verified",
+    "RedistributionRestrictions": "Reference photos have separate licenses; do not package them as source textures",
+    "AttributionRequirement": "See reference register for separate photographic credit",
+    "OriginalArchive": "Locally generated source",
+    "ModifiedAssetReference": "04_Assets/S8/EgmoreKit/Parts/SM_Station_EgmoreArcade6m.fbx",
+    "VerificationStatus": "pending review",
+    "VerificationEvidence": [
+      "07_Documentation/S8/Evidence/Egmore/unreal-import.json"
+    ],
+    "Notes": "Estimated architectural study; not survey accurate or visually accepted; Android integration pending."
+  },
+  {
+    "AssetId": "Station.Kit.EgmoreTower4m",
+    "AssetName": "EgmoreTower4m",
+    "Category": "station",
+    "Creator": "Project-authored procedural geometry and PBR",
+    "Source": "07_Documentation/S8/Tools/build_egmore_kit.py",
+    "SourceReference": "07_Documentation/S8/EGMORE_REFERENCE_REGISTER.md",
+    "AcquisitionDate": "2026-10-03",
+    "License": "Original geometry; no photographic pixels incorporated",
+    "CommercialUse": "verified",
+    "ModificationPermission": "verified",
+    "RedistributionRestrictions": "Reference photos have separate licenses; do not package them as source textures",
+    "AttributionRequirement": "See reference register for separate photographic credit",
+    "OriginalArchive": "Locally generated source",
+    "ModifiedAssetReference": "04_Assets/S8/EgmoreKit/Parts/SM_Station_EgmoreTower4m.fbx",
+    "VerificationStatus": "pending review",
+    "VerificationEvidence": [
+      "07_Documentation/S8/Evidence/Egmore/unreal-import.json"
+    ],
+    "Notes": "Estimated architectural study; not survey accurate or visually accepted; Android integration pending."
+  },
+  {
+    "AssetId": "Station.Kit.EgmoreDome",
+    "AssetName": "EgmoreDome",
+    "Category": "station",
+    "Creator": "Project-authored procedural geometry and PBR",
+    "Source": "07_Documentation/S8/Tools/build_egmore_kit.py",
+    "SourceReference": "07_Documentation/S8/EGMORE_REFERENCE_REGISTER.md",
+    "AcquisitionDate": "2026-10-03",
+    "License": "Original geometry; no photographic pixels incorporated",
+    "CommercialUse": "verified",
+    "ModificationPermission": "verified",
+    "RedistributionRestrictions": "Reference photos have separate licenses; do not package them as source textures",
+    "AttributionRequirement": "See reference register for separate photographic credit",
+    "OriginalArchive": "Locally generated source",
+    "ModifiedAssetReference": "04_Assets/S8/EgmoreKit/Parts/SM_Station_EgmoreDome.fbx",
+    "VerificationStatus": "pending review",
+    "VerificationEvidence": [
+      "07_Documentation/S8/Evidence/Egmore/unreal-import.json"
+    ],
+    "Notes": "Estimated architectural study; not survey accurate or visually accepted; Android integration pending."
+  },
+  {
+    "AssetId": "Station.Kit.EgmoreEntrance9m",
+    "AssetName": "EgmoreEntrance9m",
+    "Category": "station",
+    "Creator": "Project-authored procedural geometry and PBR",
+    "Source": "07_Documentation/S8/Tools/build_egmore_kit.py",
+    "SourceReference": "07_Documentation/S8/EGMORE_REFERENCE_REGISTER.md",
+    "AcquisitionDate": "2026-10-03",
+    "License": "Original geometry; no photographic pixels incorporated",
+    "CommercialUse": "verified",
+    "ModificationPermission": "verified",
+    "RedistributionRestrictions": "Reference photos have separate licenses; do not package them as source textures",
+    "AttributionRequirement": "See reference register for separate photographic credit",
+    "OriginalArchive": "Locally generated source",
+    "ModifiedAssetReference": "04_Assets/S8/EgmoreKit/Parts/SM_Station_EgmoreEntrance9m.fbx",
+    "VerificationStatus": "pending review",
+    "VerificationEvidence": [
+      "07_Documentation/S8/Evidence/Egmore/unreal-import.json"
+    ],
+    "Notes": "Estimated architectural study; not survey accurate or visually accepted; Android integration pending."
+  },
+  {
+    "AssetId": "Station.Kit.EgmoreCanopy6m",
+    "AssetName": "EgmoreCanopy6m",
+    "Category": "station",
+    "Creator": "Project-authored procedural geometry and PBR",
+    "Source": "07_Documentation/S8/Tools/build_egmore_kit.py",
+    "SourceReference": "07_Documentation/S8/EGMORE_REFERENCE_REGISTER.md",
+    "AcquisitionDate": "2026-10-03",
+    "License": "Original geometry; no photographic pixels incorporated",
+    "CommercialUse": "verified",
+    "ModificationPermission": "verified",
+    "RedistributionRestrictions": "Reference photos have separate licenses; do not package them as source textures",
+    "AttributionRequirement": "See reference register for separate photographic credit",
+    "OriginalArchive": "Locally generated source",
+    "ModifiedAssetReference": "04_Assets/S8/EgmoreKit/Parts/SM_Station_EgmoreCanopy6m.fbx",
+    "VerificationStatus": "pending review",
+    "VerificationEvidence": [
+      "07_Documentation/S8/Evidence/Egmore/unreal-import.json"
+    ],
+    "Notes": "Estimated architectural study; not survey accurate or visually accepted; Android integration pending."
+  },
+  {
+    "AssetId": "Station.Kit.EgmorePlatformBench",
+    "AssetName": "EgmorePlatformBench",
+    "Category": "station",
+    "Creator": "Project-authored procedural geometry and PBR",
+    "Source": "07_Documentation/S8/Tools/build_egmore_kit.py",
+    "SourceReference": "07_Documentation/S8/EGMORE_REFERENCE_REGISTER.md",
+    "AcquisitionDate": "2026-10-03",
+    "License": "Original geometry; no photographic pixels incorporated",
+    "CommercialUse": "verified",
+    "ModificationPermission": "verified",
+    "RedistributionRestrictions": "Reference photos have separate licenses; do not package them as source textures",
+    "AttributionRequirement": "See reference register for separate photographic credit",
+    "OriginalArchive": "Locally generated source",
+    "ModifiedAssetReference": "04_Assets/S8/EgmoreKit/Parts/SM_Station_EgmorePlatformBench.fbx",
+    "VerificationStatus": "pending review",
+    "VerificationEvidence": [
+      "07_Documentation/S8/Evidence/Egmore/unreal-import.json"
+    ],
+    "Notes": "Estimated architectural study; not survey accurate or visually accepted; Android integration pending."
+  },
+  {
+    "AssetId": "Station.Kit.EgmoreWaterPoint",
+    "AssetName": "EgmoreWaterPoint",
+    "Category": "station",
+    "Creator": "Project-authored procedural geometry and PBR",
+    "Source": "07_Documentation/S8/Tools/build_egmore_kit.py",
+    "SourceReference": "07_Documentation/S8/EGMORE_REFERENCE_REGISTER.md",
+    "AcquisitionDate": "2026-10-03",
+    "License": "Original geometry; no photographic pixels incorporated",
+    "CommercialUse": "verified",
+    "ModificationPermission": "verified",
+    "RedistributionRestrictions": "Reference photos have separate licenses; do not package them as source textures",
+    "AttributionRequirement": "See reference register for separate photographic credit",
+    "OriginalArchive": "Locally generated source",
+    "ModifiedAssetReference": "04_Assets/S8/EgmoreKit/Parts/SM_Station_EgmoreWaterPoint.fbx",
+    "VerificationStatus": "pending review",
+    "VerificationEvidence": [
+      "07_Documentation/S8/Evidence/Egmore/unreal-import.json"
+    ],
+    "Notes": "Estimated architectural study; not survey accurate or visually accepted; Android integration pending."
+  },
+  {
+    "AssetId": "Station.Kit.EgmoreLitterBins",
+    "AssetName": "EgmoreLitterBins",
+    "Category": "station",
+    "Creator": "Project-authored procedural geometry and PBR",
+    "Source": "07_Documentation/S8/Tools/build_egmore_kit.py",
+    "SourceReference": "07_Documentation/S8/EGMORE_REFERENCE_REGISTER.md",
+    "AcquisitionDate": "2026-10-03",
+    "License": "Original geometry; no photographic pixels incorporated",
+    "CommercialUse": "verified",
+    "ModificationPermission": "verified",
+    "RedistributionRestrictions": "Reference photos have separate licenses; do not package them as source textures",
+    "AttributionRequirement": "See reference register for separate photographic credit",
+    "OriginalArchive": "Locally generated source",
+    "ModifiedAssetReference": "04_Assets/S8/EgmoreKit/Parts/SM_Station_EgmoreLitterBins.fbx",
+    "VerificationStatus": "pending review",
+    "VerificationEvidence": [
+      "07_Documentation/S8/Evidence/Egmore/unreal-import.json"
+    ],
+    "Notes": "Estimated architectural study; not survey accurate or visually accepted; Android integration pending."
+  },
+  {
+    "AssetId": "Station.Kit.EgmorePlatformBoard",
+    "AssetName": "EgmorePlatformBoard",
+    "Category": "station",
+    "Creator": "Project-authored procedural geometry and PBR",
+    "Source": "07_Documentation/S8/Tools/build_egmore_kit.py",
+    "SourceReference": "07_Documentation/S8/EGMORE_REFERENCE_REGISTER.md",
+    "AcquisitionDate": "2026-10-03",
+    "License": "Original geometry; no photographic pixels incorporated",
+    "CommercialUse": "verified",
+    "ModificationPermission": "verified",
+    "RedistributionRestrictions": "Reference photos have separate licenses; do not package them as source textures",
+    "AttributionRequirement": "See reference register for separate photographic credit",
+    "OriginalArchive": "Locally generated source",
+    "ModifiedAssetReference": "04_Assets/S8/EgmoreKit/Parts/SM_Station_EgmorePlatformBoard.fbx",
+    "VerificationStatus": "pending review",
+    "VerificationEvidence": [
+      "07_Documentation/S8/Evidence/Egmore/unreal-import.json"
+    ],
+    "Notes": "Estimated architectural study; not survey accurate or visually accepted; Android integration pending."
+  },
+  {
+    "AssetId": "Station.Kit.EgmoreDrain3m",
+    "AssetName": "EgmoreDrain3m",
+    "Category": "station",
+    "Creator": "Project-authored procedural geometry and PBR",
+    "Source": "07_Documentation/S8/Tools/build_egmore_kit.py",
+    "SourceReference": "07_Documentation/S8/EGMORE_REFERENCE_REGISTER.md",
+    "AcquisitionDate": "2026-10-03",
+    "License": "Original geometry; no photographic pixels incorporated",
+    "CommercialUse": "verified",
+    "ModificationPermission": "verified",
+    "RedistributionRestrictions": "Reference photos have separate licenses; do not package them as source textures",
+    "AttributionRequirement": "See reference register for separate photographic credit",
+    "OriginalArchive": "Locally generated source",
+    "ModifiedAssetReference": "04_Assets/S8/EgmoreKit/Parts/SM_Station_EgmoreDrain3m.fbx",
+    "VerificationStatus": "pending review",
+    "VerificationEvidence": [
+      "07_Documentation/S8/Evidence/Egmore/unreal-import.json"
+    ],
+    "Notes": "Estimated architectural study; not survey accurate or visually accepted; Android integration pending."
+  },
+  {
+    "AssetId": "Station.Kit.EgmoreCeilingFan",
+    "AssetName": "EgmoreCeilingFan",
+    "Category": "station",
+    "Creator": "Project-authored procedural geometry and PBR",
+    "Source": "07_Documentation/S8/Tools/build_egmore_kit.py",
+    "SourceReference": "07_Documentation/S8/EGMORE_REFERENCE_REGISTER.md",
+    "AcquisitionDate": "2026-10-03",
+    "License": "Original geometry; no photographic pixels incorporated",
+    "CommercialUse": "verified",
+    "ModificationPermission": "verified",
+    "RedistributionRestrictions": "Reference photos have separate licenses; do not package them as source textures",
+    "AttributionRequirement": "See reference register for separate photographic credit",
+    "OriginalArchive": "Locally generated source",
+    "ModifiedAssetReference": "04_Assets/S8/EgmoreKit/Parts/SM_Station_EgmoreCeilingFan.fbx",
+    "VerificationStatus": "pending review",
+    "VerificationEvidence": [
+      "07_Documentation/S8/Evidence/Egmore/unreal-import.json"
+    ],
+    "Notes": "Estimated architectural study; not survey accurate or visually accepted; Android integration pending."
+  },
+  {
+    "AssetId": "Station.Kit.EgmoreBallast3m",
+    "AssetName": "EgmoreBallast3m",
+    "Category": "station",
+    "Creator": "Project-authored procedural geometry and PBR",
+    "Source": "07_Documentation/S8/Tools/build_egmore_kit.py",
+    "SourceReference": "07_Documentation/S8/EGMORE_REFERENCE_REGISTER.md",
+    "AcquisitionDate": "2026-10-03",
+    "License": "Original geometry; no photographic pixels incorporated",
+    "CommercialUse": "verified",
+    "ModificationPermission": "verified",
+    "RedistributionRestrictions": "Reference photos have separate licenses; do not package them as source textures",
+    "AttributionRequirement": "See reference register for separate photographic credit",
+    "OriginalArchive": "Locally generated source",
+    "ModifiedAssetReference": "04_Assets/S8/EgmoreKit/Parts/SM_Station_EgmoreBallast3m.fbx",
+    "VerificationStatus": "pending review",
+    "VerificationEvidence": [
+      "07_Documentation/S8/Evidence/Egmore/unreal-import.json"
+    ],
+    "Notes": "Estimated architectural study; not survey accurate or visually accepted; Android integration pending."
+  }
+]

@@ -1,0 +1,162 @@
+{
+  "assetId": "egmorewaterpoint",
+  "description": "Original Egmore architectural study with platform-facing facade details; estimated dimensions, visual acceptance pending",
+  "displayName": "EgmoreWaterPoint",
+  "inspection": {
+    "animationCount": 0,
+    "boundingBox": {
+      "max": [
+        0.8999999761581421,
+        1.659999966621399,
+        0.5674999952316284
+      ],
+      "min": [
+        -0.8999999761581421,
+        0,
+        -0.3499999940395355
+      ],
+      "sizeMeters": [
+        1.7999999523162842,
+        1.659999966621399,
+        0.9174999892711639
+      ]
+    },
+    "boundingBoxEmpty": false,
+    "fileBytes": 6221272,
+    "filePath": "model.glb",
+    "generator": "glTF-Transform v4.5.1",
+    "hasNormals": true,
+    "hasSkin": false,
+    "hasTangents": true,
+    "hasUVs": true,
+    "materialCount": 5,
+    "meshCount": 1,
+    "pbr": {
+      "hasBaseColorTexture": true,
+      "hasEmissiveTexture": false,
+      "hasMetallicRoughnessTexture": true,
+      "hasNormalTexture": true,
+      "hasOcclusionTexture": false
+    },
+    "primitiveCount": 5,
+    "sceneGraphFallback": false,
+    "textureCount": 15,
+    "textureResolutions": [
+      {
+        "bytes": 389735,
+        "height": 512,
+        "mimeType": "image/png",
+        "name": "T_EgmoreLime_N",
+        "width": 512
+      },
+      {
+        "bytes": 404082,
+        "height": 512,
+        "mimeType": "image/png",
+        "name": "T_EgmoreLime_BC",
+        "width": 512
+      },
+      {
+        "bytes": 428445,
+        "height": 512,
+        "mimeType": "image/png",
+        "name": "T_EgmoreLime_ORM",
+        "width": 512
+      },
+      {
+        "bytes": 389755,
+        "height": 512,
+        "mimeType": "image/png",
+        "name": "T_Galvanized_N",
+        "width": 512
+      },
+      {
+        "bytes": 326189,
+        "height": 512,
+        "mimeType": "image/png",
+        "name": "T_Galvanized_BC",
+        "width": 512
+      },
+      {
+        "bytes": 449269,
+        "height": 512,
+        "mimeType": "image/png",
+        "name": "T_Galvanized_ORM",
+        "width": 512
+      },
+      {
+        "bytes": 390229,
+        "height": 512,
+        "mimeType": "image/png",
+        "name": "T_Steel_N",
+        "width": 512
+      },
+      {
+        "bytes": 256548,
+        "height": 512,
+        "mimeType": "image/png",
+        "name": "T_Steel_BC",
+        "width": 512
+      },
+      {
+        "bytes": 448273,
+        "height": 512,
+        "mimeType": "image/png",
+        "name": "T_Steel_ORM",
+        "width": 512
+      },
+      {
+        "bytes": 389602,
+        "height": 512,
+        "mimeType": "image/png",
+        "name": "T_EgmoreBlue_N",
+        "width": 512
+      },
+      {
+        "bytes": 388812,
+        "height": 512,
+        "mimeType": "image/png",
+        "name": "T_EgmoreBlue_BC",
+        "width": 512
+      },
+      {
+        "bytes": 445704,
+        "height": 512,
+        "mimeType": "image/png",
+        "name": "T_EgmoreBlue_ORM",
+        "width": 512
+      },
+      {
+        "bytes": 389780,
+        "height": 512,
+        "mimeType": "image/png",
+        "name": "T_Cream_N",
+        "width": 512
+      },
+      {
+        "bytes": 402788,
+        "height": 512,
+        "mimeType": "image/png",
+        "name": "T_Cream_BC",
+        "width": 512
+      },
+      {
+        "bytes": 434391,
+        "height": 512,
+        "mimeType": "image/png",
+        "name": "T_Cream_ORM",
+        "width": 512
+      }
+    ],
+    "triangleCount": 3100,
+    "undrawnMeshCount": 0,
+    "undrawnPrimitiveCount": 0,
+    "undrawnTriangleCount": 0,
+    "vertexCount": 5443,
+    "warnings": [
+      "texture is below 1024px on an axis and will blur at close range: T_EgmoreLime_N (512x512), T_EgmoreLime_BC (512x512), T_EgmoreLime_ORM (512x512), T_Galvanized_N (512x512) (+11 more)"
+    ]
+  },
+  "license": "LicenseRef-ProjectOriginal",
+  "schema": "game_dev.asset_metadata.v1"
+}

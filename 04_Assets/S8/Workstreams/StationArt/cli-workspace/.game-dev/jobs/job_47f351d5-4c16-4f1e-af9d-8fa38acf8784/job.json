@@ -1,0 +1,28 @@
+{
+  "schema": "game_dev.job.v1",
+  "id": "job_47f351d5-4c16-4f1e-af9d-8fa38acf8784",
+  "operation": "package.verify",
+  "status": "failed",
+  "request": {
+    "positionals": [
+      "package",
+      "verify",
+      "D:\\Project\\IndianRailwayGame\\04_Assets\\S8\\Workstreams\\StationArt\\cli-workspace\\.game-dev\\packages\\chennai_egmore_station_art\\2.0.0"
+    ],
+    "flags": {
+      "output-dir": "D:\\Project\\IndianRailwayGame\\04_Assets\\S8\\Workstreams\\StationArt\\cli-workspace"
+    }
+  },
+  "attempts": 1,
+  "eventCount": 1,
+  "artifacts": [],
+  "createdAt": "2026-10-07T12:42:40.087Z",
+  "updatedAt": "2026-10-07T12:42:40.122Z",
+  "startedAt": "2026-10-07T12:42:40.110Z",
+  "completedAt": "2026-10-07T12:42:40.122Z",
+  "error": {
+    "error": "UNKNOWN",
+    "message": "ENOENT: no such file or directory, realpath 'D:\\Project\\IndianRailwayGame\\04_Assets\\S8\\Workstreams\\StationArt\\cli-workspace\\.game-dev\\packages\\chennai_egmore_station_art\\2.0.0'",
+    "retryable": false
+  }
+}

@@ -1,0 +1,96 @@
+{
+  "reference": "https://commons.wikimedia.org/wiki/File:Chennai_Egmore.jpg",
+  "referenceDate": "2011-11-18",
+  "referenceAuthor": "Superfast1111",
+  "referenceLicense": "CC-BY-SA-3.0",
+  "interpretation": "Historical board spelling and language order; newly typeset, not a current-station survey",
+  "font": "Windows Nirmala UI Bold, baked raster only; font file not redistributed",
+  "fontSha256": "ad02cdfc06e144ac45f318e8e5a64cbe04c7479d4beb91d25f5a319a466b1767",
+  "shaper": "HarfBuzz 14.5.0",
+  "lines": [
+    {
+      "text": "சென்னை எழும்பூர்",
+      "glyphIds": [
+        2966,
+        2937,
+        2944,
+        2972,
+        2968,
+        2944,
+        3,
+        2929,
+        3057,
+        2946,
+        2972,
+        3031,
+        2948,
+        2972
+      ],
+      "script": "Taml",
+      "missingGlyphs": 0,
+      "inkBounds": [
+        42,
+        163,
+        2102,
+        374
+      ]
+    },
+    {
+      "text": "CHENNAI EGMORE",
+      "glyphIds": [
+        6,
+        11,
+        8,
+        17,
+        17,
+        4,
+        12,
+        3,
+        8,
+        10,
+        16,
+        18,
+        21,
+        8
+      ],
+      "script": "Latn",
+      "missingGlyphs": 0,
+      "inkBounds": [
+        36,
+        194,
+        1741,
+        332
+      ]
+    },
+    {
+      "text": "चेन्नै एषुंबूर",
+      "glyphIds": [
+        253,
+        312,
+        580,
+        313,
+        3,
+        240,
+        284,
+        306,
+        323,
+        271,
+        307,
+        275
+      ],
+      "script": "Deva",
+      "missingGlyphs": 0,
+      "inkBounds": [
+        26,
+        122,
+        829,
+        381
+      ]
+    }
+  ],
+  "size": [
+    2048,
+    1024
+  ],
+  "sourcePixelsUsed": false
+}

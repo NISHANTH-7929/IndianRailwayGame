@@ -1,0 +1,48 @@
+{
+  "assetFamilyId": "Station.Egmore.Scene.02",
+  "version": "2.0.0",
+  "origin": "project-authored and adapted from existing project-authored Egmore source meshes",
+  "license": "LicenseRef-Project-Original",
+  "licenseMeaning": "Project-owned original geometry/materials; this label grants no new public redistribution license. Reference photographs retain separate licenses.",
+  "paidProviderUsed": false,
+  "costUSD": 0,
+  "photoPixelsUsed": false,
+  "sourceReceipts": [
+    {
+      "path": "04_Assets\\S8\\EgmoreKit\\EgmoreKit.blend",
+      "sha256": "f1194d28460189586205f7c7bc64c05f93419a3808162d4a46c780841729732c"
+    },
+    {
+      "path": "04_Assets\\S8\\EgmoreSignage\\EgmoreSignage.blend",
+      "sha256": "f58030365a389b2e0440ded1946cce821a363a5cbcd27db22cf0c84edb3a850b"
+    }
+  ],
+  "references": [
+    {
+      "file": "facade-panorama.jpg",
+      "creator": "PlaneMad",
+      "date": "2009-01-01",
+      "license": "CC BY-SA 3.0",
+      "url": "https://commons.wikimedia.org/wiki/File:Chennai_Egmore_facade_panorama.jpg"
+    },
+    {
+      "file": "east.jpg",
+      "creator": "Pratyeka",
+      "date": "2011-05-22",
+      "license": "CC BY-SA 3.0",
+      "url": "https://commons.wikimedia.org/wiki/File:Chennai_Egmore_Railway_Station_(view_from_the_east).jpeg"
+    }
+  ],
+  "referenceRegister": "07_Documentation/S8/EGMORE_REFERENCE_REGISTER.md",
+  "changes": [
+    "Coherent four-track representative arrangement",
+    "Track head section and 1.676m inside gauge",
+    "8m platforms with 1.675m edge setback",
+    "Bridge stairs and guardrail entry gaps",
+    "Reduced reusable modules and actual LOD exports",
+    "Original track/OHE/duct/signal housing/context meshes",
+    "Clean triangulation, UVs, normals and tangents"
+  ],
+  "dimensionalUncertainty": "Station layout and architecture are visually estimated, not surveyed. The named-station identity is architectural; no claim of full yard or current redevelopment accuracy.",
+  "noProviderPrompt": "No remote generation; deterministic staging scripts are the production specification."
+}

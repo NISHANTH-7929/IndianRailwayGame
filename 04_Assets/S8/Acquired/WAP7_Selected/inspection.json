@@ -1,0 +1,241 @@
+{
+  "bounds_min": [
+    -1.5547795295715332,
+    -10.665215492248535,
+    -0.0010409210808575153
+  ],
+  "bounds_max": [
+    1.5547795295715332,
+    10.665215492248535,
+    5.894911766052246
+  ],
+  "dimensions": [
+    3.1095590591430664,
+    21.33043098449707,
+    5.8959527015686035
+  ],
+  "objects": [
+    {
+      "name": "Cube.006",
+      "dimensions": [
+        3.1095590591430664,
+        20.172521591186523,
+        1.8263158798217773
+      ],
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "triangles": 21726,
+      "materials": [
+        "main",
+        "Material.003",
+        "booggy",
+        "mainupper",
+        "black",
+        "redmit",
+        "steel",
+        "whitemeit"
+      ]
+    },
+    {
+      "name": "Cube.033",
+      "dimensions": [
+        2.3857555389404297,
+        19.34951400756836,
+        0.10005664825439453
+      ],
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "triangles": 552,
+      "materials": [
+        "booggy"
+      ]
+    },
+    {
+      "name": "Cylinder.008",
+      "dimensions": [
+        0.11862453818321228,
+        0.8536300659179688,
+        0.0279998779296875
+      ],
+      "location": [
+        0.0,
+        -0.0011650323867797852,
+        0.0
+      ],
+      "triangles": 96,
+      "materials": []
+    },
+    {
+      "name": "Circle.010",
+      "dimensions": [
+        2.4900155067443848,
+        17.45647430419922,
+        2.2890350818634033
+      ],
+      "location": [
+        -0.8876627683639526,
+        -0.4569501578807831,
+        3.6875171661376953
+      ],
+      "triangles": 66357,
+      "materials": [
+        "insulators",
+        "cable",
+        null,
+        "black",
+        "PG",
+        "PG.001"
+      ]
+    },
+    {
+      "name": "Plane.014",
+      "dimensions": [
+        3.000805377960205,
+        19.980485916137695,
+        0.0
+      ],
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "triangles": 18,
+      "materials": [
+        "dark"
+      ]
+    },
+    {
+      "name": "Plane.020",
+      "dimensions": [
+        3.1009817123413086,
+        21.33043098449707,
+        4.295666694641113
+      ],
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "triangles": 300105,
+      "materials": [
+        "mainupper",
+        "ironupperwhi",
+        "ironupperblk",
+        "booggy"
+      ]
+    }
+  ],
+  "triangles": 388854,
+  "images": [
+    {
+      "name": "booggy_Base_color",
+      "size": [
+        2048,
+        2048
+      ],
+      "path": ""
+    },
+    {
+      "name": "booggy_Metallic.png-booggy_Roughness",
+      "size": [
+        2048,
+        2048
+      ],
+      "path": ""
+    },
+    {
+      "name": "booggy_Normal",
+      "size": [
+        2048,
+        2048
+      ],
+      "path": ""
+    },
+    {
+      "name": "indian_railways_wap7_upscaledtex",
+      "size": [
+        7459,
+        2249
+      ],
+      "path": ""
+    },
+    {
+      "name": "ironupperblk_Base_color",
+      "size": [
+        2048,
+        2048
+      ],
+      "path": ""
+    },
+    {
+      "name": "ironupperblk_Metallic.png-ironupperblk_Roughness",
+      "size": [
+        2048,
+        2048
+      ],
+      "path": ""
+    },
+    {
+      "name": "ironupperblk_Normal",
+      "size": [
+        2048,
+        2048
+      ],
+      "path": ""
+    },
+    {
+      "name": "ironupperwhi_Base_color",
+      "size": [
+        2048,
+        2048
+      ],
+      "path": ""
+    },
+    {
+      "name": "ironupperwhi_Metallic.png-ironupperwhi_Roughness",
+      "size": [
+        2048,
+        2048
+      ],
+      "path": ""
+    },
+    {
+      "name": "ironupperwhi_Normal",
+      "size": [
+        2048,
+        2048
+      ],
+      "path": ""
+    },
+    {
+      "name": "mainupper_Base_color",
+      "size": [
+        2048,
+        2048
+      ],
+      "path": ""
+    },
+    {
+      "name": "mainupper_Metallic.png-mainupper_Roughness",
+      "size": [
+        2048,
+        2048
+      ],
+      "path": ""
+    },
+    {
+      "name": "mainupper_Normal",
+      "size": [
+        2048,
+        2048
+      ],
+      "path": ""
+    }
+  ]
+}

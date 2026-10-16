@@ -1,0 +1,44 @@
+{
+  "assetId": "egmorearcade6m",
+  "description": "Original Egmore architectural study with platform-facing facade details; estimated dimensions, visual acceptance pending",
+  "displayName": "EgmoreArcade6m",
+  "files": [
+    {
+      "bytes": 10334060,
+      "kind": "model",
+      "path": "model.glb",
+      "sha256": "316c37548f3de310046e682808523b4c4e2a86031be758f5cb374fe4000167e9"
+    },
+    {
+      "bytes": 3375,
+      "kind": "metadata",
+      "path": "metadata.json",
+      "sha256": "e49a807c006a3c854776f53a5c87ad49d355bc09ceb192aba40175603cb17061"
+    },
+    {
+      "bytes": 625,
+      "kind": "provenance",
+      "path": "provenance.json",
+      "sha256": "4a135040d0ecd239b9d498c5345c79e34e0606d8f96649001cd8ea97db1e236c"
+    },
+    {
+      "bytes": 4319,
+      "kind": "validation",
+      "path": "validation.json",
+      "sha256": "f2a9a84849bbd6359fb01b674d8e46c83ac5142b2eddb9a3d8bcc245e9d44c6c"
+    }
+  ],
+  "license": "LicenseRef-ProjectOriginal",
+  "model": "model.glb",
+  "packageId": "pkg_0ebf629a5b4806ded236b34b",
+  "provenance": {
+    "origin": "authored"
+  },
+  "schema": "game_dev.asset_package.v1",
+  "validation": {
+    "errorCount": 0,
+    "passed": true,
+    "warningCount": 0
+  },
+  "version": "1.2.0"
+}

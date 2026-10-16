@@ -1,0 +1,3 @@
+List of devices attached
+10BE1Y2EL40003J        device product:I2304T model:I2304 device:I2304 transport_id:6
+

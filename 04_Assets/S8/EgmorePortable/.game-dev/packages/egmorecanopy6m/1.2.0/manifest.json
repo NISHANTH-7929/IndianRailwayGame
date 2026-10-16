@@ -1,0 +1,44 @@
+{
+  "assetId": "egmorecanopy6m",
+  "description": "Original Egmore architectural study with platform-facing facade details; estimated dimensions, visual acceptance pending",
+  "displayName": "EgmoreCanopy6m",
+  "files": [
+    {
+      "bytes": 8141372,
+      "kind": "model",
+      "path": "model.glb",
+      "sha256": "e68fca7ab944104a5ab84079953506fe7f893d29c10c72611d6419fd4506b0ba"
+    },
+    {
+      "bytes": 4348,
+      "kind": "metadata",
+      "path": "metadata.json",
+      "sha256": "ecebce1454c58dca807ba7a821938b11bbf3fa2a9411dabb1d1a2f79d8debd3d"
+    },
+    {
+      "bytes": 624,
+      "kind": "provenance",
+      "path": "provenance.json",
+      "sha256": "5d164bee0a781aba880acfffa02faa1319a4a21ba18925e95ebbcfb1ad50ffc0"
+    },
+    {
+      "bytes": 4304,
+      "kind": "validation",
+      "path": "validation.json",
+      "sha256": "da7a8d1dd3c739270b38800bdd4688c205220f0c2b293eee8a1b288e44f45eb4"
+    }
+  ],
+  "license": "LicenseRef-ProjectOriginal",
+  "model": "model.glb",
+  "packageId": "pkg_efc827541664342350bacd5c",
+  "provenance": {
+    "origin": "authored"
+  },
+  "schema": "game_dev.asset_package.v1",
+  "validation": {
+    "errorCount": 0,
+    "passed": true,
+    "warningCount": 0
+  },
+  "version": "1.2.0"
+}

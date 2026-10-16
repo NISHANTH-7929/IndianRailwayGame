@@ -1,0 +1,24 @@
+{
+  "schema": "game_dev.job.v1",
+  "id": "job_8498dfd9-c58b-4acc-bcf9-08723b80ddd4",
+  "operation": "package.verify",
+  "status": "completed",
+  "request": {
+    "positionals": [
+      "package",
+      "verify",
+      "D:\\Project\\IndianRailwayGame\\04_Assets\\S8\\EgmorePortable\\.game-dev\\packages\\egmoredrain3m\\1.0.0"
+    ],
+    "flags": {
+      "output-dir": "04_Assets/S8/EgmorePortable"
+    }
+  },
+  "attempts": 1,
+  "eventCount": 1,
+  "artifacts": [],
+  "createdAt": "2026-10-04T03:26:21.820Z",
+  "updatedAt": "2026-10-04T03:26:21.857Z",
+  "startedAt": "2026-10-04T03:26:21.830Z",
+  "completedAt": "2026-10-04T03:26:21.857Z",
+  "receiptPath": "D:\\Project\\IndianRailwayGame\\04_Assets\\S8\\EgmorePortable\\.game-dev\\jobs\\job_8498dfd9-c58b-4acc-bcf9-08723b80ddd4\\receipt.json"
+}

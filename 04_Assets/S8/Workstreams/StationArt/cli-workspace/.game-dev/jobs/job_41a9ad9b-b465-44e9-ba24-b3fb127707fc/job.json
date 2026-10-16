@@ -1,0 +1,24 @@
+{
+  "schema": "game_dev.job.v1",
+  "id": "job_41a9ad9b-b465-44e9-ba24-b3fb127707fc",
+  "operation": "package.verify",
+  "status": "completed",
+  "request": {
+    "positionals": [
+      "package",
+      "verify",
+      "D:\\Project\\IndianRailwayGame\\04_Assets\\S8\\Workstreams\\StationArt\\cli-workspace\\.game-dev\\packages\\chennai_egmore_station_art\\2.0.0"
+    ],
+    "flags": {
+      "output-dir": "D:\\Project\\IndianRailwayGame\\04_Assets\\S8\\Workstreams\\StationArt\\cli-workspace"
+    }
+  },
+  "attempts": 1,
+  "eventCount": 1,
+  "artifacts": [],
+  "createdAt": "2026-10-07T12:43:31.914Z",
+  "updatedAt": "2026-10-07T12:43:32.028Z",
+  "startedAt": "2026-10-07T12:43:31.923Z",
+  "completedAt": "2026-10-07T12:43:32.028Z",
+  "receiptPath": "D:\\Project\\IndianRailwayGame\\04_Assets\\S8\\Workstreams\\StationArt\\cli-workspace\\.game-dev\\jobs\\job_41a9ad9b-b465-44e9-ba24-b3fb127707fc\\receipt.json"
+}

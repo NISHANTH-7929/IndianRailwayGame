@@ -1,0 +1,44 @@
+{
+  "schema": "game_dev.receipt.v1",
+  "operation": "package.build",
+  "result": {
+    "schema": "game_dev.package_build_result.v1",
+    "packageId": "pkg_984b0d060c67173bde64091a",
+    "packagePath": "D:\\Project\\IndianRailwayGame\\04_Assets\\S8\\EgmorePortable\\.game-dev\\packages\\egmoretower4m\\1.2.0",
+    "manifestPath": "D:\\Project\\IndianRailwayGame\\04_Assets\\S8\\EgmorePortable\\.game-dev\\packages\\egmoretower4m\\1.2.0\\manifest.json",
+    "receiptPath": "D:\\Project\\IndianRailwayGame\\04_Assets\\S8\\EgmorePortable\\.game-dev\\packages\\egmoretower4m\\1.2.0\\receipt.json",
+    "manifestSha256": "4f6efea0f1393edf1b4d1867eef7ef591c74c2c82da458b530ed887b8a73f1eb",
+    "reused": false,
+    "validation": {
+      "passed": true,
+      "errorCount": 0,
+      "warningCount": 0
+    },
+    "catalog": {
+      "packageId": "pkg_984b0d060c67173bde64091a",
+      "assetId": "egmoretower4m",
+      "version": "1.2.0",
+      "displayName": "EgmoreTower4m",
+      "description": "Original Egmore architectural study with platform-facing facade details; estimated dimensions, visual acceptance pending",
+      "license": "LicenseRef-ProjectOriginal",
+      "packagePath": "D:\\Project\\IndianRailwayGame\\04_Assets\\S8\\EgmorePortable\\.game-dev\\packages\\egmoretower4m\\1.2.0",
+      "modelPath": "D:\\Project\\IndianRailwayGame\\04_Assets\\S8\\EgmorePortable\\.game-dev\\packages\\egmoretower4m\\1.2.0\\model.glb",
+      "modelSha256": "49d095dded235e19c56fc054db3809abc52caeb1076a4311faf17b28b049c329",
+      "manifestSha256": "4f6efea0f1393edf1b4d1867eef7ef591c74c2c82da458b530ed887b8a73f1eb",
+      "validationPassed": true,
+      "validationErrors": 0,
+      "validationWarnings": 0,
+      "origin": "authored",
+      "indexedAt": "2026-10-04T08:44:40.709Z"
+    },
+    "evidence": {
+      "portableGlbCopiedAndHashed": true,
+      "staticInspectionCompleted": true,
+      "policyValidationCompleted": true,
+      "blenderNormalizationPerformed": false,
+      "gpuImportTestPerformed": false,
+      "humanVisualReviewPerformed": false
+    }
+  },
+  "completedAt": "2026-10-04T08:44:40.715Z"
+}

@@ -1,0 +1,7 @@
+participant_id,group,build_sha256,date,mode,completed,elapsed_seconds,hints,understood_speed,understood_traffic,understood_station,understood_result,saved_reward,resumed,voluntary_replay,text_readable,audio_clear,notes
+C1,casual,,,,,,,,,,,,,,,,
+C2,casual,,,,,,,,,,,,,,,,
+C3,casual,,,,,,,,,,,,,,,,
+E1,enthusiast,,,,,,,,,,,,,,,,
+E2,enthusiast,,,,,,,,,,,,,,,,
+E3,enthusiast,,,,,,,,,,,,,,,,

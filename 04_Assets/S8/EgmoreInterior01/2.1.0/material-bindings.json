@@ -1,0 +1,53 @@
+[
+  {
+    "name": "SignBlue",
+    "baseColourLinear": [
+      0.018,
+      0.055,
+      0.12
+    ],
+    "roughness": 0.65
+  },
+  {
+    "name": "SignWhite",
+    "baseColourLinear": [
+      0.86,
+      0.86,
+      0.77
+    ],
+    "roughness": 0.65
+  },
+  {
+    "name": "ExitGreen",
+    "baseColourLinear": [
+      0.025,
+      0.16,
+      0.08
+    ],
+    "roughness": 0.65
+  },
+  {
+    "name": "Housing",
+    "baseColourLinear": [
+      0.25,
+      0.27,
+      0.28
+    ],
+    "roughness": 0.5
+  },
+  {
+    "name": "LampLens",
+    "baseColourLinear": [
+      0.94,
+      0.88,
+      0.71
+    ],
+    "roughness": 0.35,
+    "emissionColourLinear": [
+      0.94,
+      0.88,
+      0.71
+    ],
+    "emissionStrengthSource": 2
+  }
+]

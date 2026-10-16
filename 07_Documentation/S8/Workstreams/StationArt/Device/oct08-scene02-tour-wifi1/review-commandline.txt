@@ -1,0 +1,1 @@
+-project="../../../MyProject/MyProject.uproject" /Game/IndianRailway/S8/Review/L_EgmoreScene02_Study -S8EgmoreCameraTour -S8EgmoreView=0 -ExecCmds="r.SetFramePace 30" -log

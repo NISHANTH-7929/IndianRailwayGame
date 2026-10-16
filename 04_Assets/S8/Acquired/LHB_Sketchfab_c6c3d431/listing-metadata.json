@@ -1,0 +1,162 @@
+{
+  "animationCount": 0,
+  "categories": [
+    {
+      "uid": "22a2f677efad4d7bbca5ad45f9b5868e",
+      "name": "Cars & Vehicles",
+      "slug": "cars-vehicles",
+      "uri": "https://api.sketchfab.com/v3/categories/22a2f677efad4d7bbca5ad45f9b5868e",
+      "icon": "https://static.sketchfab.com/static/builds/web/dist/static/assets/images/icons/categories/45dd0cc0860ac57fcd63bde1cc3f2b7c-v2.svg",
+      "thumbnails": [
+        {
+          "width": "512",
+          "height": "288",
+          "url": "https://static.sketchfab.com/categories/22a2f677efad4d7bbca5ad45f9b5868e/512x288.png"
+        },
+        {
+          "width": "800",
+          "height": "450",
+          "url": "https://static.sketchfab.com/categories/22a2f677efad4d7bbca5ad45f9b5868e/800x450.png"
+        }
+      ]
+    }
+  ],
+  "commentCount": 1,
+  "createdAt": "2024-08-03T15:31:21.369141",
+  "embedUrl": "https://sketchfab.com/models/c6c3d4313425487d91f6174a64dd96d9/embed",
+  "faceCount": 1672607,
+  "isAgeRestricted": false,
+  "license": {
+    "uri": "https://api.sketchfab.com/v3/licenses/72eb2b1960364637901eacce19283624",
+    "label": "Free Standard",
+    "fullName": "Free Standard",
+    "requirements": "Under basic restrictions, use worldwide, on all types of media, commercially or not, and in all types of derivative works",
+    "url": "https://sketchfab.com/licenses",
+    "slug": "free-st"
+  },
+  "likeCount": 20,
+  "name": "Indian Railway LHB Coach",
+  "publishedAt": "2024-08-03T15:40:37.229486",
+  "soundCount": 0,
+  "staffpickedAt": null,
+  "tags": [
+    {
+      "name": "artwork",
+      "slug": "artwork",
+      "uri": "https://api.sketchfab.com/v3/tags/artwork"
+    },
+    {
+      "name": "railway",
+      "slug": "railway",
+      "uri": "https://api.sketchfab.com/v3/tags/railway"
+    },
+    {
+      "name": "coach",
+      "slug": "coach",
+      "uri": "https://api.sketchfab.com/v3/tags/coach"
+    },
+    {
+      "name": "redcoach",
+      "slug": "redcoach",
+      "uri": "https://api.sketchfab.com/v3/tags/redcoach"
+    }
+  ],
+  "thumbnails": {
+    "images": [
+      {
+        "uid": "bc895f72edb842e29590cec826df04bd",
+        "width": 1920,
+        "height": 1080,
+        "size": 95790,
+        "url": "https://media.sketchfab.com/models/c6c3d4313425487d91f6174a64dd96d9/thumbnails/2109e5510d7d44c5962e1e7cd80541f4/0aa8e353fda9426c8fa56e4ab3663f30.jpeg"
+      },
+      {
+        "uid": "f76ce416639042069b78b42142188c82",
+        "width": 1024,
+        "height": 576,
+        "size": 37019,
+        "url": "https://media.sketchfab.com/models/c6c3d4313425487d91f6174a64dd96d9/thumbnails/2109e5510d7d44c5962e1e7cd80541f4/278f84e9fa6f4eb6a023a3e12f618627.jpeg"
+      },
+      {
+        "uid": "7839e885f9f74fb985553bee67fdda3d",
+        "width": 720,
+        "height": 405,
+        "size": 22667,
+        "url": "https://media.sketchfab.com/models/c6c3d4313425487d91f6174a64dd96d9/thumbnails/2109e5510d7d44c5962e1e7cd80541f4/cd89650021c54b1695226bdb77c95f9d.jpeg"
+      },
+      {
+        "uid": "94be581df17044f2a5f93e6f6cda9ce2",
+        "width": 256,
+        "height": 144,
+        "size": 5048,
+        "url": "https://media.sketchfab.com/models/c6c3d4313425487d91f6174a64dd96d9/thumbnails/2109e5510d7d44c5962e1e7cd80541f4/9d204cefe7d748a98518252ced11a340.jpeg"
+      },
+      {
+        "uid": "b0a3d62bb5dd4602af8be595c3b98516",
+        "width": 64,
+        "height": 36,
+        "size": 1135,
+        "url": "https://media.sketchfab.com/models/c6c3d4313425487d91f6174a64dd96d9/thumbnails/2109e5510d7d44c5962e1e7cd80541f4/b862dc78898c4ababecc3e84e96e19a1.jpeg"
+      }
+    ]
+  },
+  "uid": "c6c3d4313425487d91f6174a64dd96d9",
+  "uri": "https://api.sketchfab.com/v3/models/c6c3d4313425487d91f6174a64dd96d9",
+  "user": {
+    "uid": "4d2c821593bf46f3a6386c951e73623b",
+    "username": "shubhamjha201030",
+    "displayName": "shubham jha 3d",
+    "account": "basic",
+    "profileUrl": "https://sketchfab.com/shubhamjha201030",
+    "avatar": {
+      "uid": "ad2e80af362b46a7a3009ed331b33f56",
+      "uri": "https://api.sketchfab.com/v3/avatars/ad2e80af362b46a7a3009ed331b33f56",
+      "images": [
+        {
+          "width": 32,
+          "height": 32,
+          "size": 1025,
+          "url": "https://media.sketchfab.com/avatars/ad2e80af362b46a7a3009ed331b33f56/710e3826d0b24d5faa16b21d3074e998.jpeg"
+        },
+        {
+          "width": 48,
+          "height": 48,
+          "size": 1361,
+          "url": "https://media.sketchfab.com/avatars/ad2e80af362b46a7a3009ed331b33f56/a401944732654856afb289498f3c15c6.jpeg"
+        },
+        {
+          "width": 90,
+          "height": 90,
+          "size": 2496,
+          "url": "https://media.sketchfab.com/avatars/ad2e80af362b46a7a3009ed331b33f56/a3dd35cd8d1f4898a565aff136dd87b8.jpeg"
+        },
+        {
+          "width": 100,
+          "height": 100,
+          "size": 2903,
+          "url": "https://media.sketchfab.com/avatars/ad2e80af362b46a7a3009ed331b33f56/c2ffa14d1d514eed91b3f9fa84061ab4.jpeg"
+        }
+      ]
+    },
+    "uri": "https://api.sketchfab.com/v3/users/4d2c821593bf46f3a6386c951e73623b"
+  },
+  "vertexCount": 819661,
+  "viewCount": 3373,
+  "viewerUrl": "https://sketchfab.com/3d-models/indian-railway-lhb-coach-c6c3d4313425487d91f6174a64dd96d9",
+  "isDownloadable": true,
+  "isProtected": false,
+  "description": "Red LHB Coach",
+  "price": null,
+  "downloadCount": 380,
+  "editorUrl": "https://sketchfab.com/models/c6c3d4313425487d91f6174a64dd96d9/edit",
+  "status": {
+    "warning": {},
+    "processing": "SUCCEEDED"
+  },
+  "source": "website",
+  "hasCommentsDisabled": false,
+  "updatedAt": "2024-08-03T15:41:37.262381",
+  "pbrType": null,
+  "textureCount": 0,
+  "materialCount": 22
+}

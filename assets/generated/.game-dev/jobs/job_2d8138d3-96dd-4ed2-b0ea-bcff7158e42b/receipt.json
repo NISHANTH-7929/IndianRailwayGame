@@ -1,0 +1,59 @@
+{
+  "schema": "game_dev.receipt.v1",
+  "operation": "package.verify",
+  "result": {
+    "schema": "game_dev.package_verification.v1",
+    "packagePath": "D:\\Project\\IndianRailwayGame\\04_Assets\\S8\\EgmorePortable\\.game-dev\\packages\\egmoreceilingfan\\1.2.0",
+    "manifest": {
+      "assetId": "egmoreceilingfan",
+      "description": "Original Egmore architectural study with platform-facing facade details; estimated dimensions, visual acceptance pending",
+      "displayName": "EgmoreCeilingFan",
+      "files": [
+        {
+          "bytes": 3542572,
+          "kind": "model",
+          "path": "model.glb",
+          "sha256": "521a5d394f21e1c64a382883a34b910b76fdafbe5144c4c6975d4eddaeed54f5"
+        },
+        {
+          "bytes": 2978,
+          "kind": "metadata",
+          "path": "metadata.json",
+          "sha256": "4b726767aec09a888530cff53c804076a25f7fb39092c550ce5af5cac6c2c96e"
+        },
+        {
+          "bytes": 626,
+          "kind": "provenance",
+          "path": "provenance.json",
+          "sha256": "886170438b24caccae1dfcea62c20da91d775c979e28d4ad605ea1498d248838"
+        },
+        {
+          "bytes": 4300,
+          "kind": "validation",
+          "path": "validation.json",
+          "sha256": "ae88cd8a5fdf7f26969dad1651f864fbc41055ff9356de5107c8435205a60356"
+        }
+      ],
+      "license": "LicenseRef-ProjectOriginal",
+      "model": "model.glb",
+      "packageId": "pkg_91c600b881df1d3db46ecc3b",
+      "provenance": {
+        "origin": "authored"
+      },
+      "schema": "game_dev.asset_package.v1",
+      "validation": {
+        "errorCount": 0,
+        "passed": true,
+        "warningCount": 0
+      },
+      "version": "1.2.0"
+    },
+    "hashesVerified": true,
+    "evidence": {
+      "packageBytesVerified": true,
+      "gpuImportTestPerformed": false,
+      "humanVisualReviewPerformed": false
+    }
+  },
+  "completedAt": "2026-10-04T08:44:30.090Z"
+}

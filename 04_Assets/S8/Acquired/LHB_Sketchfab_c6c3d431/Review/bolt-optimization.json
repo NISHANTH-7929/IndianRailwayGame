@@ -1,0 +1,341 @@
+{
+  "status": "unaccepted geometric optimization experiment",
+  "error_limit_metres": 0.0015,
+  "measurement": "bidirectional sampled vertex-to-surface distances; at most 2048 vertices per direction, not a certified Hausdorff bound",
+  "rationale": "1.5 mm is below one pixel at 3 m for a 1080 px, 75 degree horizontal field of view; review closer views separately",
+  "objects": [
+    {
+      "name": "Bolt",
+      "original_triangles": 4574,
+      "trials": [
+        {
+          "ratio": 0.01,
+          "triangles": 45,
+          "sampled_error_metres": 0.006858626380562782
+        },
+        {
+          "ratio": 0.025,
+          "triangles": 113,
+          "sampled_error_metres": 0.006278925575315952
+        },
+        {
+          "ratio": 0.05,
+          "triangles": 227,
+          "sampled_error_metres": 0.002756380010396242
+        },
+        {
+          "ratio": 0.1,
+          "triangles": 457,
+          "sampled_error_metres": 0.001553889480419457
+        },
+        {
+          "ratio": 0.2,
+          "triangles": 913,
+          "sampled_error_metres": 0.0002573929668869823
+        }
+      ]
+    },
+    {
+      "name": "Bolt.001",
+      "original_triangles": 4574,
+      "trials": [
+        {
+          "ratio": 0.01,
+          "triangles": 45,
+          "sampled_error_metres": 0.006858626380562782
+        },
+        {
+          "ratio": 0.025,
+          "triangles": 113,
+          "sampled_error_metres": 0.006278925575315952
+        },
+        {
+          "ratio": 0.05,
+          "triangles": 227,
+          "sampled_error_metres": 0.002756380010396242
+        },
+        {
+          "ratio": 0.1,
+          "triangles": 457,
+          "sampled_error_metres": 0.001553889480419457
+        },
+        {
+          "ratio": 0.2,
+          "triangles": 913,
+          "sampled_error_metres": 0.0002573929668869823
+        }
+      ]
+    },
+    {
+      "name": "Bolt.002",
+      "original_triangles": 4574,
+      "trials": [
+        {
+          "ratio": 0.01,
+          "triangles": 45,
+          "sampled_error_metres": 0.006858524866402149
+        },
+        {
+          "ratio": 0.025,
+          "triangles": 113,
+          "sampled_error_metres": 0.006278925575315952
+        },
+        {
+          "ratio": 0.05,
+          "triangles": 227,
+          "sampled_error_metres": 0.002756380010396242
+        },
+        {
+          "ratio": 0.1,
+          "triangles": 457,
+          "sampled_error_metres": 0.0015538735315203667
+        },
+        {
+          "ratio": 0.2,
+          "triangles": 913,
+          "sampled_error_metres": 0.0002573929668869823
+        }
+      ]
+    },
+    {
+      "name": "Bolt.003",
+      "original_triangles": 4574,
+      "trials": [
+        {
+          "ratio": 0.01,
+          "triangles": 45,
+          "sampled_error_metres": 0.006858524866402149
+        },
+        {
+          "ratio": 0.025,
+          "triangles": 113,
+          "sampled_error_metres": 0.006278925575315952
+        },
+        {
+          "ratio": 0.05,
+          "triangles": 227,
+          "sampled_error_metres": 0.002756380010396242
+        },
+        {
+          "ratio": 0.1,
+          "triangles": 457,
+          "sampled_error_metres": 0.0015538735315203667
+        },
+        {
+          "ratio": 0.2,
+          "triangles": 913,
+          "sampled_error_metres": 0.0002573929668869823
+        }
+      ]
+    },
+    {
+      "name": "Bolt.005",
+      "original_triangles": 36588,
+      "trials": [
+        {
+          "ratio": 0.01,
+          "triangles": 364,
+          "sampled_error_metres": 0.013145310804247856
+        },
+        {
+          "ratio": 0.025,
+          "triangles": 914,
+          "sampled_error_metres": 0.013081943616271019
+        },
+        {
+          "ratio": 0.05,
+          "triangles": 1828,
+          "sampled_error_metres": 0.006094835232943296
+        },
+        {
+          "ratio": 0.1,
+          "triangles": 3658,
+          "sampled_error_metres": 0.0031605276744812727
+        },
+        {
+          "ratio": 0.2,
+          "triangles": 7316,
+          "sampled_error_metres": 0.0005768743576481938
+        }
+      ]
+    },
+    {
+      "name": "Bolt.008",
+      "original_triangles": 36592,
+      "trials": [
+        {
+          "ratio": 0.01,
+          "triangles": 364,
+          "sampled_error_metres": 0.0034805056639015675
+        },
+        {
+          "ratio": 0.025,
+          "triangles": 914,
+          "sampled_error_metres": 0.00263465428724885
+        },
+        {
+          "ratio": 0.05,
+          "triangles": 1828,
+          "sampled_error_metres": 0.0013858892489224672
+        }
+      ]
+    },
+    {
+      "name": "Bolt.004",
+      "original_triangles": 36588,
+      "trials": [
+        {
+          "ratio": 0.01,
+          "triangles": 364,
+          "sampled_error_metres": 0.013145055621862411
+        },
+        {
+          "ratio": 0.025,
+          "triangles": 914,
+          "sampled_error_metres": 0.013081993907690048
+        },
+        {
+          "ratio": 0.05,
+          "triangles": 1828,
+          "sampled_error_metres": 0.006094661541283131
+        },
+        {
+          "ratio": 0.1,
+          "triangles": 3658,
+          "sampled_error_metres": 0.003160464344546199
+        },
+        {
+          "ratio": 0.2,
+          "triangles": 7316,
+          "sampled_error_metres": 0.0005766451940871775
+        }
+      ]
+    },
+    {
+      "name": "Bolt.006",
+      "original_triangles": 36592,
+      "trials": [
+        {
+          "ratio": 0.01,
+          "triangles": 364,
+          "sampled_error_metres": 0.0034805056639015675
+        },
+        {
+          "ratio": 0.025,
+          "triangles": 914,
+          "sampled_error_metres": 0.00263465428724885
+        },
+        {
+          "ratio": 0.05,
+          "triangles": 1828,
+          "sampled_error_metres": 0.0013858892489224672
+        }
+      ]
+    },
+    {
+      "name": "Bolt.007",
+      "original_triangles": 36588,
+      "trials": [
+        {
+          "ratio": 0.01,
+          "triangles": 364,
+          "sampled_error_metres": 0.01314537413418293
+        },
+        {
+          "ratio": 0.025,
+          "triangles": 914,
+          "sampled_error_metres": 0.013081943616271019
+        },
+        {
+          "ratio": 0.05,
+          "triangles": 1828,
+          "sampled_error_metres": 0.006094994489103556
+        },
+        {
+          "ratio": 0.1,
+          "triangles": 3658,
+          "sampled_error_metres": 0.0031605276744812727
+        },
+        {
+          "ratio": 0.2,
+          "triangles": 7316,
+          "sampled_error_metres": 0.0005768755218014121
+        }
+      ]
+    },
+    {
+      "name": "Bolt.009",
+      "original_triangles": 36592,
+      "trials": [
+        {
+          "ratio": 0.01,
+          "triangles": 364,
+          "sampled_error_metres": 0.0034805056639015675
+        },
+        {
+          "ratio": 0.025,
+          "triangles": 914,
+          "sampled_error_metres": 0.00263465428724885
+        },
+        {
+          "ratio": 0.05,
+          "triangles": 1828,
+          "sampled_error_metres": 0.0013858892489224672
+        }
+      ]
+    },
+    {
+      "name": "Bolt.010",
+      "original_triangles": 36588,
+      "trials": [
+        {
+          "ratio": 0.01,
+          "triangles": 364,
+          "sampled_error_metres": 0.013145055621862411
+        },
+        {
+          "ratio": 0.025,
+          "triangles": 914,
+          "sampled_error_metres": 0.013081943616271019
+        },
+        {
+          "ratio": 0.05,
+          "triangles": 1828,
+          "sampled_error_metres": 0.006094994489103556
+        },
+        {
+          "ratio": 0.1,
+          "triangles": 3658,
+          "sampled_error_metres": 0.003160464344546199
+        },
+        {
+          "ratio": 0.2,
+          "triangles": 7316,
+          "sampled_error_metres": 0.0005768082337453961
+        }
+      ]
+    },
+    {
+      "name": "Bolt.011",
+      "original_triangles": 36592,
+      "trials": [
+        {
+          "ratio": 0.01,
+          "triangles": 364,
+          "sampled_error_metres": 0.003480477025732398
+        },
+        {
+          "ratio": 0.025,
+          "triangles": 914,
+          "sampled_error_metres": 0.00263465428724885
+        },
+        {
+          "ratio": 0.05,
+          "triangles": 1828,
+          "sampled_error_metres": 0.0013858892489224672
+        }
+      ]
+    }
+  ],
+  "total_triangles": 210610
+}

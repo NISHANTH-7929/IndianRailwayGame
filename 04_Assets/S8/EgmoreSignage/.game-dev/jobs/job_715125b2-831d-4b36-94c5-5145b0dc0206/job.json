@@ -1,0 +1,63 @@
+{
+  "schema": "game_dev.job.v1",
+  "id": "job_715125b2-831d-4b36-94c5-5145b0dc0206",
+  "operation": "package.build",
+  "status": "completed",
+  "request": {
+    "positionals": [
+      "package",
+      "build",
+      "04_Assets/S8/EgmoreSignage/EgmoreNameboard4m.glb"
+    ],
+    "flags": {
+      "name": "EgmoreNameboard4m",
+      "version": "1.0.0",
+      "license": "LicenseRef-ProjectOriginal",
+      "output-dir": "04_Assets/S8/EgmoreSignage"
+    },
+    "input": {
+      "name": "EgmoreNameboard4m",
+      "version": "1.0.0",
+      "license": "LicenseRef-ProjectOriginal",
+      "description": "Original metric estimated Egmore nameboard with shaped Tamil English Hindi lettering; not a survey",
+      "policy": {
+        "requireUVs": true,
+        "requireNormals": true,
+        "requireTangentsWithNormalMap": true,
+        "requireBaseColorTexture": true,
+        "minTextureSize": 512,
+        "requirePowerOfTwoTextures": true,
+        "maxDimensionMeters": 15,
+        "minDimensionMeters": 0.001
+      },
+      "provenance": {
+        "origin": "authored",
+        "author": "[redacted]",
+        "sourceUri": "04_Assets\\S8\\EgmoreSignage\\EgmoreSignage.blend",
+        "notes": "Original geometry and PBR; no photographic pixels. Windows Nirmala UI Bold rendered to bitmap; font not redistributed. Reference Superfast1111 2011 CC BY-SA 3.0, https://commons.wikimedia.org/wiki/File:Chennai_Egmore.jpg . Source SHA256 46d7295dbb230256ef0d240ea039eb1be40dff5d053485fee86ec8e1ec7ff302"
+      }
+    }
+  },
+  "attempts": 1,
+  "eventCount": 2,
+  "artifacts": [
+    {
+      "path": "D:\\Project\\IndianRailwayGame\\04_Assets\\S8\\EgmoreSignage\\.game-dev\\packages\\egmorenameboard4m\\1.0.0",
+      "kind": "asset_package"
+    },
+    {
+      "path": "D:\\Project\\IndianRailwayGame\\04_Assets\\S8\\EgmoreSignage\\.game-dev\\packages\\egmorenameboard4m\\1.0.0\\manifest.json",
+      "kind": "manifest",
+      "sha256": "9b0b216f13e0a912e6efc4f6e0001e9eb19918a0d1036e8176bd068681c52c85"
+    },
+    {
+      "path": "D:\\Project\\IndianRailwayGame\\04_Assets\\S8\\EgmoreSignage\\.game-dev\\packages\\egmorenameboard4m\\1.0.0\\receipt.json",
+      "kind": "receipt"
+    }
+  ],
+  "createdAt": "2026-10-05T03:38:45.283Z",
+  "updatedAt": "2026-10-05T03:38:45.368Z",
+  "startedAt": "2026-10-05T03:38:45.289Z",
+  "completedAt": "2026-10-05T03:38:45.368Z",
+  "receiptPath": "D:\\Project\\IndianRailwayGame\\04_Assets\\S8\\EgmoreSignage\\.game-dev\\jobs\\job_715125b2-831d-4b36-94c5-5145b0dc0206\\receipt.json"
+}

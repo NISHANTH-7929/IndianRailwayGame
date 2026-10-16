@@ -1,0 +1,10 @@
+{
+  "assetsLoaded": true,
+  "hornTriggered": true,
+  "brakeTriggered": true,
+  "railPlaying": true,
+  "stationPlaying": true,
+  "normalCheckpointsUnchanged": true,
+  "auditoryApproval": "Pending human listening; playback state is not acoustic validation",
+  "log": "D:\\Project\\IndianRailwayGame\\05_Audio\\Pixabay_20261009\\runtime.log"
+}

@@ -1,0 +1,12 @@
+{
+  "apk": "D:\\Project\\IndianRailwayGame\\08_Builds\\S8_EgmoreService_20261009-144106\\Android_ASTC\\MyProject-arm64.apk",
+  "expectedSha256": "92c96bdd077445973a7d05fcfefb5a82444f8924a11a8b52dd2fdba89fd2f5f9",
+  "installed": true,
+  "savesUnchanged": true,
+  "commandlineUnchanged": true,
+  "wakeUnchanged": true,
+  "verificationStatus": "complete",
+  "transferMode": "streamed",
+  "installExitCode": 0,
+  "artifactUnchanged": true
+}

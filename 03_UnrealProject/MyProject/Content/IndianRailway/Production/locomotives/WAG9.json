@@ -1,0 +1,131 @@
+{
+  "schema_version": 1,
+  "family": "WAG9",
+  "source": "WAG9 user-selected archive; see receipt.json",
+  "units": "centimetres",
+  "axis": "+X forward +Y right +Z up",
+  "fbx_import_settings": {
+    "convert_scene": true,
+    "force_front_x_axis": true,
+    "convert_scene_unit": true
+  },
+  "driver_camera": {
+    "location_cm": [
+      880,
+      -78,
+      290
+    ],
+    "rotation_deg": [
+      0,
+      0,
+      0
+    ],
+    "fov": 75
+  },
+  "wheel_radius_cm": 58.35094,
+  "cab_available": false,
+  "limitations": [
+    "Exterior source has no furnished interactive cab. Camera is provisional and must not imply cab completion.",
+    "Pantographs, wipers and lights retained as authored static geometry; not rigged.",
+    "Full original mesh and textures retained; Android cost unmeasured."
+  ],
+  "triangles": 289524,
+  "parts": [
+    {
+      "name": "Exterior",
+      "role": "exterior",
+      "location_cm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "pivot_cm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "rotation_axis": [
+        0,
+        0,
+        1
+      ],
+      "triangles": 106877,
+      "material_slots": 14,
+      "asset": "/Game/IndianRailway/S8/Locomotives/WAG9/Selected/Meshes/SM_WAG9_Selected_Exterior_LOD0.SM_WAG9_Selected_Exterior_LOD0"
+    },
+    {
+      "name": "Bogie_Front",
+      "role": "bogie",
+      "location_cm": [
+        584.9999904632568,
+        0.0,
+        59.3999981880188
+      ],
+      "pivot_cm": [
+        584.9999904632568,
+        0.0,
+        59.3999981880188
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "rotation_axis": [
+        0,
+        0,
+        1
+      ],
+      "triangles": 91319,
+      "material_slots": 2,
+      "asset": "/Game/IndianRailway/S8/Locomotives/WAG9/Selected/Meshes/SM_WAG9_Selected_Bogie_Front_LOD0.SM_WAG9_Selected_Bogie_Front_LOD0"
+    },
+    {
+      "name": "Bogie_Rear",
+      "role": "bogie",
+      "location_cm": [
+        -584.9999904632568,
+        0.0,
+        59.3999981880188
+      ],
+      "pivot_cm": [
+        -584.9999904632568,
+        0.0,
+        59.3999981880188
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "rotation_axis": [
+        0,
+        0,
+        1
+      ],
+      "triangles": 91328,
+      "material_slots": 2,
+      "asset": "/Game/IndianRailway/S8/Locomotives/WAG9/Selected/Meshes/SM_WAG9_Selected_Bogie_Rear_LOD0.SM_WAG9_Selected_Bogie_Rear_LOD0"
+    }
+  ]
+}

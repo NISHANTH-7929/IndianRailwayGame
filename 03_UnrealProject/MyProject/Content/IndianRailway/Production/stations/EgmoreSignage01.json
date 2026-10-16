@@ -1,0 +1,71 @@
+{
+  "asset_id": "Station.Egmore.Signage.01",
+  "version": 1,
+  "units": "metres",
+  "source": "Original structure and shaped lettering; lettering-receipt.json records reference and font",
+  "status": "estimated historical nameboard study; not survey certified",
+  "parts": [
+    {
+      "name": "EgmoreNameboard4m",
+      "asset_id": "Station.Kit.EgmoreNameboard4m",
+      "role": "scenery",
+      "location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "triangles": 760,
+      "dimensions_m": [
+        4.659999847412109,
+        0.46000000834465027,
+        3.5999999046325684
+      ],
+      "bounds_m": [
+        [
+          -2.3299999237060547,
+          -0.23000000417232513,
+          0.0
+        ],
+        [
+          2.3299999237060547,
+          0.23000000417232513,
+          3.5999999046325684
+        ]
+      ],
+      "dimensionalEvidence": "estimated architectural dimensions; metric authored, not surveyed",
+      "asset": "/Game/IndianRailway/S8/Stations/EgmoreSignage01/Meshes/SM_Station_EgmoreNameboard4m.SM_Station_EgmoreNameboard4m",
+      "rotation_axis": [
+        0,
+        1,
+        0
+      ],
+      "imported_bounds_m": [
+        [
+          -2.33,
+          -0.23000038146972657,
+          0.0
+        ],
+        [
+          2.33,
+          0.23000038146972657,
+          3.6
+        ]
+      ],
+      "lod_triangles": [
+        760,
+        418,
+        190
+      ]
+    }
+  ]
+}

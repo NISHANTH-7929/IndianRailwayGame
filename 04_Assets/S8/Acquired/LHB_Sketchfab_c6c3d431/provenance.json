@@ -1,0 +1,27 @@
+{
+  "AssetId": "Coach.LHB.Acquired01",
+  "AssetName": "Indian Railway LHB Coach",
+  "Category": "coach",
+  "Creator": "shubham jha 3d (shubhamjha201030)",
+  "Source": "User-confirmed direct Sketchfab download through their account; listing metadata and license inspected",
+  "SourceReference": "https://sketchfab.com/3d-models/indian-railway-lhb-coach-c6c3d4313425487d91f6174a64dd96d9",
+  "AcquisitionDate": null,
+  "License": "Sketchfab Free Standard; https://sketchfab.com/licenses; inspected 2026-10-01",
+  "CommercialUse": "verified",
+  "ModificationPermission": "verified",
+  "RedistributionRestrictions": "Standard license permits incorporated derivative work, not standalone source/asset distribution or extractable asset offerings; single-seat restrictions apply. Do not publish Original, packed source or FBX as reusable downloads.",
+  "AttributionRequirement": "Retain creator identity; do not claim original authorship. Apply section 3.2 production credit where applicable: imagery supplied by shubham jha 3d. Identify project modifications separately.",
+  "OriginalArchive": "C:/Users/nisha/Downloads/indian-railway-lhb-coach.zip; SHA256 in archive-sha256.json",
+  "ModifiedAssetReference": "Prepared/LHB3A_Candidate.blend; dimension-corrected AC 3-tier candidate, not release accepted. Prior study preserved in Review/LHB_OptimizedStudy.blend and Review/bolt-optimization.json",
+  "VerificationStatus": "pending review",
+  "VerificationEvidence": [
+    "listing-metadata.json",
+    "model-page.html",
+    "license-page.html",
+    "license-text.txt",
+    "archive-sha256.json",
+    "source-inspection.json",
+    "user-source-confirmation.json"
+  ],
+  "Notes": "License type and commercial/modification grant verified against listing/API and agreement sections 1.8, 2.1-2.4. Original download date/account receipt not contained in the archive; acquisition date deliberately null. No NoAI/noimageai marker found in retrieved model-page HTML; public tag absence alone was not used. An unused packed texture references another Sketchfab import and is not approved for reuse. Release approval remains pending provenance completion and technical acceptance. This is third-party content, not an original project model. On 2026-10-01 the user confirmed direct download from the specified listing through their account. This resolves download origin for continued development; it does not supply a download date or receipt. AcquisitionDate remains null, and release metadata review remains pending. Do not repeat the origin confirmation request."
+}

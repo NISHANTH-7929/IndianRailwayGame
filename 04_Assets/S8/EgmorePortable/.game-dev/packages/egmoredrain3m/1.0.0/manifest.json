@@ -1,0 +1,44 @@
+{
+  "assetId": "egmoredrain3m",
+  "description": "Original metric Egmore study module; estimated dimensions, visual acceptance and Android integration pending",
+  "displayName": "EgmoreDrain3m",
+  "files": [
+    {
+      "bytes": 2670932,
+      "kind": "model",
+      "path": "model.glb",
+      "sha256": "1c06e17936e03eed5c24357c22778567b9dc99e19f9e8cfb94f83fe81fce7adf"
+    },
+    {
+      "bytes": 2464,
+      "kind": "metadata",
+      "path": "metadata.json",
+      "sha256": "2d4a1ae8fa75f72bdb088f03c05d56bc98458dd1f6a774141065e52ba403dfa0"
+    },
+    {
+      "bytes": 623,
+      "kind": "provenance",
+      "path": "provenance.json",
+      "sha256": "46a081965838badc284fac5988311648040b781cd1b4fc25f369171922f27067"
+    },
+    {
+      "bytes": 4306,
+      "kind": "validation",
+      "path": "validation.json",
+      "sha256": "bcfbceddc5ec0588f67a5299c14ac9c215d5a6fd6559c1f5efa9783bda32250c"
+    }
+  ],
+  "license": "LicenseRef-ProjectOriginal",
+  "model": "model.glb",
+  "packageId": "pkg_6269cefa14179032552e140f",
+  "provenance": {
+    "origin": "authored"
+  },
+  "schema": "game_dev.asset_package.v1",
+  "validation": {
+    "errorCount": 0,
+    "passed": true,
+    "warningCount": 0
+  },
+  "version": "1.0.0"
+}

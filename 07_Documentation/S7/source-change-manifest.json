@@ -1,0 +1,159 @@
+[
+  {
+    "path": "03_UnrealProject\\MyProject\\Source\\MyProject\\RailAutomationTests.cpp",
+    "status": "modified",
+    "before": "E0E8D81ADA2B2DD87DBBFDE732842D9389DE3FC8596DAF0D4748419B9DBCFBB1",
+    "sha256": "DEF30E1F1242B8EEAEF136D0259F5ACFFE15545FF51CF3B4EEB09B096CDEE1B8"
+  },
+  {
+    "path": "03_UnrealProject\\MyProject\\Source\\MyProject\\RailChunkView.cpp",
+    "status": "modified",
+    "before": "57158F03F1471E2B727319D824C0F8C653063BA9FA61EA4743D640BBF4BAB1D5",
+    "sha256": "66D081F4089A8FA78148986BE149F720757883B172841201B57B90B986000D9F"
+  },
+  {
+    "path": "03_UnrealProject\\MyProject\\Source\\MyProject\\RailChunkView.h",
+    "status": "modified",
+    "before": "222B894C7161BB308AC86415DD72C02192AD2F5B2C1A713B6D1843A15A1C3BC6",
+    "sha256": "125F0ADCC43226B10177070866046C8F788D36557C3B4522D319836A36001322"
+  },
+  {
+    "path": "03_UnrealProject\\MyProject\\Source\\MyProject\\RailContinuity.cpp",
+    "status": "modified",
+    "before": "D6F8B452776AAED2EB599FF13DCB5C2537F400E65ABF3524DBB510BFED594EFE",
+    "sha256": "C1054A08265D9DBC38EB513E4402CB6530B11789B45985D56D3A483835803883"
+  },
+  {
+    "path": "03_UnrealProject\\MyProject\\Source\\MyProject\\RailServiceApplication.cpp",
+    "status": "added",
+    "before": null,
+    "sha256": "4A1E0CD0B9240F908BCB73BD4A3D63AA050479EA871B32A405EDB67D43F90F7D"
+  },
+  {
+    "path": "03_UnrealProject\\MyProject\\Source\\MyProject\\RailServiceDefinition.h",
+    "status": "added",
+    "before": null,
+    "sha256": "4B3C0DF1D1F396E343E2DF56B5FF9303A50EC4DD37285892B2BB190D59880BF4"
+  },
+  {
+    "path": "03_UnrealProject\\MyProject\\Source\\MyProject\\RailServiceView.cpp",
+    "status": "added",
+    "before": null,
+    "sha256": "FDEEFB928D32CED9E965B25BA8D358CC703A571E5B9B74ABB0871B36E2BCD37E"
+  },
+  {
+    "path": "03_UnrealProject\\MyProject\\Source\\MyProject\\RailServiceView.h",
+    "status": "added",
+    "before": null,
+    "sha256": "FCF8FD4DE58E80362B283BF8FC72E87C34DB35BA372D06826AD69021DCC76ABD"
+  },
+  {
+    "path": "03_UnrealProject\\MyProject\\Source\\MyProject\\RailServiceWidget.cpp",
+    "status": "added",
+    "before": null,
+    "sha256": "04A6D5903F5ABBC8BD7E7D28F4EBFBD9B5F92715C66C24074374249E43D1DF90"
+  },
+  {
+    "path": "03_UnrealProject\\MyProject\\Source\\MyProject\\RailServiceWidget.h",
+    "status": "added",
+    "before": null,
+    "sha256": "C472384F20ABAF917A9E9FC1EBD09E014BA8BDC2B14B463E1DF32EE86C924648"
+  },
+  {
+    "path": "03_UnrealProject\\MyProject\\Source\\MyProject\\RailSimulationSubsystem.cpp",
+    "status": "modified",
+    "before": "8C98CC1A5B5D4154C28B18F589C4F38EE64816013616D03036BD8209CEE231A8",
+    "sha256": "6F21EE7C417F21E612C58D1CBD7378C4622CB9D87D096BEC6431F812804BA7E9"
+  },
+  {
+    "path": "03_UnrealProject\\MyProject\\Source\\MyProject\\RailSimulationSubsystem.h",
+    "status": "modified",
+    "before": "347DC723F3C49903B03D5D2B5D5DE1ED2BDE966E6DA065A02C3C502503B46C9D",
+    "sha256": "40E5F1FAAF544D26D11EE319CE5750449B0842519D1C427C7C17465334E02663"
+  },
+  {
+    "path": "03_UnrealProject\\MyProject\\Source\\MyProject\\Simulation\\RailCheckpointStore.cpp",
+    "status": "modified",
+    "before": "01D812F32DD5E937109C65BA872F4A4C18BAA78D55B92591E73062AB6EF12EAD",
+    "sha256": "04DD389A8AD22BD49EC5834C705A833C2AC3E6A4BA75A330E8C0499260E2FA49"
+  },
+  {
+    "path": "03_UnrealProject\\MyProject\\Source\\MyProject\\Simulation\\RailCheckpointStore.h",
+    "status": "modified",
+    "before": "2FFFDF73C0B83568ABF8D620DAC376B634235BD0A32652C9CDAA94DD6527BE48",
+    "sha256": "A68B6E2FDCF836C854513E17321C1F3A998EC4BE7530D6C3412DE7B7D30D2131"
+  },
+  {
+    "path": "03_UnrealProject\\MyProject\\Source\\MyProject\\Simulation\\RailKernelTests.cpp",
+    "status": "modified",
+    "before": "467D7AECCF84ABD58B5891AB06034F07E5A2FBB0D9D68EAF6ACC886E95D7A082",
+    "sha256": "F323C934950CDB6BD62C478FAB55EB190D84D483E430531FD6DC9442791C4B2E"
+  },
+  {
+    "path": "03_UnrealProject\\MyProject\\Source\\MyProject\\Simulation\\RailService.cpp",
+    "status": "added",
+    "before": null,
+    "sha256": "C161F06AA9FA875804FAE55D993D0E043E18F025510D5191510735F47B6ABD7B"
+  },
+  {
+    "path": "03_UnrealProject\\MyProject\\Source\\MyProject\\Simulation\\RailService.h",
+    "status": "added",
+    "before": null,
+    "sha256": "A82E4536591EDFF348C119325F2BB8ACC6E2206ECBB09A4FD248630E0635F32C"
+  },
+  {
+    "path": "03_UnrealProject\\MyProject\\Source\\MyProject\\Simulation\\RailServiceTests.cpp",
+    "status": "added",
+    "before": null,
+    "sha256": "7348EE2E7D6331578A74B3FB2F9565442A535616FCB29FC3A3A3C139322F1187"
+  },
+  {
+    "path": "03_UnrealProject\\MyProject\\Source\\MyProject\\Simulation\\RailSnapshotArchive.h",
+    "status": "added",
+    "before": null,
+    "sha256": "6920C62C76A7B409D55D1A7E7F494E4A2D9823FE7E0AD0A134D0F61DB8E0A7C7"
+  },
+  {
+    "path": "03_UnrealProject\\MyProject\\Source\\MyProject\\Simulation\\RailWorldSnapshot.cpp",
+    "status": "modified",
+    "before": "39A143901A03C86D53E153AF1E9B05615E8AD7991DA955C53767C0FD2EF532D1",
+    "sha256": "DC20ADF7A4BD32023D14CB61AA0657BE7EC360BEA30415E02A7F63D5EFEE479E"
+  },
+  {
+    "path": "03_UnrealProject\\MyProject\\Config\\DefaultEngine.ini",
+    "status": "modified",
+    "before": "2310987883B48816DA0CF5AB819983FBAD066960579BAD806FC00EB0BF2C6313",
+    "sha256": "8CA4C714B79205E8565AF62E1EA796E07AB2136D9AD37AFB90F6DC793E55EBDA"
+  },
+  {
+    "path": "03_UnrealProject\\MyProject\\Config\\DefaultGame.ini",
+    "status": "modified",
+    "before": "886F4073147E6CA3D0ACCD7FBA0D0748A30F6CD5D52861C978402B78BB6DF8D2",
+    "sha256": "2592993D6562135F06E441FCA40013D77363E9311C94576421951A68A7A55625"
+  },
+  {
+    "path": "03_UnrealProject\\MyProject\\Content\\IndianRailway\\S7\\DA_Shantipur.uasset",
+    "status": "added",
+    "sha256": "73CBC415C1ECC428E9C3710E0E5012E963DE111CA0B9C5E5DF2D2FE3CA8DA17A"
+  },
+  {
+    "path": "03_UnrealProject\\MyProject\\Content\\IndianRailway\\S7\\L_RailService.umap",
+    "status": "added",
+    "sha256": "58A6E42A6B9D4DD63D20F755741D8E50B57E1BE7EF26B00AC502AF6E066DD378"
+  },
+  {
+    "path": "03_UnrealProject\\MyProject\\Content\\IndianRailway\\S7\\SW_Horn.uasset",
+    "status": "added",
+    "sha256": "4F9A9E702B114AD3942E1A864E7F9D850080D961114541051DF7E47CF61E3822"
+  },
+  {
+    "path": "03_UnrealProject\\MyProject\\Content\\IndianRailway\\S7\\SW_Rail.uasset",
+    "status": "added",
+    "sha256": "5331B8F97970B0EDA39D844D2568410D9246E8DBFFB62A1C2B69C16FE366AF5B"
+  },
+  {
+    "path": "03_UnrealProject\\MyProject\\Content\\IndianRailway\\S7\\SW_StationCue.uasset",
+    "status": "added",
+    "sha256": "56648978DE46A0EEA1D0AF70C3965922562DD200BDD355E0B3B5CFECCB5CDB32"
+  }
+]

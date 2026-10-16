@@ -1,0 +1,49 @@
+{
+  "schemaVersion": 1,
+  "defaultCulture": "en",
+  "cultures": [
+    "en",
+    "hi"
+  ],
+  "strings": [
+    {
+      "key": "Control.Brake",
+      "en": "Brake",
+      "hi": "ब्रेक"
+    },
+    {
+      "key": "Menu.Pause",
+      "en": "Pause",
+      "hi": "विराम"
+    },
+    {
+      "key": "Screen.Result",
+      "en": "Result",
+      "hi": "परिणाम"
+    },
+    {
+      "key": "Warning.Stop",
+      "en": "Stop — no movement authority",
+      "hi": "रुकें — आगे बढ़ने की अनुमति नहीं"
+    }
+  ],
+  "accessibility": {
+    "fontScaleOptions": [
+      1,
+      1.25,
+      1.5
+    ],
+    "signalMeaning": "color+text+symbol",
+    "touchLayouts": [
+      "standard",
+      "large"
+    ],
+    "controlLabelKeys": [
+      "Control.Brake"
+    ],
+    "pauseKey": "Menu.Pause",
+    "resultKey": "Screen.Result",
+    "warningKey": "Warning.Stop",
+    "fontCoverageStatus": "pending-device-verification"
+  }
+}

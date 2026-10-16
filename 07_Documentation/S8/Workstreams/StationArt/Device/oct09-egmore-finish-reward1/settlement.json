@@ -1,0 +1,19 @@
+{
+  "passed": true,
+  "checks": {
+    "success": true,
+    "settled": true,
+    "identity": true,
+    "phase": true,
+    "awards": true,
+    "reputation": true,
+    "run": true,
+    "nextRun": true,
+    "generation": true
+  },
+  "touch": {
+    "x": 1400,
+    "y": 739
+  },
+  "scope": "isolated reward save; cold recovery verified separately"
+}

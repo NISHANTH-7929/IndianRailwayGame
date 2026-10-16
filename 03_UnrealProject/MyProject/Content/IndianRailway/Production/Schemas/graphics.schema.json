@@ -1,0 +1,234 @@
+{
+  "type": "object",
+  "properties": {
+    "schemaVersion": {
+      "enum": [
+        1
+      ]
+    },
+    "status": {
+      "enum": [
+        "PROVISIONAL"
+      ]
+    },
+    "defaultTier": {
+      "enum": [
+        "Low",
+        "Medium",
+        "High"
+      ]
+    },
+    "tiers": {
+      "type": "object",
+      "properties": {
+        "Low": {
+          "type": "object",
+          "properties": {
+            "textureResolution": {
+              "type": [
+                "number",
+                "null"
+              ],
+              "minimum": 0
+            },
+            "lodDistance": {
+              "type": [
+                "number",
+                "null"
+              ],
+              "minimum": 0
+            },
+            "vegetationDensity": {
+              "type": [
+                "number",
+                "null"
+              ],
+              "minimum": 0
+            },
+            "peopleDensity": {
+              "type": [
+                "number",
+                "null"
+              ],
+              "minimum": 0
+            },
+            "shadowQuality": {
+              "type": [
+                "number",
+                "null"
+              ],
+              "minimum": 0
+            },
+            "vfxDensity": {
+              "type": [
+                "number",
+                "null"
+              ],
+              "minimum": 0
+            },
+            "optionalDetail": {
+              "type": [
+                "number",
+                "null"
+              ],
+              "minimum": 0
+            }
+          },
+          "required": [
+            "textureResolution",
+            "lodDistance",
+            "vegetationDensity",
+            "peopleDensity",
+            "shadowQuality",
+            "vfxDensity",
+            "optionalDetail"
+          ],
+          "additionalProperties": false
+        },
+        "Medium": {
+          "type": "object",
+          "properties": {
+            "textureResolution": {
+              "type": [
+                "number",
+                "null"
+              ],
+              "minimum": 0
+            },
+            "lodDistance": {
+              "type": [
+                "number",
+                "null"
+              ],
+              "minimum": 0
+            },
+            "vegetationDensity": {
+              "type": [
+                "number",
+                "null"
+              ],
+              "minimum": 0
+            },
+            "peopleDensity": {
+              "type": [
+                "number",
+                "null"
+              ],
+              "minimum": 0
+            },
+            "shadowQuality": {
+              "type": [
+                "number",
+                "null"
+              ],
+              "minimum": 0
+            },
+            "vfxDensity": {
+              "type": [
+                "number",
+                "null"
+              ],
+              "minimum": 0
+            },
+            "optionalDetail": {
+              "type": [
+                "number",
+                "null"
+              ],
+              "minimum": 0
+            }
+          },
+          "required": [
+            "textureResolution",
+            "lodDistance",
+            "vegetationDensity",
+            "peopleDensity",
+            "shadowQuality",
+            "vfxDensity",
+            "optionalDetail"
+          ],
+          "additionalProperties": false
+        },
+        "High": {
+          "type": "object",
+          "properties": {
+            "textureResolution": {
+              "type": [
+                "number",
+                "null"
+              ],
+              "minimum": 0
+            },
+            "lodDistance": {
+              "type": [
+                "number",
+                "null"
+              ],
+              "minimum": 0
+            },
+            "vegetationDensity": {
+              "type": [
+                "number",
+                "null"
+              ],
+              "minimum": 0
+            },
+            "peopleDensity": {
+              "type": [
+                "number",
+                "null"
+              ],
+              "minimum": 0
+            },
+            "shadowQuality": {
+              "type": [
+                "number",
+                "null"
+              ],
+              "minimum": 0
+            },
+            "vfxDensity": {
+              "type": [
+                "number",
+                "null"
+              ],
+              "minimum": 0
+            },
+            "optionalDetail": {
+              "type": [
+                "number",
+                "null"
+              ],
+              "minimum": 0
+            }
+          },
+          "required": [
+            "textureResolution",
+            "lodDistance",
+            "vegetationDensity",
+            "peopleDensity",
+            "shadowQuality",
+            "vfxDensity",
+            "optionalDetail"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "Low",
+        "Medium",
+        "High"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "schemaVersion",
+    "status",
+    "defaultTier",
+    "tiers"
+  ],
+  "additionalProperties": false,
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:indianrailway:s8:graphics"
+}

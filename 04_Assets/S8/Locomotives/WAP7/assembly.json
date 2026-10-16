@@ -1,0 +1,1901 @@
+{
+  "schema_version": 1,
+  "fbx_import_settings": {
+    "convert_scene": true,
+    "force_front_x_axis": true,
+    "convert_scene_unit": true
+  },
+  "family": "WAP7",
+  "units": "centimetres",
+  "axis": "+X forward +Y right +Z up",
+  "parts": [
+    {
+      "name": "Exterior",
+      "role": "exterior",
+      "fbx": "Parts/SM_WAP7_01_Exterior_LOD0.fbx",
+      "location_cm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "pivot_cm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "object": "SM_WAP7_01_Exterior_LOD0",
+      "rotation_axis": [
+        0,
+        1,
+        0
+      ],
+      "rotation_range_deg": [
+        -25,
+        25
+      ]
+    },
+    {
+      "name": "Wiper_-1_-0.72",
+      "role": "wiper",
+      "fbx": "Parts/SM_WAP7_01_Wiper_-1_-0.72_LOD0.fbx",
+      "location_cm": [
+        -956.9999389648438,
+        -71.9999771118164,
+        286.0
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "pivot_cm": [
+        -956.9999389648438,
+        -71.9999771118164,
+        286.0
+      ],
+      "object": "SM_WAP7_01_Wiper_-1_-0.72_LOD0",
+      "rotation_axis": [
+        1,
+        0,
+        0
+      ],
+      "rotation_range_deg": [
+        -25,
+        25
+      ]
+    },
+    {
+      "name": "Wiper_-1_0.72",
+      "role": "wiper",
+      "fbx": "Parts/SM_WAP7_01_Wiper_-1_0.72_LOD0.fbx",
+      "location_cm": [
+        -956.9999389648438,
+        72.0,
+        286.0
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "pivot_cm": [
+        -956.9999389648438,
+        72.0,
+        286.0
+      ],
+      "object": "SM_WAP7_01_Wiper_-1_0.72_LOD0",
+      "rotation_axis": [
+        1,
+        0,
+        0
+      ],
+      "rotation_range_deg": [
+        -25,
+        25
+      ]
+    },
+    {
+      "name": "Wiper_1_-0.72",
+      "role": "wiper",
+      "fbx": "Parts/SM_WAP7_01_Wiper_1_-0.72_LOD0.fbx",
+      "location_cm": [
+        956.9999389648438,
+        -72.0,
+        286.0
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "pivot_cm": [
+        956.9999389648438,
+        -72.0,
+        286.0
+      ],
+      "object": "SM_WAP7_01_Wiper_1_-0.72_LOD0",
+      "rotation_axis": [
+        1,
+        0,
+        0
+      ],
+      "rotation_range_deg": [
+        -25,
+        25
+      ]
+    },
+    {
+      "name": "Wiper_1_0.72",
+      "role": "wiper",
+      "fbx": "Parts/SM_WAP7_01_Wiper_1_0.72_LOD0.fbx",
+      "location_cm": [
+        956.9999389648438,
+        71.99998474121094,
+        285.9999694824219
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "pivot_cm": [
+        956.9999389648438,
+        71.99998474121094,
+        285.9999694824219
+      ],
+      "object": "SM_WAP7_01_Wiper_1_0.72_LOD0",
+      "rotation_axis": [
+        1,
+        0,
+        0
+      ],
+      "rotation_range_deg": [
+        -25,
+        25
+      ]
+    },
+    {
+      "name": "Bogie_0",
+      "role": "bogie",
+      "fbx": "Parts/SM_WAP7_01_Bogie_0_LOD0.fbx",
+      "location_cm": [
+        -598.0,
+        0.0,
+        75.0
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "pivot_cm": [
+        -598.0,
+        0.0,
+        75.0
+      ],
+      "object": "SM_WAP7_01_Bogie_0_LOD0",
+      "rotation_axis": [
+        0,
+        1,
+        0
+      ],
+      "rotation_range_deg": [
+        -25,
+        25
+      ]
+    },
+    {
+      "name": "Wheelset_0_0",
+      "role": "wheelset",
+      "fbx": "Parts/SM_WAP7_01_Wheelset_0_0_LOD0.fbx",
+      "location_cm": [
+        -783.0,
+        0.0,
+        54.599998474121094
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "pivot_cm": [
+        -783.0,
+        0.0,
+        54.599998474121094
+      ],
+      "object": "SM_WAP7_01_Wheelset_0_0_LOD0",
+      "rotation_axis": [
+        0,
+        1,
+        0
+      ],
+      "rotation_range_deg": [
+        -25,
+        25
+      ]
+    },
+    {
+      "name": "Wheelset_0_1",
+      "role": "wheelset",
+      "fbx": "Parts/SM_WAP7_01_Wheelset_0_1_LOD0.fbx",
+      "location_cm": [
+        -598.0,
+        0.0,
+        54.599998474121094
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "pivot_cm": [
+        -598.0,
+        0.0,
+        54.599998474121094
+      ],
+      "object": "SM_WAP7_01_Wheelset_0_1_LOD0",
+      "rotation_axis": [
+        0,
+        1,
+        0
+      ],
+      "rotation_range_deg": [
+        -25,
+        25
+      ]
+    },
+    {
+      "name": "Wheelset_0_2",
+      "role": "wheelset",
+      "fbx": "Parts/SM_WAP7_01_Wheelset_0_2_LOD0.fbx",
+      "location_cm": [
+        -413.0,
+        0.0,
+        54.599998474121094
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "pivot_cm": [
+        -413.0,
+        0.0,
+        54.599998474121094
+      ],
+      "object": "SM_WAP7_01_Wheelset_0_2_LOD0",
+      "rotation_axis": [
+        0,
+        1,
+        0
+      ],
+      "rotation_range_deg": [
+        -25,
+        25
+      ]
+    },
+    {
+      "name": "Bogie_1",
+      "role": "bogie",
+      "fbx": "Parts/SM_WAP7_01_Bogie_1_LOD0.fbx",
+      "location_cm": [
+        598.0,
+        0.0,
+        75.0
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "pivot_cm": [
+        598.0,
+        0.0,
+        75.0
+      ],
+      "object": "SM_WAP7_01_Bogie_1_LOD0",
+      "rotation_axis": [
+        0,
+        1,
+        0
+      ],
+      "rotation_range_deg": [
+        -25,
+        25
+      ]
+    },
+    {
+      "name": "Wheelset_1_0",
+      "role": "wheelset",
+      "fbx": "Parts/SM_WAP7_01_Wheelset_1_0_LOD0.fbx",
+      "location_cm": [
+        413.0,
+        0.0,
+        54.599998474121094
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "pivot_cm": [
+        413.0,
+        0.0,
+        54.599998474121094
+      ],
+      "object": "SM_WAP7_01_Wheelset_1_0_LOD0",
+      "rotation_axis": [
+        0,
+        1,
+        0
+      ],
+      "rotation_range_deg": [
+        -25,
+        25
+      ]
+    },
+    {
+      "name": "Wheelset_1_1",
+      "role": "wheelset",
+      "fbx": "Parts/SM_WAP7_01_Wheelset_1_1_LOD0.fbx",
+      "location_cm": [
+        598.0,
+        0.0,
+        54.599998474121094
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "pivot_cm": [
+        598.0,
+        0.0,
+        54.599998474121094
+      ],
+      "object": "SM_WAP7_01_Wheelset_1_1_LOD0",
+      "rotation_axis": [
+        0,
+        1,
+        0
+      ],
+      "rotation_range_deg": [
+        -25,
+        25
+      ]
+    },
+    {
+      "name": "Wheelset_1_2",
+      "role": "wheelset",
+      "fbx": "Parts/SM_WAP7_01_Wheelset_1_2_LOD0.fbx",
+      "location_cm": [
+        783.0,
+        0.0,
+        54.599998474121094
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "pivot_cm": [
+        783.0,
+        0.0,
+        54.599998474121094
+      ],
+      "object": "SM_WAP7_01_Wheelset_1_2_LOD0",
+      "rotation_axis": [
+        0,
+        1,
+        0
+      ],
+      "rotation_range_deg": [
+        -25,
+        25
+      ]
+    },
+    {
+      "name": "PantoLower_-5.7",
+      "role": "pantograph_lower",
+      "fbx": "Parts/SM_WAP7_01_PantoLower_-5.7_LOD0.fbx",
+      "location_cm": [
+        -642.0000610351562,
+        -3.814697265625e-06,
+        430.0000305175781
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "pivot_cm": [
+        -642.0000610351562,
+        -3.814697265625e-06,
+        430.0000305175781
+      ],
+      "object": "SM_WAP7_01_PantoLower_-5.7_LOD0",
+      "rotation_axis": [
+        0,
+        1,
+        0
+      ],
+      "rotation_range_deg": [
+        -25,
+        25
+      ],
+      "linkage": {
+        "base_cm": [
+          -642.0,
+          0,
+          430
+        ],
+        "elbow_cm": [
+          -505.0,
+          0,
+          503
+        ],
+        "contact_cm": [
+          -625.0,
+          0,
+          566
+        ],
+        "rotation_axis": [
+          0,
+          1,
+          0
+        ]
+      }
+    },
+    {
+      "name": "PantoUpper_-5.7",
+      "role": "pantograph_upper",
+      "fbx": "Parts/SM_WAP7_01_PantoUpper_-5.7_LOD0.fbx",
+      "location_cm": [
+        -504.9999694824219,
+        0.0,
+        503.0000305175781
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "pivot_cm": [
+        -504.9999694824219,
+        0.0,
+        503.0000305175781
+      ],
+      "object": "SM_WAP7_01_PantoUpper_-5.7_LOD0",
+      "rotation_axis": [
+        0,
+        1,
+        0
+      ],
+      "rotation_range_deg": [
+        -25,
+        25
+      ],
+      "linkage": {
+        "base_cm": [
+          -642.0,
+          0,
+          430
+        ],
+        "elbow_cm": [
+          -505.0,
+          0,
+          503
+        ],
+        "contact_cm": [
+          -625.0,
+          0,
+          566
+        ],
+        "rotation_axis": [
+          0,
+          1,
+          0
+        ]
+      }
+    },
+    {
+      "name": "PantoShoe_-5.7",
+      "role": "pantograph_shoe",
+      "fbx": "Parts/SM_WAP7_01_PantoShoe_-5.7_LOD0.fbx",
+      "location_cm": [
+        -625.0,
+        0.0,
+        566.0
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "pivot_cm": [
+        -625.0,
+        0.0,
+        566.0
+      ],
+      "object": "SM_WAP7_01_PantoShoe_-5.7_LOD0",
+      "rotation_axis": [
+        0,
+        1,
+        0
+      ],
+      "rotation_range_deg": [
+        -25,
+        25
+      ],
+      "linkage": {
+        "base_cm": [
+          -642.0,
+          0,
+          430
+        ],
+        "elbow_cm": [
+          -505.0,
+          0,
+          503
+        ],
+        "contact_cm": [
+          -625.0,
+          0,
+          566
+        ],
+        "rotation_axis": [
+          0,
+          1,
+          0
+        ]
+      }
+    },
+    {
+      "name": "PantoLower_5.7",
+      "role": "pantograph_lower",
+      "fbx": "Parts/SM_WAP7_01_PantoLower_5.7_LOD0.fbx",
+      "location_cm": [
+        497.99993896484375,
+        -3.814697265625e-06,
+        430.0000305175781
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "pivot_cm": [
+        497.99993896484375,
+        -3.814697265625e-06,
+        430.0000305175781
+      ],
+      "object": "SM_WAP7_01_PantoLower_5.7_LOD0",
+      "rotation_axis": [
+        0,
+        1,
+        0
+      ],
+      "rotation_range_deg": [
+        -25,
+        25
+      ],
+      "linkage": {
+        "base_cm": [
+          498.00000000000006,
+          0,
+          430
+        ],
+        "elbow_cm": [
+          635.0,
+          0,
+          503
+        ],
+        "contact_cm": [
+          515.0,
+          0,
+          566
+        ],
+        "rotation_axis": [
+          0,
+          1,
+          0
+        ]
+      }
+    },
+    {
+      "name": "PantoUpper_5.7",
+      "role": "pantograph_upper",
+      "fbx": "Parts/SM_WAP7_01_PantoUpper_5.7_LOD0.fbx",
+      "location_cm": [
+        635.0,
+        0.0,
+        503.0
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "pivot_cm": [
+        635.0,
+        0.0,
+        503.0
+      ],
+      "object": "SM_WAP7_01_PantoUpper_5.7_LOD0",
+      "rotation_axis": [
+        0,
+        1,
+        0
+      ],
+      "rotation_range_deg": [
+        -25,
+        25
+      ],
+      "linkage": {
+        "base_cm": [
+          498.00000000000006,
+          0,
+          430
+        ],
+        "elbow_cm": [
+          635.0,
+          0,
+          503
+        ],
+        "contact_cm": [
+          515.0,
+          0,
+          566
+        ],
+        "rotation_axis": [
+          0,
+          1,
+          0
+        ]
+      }
+    },
+    {
+      "name": "PantoShoe_5.7",
+      "role": "pantograph_shoe",
+      "fbx": "Parts/SM_WAP7_01_PantoShoe_5.7_LOD0.fbx",
+      "location_cm": [
+        515.0,
+        0.0,
+        566.0
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "pivot_cm": [
+        515.0,
+        0.0,
+        566.0
+      ],
+      "object": "SM_WAP7_01_PantoShoe_5.7_LOD0",
+      "rotation_axis": [
+        0,
+        1,
+        0
+      ],
+      "rotation_range_deg": [
+        -25,
+        25
+      ],
+      "linkage": {
+        "base_cm": [
+          498.00000000000006,
+          0,
+          430
+        ],
+        "elbow_cm": [
+          635.0,
+          0,
+          503
+        ],
+        "contact_cm": [
+          515.0,
+          0,
+          566
+        ],
+        "rotation_axis": [
+          0,
+          1,
+          0
+        ]
+      }
+    },
+    {
+      "name": "Cab_-1",
+      "role": "cab",
+      "fbx": "Parts/SM_WAP7_01_Cab_-1_LOD0.fbx",
+      "location_cm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "pivot_cm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "object": "SM_WAP7_01_Cab_-1_LOD0",
+      "rotation_axis": [
+        0,
+        1,
+        0
+      ],
+      "rotation_range_deg": [
+        -25,
+        25
+      ]
+    },
+    {
+      "name": "Gauge_-1_0",
+      "role": "gauge_brake",
+      "fbx": "Parts/SM_WAP7_01_Gauge_-1_0_LOD0.fbx",
+      "location_cm": [
+        -898.2999877929688,
+        110.0,
+        265.0
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "pivot_cm": [
+        -898.2999877929688,
+        110.0,
+        265.0
+      ],
+      "object": "SM_WAP7_01_Gauge_-1_0_LOD0",
+      "rotation_axis": [
+        1,
+        0,
+        0
+      ],
+      "rotation_range_deg": [
+        -120,
+        120
+      ]
+    },
+    {
+      "name": "Gauge_-1_1",
+      "role": "gauge_brake",
+      "fbx": "Parts/SM_WAP7_01_Gauge_-1_1_LOD0.fbx",
+      "location_cm": [
+        -898.2999267578125,
+        79.00000762939453,
+        265.0
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "pivot_cm": [
+        -898.2999267578125,
+        79.00000762939453,
+        265.0
+      ],
+      "object": "SM_WAP7_01_Gauge_-1_1_LOD0",
+      "rotation_axis": [
+        1,
+        0,
+        0
+      ],
+      "rotation_range_deg": [
+        -120,
+        120
+      ]
+    },
+    {
+      "name": "Gauge_-1_2",
+      "role": "gauge_brake",
+      "fbx": "Parts/SM_WAP7_01_Gauge_-1_2_LOD0.fbx",
+      "location_cm": [
+        -898.2999877929688,
+        110.0,
+        244.0
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "pivot_cm": [
+        -898.2999877929688,
+        110.0,
+        244.0
+      ],
+      "object": "SM_WAP7_01_Gauge_-1_2_LOD0",
+      "rotation_axis": [
+        1,
+        0,
+        0
+      ],
+      "rotation_range_deg": [
+        -120,
+        120
+      ]
+    },
+    {
+      "name": "Gauge_-1_3",
+      "role": "gauge_brake",
+      "fbx": "Parts/SM_WAP7_01_Gauge_-1_3_LOD0.fbx",
+      "location_cm": [
+        -898.300048828125,
+        78.99999237060547,
+        244.0
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "pivot_cm": [
+        -898.300048828125,
+        78.99999237060547,
+        244.0
+      ],
+      "object": "SM_WAP7_01_Gauge_-1_3_LOD0",
+      "rotation_axis": [
+        1,
+        0,
+        0
+      ],
+      "rotation_range_deg": [
+        -120,
+        120
+      ]
+    },
+    {
+      "name": "PowerNeedle_-1_0",
+      "role": "gauge_power",
+      "fbx": "Parts/SM_WAP7_01_PowerNeedle_-1_0_LOD0.fbx",
+      "location_cm": [
+        -897.9999389648438,
+        49.000003814697266,
+        257.0
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "pivot_cm": [
+        -897.9999389648438,
+        49.000003814697266,
+        257.0
+      ],
+      "object": "SM_WAP7_01_PowerNeedle_-1_0_LOD0",
+      "rotation_axis": [
+        1,
+        0,
+        0
+      ],
+      "rotation_range_deg": [
+        -120,
+        120
+      ]
+    },
+    {
+      "name": "PowerNeedle_-1_1",
+      "role": "gauge_power",
+      "fbx": "Parts/SM_WAP7_01_PowerNeedle_-1_1_LOD0.fbx",
+      "location_cm": [
+        -897.9999389648438,
+        35.00000762939453,
+        257.0
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "pivot_cm": [
+        -897.9999389648438,
+        35.00000762939453,
+        257.0
+      ],
+      "object": "SM_WAP7_01_PowerNeedle_-1_1_LOD0",
+      "rotation_axis": [
+        1,
+        0,
+        0
+      ],
+      "rotation_range_deg": [
+        -120,
+        120
+      ]
+    },
+    {
+      "name": "PowerNeedle_-1_2",
+      "role": "gauge_power",
+      "fbx": "Parts/SM_WAP7_01_PowerNeedle_-1_2_LOD0.fbx",
+      "location_cm": [
+        -897.9998168945312,
+        21.0000057220459,
+        257.0
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "pivot_cm": [
+        -897.9998168945312,
+        21.0000057220459,
+        257.0
+      ],
+      "object": "SM_WAP7_01_PowerNeedle_-1_2_LOD0",
+      "rotation_axis": [
+        1,
+        0,
+        0
+      ],
+      "rotation_range_deg": [
+        -120,
+        120
+      ]
+    },
+    {
+      "name": "SpeedNeedle_-1",
+      "role": "gauge_speed",
+      "fbx": "Parts/SM_WAP7_01_SpeedNeedle_-1_LOD0.fbx",
+      "location_cm": [
+        -887.39990234375,
+        5.245208740234375e-06,
+        316.0
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "pivot_cm": [
+        -887.39990234375,
+        5.245208740234375e-06,
+        316.0
+      ],
+      "object": "SM_WAP7_01_SpeedNeedle_-1_LOD0",
+      "rotation_axis": [
+        1,
+        0,
+        0
+      ],
+      "rotation_range_deg": [
+        -120,
+        120
+      ]
+    },
+    {
+      "name": "train_brake_-1",
+      "role": "train_brake",
+      "fbx": "Parts/SM_WAP7_01_train_brake_-1_LOD0.fbx",
+      "location_cm": [
+        -864.9999389648438,
+        103.0,
+        247.0
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "pivot_cm": [
+        -864.9999389648438,
+        103.0,
+        247.0
+      ],
+      "object": "SM_WAP7_01_train_brake_-1_LOD0",
+      "rotation_axis": [
+        0,
+        1,
+        0
+      ],
+      "rotation_range_deg": [
+        -25,
+        25
+      ]
+    },
+    {
+      "name": "reserved_-1",
+      "role": "reserved",
+      "fbx": "Parts/SM_WAP7_01_reserved_-1_LOD0.fbx",
+      "location_cm": [
+        -864.9999389648438,
+        65.0,
+        247.0
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "pivot_cm": [
+        -864.9999389648438,
+        65.0,
+        247.0
+      ],
+      "object": "SM_WAP7_01_reserved_-1_LOD0",
+      "rotation_axis": [
+        0,
+        1,
+        0
+      ],
+      "rotation_range_deg": [
+        -25,
+        25
+      ]
+    },
+    {
+      "name": "throttle_-1",
+      "role": "throttle",
+      "fbx": "Parts/SM_WAP7_01_throttle_-1_LOD0.fbx",
+      "location_cm": [
+        -864.9999389648438,
+        -85.0,
+        247.0
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "pivot_cm": [
+        -864.9999389648438,
+        -85.0,
+        247.0
+      ],
+      "object": "SM_WAP7_01_throttle_-1_LOD0",
+      "rotation_axis": [
+        0,
+        1,
+        0
+      ],
+      "rotation_range_deg": [
+        -25,
+        25
+      ]
+    },
+    {
+      "name": "Reverser_-1",
+      "role": "reverser",
+      "fbx": "Parts/SM_WAP7_01_Reverser_-1_LOD0.fbx",
+      "location_cm": [
+        -855.0,
+        -58.0,
+        247.0
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "pivot_cm": [
+        -855.0,
+        -58.0,
+        247.0
+      ],
+      "object": "SM_WAP7_01_Reverser_-1_LOD0",
+      "rotation_axis": [
+        0,
+        1,
+        0
+      ],
+      "rotation_range_deg": [
+        -25,
+        25
+      ]
+    },
+    {
+      "name": "Cab_1",
+      "role": "cab",
+      "fbx": "Parts/SM_WAP7_01_Cab_1_LOD0.fbx",
+      "location_cm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "pivot_cm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "object": "SM_WAP7_01_Cab_1_LOD0",
+      "rotation_axis": [
+        0,
+        1,
+        0
+      ],
+      "rotation_range_deg": [
+        -25,
+        25
+      ]
+    },
+    {
+      "name": "Gauge_1_0",
+      "role": "gauge_brake",
+      "fbx": "Parts/SM_WAP7_01_Gauge_1_0_LOD0.fbx",
+      "location_cm": [
+        898.2999877929688,
+        110.0,
+        265.0
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "pivot_cm": [
+        898.2999877929688,
+        110.0,
+        265.0
+      ],
+      "object": "SM_WAP7_01_Gauge_1_0_LOD0",
+      "rotation_axis": [
+        1,
+        0,
+        0
+      ],
+      "rotation_range_deg": [
+        -120,
+        120
+      ]
+    },
+    {
+      "name": "Gauge_1_1",
+      "role": "gauge_brake",
+      "fbx": "Parts/SM_WAP7_01_Gauge_1_1_LOD0.fbx",
+      "location_cm": [
+        898.2999267578125,
+        79.00000762939453,
+        265.0
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "pivot_cm": [
+        898.2999267578125,
+        79.00000762939453,
+        265.0
+      ],
+      "object": "SM_WAP7_01_Gauge_1_1_LOD0",
+      "rotation_axis": [
+        1,
+        0,
+        0
+      ],
+      "rotation_range_deg": [
+        -120,
+        120
+      ]
+    },
+    {
+      "name": "Gauge_1_2",
+      "role": "gauge_brake",
+      "fbx": "Parts/SM_WAP7_01_Gauge_1_2_LOD0.fbx",
+      "location_cm": [
+        898.2999877929688,
+        110.0,
+        244.0
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "pivot_cm": [
+        898.2999877929688,
+        110.0,
+        244.0
+      ],
+      "object": "SM_WAP7_01_Gauge_1_2_LOD0",
+      "rotation_axis": [
+        1,
+        0,
+        0
+      ],
+      "rotation_range_deg": [
+        -120,
+        120
+      ]
+    },
+    {
+      "name": "Gauge_1_3",
+      "role": "gauge_brake",
+      "fbx": "Parts/SM_WAP7_01_Gauge_1_3_LOD0.fbx",
+      "location_cm": [
+        898.300048828125,
+        78.99999237060547,
+        244.0
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "pivot_cm": [
+        898.300048828125,
+        78.99999237060547,
+        244.0
+      ],
+      "object": "SM_WAP7_01_Gauge_1_3_LOD0",
+      "rotation_axis": [
+        1,
+        0,
+        0
+      ],
+      "rotation_range_deg": [
+        -120,
+        120
+      ]
+    },
+    {
+      "name": "PowerNeedle_1_0",
+      "role": "gauge_power",
+      "fbx": "Parts/SM_WAP7_01_PowerNeedle_1_0_LOD0.fbx",
+      "location_cm": [
+        897.9999389648438,
+        48.9999885559082,
+        257.0
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "pivot_cm": [
+        897.9999389648438,
+        48.9999885559082,
+        257.0
+      ],
+      "object": "SM_WAP7_01_PowerNeedle_1_0_LOD0",
+      "rotation_axis": [
+        1,
+        0,
+        0
+      ],
+      "rotation_range_deg": [
+        -120,
+        120
+      ]
+    },
+    {
+      "name": "PowerNeedle_1_1",
+      "role": "gauge_power",
+      "fbx": "Parts/SM_WAP7_01_PowerNeedle_1_1_LOD0.fbx",
+      "location_cm": [
+        897.9999389648438,
+        34.99999237060547,
+        257.0
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "pivot_cm": [
+        897.9999389648438,
+        34.99999237060547,
+        257.0
+      ],
+      "object": "SM_WAP7_01_PowerNeedle_1_1_LOD0",
+      "rotation_axis": [
+        1,
+        0,
+        0
+      ],
+      "rotation_range_deg": [
+        -120,
+        120
+      ]
+    },
+    {
+      "name": "PowerNeedle_1_2",
+      "role": "gauge_power",
+      "fbx": "Parts/SM_WAP7_01_PowerNeedle_1_2_LOD0.fbx",
+      "location_cm": [
+        897.9998168945312,
+        20.9999942779541,
+        257.0
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "pivot_cm": [
+        897.9998168945312,
+        20.9999942779541,
+        257.0
+      ],
+      "object": "SM_WAP7_01_PowerNeedle_1_2_LOD0",
+      "rotation_axis": [
+        1,
+        0,
+        0
+      ],
+      "rotation_range_deg": [
+        -120,
+        120
+      ]
+    },
+    {
+      "name": "SpeedNeedle_1",
+      "role": "gauge_speed",
+      "fbx": "Parts/SM_WAP7_01_SpeedNeedle_1_LOD0.fbx",
+      "location_cm": [
+        887.39990234375,
+        5.245208740234375e-06,
+        316.0
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "pivot_cm": [
+        887.39990234375,
+        5.245208740234375e-06,
+        316.0
+      ],
+      "object": "SM_WAP7_01_SpeedNeedle_1_LOD0",
+      "rotation_axis": [
+        1,
+        0,
+        0
+      ],
+      "rotation_range_deg": [
+        -120,
+        120
+      ]
+    },
+    {
+      "name": "train_brake_1",
+      "role": "train_brake",
+      "fbx": "Parts/SM_WAP7_01_train_brake_1_LOD0.fbx",
+      "location_cm": [
+        864.9999389648438,
+        103.0,
+        247.0
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "pivot_cm": [
+        864.9999389648438,
+        103.0,
+        247.0
+      ],
+      "object": "SM_WAP7_01_train_brake_1_LOD0",
+      "rotation_axis": [
+        0,
+        1,
+        0
+      ],
+      "rotation_range_deg": [
+        -25,
+        25
+      ]
+    },
+    {
+      "name": "reserved_1",
+      "role": "reserved",
+      "fbx": "Parts/SM_WAP7_01_reserved_1_LOD0.fbx",
+      "location_cm": [
+        864.9999389648438,
+        65.0,
+        247.0
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "pivot_cm": [
+        864.9999389648438,
+        65.0,
+        247.0
+      ],
+      "object": "SM_WAP7_01_reserved_1_LOD0",
+      "rotation_axis": [
+        0,
+        1,
+        0
+      ],
+      "rotation_range_deg": [
+        -25,
+        25
+      ]
+    },
+    {
+      "name": "throttle_1",
+      "role": "throttle",
+      "fbx": "Parts/SM_WAP7_01_throttle_1_LOD0.fbx",
+      "location_cm": [
+        864.9999389648438,
+        -85.0,
+        247.0
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "pivot_cm": [
+        864.9999389648438,
+        -85.0,
+        247.0
+      ],
+      "object": "SM_WAP7_01_throttle_1_LOD0",
+      "rotation_axis": [
+        0,
+        1,
+        0
+      ],
+      "rotation_range_deg": [
+        -25,
+        25
+      ]
+    },
+    {
+      "name": "Reverser_1",
+      "role": "reverser",
+      "fbx": "Parts/SM_WAP7_01_Reverser_1_LOD0.fbx",
+      "location_cm": [
+        855.0,
+        -58.0,
+        247.0
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "pivot_cm": [
+        855.0,
+        -58.0,
+        247.0
+      ],
+      "object": "SM_WAP7_01_Reverser_1_LOD0",
+      "rotation_axis": [
+        0,
+        1,
+        0
+      ],
+      "rotation_range_deg": [
+        -25,
+        25
+      ]
+    }
+  ],
+  "driver_camera": {
+    "location_cm": [
+      806,
+      -83,
+      303
+    ],
+    "rotation_deg": [
+      -12,
+      0,
+      0
+    ]
+  },
+  "triangles_lod0": 59312,
+  "materials": [
+    {
+      "name": "Dots Stroke",
+      "base_color": [
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5
+    },
+    {
+      "name": "M_Cab_Desk",
+      "base_color": [
+        0.38999998569488525,
+        0.41999998688697815,
+        0.4099999964237213,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5
+    },
+    {
+      "name": "M_Cab_Instrument",
+      "base_color": [
+        0.00800000037997961,
+        0.014000000432133675,
+        0.017999999225139618,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5
+    },
+    {
+      "name": "M_Cab_LCD",
+      "base_color": [
+        0.03500000014901161,
+        0.1899999976158142,
+        0.23000000417232513,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.3499999940395355
+    },
+    {
+      "name": "M_Common_Bogie",
+      "base_color": [
+        0.11999999731779099,
+        0.14499999582767487,
+        0.1550000011920929,
+        1.0
+      ],
+      "metallic": 0.4000000059604645,
+      "roughness": 0.5
+    },
+    {
+      "name": "M_Common_Charcoal",
+      "base_color": [
+        0.02500000037252903,
+        0.03500000014901161,
+        0.0430000014603138,
+        1.0
+      ],
+      "metallic": 0.3499999940395355,
+      "roughness": 0.5
+    },
+    {
+      "name": "M_Common_Glass",
+      "base_color": [
+        0.11999999731779099,
+        0.23999999463558197,
+        0.25999999046325684,
+        0.11999999731779099
+      ],
+      "metallic": 0.30000001192092896,
+      "roughness": 0.17000000178813934
+    },
+    {
+      "name": "M_Common_Insulator",
+      "base_color": [
+        0.20999999344348907,
+        0.09000000357627869,
+        0.05000000074505806,
+        1.0
+      ],
+      "metallic": 0.20000000298023224,
+      "roughness": 0.5
+    },
+    {
+      "name": "M_Common_Lettering",
+      "base_color": [
+        0.9200000166893005,
+        0.9200000166893005,
+        0.8199999928474426,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5
+    },
+    {
+      "name": "M_Common_Steel",
+      "base_color": [
+        0.25999999046325684,
+        0.28999999165534973,
+        0.3100000023841858,
+        1.0
+      ],
+      "metallic": 0.800000011920929,
+      "roughness": 0.3199999928474426
+    },
+    {
+      "name": "M_Lamp_Amber",
+      "base_color": [
+        1.0,
+        0.5099999904632568,
+        0.11999999731779099,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.30000001192092896
+    },
+    {
+      "name": "M_Lamp_White",
+      "base_color": [
+        0.8500000238418579,
+        0.9399999976158142,
+        1.0,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.20000000298023224
+    },
+    {
+      "name": "M_WAP7_Ivory",
+      "base_color": [
+        0.7799999713897705,
+        0.7699999809265137,
+        0.6899999976158142,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5
+    },
+    {
+      "name": "M_WAP7_Vermilion",
+      "base_color": [
+        0.550000011920929,
+        0.06499999761581421,
+        0.02500000037252903,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5
+    },
+    {
+      "name": "Material",
+      "base_color": [
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5
+    }
+  ],
+  "status": "PROVISIONAL: Android profiling and authentic cab variant review pending"
+}

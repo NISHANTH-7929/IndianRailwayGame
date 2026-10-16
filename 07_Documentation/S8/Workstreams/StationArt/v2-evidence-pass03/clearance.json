@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "vehicleEnvelope": {
+    "halfWidthM": 1.625,
+    "zRangeM": [
+      0.9,
+      4.8
+    ]
+  },
+  "violations": [],
+  "limit": "Conservative triangle-AABB stationary clearance test; actual vehicle, curves and motion require integration validation."
+}

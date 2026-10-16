@@ -1,0 +1,25 @@
+{
+  "assetFamilyId": "Station.Egmore.Scene.01",
+  "version": "1.0.0",
+  "creator": "IndianRailwayGame project-authored procedural geometry and textures",
+  "creationDate": "2026-10-07",
+  "license": "Project-original production assets",
+  "productionInputs": [
+    "04_Assets/S8/References/Egmore/facade-panorama.jpg (reference only; CC BY-SA 3.0)",
+    "04_Assets/S8/References/Egmore/heritage-front.jpg (reference only; CC BY-SA 4.0)",
+    "04_Assets/S8/References/Egmore/east.jpg (reference only; CC BY-SA 3.0)",
+    "04_Assets/S8/References/Egmore/platform.jpg (reference only; CC BY-SA 3.0)",
+    "07_Documentation/S8/EGMORE_REFERENCE_REGISTER.md",
+    "07_Documentation/S8/REAL_STATION_REFERENCE_NOTES.md",
+    "07_Documentation/S8/STATION_ARCHITECTURE.md"
+  ],
+  "productionMethod": "New procedural Blender geometry and seeded 512 px PBR maps authored entirely inside the StationArt workstream.",
+  "photographicPixelUse": "None. Reference photographs were visually consulted only and are not packed or sampled into production textures.",
+  "generator": [
+    "04_Assets/S8/Workstreams/StationArt/tools/generate_textures.py",
+    "04_Assets/S8/Workstreams/StationArt/tools/generate_egmore_scene.py",
+    "04_Assets/S8/Workstreams/StationArt/tools/finalize_scene.py"
+  ],
+  "dimensionStatus": "Broad gauge and platform height follow the existing S8 contract; all architectural/layout dimensions are explicit visual estimates, not a survey.",
+  "runtimeStatus": "Source-preview only. Unreal import, collision, materials, gameplay fit, performance and Android validation are pending integration-chat work."
+}

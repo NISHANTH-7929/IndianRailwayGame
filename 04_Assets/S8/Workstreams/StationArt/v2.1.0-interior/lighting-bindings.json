@@ -1,0 +1,1094 @@
+[
+  {
+    "stableId": "EGI.CanopyLight.005.light",
+    "positionM": [
+      -90,
+      -5.675,
+      4.94
+    ],
+    "direction": [
+      0,
+      0,
+      -1
+    ],
+    "colourLinear": [
+      1,
+      0.88,
+      0.72
+    ],
+    "previewWatts": 150,
+    "engineIntensity": "calibrate in engine; Blender watts are not Unreal lumens",
+    "sourceSizeM": [
+      1.16,
+      0.15
+    ],
+    "castShadowSuggested": false,
+    "runtimeBinding": "night lighting preset; do not create one dynamic shadowed light per fixture on mobile"
+  },
+  {
+    "stableId": "EGI.CanopyLight.006.light",
+    "positionM": [
+      -78,
+      -5.675,
+      4.94
+    ],
+    "direction": [
+      0,
+      0,
+      -1
+    ],
+    "colourLinear": [
+      1,
+      0.88,
+      0.72
+    ],
+    "previewWatts": 150,
+    "engineIntensity": "calibrate in engine; Blender watts are not Unreal lumens",
+    "sourceSizeM": [
+      1.16,
+      0.15
+    ],
+    "castShadowSuggested": false,
+    "runtimeBinding": "night lighting preset; do not create one dynamic shadowed light per fixture on mobile"
+  },
+  {
+    "stableId": "EGI.CanopyLight.007.light",
+    "positionM": [
+      -66,
+      -5.675,
+      4.94
+    ],
+    "direction": [
+      0,
+      0,
+      -1
+    ],
+    "colourLinear": [
+      1,
+      0.88,
+      0.72
+    ],
+    "previewWatts": 150,
+    "engineIntensity": "calibrate in engine; Blender watts are not Unreal lumens",
+    "sourceSizeM": [
+      1.16,
+      0.15
+    ],
+    "castShadowSuggested": false,
+    "runtimeBinding": "night lighting preset; do not create one dynamic shadowed light per fixture on mobile"
+  },
+  {
+    "stableId": "EGI.CanopyLight.008.light",
+    "positionM": [
+      -54,
+      -5.675,
+      4.94
+    ],
+    "direction": [
+      0,
+      0,
+      -1
+    ],
+    "colourLinear": [
+      1,
+      0.88,
+      0.72
+    ],
+    "previewWatts": 150,
+    "engineIntensity": "calibrate in engine; Blender watts are not Unreal lumens",
+    "sourceSizeM": [
+      1.16,
+      0.15
+    ],
+    "castShadowSuggested": false,
+    "runtimeBinding": "night lighting preset; do not create one dynamic shadowed light per fixture on mobile"
+  },
+  {
+    "stableId": "EGI.CanopyLight.009.light",
+    "positionM": [
+      -42,
+      -5.675,
+      4.94
+    ],
+    "direction": [
+      0,
+      0,
+      -1
+    ],
+    "colourLinear": [
+      1,
+      0.88,
+      0.72
+    ],
+    "previewWatts": 150,
+    "engineIntensity": "calibrate in engine; Blender watts are not Unreal lumens",
+    "sourceSizeM": [
+      1.16,
+      0.15
+    ],
+    "castShadowSuggested": false,
+    "runtimeBinding": "night lighting preset; do not create one dynamic shadowed light per fixture on mobile"
+  },
+  {
+    "stableId": "EGI.CanopyLight.010.light",
+    "positionM": [
+      -30,
+      -5.675,
+      4.94
+    ],
+    "direction": [
+      0,
+      0,
+      -1
+    ],
+    "colourLinear": [
+      1,
+      0.88,
+      0.72
+    ],
+    "previewWatts": 150,
+    "engineIntensity": "calibrate in engine; Blender watts are not Unreal lumens",
+    "sourceSizeM": [
+      1.16,
+      0.15
+    ],
+    "castShadowSuggested": false,
+    "runtimeBinding": "night lighting preset; do not create one dynamic shadowed light per fixture on mobile"
+  },
+  {
+    "stableId": "EGI.CanopyLight.011.light",
+    "positionM": [
+      -18,
+      -5.675,
+      4.94
+    ],
+    "direction": [
+      0,
+      0,
+      -1
+    ],
+    "colourLinear": [
+      1,
+      0.88,
+      0.72
+    ],
+    "previewWatts": 150,
+    "engineIntensity": "calibrate in engine; Blender watts are not Unreal lumens",
+    "sourceSizeM": [
+      1.16,
+      0.15
+    ],
+    "castShadowSuggested": false,
+    "runtimeBinding": "night lighting preset; do not create one dynamic shadowed light per fixture on mobile"
+  },
+  {
+    "stableId": "EGI.CanopyLight.012.light",
+    "positionM": [
+      -6,
+      -5.675,
+      4.94
+    ],
+    "direction": [
+      0,
+      0,
+      -1
+    ],
+    "colourLinear": [
+      1,
+      0.88,
+      0.72
+    ],
+    "previewWatts": 150,
+    "engineIntensity": "calibrate in engine; Blender watts are not Unreal lumens",
+    "sourceSizeM": [
+      1.16,
+      0.15
+    ],
+    "castShadowSuggested": false,
+    "runtimeBinding": "night lighting preset; do not create one dynamic shadowed light per fixture on mobile"
+  },
+  {
+    "stableId": "EGI.CanopyLight.013.light",
+    "positionM": [
+      6,
+      -5.675,
+      4.94
+    ],
+    "direction": [
+      0,
+      0,
+      -1
+    ],
+    "colourLinear": [
+      1,
+      0.88,
+      0.72
+    ],
+    "previewWatts": 150,
+    "engineIntensity": "calibrate in engine; Blender watts are not Unreal lumens",
+    "sourceSizeM": [
+      1.16,
+      0.15
+    ],
+    "castShadowSuggested": false,
+    "runtimeBinding": "night lighting preset; do not create one dynamic shadowed light per fixture on mobile"
+  },
+  {
+    "stableId": "EGI.CanopyLight.014.light",
+    "positionM": [
+      18,
+      -5.675,
+      4.94
+    ],
+    "direction": [
+      0,
+      0,
+      -1
+    ],
+    "colourLinear": [
+      1,
+      0.88,
+      0.72
+    ],
+    "previewWatts": 150,
+    "engineIntensity": "calibrate in engine; Blender watts are not Unreal lumens",
+    "sourceSizeM": [
+      1.16,
+      0.15
+    ],
+    "castShadowSuggested": false,
+    "runtimeBinding": "night lighting preset; do not create one dynamic shadowed light per fixture on mobile"
+  },
+  {
+    "stableId": "EGI.CanopyLight.015.light",
+    "positionM": [
+      30,
+      -5.675,
+      4.94
+    ],
+    "direction": [
+      0,
+      0,
+      -1
+    ],
+    "colourLinear": [
+      1,
+      0.88,
+      0.72
+    ],
+    "previewWatts": 150,
+    "engineIntensity": "calibrate in engine; Blender watts are not Unreal lumens",
+    "sourceSizeM": [
+      1.16,
+      0.15
+    ],
+    "castShadowSuggested": false,
+    "runtimeBinding": "night lighting preset; do not create one dynamic shadowed light per fixture on mobile"
+  },
+  {
+    "stableId": "EGI.CanopyLight.016.light",
+    "positionM": [
+      42,
+      -5.675,
+      4.94
+    ],
+    "direction": [
+      0,
+      0,
+      -1
+    ],
+    "colourLinear": [
+      1,
+      0.88,
+      0.72
+    ],
+    "previewWatts": 150,
+    "engineIntensity": "calibrate in engine; Blender watts are not Unreal lumens",
+    "sourceSizeM": [
+      1.16,
+      0.15
+    ],
+    "castShadowSuggested": false,
+    "runtimeBinding": "night lighting preset; do not create one dynamic shadowed light per fixture on mobile"
+  },
+  {
+    "stableId": "EGI.CanopyLight.017.light",
+    "positionM": [
+      78,
+      -5.675,
+      4.94
+    ],
+    "direction": [
+      0,
+      0,
+      -1
+    ],
+    "colourLinear": [
+      1,
+      0.88,
+      0.72
+    ],
+    "previewWatts": 150,
+    "engineIntensity": "calibrate in engine; Blender watts are not Unreal lumens",
+    "sourceSizeM": [
+      1.16,
+      0.15
+    ],
+    "castShadowSuggested": false,
+    "runtimeBinding": "night lighting preset; do not create one dynamic shadowed light per fixture on mobile"
+  },
+  {
+    "stableId": "EGI.CanopyLight.018.light",
+    "positionM": [
+      90,
+      -5.675,
+      4.94
+    ],
+    "direction": [
+      0,
+      0,
+      -1
+    ],
+    "colourLinear": [
+      1,
+      0.88,
+      0.72
+    ],
+    "previewWatts": 150,
+    "engineIntensity": "calibrate in engine; Blender watts are not Unreal lumens",
+    "sourceSizeM": [
+      1.16,
+      0.15
+    ],
+    "castShadowSuggested": false,
+    "runtimeBinding": "night lighting preset; do not create one dynamic shadowed light per fixture on mobile"
+  },
+  {
+    "stableId": "EGI.CanopyLight.024.light",
+    "positionM": [
+      -90,
+      10.675,
+      4.94
+    ],
+    "direction": [
+      0,
+      0,
+      -1
+    ],
+    "colourLinear": [
+      1,
+      0.88,
+      0.72
+    ],
+    "previewWatts": 150,
+    "engineIntensity": "calibrate in engine; Blender watts are not Unreal lumens",
+    "sourceSizeM": [
+      1.16,
+      0.15
+    ],
+    "castShadowSuggested": false,
+    "runtimeBinding": "night lighting preset; do not create one dynamic shadowed light per fixture on mobile"
+  },
+  {
+    "stableId": "EGI.CanopyLight.025.light",
+    "positionM": [
+      -78,
+      10.675,
+      4.94
+    ],
+    "direction": [
+      0,
+      0,
+      -1
+    ],
+    "colourLinear": [
+      1,
+      0.88,
+      0.72
+    ],
+    "previewWatts": 150,
+    "engineIntensity": "calibrate in engine; Blender watts are not Unreal lumens",
+    "sourceSizeM": [
+      1.16,
+      0.15
+    ],
+    "castShadowSuggested": false,
+    "runtimeBinding": "night lighting preset; do not create one dynamic shadowed light per fixture on mobile"
+  },
+  {
+    "stableId": "EGI.CanopyLight.026.light",
+    "positionM": [
+      -66,
+      10.675,
+      4.94
+    ],
+    "direction": [
+      0,
+      0,
+      -1
+    ],
+    "colourLinear": [
+      1,
+      0.88,
+      0.72
+    ],
+    "previewWatts": 150,
+    "engineIntensity": "calibrate in engine; Blender watts are not Unreal lumens",
+    "sourceSizeM": [
+      1.16,
+      0.15
+    ],
+    "castShadowSuggested": false,
+    "runtimeBinding": "night lighting preset; do not create one dynamic shadowed light per fixture on mobile"
+  },
+  {
+    "stableId": "EGI.CanopyLight.027.light",
+    "positionM": [
+      -54,
+      10.675,
+      4.94
+    ],
+    "direction": [
+      0,
+      0,
+      -1
+    ],
+    "colourLinear": [
+      1,
+      0.88,
+      0.72
+    ],
+    "previewWatts": 150,
+    "engineIntensity": "calibrate in engine; Blender watts are not Unreal lumens",
+    "sourceSizeM": [
+      1.16,
+      0.15
+    ],
+    "castShadowSuggested": false,
+    "runtimeBinding": "night lighting preset; do not create one dynamic shadowed light per fixture on mobile"
+  },
+  {
+    "stableId": "EGI.CanopyLight.028.light",
+    "positionM": [
+      -42,
+      10.675,
+      4.94
+    ],
+    "direction": [
+      0,
+      0,
+      -1
+    ],
+    "colourLinear": [
+      1,
+      0.88,
+      0.72
+    ],
+    "previewWatts": 150,
+    "engineIntensity": "calibrate in engine; Blender watts are not Unreal lumens",
+    "sourceSizeM": [
+      1.16,
+      0.15
+    ],
+    "castShadowSuggested": false,
+    "runtimeBinding": "night lighting preset; do not create one dynamic shadowed light per fixture on mobile"
+  },
+  {
+    "stableId": "EGI.CanopyLight.029.light",
+    "positionM": [
+      -30,
+      10.675,
+      4.94
+    ],
+    "direction": [
+      0,
+      0,
+      -1
+    ],
+    "colourLinear": [
+      1,
+      0.88,
+      0.72
+    ],
+    "previewWatts": 150,
+    "engineIntensity": "calibrate in engine; Blender watts are not Unreal lumens",
+    "sourceSizeM": [
+      1.16,
+      0.15
+    ],
+    "castShadowSuggested": false,
+    "runtimeBinding": "night lighting preset; do not create one dynamic shadowed light per fixture on mobile"
+  },
+  {
+    "stableId": "EGI.CanopyLight.030.light",
+    "positionM": [
+      -18,
+      10.675,
+      4.94
+    ],
+    "direction": [
+      0,
+      0,
+      -1
+    ],
+    "colourLinear": [
+      1,
+      0.88,
+      0.72
+    ],
+    "previewWatts": 150,
+    "engineIntensity": "calibrate in engine; Blender watts are not Unreal lumens",
+    "sourceSizeM": [
+      1.16,
+      0.15
+    ],
+    "castShadowSuggested": false,
+    "runtimeBinding": "night lighting preset; do not create one dynamic shadowed light per fixture on mobile"
+  },
+  {
+    "stableId": "EGI.CanopyLight.031.light",
+    "positionM": [
+      -6,
+      10.675,
+      4.94
+    ],
+    "direction": [
+      0,
+      0,
+      -1
+    ],
+    "colourLinear": [
+      1,
+      0.88,
+      0.72
+    ],
+    "previewWatts": 150,
+    "engineIntensity": "calibrate in engine; Blender watts are not Unreal lumens",
+    "sourceSizeM": [
+      1.16,
+      0.15
+    ],
+    "castShadowSuggested": false,
+    "runtimeBinding": "night lighting preset; do not create one dynamic shadowed light per fixture on mobile"
+  },
+  {
+    "stableId": "EGI.CanopyLight.032.light",
+    "positionM": [
+      6,
+      10.675,
+      4.94
+    ],
+    "direction": [
+      0,
+      0,
+      -1
+    ],
+    "colourLinear": [
+      1,
+      0.88,
+      0.72
+    ],
+    "previewWatts": 150,
+    "engineIntensity": "calibrate in engine; Blender watts are not Unreal lumens",
+    "sourceSizeM": [
+      1.16,
+      0.15
+    ],
+    "castShadowSuggested": false,
+    "runtimeBinding": "night lighting preset; do not create one dynamic shadowed light per fixture on mobile"
+  },
+  {
+    "stableId": "EGI.CanopyLight.033.light",
+    "positionM": [
+      18,
+      10.675,
+      4.94
+    ],
+    "direction": [
+      0,
+      0,
+      -1
+    ],
+    "colourLinear": [
+      1,
+      0.88,
+      0.72
+    ],
+    "previewWatts": 150,
+    "engineIntensity": "calibrate in engine; Blender watts are not Unreal lumens",
+    "sourceSizeM": [
+      1.16,
+      0.15
+    ],
+    "castShadowSuggested": false,
+    "runtimeBinding": "night lighting preset; do not create one dynamic shadowed light per fixture on mobile"
+  },
+  {
+    "stableId": "EGI.CanopyLight.034.light",
+    "positionM": [
+      30,
+      10.675,
+      4.94
+    ],
+    "direction": [
+      0,
+      0,
+      -1
+    ],
+    "colourLinear": [
+      1,
+      0.88,
+      0.72
+    ],
+    "previewWatts": 150,
+    "engineIntensity": "calibrate in engine; Blender watts are not Unreal lumens",
+    "sourceSizeM": [
+      1.16,
+      0.15
+    ],
+    "castShadowSuggested": false,
+    "runtimeBinding": "night lighting preset; do not create one dynamic shadowed light per fixture on mobile"
+  },
+  {
+    "stableId": "EGI.CanopyLight.035.light",
+    "positionM": [
+      42,
+      10.675,
+      4.94
+    ],
+    "direction": [
+      0,
+      0,
+      -1
+    ],
+    "colourLinear": [
+      1,
+      0.88,
+      0.72
+    ],
+    "previewWatts": 150,
+    "engineIntensity": "calibrate in engine; Blender watts are not Unreal lumens",
+    "sourceSizeM": [
+      1.16,
+      0.15
+    ],
+    "castShadowSuggested": false,
+    "runtimeBinding": "night lighting preset; do not create one dynamic shadowed light per fixture on mobile"
+  },
+  {
+    "stableId": "EGI.CanopyLight.036.light",
+    "positionM": [
+      78,
+      10.675,
+      4.94
+    ],
+    "direction": [
+      0,
+      0,
+      -1
+    ],
+    "colourLinear": [
+      1,
+      0.88,
+      0.72
+    ],
+    "previewWatts": 150,
+    "engineIntensity": "calibrate in engine; Blender watts are not Unreal lumens",
+    "sourceSizeM": [
+      1.16,
+      0.15
+    ],
+    "castShadowSuggested": false,
+    "runtimeBinding": "night lighting preset; do not create one dynamic shadowed light per fixture on mobile"
+  },
+  {
+    "stableId": "EGI.CanopyLight.037.light",
+    "positionM": [
+      90,
+      10.675,
+      4.94
+    ],
+    "direction": [
+      0,
+      0,
+      -1
+    ],
+    "colourLinear": [
+      1,
+      0.88,
+      0.72
+    ],
+    "previewWatts": 150,
+    "engineIntensity": "calibrate in engine; Blender watts are not Unreal lumens",
+    "sourceSizeM": [
+      1.16,
+      0.15
+    ],
+    "castShadowSuggested": false,
+    "runtimeBinding": "night lighting preset; do not create one dynamic shadowed light per fixture on mobile"
+  },
+  {
+    "stableId": "EGI.CanopyLight.043.light",
+    "positionM": [
+      -90,
+      27.025,
+      4.94
+    ],
+    "direction": [
+      0,
+      0,
+      -1
+    ],
+    "colourLinear": [
+      1,
+      0.88,
+      0.72
+    ],
+    "previewWatts": 150,
+    "engineIntensity": "calibrate in engine; Blender watts are not Unreal lumens",
+    "sourceSizeM": [
+      1.16,
+      0.15
+    ],
+    "castShadowSuggested": false,
+    "runtimeBinding": "night lighting preset; do not create one dynamic shadowed light per fixture on mobile"
+  },
+  {
+    "stableId": "EGI.CanopyLight.044.light",
+    "positionM": [
+      -78,
+      27.025,
+      4.94
+    ],
+    "direction": [
+      0,
+      0,
+      -1
+    ],
+    "colourLinear": [
+      1,
+      0.88,
+      0.72
+    ],
+    "previewWatts": 150,
+    "engineIntensity": "calibrate in engine; Blender watts are not Unreal lumens",
+    "sourceSizeM": [
+      1.16,
+      0.15
+    ],
+    "castShadowSuggested": false,
+    "runtimeBinding": "night lighting preset; do not create one dynamic shadowed light per fixture on mobile"
+  },
+  {
+    "stableId": "EGI.CanopyLight.045.light",
+    "positionM": [
+      -66,
+      27.025,
+      4.94
+    ],
+    "direction": [
+      0,
+      0,
+      -1
+    ],
+    "colourLinear": [
+      1,
+      0.88,
+      0.72
+    ],
+    "previewWatts": 150,
+    "engineIntensity": "calibrate in engine; Blender watts are not Unreal lumens",
+    "sourceSizeM": [
+      1.16,
+      0.15
+    ],
+    "castShadowSuggested": false,
+    "runtimeBinding": "night lighting preset; do not create one dynamic shadowed light per fixture on mobile"
+  },
+  {
+    "stableId": "EGI.CanopyLight.046.light",
+    "positionM": [
+      -54,
+      27.025,
+      4.94
+    ],
+    "direction": [
+      0,
+      0,
+      -1
+    ],
+    "colourLinear": [
+      1,
+      0.88,
+      0.72
+    ],
+    "previewWatts": 150,
+    "engineIntensity": "calibrate in engine; Blender watts are not Unreal lumens",
+    "sourceSizeM": [
+      1.16,
+      0.15
+    ],
+    "castShadowSuggested": false,
+    "runtimeBinding": "night lighting preset; do not create one dynamic shadowed light per fixture on mobile"
+  },
+  {
+    "stableId": "EGI.CanopyLight.047.light",
+    "positionM": [
+      -42,
+      27.025,
+      4.94
+    ],
+    "direction": [
+      0,
+      0,
+      -1
+    ],
+    "colourLinear": [
+      1,
+      0.88,
+      0.72
+    ],
+    "previewWatts": 150,
+    "engineIntensity": "calibrate in engine; Blender watts are not Unreal lumens",
+    "sourceSizeM": [
+      1.16,
+      0.15
+    ],
+    "castShadowSuggested": false,
+    "runtimeBinding": "night lighting preset; do not create one dynamic shadowed light per fixture on mobile"
+  },
+  {
+    "stableId": "EGI.CanopyLight.048.light",
+    "positionM": [
+      -30,
+      27.025,
+      4.94
+    ],
+    "direction": [
+      0,
+      0,
+      -1
+    ],
+    "colourLinear": [
+      1,
+      0.88,
+      0.72
+    ],
+    "previewWatts": 150,
+    "engineIntensity": "calibrate in engine; Blender watts are not Unreal lumens",
+    "sourceSizeM": [
+      1.16,
+      0.15
+    ],
+    "castShadowSuggested": false,
+    "runtimeBinding": "night lighting preset; do not create one dynamic shadowed light per fixture on mobile"
+  },
+  {
+    "stableId": "EGI.CanopyLight.049.light",
+    "positionM": [
+      -18,
+      27.025,
+      4.94
+    ],
+    "direction": [
+      0,
+      0,
+      -1
+    ],
+    "colourLinear": [
+      1,
+      0.88,
+      0.72
+    ],
+    "previewWatts": 150,
+    "engineIntensity": "calibrate in engine; Blender watts are not Unreal lumens",
+    "sourceSizeM": [
+      1.16,
+      0.15
+    ],
+    "castShadowSuggested": false,
+    "runtimeBinding": "night lighting preset; do not create one dynamic shadowed light per fixture on mobile"
+  },
+  {
+    "stableId": "EGI.CanopyLight.050.light",
+    "positionM": [
+      -6,
+      27.025,
+      4.94
+    ],
+    "direction": [
+      0,
+      0,
+      -1
+    ],
+    "colourLinear": [
+      1,
+      0.88,
+      0.72
+    ],
+    "previewWatts": 150,
+    "engineIntensity": "calibrate in engine; Blender watts are not Unreal lumens",
+    "sourceSizeM": [
+      1.16,
+      0.15
+    ],
+    "castShadowSuggested": false,
+    "runtimeBinding": "night lighting preset; do not create one dynamic shadowed light per fixture on mobile"
+  },
+  {
+    "stableId": "EGI.CanopyLight.051.light",
+    "positionM": [
+      6,
+      27.025,
+      4.94
+    ],
+    "direction": [
+      0,
+      0,
+      -1
+    ],
+    "colourLinear": [
+      1,
+      0.88,
+      0.72
+    ],
+    "previewWatts": 150,
+    "engineIntensity": "calibrate in engine; Blender watts are not Unreal lumens",
+    "sourceSizeM": [
+      1.16,
+      0.15
+    ],
+    "castShadowSuggested": false,
+    "runtimeBinding": "night lighting preset; do not create one dynamic shadowed light per fixture on mobile"
+  },
+  {
+    "stableId": "EGI.CanopyLight.052.light",
+    "positionM": [
+      18,
+      27.025,
+      4.94
+    ],
+    "direction": [
+      0,
+      0,
+      -1
+    ],
+    "colourLinear": [
+      1,
+      0.88,
+      0.72
+    ],
+    "previewWatts": 150,
+    "engineIntensity": "calibrate in engine; Blender watts are not Unreal lumens",
+    "sourceSizeM": [
+      1.16,
+      0.15
+    ],
+    "castShadowSuggested": false,
+    "runtimeBinding": "night lighting preset; do not create one dynamic shadowed light per fixture on mobile"
+  },
+  {
+    "stableId": "EGI.CanopyLight.053.light",
+    "positionM": [
+      30,
+      27.025,
+      4.94
+    ],
+    "direction": [
+      0,
+      0,
+      -1
+    ],
+    "colourLinear": [
+      1,
+      0.88,
+      0.72
+    ],
+    "previewWatts": 150,
+    "engineIntensity": "calibrate in engine; Blender watts are not Unreal lumens",
+    "sourceSizeM": [
+      1.16,
+      0.15
+    ],
+    "castShadowSuggested": false,
+    "runtimeBinding": "night lighting preset; do not create one dynamic shadowed light per fixture on mobile"
+  },
+  {
+    "stableId": "EGI.CanopyLight.054.light",
+    "positionM": [
+      42,
+      27.025,
+      4.94
+    ],
+    "direction": [
+      0,
+      0,
+      -1
+    ],
+    "colourLinear": [
+      1,
+      0.88,
+      0.72
+    ],
+    "previewWatts": 150,
+    "engineIntensity": "calibrate in engine; Blender watts are not Unreal lumens",
+    "sourceSizeM": [
+      1.16,
+      0.15
+    ],
+    "castShadowSuggested": false,
+    "runtimeBinding": "night lighting preset; do not create one dynamic shadowed light per fixture on mobile"
+  },
+  {
+    "stableId": "EGI.CanopyLight.055.light",
+    "positionM": [
+      78,
+      27.025,
+      4.94
+    ],
+    "direction": [
+      0,
+      0,
+      -1
+    ],
+    "colourLinear": [
+      1,
+      0.88,
+      0.72
+    ],
+    "previewWatts": 150,
+    "engineIntensity": "calibrate in engine; Blender watts are not Unreal lumens",
+    "sourceSizeM": [
+      1.16,
+      0.15
+    ],
+    "castShadowSuggested": false,
+    "runtimeBinding": "night lighting preset; do not create one dynamic shadowed light per fixture on mobile"
+  },
+  {
+    "stableId": "EGI.CanopyLight.056.light",
+    "positionM": [
+      90,
+      27.025,
+      4.94
+    ],
+    "direction": [
+      0,
+      0,
+      -1
+    ],
+    "colourLinear": [
+      1,
+      0.88,
+      0.72
+    ],
+    "previewWatts": 150,
+    "engineIntensity": "calibrate in engine; Blender watts are not Unreal lumens",
+    "sourceSizeM": [
+      1.16,
+      0.15
+    ],
+    "castShadowSuggested": false,
+    "runtimeBinding": "night lighting preset; do not create one dynamic shadowed light per fixture on mobile"
+  }
+]

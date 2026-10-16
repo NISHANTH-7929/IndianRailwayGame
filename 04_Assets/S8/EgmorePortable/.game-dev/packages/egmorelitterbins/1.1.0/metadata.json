@@ -1,0 +1,162 @@
+{
+  "assetId": "egmorelitterbins",
+  "description": "Original metric Egmore study module; estimated dimensions, visual acceptance and Android integration pending",
+  "displayName": "EgmoreLitterBins",
+  "inspection": {
+    "animationCount": 0,
+    "boundingBox": {
+      "max": [
+        0.6050000190734863,
+        0.8999999761581421,
+        0.25999999046325684
+      ],
+      "min": [
+        -0.6050000190734863,
+        -0.03999999165534973,
+        -0.2549999952316284
+      ],
+      "sizeMeters": [
+        1.2100000381469727,
+        0.9399999678134918,
+        0.5149999856948853
+      ]
+    },
+    "boundingBoxEmpty": false,
+    "fileBytes": 5745668,
+    "filePath": "model.glb",
+    "generator": "glTF-Transform v4.5.1",
+    "hasNormals": true,
+    "hasSkin": false,
+    "hasTangents": true,
+    "hasUVs": true,
+    "materialCount": 5,
+    "meshCount": 1,
+    "pbr": {
+      "hasBaseColorTexture": true,
+      "hasEmissiveTexture": false,
+      "hasMetallicRoughnessTexture": true,
+      "hasNormalTexture": true,
+      "hasOcclusionTexture": false
+    },
+    "primitiveCount": 5,
+    "sceneGraphFallback": false,
+    "textureCount": 15,
+    "textureResolutions": [
+      {
+        "bytes": 389602,
+        "height": 512,
+        "mimeType": "image/png",
+        "name": "T_EgmoreBlue_N",
+        "width": 512
+      },
+      {
+        "bytes": 388812,
+        "height": 512,
+        "mimeType": "image/png",
+        "name": "T_EgmoreBlue_BC",
+        "width": 512
+      },
+      {
+        "bytes": 445704,
+        "height": 512,
+        "mimeType": "image/png",
+        "name": "T_EgmoreBlue_ORM",
+        "width": 512
+      },
+      {
+        "bytes": 389755,
+        "height": 512,
+        "mimeType": "image/png",
+        "name": "T_Galvanized_N",
+        "width": 512
+      },
+      {
+        "bytes": 326189,
+        "height": 512,
+        "mimeType": "image/png",
+        "name": "T_Galvanized_BC",
+        "width": 512
+      },
+      {
+        "bytes": 449269,
+        "height": 512,
+        "mimeType": "image/png",
+        "name": "T_Galvanized_ORM",
+        "width": 512
+      },
+      {
+        "bytes": 389959,
+        "height": 512,
+        "mimeType": "image/png",
+        "name": "T_Black_N",
+        "width": 512
+      },
+      {
+        "bytes": 107689,
+        "height": 512,
+        "mimeType": "image/png",
+        "name": "T_Black_BC",
+        "width": 512
+      },
+      {
+        "bytes": 432894,
+        "height": 512,
+        "mimeType": "image/png",
+        "name": "T_Black_ORM",
+        "width": 512
+      },
+      {
+        "bytes": 389780,
+        "height": 512,
+        "mimeType": "image/png",
+        "name": "T_Cream_N",
+        "width": 512
+      },
+      {
+        "bytes": 402788,
+        "height": 512,
+        "mimeType": "image/png",
+        "name": "T_Cream_BC",
+        "width": 512
+      },
+      {
+        "bytes": 434391,
+        "height": 512,
+        "mimeType": "image/png",
+        "name": "T_Cream_ORM",
+        "width": 512
+      },
+      {
+        "bytes": 390229,
+        "height": 512,
+        "mimeType": "image/png",
+        "name": "T_Steel_N",
+        "width": 512
+      },
+      {
+        "bytes": 256548,
+        "height": 512,
+        "mimeType": "image/png",
+        "name": "T_Steel_BC",
+        "width": 512
+      },
+      {
+        "bytes": 448273,
+        "height": 512,
+        "mimeType": "image/png",
+        "name": "T_Steel_ORM",
+        "width": 512
+      }
+    ],
+    "triangleCount": 908,
+    "undrawnMeshCount": 0,
+    "undrawnPrimitiveCount": 0,
+    "undrawnTriangleCount": 0,
+    "vertexCount": 1886,
+    "warnings": [
+      "texture is below 1024px on an axis and will blur at close range: T_EgmoreBlue_N (512x512), T_EgmoreBlue_BC (512x512), T_EgmoreBlue_ORM (512x512), T_Galvanized_N (512x512) (+11 more)"
+    ]
+  },
+  "license": "LicenseRef-ProjectOriginal",
+  "schema": "game_dev.asset_metadata.v1"
+}

@@ -1,0 +1,59 @@
+{
+  "schema": "game_dev.receipt.v1",
+  "operation": "package.verify",
+  "result": {
+    "schema": "game_dev.package_verification.v1",
+    "packagePath": "D:\\Project\\IndianRailwayGame\\04_Assets\\S8\\EgmorePortable\\.game-dev\\packages\\egmorewaterpoint\\1.1.0",
+    "manifest": {
+      "assetId": "egmorewaterpoint",
+      "description": "Original metric Egmore study module; estimated dimensions, visual acceptance and Android integration pending",
+      "displayName": "EgmoreWaterPoint",
+      "files": [
+        {
+          "bytes": 6221272,
+          "kind": "model",
+          "path": "model.glb",
+          "sha256": "60959a3e60d13d8d925b45573b461687c42894fac7c0ef10a18f7bf378f7ef61"
+        },
+        {
+          "bytes": 3888,
+          "kind": "metadata",
+          "path": "metadata.json",
+          "sha256": "f475ccc6d2e6c7fcffb1275f020d823a5a448a235bf3ad5b74e06b8b2df54490"
+        },
+        {
+          "bytes": 626,
+          "kind": "provenance",
+          "path": "provenance.json",
+          "sha256": "a7e28d30b03c0797ee2342683c0cba5d7e71bca86ca47d4091281ac91091241f"
+        },
+        {
+          "bytes": 4319,
+          "kind": "validation",
+          "path": "validation.json",
+          "sha256": "e52041ed733021bfaa76d706d662af9118334352e1dda9776db62b7403904a6f"
+        }
+      ],
+      "license": "LicenseRef-ProjectOriginal",
+      "model": "model.glb",
+      "packageId": "pkg_bcb243e8326e51940f8e2047",
+      "provenance": {
+        "origin": "authored"
+      },
+      "schema": "game_dev.asset_package.v1",
+      "validation": {
+        "errorCount": 0,
+        "passed": true,
+        "warningCount": 0
+      },
+      "version": "1.1.0"
+    },
+    "hashesVerified": true,
+    "evidence": {
+      "packageBytesVerified": true,
+      "gpuImportTestPerformed": false,
+      "humanVisualReviewPerformed": false
+    }
+  },
+  "completedAt": "2026-10-04T08:04:35.069Z"
+}

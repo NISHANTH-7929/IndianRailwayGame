@@ -1,0 +1,80 @@
+{
+  "passed": true,
+  "apkSha256": "2b52b9f0b321173106e1dfe39db410cf3f2451b9d5debee62ef7e0da676018b7",
+  "sourceRecovery": "D:\\Project\\IndianRailwayGame\\07_Documentation\\S8\\Workstreams\\StationArt\\Device\\oct09-scene02-cold-recovery2",
+  "engineStartEpoch": 1791509365.0,
+  "groups": [
+    {
+      "name": "kernel",
+      "count": 39,
+      "passed": true,
+      "modifiedEpoch": 1791509370,
+      "freshAfterEngineStart": true
+    },
+    {
+      "name": "handling",
+      "count": 28,
+      "passed": true,
+      "modifiedEpoch": 1791509370,
+      "freshAfterEngineStart": true
+    },
+    {
+      "name": "operations",
+      "count": 39,
+      "passed": true,
+      "modifiedEpoch": 1791509370,
+      "freshAfterEngineStart": true
+    },
+    {
+      "name": "ai",
+      "count": 36,
+      "passed": true,
+      "modifiedEpoch": 1791509370,
+      "freshAfterEngineStart": true
+    },
+    {
+      "name": "content",
+      "count": 7,
+      "passed": true,
+      "modifiedEpoch": 1791509370,
+      "freshAfterEngineStart": true
+    },
+    {
+      "name": "record",
+      "count": 15,
+      "passed": true,
+      "modifiedEpoch": 1791509370,
+      "freshAfterEngineStart": true
+    },
+    {
+      "name": "world-snapshot",
+      "count": 19,
+      "passed": true,
+      "modifiedEpoch": 1791509370,
+      "freshAfterEngineStart": true
+    },
+    {
+      "name": "checkpoint",
+      "count": 9,
+      "passed": true,
+      "modifiedEpoch": 1791509370,
+      "freshAfterEngineStart": true
+    },
+    {
+      "name": "lhb",
+      "count": 25,
+      "passed": true,
+      "modifiedEpoch": 1791509371,
+      "freshAfterEngineStart": true
+    },
+    {
+      "name": "service",
+      "count": 46,
+      "passed": true,
+      "modifiedEpoch": 1791509373,
+      "freshAfterEngineStart": true
+    }
+  ],
+  "caseCount": 263,
+  "deviceStateUnchanged": true
+}

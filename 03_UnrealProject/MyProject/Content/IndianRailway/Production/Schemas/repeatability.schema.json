@@ -1,0 +1,225 @@
+{
+  "type": "object",
+  "properties": {
+    "firstContent": {
+      "type": "string",
+      "pattern": "^[A-Z][A-Za-z0-9]*(\\.[A-Za-z0-9]+){2,}$"
+    },
+    "secondContent": {
+      "type": "string",
+      "pattern": "^[A-Z][A-Za-z0-9]*(\\.[A-Za-z0-9]+){2,}$"
+    },
+    "status": {
+      "enum": [
+        "pending",
+        "passed",
+        "failed"
+      ]
+    },
+    "contentEvidence": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "sourceChangeManifest": {
+      "type": "string",
+      "minLength": 1
+    },
+    "checks": {
+      "type": "object",
+      "properties": {
+        "samePipeline": {
+          "type": "object",
+          "properties": {
+            "status": {
+              "enum": [
+                "pending",
+                "passed",
+                "failed"
+              ]
+            },
+            "evidence": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              }
+            }
+          },
+          "required": [
+            "status",
+            "evidence"
+          ],
+          "additionalProperties": false
+        },
+        "noPhysicsRewrite": {
+          "type": "object",
+          "properties": {
+            "status": {
+              "enum": [
+                "pending",
+                "passed",
+                "failed"
+              ]
+            },
+            "evidence": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              }
+            }
+          },
+          "required": [
+            "status",
+            "evidence"
+          ],
+          "additionalProperties": false
+        },
+        "noAuthorityRewrite": {
+          "type": "object",
+          "properties": {
+            "status": {
+              "enum": [
+                "pending",
+                "passed",
+                "failed"
+              ]
+            },
+            "evidence": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              }
+            }
+          },
+          "required": [
+            "status",
+            "evidence"
+          ],
+          "additionalProperties": false
+        },
+        "noDuplicateAI": {
+          "type": "object",
+          "properties": {
+            "status": {
+              "enum": [
+                "pending",
+                "passed",
+                "failed"
+              ]
+            },
+            "evidence": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              }
+            }
+          },
+          "required": [
+            "status",
+            "evidence"
+          ],
+          "additionalProperties": false
+        },
+        "noDuplicateScoring": {
+          "type": "object",
+          "properties": {
+            "status": {
+              "enum": [
+                "pending",
+                "passed",
+                "failed"
+              ]
+            },
+            "evidence": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              }
+            }
+          },
+          "required": [
+            "status",
+            "evidence"
+          ],
+          "additionalProperties": false
+        },
+        "noLevelBlueprintLogic": {
+          "type": "object",
+          "properties": {
+            "status": {
+              "enum": [
+                "pending",
+                "passed",
+                "failed"
+              ]
+            },
+            "evidence": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              }
+            }
+          },
+          "required": [
+            "status",
+            "evidence"
+          ],
+          "additionalProperties": false
+        },
+        "noSpecialWidgets": {
+          "type": "object",
+          "properties": {
+            "status": {
+              "enum": [
+                "pending",
+                "passed",
+                "failed"
+              ]
+            },
+            "evidence": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              }
+            }
+          },
+          "required": [
+            "status",
+            "evidence"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "samePipeline",
+        "noPhysicsRewrite",
+        "noAuthorityRewrite",
+        "noDuplicateAI",
+        "noDuplicateScoring",
+        "noLevelBlueprintLogic",
+        "noSpecialWidgets"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "firstContent",
+    "secondContent",
+    "status",
+    "contentEvidence",
+    "sourceChangeManifest",
+    "checks"
+  ],
+  "additionalProperties": false,
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:indianrailway:s8:repeatability"
+}

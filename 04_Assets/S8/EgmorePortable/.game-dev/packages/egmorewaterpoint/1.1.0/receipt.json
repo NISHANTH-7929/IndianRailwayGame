@@ -1,0 +1,23 @@
+{
+  "completedAt": "2026-10-04T08:04:34.400Z",
+  "destination": {
+    "assetId": "egmorewaterpoint",
+    "version": "1.1.0"
+  },
+  "evidence": {
+    "blenderNormalizationPerformed": false,
+    "gpuImportTestPerformed": false,
+    "humanVisualReviewPerformed": false,
+    "modelBytesCopiedAndHashed": true,
+    "policyValidationCompleted": true,
+    "staticInspectionCompleted": true
+  },
+  "manifestSha256": "8cca818dd9b575568d5b8fc72c129d5ee8dbb1abdd4ee47f53bee2fda0a7bc4e",
+  "packageId": "pkg_bcb243e8326e51940f8e2047",
+  "schema": "game_dev.package_receipt.v1",
+  "source": {
+    "bytes": 6221272,
+    "fileName": "EgmoreWaterPoint.glb",
+    "sha256": "60959a3e60d13d8d925b45573b461687c42894fac7c0ef10a18f7bf378f7ef61"
+  }
+}

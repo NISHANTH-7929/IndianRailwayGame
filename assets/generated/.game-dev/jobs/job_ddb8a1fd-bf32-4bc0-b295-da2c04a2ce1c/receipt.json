@@ -1,0 +1,59 @@
+{
+  "schema": "game_dev.receipt.v1",
+  "operation": "package.verify",
+  "result": {
+    "schema": "game_dev.package_verification.v1",
+    "packagePath": "D:\\Project\\IndianRailwayGame\\04_Assets\\S8\\EgmorePortable\\.game-dev\\packages\\egmoretower4m\\1.4.0",
+    "manifest": {
+      "assetId": "egmoretower4m",
+      "description": "Original estimated Egmore tower with side niches and cornice returns; not surveyed or visually accepted",
+      "displayName": "EgmoreTower4m",
+      "files": [
+        {
+          "bytes": 8308128,
+          "kind": "model",
+          "path": "model.glb",
+          "sha256": "955143a7f9ec8a84d7ea60b5876b1df910e04eefdc40bdd36e4060e857ee8106"
+        },
+        {
+          "bytes": 3407,
+          "kind": "metadata",
+          "path": "metadata.json",
+          "sha256": "b3e20e6cd018965888dc6967f6012322f188b3e97736eccf5354f83b2496aa84"
+        },
+        {
+          "bytes": 706,
+          "kind": "provenance",
+          "path": "provenance.json",
+          "sha256": "45d4d10dd531a6d6b59530d7b0543e2bc7829d2f1d73b624f4b4442cbc28f052"
+        },
+        {
+          "bytes": 4319,
+          "kind": "validation",
+          "path": "validation.json",
+          "sha256": "9071571806c41546ec77f354772f9236de784399f6d3956dc8e8a7f322dc29b1"
+        }
+      ],
+      "license": "LicenseRef-ProjectOriginal",
+      "model": "model.glb",
+      "packageId": "pkg_5f917a1ee46f63849240c326",
+      "provenance": {
+        "origin": "authored"
+      },
+      "schema": "game_dev.asset_package.v1",
+      "validation": {
+        "errorCount": 0,
+        "passed": true,
+        "warningCount": 0
+      },
+      "version": "1.4.0"
+    },
+    "hashesVerified": true,
+    "evidence": {
+      "packageBytesVerified": true,
+      "gpuImportTestPerformed": false,
+      "humanVisualReviewPerformed": false
+    }
+  },
+  "completedAt": "2026-10-05T12:43:59.993Z"
+}

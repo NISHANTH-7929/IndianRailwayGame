@@ -1,0 +1,59 @@
+{
+  "schema": "game_dev.receipt.v1",
+  "operation": "package.verify",
+  "result": {
+    "schema": "game_dev.package_verification.v1",
+    "packagePath": "D:\\Project\\IndianRailwayGame\\04_Assets\\S8\\EgmorePortable\\.game-dev\\packages\\egmorewaterpoint\\1.3.0",
+    "manifest": {
+      "assetId": "egmorewaterpoint",
+      "description": "Original Egmore study with rear facade and aggregate ballast material; estimated dimensions, visual acceptance pending",
+      "displayName": "EgmoreWaterPoint",
+      "files": [
+        {
+          "bytes": 6221272,
+          "kind": "model",
+          "path": "model.glb",
+          "sha256": "0d2cec76e6072b563dc70b79864989f312c2b0d709de35672a6dff7b5a5402c0"
+        },
+        {
+          "bytes": 3898,
+          "kind": "metadata",
+          "path": "metadata.json",
+          "sha256": "79c6a4fcd107863b3d7a83587781335104d452e9977fd488c11b7a5ee2cc9677"
+        },
+        {
+          "bytes": 626,
+          "kind": "provenance",
+          "path": "provenance.json",
+          "sha256": "bd07cf11990239239ae12ecb660939ae6aa103300bd27bfe0fdd02564feacd0e"
+        },
+        {
+          "bytes": 4319,
+          "kind": "validation",
+          "path": "validation.json",
+          "sha256": "e52041ed733021bfaa76d706d662af9118334352e1dda9776db62b7403904a6f"
+        }
+      ],
+      "license": "LicenseRef-ProjectOriginal",
+      "model": "model.glb",
+      "packageId": "pkg_7f933f40d68e11622c03ab4e",
+      "provenance": {
+        "origin": "authored"
+      },
+      "schema": "game_dev.asset_package.v1",
+      "validation": {
+        "errorCount": 0,
+        "passed": true,
+        "warningCount": 0
+      },
+      "version": "1.3.0"
+    },
+    "hashesVerified": true,
+    "evidence": {
+      "packageBytesVerified": true,
+      "gpuImportTestPerformed": false,
+      "humanVisualReviewPerformed": false
+    }
+  },
+  "completedAt": "2026-10-04T09:08:07.415Z"
+}

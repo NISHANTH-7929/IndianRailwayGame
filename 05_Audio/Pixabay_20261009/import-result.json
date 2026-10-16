@@ -1,0 +1,22 @@
+[
+  {
+    "asset": "/Game/IndianRailway/S8/Audio/SW_Rail",
+    "duration": 5.3420000076293945,
+    "looping": true
+  },
+  {
+    "asset": "/Game/IndianRailway/S8/Audio/SW_Station",
+    "duration": 32.52799987792969,
+    "looping": true
+  },
+  {
+    "asset": "/Game/IndianRailway/S8/Audio/SW_Horn",
+    "duration": 3.999979257583618,
+    "looping": false
+  },
+  {
+    "asset": "/Game/IndianRailway/S8/Audio/SW_Brake",
+    "duration": 3.9600000381469727,
+    "looping": false
+  }
+]

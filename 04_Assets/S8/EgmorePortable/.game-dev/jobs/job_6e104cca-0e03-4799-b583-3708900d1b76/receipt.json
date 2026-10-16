@@ -1,0 +1,59 @@
+{
+  "schema": "game_dev.receipt.v1",
+  "operation": "package.verify",
+  "result": {
+    "schema": "game_dev.package_verification.v1",
+    "packagePath": "D:\\Project\\IndianRailwayGame\\04_Assets\\S8\\EgmorePortable\\.game-dev\\packages\\egmoreceilingfan\\1.0.0",
+    "manifest": {
+      "assetId": "egmoreceilingfan",
+      "description": "Original metric Egmore study module; estimated dimensions, visual acceptance and Android integration pending",
+      "displayName": "EgmoreCeilingFan",
+      "files": [
+        {
+          "bytes": 3542572,
+          "kind": "model",
+          "path": "model.glb",
+          "sha256": "9c15ab73a13d756a2488d7bde3550479a35b118b7be87fcd8374299527d966b7"
+        },
+        {
+          "bytes": 2966,
+          "kind": "metadata",
+          "path": "metadata.json",
+          "sha256": "c7302915b50379ac7a3348a8b0a3fe279e21c7c64a32a253e6ea837c0b5c5ca4"
+        },
+        {
+          "bytes": 626,
+          "kind": "provenance",
+          "path": "provenance.json",
+          "sha256": "697877b5b4115a9cbc71e39a8b8f57399fbe47b80003f9f1e6cd622c9f2dfbf4"
+        },
+        {
+          "bytes": 4300,
+          "kind": "validation",
+          "path": "validation.json",
+          "sha256": "ae88cd8a5fdf7f26969dad1651f864fbc41055ff9356de5107c8435205a60356"
+        }
+      ],
+      "license": "LicenseRef-ProjectOriginal",
+      "model": "model.glb",
+      "packageId": "pkg_f24fc28cc55e44ca2134e4bf",
+      "provenance": {
+        "origin": "authored"
+      },
+      "schema": "game_dev.asset_package.v1",
+      "validation": {
+        "errorCount": 0,
+        "passed": true,
+        "warningCount": 0
+      },
+      "version": "1.0.0"
+    },
+    "hashesVerified": true,
+    "evidence": {
+      "packageBytesVerified": true,
+      "gpuImportTestPerformed": false,
+      "humanVisualReviewPerformed": false
+    }
+  },
+  "completedAt": "2026-10-04T03:26:20.477Z"
+}

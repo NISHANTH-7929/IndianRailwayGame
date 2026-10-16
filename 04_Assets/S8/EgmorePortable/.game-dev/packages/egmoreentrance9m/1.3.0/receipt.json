@@ -1,0 +1,23 @@
+{
+  "completedAt": "2026-10-04T09:07:58.788Z",
+  "destination": {
+    "assetId": "egmoreentrance9m",
+    "version": "1.3.0"
+  },
+  "evidence": {
+    "blenderNormalizationPerformed": false,
+    "gpuImportTestPerformed": false,
+    "humanVisualReviewPerformed": false,
+    "modelBytesCopiedAndHashed": true,
+    "policyValidationCompleted": true,
+    "staticInspectionCompleted": true
+  },
+  "manifestSha256": "654441b0ec56512b1e1dd3ec8bec0a55fab341cc75fbef1e9ae8dbf10326729a",
+  "packageId": "pkg_738bd045a6a1872c4f6f88e5",
+  "schema": "game_dev.package_receipt.v1",
+  "source": {
+    "bytes": 4840272,
+    "fileName": "EgmoreEntrance9m.glb",
+    "sha256": "b07fb9c5dff11b7a82dc1b837dea8f7eea3b606de02509f5af0b5cdad31610ee"
+  }
+}

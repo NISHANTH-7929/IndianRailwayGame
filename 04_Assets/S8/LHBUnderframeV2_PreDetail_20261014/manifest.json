@@ -1,0 +1,93 @@
+{
+  "visual_reference": "User attached LHB coach photo, 2026-10-13; reference only, no pixel reuse",
+  "engineering_replica": false,
+  "source_shell": "LHB_Sketchfab_c6c3d431/Prepared/LHB3A_Candidate.blend",
+  "removed_underfloor_vertices": 26777,
+  "glass_faces_refined": 48,
+  "visible_outer_glass_faces": 26,
+  "research": [
+    "https://rdso.indianrailways.gov.in/uploads/files/Revised_LHB_Manual_Vol_II_Chapter_I_Introduction_Draft.pdf"
+  ],
+  "parts": [
+    {
+      "name": "SM_LHB_BodyV2",
+      "triangles": 97914,
+      "vertices": 51635,
+      "bounds_m": [
+        [
+          -12.0,
+          12.0
+        ],
+        [
+          -1.628000020980835,
+          1.628000020980835
+        ],
+        [
+          0.334576278924942,
+          4.25
+        ]
+      ],
+      "sha256": "0f73f40314e7308f27fce9f199d572f6f1d682c00774676e87923b55eaae814f",
+      "materials": [
+        "Material.004",
+        "Material.006",
+        "Material.012",
+        "Material.015",
+        "Material.017",
+        "Material.018",
+        "Material.019",
+        "Material.016",
+        "Material.021",
+        "Material.024",
+        "Material.011",
+        "Material.026",
+        "Material.027",
+        "Material.028",
+        "Material.001",
+        "Material",
+        "Material.029",
+        "Material.005",
+        "Material.002",
+        "",
+        "Material.020",
+        "LHB_Lettering",
+        "LHB_GlassV2",
+        "FrameSteel",
+        "DarkSteel",
+        "DustSteel",
+        "PistonSteel",
+        "TankIvory",
+        "Rubber",
+        "WeldSteel"
+      ]
+    },
+    {
+      "name": "SM_LHB_BogieV2",
+      "triangles": 30224,
+      "vertices": 15536,
+      "bounds_m": [
+        [
+          -1.7750000953674316,
+          1.7750000953674316
+        ],
+        [
+          -1.3250000476837158,
+          1.3249999284744263
+        ],
+        [
+          0.29249995946884155,
+          1.3650000095367432
+        ]
+      ],
+      "sha256": "ada94851f51b49d790ce5f4460ef9af08008adad1a783f85661378de57b2d909",
+      "materials": [
+        "FrameSteel",
+        "DustSteel",
+        "WeldSteel",
+        "DarkSteel",
+        "PistonSteel",
+        "Rubber"
+      ]
+    }
+  ]
+}

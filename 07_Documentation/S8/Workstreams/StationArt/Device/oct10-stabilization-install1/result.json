@@ -1,0 +1,12 @@
+{
+  "apk": "D:\\Project\\IndianRailwayGame\\08_Builds\\S8_EgmoreService_20261010-214817\\Android_ASTC\\MyProject-arm64.apk",
+  "expectedSha256": "9483a78c0df9bea5cdb57b1954a27b9a487863241e11a87fadc4db7b8b0f86d3",
+  "installed": null,
+  "savesUnchanged": null,
+  "commandlineUnchanged": null,
+  "wakeUnchanged": null,
+  "verificationStatus": "not-run",
+  "transferMode": "streamed",
+  "installExitCode": 1,
+  "error": "Replace-install failed; no destructive fallback allowed"
+}

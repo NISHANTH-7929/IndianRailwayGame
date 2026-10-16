@@ -1,0 +1,120 @@
+{
+  "assetId": "egmoreplatformboard",
+  "description": "Original Egmore study with rear facade and aggregate ballast material; estimated dimensions, visual acceptance pending",
+  "displayName": "EgmorePlatformBoard",
+  "inspection": {
+    "animationCount": 0,
+    "boundingBox": {
+      "max": [
+        0.625,
+        2.6500000953674316,
+        0.10500000417232513
+      ],
+      "min": [
+        -0.625,
+        1.100000023841858,
+        -0.09000000357627869
+      ],
+      "sizeMeters": [
+        1.25,
+        1.5500000715255737,
+        0.19500000774860382
+      ]
+    },
+    "boundingBoxEmpty": false,
+    "fileBytes": 3664684,
+    "filePath": "model.glb",
+    "generator": "glTF-Transform v4.5.1",
+    "hasNormals": true,
+    "hasSkin": false,
+    "hasTangents": true,
+    "hasUVs": true,
+    "materialCount": 3,
+    "meshCount": 1,
+    "pbr": {
+      "hasBaseColorTexture": true,
+      "hasEmissiveTexture": false,
+      "hasMetallicRoughnessTexture": true,
+      "hasNormalTexture": true,
+      "hasOcclusionTexture": false
+    },
+    "primitiveCount": 3,
+    "sceneGraphFallback": false,
+    "textureCount": 9,
+    "textureResolutions": [
+      {
+        "bytes": 389602,
+        "height": 512,
+        "mimeType": "image/png",
+        "name": "T_EgmoreBlue_N",
+        "width": 512
+      },
+      {
+        "bytes": 388812,
+        "height": 512,
+        "mimeType": "image/png",
+        "name": "T_EgmoreBlue_BC",
+        "width": 512
+      },
+      {
+        "bytes": 445704,
+        "height": 512,
+        "mimeType": "image/png",
+        "name": "T_EgmoreBlue_ORM",
+        "width": 512
+      },
+      {
+        "bytes": 389780,
+        "height": 512,
+        "mimeType": "image/png",
+        "name": "T_Cream_N",
+        "width": 512
+      },
+      {
+        "bytes": 402788,
+        "height": 512,
+        "mimeType": "image/png",
+        "name": "T_Cream_BC",
+        "width": 512
+      },
+      {
+        "bytes": 434391,
+        "height": 512,
+        "mimeType": "image/png",
+        "name": "T_Cream_ORM",
+        "width": 512
+      },
+      {
+        "bytes": 390229,
+        "height": 512,
+        "mimeType": "image/png",
+        "name": "T_Steel_N",
+        "width": 512
+      },
+      {
+        "bytes": 256548,
+        "height": 512,
+        "mimeType": "image/png",
+        "name": "T_Steel_BC",
+        "width": 512
+      },
+      {
+        "bytes": 448273,
+        "height": 512,
+        "mimeType": "image/png",
+        "name": "T_Steel_ORM",
+        "width": 512
+      }
+    ],
+    "triangleCount": 1504,
+    "undrawnMeshCount": 0,
+    "undrawnPrimitiveCount": 0,
+    "undrawnTriangleCount": 0,
+    "vertexCount": 2182,
+    "warnings": [
+      "texture is below 1024px on an axis and will blur at close range: T_EgmoreBlue_N (512x512), T_EgmoreBlue_BC (512x512), T_EgmoreBlue_ORM (512x512), T_Cream_N (512x512) (+5 more)"
+    ]
+  },
+  "license": "LicenseRef-ProjectOriginal",
+  "schema": "game_dev.asset_metadata.v1"
+}

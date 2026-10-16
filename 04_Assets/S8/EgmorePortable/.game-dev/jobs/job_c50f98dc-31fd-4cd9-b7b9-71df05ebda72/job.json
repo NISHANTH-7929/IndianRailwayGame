@@ -1,0 +1,24 @@
+{
+  "schema": "game_dev.job.v1",
+  "id": "job_c50f98dc-31fd-4cd9-b7b9-71df05ebda72",
+  "operation": "package.verify",
+  "status": "completed",
+  "request": {
+    "positionals": [
+      "package",
+      "verify",
+      "D:\\Project\\IndianRailwayGame\\04_Assets\\S8\\EgmorePortable\\.game-dev\\packages\\egmoretower4m\\1.1.0"
+    ],
+    "flags": {
+      "output-dir": "04_Assets/S8/EgmorePortable"
+    }
+  },
+  "attempts": 1,
+  "eventCount": 1,
+  "artifacts": [],
+  "createdAt": "2026-10-04T08:04:33.639Z",
+  "updatedAt": "2026-10-04T08:04:33.734Z",
+  "startedAt": "2026-10-04T08:04:33.659Z",
+  "completedAt": "2026-10-04T08:04:33.734Z",
+  "receiptPath": "D:\\Project\\IndianRailwayGame\\04_Assets\\S8\\EgmorePortable\\.game-dev\\jobs\\job_c50f98dc-31fd-4cd9-b7b9-71df05ebda72\\receipt.json"
+}

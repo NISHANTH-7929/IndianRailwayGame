@@ -1,0 +1,1474 @@
+[
+  {
+    "tick": 5365,
+    "station": "Approaching",
+    "head": 662.8287721120639,
+    "speed": 1.9117253267910015,
+    "power": 0,
+    "brake": 0
+  },
+  {
+    "tick": 5517,
+    "station": "Approaching",
+    "head": 672.3199999083204,
+    "speed": 1.8834701164652543,
+    "power": 0.25,
+    "brake": 0
+  },
+  {
+    "tick": 5548,
+    "station": "Approaching",
+    "head": 674.3131523548105,
+    "speed": 1.974222561770566,
+    "power": 0.25,
+    "brake": 0
+  },
+  {
+    "tick": 5578,
+    "station": "Approaching",
+    "head": 676.3132454069819,
+    "speed": 2.000834141862401,
+    "power": 0,
+    "brake": 0
+  },
+  {
+    "tick": 5607,
+    "station": "Approaching",
+    "head": 678.2397046916379,
+    "speed": 1.9849473686365127,
+    "power": 0,
+    "brake": 0
+  },
+  {
+    "tick": 5638,
+    "station": "Approaching",
+    "head": 680.282053143067,
+    "speed": 1.9679892832835104,
+    "power": 0,
+    "brake": 0
+  },
+  {
+    "tick": 5667,
+    "station": "Arrival",
+    "head": 682.1767843260114,
+    "speed": 1.9521478079206345,
+    "power": 0,
+    "brake": 0
+  },
+  {
+    "tick": 5789,
+    "station": "Arrival",
+    "head": 689.9803592717582,
+    "speed": 1.8857383218621269,
+    "power": 0,
+    "brake": 0
+  },
+  {
+    "tick": 5819,
+    "station": "Arrival",
+    "head": 691.8579590414034,
+    "speed": 1.869464891871205,
+    "power": 0,
+    "brake": 0
+  },
+  {
+    "tick": 5854,
+    "station": "Berthing",
+    "head": 694.0278014683629,
+    "speed": 1.8469515140917887,
+    "power": 0,
+    "brake": 0.5
+  },
+  {
+    "tick": 5999,
+    "station": "Dwelling",
+    "head": 698.5973793843666,
+    "speed": 0,
+    "power": 0,
+    "brake": 0.5
+  },
+  {
+    "tick": 6182,
+    "station": "Dwelling",
+    "head": 698.5973793843666,
+    "speed": 0,
+    "power": 0,
+    "brake": 1
+  },
+  {
+    "tick": 6182,
+    "station": "Dwelling",
+    "head": 698.5973793843666,
+    "speed": 0,
+    "power": 0,
+    "brake": 1
+  },
+  {
+    "tick": 6212,
+    "station": "Dwelling",
+    "head": 698.5973793843666,
+    "speed": 0,
+    "power": 0,
+    "brake": 1
+  },
+  {
+    "tick": 6243,
+    "station": "Dwelling",
+    "head": 698.5973793843666,
+    "speed": 0,
+    "power": 0,
+    "brake": 1
+  },
+  {
+    "tick": 6273,
+    "station": "Dwelling",
+    "head": 698.5973793843666,
+    "speed": 0,
+    "power": 0,
+    "brake": 1
+  },
+  {
+    "tick": 6302,
+    "station": "ReadyToDepart",
+    "head": 698.5973793843666,
+    "speed": 0,
+    "power": 0,
+    "brake": 1
+  },
+  {
+    "tick": 6452,
+    "station": "ReadyToDepart",
+    "head": 698.5973793843666,
+    "speed": 0,
+    "power": 0,
+    "brake": 1
+  },
+  {
+    "tick": 6482,
+    "station": "ReadyToDepart",
+    "head": 698.5973793843666,
+    "speed": 0,
+    "power": 0.25,
+    "brake": 0
+  },
+  {
+    "tick": 6512,
+    "station": "ReadyToDepart",
+    "head": 698.5973793843666,
+    "speed": 0,
+    "power": 0.25,
+    "brake": 0
+  },
+  {
+    "tick": 6543,
+    "station": "ReadyToDepart",
+    "head": 698.6106940261,
+    "speed": 0.0486387474780594,
+    "power": 0.25,
+    "brake": 0
+  },
+  {
+    "tick": 6573,
+    "station": "ReadyToDepart",
+    "head": 698.7039149597285,
+    "speed": 0.13780213631620428,
+    "power": 0.25,
+    "brake": 0
+  },
+  {
+    "tick": 6604,
+    "station": "ReadyToDepart",
+    "head": 698.8939101228101,
+    "speed": 0.22992834968275458,
+    "power": 0.25,
+    "brake": 0
+  },
+  {
+    "tick": 6634,
+    "station": "ReadyToDepart",
+    "head": 699.1684096914682,
+    "speed": 0.31906786150903294,
+    "power": 0.25,
+    "brake": 0
+  },
+  {
+    "tick": 6634,
+    "station": "ReadyToDepart",
+    "head": 699.1684096914682,
+    "speed": 0.31906786150903294,
+    "power": 0.25,
+    "brake": 0
+  },
+  {
+    "tick": 6665,
+    "station": "ReadyToDepart",
+    "head": 699.5456947622716,
+    "speed": 0.411157146984684,
+    "power": 0.25,
+    "brake": 0
+  },
+  {
+    "tick": 6696,
+    "station": "ReadyToDepart",
+    "head": 700.0181247604548,
+    "speed": 0.5032182818688249,
+    "power": 0.25,
+    "brake": 0
+  },
+  {
+    "tick": 6731,
+    "station": "ReadyToDepart",
+    "head": 700.6658247728219,
+    "speed": 0.6071165243727398,
+    "power": 0.25,
+    "brake": 0
+  },
+  {
+    "tick": 6756,
+    "station": "ReadyToDepart",
+    "head": 701.2026659936479,
+    "speed": 0.6812976307017445,
+    "power": 0.25,
+    "brake": 0
+  },
+  {
+    "tick": 6787,
+    "station": "ReadyToDepart",
+    "head": 701.9541812284056,
+    "speed": 0.7732396933967774,
+    "power": 0.25,
+    "brake": 0
+  },
+  {
+    "tick": 6825,
+    "station": "Departed",
+    "head": 703.0049597027333,
+    "speed": 0.8858700028428703,
+    "power": 0.25,
+    "brake": 0
+  },
+  {
+    "tick": 6936,
+    "station": "Departed",
+    "head": 706.8905677446359,
+    "speed": 1.2143052844833873,
+    "power": 0.25,
+    "brake": 0
+  },
+  {
+    "tick": 6966,
+    "station": "Departed",
+    "head": 708.149177593235,
+    "speed": 1.3029010209740306,
+    "power": 0.25,
+    "brake": 0
+  },
+  {
+    "tick": 6997,
+    "station": "Departed",
+    "head": 709.5427716256737,
+    "speed": 1.3943624415689695,
+    "power": 0.25,
+    "brake": 0
+  },
+  {
+    "tick": 7027,
+    "station": "Departed",
+    "head": 710.981352025412,
+    "speed": 1.4827830792040166,
+    "power": 0.25,
+    "brake": 0
+  },
+  {
+    "tick": 7057,
+    "station": "Departed",
+    "head": 712.5083062511065,
+    "speed": 1.5711091712372047,
+    "power": 0.25,
+    "brake": 0
+  },
+  {
+    "tick": 7088,
+    "station": "Departed",
+    "head": 714.1788971490848,
+    "speed": 1.6622742698261146,
+    "power": 0.25,
+    "brake": 0
+  },
+  {
+    "tick": 7088,
+    "station": "Departed",
+    "head": 714.1788971490848,
+    "speed": 1.6622742698261146,
+    "power": 0.25,
+    "brake": 0
+  },
+  {
+    "tick": 7125,
+    "station": "Departed",
+    "head": 716.2960604639715,
+    "speed": 1.7709358897385445,
+    "power": 0.25,
+    "brake": 0
+  },
+  {
+    "tick": 7148,
+    "station": "Departed",
+    "head": 717.6796422513763,
+    "speed": 1.8383966985310665,
+    "power": 0.25,
+    "brake": 0
+  },
+  {
+    "tick": 7178,
+    "station": "Departed",
+    "head": 719.5619933480721,
+    "speed": 1.9262856182280126,
+    "power": 0.25,
+    "brake": 0
+  },
+  {
+    "tick": 7238,
+    "station": "Departed",
+    "head": 723.5426732119884,
+    "speed": 2.0024536143844895,
+    "power": 0,
+    "brake": 0
+  },
+  {
+    "tick": 7269,
+    "station": "Departed",
+    "head": 725.6030980355571,
+    "speed": 1.9854696075440355,
+    "power": 0,
+    "brake": 0
+  },
+  {
+    "tick": 7300,
+    "station": "Departed",
+    "head": 727.64598573537,
+    "speed": 1.9685107522148102,
+    "power": 0,
+    "brake": 0
+  },
+  {
+    "tick": 7330,
+    "station": "Departed",
+    "head": 729.6063005134876,
+    "speed": 1.9521226673488834,
+    "power": 0,
+    "brake": 0
+  },
+  {
+    "tick": 7330,
+    "station": "Departed",
+    "head": 729.6063005134876,
+    "speed": 1.9521226673488834,
+    "power": 0,
+    "brake": 0
+  },
+  {
+    "tick": 7361,
+    "station": "Departed",
+    "head": 731.6147549426021,
+    "speed": 1.9352125703497058,
+    "power": 0,
+    "brake": 0
+  },
+  {
+    "tick": 7391,
+    "station": "Departed",
+    "head": 733.5417949359227,
+    "speed": 1.9188712032223334,
+    "power": 0,
+    "brake": 0
+  },
+  {
+    "tick": 7451,
+    "station": "Departed",
+    "head": 737.3669907840122,
+    "speed": 1.9508132539128522,
+    "power": 0.25,
+    "brake": 0
+  },
+  {
+    "tick": 7511,
+    "station": "Departed",
+    "head": 741.3898084913002,
+    "speed": 2.0199758566150985,
+    "power": 0,
+    "brake": 0
+  },
+  {
+    "tick": 7541,
+    "station": "Departed",
+    "head": 743.4015514251248,
+    "speed": 2.0035139935547828,
+    "power": 0,
+    "brake": 0
+  },
+  {
+    "tick": 7571,
+    "station": "Departed",
+    "head": 745.396844418364,
+    "speed": 1.9870759371699585,
+    "power": 0,
+    "brake": 0
+  },
+  {
+    "tick": 7601,
+    "station": "Departed",
+    "head": 747.3757111629388,
+    "speed": 1.9706614581472122,
+    "power": 0,
+    "brake": 0
+  },
+  {
+    "tick": 7632,
+    "station": "Departed",
+    "head": 749.4033083667947,
+    "speed": 1.953724356819718,
+    "power": 0,
+    "brake": 0
+  },
+  {
+    "tick": 7662,
+    "station": "Departed",
+    "head": 751.3488471885785,
+    "speed": 1.937357116082541,
+    "power": 0,
+    "brake": 0
+  },
+  {
+    "tick": 7693,
+    "station": "Departed",
+    "head": 753.3420549179451,
+    "speed": 1.920468344051545,
+    "power": 0,
+    "brake": 0
+  },
+  {
+    "tick": 7725,
+    "station": "Departed",
+    "head": 755.3812678353552,
+    "speed": 1.9030601456562086,
+    "power": 0,
+    "brake": 0
+  },
+  {
+    "tick": 7783,
+    "station": "Departed",
+    "head": 759.0523593371396,
+    "speed": 1.9395991734976563,
+    "power": 0.25,
+    "brake": 0
+  },
+  {
+    "tick": 7813,
+    "station": "Departed",
+    "head": 761.0292736607282,
+    "speed": 1.9905500828516824,
+    "power": 0,
+    "brake": 0
+  },
+  {
+    "tick": 7844,
+    "station": "Departed",
+    "head": 763.0774073029618,
+    "speed": 1.9735837263957032,
+    "power": 0,
+    "brake": 0
+  },
+  {
+    "tick": 7874,
+    "station": "Departed",
+    "head": 765.0427914556205,
+    "speed": 1.9571884539388231,
+    "power": 0,
+    "brake": 0
+  },
+  {
+    "tick": 7904,
+    "station": "Departed",
+    "head": 766.9917919359747,
+    "speed": 1.940816344057571,
+    "power": 0,
+    "brake": 0
+  },
+  {
+    "tick": 7935,
+    "station": "Departed",
+    "head": 768.9885716228335,
+    "speed": 1.9239225906422366,
+    "power": 0,
+    "brake": 0
+  },
+  {
+    "tick": 7965,
+    "station": "Departed",
+    "head": 770.9043294786139,
+    "speed": 1.9075968820733842,
+    "power": 0,
+    "brake": 0
+  },
+  {
+    "tick": 7996,
+    "station": "Departed",
+    "head": 772.8686895400763,
+    "speed": 1.9101929058146327,
+    "power": 0.25,
+    "brake": 0
+  },
+  {
+    "tick": 8025,
+    "station": "Departed",
+    "head": 774.7562368718092,
+    "speed": 1.9950581908304508,
+    "power": 0.25,
+    "brake": 0
+  },
+  {
+    "tick": 8055,
+    "station": "Departed",
+    "head": 776.793847143237,
+    "speed": 2.0667549071997335,
+    "power": 0,
+    "brake": 0
+  },
+  {
+    "tick": 8085,
+    "station": "Departed",
+    "head": 778.852334714598,
+    "speed": 2.0502243275823333,
+    "power": 0,
+    "brake": 0
+  },
+  {
+    "tick": 8115,
+    "station": "Departed",
+    "head": 780.8943039572318,
+    "speed": 2.0337182109056346,
+    "power": 0,
+    "brake": 0
+  },
+  {
+    "tick": 8145,
+    "station": "Departed",
+    "head": 782.9197792176303,
+    "speed": 2.017236324472176,
+    "power": 0,
+    "brake": 0
+  },
+  {
+    "tick": 8175,
+    "station": "Departed",
+    "head": 784.9287846101913,
+    "speed": 2.0007784367915566,
+    "power": 0,
+    "brake": 0
+  },
+  {
+    "tick": 8205,
+    "station": "Departed",
+    "head": 786.9213440184205,
+    "speed": 1.9843443175663966,
+    "power": 0,
+    "brake": 0
+  },
+  {
+    "tick": 8235,
+    "station": "Departed",
+    "head": 788.897481096116,
+    "speed": 1.9679337376784314,
+    "power": 0,
+    "brake": 0
+  },
+  {
+    "tick": 8266,
+    "station": "Departed",
+    "head": 790.9222617201245,
+    "speed": 1.9510006257144699,
+    "power": 0,
+    "brake": 0
+  },
+  {
+    "tick": 8296,
+    "station": "Departed",
+    "head": 792.8650787251332,
+    "speed": 1.9346372073871774,
+    "power": 0,
+    "brake": 0
+  },
+  {
+    "tick": 8326,
+    "station": "Departed",
+    "head": 794.7915437562575,
+    "speed": 1.9182966404771422,
+    "power": 0,
+    "brake": 0
+  },
+  {
+    "tick": 8357,
+    "station": "Departed",
+    "head": 796.7650697835162,
+    "speed": 1.9014351562252285,
+    "power": 0,
+    "brake": 0
+  },
+  {
+    "tick": 8387,
+    "station": "Departed",
+    "head": 798.7057394051867,
+    "speed": 1.9843824082512531,
+    "power": 0.25,
+    "brake": 0
+  },
+  {
+    "tick": 8447,
+    "station": "Departed",
+    "head": 802.8024447364877,
+    "speed": 2.0603812415889466,
+    "power": 0,
+    "brake": 0
+  },
+  {
+    "tick": 8447,
+    "station": "Departed",
+    "head": 802.8024447364877,
+    "speed": 2.0603812415889466,
+    "power": 0,
+    "brake": 0
+  },
+  {
+    "tick": 8478,
+    "station": "Departed",
+    "head": 804.9226828766599,
+    "speed": 2.0433098343428755,
+    "power": 0,
+    "brake": 0
+  },
+  {
+    "tick": 8508,
+    "station": "Departed",
+    "head": 806.9577427211893,
+    "speed": 2.026813891732255,
+    "power": 0,
+    "brake": 0
+  },
+  {
+    "tick": 8538,
+    "station": "Departed",
+    "head": 808.9763187089687,
+    "speed": 2.0103420822878904,
+    "power": 0,
+    "brake": 0
+  },
+  {
+    "tick": 8569,
+    "station": "Departed",
+    "head": 811.0448888658282,
+    "speed": 1.993346320407892,
+    "power": 0,
+    "brake": 0
+  },
+  {
+    "tick": 8599,
+    "station": "Departed",
+    "head": 813.0300215010192,
+    "speed": 1.9769228706509685,
+    "power": 0,
+    "brake": 0
+  },
+  {
+    "tick": 8628,
+    "station": "Departed",
+    "head": 814.9333825567385,
+    "speed": 1.9610691489828629,
+    "power": 0,
+    "brake": 0
+  },
+  {
+    "tick": 8628,
+    "station": "Departed",
+    "head": 814.9333825567385,
+    "speed": 1.9610691489828629,
+    "power": 0,
+    "brake": 0
+  },
+  {
+    "tick": 8658,
+    "station": "Departed",
+    "head": 816.8862609951839,
+    "speed": 1.9446915741146775,
+    "power": 0,
+    "brake": 0
+  },
+  {
+    "tick": 8689,
+    "station": "Departed",
+    "head": 818.8870421928449,
+    "speed": 1.9277922296767662,
+    "power": 0,
+    "brake": 0
+  },
+  {
+    "tick": 8719,
+    "station": "Departed",
+    "head": 820.8066670049353,
+    "speed": 1.911461164487186,
+    "power": 0,
+    "brake": 0
+  },
+  {
+    "tick": 8750,
+    "station": "Departed",
+    "head": 822.7731347376072,
+    "speed": 1.894609400275899,
+    "power": 0,
+    "brake": 0
+  },
+  {
+    "tick": 8781,
+    "station": "Departed",
+    "head": 824.7663348243299,
+    "speed": 1.9735559748834832,
+    "power": 0.25,
+    "brake": 0
+  },
+  {
+    "tick": 8842,
+    "station": "Departed",
+    "head": 828.9224986650411,
+    "speed": 2.062906337958577,
+    "power": 0,
+    "brake": 0
+  },
+  {
+    "tick": 8872,
+    "station": "Departed",
+    "head": 830.9771405281537,
+    "speed": 2.0463814712713044,
+    "power": 0,
+    "brake": 0
+  },
+  {
+    "tick": 8902,
+    "station": "Departed",
+    "head": 833.0152697483197,
+    "speed": 2.029881013271657,
+    "power": 0,
+    "brake": 0
+  },
+  {
+    "tick": 8925,
+    "station": "Departed",
+    "head": 834.5666679352759,
+    "speed": 2.0172470470454296,
+    "power": 0,
+    "brake": 0
+  },
+  {
+    "tick": 8931,
+    "station": "Departed",
+    "head": 834.9697879798281,
+    "speed": 2.013953553873853,
+    "power": 0,
+    "brake": 0
+  },
+  {
+    "tick": 8962,
+    "station": "Departed",
+    "head": 837.0420871975165,
+    "speed": 1.9969523948776602,
+    "power": 0,
+    "brake": 0
+  },
+  {
+    "tick": 8992,
+    "station": "Departed",
+    "head": 839.0308233170655,
+    "speed": 1.98052377324997,
+    "power": 0,
+    "brake": 0
+  },
+  {
+    "tick": 9023,
+    "station": "Departed",
+    "head": 841.0686040910774,
+    "speed": 1.96357220179098,
+    "power": 0,
+    "brake": 0
+  },
+  {
+    "tick": 9053,
+    "station": "Departed",
+    "head": 843.0239838141127,
+    "speed": 1.947191096241528,
+    "power": 0,
+    "brake": 0
+  },
+  {
+    "tick": 9053,
+    "station": "Departed",
+    "head": 843.0239838141127,
+    "speed": 1.947191096241528,
+    "power": 0,
+    "brake": 0
+  },
+  {
+    "tick": 9084,
+    "station": "Departed",
+    "head": 845.0273459818729,
+    "speed": 1.9302881396626548,
+    "power": 0,
+    "brake": 0
+  },
+  {
+    "tick": 9114,
+    "station": "Departed",
+    "head": 846.9494649707326,
+    "speed": 1.9139536137369104,
+    "power": 0,
+    "brake": 0
+  },
+  {
+    "tick": 9174,
+    "station": "Departed",
+    "head": 850.7718152624093,
+    "speed": 1.9563164408186602,
+    "power": 0.25,
+    "brake": 0
+  },
+  {
+    "tick": 9205,
+    "station": "Departed",
+    "head": 852.8241768127008,
+    "speed": 1.9893451719789468,
+    "power": 0,
+    "brake": 0
+  },
+  {
+    "tick": 9234,
+    "station": "Departed",
+    "head": 854.7395378048715,
+    "speed": 1.973474329199197,
+    "power": 0,
+    "brake": 0
+  },
+  {
+    "tick": 9264,
+    "station": "Departed",
+    "head": 856.704812638057,
+    "speed": 1.9570792119362832,
+    "power": 0,
+    "brake": 0
+  },
+  {
+    "tick": 9295,
+    "station": "Departed",
+    "head": 858.7183851063061,
+    "speed": 1.940161920107877,
+    "power": 0,
+    "brake": 0
+  },
+  {
+    "tick": 9326,
+    "station": "Departed",
+    "head": 860.714489043164,
+    "speed": 1.9232691097646955,
+    "power": 0,
+    "brake": 0
+  },
+  {
+    "tick": 9326,
+    "station": "Departed",
+    "head": 860.714489043164,
+    "speed": 1.9232691097646955,
+    "power": 0,
+    "brake": 0
+  },
+  {
+    "tick": 9357,
+    "station": "Departed",
+    "head": 862.6931496178678,
+    "speed": 1.9064005328020246,
+    "power": 0,
+    "brake": 0
+  },
+  {
+    "tick": 9417,
+    "station": "Departed",
+    "head": 866.4934383908524,
+    "speed": 1.9383768720844807,
+    "power": 0.25,
+    "brake": 0
+  },
+  {
+    "tick": 9447,
+    "station": "Departed",
+    "head": 868.4649310244041,
+    "speed": 1.9789186367483873,
+    "power": 0,
+    "brake": 0
+  },
+  {
+    "tick": 9477,
+    "station": "Departed",
+    "head": 870.4356462919015,
+    "speed": 1.9625157855695117,
+    "power": 0,
+    "brake": 0
+  },
+  {
+    "tick": 9507,
+    "station": "Departed",
+    "head": 872.3899703452693,
+    "speed": 1.9461361706987543,
+    "power": 0,
+    "brake": 0
+  },
+  {
+    "tick": 9536,
+    "station": "Departed",
+    "head": 874.2635912411212,
+    "speed": 1.930324417546399,
+    "power": 0,
+    "brake": 0
+  },
+  {
+    "tick": 9566,
+    "station": "Departed",
+    "head": 876.1857464826559,
+    "speed": 1.9139898412859822,
+    "power": 0,
+    "brake": 0
+  },
+  {
+    "tick": 9597,
+    "station": "Departed",
+    "head": 878.1561176881298,
+    "speed": 1.9131052973856701,
+    "power": 0.25,
+    "brake": 0
+  },
+  {
+    "tick": 9628,
+    "station": "Departed",
+    "head": 880.1798711442351,
+    "speed": 2.0038148178766417,
+    "power": 0.25,
+    "brake": 0
+  },
+  {
+    "tick": 9688,
+    "station": "Departed",
+    "head": 884.3085370576015,
+    "speed": 2.072821675163822,
+    "power": 0,
+    "brake": 0
+  },
+  {
+    "tick": 9688,
+    "station": "Departed",
+    "head": 884.3085370576015,
+    "speed": 2.072821675163822,
+    "power": 0,
+    "brake": 0
+  },
+  {
+    "tick": 9718,
+    "station": "Departed",
+    "head": 886.3730868760981,
+    "speed": 2.0562820681809573,
+    "power": 0,
+    "brake": 0
+  },
+  {
+    "tick": 9748,
+    "station": "Departed",
+    "head": 888.4211093813493,
+    "speed": 2.039767009757672,
+    "power": 0,
+    "brake": 0
+  },
+  {
+    "tick": 9778,
+    "station": "Departed",
+    "head": 890.4526290052416,
+    "speed": 2.023276266750418,
+    "power": 0,
+    "brake": 0
+  },
+  {
+    "tick": 9808,
+    "station": "Departed",
+    "head": 892.467669947125,
+    "speed": 2.0068096072278894,
+    "power": 0,
+    "brake": 0
+  },
+  {
+    "tick": 9831,
+    "station": "Departed",
+    "head": 894.0013899171928,
+    "speed": 1.994201333984144,
+    "power": 0,
+    "brake": 0
+  },
+  {
+    "tick": 9861,
+    "station": "Departed",
+    "head": 895.9873769522588,
+    "speed": 1.9777766588051957,
+    "power": 0,
+    "brake": 0
+  },
+  {
+    "tick": 9861,
+    "station": "Departed",
+    "head": 895.9873769522588,
+    "speed": 1.9777766588051957,
+    "power": 0,
+    "brake": 0
+  },
+  {
+    "tick": 9891,
+    "station": "Departed",
+    "head": 897.9569510551347,
+    "speed": 1.9613754316346517,
+    "power": 0,
+    "brake": 0
+  },
+  {
+    "tick": 9921,
+    "station": "Departed",
+    "head": 899.9101355599879,
+    "speed": 1.9449974249819257,
+    "power": 0,
+    "brake": 0
+  },
+  {
+    "tick": 9952,
+    "station": "Departed",
+    "head": 901.9112325749237,
+    "speed": 1.9280976387987827,
+    "power": 0,
+    "brake": 0
+  },
+  {
+    "tick": 9982,
+    "station": "Departed",
+    "head": 903.8311625841742,
+    "speed": 1.911766150381344,
+    "power": 0,
+    "brake": 0
+  },
+  {
+    "tick": 10013,
+    "station": "Departed",
+    "head": 905.7979452448643,
+    "speed": 1.894913953222062,
+    "power": 0,
+    "brake": 0
+  },
+  {
+    "tick": 10043,
+    "station": "Departed",
+    "head": 907.7226941532303,
+    "speed": 1.9674665326936678,
+    "power": 0.25,
+    "brake": 0
+  },
+  {
+    "tick": 10103,
+    "station": "Departed",
+    "head": 911.80071189896,
+    "speed": 2.060854213696387,
+    "power": 0,
+    "brake": 0
+  },
+  {
+    "tick": 10133,
+    "station": "Departed",
+    "head": 913.8533031611582,
+    "speed": 2.0443323888798566,
+    "power": 0,
+    "brake": 0
+  },
+  {
+    "tick": 10164,
+    "station": "Departed",
+    "head": 915.9569701476472,
+    "speed": 2.027285446166293,
+    "power": 0,
+    "brake": 0
+  },
+  {
+    "tick": 10164,
+    "station": "Departed",
+    "head": 915.9569701476472,
+    "speed": 2.027285446166293,
+    "power": 0,
+    "brake": 0
+  },
+  {
+    "tick": 10194,
+    "station": "Departed",
+    "head": 917.976017345736,
+    "speed": 2.0108129495720686,
+    "power": 0,
+    "brake": 0
+  },
+  {
+    "tick": 10225,
+    "station": "Departed",
+    "head": 920.0450737015669,
+    "speed": 1.9938164845612698,
+    "power": 0,
+    "brake": 0
+  },
+  {
+    "tick": 10255,
+    "station": "Departed",
+    "head": 922.0306761634757,
+    "speed": 1.9773923610211763,
+    "power": 0,
+    "brake": 0
+  },
+  {
+    "tick": 10286,
+    "station": "Departed",
+    "head": 924.0652235266942,
+    "speed": 1.960445391863715,
+    "power": 0,
+    "brake": 0
+  },
+  {
+    "tick": 10286,
+    "station": "Departed",
+    "head": 924.0652235266942,
+    "speed": 1.960445391863715,
+    "power": 0,
+    "brake": 0
+  },
+  {
+    "tick": 10317,
+    "station": "Departed",
+    "head": 926.0822718466309,
+    "speed": 1.9435232033182699,
+    "power": 0,
+    "brake": 0
+  },
+  {
+    "tick": 10347,
+    "station": "Departed",
+    "head": 928.0176166708732,
+    "speed": 1.9271702511124795,
+    "power": 0,
+    "brake": 0
+  },
+  {
+    "tick": 10378,
+    "station": "Departed",
+    "head": 930.0003055383718,
+    "speed": 1.9102960966864695,
+    "power": 0,
+    "brake": 0
+  },
+  {
+    "tick": 10425,
+    "station": "Departed",
+    "head": 932.9823449390394,
+    "speed": 1.9284967756995317,
+    "power": 0.25,
+    "brake": 0
+  },
+  {
+    "tick": 10468,
+    "station": "Departed",
+    "head": 935.81206105499,
+    "speed": 1.982758295798184,
+    "power": 0,
+    "brake": 0
+  },
+  {
+    "tick": 10498,
+    "station": "Departed",
+    "head": 937.7866132434657,
+    "speed": 1.966349977342132,
+    "power": 0,
+    "brake": 0
+  },
+  {
+    "tick": 10529,
+    "station": "Departed",
+    "head": 939.8097585125748,
+    "speed": 1.949419179127088,
+    "power": 0,
+    "brake": 0
+  },
+  {
+    "tick": 10559,
+    "station": "Departed",
+    "head": 941.7509951812623,
+    "speed": 1.9330579777051775,
+    "power": 0,
+    "brake": 0
+  },
+  {
+    "tick": 10590,
+    "station": "Departed",
+    "head": 943.7397636652638,
+    "speed": 1.9161753841327258,
+    "power": 0,
+    "brake": 0
+  },
+  {
+    "tick": 10620,
+    "station": "Departed",
+    "head": 945.6521271685555,
+    "speed": 1.9297161652886023,
+    "power": 0.25,
+    "brake": 0
+  },
+  {
+    "tick": 10680,
+    "station": "Departed",
+    "head": 949.62167378612,
+    "speed": 1.9885388283313261,
+    "power": 0,
+    "brake": 0
+  },
+  {
+    "tick": 10710,
+    "station": "Departed",
+    "head": 951.6020023749878,
+    "speed": 1.9721222589552827,
+    "power": 0,
+    "brake": 0
+  },
+  {
+    "tick": 10739,
+    "station": "Departed",
+    "head": 953.5007260284405,
+    "speed": 1.9562751249550532,
+    "power": 0,
+    "brake": 0
+  },
+  {
+    "tick": 10739,
+    "station": "Departed",
+    "head": 953.5007260284405,
+    "speed": 1.9562751249550532,
+    "power": 0,
+    "brake": 0
+  },
+  {
+    "tick": 10770,
+    "station": "Departed",
+    "head": 955.5134682115223,
+    "speed": 1.9393590015678557,
+    "power": 0,
+    "brake": 0
+  },
+  {
+    "tick": 10800,
+    "station": "Departed",
+    "head": 957.4446517443542,
+    "speed": 1.9230118605099438,
+    "power": 0,
+    "brake": 0
+  },
+  {
+    "tick": 10831,
+    "station": "Departed",
+    "head": 959.4230466849702,
+    "speed": 1.9061436509382903,
+    "power": 0,
+    "brake": 0
+  },
+  {
+    "tick": 10891,
+    "station": "Departed",
+    "head": 963.2187498787118,
+    "speed": 1.9311817028606821,
+    "power": 0.25,
+    "brake": 0
+  },
+  {
+    "tick": 10921,
+    "station": "Departed",
+    "head": 965.1859682838453,
+    "speed": 1.9786741262609688,
+    "power": 0,
+    "brake": 0
+  },
+  {
+    "tick": 10951,
+    "station": "Departed",
+    "head": 967.1564392150367,
+    "speed": 1.9622716228798571,
+    "power": 0,
+    "brake": 0
+  },
+  {
+    "tick": 10981,
+    "station": "Departed",
+    "head": 969.1105192782043,
+    "speed": 1.9458923524256457,
+    "power": 0,
+    "brake": 0
+  },
+  {
+    "tick": 11025,
+    "station": "Departed",
+    "head": 971.9469023830017,
+    "speed": 1.92191097523483,
+    "power": 0,
+    "brake": 0
+  },
+  {
+    "tick": 11040,
+    "station": "Departed",
+    "head": 972.90581656487,
+    "speed": 1.9137466905669833,
+    "power": 0,
+    "brake": 0
+  },
+  {
+    "tick": 11100,
+    "station": "Departed",
+    "head": 976.732982448068,
+    "speed": 1.9630474206156412,
+    "power": 0.25,
+    "brake": 0
+  },
+  {
+    "tick": 11161,
+    "station": "Departed",
+    "head": 980.8282453182552,
+    "speed": 2.014292127090915,
+    "power": 0,
+    "brake": 0
+  },
+  {
+    "tick": 11161,
+    "station": "Departed",
+    "head": 980.8282453182552,
+    "speed": 2.014292127090915,
+    "power": 0,
+    "brake": 0
+  },
+  {
+    "tick": 11191,
+    "station": "Departed",
+    "head": 982.8343086500322,
+    "speed": 1.9978385057529153,
+    "power": 0,
+    "brake": 0
+  },
+  {
+    "tick": 11221,
+    "station": "Departed",
+    "head": 984.8239302432773,
+    "speed": 1.981408611821045,
+    "power": 0,
+    "brake": 0
+  },
+  {
+    "tick": 11251,
+    "station": "Departed",
+    "head": 986.7971337108451,
+    "speed": 1.9650022163863896,
+    "power": 0,
+    "brake": 0
+  },
+  {
+    "tick": 11282,
+    "station": "Departed",
+    "head": 988.8188873118868,
+    "speed": 1.9480733856726067,
+    "power": 0,
+    "brake": 0
+  },
+  {
+    "tick": 11325,
+    "station": "Departed",
+    "head": 991.5943206542605,
+    "speed": 1.9246321296656028,
+    "power": 0,
+    "brake": 0
+  },
+  {
+    "tick": 11342,
+    "station": "Departed",
+    "head": 992.6823230586166,
+    "speed": 1.9153775643104645,
+    "power": 0,
+    "brake": 0
+  },
+  {
+    "tick": 11373,
+    "station": "Departed",
+    "head": 994.5695076725316,
+    "speed": 1.655365734879692,
+    "power": 0,
+    "brake": 0.5
+  },
+  {
+    "tick": 11403,
+    "station": "Departed",
+    "head": 996.0169525439154,
+    "speed": 1.2395967146644986,
+    "power": 0,
+    "brake": 0.5
+  },
+  {
+    "tick": 11463,
+    "station": "Departed",
+    "head": 997.6899637238134,
+    "speed": 0.5117144078152885,
+    "power": 0,
+    "brake": 0
+  },
+  {
+    "tick": 11493,
+    "station": "Departed",
+    "head": 998.1804630217623,
+    "speed": 0.49312740016957346,
+    "power": 0.25,
+    "brake": 0
+  },
+  {
+    "tick": 11523,
+    "station": "Departed",
+    "head": 998.7181245997199,
+    "speed": 0.5821900140133254,
+    "power": 0.25,
+    "brake": 0
+  },
+  {
+    "tick": 11583,
+    "station": "Departed",
+    "head": 1000.0195319314049,
+    "speed": 0.6678564208097312,
+    "power": 0,
+    "brake": 0
+  },
+  {
+    "tick": 11625,
+    "station": "Departed",
+    "head": 1000.9220476892026,
+    "speed": 0.5559784381003728,
+    "power": 0,
+    "brake": 1
+  },
+  {
+    "tick": 11652,
+    "station": "Completed",
+    "head": 1001.2254800594495,
+    "speed": 0.04643251208278209,
+    "power": 0,
+    "brake": 1
+  }
+]

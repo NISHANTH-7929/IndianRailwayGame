@@ -1,0 +1,44 @@
+{
+  "schema": "game_dev.receipt.v1",
+  "operation": "package.build",
+  "result": {
+    "schema": "game_dev.package_build_result.v1",
+    "packageId": "pkg_8a188c51c47a8858faffca0d",
+    "packagePath": "D:\\Project\\IndianRailwayGame\\04_Assets\\S8\\EgmorePortable\\.game-dev\\packages\\egmorewaterpoint\\1.2.0",
+    "manifestPath": "D:\\Project\\IndianRailwayGame\\04_Assets\\S8\\EgmorePortable\\.game-dev\\packages\\egmorewaterpoint\\1.2.0\\manifest.json",
+    "receiptPath": "D:\\Project\\IndianRailwayGame\\04_Assets\\S8\\EgmorePortable\\.game-dev\\packages\\egmorewaterpoint\\1.2.0\\receipt.json",
+    "manifestSha256": "192ae1eec2ae54a7cbfb192e7ef6c8e34e514a458dc3006347a26656ab95f6ce",
+    "reused": false,
+    "validation": {
+      "passed": true,
+      "errorCount": 0,
+      "warningCount": 0
+    },
+    "catalog": {
+      "packageId": "pkg_8a188c51c47a8858faffca0d",
+      "assetId": "egmorewaterpoint",
+      "version": "1.2.0",
+      "displayName": "EgmoreWaterPoint",
+      "description": "Original Egmore architectural study with platform-facing facade details; estimated dimensions, visual acceptance pending",
+      "license": "LicenseRef-ProjectOriginal",
+      "packagePath": "D:\\Project\\IndianRailwayGame\\04_Assets\\S8\\EgmorePortable\\.game-dev\\packages\\egmorewaterpoint\\1.2.0",
+      "modelPath": "D:\\Project\\IndianRailwayGame\\04_Assets\\S8\\EgmorePortable\\.game-dev\\packages\\egmorewaterpoint\\1.2.0\\model.glb",
+      "modelSha256": "0d2cec76e6072b563dc70b79864989f312c2b0d709de35672a6dff7b5a5402c0",
+      "manifestSha256": "192ae1eec2ae54a7cbfb192e7ef6c8e34e514a458dc3006347a26656ab95f6ce",
+      "validationPassed": true,
+      "validationErrors": 0,
+      "validationWarnings": 0,
+      "origin": "authored",
+      "indexedAt": "2026-10-04T08:44:42.294Z"
+    },
+    "evidence": {
+      "portableGlbCopiedAndHashed": true,
+      "staticInspectionCompleted": true,
+      "policyValidationCompleted": true,
+      "blenderNormalizationPerformed": false,
+      "gpuImportTestPerformed": false,
+      "humanVisualReviewPerformed": false
+    }
+  },
+  "completedAt": "2026-10-04T08:44:42.300Z"
+}

@@ -1,0 +1,37 @@
+{
+  "status": "PASS",
+  "errors": [],
+  "assetFamilyId": "Station.Egmore.Scene.01",
+  "version": "1.0.0",
+  "placements": 921,
+  "lodPolicy": [
+    {
+      "level": 0,
+      "use": "0-90m",
+      "stats": {
+        "objects": 921,
+        "sourceTriangles": 22712
+      }
+    },
+    {
+      "level": 1,
+      "use": "90-180m",
+      "stats": {
+        "objects": 5,
+        "sourceTriangles": 60
+      }
+    },
+    {
+      "level": 2,
+      "use": "180m+",
+      "stats": {
+        "objects": 5,
+        "sourceTriangles": 60
+      }
+    }
+  ],
+  "textures": 30,
+  "previews": 3,
+  "hashRecords": 41,
+  "validationBoundary": "source/export/static package only; no Unreal import, gameplay, performance or Android validation"
+}

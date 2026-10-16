@@ -1,0 +1,99 @@
+{
+  "assetId": "egmoreballast3m",
+  "description": "Original Egmore study with rear facade and aggregate ballast material; estimated dimensions, visual acceptance pending",
+  "displayName": "EgmoreBallast3m",
+  "inspection": {
+    "animationCount": 0,
+    "boundingBox": {
+      "max": [
+        3.01481294631958,
+        -0.23074325919151306,
+        1.75
+      ],
+      "min": [
+        -0.001755841076374054,
+        -0.5699999928474426,
+        -1.75
+      ],
+      "sizeMeters": [
+        3.016568787395954,
+        0.33925673365592957,
+        3.5
+      ]
+    },
+    "boundingBoxEmpty": false,
+    "fileBytes": 8807940,
+    "filePath": "model.glb",
+    "generator": "glTF-Transform v4.5.1",
+    "hasNormals": true,
+    "hasSkin": false,
+    "hasTangents": true,
+    "hasUVs": true,
+    "materialCount": 2,
+    "meshCount": 1,
+    "pbr": {
+      "hasBaseColorTexture": true,
+      "hasEmissiveTexture": false,
+      "hasMetallicRoughnessTexture": true,
+      "hasNormalTexture": true,
+      "hasOcclusionTexture": false
+    },
+    "primitiveCount": 2,
+    "sceneGraphFallback": false,
+    "textureCount": 6,
+    "textureResolutions": [
+      {
+        "bytes": 2849091,
+        "height": 1024,
+        "mimeType": "image/png",
+        "name": "T_EgmoreStone_N",
+        "width": 1024
+      },
+      {
+        "bytes": 1416677,
+        "height": 1024,
+        "mimeType": "image/png",
+        "name": "T_EgmoreStone_BC",
+        "width": 1024
+      },
+      {
+        "bytes": 1834995,
+        "height": 1024,
+        "mimeType": "image/png",
+        "name": "T_EgmoreStone_ORM",
+        "width": 1024
+      },
+      {
+        "bytes": 390174,
+        "height": 512,
+        "mimeType": "image/png",
+        "name": "T_Ballast_N",
+        "width": 512
+      },
+      {
+        "bytes": 329123,
+        "height": 512,
+        "mimeType": "image/png",
+        "name": "T_Ballast_BC",
+        "width": 512
+      },
+      {
+        "bytes": 423274,
+        "height": 512,
+        "mimeType": "image/png",
+        "name": "T_Ballast_ORM",
+        "width": 512
+      }
+    ],
+    "triangleCount": 10412,
+    "undrawnMeshCount": 0,
+    "undrawnPrimitiveCount": 0,
+    "undrawnTriangleCount": 0,
+    "vertexCount": 31224,
+    "warnings": [
+      "texture is below 1024px on an axis and will blur at close range: T_Ballast_N (512x512), T_Ballast_BC (512x512), T_Ballast_ORM (512x512)"
+    ]
+  },
+  "license": "LicenseRef-ProjectOriginal",
+  "schema": "game_dev.asset_metadata.v1"
+}

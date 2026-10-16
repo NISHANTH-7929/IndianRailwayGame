@@ -1,0 +1,181 @@
+{
+  "animationCount": 0,
+  "categories": [
+    {
+      "uid": "22a2f677efad4d7bbca5ad45f9b5868e",
+      "name": "Cars & Vehicles",
+      "slug": "cars-vehicles",
+      "uri": "https://api.sketchfab.com/v3/categories/22a2f677efad4d7bbca5ad45f9b5868e",
+      "icon": "https://static.sketchfab.com/static/builds/web/dist/static/assets/images/icons/categories/45dd0cc0860ac57fcd63bde1cc3f2b7c-v2.svg",
+      "thumbnails": [
+        {
+          "width": "512",
+          "height": "288",
+          "url": "https://static.sketchfab.com/categories/22a2f677efad4d7bbca5ad45f9b5868e/512x288.png"
+        },
+        {
+          "width": "800",
+          "height": "450",
+          "url": "https://static.sketchfab.com/categories/22a2f677efad4d7bbca5ad45f9b5868e/800x450.png"
+        }
+      ]
+    },
+    {
+      "uid": "d7cebaeca8604ebab1480e413404b679",
+      "name": "Electronics & Gadgets",
+      "slug": "electronics-gadgets",
+      "uri": "https://api.sketchfab.com/v3/categories/d7cebaeca8604ebab1480e413404b679",
+      "icon": "https://static.sketchfab.com/static/builds/web/dist/static/assets/images/icons/categories/336c224334b7e53e277d236a8355e90a-v2.svg",
+      "thumbnails": [
+        {
+          "width": "512",
+          "height": "288",
+          "url": "https://static.sketchfab.com/categories/d7cebaeca8604ebab1480e413404b679/512x288.png"
+        },
+        {
+          "width": "800",
+          "height": "450",
+          "url": "https://static.sketchfab.com/categories/d7cebaeca8604ebab1480e413404b679/800x450.png"
+        }
+      ]
+    }
+  ],
+  "commentCount": 3,
+  "createdAt": "2026-08-19T17:18:57.469632",
+  "embedUrl": "https://sketchfab.com/models/6d533d73faf34a8a811fee1fcb9c8878/embed",
+  "faceCount": 388854,
+  "isAgeRestricted": false,
+  "license": {
+    "uri": "https://api.sketchfab.com/v3/licenses/322a749bcfa841b29dff1e8a1bb74b0b",
+    "label": "CC Attribution",
+    "fullName": "Creative Commons Attribution",
+    "requirements": "Author must be credited. Commercial use is allowed.",
+    "url": "http://creativecommons.org/licenses/by/4.0/",
+    "slug": "by"
+  },
+  "likeCount": 7,
+  "name": "WAP 7 (New Design) Low poly",
+  "publishedAt": "2026-08-19T17:29:02.302962",
+  "soundCount": 0,
+  "staffpickedAt": null,
+  "tags": [
+    {
+      "name": "locomotive",
+      "slug": "locomotive",
+      "uri": "https://api.sketchfab.com/v3/tags/locomotive"
+    },
+    {
+      "name": "RAJDHANI",
+      "slug": "rajdhani",
+      "uri": "https://api.sketchfab.com/v3/tags/rajdhani"
+    },
+    {
+      "name": "indianrailway",
+      "slug": "indianrailway",
+      "uri": "https://api.sketchfab.com/v3/tags/indianrailway"
+    },
+    {
+      "name": "wap7",
+      "slug": "wap7",
+      "uri": "https://api.sketchfab.com/v3/tags/wap7"
+    }
+  ],
+  "thumbnails": {
+    "images": [
+      {
+        "uid": "cd0fe3d5b75141e19a37dd578a20eac7",
+        "width": 1920,
+        "height": 1080,
+        "size": 298314,
+        "url": "https://media.sketchfab.com/models/6d533d73faf34a8a811fee1fcb9c8878/thumbnails/6f7aa856ffaf479e9552cdf68db567e1/c54fc53816fc44d08f809884987191b2.jpeg"
+      },
+      {
+        "uid": "d93388dd9da24e10b3ce3ea127a3eebe",
+        "width": 1024,
+        "height": 576,
+        "size": 91340,
+        "url": "https://media.sketchfab.com/models/6d533d73faf34a8a811fee1fcb9c8878/thumbnails/6f7aa856ffaf479e9552cdf68db567e1/5726c99ab06d4c319bb54bddb22d4548.jpeg"
+      },
+      {
+        "uid": "bbd5c70c193248b099ab839c2cf9c724",
+        "width": 720,
+        "height": 405,
+        "size": 53232,
+        "url": "https://media.sketchfab.com/models/6d533d73faf34a8a811fee1fcb9c8878/thumbnails/6f7aa856ffaf479e9552cdf68db567e1/0b1e2a36bcc743eebda9010c6a1dd4f0.jpeg"
+      },
+      {
+        "uid": "f4267f50a466405bab4b5d77ac997754",
+        "width": 256,
+        "height": 144,
+        "size": 10690,
+        "url": "https://media.sketchfab.com/models/6d533d73faf34a8a811fee1fcb9c8878/thumbnails/6f7aa856ffaf479e9552cdf68db567e1/3ebc1f5561ed41c7b1fd2ff2042e309a.jpeg"
+      },
+      {
+        "uid": "6c6c9877c44a4e1e86ce7e120ecc4d80",
+        "width": 64,
+        "height": 36,
+        "size": 1674,
+        "url": "https://media.sketchfab.com/models/6d533d73faf34a8a811fee1fcb9c8878/thumbnails/6f7aa856ffaf479e9552cdf68db567e1/4a545b0d832f460db86134d0b08a71f9.jpeg"
+      }
+    ]
+  },
+  "uid": "6d533d73faf34a8a811fee1fcb9c8878",
+  "uri": "https://api.sketchfab.com/v3/models/6d533d73faf34a8a811fee1fcb9c8878",
+  "user": {
+    "uid": "34007b37ab6f47c48c23e0a72cbbfd12",
+    "username": "knitro_vedant",
+    "displayName": "knitro_vedant",
+    "account": "basic",
+    "profileUrl": "https://sketchfab.com/knitro_vedant",
+    "avatar": {
+      "uid": "52ee40d9d74f45a4a123e5fee4292356",
+      "uri": "https://api.sketchfab.com/v3/avatars/52ee40d9d74f45a4a123e5fee4292356",
+      "images": [
+        {
+          "width": 32,
+          "height": 32,
+          "size": 1961,
+          "url": "https://media.sketchfab.com/avatars/52ee40d9d74f45a4a123e5fee4292356/dccd16de8e23490f9d71695a5bb5fc88.png"
+        },
+        {
+          "width": 48,
+          "height": 48,
+          "size": 4243,
+          "url": "https://media.sketchfab.com/avatars/52ee40d9d74f45a4a123e5fee4292356/7ed099fc3cb140a6ad4b2eb6afe01faf.png"
+        },
+        {
+          "width": 90,
+          "height": 90,
+          "size": 14551,
+          "url": "https://media.sketchfab.com/avatars/52ee40d9d74f45a4a123e5fee4292356/a35c4e8a851846a7a3213e9c526301b8.png"
+        },
+        {
+          "width": 100,
+          "height": 100,
+          "size": 17792,
+          "url": "https://media.sketchfab.com/avatars/52ee40d9d74f45a4a123e5fee4292356/0a5e6d17f5f3472299ac9fbae1d87537.png"
+        }
+      ]
+    },
+    "uri": "https://api.sketchfab.com/v3/users/34007b37ab6f47c48c23e0a72cbbfd12"
+  },
+  "vertexCount": 204027,
+  "viewCount": 382,
+  "viewerUrl": "https://sketchfab.com/3d-models/wap-7-new-design-low-poly-6d533d73faf34a8a811fee1fcb9c8878",
+  "isDownloadable": true,
+  "isProtected": false,
+  "description": "Indian Locomotive WAP7 new Low-Poly Version Free Download![Indian Railway](https://i.postimg.cc/VNBSXBtX/Screenshot-2026-08-19-223158.png)",
+  "price": null,
+  "downloadCount": 74,
+  "editorUrl": "https://sketchfab.com/models/6d533d73faf34a8a811fee1fcb9c8878/edit",
+  "status": {
+    "warning": {},
+    "processing": "SUCCEEDED"
+  },
+  "source": "website",
+  "hasCommentsDisabled": false,
+  "updatedAt": "2026-09-16T06:45:17.844203",
+  "pbrType": "metalness",
+  "textureCount": 17,
+  "materialCount": 16
+}

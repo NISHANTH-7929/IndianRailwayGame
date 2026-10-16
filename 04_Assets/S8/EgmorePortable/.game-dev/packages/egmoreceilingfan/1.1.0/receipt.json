@@ -1,0 +1,23 @@
+{
+  "completedAt": "2026-10-04T08:04:23.907Z",
+  "destination": {
+    "assetId": "egmoreceilingfan",
+    "version": "1.1.0"
+  },
+  "evidence": {
+    "blenderNormalizationPerformed": false,
+    "gpuImportTestPerformed": false,
+    "humanVisualReviewPerformed": false,
+    "modelBytesCopiedAndHashed": true,
+    "policyValidationCompleted": true,
+    "staticInspectionCompleted": true
+  },
+  "manifestSha256": "821ad3f0645e98afbbc1bf8d5461b64a499a218ce5b294ba6ed5dafb3de7d5df",
+  "packageId": "pkg_c19203c895d892997ec55f7e",
+  "schema": "game_dev.package_receipt.v1",
+  "source": {
+    "bytes": 3542572,
+    "fileName": "EgmoreCeilingFan.glb",
+    "sha256": "9c15ab73a13d756a2488d7bde3550479a35b118b7be87fcd8374299527d966b7"
+  }
+}

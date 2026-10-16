@@ -1,0 +1,120 @@
+{
+  "assetId": "egmoretower4m",
+  "description": "Original metric Egmore study module; estimated dimensions, visual acceptance and Android integration pending",
+  "displayName": "EgmoreTower4m",
+  "inspection": {
+    "animationCount": 0,
+    "boundingBox": {
+      "max": [
+        2.429999828338623,
+        12.170000076293945,
+        0.7549996376037598
+      ],
+      "min": [
+        -2.4000000953674316,
+        0,
+        -3.5
+      ],
+      "sizeMeters": [
+        4.829999923706055,
+        12.170000076293945,
+        4.25499963760376
+      ]
+    },
+    "boundingBoxEmpty": false,
+    "fileBytes": 4568200,
+    "filePath": "model.glb",
+    "generator": "glTF-Transform v4.5.1",
+    "hasNormals": true,
+    "hasSkin": false,
+    "hasTangents": true,
+    "hasUVs": true,
+    "materialCount": 3,
+    "meshCount": 1,
+    "pbr": {
+      "hasBaseColorTexture": true,
+      "hasEmissiveTexture": false,
+      "hasMetallicRoughnessTexture": true,
+      "hasNormalTexture": true,
+      "hasOcclusionTexture": false
+    },
+    "primitiveCount": 3,
+    "sceneGraphFallback": false,
+    "textureCount": 9,
+    "textureResolutions": [
+      {
+        "bytes": 390088,
+        "height": 512,
+        "mimeType": "image/png",
+        "name": "T_EgmoreRed_N",
+        "width": 512
+      },
+      {
+        "bytes": 333035,
+        "height": 512,
+        "mimeType": "image/png",
+        "name": "T_EgmoreRed_BC",
+        "width": 512
+      },
+      {
+        "bytes": 436612,
+        "height": 512,
+        "mimeType": "image/png",
+        "name": "T_EgmoreRed_ORM",
+        "width": 512
+      },
+      {
+        "bytes": 389735,
+        "height": 512,
+        "mimeType": "image/png",
+        "name": "T_EgmoreLime_N",
+        "width": 512
+      },
+      {
+        "bytes": 404082,
+        "height": 512,
+        "mimeType": "image/png",
+        "name": "T_EgmoreLime_BC",
+        "width": 512
+      },
+      {
+        "bytes": 428445,
+        "height": 512,
+        "mimeType": "image/png",
+        "name": "T_EgmoreLime_ORM",
+        "width": 512
+      },
+      {
+        "bytes": 389844,
+        "height": 512,
+        "mimeType": "image/png",
+        "name": "T_Glass_N",
+        "width": 512
+      },
+      {
+        "bytes": 318958,
+        "height": 512,
+        "mimeType": "image/png",
+        "name": "T_Glass_BC",
+        "width": 512
+      },
+      {
+        "bytes": 442371,
+        "height": 512,
+        "mimeType": "image/png",
+        "name": "T_Glass_ORM",
+        "width": 512
+      }
+    ],
+    "triangleCount": 8550,
+    "undrawnMeshCount": 0,
+    "undrawnPrimitiveCount": 0,
+    "undrawnTriangleCount": 0,
+    "vertexCount": 20396,
+    "warnings": [
+      "texture is below 1024px on an axis and will blur at close range: T_EgmoreRed_N (512x512), T_EgmoreRed_BC (512x512), T_EgmoreRed_ORM (512x512), T_EgmoreLime_N (512x512) (+5 more)"
+    ]
+  },
+  "license": "LicenseRef-ProjectOriginal",
+  "schema": "game_dev.asset_metadata.v1"
+}

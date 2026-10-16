@@ -1,0 +1,356 @@
+[
+  {
+    "id": "S7-T01",
+    "title": "Service definition loads.",
+    "status": "PASS",
+    "evidence": [
+      "Evidence/service-tests.json#S7-definition"
+    ]
+  },
+  {
+    "id": "S7-T02",
+    "title": "Service selection works.",
+    "status": "PASS",
+    "evidence": [
+      "Evidence/service-tests.json#S7-selection"
+    ]
+  },
+  {
+    "id": "S7-T03",
+    "title": "Formation/service binding is correct.",
+    "status": "PASS",
+    "evidence": [
+      "Evidence/service-tests.json#S7-confirm-formation"
+    ]
+  },
+  {
+    "id": "S7-T04",
+    "title": "Service starts at valid logical state.",
+    "status": "PASS",
+    "evidence": [
+      "Evidence/service-tests.json#S7-start"
+    ]
+  },
+  {
+    "id": "S7-T05",
+    "title": "Player controls remain functional.",
+    "status": "PASS",
+    "evidence": [
+      "Evidence/service-tests.json#S7-input"
+    ]
+  },
+  {
+    "id": "S7-T06",
+    "title": "AI traffic uses existing S5 systems.",
+    "status": "PASS",
+    "evidence": [
+      "Evidence/service-tests.json#S7-existing-AI"
+    ]
+  },
+  {
+    "id": "S7-T07",
+    "title": "AI causes a legitimate railway interaction.",
+    "status": "PASS",
+    "evidence": [
+      "Evidence/service-tests.json#S7-real-traffic-hold"
+    ]
+  },
+  {
+    "id": "S7-T08",
+    "title": "Player receives authoritative restrictive signal/authority.",
+    "status": "PASS",
+    "evidence": [
+      "Evidence/service-tests.json#S7-real-traffic-hold"
+    ]
+  },
+  {
+    "id": "S7-T09",
+    "title": "Player can safely wait and resume.",
+    "status": "PASS",
+    "evidence": [
+      "Evidence/service-tests.json#S7-rear-clear-allows-player"
+    ]
+  },
+  {
+    "id": "S7-T10",
+    "title": "Station approach state works.",
+    "status": "PASS",
+    "evidence": [
+      "Evidence/service-tests.json#S7-station-state-contract"
+    ]
+  },
+  {
+    "id": "S7-T11",
+    "title": "Platform/formation compatibility is validated.",
+    "status": "PASS",
+    "evidence": [
+      "Evidence/service-tests.json#S7-platform-too-short"
+    ]
+  },
+  {
+    "id": "S7-T12",
+    "title": "Valid berth is recognized.",
+    "status": "PASS",
+    "evidence": [
+      "Evidence/service-tests.json#S7-berth"
+    ]
+  },
+  {
+    "id": "S7-T13",
+    "title": "Overshoot is detected correctly.",
+    "status": "PASS",
+    "evidence": [
+      "Evidence/service-tests.json#S7-overshoot-failure"
+    ]
+  },
+  {
+    "id": "S7-T14",
+    "title": "Dwell state works.",
+    "status": "PASS",
+    "evidence": [
+      "Evidence/service-tests.json#S7-dwell"
+    ]
+  },
+  {
+    "id": "S7-T15",
+    "title": "Departure state works.",
+    "status": "PASS",
+    "evidence": [
+      "Evidence/service-tests.json#S7-departure"
+    ]
+  },
+  {
+    "id": "S7-T16",
+    "title": "Objective evaluation derives from logical events.",
+    "status": "PASS",
+    "evidence": [
+      "Evidence/service-tests.json#S7-objective-events"
+    ]
+  },
+  {
+    "id": "S7-T17",
+    "title": "Traffic-caused delay is distinguished from player-caused delay.",
+    "status": "PASS",
+    "evidence": [
+      "Evidence/service-tests.json#S7-delay-attribution"
+    ]
+  },
+  {
+    "id": "S7-T18",
+    "title": "Safety failure works.",
+    "status": "PASS",
+    "evidence": [
+      "Evidence/service-tests.json#S7-forward-service-safety-failure"
+    ]
+  },
+  {
+    "id": "S7-T19",
+    "title": "Retry works.",
+    "status": "PASS",
+    "evidence": [
+      "Evidence/service-tests.json#S7-retry"
+    ]
+  },
+  {
+    "id": "S7-T20",
+    "title": "Result calculation works.",
+    "status": "PASS",
+    "evidence": [
+      "Evidence/service-tests.json#S7-complete-itinerary"
+    ]
+  },
+  {
+    "id": "S7-T21",
+    "title": "Result explains major causes.",
+    "status": "PASS",
+    "evidence": [
+      "Evidence/service-tests.json#S7-explained-result"
+    ]
+  },
+  {
+    "id": "S7-T22",
+    "title": "Reputation/unlock transaction works.",
+    "status": "PASS",
+    "evidence": [
+      "Evidence/service-tests.json#S7-settlement"
+    ]
+  },
+  {
+    "id": "S7-T23",
+    "title": "Duplicate settlement cannot duplicate progression.",
+    "status": "PASS",
+    "evidence": [
+      "Evidence/service-tests.json#S7-duplicate-settlement"
+    ]
+  },
+  {
+    "id": "S7-T24",
+    "title": "Interrupted settlement recovers safely.",
+    "status": "PASS",
+    "evidence": [
+      "Evidence/service-tests.json#S7-interrupted-settlement-recover",
+      "Evidence/pending-result-recovery.json",
+      "Evidence/paid-result-recovery.json"
+    ]
+  },
+  {
+    "id": "S7-T25",
+    "title": "Pause mid-service works.",
+    "status": "PASS",
+    "evidence": [
+      "Evidence/Device/initial-lifecycle-results.json"
+    ]
+  },
+  {
+    "id": "S7-T26",
+    "title": "Background/foreground works.",
+    "status": "PASS",
+    "evidence": [
+      "Evidence/Device/initial-lifecycle-results.json"
+    ]
+  },
+  {
+    "id": "S7-T27",
+    "title": "Cold resume works.",
+    "status": "PASS",
+    "evidence": [
+      "Evidence/service-tests.json#S7-cold-restore-full-state",
+      "Evidence/Device/initial-lifecycle-results.json"
+    ]
+  },
+  {
+    "id": "S7-T28",
+    "title": "Offline complete loop works.",
+    "status": "PASS",
+    "evidence": [
+      "Evidence/Device/delivery-loop/analysis.json",
+      "Evidence/paid-result-recovery.json",
+      "Evidence/apk-permissions.txt"
+    ]
+  },
+  {
+    "id": "S7-T29",
+    "title": "Replay/continue works.",
+    "status": "PASS",
+    "evidence": [
+      "Evidence/service-tests.json#S7-replay-preserves-profile"
+    ]
+  },
+  {
+    "id": "S7-T30",
+    "title": "S2 regression passes.",
+    "status": "PASS",
+    "evidence": [
+      "Evidence/host-results.txt"
+    ]
+  },
+  {
+    "id": "S7-T31",
+    "title": "S3 regression passes.",
+    "status": "PASS",
+    "evidence": [
+      "Evidence/host-results.txt"
+    ]
+  },
+  {
+    "id": "S7-T32",
+    "title": "S4 regression passes.",
+    "status": "PASS",
+    "evidence": [
+      "Evidence/host-results.txt"
+    ]
+  },
+  {
+    "id": "S7-T33",
+    "title": "S5 regression passes.",
+    "status": "PASS",
+    "evidence": [
+      "Evidence/host-results.txt"
+    ]
+  },
+  {
+    "id": "S7-T34",
+    "title": "S6 regression passes.",
+    "status": "PASS",
+    "evidence": [
+      "Evidence/host-results.txt"
+    ]
+  },
+  {
+    "id": "S7-T35",
+    "title": "Unreal Automation passes.",
+    "status": "PASS",
+    "evidence": [
+      "Evidence/UnrealAutomation/index.json"
+    ]
+  },
+  {
+    "id": "S7-T36",
+    "title": "Android packaged service-start test passes.",
+    "status": "PASS",
+    "evidence": [
+      "Evidence/Device/delivery-loop/analysis.json",
+      "Evidence/paid-result-recovery.json",
+      "Evidence/apk-permissions.txt"
+    ]
+  },
+  {
+    "id": "S7-T37",
+    "title": "Android player + AI traffic test passes.",
+    "status": "PASS",
+    "evidence": [
+      "Evidence/Device/delivery-loop/analysis.json",
+      "Evidence/paid-result-recovery.json",
+      "Evidence/apk-permissions.txt"
+    ]
+  },
+  {
+    "id": "S7-T38",
+    "title": "Android station-stop test passes.",
+    "status": "PASS",
+    "evidence": [
+      "Evidence/Device/delivery-loop/analysis.json",
+      "Evidence/paid-result-recovery.json",
+      "Evidence/apk-permissions.txt"
+    ]
+  },
+  {
+    "id": "S7-T39",
+    "title": "Android result/progression test passes.",
+    "status": "PASS",
+    "evidence": [
+      "Evidence/Device/delivery-loop/analysis.json",
+      "Evidence/paid-result-recovery.json",
+      "Evidence/apk-permissions.txt"
+    ]
+  },
+  {
+    "id": "S7-T40",
+    "title": "Android interruption/recovery test passes.",
+    "status": "PASS",
+    "evidence": [
+      "Evidence/Device/delivery-loop/analysis.json",
+      "Evidence/paid-result-recovery.json",
+      "Evidence/apk-permissions.txt"
+    ]
+  },
+  {
+    "id": "S7-T41",
+    "title": "Android offline full-loop test passes.",
+    "status": "PASS",
+    "evidence": [
+      "Evidence/Device/delivery-loop/analysis.json",
+      "Evidence/paid-result-recovery.json",
+      "Evidence/apk-permissions.txt"
+    ]
+  },
+  {
+    "id": "S7-T42",
+    "title": "No visual-only scripted traffic bypass exists.",
+    "status": "PASS",
+    "evidence": [
+      "source-change-manifest.json",
+      "../../03_UnrealProject/MyProject/Source/MyProject/Simulation/RailService.cpp"
+    ]
+  }
+]

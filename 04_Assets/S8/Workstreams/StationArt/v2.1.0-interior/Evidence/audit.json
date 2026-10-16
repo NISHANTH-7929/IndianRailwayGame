@@ -1,0 +1,695 @@
+{
+  "status": "PASS",
+  "checks": [
+    {
+      "check": "baseGLBUnchanged",
+      "pass": true,
+      "detail": "c09777218b90a8d796f4a7a92f90e76905e41f1684d38378ab3712d014766cda"
+    },
+    {
+      "check": "baseBlendUnchanged",
+      "pass": true,
+      "detail": "3ce09338aa4143727802b72f2eb1fff39bb3ab7e2a9757c633aa7a25df3436be"
+    },
+    {
+      "check": "Modules/PlatformNumber1_LOD0.glb",
+      "pass": true,
+      "detail": {
+        "maxBoundsErrorM": 0.0,
+        "triangles": 1180,
+        "degenerateTriangles": 0
+      }
+    },
+    {
+      "check": "Modules/PlatformNumber1_LOD0.fbx",
+      "pass": true,
+      "detail": {
+        "maxBoundsErrorM": 4.0978193283081055e-08,
+        "triangles": 1180,
+        "degenerateTriangles": 0
+      }
+    },
+    {
+      "check": "Modules/PlatformNumber1_LOD1.glb",
+      "pass": true,
+      "detail": {
+        "maxBoundsErrorM": 0.0,
+        "triangles": 1180,
+        "degenerateTriangles": 0
+      }
+    },
+    {
+      "check": "Modules/PlatformNumber1_LOD1.fbx",
+      "pass": true,
+      "detail": {
+        "maxBoundsErrorM": 4.0978193283081055e-08,
+        "triangles": 1180,
+        "degenerateTriangles": 0
+      }
+    },
+    {
+      "check": "Modules/PlatformNumber1_LOD2.glb",
+      "pass": true,
+      "detail": {
+        "maxBoundsErrorM": 0.0,
+        "triangles": 1180,
+        "degenerateTriangles": 0
+      }
+    },
+    {
+      "check": "Modules/PlatformNumber1_LOD2.fbx",
+      "pass": true,
+      "detail": {
+        "maxBoundsErrorM": 4.0978193283081055e-08,
+        "triangles": 1180,
+        "degenerateTriangles": 0
+      }
+    },
+    {
+      "check": "Modules/PlatformNumber2_LOD0.glb",
+      "pass": true,
+      "detail": {
+        "maxBoundsErrorM": 0.0,
+        "triangles": 1412,
+        "degenerateTriangles": 0
+      }
+    },
+    {
+      "check": "Modules/PlatformNumber2_LOD0.fbx",
+      "pass": true,
+      "detail": {
+        "maxBoundsErrorM": 4.0978193283081055e-08,
+        "triangles": 1412,
+        "degenerateTriangles": 0
+      }
+    },
+    {
+      "check": "Modules/PlatformNumber2_LOD1.glb",
+      "pass": true,
+      "detail": {
+        "maxBoundsErrorM": 0.0,
+        "triangles": 1412,
+        "degenerateTriangles": 0
+      }
+    },
+    {
+      "check": "Modules/PlatformNumber2_LOD1.fbx",
+      "pass": true,
+      "detail": {
+        "maxBoundsErrorM": 4.0978193283081055e-08,
+        "triangles": 1412,
+        "degenerateTriangles": 0
+      }
+    },
+    {
+      "check": "Modules/PlatformNumber2_LOD2.glb",
+      "pass": true,
+      "detail": {
+        "maxBoundsErrorM": 0.0,
+        "triangles": 1412,
+        "degenerateTriangles": 0
+      }
+    },
+    {
+      "check": "Modules/PlatformNumber2_LOD2.fbx",
+      "pass": true,
+      "detail": {
+        "maxBoundsErrorM": 4.0978193283081055e-08,
+        "triangles": 1412,
+        "degenerateTriangles": 0
+      }
+    },
+    {
+      "check": "Modules/PlatformNumber3_LOD0.glb",
+      "pass": true,
+      "detail": {
+        "maxBoundsErrorM": 0.0,
+        "triangles": 1556,
+        "degenerateTriangles": 0
+      }
+    },
+    {
+      "check": "Modules/PlatformNumber3_LOD0.fbx",
+      "pass": true,
+      "detail": {
+        "maxBoundsErrorM": 4.0978193283081055e-08,
+        "triangles": 1556,
+        "degenerateTriangles": 0
+      }
+    },
+    {
+      "check": "Modules/PlatformNumber3_LOD1.glb",
+      "pass": true,
+      "detail": {
+        "maxBoundsErrorM": 0.0,
+        "triangles": 1556,
+        "degenerateTriangles": 0
+      }
+    },
+    {
+      "check": "Modules/PlatformNumber3_LOD1.fbx",
+      "pass": true,
+      "detail": {
+        "maxBoundsErrorM": 4.0978193283081055e-08,
+        "triangles": 1556,
+        "degenerateTriangles": 0
+      }
+    },
+    {
+      "check": "Modules/PlatformNumber3_LOD2.glb",
+      "pass": true,
+      "detail": {
+        "maxBoundsErrorM": 0.0,
+        "triangles": 1556,
+        "degenerateTriangles": 0
+      }
+    },
+    {
+      "check": "Modules/PlatformNumber3_LOD2.fbx",
+      "pass": true,
+      "detail": {
+        "maxBoundsErrorM": 4.0978193283081055e-08,
+        "triangles": 1556,
+        "degenerateTriangles": 0
+      }
+    },
+    {
+      "check": "Modules/ExitFootbridge_LOD0.glb",
+      "pass": true,
+      "detail": {
+        "maxBoundsErrorM": 0.0,
+        "triangles": 2164,
+        "degenerateTriangles": 0
+      }
+    },
+    {
+      "check": "Modules/ExitFootbridge_LOD0.fbx",
+      "pass": true,
+      "detail": {
+        "maxBoundsErrorM": 6.705522537231445e-08,
+        "triangles": 2164,
+        "degenerateTriangles": 0
+      }
+    },
+    {
+      "check": "Modules/ExitFootbridge_LOD1.glb",
+      "pass": true,
+      "detail": {
+        "maxBoundsErrorM": 0.0,
+        "triangles": 2164,
+        "degenerateTriangles": 0
+      }
+    },
+    {
+      "check": "Modules/ExitFootbridge_LOD1.fbx",
+      "pass": true,
+      "detail": {
+        "maxBoundsErrorM": 6.705522537231445e-08,
+        "triangles": 2164,
+        "degenerateTriangles": 0
+      }
+    },
+    {
+      "check": "Modules/ExitFootbridge_LOD2.glb",
+      "pass": true,
+      "detail": {
+        "maxBoundsErrorM": 0.0,
+        "triangles": 2164,
+        "degenerateTriangles": 0
+      }
+    },
+    {
+      "check": "Modules/ExitFootbridge_LOD2.fbx",
+      "pass": true,
+      "detail": {
+        "maxBoundsErrorM": 6.705522537231445e-08,
+        "triangles": 2164,
+        "degenerateTriangles": 0
+      }
+    },
+    {
+      "check": "Modules/CanopyLight_LOD0.glb",
+      "pass": true,
+      "detail": {
+        "maxBoundsErrorM": 0.0,
+        "triangles": 24,
+        "degenerateTriangles": 0
+      }
+    },
+    {
+      "check": "Modules/CanopyLight_LOD0.fbx",
+      "pass": true,
+      "detail": {
+        "maxBoundsErrorM": 5.21540641784668e-08,
+        "triangles": 24,
+        "degenerateTriangles": 0
+      }
+    },
+    {
+      "check": "Modules/CanopyLight_LOD1.glb",
+      "pass": true,
+      "detail": {
+        "maxBoundsErrorM": 0.0,
+        "triangles": 24,
+        "degenerateTriangles": 0
+      }
+    },
+    {
+      "check": "Modules/CanopyLight_LOD1.fbx",
+      "pass": true,
+      "detail": {
+        "maxBoundsErrorM": 5.21540641784668e-08,
+        "triangles": 24,
+        "degenerateTriangles": 0
+      }
+    },
+    {
+      "check": "Modules/CanopyLight_LOD2.glb",
+      "pass": true,
+      "detail": {
+        "maxBoundsErrorM": 0.0,
+        "triangles": 24,
+        "degenerateTriangles": 0
+      }
+    },
+    {
+      "check": "Modules/CanopyLight_LOD2.fbx",
+      "pass": true,
+      "detail": {
+        "maxBoundsErrorM": 5.21540641784668e-08,
+        "triangles": 24,
+        "degenerateTriangles": 0
+      }
+    },
+    {
+      "check": "EGI.PlatformNumber1.000.headClearance",
+      "pass": true,
+      "detail": {
+        "heightAbovePlatformM": 3.3299999868869783
+      }
+    },
+    {
+      "check": "EGI.PlatformNumber1.001.headClearance",
+      "pass": true,
+      "detail": {
+        "heightAbovePlatformM": 3.3299999868869783
+      }
+    },
+    {
+      "check": "EGI.PlatformNumber1.002.headClearance",
+      "pass": true,
+      "detail": {
+        "heightAbovePlatformM": 3.3299999868869783
+      }
+    },
+    {
+      "check": "EGI.PlatformNumber1.003.headClearance",
+      "pass": true,
+      "detail": {
+        "heightAbovePlatformM": 3.3299999868869783
+      }
+    },
+    {
+      "check": "EGI.ExitFootbridge.004.headClearance",
+      "pass": true,
+      "detail": {
+        "heightAbovePlatformM": 3.3299999868869783
+      }
+    },
+    {
+      "check": "EGI.CanopyLight.005.headClearance",
+      "pass": true,
+      "detail": {
+        "heightAbovePlatformM": 4.126000004410744
+      }
+    },
+    {
+      "check": "EGI.CanopyLight.006.headClearance",
+      "pass": true,
+      "detail": {
+        "heightAbovePlatformM": 4.126000004410744
+      }
+    },
+    {
+      "check": "EGI.CanopyLight.007.headClearance",
+      "pass": true,
+      "detail": {
+        "heightAbovePlatformM": 4.126000004410744
+      }
+    },
+    {
+      "check": "EGI.CanopyLight.008.headClearance",
+      "pass": true,
+      "detail": {
+        "heightAbovePlatformM": 4.126000004410744
+      }
+    },
+    {
+      "check": "EGI.CanopyLight.009.headClearance",
+      "pass": true,
+      "detail": {
+        "heightAbovePlatformM": 4.126000004410744
+      }
+    },
+    {
+      "check": "EGI.CanopyLight.010.headClearance",
+      "pass": true,
+      "detail": {
+        "heightAbovePlatformM": 4.126000004410744
+      }
+    },
+    {
+      "check": "EGI.CanopyLight.011.headClearance",
+      "pass": true,
+      "detail": {
+        "heightAbovePlatformM": 4.126000004410744
+      }
+    },
+    {
+      "check": "EGI.CanopyLight.012.headClearance",
+      "pass": true,
+      "detail": {
+        "heightAbovePlatformM": 4.126000004410744
+      }
+    },
+    {
+      "check": "EGI.CanopyLight.013.headClearance",
+      "pass": true,
+      "detail": {
+        "heightAbovePlatformM": 4.126000004410744
+      }
+    },
+    {
+      "check": "EGI.CanopyLight.014.headClearance",
+      "pass": true,
+      "detail": {
+        "heightAbovePlatformM": 4.126000004410744
+      }
+    },
+    {
+      "check": "EGI.CanopyLight.015.headClearance",
+      "pass": true,
+      "detail": {
+        "heightAbovePlatformM": 4.126000004410744
+      }
+    },
+    {
+      "check": "EGI.CanopyLight.016.headClearance",
+      "pass": true,
+      "detail": {
+        "heightAbovePlatformM": 4.126000004410744
+      }
+    },
+    {
+      "check": "EGI.CanopyLight.017.headClearance",
+      "pass": true,
+      "detail": {
+        "heightAbovePlatformM": 4.126000004410744
+      }
+    },
+    {
+      "check": "EGI.CanopyLight.018.headClearance",
+      "pass": true,
+      "detail": {
+        "heightAbovePlatformM": 4.126000004410744
+      }
+    },
+    {
+      "check": "EGI.PlatformNumber2.019.headClearance",
+      "pass": true,
+      "detail": {
+        "heightAbovePlatformM": 3.3299999868869783
+      }
+    },
+    {
+      "check": "EGI.PlatformNumber2.020.headClearance",
+      "pass": true,
+      "detail": {
+        "heightAbovePlatformM": 3.3299999868869783
+      }
+    },
+    {
+      "check": "EGI.PlatformNumber2.021.headClearance",
+      "pass": true,
+      "detail": {
+        "heightAbovePlatformM": 3.3299999868869783
+      }
+    },
+    {
+      "check": "EGI.PlatformNumber2.022.headClearance",
+      "pass": true,
+      "detail": {
+        "heightAbovePlatformM": 3.3299999868869783
+      }
+    },
+    {
+      "check": "EGI.ExitFootbridge.023.headClearance",
+      "pass": true,
+      "detail": {
+        "heightAbovePlatformM": 3.3299999868869783
+      }
+    },
+    {
+      "check": "EGI.CanopyLight.024.headClearance",
+      "pass": true,
+      "detail": {
+        "heightAbovePlatformM": 4.126000004410744
+      }
+    },
+    {
+      "check": "EGI.CanopyLight.025.headClearance",
+      "pass": true,
+      "detail": {
+        "heightAbovePlatformM": 4.126000004410744
+      }
+    },
+    {
+      "check": "EGI.CanopyLight.026.headClearance",
+      "pass": true,
+      "detail": {
+        "heightAbovePlatformM": 4.126000004410744
+      }
+    },
+    {
+      "check": "EGI.CanopyLight.027.headClearance",
+      "pass": true,
+      "detail": {
+        "heightAbovePlatformM": 4.126000004410744
+      }
+    },
+    {
+      "check": "EGI.CanopyLight.028.headClearance",
+      "pass": true,
+      "detail": {
+        "heightAbovePlatformM": 4.126000004410744
+      }
+    },
+    {
+      "check": "EGI.CanopyLight.029.headClearance",
+      "pass": true,
+      "detail": {
+        "heightAbovePlatformM": 4.126000004410744
+      }
+    },
+    {
+      "check": "EGI.CanopyLight.030.headClearance",
+      "pass": true,
+      "detail": {
+        "heightAbovePlatformM": 4.126000004410744
+      }
+    },
+    {
+      "check": "EGI.CanopyLight.031.headClearance",
+      "pass": true,
+      "detail": {
+        "heightAbovePlatformM": 4.126000004410744
+      }
+    },
+    {
+      "check": "EGI.CanopyLight.032.headClearance",
+      "pass": true,
+      "detail": {
+        "heightAbovePlatformM": 4.126000004410744
+      }
+    },
+    {
+      "check": "EGI.CanopyLight.033.headClearance",
+      "pass": true,
+      "detail": {
+        "heightAbovePlatformM": 4.126000004410744
+      }
+    },
+    {
+      "check": "EGI.CanopyLight.034.headClearance",
+      "pass": true,
+      "detail": {
+        "heightAbovePlatformM": 4.126000004410744
+      }
+    },
+    {
+      "check": "EGI.CanopyLight.035.headClearance",
+      "pass": true,
+      "detail": {
+        "heightAbovePlatformM": 4.126000004410744
+      }
+    },
+    {
+      "check": "EGI.CanopyLight.036.headClearance",
+      "pass": true,
+      "detail": {
+        "heightAbovePlatformM": 4.126000004410744
+      }
+    },
+    {
+      "check": "EGI.CanopyLight.037.headClearance",
+      "pass": true,
+      "detail": {
+        "heightAbovePlatformM": 4.126000004410744
+      }
+    },
+    {
+      "check": "EGI.PlatformNumber3.038.headClearance",
+      "pass": true,
+      "detail": {
+        "heightAbovePlatformM": 3.3299999868869783
+      }
+    },
+    {
+      "check": "EGI.PlatformNumber3.039.headClearance",
+      "pass": true,
+      "detail": {
+        "heightAbovePlatformM": 3.3299999868869783
+      }
+    },
+    {
+      "check": "EGI.PlatformNumber3.040.headClearance",
+      "pass": true,
+      "detail": {
+        "heightAbovePlatformM": 3.3299999868869783
+      }
+    },
+    {
+      "check": "EGI.PlatformNumber3.041.headClearance",
+      "pass": true,
+      "detail": {
+        "heightAbovePlatformM": 3.3299999868869783
+      }
+    },
+    {
+      "check": "EGI.ExitFootbridge.042.headClearance",
+      "pass": true,
+      "detail": {
+        "heightAbovePlatformM": 3.3299999868869783
+      }
+    },
+    {
+      "check": "EGI.CanopyLight.043.headClearance",
+      "pass": true,
+      "detail": {
+        "heightAbovePlatformM": 4.126000004410744
+      }
+    },
+    {
+      "check": "EGI.CanopyLight.044.headClearance",
+      "pass": true,
+      "detail": {
+        "heightAbovePlatformM": 4.126000004410744
+      }
+    },
+    {
+      "check": "EGI.CanopyLight.045.headClearance",
+      "pass": true,
+      "detail": {
+        "heightAbovePlatformM": 4.126000004410744
+      }
+    },
+    {
+      "check": "EGI.CanopyLight.046.headClearance",
+      "pass": true,
+      "detail": {
+        "heightAbovePlatformM": 4.126000004410744
+      }
+    },
+    {
+      "check": "EGI.CanopyLight.047.headClearance",
+      "pass": true,
+      "detail": {
+        "heightAbovePlatformM": 4.126000004410744
+      }
+    },
+    {
+      "check": "EGI.CanopyLight.048.headClearance",
+      "pass": true,
+      "detail": {
+        "heightAbovePlatformM": 4.126000004410744
+      }
+    },
+    {
+      "check": "EGI.CanopyLight.049.headClearance",
+      "pass": true,
+      "detail": {
+        "heightAbovePlatformM": 4.126000004410744
+      }
+    },
+    {
+      "check": "EGI.CanopyLight.050.headClearance",
+      "pass": true,
+      "detail": {
+        "heightAbovePlatformM": 4.126000004410744
+      }
+    },
+    {
+      "check": "EGI.CanopyLight.051.headClearance",
+      "pass": true,
+      "detail": {
+        "heightAbovePlatformM": 4.126000004410744
+      }
+    },
+    {
+      "check": "EGI.CanopyLight.052.headClearance",
+      "pass": true,
+      "detail": {
+        "heightAbovePlatformM": 4.126000004410744
+      }
+    },
+    {
+      "check": "EGI.CanopyLight.053.headClearance",
+      "pass": true,
+      "detail": {
+        "heightAbovePlatformM": 4.126000004410744
+      }
+    },
+    {
+      "check": "EGI.CanopyLight.054.headClearance",
+      "pass": true,
+      "detail": {
+        "heightAbovePlatformM": 4.126000004410744
+      }
+    },
+    {
+      "check": "EGI.CanopyLight.055.headClearance",
+      "pass": true,
+      "detail": {
+        "heightAbovePlatformM": 4.126000004410744
+      }
+    },
+    {
+      "check": "EGI.CanopyLight.056.headClearance",
+      "pass": true,
+      "detail": {
+        "heightAbovePlatformM": 4.126000004410744
+      }
+    },
+    {
+      "check": "uniqueIDs",
+      "pass": true,
+      "detail": 57
+    },
+    {
+      "check": "previews",
+      "pass": true,
+      "detail": 4
+    }
+  ],
+  "scope": "Additive interior source assets; Blender reimports all module formats/LODs and measures head clearance. Runtime remains untested."
+}

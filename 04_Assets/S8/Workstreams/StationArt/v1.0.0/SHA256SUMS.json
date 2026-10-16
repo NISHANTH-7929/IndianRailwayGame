@@ -1,0 +1,207 @@
+[
+  {
+    "path": "ChennaiEgmore_StationArt_v1.0.0.blend",
+    "bytes": 506568,
+    "sha256": "4519254a9dad4d5c337b3eb0a9b2e977a375265e28a9410b9b21d4922b0accb6"
+  },
+  {
+    "path": "ChennaiEgmore_StationArt_v1.0.0.blend1",
+    "bytes": 494762,
+    "sha256": "25665e952daad58785dc5c15146b3b8350a4e806338e83bb568dbccd0605092c"
+  },
+  {
+    "path": "exports/ChennaiEgmore_StationArt_v1.0.0.fbx",
+    "bytes": 4144876,
+    "sha256": "7634ec048bff7033227519e2e29e8717200ce8dfb10dcda5c36e6bdef2bfeaac"
+  },
+  {
+    "path": "exports/ChennaiEgmore_StationArt_v1.0.0.glb",
+    "bytes": 10331564,
+    "sha256": "669489876705fef3223189f219269f29713412bd2041457e33993bf85d9fe3a8"
+  },
+  {
+    "path": "placement_manifest.json",
+    "bytes": 294491,
+    "sha256": "40a9165ffb608c62e74bc79a58e1bba6a011cf7141d2bf5e15bc47ba2fc7736b"
+  },
+  {
+    "path": "previews/CAM_HeritageWide.png",
+    "bytes": 1155492,
+    "sha256": "f7b79a46ee2623eedd788fadb5533a28ca9c98ca7cfaf132c30d02c0b2085a7d"
+  },
+  {
+    "path": "previews/CAM_PlatformEye.png",
+    "bytes": 1140743,
+    "sha256": "0ee4fd67d9ec7c2dba6b04a99c3fc076d1f08fd50762b99bbb5c950f3c64f14e"
+  },
+  {
+    "path": "previews/CAM_TrackArrival.png",
+    "bytes": 1129471,
+    "sha256": "aec599588422d04c3146f38e12171b499c410813439f988239363c84447b7a44"
+  },
+  {
+    "path": "provenance.json",
+    "bytes": 1613,
+    "sha256": "2171e7e6fdcfb72ff8190264b3c0c95fd249801fcf7eadcc8e4d30fa33a32149"
+  },
+  {
+    "path": "READY.lock",
+    "bytes": 241,
+    "sha256": "fbc11a83d065044890520cac5895ecb179b5906bb3929d4b5e22a203a435e3c2"
+  },
+  {
+    "path": "textures/T_ballast_BC.png",
+    "bytes": 137150,
+    "sha256": "5bfddeae746a1d3aec47ff3b0fd420c99cae7310d954dac717a6cf80249222f1"
+  },
+  {
+    "path": "textures/T_ballast_N.png",
+    "bytes": 392101,
+    "sha256": "ff26742df3164ebb6d5bf9a7cff2e8da9834bb29a04918c97838bd90a3b85896"
+  },
+  {
+    "path": "textures/T_ballast_ORM.png",
+    "bytes": 146677,
+    "sha256": "e3eb2dd6e4d84d03bad9c05acb6069032862fae186aa7f94e0dbb8bdfca34c12"
+  },
+  {
+    "path": "textures/T_blue_metal_BC.png",
+    "bytes": 92892,
+    "sha256": "6558e70d1a490807f043653ae41ab8fada889e43407fd03931e056d1e0692b39"
+  },
+  {
+    "path": "textures/T_blue_metal_N.png",
+    "bytes": 146081,
+    "sha256": "3422676203821699ea993d65721493ee792c1d1ef5a9e7b579e8e879404298b1"
+  },
+  {
+    "path": "textures/T_blue_metal_ORM.png",
+    "bytes": 112740,
+    "sha256": "965e7753389432ae3d574f4748a0ce3a9e11c0e6ad58a0c388ee3cf15f59fcc4"
+  },
+  {
+    "path": "textures/T_concrete_BC.png",
+    "bytes": 92826,
+    "sha256": "b663c1d7291a0ed05626cf363029f81932316d2ba381d976c32dbc05428cff24"
+  },
+  {
+    "path": "textures/T_concrete_N.png",
+    "bytes": 143111,
+    "sha256": "c078f474408298222cf705f4d71f3996b6d4d001bbb40d2c68fd4f565be15ed2"
+  },
+  {
+    "path": "textures/T_concrete_ORM.png",
+    "bytes": 118589,
+    "sha256": "f044c0b2b06a51edeaa4514f209b8bab2c3db4f050c5539c06320ba27ee8ccd5"
+  },
+  {
+    "path": "textures/T_cream_lime_BC.png",
+    "bytes": 92760,
+    "sha256": "9b1ef8017d4e577f02f3b87a825f9e215e7f50b78c137270389b26cf84d3dcc1"
+  },
+  {
+    "path": "textures/T_cream_lime_N.png",
+    "bytes": 143095,
+    "sha256": "0bdf8a9434cbfe8bd9fa961b8766920fd07519457fbcda972848cc463ba90dd8"
+  },
+  {
+    "path": "textures/T_cream_lime_ORM.png",
+    "bytes": 109001,
+    "sha256": "c341970b142f9e56c5b3458d795ff2f8320beb0ee76bb245cf66c962c4d8c7e6"
+  },
+  {
+    "path": "textures/T_dark_steel_BC.png",
+    "bytes": 91785,
+    "sha256": "6e0e89aa9ccfd2e4249b93cb9990d5c07b3926201ced5d36718d44a1946d7c11"
+  },
+  {
+    "path": "textures/T_dark_steel_N.png",
+    "bytes": 143249,
+    "sha256": "7b6cfaf1ea5508d81bbc8197e8b77f634253d6ba34755e1b0e75b4967b780bed"
+  },
+  {
+    "path": "textures/T_dark_steel_ORM.png",
+    "bytes": 114639,
+    "sha256": "6a278122e1da6c241d46a0074851e2ad7b2b1c95895d5571dbec500b98c6a8a6"
+  },
+  {
+    "path": "textures/T_foliage_BC.png",
+    "bytes": 91802,
+    "sha256": "ab40b568beb34586b1683ddc18ab3dac231e8d6ace27baffd105ed844c8c5fa9"
+  },
+  {
+    "path": "textures/T_foliage_N.png",
+    "bytes": 143202,
+    "sha256": "b8e2c2931b655d6b545dedc3c23ccfe9831a2735bc4ea7d8ad4e7148a52248ea"
+  },
+  {
+    "path": "textures/T_foliage_ORM.png",
+    "bytes": 114499,
+    "sha256": "bb93cd50cacc2142c78d4cd1e7c589054cb0ea9e8dda240438b044eb10c081a4"
+  },
+  {
+    "path": "textures/T_platform_tile_BC.png",
+    "bytes": 93857,
+    "sha256": "2a7af6db2c478c71b1144de004bde01837f1813ef9d7086354ba116309be20f1"
+  },
+  {
+    "path": "textures/T_platform_tile_N.png",
+    "bytes": 161690,
+    "sha256": "ba7f49357333591b89bc34edc78b5f265e868b73c53c4c652720043b077e0e8b"
+  },
+  {
+    "path": "textures/T_platform_tile_ORM.png",
+    "bytes": 109602,
+    "sha256": "6fc1121b86034463523020272ea55e76194f8d37b053faf49ae56235d8bd80ed"
+  },
+  {
+    "path": "textures/T_red_stucco_BC.png",
+    "bytes": 92230,
+    "sha256": "58cfb7a490a2a607685f2362854c67bccda06b0ac210dd761f7375bab96b7a35"
+  },
+  {
+    "path": "textures/T_red_stucco_N.png",
+    "bytes": 143465,
+    "sha256": "894f76ef32c2187a9239bb88ec9deb6aa4e4db804007329a680a77567518a497"
+  },
+  {
+    "path": "textures/T_red_stucco_ORM.png",
+    "bytes": 114524,
+    "sha256": "391273e2d4f3300be210cff53cedd397e2ca38ff5ba8a1c50dcb0737931ab8ce"
+  },
+  {
+    "path": "textures/T_soil_BC.png",
+    "bytes": 92332,
+    "sha256": "039ba7ca0fd5d6f502e2096ca9ef02b22a044bfe71254a2e64896bd5489dec19"
+  },
+  {
+    "path": "textures/T_soil_N.png",
+    "bytes": 143380,
+    "sha256": "35d86c8bff8616c0c42f8ee822b48ae98047682cd07b43a86079f6569ec44d8c"
+  },
+  {
+    "path": "textures/T_soil_ORM.png",
+    "bytes": 105438,
+    "sha256": "8559bcf1d0a199e59d5e9057576e7f6f21e01c8cbd39b86249f8d35658e7ffaa"
+  },
+  {
+    "path": "textures/T_yellow_edge_BC.png",
+    "bytes": 92927,
+    "sha256": "70238520a05482a3f8e1082464e492cf812a2456cf7833f2c56b2f3058779cf2"
+  },
+  {
+    "path": "textures/T_yellow_edge_N.png",
+    "bytes": 143248,
+    "sha256": "379969162cc0430210649241d6b57952da68649440fa6eb55d30dfa834ffb4fb"
+  },
+  {
+    "path": "textures/T_yellow_edge_ORM.png",
+    "bytes": 114597,
+    "sha256": "e6a9189b9bbcae2e730eac973f4ec2d64d99d1ebf698d6fd667e4edf0011ed84"
+  },
+  {
+    "path": "textures/texture_manifest.json",
+    "bytes": 2623,
+    "sha256": "afe7907692d4a8296f2c960a8af1478acda025e384e2c4e8eebe21bc398a7b16"
+  }
+]

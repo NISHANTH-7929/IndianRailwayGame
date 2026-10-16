@@ -1,0 +1,126 @@
+{
+  "type": "object",
+  "properties": {
+    "AssetId": {
+      "type": "string",
+      "pattern": "^[A-Z][A-Za-z0-9]*(\\.[A-Za-z0-9]+){2,}$"
+    },
+    "AssetName": {
+      "type": "string",
+      "minLength": 1
+    },
+    "Category": {
+      "enum": [
+        "locomotive",
+        "coach",
+        "wagon",
+        "formation",
+        "station",
+        "trackside",
+        "environment",
+        "building",
+        "vegetation",
+        "character",
+        "animation",
+        "audio",
+        "vfx",
+        "ui"
+      ]
+    },
+    "Creator": {
+      "type": "string",
+      "minLength": 1
+    },
+    "Source": {
+      "type": "string",
+      "minLength": 1
+    },
+    "SourceReference": {
+      "type": "string",
+      "minLength": 1
+    },
+    "AcquisitionDate": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+    },
+    "License": {
+      "type": "string",
+      "minLength": 1
+    },
+    "CommercialUse": {
+      "enum": [
+        "verified",
+        "denied",
+        "unknown"
+      ]
+    },
+    "ModificationPermission": {
+      "enum": [
+        "verified",
+        "denied",
+        "unknown"
+      ]
+    },
+    "RedistributionRestrictions": {
+      "type": "string",
+      "minLength": 1
+    },
+    "AttributionRequirement": {
+      "type": "string",
+      "minLength": 1
+    },
+    "OriginalArchive": {
+      "type": "string",
+      "minLength": 1
+    },
+    "ModifiedAssetReference": {
+      "type": "string",
+      "minLength": 1
+    },
+    "VerificationStatus": {
+      "enum": [
+        "pending review",
+        "approved",
+        "rejected",
+        "restricted",
+        "unknown"
+      ]
+    },
+    "VerificationEvidence": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "Notes": {
+      "type": "string",
+      "minLength": 1
+    }
+  },
+  "required": [
+    "AssetId",
+    "AssetName",
+    "Category",
+    "Creator",
+    "Source",
+    "SourceReference",
+    "AcquisitionDate",
+    "License",
+    "CommercialUse",
+    "ModificationPermission",
+    "RedistributionRestrictions",
+    "AttributionRequirement",
+    "OriginalArchive",
+    "ModifiedAssetReference",
+    "VerificationStatus",
+    "VerificationEvidence",
+    "Notes"
+  ],
+  "additionalProperties": false,
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:indianrailway:s8:provenance"
+}

@@ -1,0 +1,4 @@
+WAP 7 (New Design) Low poly by knitro_vedant
+https://sketchfab.com/3d-models/wap-7-new-design-low-poly-6d533d73faf34a8a811fee1fcb9c8878
+License: CC BY 4.0 — https://creativecommons.org/licenses/by/4.0/
+Changes: coordinate conversion, bogie partition, Unreal material conversion and distance LODs.

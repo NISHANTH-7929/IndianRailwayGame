@@ -1,0 +1,59 @@
+{
+  "schema": "game_dev.receipt.v1",
+  "operation": "package.verify",
+  "result": {
+    "schema": "game_dev.package_verification.v1",
+    "packagePath": "D:\\Project\\IndianRailwayGame\\04_Assets\\S8\\EgmorePortable\\.game-dev\\packages\\egmorelitterbins\\1.3.0",
+    "manifest": {
+      "assetId": "egmorelitterbins",
+      "description": "Original Egmore study with rear facade and aggregate ballast material; estimated dimensions, visual acceptance pending",
+      "displayName": "EgmoreLitterBins",
+      "files": [
+        {
+          "bytes": 5745668,
+          "kind": "model",
+          "path": "model.glb",
+          "sha256": "3a6d770568bfa68775eca57c32d59b0a7e98418f8c505cd81e1fb59d1c35312c"
+        },
+        {
+          "bytes": 3904,
+          "kind": "metadata",
+          "path": "metadata.json",
+          "sha256": "8118a28a4d9eb5549ece5611dcb02f31236c5871f9d39d048b7d0cd75c86fc76"
+        },
+        {
+          "bytes": 626,
+          "kind": "provenance",
+          "path": "provenance.json",
+          "sha256": "ada1cd83f9cd6c72c62a3205dd5667c8cf31ecf63911ec6b2575323d1274468b"
+        },
+        {
+          "bytes": 4317,
+          "kind": "validation",
+          "path": "validation.json",
+          "sha256": "1ef72b66ca171ad73ed6e92d802d8dfbb18e40f93cc1a5b56d4f5db6748b0da0"
+        }
+      ],
+      "license": "LicenseRef-ProjectOriginal",
+      "model": "model.glb",
+      "packageId": "pkg_baa908c01c9f4f342b996482",
+      "provenance": {
+        "origin": "authored"
+      },
+      "schema": "game_dev.asset_package.v1",
+      "validation": {
+        "errorCount": 0,
+        "passed": true,
+        "warningCount": 0
+      },
+      "version": "1.3.0"
+    },
+    "hashesVerified": true,
+    "evidence": {
+      "packageBytesVerified": true,
+      "gpuImportTestPerformed": false,
+      "humanVisualReviewPerformed": false
+    }
+  },
+  "completedAt": "2026-10-04T09:08:01.137Z"
+}

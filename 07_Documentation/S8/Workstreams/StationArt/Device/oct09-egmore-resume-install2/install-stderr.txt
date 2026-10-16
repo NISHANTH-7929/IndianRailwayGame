@@ -1,0 +1,1 @@
+adb.exe: failed to install D:\Project\IndianRailwayGame\08_Builds\S8_EgmoreService_20261009-144106\Android_ASTC\MyProject-arm64.apk: 

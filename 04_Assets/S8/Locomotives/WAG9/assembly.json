@@ -1,0 +1,1366 @@
+{
+  "schema_version": 1,
+  "locomotive": "WAG9",
+  "family": "WAG9",
+  "axis": "+X forward +Y right +Z up",
+  "coordinate_system": "+X forward +Y right +Z up",
+  "units": "centimeters",
+  "fbx_unit": "centimeters",
+  "fbx_import_settings": {
+    "convert_scene": true,
+    "force_front_x_axis": true,
+    "convert_scene_unit": true
+  },
+  "driver_camera": {
+    "location_cm": [
+      736,
+      -78,
+      298
+    ],
+    "rotation_deg": [
+      0,
+      0,
+      0
+    ],
+    "fov": 75
+  },
+  "parts": [
+    {
+      "name": "Exterior",
+      "role": "exterior",
+      "fbx": "Parts/SM_WAG9_01_Exterior_LOD0.fbx",
+      "location_cm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "pivot_cm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "triangles": 32596,
+      "material_slots": 8
+    },
+    {
+      "name": "Windshield wiper",
+      "role": "wiper",
+      "fbx": "Parts/SM_WAG9_01_Windshield wiper_LOD0.fbx",
+      "location_cm": [
+        -905.9999465942383,
+        -87.5,
+        319.4999933242798
+      ],
+      "pivot_cm": [
+        -905.9999465942383,
+        -87.5,
+        319.4999933242798
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "triangles": 44,
+      "material_slots": 1,
+      "rotation_axis": [
+        1,
+        0,
+        0
+      ],
+      "rotation_range_deg": [
+        -25,
+        25
+      ]
+    },
+    {
+      "name": "Windshield wiper_001",
+      "role": "wiper",
+      "fbx": "Parts/SM_WAG9_01_Windshield wiper_001_LOD0.fbx",
+      "location_cm": [
+        -905.9999465942383,
+        64.49999809265137,
+        319.4999933242798
+      ],
+      "pivot_cm": [
+        -905.9999465942383,
+        64.49999809265137,
+        319.4999933242798
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "triangles": 44,
+      "material_slots": 1,
+      "rotation_axis": [
+        1,
+        0,
+        0
+      ],
+      "rotation_range_deg": [
+        -25,
+        25
+      ]
+    },
+    {
+      "name": "WindowGlass",
+      "role": "glass",
+      "fbx": "Parts/SM_WAG9_01_WindowGlass_LOD0.fbx",
+      "location_cm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "pivot_cm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "triangles": 872,
+      "material_slots": 1
+    },
+    {
+      "name": "Lenses",
+      "role": "headlight",
+      "fbx": "Parts/SM_WAG9_01_Lenses_LOD0.fbx",
+      "location_cm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "pivot_cm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "triangles": 1104,
+      "material_slots": 2
+    },
+    {
+      "name": "Windshield wiper_002",
+      "role": "wiper",
+      "fbx": "Parts/SM_WAG9_01_Windshield wiper_002_LOD0.fbx",
+      "location_cm": [
+        905.9999465942383,
+        -87.5,
+        319.4999933242798
+      ],
+      "pivot_cm": [
+        905.9999465942383,
+        -87.5,
+        319.4999933242798
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "triangles": 44,
+      "material_slots": 1,
+      "rotation_axis": [
+        1,
+        0,
+        0
+      ],
+      "rotation_range_deg": [
+        -25,
+        25
+      ]
+    },
+    {
+      "name": "Windshield wiper_003",
+      "role": "wiper",
+      "fbx": "Parts/SM_WAG9_01_Windshield wiper_003_LOD0.fbx",
+      "location_cm": [
+        905.9999465942383,
+        64.49999809265137,
+        319.4999933242798
+      ],
+      "pivot_cm": [
+        905.9999465942383,
+        64.49999809265137,
+        319.4999933242798
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "triangles": 44,
+      "material_slots": 1,
+      "rotation_axis": [
+        1,
+        0,
+        0
+      ],
+      "rotation_range_deg": [
+        -25,
+        25
+      ]
+    },
+    {
+      "name": "Bogie_rear",
+      "role": "bogie_rear",
+      "fbx": "Parts/SM_WAG9_01_Bogie_rear_LOD0.fbx",
+      "location_cm": [
+        -600.0,
+        0.0,
+        75.0
+      ],
+      "pivot_cm": [
+        -600.0,
+        0.0,
+        75.0
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "triangles": 30572,
+      "material_slots": 2
+    },
+    {
+      "name": "Wheelset_rear_-7.85",
+      "role": "wheelset_rear",
+      "fbx": "Parts/SM_WAG9_01_Wheelset_rear_-7.85_LOD0.fbx",
+      "location_cm": [
+        -784.9999904632568,
+        0.0,
+        54.500001668930054
+      ],
+      "pivot_cm": [
+        -784.9999904632568,
+        0.0,
+        54.500001668930054
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "triangles": 588,
+      "material_slots": 2,
+      "rotation_axis": [
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "name": "Wheelset_rear_-6",
+      "role": "wheelset_rear",
+      "fbx": "Parts/SM_WAG9_01_Wheelset_rear_-6_LOD0.fbx",
+      "location_cm": [
+        -600.0,
+        0.0,
+        54.500001668930054
+      ],
+      "pivot_cm": [
+        -600.0,
+        0.0,
+        54.500001668930054
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "triangles": 588,
+      "material_slots": 2,
+      "rotation_axis": [
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "name": "Wheelset_rear_-4.15",
+      "role": "wheelset_rear",
+      "fbx": "Parts/SM_WAG9_01_Wheelset_rear_-4.15_LOD0.fbx",
+      "location_cm": [
+        -415.00000953674316,
+        0.0,
+        54.500001668930054
+      ],
+      "pivot_cm": [
+        -415.00000953674316,
+        0.0,
+        54.500001668930054
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "triangles": 588,
+      "material_slots": 2,
+      "rotation_axis": [
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "name": "Bogie_front",
+      "role": "bogie_front",
+      "fbx": "Parts/SM_WAG9_01_Bogie_front_LOD0.fbx",
+      "location_cm": [
+        600.0,
+        0.0,
+        75.0
+      ],
+      "pivot_cm": [
+        600.0,
+        0.0,
+        75.0
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "triangles": 7820,
+      "material_slots": 2
+    },
+    {
+      "name": "Wheelset_front_4.15",
+      "role": "wheelset_front",
+      "fbx": "Parts/SM_WAG9_01_Wheelset_front_4.15_LOD0.fbx",
+      "location_cm": [
+        415.00000953674316,
+        0.0,
+        54.500001668930054
+      ],
+      "pivot_cm": [
+        415.00000953674316,
+        0.0,
+        54.500001668930054
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "triangles": 588,
+      "material_slots": 2,
+      "rotation_axis": [
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "name": "Wheelset_front_6",
+      "role": "wheelset_front",
+      "fbx": "Parts/SM_WAG9_01_Wheelset_front_6_LOD0.fbx",
+      "location_cm": [
+        600.0,
+        0.0,
+        54.500001668930054
+      ],
+      "pivot_cm": [
+        600.0,
+        0.0,
+        54.500001668930054
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "triangles": 588,
+      "material_slots": 2,
+      "rotation_axis": [
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "name": "Wheelset_front_7.85",
+      "role": "wheelset_front",
+      "fbx": "Parts/SM_WAG9_01_Wheelset_front_7.85_LOD0.fbx",
+      "location_cm": [
+        784.9999904632568,
+        0.0,
+        54.500001668930054
+      ],
+      "pivot_cm": [
+        784.9999904632568,
+        0.0,
+        54.500001668930054
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "triangles": 588,
+      "material_slots": 2,
+      "rotation_axis": [
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "name": "Pantograph_rear_lower",
+      "role": "pantograph_lower",
+      "fbx": "Parts/SM_WAG9_01_Pantograph_rear_lower_LOD0.fbx",
+      "location_cm": [
+        -644.9999809265137,
+        0.0,
+        455.9999942779541
+      ],
+      "pivot_cm": [
+        -644.9999809265137,
+        0.0,
+        455.9999942779541
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "triangles": 88,
+      "material_slots": 1,
+      "side": "rear",
+      "linkage": {
+        "base_cm": [
+          -645.0,
+          0,
+          456
+        ],
+        "elbow_cm": [
+          -530.0,
+          0,
+          518
+        ],
+        "contact_cm": [
+          -625.0,
+          0,
+          585
+        ],
+        "rotation_axis": [
+          0,
+          1,
+          0
+        ]
+      }
+    },
+    {
+      "name": "Pantograph_rear_upper",
+      "role": "pantograph_upper",
+      "fbx": "Parts/SM_WAG9_01_Pantograph_rear_upper_LOD0.fbx",
+      "location_cm": [
+        -530.0000190734863,
+        0.0,
+        517.9999828338623
+      ],
+      "pivot_cm": [
+        -530.0000190734863,
+        0.0,
+        517.9999828338623
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "triangles": 88,
+      "material_slots": 1,
+      "side": "rear",
+      "linkage": {
+        "base_cm": [
+          -645.0,
+          0,
+          456
+        ],
+        "elbow_cm": [
+          -530.0,
+          0,
+          518
+        ],
+        "contact_cm": [
+          -625.0,
+          0,
+          585
+        ],
+        "rotation_axis": [
+          0,
+          1,
+          0
+        ]
+      }
+    },
+    {
+      "name": "Pantograph_rear_bow",
+      "role": "pantograph_bow",
+      "fbx": "Parts/SM_WAG9_01_Pantograph_rear_bow_LOD0.fbx",
+      "location_cm": [
+        -625.0,
+        0.0,
+        584.9999904632568
+      ],
+      "pivot_cm": [
+        -625.0,
+        0.0,
+        584.9999904632568
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "triangles": 88,
+      "material_slots": 2,
+      "side": "rear",
+      "linkage": {
+        "base_cm": [
+          -645.0,
+          0,
+          456
+        ],
+        "elbow_cm": [
+          -530.0,
+          0,
+          518
+        ],
+        "contact_cm": [
+          -625.0,
+          0,
+          585
+        ],
+        "rotation_axis": [
+          0,
+          1,
+          0
+        ]
+      }
+    },
+    {
+      "name": "Pantograph_front_lower",
+      "role": "pantograph_lower",
+      "fbx": "Parts/SM_WAG9_01_Pantograph_front_lower_LOD0.fbx",
+      "location_cm": [
+        555.0000190734863,
+        0.0,
+        455.9999942779541
+      ],
+      "pivot_cm": [
+        555.0000190734863,
+        0.0,
+        455.9999942779541
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "triangles": 88,
+      "material_slots": 1,
+      "side": "front",
+      "linkage": {
+        "base_cm": [
+          555.0,
+          0,
+          456
+        ],
+        "elbow_cm": [
+          670.0,
+          0,
+          518
+        ],
+        "contact_cm": [
+          575.0,
+          0,
+          585
+        ],
+        "rotation_axis": [
+          0,
+          1,
+          0
+        ]
+      }
+    },
+    {
+      "name": "Pantograph_front_upper",
+      "role": "pantograph_upper",
+      "fbx": "Parts/SM_WAG9_01_Pantograph_front_upper_LOD0.fbx",
+      "location_cm": [
+        669.9999809265137,
+        0.0,
+        517.9999828338623
+      ],
+      "pivot_cm": [
+        669.9999809265137,
+        0.0,
+        517.9999828338623
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "triangles": 88,
+      "material_slots": 1,
+      "side": "front",
+      "linkage": {
+        "base_cm": [
+          555.0,
+          0,
+          456
+        ],
+        "elbow_cm": [
+          670.0,
+          0,
+          518
+        ],
+        "contact_cm": [
+          575.0,
+          0,
+          585
+        ],
+        "rotation_axis": [
+          0,
+          1,
+          0
+        ]
+      }
+    },
+    {
+      "name": "Pantograph_front_bow",
+      "role": "pantograph_bow",
+      "fbx": "Parts/SM_WAG9_01_Pantograph_front_bow_LOD0.fbx",
+      "location_cm": [
+        575.0,
+        0.0,
+        584.9999904632568
+      ],
+      "pivot_cm": [
+        575.0,
+        0.0,
+        584.9999904632568
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "triangles": 88,
+      "material_slots": 2,
+      "side": "front",
+      "linkage": {
+        "base_cm": [
+          555.0,
+          0,
+          456
+        ],
+        "elbow_cm": [
+          670.0,
+          0,
+          518
+        ],
+        "contact_cm": [
+          575.0,
+          0,
+          585
+        ],
+        "rotation_axis": [
+          0,
+          1,
+          0
+        ]
+      }
+    },
+    {
+      "name": "Cab",
+      "role": "cab",
+      "fbx": "Parts/SM_WAG9_01_Cab_LOD0.fbx",
+      "location_cm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "pivot_cm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "triangles": 23444,
+      "material_slots": 11
+    },
+    {
+      "name": "Throttle",
+      "role": "throttle",
+      "fbx": "Parts/SM_WAG9_01_Throttle_LOD0.fbx",
+      "location_cm": [
+        818.0000305175781,
+        -89.99999761581421,
+        249.00000095367432
+      ],
+      "pivot_cm": [
+        818.0000305175781,
+        -89.99999761581421,
+        249.00000095367432
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "triangles": 244,
+      "material_slots": 3,
+      "rotation_axis": [
+        0,
+        1,
+        0
+      ],
+      "rotation_range_deg": [
+        -20,
+        20
+      ]
+    },
+    {
+      "name": "IndependentBrake",
+      "role": "visual_only",
+      "fbx": "Parts/SM_WAG9_01_IndependentBrake_LOD0.fbx",
+      "location_cm": [
+        818.0000305175781,
+        112.00000047683716,
+        249.00000095367432
+      ],
+      "pivot_cm": [
+        818.0000305175781,
+        112.00000047683716,
+        249.00000095367432
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "triangles": 244,
+      "material_slots": 3
+    },
+    {
+      "name": "TrainBrake",
+      "role": "train_brake",
+      "fbx": "Parts/SM_WAG9_01_TrainBrake_LOD0.fbx",
+      "location_cm": [
+        818.0000305175781,
+        81.99999928474426,
+        249.00000095367432
+      ],
+      "pivot_cm": [
+        818.0000305175781,
+        81.99999928474426,
+        249.00000095367432
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "triangles": 244,
+      "material_slots": 3,
+      "rotation_axis": [
+        0,
+        1,
+        0
+      ],
+      "rotation_range_deg": [
+        -20,
+        20
+      ]
+    },
+    {
+      "name": "Gauge needle_001",
+      "role": "gauge_brake",
+      "fbx": "Parts/SM_WAG9_01_Gauge needle_001_LOD0.fbx",
+      "location_cm": [
+        865.4999732971191,
+        -64.99999761581421,
+        268.0000066757202
+      ],
+      "pivot_cm": [
+        865.4999732971191,
+        -64.99999761581421,
+        268.0000066757202
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "triangles": 44,
+      "material_slots": 1,
+      "rotation_axis": [
+        1,
+        0,
+        0
+      ],
+      "rotation_range_deg": [
+        -100,
+        100
+      ]
+    },
+    {
+      "name": "Gauge needle_002",
+      "role": "gauge_brake",
+      "fbx": "Parts/SM_WAG9_01_Gauge needle_002_LOD0.fbx",
+      "location_cm": [
+        865.4999732971191,
+        -106.99999332427979,
+        268.0000066757202
+      ],
+      "pivot_cm": [
+        865.4999732971191,
+        -106.99999332427979,
+        268.0000066757202
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "triangles": 44,
+      "material_slots": 1,
+      "rotation_axis": [
+        1,
+        0,
+        0
+      ],
+      "rotation_range_deg": [
+        -100,
+        100
+      ]
+    },
+    {
+      "name": "Gauge needle",
+      "role": "gauge_brake",
+      "fbx": "Parts/SM_WAG9_01_Gauge needle_LOD0.fbx",
+      "location_cm": [
+        865.4999732971191,
+        -106.99999332427979,
+        268.0000066757202
+      ],
+      "pivot_cm": [
+        865.4999732971191,
+        -106.99999332427979,
+        268.0000066757202
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "triangles": 44,
+      "material_slots": 1,
+      "rotation_axis": [
+        1,
+        0,
+        0
+      ],
+      "rotation_range_deg": [
+        -100,
+        100
+      ]
+    },
+    {
+      "name": "Gauge needle_003",
+      "role": "gauge_brake",
+      "fbx": "Parts/SM_WAG9_01_Gauge needle_003_LOD0.fbx",
+      "location_cm": [
+        865.4999732971191,
+        -64.99999761581421,
+        268.0000066757202
+      ],
+      "pivot_cm": [
+        865.4999732971191,
+        -64.99999761581421,
+        268.0000066757202
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "triangles": 44,
+      "material_slots": 1,
+      "rotation_axis": [
+        1,
+        0,
+        0
+      ],
+      "rotation_range_deg": [
+        -100,
+        100
+      ]
+    }
+  ],
+  "materials": {
+    "Blue window glass": {
+      "rgba": [
+        0.11999999731779099,
+        0.23000000417232513,
+        0.25,
+        0.23000000417232513
+      ],
+      "base_color": [
+        0.11999999731779099,
+        0.23000000417232513,
+        0.25,
+        0.23000000417232513
+      ],
+      "metallic": 0.0,
+      "roughness": 0.1599999964237213,
+      "blend_mode": "Translucent",
+      "opacity": 0.14
+    },
+    "Bogies graphite": {
+      "rgba": [
+        0.054999999701976776,
+        0.06499999761581421,
+        0.07000000029802322,
+        1.0
+      ],
+      "base_color": [
+        0.054999999701976776,
+        0.06499999761581421,
+        0.07000000029802322,
+        1.0
+      ],
+      "metallic": 0.6499999761581421,
+      "roughness": 0.44999998807907104,
+      "blend_mode": "Opaque",
+      "opacity": 1
+    },
+    "Cab grey": {
+      "rgba": [
+        0.4300000071525574,
+        0.49000000953674316,
+        0.4699999988079071,
+        1.0
+      ],
+      "base_color": [
+        0.4300000071525574,
+        0.49000000953674316,
+        0.4699999988079071,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.44999998807907104,
+      "blend_mode": "Opaque",
+      "opacity": 1
+    },
+    "Desk enamel": {
+      "rgba": [
+        0.0949999988079071,
+        0.17000000178813934,
+        0.1599999964237213,
+        1.0
+      ],
+      "base_color": [
+        0.0949999988079071,
+        0.17000000178813934,
+        0.1599999964237213,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.44999998807907104,
+      "blend_mode": "Opaque",
+      "opacity": 1
+    },
+    "Display cyan": {
+      "rgba": [
+        0.02500000037252903,
+        0.5,
+        0.6499999761581421,
+        1.0
+      ],
+      "base_color": [
+        0.02500000037252903,
+        0.5,
+        0.6499999761581421,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.4000000059604645,
+      "blend_mode": "Opaque",
+      "opacity": 1
+    },
+    "Ground": {
+      "rgba": [
+        0.15000000596046448,
+        0.18000000715255737,
+        0.20000000298023224,
+        1.0
+      ],
+      "base_color": [
+        0.15000000596046448,
+        0.18000000715255737,
+        0.20000000298023224,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.44999998807907104,
+      "blend_mode": "Opaque",
+      "opacity": 1
+    },
+    "Headlamp": {
+      "rgba": [
+        0.949999988079071,
+        0.8600000143051147,
+        0.6299999952316284,
+        1.0
+      ],
+      "base_color": [
+        0.949999988079071,
+        0.8600000143051147,
+        0.6299999952316284,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.20000000298023224,
+      "blend_mode": "Opaque",
+      "opacity": 1
+    },
+    "Instrument black": {
+      "rgba": [
+        0.00800000037997961,
+        0.014999999664723873,
+        0.017999999225139618,
+        1.0
+      ],
+      "base_color": [
+        0.00800000037997961,
+        0.014999999664723873,
+        0.017999999225139618,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.44999998807907104,
+      "blend_mode": "Opaque",
+      "opacity": 1
+    },
+    "LCD dark": {
+      "rgba": [
+        0.02500000037252903,
+        0.07500000298023224,
+        0.09000000357627869,
+        1.0
+      ],
+      "base_color": [
+        0.02500000037252903,
+        0.07500000298023224,
+        0.09000000357627869,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.44999998807907104,
+      "blend_mode": "Opaque",
+      "opacity": 1
+    },
+    "Lettering": {
+      "rgba": [
+        0.8500000238418579,
+        0.8799999952316284,
+        0.8100000023841858,
+        1.0
+      ],
+      "base_color": [
+        0.8500000238418579,
+        0.8799999952316284,
+        0.8100000023841858,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.44999998807907104,
+      "blend_mode": "Opaque",
+      "opacity": 1
+    },
+    "Machined steel": {
+      "rgba": [
+        0.3499999940395355,
+        0.38999998569488525,
+        0.4000000059604645,
+        1.0
+      ],
+      "base_color": [
+        0.3499999940395355,
+        0.38999998569488525,
+        0.4000000059604645,
+        1.0
+      ],
+      "metallic": 0.800000011920929,
+      "roughness": 0.44999998807907104,
+      "blend_mode": "Opaque",
+      "opacity": 1
+    },
+    "Material": {
+      "rgba": [
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        1.0
+      ],
+      "base_color": [
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "blend_mode": "Opaque",
+      "opacity": 1
+    },
+    "Red lamp": {
+      "rgba": [
+        0.6000000238418579,
+        0.014999999664723873,
+        0.00800000037997961,
+        1.0
+      ],
+      "base_color": [
+        0.6000000238418579,
+        0.014999999664723873,
+        0.00800000037997961,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.30000001192092896,
+      "blend_mode": "Opaque",
+      "opacity": 1
+    },
+    "Rubber": {
+      "rgba": [
+        0.014999999664723873,
+        0.019999999552965164,
+        0.02199999988079071,
+        1.0
+      ],
+      "base_color": [
+        0.014999999664723873,
+        0.019999999552965164,
+        0.02199999988079071,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.44999998807907104,
+      "blend_mode": "Opaque",
+      "opacity": 1
+    },
+    "Safety yellow": {
+      "rgba": [
+        0.9200000166893005,
+        0.6800000071525574,
+        0.03500000014901161,
+        1.0
+      ],
+      "base_color": [
+        0.9200000166893005,
+        0.6800000071525574,
+        0.03500000014901161,
+        1.0
+      ],
+      "metallic": 0.15000000596046448,
+      "roughness": 0.44999998807907104,
+      "blend_mode": "Opaque",
+      "opacity": 1
+    },
+    "WAG9 enamel green": {
+      "rgba": [
+        0.02500000037252903,
+        0.20000000298023224,
+        0.0949999988079071,
+        1.0
+      ],
+      "base_color": [
+        0.02500000037252903,
+        0.20000000298023224,
+        0.0949999988079071,
+        1.0
+      ],
+      "metallic": 0.30000001192092896,
+      "roughness": 0.44999998807907104,
+      "blend_mode": "Opaque",
+      "opacity": 1
+    }
+  },
+  "limitations": [
+    "Cab layout visually representative and provisional; exact depot variant requires reference validation.",
+    "Pantograph planar linkage uses exported pivots; runtime binding requires verification.",
+    "Independent brake is visual only until a simulation command is available.",
+    "No Android device cost measured."
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "passed": true,
+  "apk": "D:\\Project\\IndianRailwayGame\\08_Builds\\S8_EgmoreService_20261010-082112\\Android_ASTC\\MyProject-arm64.apk",
+  "apkSha256": "8889bf472b52ed3a8bf675d2c7e706e18b92a41dcdc1aa40a2eee171e79bd4cb",
+  "cases": {
+    "legacy": {
+      "passed": true,
+      "checks": {
+        "identity": true,
+        "fingerprint": true,
+        "service": true,
+        "paused": true,
+        "unblocked": true,
+        "valid": true,
+        "recreated": true
+      },
+      "fingerprint": "0efccd7c539ec58a",
+      "reference": "LHB/Device/station-v5-legacy-result/telemetry.json"
+    },
+    "lhb": {
+      "passed": true,
+      "checks": {
+        "identity": true,
+        "fingerprint": true,
+        "service": true,
+        "paused": true,
+        "unblocked": true,
+        "valid": true,
+        "recreated": true
+      },
+      "fingerprint": "ff7e0afb56b48956",
+      "reference": "LHB/Device/station-v5-lhb-result/telemetry.json"
+    },
+    "station": {
+      "passed": true,
+      "checks": {
+        "identity": true,
+        "fingerprint": true,
+        "service": true,
+        "paused": true,
+        "unblocked": true,
+        "valid": true,
+        "recreated": true,
+        "station_recreated": true,
+        "lhb_recreated": true,
+        "proxy_count_correct": true
+      },
+      "fingerprint": "2c55c3509c5a4284",
+      "reference": "Station/Device/station-v6-cold-result/telemetry.json"
+    }
+  },
+  "restorationErrors": [],
+  "stopRestored": true,
+  "commandlineRestored": true,
+  "wakeRestored": true,
+  "savesUnchanged": true,
+  "artifactUnchanged": true,
+  "installedApkUnchanged": true
+}

@@ -1,0 +1,11 @@
+{
+  "creator": "project-authored geometry and lettering",
+  "license": "LicenseRef-Project-Original",
+  "externalPixelsUsed": false,
+  "paidGeneration": false,
+  "baseVersion": "2.0.0",
+  "baseSceneSha256": "c09777218b90a8d796f4a7a92f90e76905e41f1684d38378ab3712d014766cda",
+  "newGeometry": "Double-sided mesh lettering and sign housings, light fixtures. No new exterior work.",
+  "font": "Blender built-in Bfont converted to polygons; no font files distributed.",
+  "limits": "Representative English wayfinding and platform numbers must be bound to actual scenario; not a survey of real signage. Existing multilingual station nameboards remain in the base."
+}

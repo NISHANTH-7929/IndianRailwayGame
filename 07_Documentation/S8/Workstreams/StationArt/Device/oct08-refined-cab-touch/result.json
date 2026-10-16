@@ -1,0 +1,14 @@
+{
+  "captureCompleted": true,
+  "apk": "D:\\Project\\IndianRailwayGame\\08_Builds\\S8_CabInstruments_20261007_164056\\Android_ASTC\\MyProject-arm64.apk",
+  "apkSha256": "2b75ffb51eeeaa3ec163ce37b34db3c7852b5b7da1cb9b21cb6a13c02f61d33d",
+  "map": "/Game/IndianRailway/S7/L_RailService",
+  "flags": "-S8AssetReview -S8Cab -S8CabManual",
+  "visualAccepted": false,
+  "gameplayValidated": false,
+  "restorationErrors": [],
+  "savesUnchanged": true,
+  "commandlineRestored": true,
+  "wakeRestored": true,
+  "artifactUnchanged": true
+}

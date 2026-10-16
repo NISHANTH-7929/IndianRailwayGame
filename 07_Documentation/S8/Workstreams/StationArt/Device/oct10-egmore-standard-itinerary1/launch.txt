@@ -1,0 +1,7 @@
+Starting: Intent { cmp=com.indianrailway.s1harness/com.epicgames.unreal.SplashActivity }
+Status: ok
+LaunchState: COLD
+Activity: com.indianrailway.s1harness/com.epicgames.unreal.GameActivity
+TotalTime: 1676
+WaitTime: 1680
+Complete

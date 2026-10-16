@@ -1,0 +1,9 @@
+phase=Arrival tick=3272 released=0 loaded=1 world=1 service=1 error=
+phase=Berthing tick=3462 released=0 loaded=1 world=1 service=1 error=
+phase=Dwelling tick=3672 released=0 loaded=1 world=1 service=1 error=
+phase=ReadyToDepart tick=3972 released=0 loaded=1 world=1 service=1 error=
+phase=ReadyToDepart tick=9637 released=1 loaded=1 world=1 service=1 error=
+phase=Departed tick=9851 released=1 loaded=1 world=1 service=1 error=
+phase=Completed tick=14613 released=1 loaded=1 world=1 service=1 error=
+success=1 releasedChecked=1 error=
+traffic head=1096.35 speed=0 ai={"train":1,"route":1,"binding":1,"state":"Completed","sequence":4871,"nextRetryTick":90,"lastTick":14610,"targetSpeedMps":3,"reason":"S4 released route; holding in remaining permission"}

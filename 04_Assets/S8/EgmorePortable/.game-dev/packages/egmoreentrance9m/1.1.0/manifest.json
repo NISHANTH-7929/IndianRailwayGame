@@ -1,0 +1,44 @@
+{
+  "assetId": "egmoreentrance9m",
+  "description": "Original metric Egmore study module; estimated dimensions, visual acceptance and Android integration pending",
+  "displayName": "EgmoreEntrance9m",
+  "files": [
+    {
+      "bytes": 4840272,
+      "kind": "model",
+      "path": "model.glb",
+      "sha256": "308f51c097bba8e58e633b75882423b7cfbff80ecc76dbdd440a2676227c8360"
+    },
+    {
+      "bytes": 2970,
+      "kind": "metadata",
+      "path": "metadata.json",
+      "sha256": "89df6f6a08dbba70c5608cdf547e4e6ddbcd6547e946010deb88a76b15dd24a5"
+    },
+    {
+      "bytes": 626,
+      "kind": "provenance",
+      "path": "provenance.json",
+      "sha256": "c4a1cbb77c29e8426d866ee4e2dd9d97648e6e4e2715be7029e5813ff2d694f9"
+    },
+    {
+      "bytes": 4318,
+      "kind": "validation",
+      "path": "validation.json",
+      "sha256": "2b2c8694d26953126577f824d800d988d12d5104ee76fe21f3d803793e093b19"
+    }
+  ],
+  "license": "LicenseRef-ProjectOriginal",
+  "model": "model.glb",
+  "packageId": "pkg_32e101d198682486788166b1",
+  "provenance": {
+    "origin": "authored"
+  },
+  "schema": "game_dev.asset_package.v1",
+  "validation": {
+    "errorCount": 0,
+    "passed": true,
+    "warningCount": 0
+  },
+  "version": "1.1.0"
+}

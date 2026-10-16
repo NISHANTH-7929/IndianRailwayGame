@@ -1,0 +1,11 @@
+{
+  "recordedDate": "2026-10-01",
+  "assetId": "Coach.LHB.Acquired01",
+  "archiveSha256": "F0979441270A64A3F419C4AB1DCA597585A320EA1C66B63709072732928F5971",
+  "evidenceType": "user confirmation in project chat",
+  "userReply": "yeah",
+  "confirmed": "ZIP downloaded directly from the specified Sketchfab listing through the user's account",
+  "downloadDate": null,
+  "receiptProvided": false,
+  "scope": "Confirms download origin; does not assert an exact download date, receipt, or technical asset acceptance."
+}

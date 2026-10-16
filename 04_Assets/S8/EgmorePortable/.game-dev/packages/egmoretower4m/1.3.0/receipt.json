@@ -1,0 +1,23 @@
+{
+  "completedAt": "2026-10-04T09:08:05.084Z",
+  "destination": {
+    "assetId": "egmoretower4m",
+    "version": "1.3.0"
+  },
+  "evidence": {
+    "blenderNormalizationPerformed": false,
+    "gpuImportTestPerformed": false,
+    "humanVisualReviewPerformed": false,
+    "modelBytesCopiedAndHashed": true,
+    "policyValidationCompleted": true,
+    "staticInspectionCompleted": true
+  },
+  "manifestSha256": "562883e3e1f01a03ffc6298e0a52ed9c10be664849b6c4c5b89b481d9f412b2b",
+  "packageId": "pkg_bdfde041ff7b2cf729e0f35d",
+  "schema": "game_dev.package_receipt.v1",
+  "source": {
+    "bytes": 6999680,
+    "fileName": "EgmoreTower4m.glb",
+    "sha256": "0d6d71928c312726285d05ccb66563767d79f65de2b5f81baf2858e4976b2df0"
+  }
+}

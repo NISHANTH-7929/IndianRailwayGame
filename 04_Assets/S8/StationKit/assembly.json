@@ -1,0 +1,1275 @@
+{
+  "asset_id": "Station.Kit.01",
+  "version": 1,
+  "units": "metres",
+  "materials": [
+    {
+      "name": "Paving",
+      "base_color": [
+        0.55,
+        0.49,
+        0.4,
+        1
+      ],
+      "roughness": 0.87,
+      "metallic": 0,
+      "textures": {
+        "BC": "Textures/T_Paving_BC.png",
+        "N": "Textures/T_Paving_N.png",
+        "ORM": "Textures/T_Paving_ORM.png"
+      }
+    },
+    {
+      "name": "Concrete",
+      "base_color": [
+        0.48,
+        0.46,
+        0.41,
+        1
+      ],
+      "roughness": 0.9,
+      "metallic": 0,
+      "textures": {
+        "BC": "Textures/T_Concrete_BC.png",
+        "N": "Textures/T_Concrete_N.png",
+        "ORM": "Textures/T_Concrete_ORM.png"
+      }
+    },
+    {
+      "name": "Cream",
+      "base_color": [
+        0.74,
+        0.69,
+        0.55,
+        1
+      ],
+      "roughness": 0.81,
+      "metallic": 0,
+      "textures": {
+        "BC": "Textures/T_Cream_BC.png",
+        "N": "Textures/T_Cream_N.png",
+        "ORM": "Textures/T_Cream_ORM.png"
+      }
+    },
+    {
+      "name": "RedOxide",
+      "base_color": [
+        0.35,
+        0.075,
+        0.042,
+        1
+      ],
+      "roughness": 0.78,
+      "metallic": 0,
+      "textures": {
+        "BC": "Textures/T_RedOxide_BC.png",
+        "N": "Textures/T_RedOxide_N.png",
+        "ORM": "Textures/T_RedOxide_ORM.png"
+      }
+    },
+    {
+      "name": "Steel",
+      "base_color": [
+        0.075,
+        0.085,
+        0.085,
+        1
+      ],
+      "roughness": 0.47,
+      "metallic": 0.75,
+      "textures": {
+        "BC": "Textures/T_Steel_BC.png",
+        "N": "Textures/T_Steel_N.png",
+        "ORM": "Textures/T_Steel_ORM.png"
+      }
+    },
+    {
+      "name": "Roof",
+      "base_color": [
+        0.22,
+        0.3,
+        0.35,
+        1
+      ],
+      "roughness": 0.53,
+      "metallic": 0.55,
+      "textures": {
+        "BC": "Textures/T_Roof_BC.png",
+        "N": "Textures/T_Roof_N.png",
+        "ORM": "Textures/T_Roof_ORM.png"
+      }
+    },
+    {
+      "name": "Yellow",
+      "base_color": [
+        0.82,
+        0.59,
+        0.075,
+        1
+      ],
+      "roughness": 0.63,
+      "metallic": 0,
+      "textures": {
+        "BC": "Textures/T_Yellow_BC.png",
+        "N": "Textures/T_Yellow_N.png",
+        "ORM": "Textures/T_Yellow_ORM.png"
+      }
+    },
+    {
+      "name": "Black",
+      "base_color": [
+        0.018,
+        0.02,
+        0.018,
+        1
+      ],
+      "roughness": 0.68,
+      "metallic": 0,
+      "textures": {
+        "BC": "Textures/T_Black_BC.png",
+        "N": "Textures/T_Black_N.png",
+        "ORM": "Textures/T_Black_ORM.png"
+      }
+    },
+    {
+      "name": "Galvanized",
+      "base_color": [
+        0.38,
+        0.4,
+        0.4,
+        1
+      ],
+      "roughness": 0.46,
+      "metallic": 0.8,
+      "textures": {
+        "BC": "Textures/T_Galvanized_BC.png",
+        "N": "Textures/T_Galvanized_N.png",
+        "ORM": "Textures/T_Galvanized_ORM.png"
+      }
+    },
+    {
+      "name": "Insulator",
+      "base_color": [
+        0.19,
+        0.072,
+        0.031,
+        1
+      ],
+      "roughness": 0.3,
+      "metallic": 0,
+      "textures": {
+        "BC": "Textures/T_Insulator_BC.png",
+        "N": "Textures/T_Insulator_N.png",
+        "ORM": "Textures/T_Insulator_ORM.png"
+      }
+    },
+    {
+      "name": "Wood",
+      "base_color": [
+        0.25,
+        0.115,
+        0.052,
+        1
+      ],
+      "roughness": 0.81,
+      "metallic": 0,
+      "textures": {
+        "BC": "Textures/T_Wood_BC.png",
+        "N": "Textures/T_Wood_N.png",
+        "ORM": "Textures/T_Wood_ORM.png"
+      }
+    },
+    {
+      "name": "Glass",
+      "base_color": [
+        0.07,
+        0.14,
+        0.16,
+        1
+      ],
+      "roughness": 0.18,
+      "metallic": 0.35,
+      "textures": {
+        "BC": "Textures/T_Glass_BC.png",
+        "N": "Textures/T_Glass_N.png",
+        "ORM": "Textures/T_Glass_ORM.png"
+      }
+    },
+    {
+      "name": "Ballast",
+      "base_color": [
+        0.24,
+        0.22,
+        0.19,
+        1
+      ],
+      "roughness": 0.94,
+      "metallic": 0,
+      "textures": {
+        "BC": "Textures/T_Ballast_BC.png",
+        "N": "Textures/T_Ballast_N.png",
+        "ORM": "Textures/T_Ballast_ORM.png"
+      }
+    },
+    {
+      "name": "Soil",
+      "base_color": [
+        0.25,
+        0.18,
+        0.1,
+        1
+      ],
+      "roughness": 0.97,
+      "metallic": 0,
+      "textures": {
+        "BC": "Textures/T_Soil_BC.png",
+        "N": "Textures/T_Soil_N.png",
+        "ORM": "Textures/T_Soil_ORM.png"
+      }
+    }
+  ],
+  "parts": [
+    {
+      "name": "Platform5m",
+      "asset_id": "Station.Kit.Platform5m",
+      "role": "scenery",
+      "fbx": "Parts/SM_Station_Platform5m.fbx",
+      "location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "triangles": 336,
+      "dimensions_m": [
+        5.0,
+        5.0,
+        0.8420000076293945
+      ],
+      "bounds_m": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          5.0,
+          5.0,
+          0.8420000076293945
+        ]
+      ],
+      "dimensionalEvidence": "estimated architectural dimensions; metric authored, not surveyed"
+    },
+    {
+      "name": "Apron5m",
+      "asset_id": "Station.Kit.Apron5m",
+      "role": "scenery",
+      "fbx": "Parts/SM_Station_Apron5m.fbx",
+      "location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "triangles": 216,
+      "dimensions_m": [
+        5.0,
+        5.0,
+        0.8400000333786011
+      ],
+      "bounds_m": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          5.0,
+          5.0,
+          0.8400000333786011
+        ]
+      ],
+      "dimensionalEvidence": "estimated architectural dimensions; metric authored, not surveyed"
+    },
+    {
+      "name": "BridgePier",
+      "asset_id": "Station.Kit.BridgePier",
+      "role": "scenery",
+      "fbx": "Parts/SM_Station_BridgePier.fbx",
+      "location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "triangles": 540,
+      "dimensions_m": [
+        0.75,
+        3.75,
+        7.5400004386901855
+      ],
+      "bounds_m": [
+        [
+          -0.375,
+          -1.875,
+          0.0
+        ],
+        [
+          0.375,
+          1.875,
+          7.5400004386901855
+        ]
+      ],
+      "dimensionalEvidence": "estimated architectural dimensions; metric authored, not surveyed"
+    },
+    {
+      "name": "ContactWire3m",
+      "asset_id": "Station.Kit.ContactWire3m",
+      "role": "scenery",
+      "fbx": "Parts/SM_Station_ContactWire3m.fbx",
+      "location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "triangles": 108,
+      "dimensions_m": [
+        3.0,
+        0.012000130489468575,
+        0.012000130489468575
+      ],
+      "bounds_m": [
+        [
+          -8.741708051873687e-11,
+          -0.006000065710395575,
+          -0.006000065244734287
+        ],
+        [
+          3.0,
+          0.006000065244734287,
+          0.006000065710395575
+        ]
+      ],
+      "dimensionalEvidence": "estimated architectural dimensions; metric authored, not surveyed"
+    },
+    {
+      "name": "Canopy6m",
+      "asset_id": "Station.Kit.Canopy6m",
+      "role": "scenery",
+      "fbx": "Parts/SM_Station_Canopy6m.fbx",
+      "location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "triangles": 14172,
+      "dimensions_m": [
+        6.400000095367432,
+        5.482663631439209,
+        4.4131059646606445
+      ],
+      "bounds_m": [
+        [
+          -0.20000000298023224,
+          -0.2413320541381836,
+          0.0
+        ],
+        [
+          6.200000286102295,
+          5.241331577301025,
+          4.4131059646606445
+        ]
+      ],
+      "dimensionalEvidence": "estimated architectural dimensions; metric authored, not surveyed"
+    },
+    {
+      "name": "Bench",
+      "asset_id": "Station.Kit.Bench",
+      "role": "scenery",
+      "fbx": "Parts/SM_Station_Bench.fbx",
+      "location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "triangles": 972,
+      "dimensions_m": [
+        1.899999976158142,
+        0.5779628157615662,
+        1.0375925302505493
+      ],
+      "bounds_m": [
+        [
+          -0.949999988079071,
+          -0.23999999463558197,
+          0.0
+        ],
+        [
+          0.949999988079071,
+          0.3379628360271454,
+          1.0375925302505493
+        ]
+      ],
+      "dimensionalEvidence": "estimated architectural dimensions; metric authored, not surveyed"
+    },
+    {
+      "name": "Railing3m",
+      "asset_id": "Station.Kit.Railing3m",
+      "role": "scenery",
+      "fbx": "Parts/SM_Station_Railing3m.fbx",
+      "location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "triangles": 456,
+      "dimensions_m": [
+        3.070000171661377,
+        0.07000000029802322,
+        1.100000023841858
+      ],
+      "bounds_m": [
+        [
+          -0.03500000014901161,
+          -0.03500000014901161,
+          0.0
+        ],
+        [
+          3.0350000858306885,
+          0.03500000014901161,
+          1.100000023841858
+        ]
+      ],
+      "dimensionalEvidence": "estimated architectural dimensions; metric authored, not surveyed"
+    },
+    {
+      "name": "StairFlight",
+      "asset_id": "Station.Kit.StairFlight",
+      "role": "scenery",
+      "fbx": "Parts/SM_Station_StairFlight.fbx",
+      "location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "triangles": 3208,
+      "dimensions_m": [
+        6.425000190734863,
+        2.5299999713897705,
+        4.689999580383301
+      ],
+      "bounds_m": [
+        [
+          -0.02250000275671482,
+          -1.2649999856948853,
+          -0.2199999988079071
+        ],
+        [
+          6.402500152587891,
+          1.2649999856948853,
+          4.46999979019165
+        ]
+      ],
+      "dimensionalEvidence": "estimated architectural dimensions; metric authored, not surveyed"
+    },
+    {
+      "name": "Footbridge6m",
+      "asset_id": "Station.Kit.Footbridge6m",
+      "role": "scenery",
+      "fbx": "Parts/SM_Station_Footbridge6m.fbx",
+      "location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "triangles": 2808,
+      "dimensions_m": [
+        6.090000152587891,
+        3.0,
+        2.7299997806549072
+      ],
+      "bounds_m": [
+        [
+          -0.04500007629394531,
+          -1.5,
+          -0.10000000149011612
+        ],
+        [
+          6.045000076293945,
+          1.5,
+          2.629999876022339
+        ]
+      ],
+      "dimensionalEvidence": "estimated architectural dimensions; metric authored, not surveyed"
+    },
+    {
+      "name": "VendorKiosk",
+      "asset_id": "Station.Kit.VendorKiosk",
+      "role": "scenery",
+      "fbx": "Parts/SM_Station_VendorKiosk.fbx",
+      "location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "triangles": 3252,
+      "dimensions_m": [
+        3.4000000953674316,
+        2.7750000953674316,
+        2.7100000381469727
+      ],
+      "bounds_m": [
+        [
+          -1.7000000476837158,
+          -1.4249999523162842,
+          0.0
+        ],
+        [
+          1.7000000476837158,
+          1.350000023841858,
+          2.7100000381469727
+        ]
+      ],
+      "dimensionalEvidence": "estimated architectural dimensions; metric authored, not surveyed"
+    },
+    {
+      "name": "WaitingShelter",
+      "asset_id": "Station.Kit.WaitingShelter",
+      "role": "scenery",
+      "fbx": "Parts/SM_Station_WaitingShelter.fbx",
+      "location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "triangles": 432,
+      "dimensions_m": [
+        4.5,
+        2.5999999046325684,
+        2.8999998569488525
+      ],
+      "bounds_m": [
+        [
+          -2.25,
+          -1.2999999523162842,
+          0.0
+        ],
+        [
+          2.25,
+          1.2999999523162842,
+          2.8999998569488525
+        ]
+      ],
+      "dimensionalEvidence": "estimated architectural dimensions; metric authored, not surveyed"
+    },
+    {
+      "name": "StationFacade6m",
+      "asset_id": "Station.Kit.StationFacade6m",
+      "role": "scenery",
+      "fbx": "Parts/SM_Station_StationFacade6m.fbx",
+      "location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "triangles": 3392,
+      "dimensions_m": [
+        6.400000095367432,
+        4.400000095367432,
+        3.7750000953674316
+      ],
+      "bounds_m": [
+        [
+          -3.200000047683716,
+          -2.200000047683716,
+          0.0
+        ],
+        [
+          3.200000047683716,
+          2.200000047683716,
+          3.7750000953674316
+        ]
+      ],
+      "dimensionalEvidence": "estimated architectural dimensions; metric authored, not surveyed"
+    },
+    {
+      "name": "StationBoard",
+      "asset_id": "Station.Kit.StationBoard",
+      "role": "scenery",
+      "fbx": "Parts/SM_Station_StationBoard.fbx",
+      "location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "triangles": 5796,
+      "dimensions_m": [
+        2.799999713897705,
+        0.12999999523162842,
+        2.5749998092651367
+      ],
+      "bounds_m": [
+        [
+          -1.399999976158142,
+          -0.06499999761581421,
+          0.0
+        ],
+        [
+          1.3999998569488525,
+          0.06499999761581421,
+          2.5749998092651367
+        ]
+      ],
+      "dimensionalEvidence": "estimated architectural dimensions; metric authored, not surveyed"
+    },
+    {
+      "name": "LampPost",
+      "asset_id": "Station.Kit.LampPost",
+      "role": "scenery",
+      "fbx": "Parts/SM_Station_LampPost.fbx",
+      "location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "triangles": 368,
+      "dimensions_m": [
+        0.2800000011920929,
+        1.2050000429153442,
+        5.176107406616211
+      ],
+      "bounds_m": [
+        [
+          -0.14000000059604645,
+          -0.054999999701976776,
+          0.0
+        ],
+        [
+          0.14000000059604645,
+          1.1500000953674316,
+          5.176107406616211
+        ]
+      ],
+      "dimensionalEvidence": "estimated architectural dimensions; metric authored, not surveyed"
+    },
+    {
+      "name": "ElectricalCabinet",
+      "asset_id": "Station.Kit.ElectricalCabinet",
+      "role": "scenery",
+      "fbx": "Parts/SM_Station_ElectricalCabinet.fbx",
+      "location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "triangles": 1696,
+      "dimensions_m": [
+        0.800000011920929,
+        0.6499999761581421,
+        1.5
+      ],
+      "bounds_m": [
+        [
+          -0.4000000059604645,
+          -0.32499998807907104,
+          0.0
+        ],
+        [
+          0.4000000059604645,
+          0.32499998807907104,
+          1.5
+        ]
+      ],
+      "dimensionalEvidence": "estimated architectural dimensions; metric authored, not surveyed"
+    },
+    {
+      "name": "WhistleBoard",
+      "asset_id": "Station.Kit.WhistleBoard",
+      "role": "scenery",
+      "fbx": "Parts/SM_Station_WhistleBoard.fbx",
+      "location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "triangles": 332,
+      "dimensions_m": [
+        0.699999988079071,
+        0.06499999761581421,
+        2.3249998092651367
+      ],
+      "bounds_m": [
+        [
+          -0.3499999940395355,
+          -0.032499998807907104,
+          0.0
+        ],
+        [
+          0.3499999940395355,
+          0.032499998807907104,
+          2.3249998092651367
+        ]
+      ],
+      "dimensionalEvidence": "estimated architectural dimensions; metric authored, not surveyed"
+    },
+    {
+      "name": "TerminationBoard",
+      "asset_id": "Station.Kit.TerminationBoard",
+      "role": "scenery",
+      "fbx": "Parts/SM_Station_TerminationBoard.fbx",
+      "location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "triangles": 532,
+      "dimensions_m": [
+        0.7200000286102295,
+        0.06499999761581421,
+        2.359999895095825
+      ],
+      "bounds_m": [
+        [
+          -0.36000001430511475,
+          -0.032499998807907104,
+          0.0
+        ],
+        [
+          0.36000001430511475,
+          0.032499998807907104,
+          2.359999895095825
+        ]
+      ],
+      "dimensionalEvidence": "estimated architectural dimensions; metric authored, not surveyed"
+    },
+    {
+      "name": "SpeedBoard",
+      "asset_id": "Station.Kit.SpeedBoard",
+      "role": "scenery",
+      "fbx": "Parts/SM_Station_SpeedBoard.fbx",
+      "location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "triangles": 548,
+      "dimensions_m": [
+        0.800000011920929,
+        0.06499999761581421,
+        2.450000047683716
+      ],
+      "bounds_m": [
+        [
+          -0.4000000059604645,
+          -0.032499998807907104,
+          0.0
+        ],
+        [
+          0.4000000059604645,
+          0.032499998807907104,
+          2.450000047683716
+        ]
+      ],
+      "dimensionalEvidence": "estimated architectural dimensions; metric authored, not surveyed"
+    },
+    {
+      "name": "EMUBoard",
+      "asset_id": "Station.Kit.EMUBoard",
+      "role": "scenery",
+      "fbx": "Parts/SM_Station_EMUBoard.fbx",
+      "location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "triangles": 1780,
+      "dimensions_m": [
+        0.699999988079071,
+        0.06499999761581421,
+        2.3249998092651367
+      ],
+      "bounds_m": [
+        [
+          -0.3499999940395355,
+          -0.032499998807907104,
+          0.0
+        ],
+        [
+          0.3499999940395355,
+          0.032499998807907104,
+          2.3249998092651367
+        ]
+      ],
+      "dimensionalEvidence": "estimated architectural dimensions; metric authored, not surveyed"
+    },
+    {
+      "name": "OHEMast",
+      "asset_id": "Station.Kit.OHEMast",
+      "role": "scenery",
+      "fbx": "Parts/SM_Station_OHEMast.fbx",
+      "location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "triangles": 2472,
+      "dimensions_m": [
+        0.800000011920929,
+        3.7057504653930664,
+        7.199999809265137
+      ],
+      "bounds_m": [
+        [
+          -0.4000000059604645,
+          -0.4000000059604645,
+          0.0
+        ],
+        [
+          0.4000000059604645,
+          3.3057503700256348,
+          7.199999809265137
+        ]
+      ],
+      "dimensionalEvidence": "estimated architectural dimensions; metric authored, not surveyed"
+    },
+    {
+      "name": "OHEPortal12m",
+      "asset_id": "Station.Kit.OHEPortal12m",
+      "role": "scenery",
+      "fbx": "Parts/SM_Station_OHEPortal12m.fbx",
+      "location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "triangles": 4104,
+      "dimensions_m": [
+        12.899999618530273,
+        0.8999999761581421,
+        7.740000247955322
+      ],
+      "bounds_m": [
+        [
+          -0.44999998807907104,
+          -0.44999998807907104,
+          0.0
+        ],
+        [
+          12.449999809265137,
+          0.44999998807907104,
+          7.740000247955322
+        ]
+      ],
+      "dimensionalEvidence": "estimated architectural dimensions; metric authored, not surveyed"
+    },
+    {
+      "name": "Rail3m",
+      "asset_id": "Station.Kit.Rail3m",
+      "role": "scenery",
+      "fbx": "Parts/SM_Station_Rail3m.fbx",
+      "location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "triangles": 648,
+      "dimensions_m": [
+        3.0,
+        1.8910000324249268,
+        0.18250000476837158
+      ],
+      "bounds_m": [
+        [
+          0.0,
+          -0.9455000162124634,
+          0.0
+        ],
+        [
+          3.0,
+          0.9455000758171082,
+          0.18250000476837158
+        ]
+      ],
+      "dimensionalEvidence": "estimated architectural dimensions; metric authored, not surveyed"
+    },
+    {
+      "name": "Sleeper",
+      "asset_id": "Station.Kit.Sleeper",
+      "role": "scenery",
+      "fbx": "Parts/SM_Station_Sleeper.fbx",
+      "location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "triangles": 436,
+      "dimensions_m": [
+        0.25,
+        2.700000047683716,
+        0.24249999225139618
+      ],
+      "bounds_m": [
+        [
+          -0.125,
+          -1.350000023841858,
+          -0.17499999701976776
+        ],
+        [
+          0.125,
+          1.350000023841858,
+          0.06749999523162842
+        ]
+      ],
+      "dimensionalEvidence": "estimated architectural dimensions; metric authored, not surveyed"
+    },
+    {
+      "name": "Ballast3m",
+      "asset_id": "Station.Kit.Ballast3m",
+      "role": "scenery",
+      "fbx": "Parts/SM_Station_Ballast3m.fbx",
+      "location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "triangles": 108,
+      "dimensions_m": [
+        3.0,
+        3.4000000953674316,
+        0.3199999928474426
+      ],
+      "bounds_m": [
+        [
+          0.0,
+          -1.7000000476837158,
+          -0.46000000834465027
+        ],
+        [
+          3.0,
+          1.7000000476837158,
+          -0.14000001549720764
+        ]
+      ],
+      "dimensionalEvidence": "estimated architectural dimensions; metric authored, not surveyed"
+    },
+    {
+      "name": "Ground50m",
+      "asset_id": "Station.Kit.Ground50m",
+      "role": "scenery",
+      "fbx": "Parts/SM_Station_Ground50m.fbx",
+      "location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "triangles": 12,
+      "dimensions_m": [
+        50.0,
+        50.0,
+        0.1499999761581421
+      ],
+      "bounds_m": [
+        [
+          -25.0,
+          -25.0,
+          -0.625
+        ],
+        [
+          25.0,
+          25.0,
+          -0.4750000238418579
+        ]
+      ],
+      "dimensionalEvidence": "estimated architectural dimensions; metric authored, not surveyed"
+    },
+    {
+      "name": "Boundary3m",
+      "asset_id": "Station.Kit.Boundary3m",
+      "role": "scenery",
+      "fbx": "Parts/SM_Station_Boundary3m.fbx",
+      "location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "triangles": 216,
+      "dimensions_m": [
+        3.0,
+        0.3199999928474426,
+        1.4800000190734863
+      ],
+      "bounds_m": [
+        [
+          0.0,
+          -0.1599999964237213,
+          0.0
+        ],
+        [
+          3.0,
+          0.1599999964237213,
+          1.4800000190734863
+        ]
+      ],
+      "dimensionalEvidence": "estimated architectural dimensions; metric authored, not surveyed"
+    }
+  ],
+  "source": "Independent scripted geometry and procedural PBR; public previews comparison only",
+  "status": "candidate; visual, Unreal, LOD, collision and Android validation pending"
+}

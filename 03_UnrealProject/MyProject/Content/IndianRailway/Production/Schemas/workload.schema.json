@@ -1,0 +1,90 @@
+{
+  "type": "object",
+  "properties": {
+    "schemaVersion": {
+      "enum": [
+        1
+      ]
+    },
+    "workloadId": {
+      "type": "string",
+      "pattern": "^[A-Z][A-Za-z0-9]*(\\.[A-Za-z0-9]+){2,}$"
+    },
+    "status": {
+      "enum": [
+        "defined-not-executed"
+      ]
+    },
+    "requirements": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 10,
+      "uniqueItems": true
+    },
+    "combinations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "time": {
+            "enum": [
+              "day",
+              "night"
+            ]
+          },
+          "weather": {
+            "enum": [
+              "dry",
+              "rain"
+            ]
+          },
+          "demand": {
+            "enum": [
+              "normal",
+              "demanding"
+            ]
+          }
+        },
+        "required": [
+          "id",
+          "time",
+          "weather",
+          "demand"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 4
+    },
+    "missingProductionContent": {
+      "enum": [
+        true
+      ]
+    },
+    "executionEvidence": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    }
+  },
+  "required": [
+    "schemaVersion",
+    "workloadId",
+    "status",
+    "requirements",
+    "combinations",
+    "missingProductionContent",
+    "executionEvidence"
+  ],
+  "additionalProperties": false,
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:indianrailway:s8:workload"
+}

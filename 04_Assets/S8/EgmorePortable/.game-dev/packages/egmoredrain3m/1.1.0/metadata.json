@@ -1,0 +1,99 @@
+{
+  "assetId": "egmoredrain3m",
+  "description": "Original metric Egmore study module; estimated dimensions, visual acceptance and Android integration pending",
+  "displayName": "EgmoreDrain3m",
+  "inspection": {
+    "animationCount": 0,
+    "boundingBox": {
+      "max": [
+        3,
+        0.023000001907348633,
+        0.1940000057220459
+      ],
+      "min": [
+        0,
+        -0.20000000298023224,
+        -0.1940000057220459
+      ],
+      "sizeMeters": [
+        3,
+        0.22300000488758087,
+        0.3880000114440918
+      ]
+    },
+    "boundingBoxEmpty": false,
+    "fileBytes": 2670932,
+    "filePath": "model.glb",
+    "generator": "glTF-Transform v4.5.1",
+    "hasNormals": true,
+    "hasSkin": false,
+    "hasTangents": true,
+    "hasUVs": true,
+    "materialCount": 2,
+    "meshCount": 1,
+    "pbr": {
+      "hasBaseColorTexture": true,
+      "hasEmissiveTexture": false,
+      "hasMetallicRoughnessTexture": true,
+      "hasNormalTexture": true,
+      "hasOcclusionTexture": false
+    },
+    "primitiveCount": 2,
+    "sceneGraphFallback": false,
+    "textureCount": 6,
+    "textureResolutions": [
+      {
+        "bytes": 390226,
+        "height": 512,
+        "mimeType": "image/png",
+        "name": "T_Concrete_N",
+        "width": 512
+      },
+      {
+        "bytes": 367416,
+        "height": 512,
+        "mimeType": "image/png",
+        "name": "T_Concrete_BC",
+        "width": 512
+      },
+      {
+        "bytes": 434920,
+        "height": 512,
+        "mimeType": "image/png",
+        "name": "T_Concrete_ORM",
+        "width": 512
+      },
+      {
+        "bytes": 390229,
+        "height": 512,
+        "mimeType": "image/png",
+        "name": "T_Steel_N",
+        "width": 512
+      },
+      {
+        "bytes": 256548,
+        "height": 512,
+        "mimeType": "image/png",
+        "name": "T_Steel_BC",
+        "width": 512
+      },
+      {
+        "bytes": 448273,
+        "height": 512,
+        "mimeType": "image/png",
+        "name": "T_Steel_ORM",
+        "width": 512
+      }
+    ],
+    "triangleCount": 3024,
+    "undrawnMeshCount": 0,
+    "undrawnPrimitiveCount": 0,
+    "undrawnTriangleCount": 0,
+    "vertexCount": 7540,
+    "warnings": [
+      "texture is below 1024px on an axis and will blur at close range: T_Concrete_N (512x512), T_Concrete_BC (512x512), T_Concrete_ORM (512x512), T_Steel_N (512x512) (+2 more)"
+    ]
+  },
+  "license": "LicenseRef-ProjectOriginal",
+  "schema": "game_dev.asset_metadata.v1"
+}

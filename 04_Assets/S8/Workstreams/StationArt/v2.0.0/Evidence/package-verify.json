@@ -1,0 +1,10 @@
+{
+  "schema": "game_dev.result.v1",
+  "operation": "package.verify",
+  "ok": false,
+  "error": {
+    "error": "UNKNOWN",
+    "message": "ENOENT: no such file or directory, realpath 'D:\\Project\\IndianRailwayGame\\04_Assets\\S8\\Workstreams\\StationArt\\cli-workspace\\.game-dev\\packages\\chennai_egmore_station_art\\2.0.0'",
+    "retryable": false
+  }
+}

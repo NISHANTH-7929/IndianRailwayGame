@@ -1,0 +1,23 @@
+{
+  "completedAt": "2026-10-04T08:04:30.429Z",
+  "destination": {
+    "assetId": "egmoreplatformbench",
+    "version": "1.1.0"
+  },
+  "evidence": {
+    "blenderNormalizationPerformed": false,
+    "gpuImportTestPerformed": false,
+    "humanVisualReviewPerformed": false,
+    "modelBytesCopiedAndHashed": true,
+    "policyValidationCompleted": true,
+    "staticInspectionCompleted": true
+  },
+  "manifestSha256": "1eb3eeac90f42cb6487ad3a1ebafee22bbbc857b73bd4f21def8195d827dc4f4",
+  "packageId": "pkg_3d4afc31b7711bed4848e945",
+  "schema": "game_dev.package_receipt.v1",
+  "source": {
+    "bytes": 4805448,
+    "fileName": "EgmorePlatformBench.glb",
+    "sha256": "00c1530482bd74c30b3760773f9b7648f59012b88b9b50bf163f6c62dcc4856f"
+  }
+}

@@ -1,0 +1,237 @@
+[
+  {
+    "path": "EgmoreInterior.blend",
+    "bytes": 2029557,
+    "sha256": "4f342926adff803cb32b791953a0751beb3d77669ceca1ea94a8385a8ff84538"
+  },
+  {
+    "path": "Evidence/audit.json",
+    "bytes": 16883,
+    "sha256": "ed76c038961a813841adb070bc3ebc076d77c8cfe78f9f3bbfa7a3eb8b7aa359"
+  },
+  {
+    "path": "Evidence/game-dev-validation.json",
+    "bytes": 938,
+    "sha256": "f5e603f44223c020f6854c889f18f8fdee5b3edaa8cd4bcc2dd207ae9c59c456"
+  },
+  {
+    "path": "InteriorDelta.glb",
+    "bytes": 456524,
+    "sha256": "d6b0080c4e2199b96fab43732b091b1944d923641e269bda787f81b646500d92"
+  },
+  {
+    "path": "lighting-bindings.json",
+    "bytes": 23457,
+    "sha256": "008f3ea531b14474ef94d3226d8cf6f0c1fa25ed4574e878d740d0e27424150f"
+  },
+  {
+    "path": "manifest.json",
+    "bytes": 21258,
+    "sha256": "2b3cb403d8643dd96a6a0cfb4075d6f3a7412bb04f2c958123f0c270c9fd5f5f"
+  },
+  {
+    "path": "material-bindings.json",
+    "bytes": 777,
+    "sha256": "256fa77826fb0b002c1d56f64137f81f5b45ea8cb1e56a0808faec40fbe4d79c"
+  },
+  {
+    "path": "Modules/CanopyLight_LOD0.fbx",
+    "bytes": 16620,
+    "sha256": "c40190ed542783a51c68f09ce4b37336e5a8bb4bf1aa681c361c491241fc6a2b"
+  },
+  {
+    "path": "Modules/CanopyLight_LOD0.glb",
+    "bytes": 4828,
+    "sha256": "eccb54330eede0c83904f53475eebbe8dfb4480213d2155ecd415a407da24f60"
+  },
+  {
+    "path": "Modules/CanopyLight_LOD1.fbx",
+    "bytes": 16620,
+    "sha256": "6164f3493a3e513e4cb52c45e441a0d934a22096d2147d1d6baaf109692e38e0"
+  },
+  {
+    "path": "Modules/CanopyLight_LOD1.glb",
+    "bytes": 4828,
+    "sha256": "eccb54330eede0c83904f53475eebbe8dfb4480213d2155ecd415a407da24f60"
+  },
+  {
+    "path": "Modules/CanopyLight_LOD2.fbx",
+    "bytes": 16620,
+    "sha256": "97b014ecd481e5fb50282b775dacec2ce079b72e2088ab1a5372e92825e180d3"
+  },
+  {
+    "path": "Modules/CanopyLight_LOD2.glb",
+    "bytes": 4828,
+    "sha256": "eccb54330eede0c83904f53475eebbe8dfb4480213d2155ecd415a407da24f60"
+  },
+  {
+    "path": "Modules/ExitFootbridge_LOD0.fbx",
+    "bytes": 80412,
+    "sha256": "f0e60fc11da1af61fbaf002d84e8d6f586a8da9ecbee5ef424d0eb60109f846b"
+  },
+  {
+    "path": "Modules/ExitFootbridge_LOD0.glb",
+    "bytes": 151084,
+    "sha256": "1c65f383b018cdada205b98643f407a471ec3c8a950f90c83c19ff3ffabeb0a3"
+  },
+  {
+    "path": "Modules/ExitFootbridge_LOD1.fbx",
+    "bytes": 80412,
+    "sha256": "59069772499759247af23b5ad19d1c51023d9438eb2d57551908e807e7145adf"
+  },
+  {
+    "path": "Modules/ExitFootbridge_LOD1.glb",
+    "bytes": 151084,
+    "sha256": "1c65f383b018cdada205b98643f407a471ec3c8a950f90c83c19ff3ffabeb0a3"
+  },
+  {
+    "path": "Modules/ExitFootbridge_LOD2.fbx",
+    "bytes": 80412,
+    "sha256": "92b7a607094bbbaf7cd84739d46facf47a8c14b63f8d8e6784da870d4f0eefa3"
+  },
+  {
+    "path": "Modules/ExitFootbridge_LOD2.glb",
+    "bytes": 151084,
+    "sha256": "1c65f383b018cdada205b98643f407a471ec3c8a950f90c83c19ff3ffabeb0a3"
+  },
+  {
+    "path": "Modules/PlatformNumber1_LOD0.fbx",
+    "bytes": 50588,
+    "sha256": "b74dee98c624f692c2357316089e89a15d94edc8eacf8262d94db72c4f0790f0"
+  },
+  {
+    "path": "Modules/PlatformNumber1_LOD0.glb",
+    "bytes": 87572,
+    "sha256": "14c61a9833301e9b2236f8bb77eec605d475318220372a26ed1ba9d8ed12cab7"
+  },
+  {
+    "path": "Modules/PlatformNumber1_LOD1.fbx",
+    "bytes": 50588,
+    "sha256": "cdf844d5fb64a1ddf010af5e19423059b2a589f192a5b10fac9613badd6351a2"
+  },
+  {
+    "path": "Modules/PlatformNumber1_LOD1.glb",
+    "bytes": 87572,
+    "sha256": "14c61a9833301e9b2236f8bb77eec605d475318220372a26ed1ba9d8ed12cab7"
+  },
+  {
+    "path": "Modules/PlatformNumber1_LOD2.fbx",
+    "bytes": 50588,
+    "sha256": "f8a9d73196647c8dda6e98499e1c5a0526ed6b7e7040ec84d8bb955b78e32510"
+  },
+  {
+    "path": "Modules/PlatformNumber1_LOD2.glb",
+    "bytes": 87572,
+    "sha256": "14c61a9833301e9b2236f8bb77eec605d475318220372a26ed1ba9d8ed12cab7"
+  },
+  {
+    "path": "Modules/PlatformNumber2_LOD0.fbx",
+    "bytes": 57548,
+    "sha256": "d6c29a6fb6033304b05f89e9c65c6c8b3813f8dc6c814ea9d49ceb0c20ba0528"
+  },
+  {
+    "path": "Modules/PlatformNumber2_LOD0.glb",
+    "bytes": 101064,
+    "sha256": "01dbc94ff0dde436e1a7a4c789eeb96d5e395ad4011e2d3758e3832d68ea455f"
+  },
+  {
+    "path": "Modules/PlatformNumber2_LOD1.fbx",
+    "bytes": 57548,
+    "sha256": "dece45967a9b994f92c1749d8aa328e31eb51a8100ef6ba2d53ada657486b94b"
+  },
+  {
+    "path": "Modules/PlatformNumber2_LOD1.glb",
+    "bytes": 101064,
+    "sha256": "01dbc94ff0dde436e1a7a4c789eeb96d5e395ad4011e2d3758e3832d68ea455f"
+  },
+  {
+    "path": "Modules/PlatformNumber2_LOD2.fbx",
+    "bytes": 57548,
+    "sha256": "929db4805a974699bfd049f2fae1d6726ee515d870444e72ce269fe7cfc82f3b"
+  },
+  {
+    "path": "Modules/PlatformNumber2_LOD2.glb",
+    "bytes": 101064,
+    "sha256": "01dbc94ff0dde436e1a7a4c789eeb96d5e395ad4011e2d3758e3832d68ea455f"
+  },
+  {
+    "path": "Modules/PlatformNumber3_LOD0.fbx",
+    "bytes": 61932,
+    "sha256": "0d8bae00a5e1bc4e60a412263e95d1d1db8a40737d07b58150ed5cff014154d8"
+  },
+  {
+    "path": "Modules/PlatformNumber3_LOD0.glb",
+    "bytes": 109996,
+    "sha256": "db554944c7032e650f7410c212b165425e7d7bc7f25a3e8b0e51d69a5f2f03fd"
+  },
+  {
+    "path": "Modules/PlatformNumber3_LOD1.fbx",
+    "bytes": 61932,
+    "sha256": "33279d216b3a90ae17868ffac12276813ad8f82263a943d4db2aa863ca9cf0af"
+  },
+  {
+    "path": "Modules/PlatformNumber3_LOD1.glb",
+    "bytes": 109996,
+    "sha256": "db554944c7032e650f7410c212b165425e7d7bc7f25a3e8b0e51d69a5f2f03fd"
+  },
+  {
+    "path": "Modules/PlatformNumber3_LOD2.fbx",
+    "bytes": 61932,
+    "sha256": "5ec692287ae36502c1cfcbf54745c811e0dc9a902356254ce3c2125b6112072e"
+  },
+  {
+    "path": "Modules/PlatformNumber3_LOD2.glb",
+    "bytes": 109996,
+    "sha256": "db554944c7032e650f7410c212b165425e7d7bc7f25a3e8b0e51d69a5f2f03fd"
+  },
+  {
+    "path": "Previews/BridgeApproach.png",
+    "bytes": 1799045,
+    "sha256": "e41337bc4f0392f0a4d5465b96b0f0c3198b4d9a594fc7cdc73673f309beef41"
+  },
+  {
+    "path": "Previews/PlatformWayfinding.png",
+    "bytes": 1806052,
+    "sha256": "a95203cb75c8b35453459a415346598600f50091d9aae586f38e9ee178ab6320"
+  },
+  {
+    "path": "Previews/PlatformWayfindingNight.png",
+    "bytes": 1779687,
+    "sha256": "ccbf5d8edfa47285900587d762c3b9b21a2d2c6981afe69649d9742f84b8cea5"
+  },
+  {
+    "path": "Previews/WaitingArea.png",
+    "bytes": 1831978,
+    "sha256": "0b7c95f5d00d27f40a02aff50f83c7c20ae533b2c966308490a24783a126fa3d"
+  },
+  {
+    "path": "provenance.json",
+    "bytes": 671,
+    "sha256": "6ddaa93f61cade8abbcf41e9868a424b0bdcf33ba637377384030ffb1f7bd1fa"
+  },
+  {
+    "path": "README.md",
+    "bytes": 2199,
+    "sha256": "6bb4f9d2b973b49e718999d3f0f2935881732710071ca20bc7ab9b8326d18221"
+  },
+  {
+    "path": "READY.lock",
+    "bytes": 124,
+    "sha256": "5e11431a895fc91e444c59ac9faa60f4900cbe6ef538312f5705ad46d9696e0c"
+  },
+  {
+    "path": "Reproduce/audit_interior_v21.py",
+    "bytes": 2478,
+    "sha256": "b5c38709df97102c3c8b706d21377f83002edffb94bb343c709b2f20fe37b963"
+  },
+  {
+    "path": "Reproduce/interior_v21.py",
+    "bytes": 8351,
+    "sha256": "5e26c45754b739f40f5068197a6c40503eaaeed66551f97f7294aeb0e0f0b716"
+  },
+  {
+    "path": "Reproduce/seal_interior_v21.py",
+    "bytes": 2536,
+    "sha256": "3d8ea32dcf19e0d3eb293c1378ea2994410521c1cfb04f438f69ec0ac6f14dc3"
+  }
+]

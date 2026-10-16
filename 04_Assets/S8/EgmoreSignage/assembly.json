@@ -1,0 +1,291 @@
+{
+  "asset_id": "Station.Egmore.Signage.01",
+  "version": 1,
+  "units": "metres",
+  "materials": [
+    {
+      "name": "Paving",
+      "base_color": [
+        0.55,
+        0.49,
+        0.4,
+        1
+      ],
+      "roughness": 0.87,
+      "metallic": 0,
+      "textures": {
+        "BC": "Textures/T_Paving_BC.png",
+        "N": "Textures/T_Paving_N.png",
+        "ORM": "Textures/T_Paving_ORM.png"
+      }
+    },
+    {
+      "name": "Concrete",
+      "base_color": [
+        0.48,
+        0.46,
+        0.41,
+        1
+      ],
+      "roughness": 0.9,
+      "metallic": 0,
+      "textures": {
+        "BC": "Textures/T_Concrete_BC.png",
+        "N": "Textures/T_Concrete_N.png",
+        "ORM": "Textures/T_Concrete_ORM.png"
+      }
+    },
+    {
+      "name": "Cream",
+      "base_color": [
+        0.74,
+        0.69,
+        0.55,
+        1
+      ],
+      "roughness": 0.81,
+      "metallic": 0,
+      "textures": {
+        "BC": "Textures/T_Cream_BC.png",
+        "N": "Textures/T_Cream_N.png",
+        "ORM": "Textures/T_Cream_ORM.png"
+      }
+    },
+    {
+      "name": "RedOxide",
+      "base_color": [
+        0.35,
+        0.075,
+        0.042,
+        1
+      ],
+      "roughness": 0.78,
+      "metallic": 0,
+      "textures": {
+        "BC": "Textures/T_RedOxide_BC.png",
+        "N": "Textures/T_RedOxide_N.png",
+        "ORM": "Textures/T_RedOxide_ORM.png"
+      }
+    },
+    {
+      "name": "Steel",
+      "base_color": [
+        0.075,
+        0.085,
+        0.085,
+        1
+      ],
+      "roughness": 0.47,
+      "metallic": 0.75,
+      "textures": {
+        "BC": "Textures/T_Steel_BC.png",
+        "N": "Textures/T_Steel_N.png",
+        "ORM": "Textures/T_Steel_ORM.png"
+      }
+    },
+    {
+      "name": "Roof",
+      "base_color": [
+        0.22,
+        0.3,
+        0.35,
+        1
+      ],
+      "roughness": 0.53,
+      "metallic": 0.55,
+      "textures": {
+        "BC": "Textures/T_Roof_BC.png",
+        "N": "Textures/T_Roof_N.png",
+        "ORM": "Textures/T_Roof_ORM.png"
+      }
+    },
+    {
+      "name": "Yellow",
+      "base_color": [
+        0.82,
+        0.59,
+        0.075,
+        1
+      ],
+      "roughness": 0.63,
+      "metallic": 0,
+      "textures": {
+        "BC": "Textures/T_Yellow_BC.png",
+        "N": "Textures/T_Yellow_N.png",
+        "ORM": "Textures/T_Yellow_ORM.png"
+      }
+    },
+    {
+      "name": "Black",
+      "base_color": [
+        0.018,
+        0.02,
+        0.018,
+        1
+      ],
+      "roughness": 0.68,
+      "metallic": 0,
+      "textures": {
+        "BC": "Textures/T_Black_BC.png",
+        "N": "Textures/T_Black_N.png",
+        "ORM": "Textures/T_Black_ORM.png"
+      }
+    },
+    {
+      "name": "Galvanized",
+      "base_color": [
+        0.38,
+        0.4,
+        0.4,
+        1
+      ],
+      "roughness": 0.46,
+      "metallic": 0.8,
+      "textures": {
+        "BC": "Textures/T_Galvanized_BC.png",
+        "N": "Textures/T_Galvanized_N.png",
+        "ORM": "Textures/T_Galvanized_ORM.png"
+      }
+    },
+    {
+      "name": "Insulator",
+      "base_color": [
+        0.19,
+        0.072,
+        0.031,
+        1
+      ],
+      "roughness": 0.3,
+      "metallic": 0,
+      "textures": {
+        "BC": "Textures/T_Insulator_BC.png",
+        "N": "Textures/T_Insulator_N.png",
+        "ORM": "Textures/T_Insulator_ORM.png"
+      }
+    },
+    {
+      "name": "Wood",
+      "base_color": [
+        0.25,
+        0.115,
+        0.052,
+        1
+      ],
+      "roughness": 0.81,
+      "metallic": 0,
+      "textures": {
+        "BC": "Textures/T_Wood_BC.png",
+        "N": "Textures/T_Wood_N.png",
+        "ORM": "Textures/T_Wood_ORM.png"
+      }
+    },
+    {
+      "name": "Glass",
+      "base_color": [
+        0.07,
+        0.14,
+        0.16,
+        1
+      ],
+      "roughness": 0.18,
+      "metallic": 0.35,
+      "textures": {
+        "BC": "Textures/T_Glass_BC.png",
+        "N": "Textures/T_Glass_N.png",
+        "ORM": "Textures/T_Glass_ORM.png"
+      }
+    },
+    {
+      "name": "Ballast",
+      "base_color": [
+        0.24,
+        0.22,
+        0.19,
+        1
+      ],
+      "roughness": 0.94,
+      "metallic": 0,
+      "textures": {
+        "BC": "Textures/T_Ballast_BC.png",
+        "N": "Textures/T_Ballast_N.png",
+        "ORM": "Textures/T_Ballast_ORM.png"
+      }
+    },
+    {
+      "name": "Soil",
+      "base_color": [
+        0.25,
+        0.18,
+        0.1,
+        1
+      ],
+      "roughness": 0.97,
+      "metallic": 0,
+      "textures": {
+        "BC": "Textures/T_Soil_BC.png",
+        "N": "Textures/T_Soil_N.png",
+        "ORM": "Textures/T_Soil_ORM.png"
+      }
+    },
+    {
+      "name": "EgmoreName",
+      "base_color": [
+        0.8,
+        0.6,
+        0.1,
+        1
+      ],
+      "roughness": 0.75,
+      "metallic": 0,
+      "textures": {
+        "BC": "Textures/T_EgmoreName_BC.png",
+        "N": "Textures/T_EgmoreName_N.png",
+        "ORM": "Textures/T_EgmoreName_ORM.png"
+      }
+    }
+  ],
+  "parts": [
+    {
+      "name": "EgmoreNameboard4m",
+      "asset_id": "Station.Kit.EgmoreNameboard4m",
+      "role": "scenery",
+      "fbx": "Parts/SM_Station_EgmoreNameboard4m.fbx",
+      "location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "triangles": 760,
+      "dimensions_m": [
+        4.659999847412109,
+        0.46000000834465027,
+        3.5999999046325684
+      ],
+      "bounds_m": [
+        [
+          -2.3299999237060547,
+          -0.23000000417232513,
+          0.0
+        ],
+        [
+          2.3299999237060547,
+          0.23000000417232513,
+          3.5999999046325684
+        ]
+      ],
+      "dimensionalEvidence": "estimated architectural dimensions; metric authored, not surveyed"
+    }
+  ],
+  "source": "Original structure and shaped lettering; lettering-receipt.json records reference and font",
+  "status": "estimated historical nameboard study; not survey certified"
+}

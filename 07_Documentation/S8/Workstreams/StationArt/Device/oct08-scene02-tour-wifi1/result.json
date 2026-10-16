@@ -1,0 +1,14 @@
+{
+  "captureCompleted": true,
+  "apk": "D:\\Project\\IndianRailwayGame\\08_Builds\\S8_EgmoreScene02_20261008-143136\\Android_ASTC\\MyProject-arm64.apk",
+  "apkSha256": "2b52b9f0b321173106e1dfe39db410cf3f2451b9d5debee62ef7e0da676018b7",
+  "map": "/Game/IndianRailway/S8/Review/L_EgmoreScene02_Study",
+  "flags": "-S8EgmoreCameraTour -S8EgmoreView=0",
+  "visualAccepted": false,
+  "gameplayValidated": false,
+  "restorationErrors": [],
+  "savesUnchanged": true,
+  "commandlineRestored": true,
+  "wakeRestored": true,
+  "artifactUnchanged": true
+}

@@ -1,0 +1,59 @@
+{
+  "schema": "game_dev.receipt.v1",
+  "operation": "package.verify",
+  "result": {
+    "schema": "game_dev.package_verification.v1",
+    "packagePath": "D:\\Project\\IndianRailwayGame\\04_Assets\\S8\\EgmorePortable\\.game-dev\\packages\\egmorelitterbins\\1.0.0",
+    "manifest": {
+      "assetId": "egmorelitterbins",
+      "description": "Original metric Egmore study module; estimated dimensions, visual acceptance and Android integration pending",
+      "displayName": "EgmoreLitterBins",
+      "files": [
+        {
+          "bytes": 5745668,
+          "kind": "model",
+          "path": "model.glb",
+          "sha256": "8834154e079f1282936d4922071eed0cd6f8f369c6c4c6760b458add41754e5d"
+        },
+        {
+          "bytes": 3894,
+          "kind": "metadata",
+          "path": "metadata.json",
+          "sha256": "9f8b3554bda8104e3f42f2df59c1ab20ee5d05bc94b8c8374aea36e074341c25"
+        },
+        {
+          "bytes": 626,
+          "kind": "provenance",
+          "path": "provenance.json",
+          "sha256": "224a8b5f2830c80500398d0dd006972a39ae72feb80dcac7e22d9899ed3e33ab"
+        },
+        {
+          "bytes": 4317,
+          "kind": "validation",
+          "path": "validation.json",
+          "sha256": "1ef72b66ca171ad73ed6e92d802d8dfbb18e40f93cc1a5b56d4f5db6748b0da0"
+        }
+      ],
+      "license": "LicenseRef-ProjectOriginal",
+      "model": "model.glb",
+      "packageId": "pkg_b340bdbb5bca61b9afc651ef",
+      "provenance": {
+        "origin": "authored"
+      },
+      "schema": "game_dev.asset_package.v1",
+      "validation": {
+        "errorCount": 0,
+        "passed": true,
+        "warningCount": 0
+      },
+      "version": "1.0.0"
+    },
+    "hashesVerified": true,
+    "evidence": {
+      "packageBytesVerified": true,
+      "gpuImportTestPerformed": false,
+      "humanVisualReviewPerformed": false
+    }
+  },
+  "completedAt": "2026-10-04T03:26:23.287Z"
+}

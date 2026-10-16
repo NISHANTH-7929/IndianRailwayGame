@@ -1,0 +1,44 @@
+{
+  "assetId": "egmoretower4m",
+  "description": "Original Egmore study with rear facade and aggregate ballast material; estimated dimensions, visual acceptance pending",
+  "displayName": "EgmoreTower4m",
+  "files": [
+    {
+      "bytes": 6999680,
+      "kind": "model",
+      "path": "model.glb",
+      "sha256": "0d6d71928c312726285d05ccb66563767d79f65de2b5f81baf2858e4976b2df0"
+    },
+    {
+      "bytes": 3419,
+      "kind": "metadata",
+      "path": "metadata.json",
+      "sha256": "08ecf0b13538df815c1ae915ed9f0c656b41db967175b338b038b3f611feaf4e"
+    },
+    {
+      "bytes": 623,
+      "kind": "provenance",
+      "path": "provenance.json",
+      "sha256": "a8926b70ab5529b4b0683dd515d21e2a50864cfbcb6df2fbdb6483be07fa8c12"
+    },
+    {
+      "bytes": 4319,
+      "kind": "validation",
+      "path": "validation.json",
+      "sha256": "19af819aa0f76bbcd6c0afeee5ba5be24f7d527d51145bbe1fe4972f27843a3b"
+    }
+  ],
+  "license": "LicenseRef-ProjectOriginal",
+  "model": "model.glb",
+  "packageId": "pkg_bdfde041ff7b2cf729e0f35d",
+  "provenance": {
+    "origin": "authored"
+  },
+  "schema": "game_dev.asset_package.v1",
+  "validation": {
+    "errorCount": 0,
+    "passed": true,
+    "warningCount": 0
+  },
+  "version": "1.3.0"
+}

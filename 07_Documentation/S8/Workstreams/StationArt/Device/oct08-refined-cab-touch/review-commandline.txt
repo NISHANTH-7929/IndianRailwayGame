@@ -1,0 +1,1 @@
+-project="../../../MyProject/MyProject.uproject" /Game/IndianRailway/S7/L_RailService -S8AssetReview -S8Cab -S8CabManual -ExecCmds="r.SetFramePace 30" -log

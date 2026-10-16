@@ -1,0 +1,59 @@
+{
+  "schema": "game_dev.receipt.v1",
+  "operation": "package.verify",
+  "result": {
+    "schema": "game_dev.package_verification.v1",
+    "packagePath": "D:\\Project\\IndianRailwayGame\\04_Assets\\S8\\EgmorePortable\\.game-dev\\packages\\egmoreplatformbench\\1.0.0",
+    "manifest": {
+      "assetId": "egmoreplatformbench",
+      "description": "Original metric Egmore study module; estimated dimensions, visual acceptance and Android integration pending",
+      "displayName": "EgmorePlatformBench",
+      "files": [
+        {
+          "bytes": 4805448,
+          "kind": "model",
+          "path": "model.glb",
+          "sha256": "00c1530482bd74c30b3760773f9b7648f59012b88b9b50bf163f6c62dcc4856f"
+        },
+        {
+          "bytes": 3418,
+          "kind": "metadata",
+          "path": "metadata.json",
+          "sha256": "6a1a46700d824c19d9ad20aa7c96bcf0902771dddf8ab46aa30be469660ab936"
+        },
+        {
+          "bytes": 629,
+          "kind": "provenance",
+          "path": "provenance.json",
+          "sha256": "d9c2739da5b5b9cec3970f55bdea1059ecc2506d0ad3a209f8d66a0283af80fe"
+        },
+        {
+          "bytes": 4316,
+          "kind": "validation",
+          "path": "validation.json",
+          "sha256": "542a164647895c2eb35da5e750769a9086f7e56c9563bf5a29d789d11ce25333"
+        }
+      ],
+      "license": "LicenseRef-ProjectOriginal",
+      "model": "model.glb",
+      "packageId": "pkg_d4278b7c361c9fc93610626f",
+      "provenance": {
+        "origin": "authored"
+      },
+      "schema": "game_dev.asset_package.v1",
+      "validation": {
+        "errorCount": 0,
+        "passed": true,
+        "warningCount": 0
+      },
+      "version": "1.0.0"
+    },
+    "hashesVerified": true,
+    "evidence": {
+      "packageBytesVerified": true,
+      "gpuImportTestPerformed": false,
+      "humanVisualReviewPerformed": false
+    }
+  },
+  "completedAt": "2026-10-04T03:26:23.993Z"
+}

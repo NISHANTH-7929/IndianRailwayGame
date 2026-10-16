@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "checks": {
+    "hornTriggered": true,
+    "hornPlayback": true,
+    "pausedSilent": true,
+    "resumedLoops": true,
+    "brakeTriggered": true,
+    "brakePlayback": true,
+    "pauseTelemetry": true,
+    "resumeTelemetry": true
+  },
+  "scope": "observed-layout UI and engine playback state; not listening QA"
+}

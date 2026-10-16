@@ -1,0 +1,1 @@
+adb: error: 11-byte write failed: No error

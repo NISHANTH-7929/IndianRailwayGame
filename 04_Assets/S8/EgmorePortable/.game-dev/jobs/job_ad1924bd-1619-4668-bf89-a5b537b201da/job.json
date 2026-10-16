@@ -1,0 +1,24 @@
+{
+  "schema": "game_dev.job.v1",
+  "id": "job_ad1924bd-1619-4668-bf89-a5b537b201da",
+  "operation": "package.verify",
+  "status": "completed",
+  "request": {
+    "positionals": [
+      "package",
+      "verify",
+      "D:\\Project\\IndianRailwayGame\\04_Assets\\S8\\EgmorePortable\\.game-dev\\packages\\egmorelitterbins\\1.0.0"
+    ],
+    "flags": {
+      "output-dir": "04_Assets/S8/EgmorePortable"
+    }
+  },
+  "attempts": 1,
+  "eventCount": 1,
+  "artifacts": [],
+  "createdAt": "2026-10-04T03:26:23.253Z",
+  "updatedAt": "2026-10-04T03:26:23.290Z",
+  "startedAt": "2026-10-04T03:26:23.259Z",
+  "completedAt": "2026-10-04T03:26:23.290Z",
+  "receiptPath": "D:\\Project\\IndianRailwayGame\\04_Assets\\S8\\EgmorePortable\\.game-dev\\jobs\\job_ad1924bd-1619-4668-bf89-a5b537b201da\\receipt.json"
+}

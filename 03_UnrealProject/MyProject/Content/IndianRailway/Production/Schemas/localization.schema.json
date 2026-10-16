@@ -1,0 +1,124 @@
+{
+  "type": "object",
+  "properties": {
+    "schemaVersion": {
+      "enum": [
+        1
+      ]
+    },
+    "defaultCulture": {
+      "enum": [
+        "en"
+      ]
+    },
+    "cultures": {
+      "enum": [
+        [
+          "en",
+          "hi"
+        ]
+      ]
+    },
+    "strings": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "key": {
+            "type": "string",
+            "minLength": 1
+          },
+          "en": {
+            "type": "string",
+            "minLength": 1
+          },
+          "hi": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "key",
+          "en",
+          "hi"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 1
+    },
+    "accessibility": {
+      "type": "object",
+      "properties": {
+        "fontScaleOptions": {
+          "type": "array",
+          "items": {
+            "type": "number",
+            "minimum": 1
+          },
+          "minItems": 1
+        },
+        "signalMeaning": {
+          "enum": [
+            "color+text+symbol"
+          ]
+        },
+        "touchLayouts": {
+          "type": "array",
+          "items": {
+            "enum": [
+              "standard",
+              "large"
+            ]
+          },
+          "minItems": 2
+        },
+        "controlLabelKeys": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 1
+        },
+        "pauseKey": {
+          "type": "string",
+          "minLength": 1
+        },
+        "resultKey": {
+          "type": "string",
+          "minLength": 1
+        },
+        "warningKey": {
+          "type": "string",
+          "minLength": 1
+        },
+        "fontCoverageStatus": {
+          "enum": [
+            "pending-device-verification"
+          ]
+        }
+      },
+      "required": [
+        "fontScaleOptions",
+        "signalMeaning",
+        "touchLayouts",
+        "controlLabelKeys",
+        "pauseKey",
+        "resultKey",
+        "warningKey",
+        "fontCoverageStatus"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "schemaVersion",
+    "defaultCulture",
+    "cultures",
+    "strings",
+    "accessibility"
+  ],
+  "additionalProperties": false,
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:indianrailway:s8:localization"
+}

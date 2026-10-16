@@ -1,0 +1,120 @@
+{
+  "assetId": "egmoreentrance9m",
+  "description": "Original Egmore study with rear facade and aggregate ballast material; estimated dimensions, visual acceptance pending",
+  "displayName": "EgmoreEntrance9m",
+  "inspection": {
+    "animationCount": 0,
+    "boundingBox": {
+      "max": [
+        4.720000267028809,
+        11.889999389648438,
+        1.9200000762939453
+      ],
+      "min": [
+        -4.720000267028809,
+        0,
+        -3.700000047683716
+      ],
+      "sizeMeters": [
+        9.440000534057617,
+        11.889999389648438,
+        5.620000123977661
+      ]
+    },
+    "boundingBoxEmpty": false,
+    "fileBytes": 4840272,
+    "filePath": "model.glb",
+    "generator": "glTF-Transform v4.5.1",
+    "hasNormals": true,
+    "hasSkin": false,
+    "hasTangents": true,
+    "hasUVs": true,
+    "materialCount": 3,
+    "meshCount": 1,
+    "pbr": {
+      "hasBaseColorTexture": true,
+      "hasEmissiveTexture": false,
+      "hasMetallicRoughnessTexture": true,
+      "hasNormalTexture": true,
+      "hasOcclusionTexture": false
+    },
+    "primitiveCount": 3,
+    "sceneGraphFallback": false,
+    "textureCount": 9,
+    "textureResolutions": [
+      {
+        "bytes": 390088,
+        "height": 512,
+        "mimeType": "image/png",
+        "name": "T_EgmoreRed_N",
+        "width": 512
+      },
+      {
+        "bytes": 333035,
+        "height": 512,
+        "mimeType": "image/png",
+        "name": "T_EgmoreRed_BC",
+        "width": 512
+      },
+      {
+        "bytes": 436612,
+        "height": 512,
+        "mimeType": "image/png",
+        "name": "T_EgmoreRed_ORM",
+        "width": 512
+      },
+      {
+        "bytes": 389735,
+        "height": 512,
+        "mimeType": "image/png",
+        "name": "T_EgmoreLime_N",
+        "width": 512
+      },
+      {
+        "bytes": 404082,
+        "height": 512,
+        "mimeType": "image/png",
+        "name": "T_EgmoreLime_BC",
+        "width": 512
+      },
+      {
+        "bytes": 428445,
+        "height": 512,
+        "mimeType": "image/png",
+        "name": "T_EgmoreLime_ORM",
+        "width": 512
+      },
+      {
+        "bytes": 389959,
+        "height": 512,
+        "mimeType": "image/png",
+        "name": "T_Black_N",
+        "width": 512
+      },
+      {
+        "bytes": 107689,
+        "height": 512,
+        "mimeType": "image/png",
+        "name": "T_Black_BC",
+        "width": 512
+      },
+      {
+        "bytes": 432894,
+        "height": 512,
+        "mimeType": "image/png",
+        "name": "T_Black_ORM",
+        "width": 512
+      }
+    ],
+    "triangleCount": 14072,
+    "undrawnMeshCount": 0,
+    "undrawnPrimitiveCount": 0,
+    "undrawnTriangleCount": 0,
+    "vertexCount": 29970,
+    "warnings": [
+      "texture is below 1024px on an axis and will blur at close range: T_EgmoreRed_N (512x512), T_EgmoreRed_BC (512x512), T_EgmoreRed_ORM (512x512), T_EgmoreLime_N (512x512) (+5 more)"
+    ]
+  },
+  "license": "LicenseRef-ProjectOriginal",
+  "schema": "game_dev.asset_metadata.v1"
+}

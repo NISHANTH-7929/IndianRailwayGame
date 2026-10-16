@@ -1,0 +1,1 @@
+-project="../../../MyProject/MyProject.uproject" /Game/IndianRailway/S7/L_RailService -csvCaptureFrames=12000 -csvGpuStats -csvCompression=0 -ExecCmds="r.SetFramePace 30" -log

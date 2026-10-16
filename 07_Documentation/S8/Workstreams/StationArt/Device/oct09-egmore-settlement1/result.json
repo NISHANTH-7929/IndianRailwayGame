@@ -1,0 +1,18 @@
+{
+  "smokeCompleted": false,
+  "gameplayValidated": false,
+  "serviceCompletionValidated": false,
+  "apk": "D:\\Project\\IndianRailwayGame\\08_Builds\\S8_EgmoreService_20261009-144106\\Android_ASTC\\MyProject-arm64.apk",
+  "apkSha256": "92c96bdd077445973a7d05fcfefb5a82444f8924a11a8b52dd2fdba89fd2f5f9",
+  "map": "/Game/IndianRailway/S8/Egmore/L_RailService_Egmore",
+  "flags": "-S8Egmore -S8Station -S8LHB -S8AssetReview",
+  "durationSeconds": 600,
+  "restorationErrors": [
+    "stop: Command '['C:\\\\Users\\\\nisha\\\\AppData\\\\Local\\\\Android\\\\Sdk\\\\platform-tools\\\\adb.exe', '-s', 'adb-10BE1Y2EL40003J-Ljk0bC._adb-tls-connect._tcp', 'shell', 'am', 'force-stop', 'com.indianrailway.s1harness']' returned non-zero exit status 1.",
+    "commandline: Command '['C:\\\\Users\\\\nisha\\\\AppData\\\\Local\\\\Android\\\\Sdk\\\\platform-tools\\\\adb.exe', '-s', 'adb-10BE1Y2EL40003J-Ljk0bC._adb-tls-connect._tcp', 'push', 'D:\\\\Project\\\\IndianRailwayGame\\\\07_Documentation\\\\S8\\\\Workstreams\\\\StationArt\\\\Device\\\\oct09-egmore-settlement1\\\\original-commandline.txt', '/sdcard/Android/data/com.indianrailway.s1harness/files/UnrealGame/MyProject/UECommandLine.txt']' returned non-zero exit status 1.",
+    "telemetry: Command '['C:\\\\Users\\\\nisha\\\\AppData\\\\Local\\\\Android\\\\Sdk\\\\platform-tools\\\\adb.exe', '-s', 'adb-10BE1Y2EL40003J-Ljk0bC._adb-tls-connect._tcp', 'shell', 'rm', '-f', '/sdcard/Android/data/com.indianrailway.s1harness/files/UnrealGame/MyProject/MyProject/Saved/S8/Egmore/AssetReview/telemetry.json']' returned non-zero exit status 1.",
+    "wake: Command '['C:\\\\Users\\\\nisha\\\\AppData\\\\Local\\\\Android\\\\Sdk\\\\platform-tools\\\\adb.exe', '-s', 'adb-10BE1Y2EL40003J-Ljk0bC._adb-tls-connect._tcp', 'shell', 'settings', 'put', 'global', 'stay_on_while_plugged_in', '0']' returned non-zero exit status 1.",
+    "verification: Command '['C:\\\\Users\\\\nisha\\\\AppData\\\\Local\\\\Android\\\\Sdk\\\\platform-tools\\\\adb.exe', '-s', 'adb-10BE1Y2EL40003J-Ljk0bC._adb-tls-connect._tcp', 'shell', 'if [ -f /sdcard/Android/data/com.indianrailway.s1harness/files/UnrealGame/MyProject/MyProject/Saved/S7/checkpoint-0.irs ]; then echo EXISTS; else echo ABSENT; fi']' returned non-zero exit status 1."
+  ],
+  "error": "Command '['C:\\\\Users\\\\nisha\\\\AppData\\\\Local\\\\Android\\\\Sdk\\\\platform-tools\\\\adb.exe', '-s', 'adb-10BE1Y2EL40003J-Ljk0bC._adb-tls-connect._tcp', 'shell', 'if [ -f /sdcard/Android/data/com.indianrailway.s1harness/files/UnrealGame/MyProject/MyProject/Saved/S8/Egmore/AssetReview/telemetry.json ]; then echo EXISTS; else echo ABSENT; fi']' returned non-zero exit status 1."
+}

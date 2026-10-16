@@ -1,0 +1,44 @@
+{
+  "schema": "game_dev.receipt.v1",
+  "operation": "package.build",
+  "result": {
+    "schema": "game_dev.package_build_result.v1",
+    "packageId": "pkg_5f917a1ee46f63849240c326",
+    "packagePath": "D:\\Project\\IndianRailwayGame\\04_Assets\\S8\\EgmorePortable\\.game-dev\\packages\\egmoretower4m\\1.4.0",
+    "manifestPath": "D:\\Project\\IndianRailwayGame\\04_Assets\\S8\\EgmorePortable\\.game-dev\\packages\\egmoretower4m\\1.4.0\\manifest.json",
+    "receiptPath": "D:\\Project\\IndianRailwayGame\\04_Assets\\S8\\EgmorePortable\\.game-dev\\packages\\egmoretower4m\\1.4.0\\receipt.json",
+    "manifestSha256": "28715cee8ef873421365a60077a07f2cc380097725b2a93ea5cfab610ece6ce4",
+    "reused": false,
+    "validation": {
+      "passed": true,
+      "errorCount": 0,
+      "warningCount": 0
+    },
+    "catalog": {
+      "packageId": "pkg_5f917a1ee46f63849240c326",
+      "assetId": "egmoretower4m",
+      "version": "1.4.0",
+      "displayName": "EgmoreTower4m",
+      "description": "Original estimated Egmore tower with side niches and cornice returns; not surveyed or visually accepted",
+      "license": "LicenseRef-ProjectOriginal",
+      "packagePath": "D:\\Project\\IndianRailwayGame\\04_Assets\\S8\\EgmorePortable\\.game-dev\\packages\\egmoretower4m\\1.4.0",
+      "modelPath": "D:\\Project\\IndianRailwayGame\\04_Assets\\S8\\EgmorePortable\\.game-dev\\packages\\egmoretower4m\\1.4.0\\model.glb",
+      "modelSha256": "955143a7f9ec8a84d7ea60b5876b1df910e04eefdc40bdd36e4060e857ee8106",
+      "manifestSha256": "28715cee8ef873421365a60077a07f2cc380097725b2a93ea5cfab610ece6ce4",
+      "validationPassed": true,
+      "validationErrors": 0,
+      "validationWarnings": 0,
+      "origin": "authored",
+      "indexedAt": "2026-10-05T12:43:59.291Z"
+    },
+    "evidence": {
+      "portableGlbCopiedAndHashed": true,
+      "staticInspectionCompleted": true,
+      "policyValidationCompleted": true,
+      "blenderNormalizationPerformed": false,
+      "gpuImportTestPerformed": false,
+      "humanVisualReviewPerformed": false
+    }
+  },
+  "completedAt": "2026-10-05T12:43:59.300Z"
+}

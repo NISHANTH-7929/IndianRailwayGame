@@ -1,0 +1,23 @@
+{
+  "completedAt": "2026-10-04T09:07:51.163Z",
+  "destination": {
+    "assetId": "egmoreballast3m",
+    "version": "1.3.0"
+  },
+  "evidence": {
+    "blenderNormalizationPerformed": false,
+    "gpuImportTestPerformed": false,
+    "humanVisualReviewPerformed": false,
+    "modelBytesCopiedAndHashed": true,
+    "policyValidationCompleted": true,
+    "staticInspectionCompleted": true
+  },
+  "manifestSha256": "2c5360c049cf24b4f7c9ad1663a7007be80fd245078115782ca0d1348a20a844",
+  "packageId": "pkg_36e4b9f035fc9368488cd99b",
+  "schema": "game_dev.package_receipt.v1",
+  "source": {
+    "bytes": 8807940,
+    "fileName": "EgmoreBallast3m.glb",
+    "sha256": "2a8d7dda005c98e30a206d90351af1bdbab8508980678ea686de2aff1760f62f"
+  }
+}

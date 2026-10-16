@@ -1,0 +1,44 @@
+{
+  "assetId": "egmoretower4m",
+  "description": "Original metric Egmore study module; estimated dimensions, visual acceptance and Android integration pending",
+  "displayName": "EgmoreTower4m",
+  "files": [
+    {
+      "bytes": 4568200,
+      "kind": "model",
+      "path": "model.glb",
+      "sha256": "1fbf52346be07afae972e436046605914e0ba5dfd825f54382d8d00d215f71a0"
+    },
+    {
+      "bytes": 2949,
+      "kind": "metadata",
+      "path": "metadata.json",
+      "sha256": "7625b404ea471f2486fcd416ffaf387f025a1cb7247ceed00a226f81b56e13e1"
+    },
+    {
+      "bytes": 623,
+      "kind": "provenance",
+      "path": "provenance.json",
+      "sha256": "5a6081d92a49dff35653de7e73ffcac6cdc98d8264988f0b1121dc0fbdbd0109"
+    },
+    {
+      "bytes": 4316,
+      "kind": "validation",
+      "path": "validation.json",
+      "sha256": "57de6269959bbfd850f19f372f3cc3f6088edfec2e2797a69c1cdef3903c4404"
+    }
+  ],
+  "license": "LicenseRef-ProjectOriginal",
+  "model": "model.glb",
+  "packageId": "pkg_1e0fc43e4aa3da75ecd4ab32",
+  "provenance": {
+    "origin": "authored"
+  },
+  "schema": "game_dev.asset_package.v1",
+  "validation": {
+    "errorCount": 0,
+    "passed": true,
+    "warningCount": 0
+  },
+  "version": "1.0.0"
+}

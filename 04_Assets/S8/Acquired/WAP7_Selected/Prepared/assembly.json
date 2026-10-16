@@ -1,0 +1,468 @@
+{
+  "schema_version": 1,
+  "family": "WAP7",
+  "source": "WAP7 user-selected archive; see receipt.json",
+  "units": "centimetres",
+  "axis": "+X forward +Y right +Z up",
+  "fbx_import_settings": {
+    "convert_scene": true,
+    "force_front_x_axis": true,
+    "convert_scene_unit": true
+  },
+  "parts": [
+    {
+      "name": "Exterior",
+      "role": "exterior",
+      "fbx": "Parts/SM_WAP7_Selected_Exterior_LOD0.fbx",
+      "object": "SM_WAP7_Selected_Exterior_LOD0",
+      "location_cm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "pivot_cm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "rotation_axis": [
+        0,
+        0,
+        1
+      ],
+      "triangles": 108466,
+      "material_slots": 16
+    },
+    {
+      "name": "Bogie_Front",
+      "role": "bogie",
+      "fbx": "Parts/SM_WAP7_Selected_Bogie_Front_LOD0.fbx",
+      "object": "SM_WAP7_Selected_Bogie_Front_LOD0",
+      "location_cm": [
+        584.9999904632568,
+        0.0,
+        59.3999981880188
+      ],
+      "pivot_cm": [
+        584.9999904632568,
+        0.0,
+        59.3999981880188
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "rotation_axis": [
+        0,
+        0,
+        1
+      ],
+      "triangles": 140208,
+      "material_slots": 2
+    },
+    {
+      "name": "Bogie_Rear",
+      "role": "bogie",
+      "fbx": "Parts/SM_WAP7_Selected_Bogie_Rear_LOD0.fbx",
+      "object": "SM_WAP7_Selected_Bogie_Rear_LOD0",
+      "location_cm": [
+        -584.9999904632568,
+        0.0,
+        59.3999981880188
+      ],
+      "pivot_cm": [
+        -584.9999904632568,
+        0.0,
+        59.3999981880188
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "rotation_axis": [
+        0,
+        0,
+        1
+      ],
+      "triangles": 140180,
+      "material_slots": 2
+    }
+  ],
+  "materials": [
+    {
+      "doubleSided": true,
+      "name": "main",
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "uri": "Textures/image_4.png"
+        },
+        "metallicFactor": 0.10000000149011612,
+        "roughnessFactor": 0.5
+      },
+      "base_color": [
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "alphaMode": "BLEND",
+      "doubleSided": true,
+      "name": "Material.003",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.0334165059030056,
+          0.0334165059030056,
+          0.0334165059030056,
+          0.8999999761581421
+        ],
+        "metallicFactor": 0,
+        "roughnessFactor": 0.08715596795082092
+      },
+      "base_color": [
+        0.0334165059030056,
+        0.0334165059030056,
+        0.0334165059030056,
+        0.8999999761581421
+      ]
+    },
+    {
+      "doubleSided": true,
+      "name": "booggy",
+      "normalTexture": {
+        "uri": "Textures/image_13.png"
+      },
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "uri": "Textures/image_14.png"
+        },
+        "metallicRoughnessTexture": {
+          "uri": "Textures/image_15.png"
+        }
+      },
+      "base_color": [
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "doubleSided": true,
+      "name": "mainupper",
+      "normalTexture": {
+        "uri": "Textures/image_20.png"
+      },
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "uri": "Textures/image_21.png"
+        },
+        "metallicRoughnessTexture": {
+          "uri": "Textures/image_22.png"
+        }
+      },
+      "base_color": [
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "doubleSided": true,
+      "name": "black",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.028887666761875153,
+          0.028887666761875153,
+          0.028887666761875153,
+          1
+        ],
+        "metallicFactor": 0.4220183491706848,
+        "roughnessFactor": 0.3165137767791748
+      },
+      "base_color": [
+        0.028887666761875153,
+        0.028887666761875153,
+        0.028887666761875153,
+        1
+      ]
+    },
+    {
+      "doubleSided": true,
+      "emissiveFactor": [
+        1,
+        0.032465122640132904,
+        0
+      ],
+      "extensions": {
+        "KHR_materials_emissive_strength": {
+          "emissiveStrength": 50
+        }
+      },
+      "name": "redmit",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      "base_color": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "doubleSided": true,
+      "name": "steel",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.05342599004507065,
+          0.05342599004507065,
+          0.05342599004507065,
+          1
+        ],
+        "metallicFactor": 0,
+        "roughnessFactor": 0.08715596795082092
+      },
+      "base_color": [
+        0.05342599004507065,
+        0.05342599004507065,
+        0.05342599004507065,
+        1
+      ]
+    },
+    {
+      "doubleSided": true,
+      "emissiveFactor": [
+        1,
+        0.8867583274841309,
+        0.5935560464859009
+      ],
+      "name": "whitemeit",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      "base_color": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "doubleSided": true,
+      "name": "insulators",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.0334165059030056,
+          0.0049839261919260025,
+          0,
+          1
+        ],
+        "metallicFactor": 0.20000000298023224,
+        "roughnessFactor": 0.009999999776482582
+      },
+      "base_color": [
+        0.0334165059030056,
+        0.0049839261919260025,
+        0,
+        1
+      ]
+    },
+    {
+      "doubleSided": true,
+      "name": "cable",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.06907834112644196,
+          0.06907834112644196,
+          0.06907834112644196,
+          1
+        ],
+        "metallicFactor": 0.20000000298023224,
+        "roughnessFactor": 0.5
+      },
+      "base_color": [
+        0.06907834112644196,
+        0.06907834112644196,
+        0.06907834112644196,
+        1
+      ]
+    },
+    {
+      "doubleSided": true,
+      "name": "PG",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.1807939112186432,
+          0,
+          0.0012015028623864055,
+          1
+        ],
+        "metallicFactor": 0.514018714427948,
+        "roughnessFactor": 0.16355137526988983
+      },
+      "base_color": [
+        0.1807939112186432,
+        0,
+        0.0012015028623864055,
+        1
+      ]
+    },
+    {
+      "doubleSided": true,
+      "name": "PG.001",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.017538020387291908,
+          0.01677257940173149,
+          0.01691533252596855,
+          1
+        ],
+        "metallicFactor": 0.7943925261497498,
+        "roughnessFactor": 0.3037382960319519
+      },
+      "base_color": [
+        0.017538020387291908,
+        0.01677257940173149,
+        0.01691533252596855,
+        1
+      ]
+    },
+    {
+      "doubleSided": true,
+      "name": "dark",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "metallicFactor": 0,
+        "roughnessFactor": 0.5
+      },
+      "base_color": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "doubleSided": true,
+      "name": "ironupperwhi",
+      "normalTexture": {
+        "uri": "Textures/image_83.png"
+      },
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "uri": "Textures/image_84.png"
+        },
+        "metallicRoughnessTexture": {
+          "uri": "Textures/image_85.png"
+        }
+      },
+      "base_color": [
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "doubleSided": true,
+      "name": "ironupperblk",
+      "normalTexture": {
+        "uri": "Textures/image_90.png"
+      },
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "uri": "Textures/image_91.png"
+        },
+        "metallicRoughnessTexture": {
+          "uri": "Textures/image_92.png"
+        }
+      },
+      "base_color": [
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "Acquired_Default",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "metallicFactor": 1,
+        "roughnessFactor": 1
+      },
+      "base_color": [
+        1,
+        1,
+        1,
+        1
+      ]
+    }
+  ],
+  "driver_camera": {
+    "location_cm": [
+      880,
+      -78,
+      290
+    ],
+    "rotation_deg": [
+      0,
+      0,
+      0
+    ],
+    "fov": 75
+  },
+  "wheel_radius_cm": 58.35094,
+  "cab_available": false,
+  "limitations": [
+    "Exterior source has no furnished interactive cab. Camera is provisional and must not imply cab completion.",
+    "Pantographs, wipers and lights retained as authored static geometry; not rigged.",
+    "Full original mesh and textures retained; Android cost unmeasured."
+  ],
+  "triangles": 388854
+}

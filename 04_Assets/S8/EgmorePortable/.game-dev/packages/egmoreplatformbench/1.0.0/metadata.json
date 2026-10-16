@@ -1,0 +1,141 @@
+{
+  "assetId": "egmoreplatformbench",
+  "description": "Original metric Egmore study module; estimated dimensions, visual acceptance and Android integration pending",
+  "displayName": "EgmorePlatformBench",
+  "inspection": {
+    "animationCount": 0,
+    "boundingBox": {
+      "max": [
+        0.8999999761581421,
+        1.03000009059906,
+        0.2750000059604645
+      ],
+      "min": [
+        -0.8999999761581421,
+        0,
+        -0.2775000035762787
+      ],
+      "sizeMeters": [
+        1.7999999523162842,
+        1.03000009059906,
+        0.5525000095367432
+      ]
+    },
+    "boundingBoxEmpty": false,
+    "fileBytes": 4805448,
+    "filePath": "model.glb",
+    "generator": "glTF-Transform v4.5.1",
+    "hasNormals": true,
+    "hasSkin": false,
+    "hasTangents": true,
+    "hasUVs": true,
+    "materialCount": 4,
+    "meshCount": 1,
+    "pbr": {
+      "hasBaseColorTexture": true,
+      "hasEmissiveTexture": false,
+      "hasMetallicRoughnessTexture": true,
+      "hasNormalTexture": true,
+      "hasOcclusionTexture": false
+    },
+    "primitiveCount": 4,
+    "sceneGraphFallback": false,
+    "textureCount": 12,
+    "textureResolutions": [
+      {
+        "bytes": 389755,
+        "height": 512,
+        "mimeType": "image/png",
+        "name": "T_Galvanized_N",
+        "width": 512
+      },
+      {
+        "bytes": 326189,
+        "height": 512,
+        "mimeType": "image/png",
+        "name": "T_Galvanized_BC",
+        "width": 512
+      },
+      {
+        "bytes": 449269,
+        "height": 512,
+        "mimeType": "image/png",
+        "name": "T_Galvanized_ORM",
+        "width": 512
+      },
+      {
+        "bytes": 390226,
+        "height": 512,
+        "mimeType": "image/png",
+        "name": "T_Concrete_N",
+        "width": 512
+      },
+      {
+        "bytes": 367416,
+        "height": 512,
+        "mimeType": "image/png",
+        "name": "T_Concrete_BC",
+        "width": 512
+      },
+      {
+        "bytes": 434920,
+        "height": 512,
+        "mimeType": "image/png",
+        "name": "T_Concrete_ORM",
+        "width": 512
+      },
+      {
+        "bytes": 389854,
+        "height": 512,
+        "mimeType": "image/png",
+        "name": "T_Wood_N",
+        "width": 512
+      },
+      {
+        "bytes": 321344,
+        "height": 512,
+        "mimeType": "image/png",
+        "name": "T_Wood_BC",
+        "width": 512
+      },
+      {
+        "bytes": 435060,
+        "height": 512,
+        "mimeType": "image/png",
+        "name": "T_Wood_ORM",
+        "width": 512
+      },
+      {
+        "bytes": 390229,
+        "height": 512,
+        "mimeType": "image/png",
+        "name": "T_Steel_N",
+        "width": 512
+      },
+      {
+        "bytes": 256548,
+        "height": 512,
+        "mimeType": "image/png",
+        "name": "T_Steel_BC",
+        "width": 512
+      },
+      {
+        "bytes": 448273,
+        "height": 512,
+        "mimeType": "image/png",
+        "name": "T_Steel_ORM",
+        "width": 512
+      }
+    ],
+    "triangleCount": 1620,
+    "undrawnMeshCount": 0,
+    "undrawnPrimitiveCount": 0,
+    "undrawnTriangleCount": 0,
+    "vertexCount": 3966,
+    "warnings": [
+      "texture is below 1024px on an axis and will blur at close range: T_Galvanized_N (512x512), T_Galvanized_BC (512x512), T_Galvanized_ORM (512x512), T_Concrete_N (512x512) (+8 more)"
+    ]
+  },
+  "license": "LicenseRef-ProjectOriginal",
+  "schema": "game_dev.asset_metadata.v1"
+}

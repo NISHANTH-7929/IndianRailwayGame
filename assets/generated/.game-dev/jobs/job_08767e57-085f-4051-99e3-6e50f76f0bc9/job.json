@@ -1,0 +1,22 @@
+{
+  "schema": "game_dev.job.v1",
+  "id": "job_08767e57-085f-4051-99e3-6e50f76f0bc9",
+  "operation": "package.verify",
+  "status": "completed",
+  "request": {
+    "positionals": [
+      "package",
+      "verify",
+      "D:\\Project\\IndianRailwayGame\\04_Assets\\S8\\EgmorePortable\\.game-dev\\packages\\egmorecanopy6m\\1.2.0"
+    ],
+    "flags": {}
+  },
+  "attempts": 1,
+  "eventCount": 1,
+  "artifacts": [],
+  "createdAt": "2026-10-04T08:44:28.449Z",
+  "updatedAt": "2026-10-04T08:44:28.555Z",
+  "startedAt": "2026-10-04T08:44:28.475Z",
+  "completedAt": "2026-10-04T08:44:28.555Z",
+  "receiptPath": "D:\\Project\\IndianRailwayGame\\assets\\generated\\.game-dev\\jobs\\job_08767e57-085f-4051-99e3-6e50f76f0bc9\\receipt.json"
+}

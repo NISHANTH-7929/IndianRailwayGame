@@ -1,0 +1,44 @@
+{
+  "assetId": "egmoreplatformboard",
+  "description": "Original Egmore study with rear facade and aggregate ballast material; estimated dimensions, visual acceptance pending",
+  "displayName": "EgmorePlatformBoard",
+  "files": [
+    {
+      "bytes": 3664684,
+      "kind": "model",
+      "path": "model.glb",
+      "sha256": "215907627e326676bda20ea70e5a50a9f66f8ef2da10faf9205010d516efaa3d"
+    },
+    {
+      "bytes": 2954,
+      "kind": "metadata",
+      "path": "metadata.json",
+      "sha256": "1afee29b17eeb9175e187ca93ba9747544ffe553707dba8ae156b526997f358f"
+    },
+    {
+      "bytes": 629,
+      "kind": "provenance",
+      "path": "provenance.json",
+      "sha256": "304fba4bc0a35596173a9849948ba864497e5258bc19e92af44651603821efe4"
+    },
+    {
+      "bytes": 4312,
+      "kind": "validation",
+      "path": "validation.json",
+      "sha256": "6eda2b5b08341b2b258d3291efa0b821e30133b3935e013769732a5780a2b3f6"
+    }
+  ],
+  "license": "LicenseRef-ProjectOriginal",
+  "model": "model.glb",
+  "packageId": "pkg_8497d9d5926a7c8c31c55055",
+  "provenance": {
+    "origin": "authored"
+  },
+  "schema": "game_dev.asset_package.v1",
+  "validation": {
+    "errorCount": 0,
+    "passed": true,
+    "warningCount": 0
+  },
+  "version": "1.3.0"
+}

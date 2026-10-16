@@ -1,0 +1,82 @@
+[
+  {
+    "doubleSided": true,
+    "name": "SignBlue",
+    "pbrMetallicRoughness": {
+      "baseColorFactor": [
+        0.017999999225139618,
+        0.054999999701976776,
+        0.11999999731779099,
+        1
+      ],
+      "metallicFactor": 0,
+      "roughnessFactor": 0.6499999761581421
+    }
+  },
+  {
+    "doubleSided": true,
+    "name": "Housing",
+    "pbrMetallicRoughness": {
+      "baseColorFactor": [
+        0.25,
+        0.27000001072883606,
+        0.2800000011920929,
+        1
+      ],
+      "metallicFactor": 0,
+      "roughnessFactor": 0.5
+    }
+  },
+  {
+    "doubleSided": true,
+    "name": "SignWhite",
+    "pbrMetallicRoughness": {
+      "baseColorFactor": [
+        0.8600000143051147,
+        0.8600000143051147,
+        0.7699999809265137,
+        1
+      ],
+      "metallicFactor": 0,
+      "roughnessFactor": 0.6499999761581421
+    }
+  },
+  {
+    "doubleSided": true,
+    "name": "ExitGreen",
+    "pbrMetallicRoughness": {
+      "baseColorFactor": [
+        0.02500000037252903,
+        0.1599999964237213,
+        0.07999999821186066,
+        1
+      ],
+      "metallicFactor": 0,
+      "roughnessFactor": 0.6499999761581421
+    }
+  },
+  {
+    "doubleSided": true,
+    "emissiveFactor": [
+      1,
+      0.9361702100676937,
+      0.7553191280246266
+    ],
+    "extensions": {
+      "KHR_materials_emissive_strength": {
+        "emissiveStrength": 1.8799999952316284
+      }
+    },
+    "name": "LampLens",
+    "pbrMetallicRoughness": {
+      "baseColorFactor": [
+        0.9399999976158142,
+        0.8799999952316284,
+        0.7099999785423279,
+        1
+      ],
+      "metallicFactor": 0,
+      "roughnessFactor": 0.3499999940395355
+    }
+  }
+]

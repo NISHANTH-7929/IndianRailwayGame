@@ -1,0 +1,626 @@
+{
+  "schema_version": 1,
+  "family": "WAP7",
+  "source": "Sketchfab 1935cec9ac9446e3b2524ad73f0902a4 by knitro_vedant",
+  "units": "centimetres",
+  "axis": "+X forward +Y right +Z up",
+  "fbx_import_settings": {
+    "convert_scene": true,
+    "force_front_x_axis": true,
+    "convert_scene_unit": true
+  },
+  "parts": [
+    {
+      "name": "Exterior",
+      "role": "exterior",
+      "fbx": "Parts/SM_WAP7_Acquired_Exterior_LOD0.fbx",
+      "object": "SM_WAP7_Acquired_Exterior_LOD0",
+      "location_cm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "pivot_cm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "rotation_axis": [
+        0,
+        0,
+        1
+      ],
+      "triangles": 132967,
+      "material_slots": 14
+    },
+    {
+      "name": "Bogie_Front",
+      "role": "bogie",
+      "fbx": "Parts/SM_WAP7_Acquired_Bogie_Front_LOD0.fbx",
+      "object": "SM_WAP7_Acquired_Bogie_Front_LOD0",
+      "location_cm": [
+        584.9999904632568,
+        0.0,
+        59.3999981880188
+      ],
+      "pivot_cm": [
+        584.9999904632568,
+        0.0,
+        59.3999981880188
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "rotation_axis": [
+        0,
+        0,
+        1
+      ],
+      "triangles": 43930,
+      "material_slots": 1
+    },
+    {
+      "name": "Bogie_Rear",
+      "role": "bogie",
+      "fbx": "Parts/SM_WAP7_Acquired_Bogie_Rear_LOD0.fbx",
+      "object": "SM_WAP7_Acquired_Bogie_Rear_LOD0",
+      "location_cm": [
+        -584.9999904632568,
+        0.0,
+        59.3999981880188
+      ],
+      "pivot_cm": [
+        -584.9999904632568,
+        0.0,
+        59.3999981880188
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "rotation_axis": [
+        0,
+        0,
+        1
+      ],
+      "triangles": 43930,
+      "material_slots": 1
+    },
+    {
+      "name": "Wheelset_1",
+      "role": "wheelset",
+      "fbx": "Parts/SM_WAP7_Acquired_Wheelset_1_LOD0.fbx",
+      "object": "SM_WAP7_Acquired_Wheelset_1_LOD0",
+      "location_cm": [
+        790.6628608703613,
+        -5.969338872091612E-05,
+        59.39003229141235
+      ],
+      "pivot_cm": [
+        790.6628608703613,
+        -5.969338872091612E-05,
+        59.39003229141235
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "rotation_axis": [
+        0,
+        1,
+        0
+      ],
+      "triangles": 768,
+      "material_slots": 1
+    },
+    {
+      "name": "Wheelset_2",
+      "role": "wheelset",
+      "fbx": "Parts/SM_WAP7_Acquired_Wheelset_2_LOD0.fbx",
+      "object": "SM_WAP7_Acquired_Wheelset_2_LOD0",
+      "location_cm": [
+        585.039758682251,
+        -4.416927481543098E-05,
+        59.39003229141235
+      ],
+      "pivot_cm": [
+        585.039758682251,
+        -4.416927481543098E-05,
+        59.39003229141235
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "rotation_axis": [
+        0,
+        1,
+        0
+      ],
+      "triangles": 768,
+      "material_slots": 1
+    },
+    {
+      "name": "Wheelset_3",
+      "role": "wheelset",
+      "fbx": "Parts/SM_WAP7_Acquired_Wheelset_3_LOD0.fbx",
+      "object": "SM_WAP7_Acquired_Wheelset_3_LOD0",
+      "location_cm": [
+        379.4166564941406,
+        -2.8645160909945844E-05,
+        59.39003229141235
+      ],
+      "pivot_cm": [
+        379.4166564941406,
+        -2.8645160909945844E-05,
+        59.39003229141235
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "rotation_axis": [
+        0,
+        1,
+        0
+      ],
+      "triangles": 768,
+      "material_slots": 1
+    },
+    {
+      "name": "Wheelset_4",
+      "role": "wheelset",
+      "fbx": "Parts/SM_WAP7_Acquired_Wheelset_4_LOD0.fbx",
+      "object": "SM_WAP7_Acquired_Wheelset_4_LOD0",
+      "location_cm": [
+        -377.1461486816406,
+        2.847374389602919E-05,
+        59.39003229141235
+      ],
+      "pivot_cm": [
+        -377.1461486816406,
+        2.847374389602919E-05,
+        59.39003229141235
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "rotation_axis": [
+        0,
+        1,
+        0
+      ],
+      "triangles": 768,
+      "material_slots": 1
+    },
+    {
+      "name": "Wheelset_5",
+      "role": "wheelset",
+      "fbx": "Parts/SM_WAP7_Acquired_Wheelset_5_LOD0.fbx",
+      "object": "SM_WAP7_Acquired_Wheelset_5_LOD0",
+      "location_cm": [
+        -582.769250869751,
+        4.3997854959343385E-05,
+        59.39003229141235
+      ],
+      "pivot_cm": [
+        -582.769250869751,
+        4.3997854959343385E-05,
+        59.39003229141235
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "rotation_axis": [
+        0,
+        1,
+        0
+      ],
+      "triangles": 768,
+      "material_slots": 1
+    },
+    {
+      "name": "Wheelset_6",
+      "role": "wheelset",
+      "fbx": "Parts/SM_WAP7_Acquired_Wheelset_6_LOD0.fbx",
+      "object": "SM_WAP7_Acquired_Wheelset_6_LOD0",
+      "location_cm": [
+        -788.3923530578613,
+        5.952196602265758E-05,
+        59.39003229141235
+      ],
+      "pivot_cm": [
+        -788.3923530578613,
+        5.952196602265758E-05,
+        59.39003229141235
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "rotation_axis": [
+        0,
+        1,
+        0
+      ],
+      "triangles": 768,
+      "material_slots": 1
+    }
+  ],
+  "materials": [
+    {
+      "doubleSided": true,
+      "name": "main",
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "uri": "Textures/wap7uv.png"
+        },
+        "metallicFactor": 0.10000000149011612,
+        "roughnessFactor": 0.5
+      },
+      "base_color": [
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "doubleSided": true,
+      "name": "booggy",
+      "normalTexture": {
+        "uri": "Textures/booggy_Normal.png"
+      },
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "uri": "Textures/booggy_Base_color.png"
+        },
+        "metallicRoughnessTexture": {
+          "uri": "Textures/booggy_Metallic_png-booggy_Roughness_png.png"
+        }
+      },
+      "base_color": [
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "doubleSided": true,
+      "name": "mainupper",
+      "normalTexture": {
+        "uri": "Textures/mainupper_Normal.png"
+      },
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "uri": "Textures/mainupper_Base_color.png"
+        },
+        "metallicRoughnessTexture": {
+          "uri": "Textures/mainupper_Metallic_png-mainupper_Roughness_png.png"
+        }
+      },
+      "base_color": [
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "doubleSided": true,
+      "name": "black",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.028887666761875153,
+          0.028887666761875153,
+          0.028887666761875153,
+          1
+        ],
+        "metallicFactor": 0.4220183491706848,
+        "roughnessFactor": 0.3165137767791748
+      },
+      "base_color": [
+        0.028887666761875153,
+        0.028887666761875153,
+        0.028887666761875153,
+        1
+      ]
+    },
+    {
+      "doubleSided": true,
+      "name": "ironupperwhi",
+      "normalTexture": {
+        "uri": "Textures/ironupperwhi_Normal.png"
+      },
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "uri": "Textures/ironupperwhi_Base_color.png"
+        },
+        "metallicRoughnessTexture": {
+          "uri": "Textures/ironupperwhi_Metallic_png-ironupperwhi_Roughness_png.png"
+        }
+      },
+      "base_color": [
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "doubleSided": true,
+      "name": "cable",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.06907834112644196,
+          0.06907834112644196,
+          0.06907834112644196,
+          1
+        ],
+        "metallicFactor": 0.20000000298023224,
+        "roughnessFactor": 0.5
+      },
+      "base_color": [
+        0.06907834112644196,
+        0.06907834112644196,
+        0.06907834112644196,
+        1
+      ]
+    },
+    {
+      "doubleSided": true,
+      "name": "insulators",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.0334165059030056,
+          0.0049839261919260025,
+          0,
+          1
+        ],
+        "metallicFactor": 0.20000000298023224,
+        "roughnessFactor": 0.009999999776482582
+      },
+      "base_color": [
+        0.0334165059030056,
+        0.0049839261919260025,
+        0,
+        1
+      ]
+    },
+    {
+      "doubleSided": true,
+      "name": "ironupperblk",
+      "normalTexture": {
+        "uri": "Textures/ironupperblk_Normal.png"
+      },
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "uri": "Textures/ironupperblk_Base_color.png"
+        },
+        "metallicRoughnessTexture": {
+          "uri": "Textures/ironupperblk_Metallic_png-ironupperblk_Roughness_png.png"
+        }
+      },
+      "base_color": [
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "doubleSided": true,
+      "name": "dark",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "metallicFactor": 0,
+        "roughnessFactor": 0.5
+      },
+      "base_color": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "alphaMode": "BLEND",
+      "doubleSided": true,
+      "name": "Material.003",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.018639056012034416,
+          0.018639056012034416,
+          0.018639056012034416,
+          0.6000000238418579
+        ],
+        "metallicFactor": 0,
+        "roughnessFactor": 0.08715596795082092
+      },
+      "base_color": [
+        0.018639056012034416,
+        0.018639056012034416,
+        0.018639056012034416,
+        0.6000000238418579
+      ]
+    },
+    {
+      "doubleSided": true,
+      "emissiveFactor": [
+        1,
+        0.032465122640132904,
+        0
+      ],
+      "extensions": {
+        "KHR_materials_emissive_strength": {
+          "emissiveStrength": 50
+        }
+      },
+      "name": "redmit",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      "base_color": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "doubleSided": true,
+      "name": "steel",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.05342599004507065,
+          0.05342599004507065,
+          0.05342599004507065,
+          1
+        ],
+        "metallicFactor": 0,
+        "roughnessFactor": 0.08715596795082092
+      },
+      "base_color": [
+        0.05342599004507065,
+        0.05342599004507065,
+        0.05342599004507065,
+        1
+      ]
+    },
+    {
+      "doubleSided": true,
+      "emissiveFactor": [
+        1,
+        0.8867583274841309,
+        0.5935560464859009
+      ],
+      "name": "whitemeit",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      "base_color": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "name": "Acquired_Default",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "metallicFactor": 1,
+        "roughnessFactor": 1
+      },
+      "base_color": [
+        1,
+        1,
+        1,
+        1
+      ]
+    }
+  ],
+  "driver_camera": {
+    "location_cm": [
+      880,
+      -78,
+      290
+    ],
+    "rotation_deg": [
+      0,
+      0,
+      0
+    ],
+    "fov": 75
+  },
+  "cab_available": false,
+  "limitations": [
+    "Exterior source has no furnished interactive cab. Camera is provisional and must not imply cab completion.",
+    "Pantographs, wipers and lights retained as authored static geometry; not rigged.",
+    "Full original mesh and textures retained; Android cost unmeasured."
+  ],
+  "triangles": 225435,
+  "wheel_radius_cm": 58.35094
+}

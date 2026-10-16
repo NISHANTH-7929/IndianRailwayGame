@@ -1,0 +1,48 @@
+{
+  "schemaVersion": 1,
+  "workloadId": "Workload.Representative.01",
+  "status": "defined-not-executed",
+  "requirements": [
+    "long-player-formation",
+    "second-reusable-WAP7-LHB-scenario",
+    "AI-traffic",
+    "busy-station",
+    "quiet-adjoining-route",
+    "streaming-boundary",
+    "camera-changes",
+    "day",
+    "night",
+    "dry",
+    "rain",
+    "demanding-combination"
+  ],
+  "combinations": [
+    {
+      "id": "day-dry",
+      "time": "day",
+      "weather": "dry",
+      "demand": "normal"
+    },
+    {
+      "id": "day-rain",
+      "time": "day",
+      "weather": "rain",
+      "demand": "normal"
+    },
+    {
+      "id": "night-dry",
+      "time": "night",
+      "weather": "dry",
+      "demand": "normal"
+    },
+    {
+      "id": "night-rain",
+      "time": "night",
+      "weather": "rain",
+      "demand": "demanding"
+    }
+  ],
+  "missingProductionContent": true,
+  "executionEvidence": []
+}
+

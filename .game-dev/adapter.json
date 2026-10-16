@@ -1,0 +1,19 @@
+{
+  "schema": "game_dev.adapter.v1",
+  "id": "indian-railway-desktop",
+  "name": "Indian Railway Unreal desktop acceptance",
+  "version": "1.0.0",
+  "scenarios": [{
+    "id": "tambaram-origin",
+    "title": "Tambaram route origin rendered smoke check",
+    "command": {
+      "executable": "07_Documentation/S8/Tools/CaptureTambaram.exe",
+      "arguments": [],
+      "workingDirectory": "."
+    },
+    "parameters": {},
+    "capabilities": ["project-write", "gpu"],
+    "timeoutSeconds": 360,
+    "outputs": {"format": "game-dev-capture-v1", "path": "capture.json"}
+  }]
+}

@@ -1,0 +1,44 @@
+{
+  "assetId": "egmoreballast3m",
+  "description": "Original metric Egmore study module; estimated dimensions, visual acceptance and Android integration pending",
+  "displayName": "EgmoreBallast3m",
+  "files": [
+    {
+      "bytes": 3716544,
+      "kind": "model",
+      "path": "model.glb",
+      "sha256": "71a4cfe370ad8209270604d33e4f76cc59efdd0686ba784727c364437f5c632d"
+    },
+    {
+      "bytes": 2503,
+      "kind": "metadata",
+      "path": "metadata.json",
+      "sha256": "91e633c8b9c1bc86d1b5094e58805941dcdf9fcdd53ac1bd1ecd833c1702749b"
+    },
+    {
+      "bytes": 625,
+      "kind": "provenance",
+      "path": "provenance.json",
+      "sha256": "1b709a0fa53149479b46206e5e0ef6260c9a839a8d093ee5e4d977250fb1513d"
+    },
+    {
+      "bytes": 4319,
+      "kind": "validation",
+      "path": "validation.json",
+      "sha256": "03e7d6908aa8014d5ea1a021df88a04666f9323477c9f99a3a98ec65aedaf0ce"
+    }
+  ],
+  "license": "LicenseRef-ProjectOriginal",
+  "model": "model.glb",
+  "packageId": "pkg_d44006f0c48c196f4586fde0",
+  "provenance": {
+    "origin": "authored"
+  },
+  "schema": "game_dev.asset_package.v1",
+  "validation": {
+    "errorCount": 0,
+    "passed": true,
+    "warningCount": 0
+  },
+  "version": "1.1.0"
+}

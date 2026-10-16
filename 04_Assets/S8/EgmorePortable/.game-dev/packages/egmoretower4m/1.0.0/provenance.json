@@ -1,0 +1,12 @@
+{
+  "author": "[redacted]",
+  "notes": "Independent geometry and procedural PBR. No photographic pixels. Reference credits: 07_Documentation/S8/EGMORE_REFERENCE_REGISTER.md. Portable export triangulates polygons and includes tangents; runtime FBX remains separate. LicenseRef-ProjectOriginal records project authorship, not a public redistribution license.",
+  "origin": "authored",
+  "schema": "game_dev.asset_provenance.v1",
+  "source": {
+    "bytes": 4568200,
+    "fileName": "EgmoreTower4m.glb",
+    "sha256": "1fbf52346be07afae972e436046605914e0ba5dfd825f54382d8d00d215f71a0"
+  },
+  "sourceUri": "(unparseable url)"
+}

@@ -1,0 +1,59 @@
+{
+  "schema": "game_dev.receipt.v1",
+  "operation": "package.verify",
+  "result": {
+    "schema": "game_dev.package_verification.v1",
+    "packagePath": "D:\\Project\\IndianRailwayGame\\04_Assets\\S8\\EgmoreSignage\\.game-dev\\packages\\egmorenameboard4m\\1.0.0",
+    "manifest": {
+      "assetId": "egmorenameboard4m",
+      "description": "Original metric estimated Egmore nameboard with shaped Tamil English Hindi lettering; not a survey",
+      "displayName": "EgmoreNameboard4m",
+      "files": [
+        {
+          "bytes": 3651388,
+          "kind": "model",
+          "path": "model.glb",
+          "sha256": "d4063fda3bb2997f5a70e767ddc7ee38dc2db0de5d696d9a859036d9f6dc9045"
+        },
+        {
+          "bytes": 2650,
+          "kind": "metadata",
+          "path": "metadata.json",
+          "sha256": "100d71d7dac1e2e98f6f7a85a4597c66959fc44dd6d88e62c2f1eedd3a15d6aa"
+        },
+        {
+          "bytes": 612,
+          "kind": "provenance",
+          "path": "provenance.json",
+          "sha256": "1fbd7a4150d871c4b92be1d3b42393d8cf49ce45a39bcc5cbb9e9fd62401eb17"
+        },
+        {
+          "bytes": 4301,
+          "kind": "validation",
+          "path": "validation.json",
+          "sha256": "10d149cb7d35f87b86030ad3d9987175e229144d53d0357ea032ffd8325fc006"
+        }
+      ],
+      "license": "LicenseRef-ProjectOriginal",
+      "model": "model.glb",
+      "packageId": "pkg_a437ebe1d73fd01878bbbb37",
+      "provenance": {
+        "origin": "authored"
+      },
+      "schema": "game_dev.asset_package.v1",
+      "validation": {
+        "errorCount": 0,
+        "passed": true,
+        "warningCount": 0
+      },
+      "version": "1.0.0"
+    },
+    "hashesVerified": true,
+    "evidence": {
+      "packageBytesVerified": true,
+      "gpuImportTestPerformed": false,
+      "humanVisualReviewPerformed": false
+    }
+  },
+  "completedAt": "2026-10-05T03:39:15.826Z"
+}

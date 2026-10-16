@@ -1,0 +1,12 @@
+{
+  "author": "[redacted]",
+  "notes": "Original geometry and PBR; no photographic pixels. Windows Nirmala UI Bold rendered to bitmap; font not redistributed. Reference Superfast1111 2011 CC BY-SA 3.0, https://commons.wikimedia.org/wiki/File:Chennai_Egmore.jpg . Source SHA256 46d7295dbb230256ef0d240ea039eb1be40dff5d053485fee86ec8e1ec7ff302",
+  "origin": "authored",
+  "schema": "game_dev.asset_provenance.v1",
+  "source": {
+    "bytes": 3651388,
+    "fileName": "EgmoreNameboard4m.glb",
+    "sha256": "d4063fda3bb2997f5a70e767ddc7ee38dc2db0de5d696d9a859036d9f6dc9045"
+  },
+  "sourceUri": "(unparseable url)"
+}

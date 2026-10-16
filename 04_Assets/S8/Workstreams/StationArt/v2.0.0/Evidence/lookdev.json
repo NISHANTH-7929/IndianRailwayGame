@@ -1,0 +1,26 @@
+[
+  {
+    "name": "DayWet",
+    "night": false,
+    "wetMaterialResponse": true,
+    "rainParticles": false,
+    "runtimeValidated": false,
+    "note": "Estimated source lighting/material appearance; no runtime weather/audio or device claim."
+  },
+  {
+    "name": "NightDry",
+    "night": true,
+    "wetMaterialResponse": false,
+    "rainParticles": false,
+    "runtimeValidated": false,
+    "note": "Estimated source lighting/material appearance; no runtime weather/audio or device claim."
+  },
+  {
+    "name": "NightWet",
+    "night": true,
+    "wetMaterialResponse": true,
+    "rainParticles": false,
+    "runtimeValidated": false,
+    "note": "Estimated source lighting/material appearance; no runtime weather/audio or device claim."
+  }
+]

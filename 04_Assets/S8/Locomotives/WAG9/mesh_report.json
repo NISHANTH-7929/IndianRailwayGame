@@ -1,0 +1,11 @@
+{
+  "mesh_objects": 762,
+  "base_triangles": 53084,
+  "materials": 16,
+  "dimensions_m": {
+    "body_length": 18.6,
+    "width": 3.12,
+    "wheel_diameter": 1.09
+  },
+  "status": "provisional visual asset; game bindings and Android profiling pending"
+}

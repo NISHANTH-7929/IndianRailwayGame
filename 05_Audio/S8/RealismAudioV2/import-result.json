@@ -1,0 +1,27 @@
+[
+  {
+    "asset": "/Game/IndianRailway/S8/Audio/RealismV2/SW_Motor",
+    "duration": 8.0,
+    "looping": true
+  },
+  {
+    "asset": "/Game/IndianRailway/S8/Audio/RealismV2/SW_Coast",
+    "duration": 8.0,
+    "looping": true
+  },
+  {
+    "asset": "/Game/IndianRailway/S8/Audio/RealismV2/SW_Squeal",
+    "duration": 8.0,
+    "looping": true
+  },
+  {
+    "asset": "/Game/IndianRailway/S8/Audio/RealismV2/SW_BrakeRelease",
+    "duration": 2.5999999046325684,
+    "looping": false
+  },
+  {
+    "asset": "/Game/IndianRailway/S8/Audio/RealismV2/SW_Emergency",
+    "duration": 5.400000095367432,
+    "looping": false
+  }
+]

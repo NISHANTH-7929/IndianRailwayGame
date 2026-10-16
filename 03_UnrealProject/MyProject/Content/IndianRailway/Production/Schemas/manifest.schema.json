@@ -1,0 +1,1276 @@
+{
+  "type": "object",
+  "properties": {
+    "schemaVersion": {
+      "enum": [
+        1
+      ]
+    },
+    "contentId": {
+      "type": "string",
+      "pattern": "^[A-Z][A-Za-z0-9]*(\\.[A-Za-z0-9]+){2,}$"
+    },
+    "contentVersion": {
+      "type": "string",
+      "pattern": "^(0|[1-9][0-9]*)\\.(0|[1-9][0-9]*)\\.(0|[1-9][0-9]*)$"
+    },
+    "compatiblePreviousVersions": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^(0|[1-9][0-9]*)\\.(0|[1-9][0-9]*)\\.(0|[1-9][0-9]*)$"
+      },
+      "uniqueItems": true
+    },
+    "simulationContentId": {
+      "enum": [
+        "IR-S6-fixture-1"
+      ]
+    },
+    "scope": {
+      "enum": [
+        "foundation"
+      ]
+    },
+    "chunks": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "level": {
+            "type": "string",
+            "minLength": 1
+          },
+          "rebindKey": {
+            "type": "string",
+            "minLength": 1
+          },
+          "bundle": {
+            "enum": [
+              "route",
+              "station",
+              "vehicle",
+              "audio",
+              "optional-scenery"
+            ]
+          },
+          "essential": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "id",
+          "level",
+          "rebindKey",
+          "bundle",
+          "essential"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 1
+    },
+    "assets": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "assetId": {
+            "type": "string",
+            "pattern": "^[A-Z][A-Za-z0-9]*(\\.[A-Za-z0-9]+){2,}$"
+          },
+          "name": {
+            "type": "string",
+            "pattern": "^(SM|SK|DA|ABP|AS|SW|NS|T|M|WBP)_[A-Za-z0-9_]+$"
+          },
+          "category": {
+            "enum": [
+              "locomotive",
+              "coach",
+              "wagon",
+              "formation",
+              "station",
+              "trackside",
+              "environment",
+              "building",
+              "vegetation",
+              "character",
+              "animation",
+              "audio",
+              "vfx",
+              "ui"
+            ]
+          },
+          "state": {
+            "enum": [
+              "placeholder",
+              "candidate",
+              "accepted"
+            ]
+          },
+          "sourceFormat": {
+            "type": "string",
+            "minLength": 1
+          },
+          "unrealPath": {
+            "type": "string",
+            "pattern": "^/Game/IndianRailway/"
+          },
+          "importType": {
+            "type": "string",
+            "minLength": 1
+          },
+          "scaleCmPerUnit": {
+            "type": "number",
+            "exclusiveMinimum": 0
+          },
+          "forward": {
+            "enum": [
+              "+X"
+            ]
+          },
+          "up": {
+            "enum": [
+              "+Z"
+            ]
+          },
+          "pivot": {
+            "type": "string",
+            "minLength": 1
+          },
+          "collision": {
+            "enum": [
+              "none",
+              "query-proxy",
+              "simple-proxy"
+            ]
+          },
+          "materials": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "materialSlotLimit": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "minimum": 1
+          },
+          "textures": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string",
+                  "pattern": "^T_[A-Za-z0-9_]+_(BC|N|ORM|E|A)$"
+                },
+                "group": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "maxDimension": {
+                  "type": "integer",
+                  "minimum": 1
+                }
+              },
+              "required": [
+                "name",
+                "group",
+                "maxDimension"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "lods": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "minItems": 1,
+            "uniqueItems": true
+          },
+          "materialLodProfile": {
+            "type": "string",
+            "pattern": "^[A-Z][A-Za-z0-9]*(\\.[A-Za-z0-9]+){2,}$"
+          },
+          "chunk": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "essential": {
+            "type": "boolean"
+          },
+          "platforms": {
+            "type": "array",
+            "items": {
+              "enum": [
+                "Android",
+                "Windows"
+              ]
+            },
+            "minItems": 1,
+            "uniqueItems": true
+          },
+          "tiers": {
+            "type": "array",
+            "items": {
+              "enum": [
+                "Low",
+                "Medium",
+                "High"
+              ]
+            },
+            "minItems": 1,
+            "uniqueItems": true
+          },
+          "dependencies": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "pattern": "^[A-Z][A-Za-z0-9]*(\\.[A-Za-z0-9]+){2,}$"
+            },
+            "uniqueItems": true
+          },
+          "localizationKeys": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "uniqueItems": true
+          },
+          "audioDependencies": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "pattern": "^[A-Z][A-Za-z0-9]*(\\.[A-Za-z0-9]+){2,}$"
+            },
+            "uniqueItems": true
+          },
+          "variants": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "platform": {
+                  "enum": [
+                    "Android",
+                    "Windows"
+                  ]
+                },
+                "tier": {
+                  "enum": [
+                    "Low",
+                    "Medium",
+                    "High"
+                  ]
+                },
+                "unrealPath": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              },
+              "required": [
+                "platform",
+                "tier",
+                "unrealPath"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "external": {
+            "type": "boolean"
+          },
+          "provenance": {
+            "anyOf": [
+              {
+                "type": "null"
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "AssetId": {
+                    "type": "string",
+                    "pattern": "^[A-Z][A-Za-z0-9]*(\\.[A-Za-z0-9]+){2,}$"
+                  },
+                  "AssetName": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "Category": {
+                    "enum": [
+                      "locomotive",
+                      "coach",
+                      "wagon",
+                      "formation",
+                      "station",
+                      "trackside",
+                      "environment",
+                      "building",
+                      "vegetation",
+                      "character",
+                      "animation",
+                      "audio",
+                      "vfx",
+                      "ui"
+                    ]
+                  },
+                  "Creator": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "Source": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "SourceReference": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "AcquisitionDate": {
+                    "type": [
+                      "string",
+                      "null"
+                    ],
+                    "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+                  },
+                  "License": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "CommercialUse": {
+                    "enum": [
+                      "verified",
+                      "denied",
+                      "unknown"
+                    ]
+                  },
+                  "ModificationPermission": {
+                    "enum": [
+                      "verified",
+                      "denied",
+                      "unknown"
+                    ]
+                  },
+                  "RedistributionRestrictions": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "AttributionRequirement": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "OriginalArchive": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "ModifiedAssetReference": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "VerificationStatus": {
+                    "enum": [
+                      "pending review",
+                      "approved",
+                      "rejected",
+                      "restricted",
+                      "unknown"
+                    ]
+                  },
+                  "VerificationEvidence": {
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "minLength": 1
+                    }
+                  },
+                  "Notes": {
+                    "type": "string",
+                    "minLength": 1
+                  }
+                },
+                "required": [
+                  "AssetId",
+                  "AssetName",
+                  "Category",
+                  "Creator",
+                  "Source",
+                  "SourceReference",
+                  "AcquisitionDate",
+                  "License",
+                  "CommercialUse",
+                  "ModificationPermission",
+                  "RedistributionRestrictions",
+                  "AttributionRequirement",
+                  "OriginalArchive",
+                  "ModifiedAssetReference",
+                  "VerificationStatus",
+                  "VerificationEvidence",
+                  "Notes"
+                ],
+                "additionalProperties": false,
+                "$schema": "https://json-schema.org/draft/2020-12/schema",
+                "$id": "urn:indianrailway:s8:provenance"
+              }
+            ]
+          },
+          "owner": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "assetId",
+          "name",
+          "category",
+          "state",
+          "sourceFormat",
+          "unrealPath",
+          "importType",
+          "scaleCmPerUnit",
+          "forward",
+          "up",
+          "pivot",
+          "collision",
+          "materials",
+          "materialSlotLimit",
+          "textures",
+          "lods",
+          "materialLodProfile",
+          "chunk",
+          "essential",
+          "platforms",
+          "tiers",
+          "dependencies",
+          "localizationKeys",
+          "audioDependencies",
+          "variants",
+          "external",
+          "provenance",
+          "owner"
+        ],
+        "additionalProperties": false,
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "$id": "urn:indianrailway:s8:asset"
+      }
+    },
+    "vehicleBindings": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "definitionId": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "definitionVersion": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "presentationId": {
+            "type": "string",
+            "pattern": "^[A-Z][A-Za-z0-9]*(\\.[A-Za-z0-9]+){2,}$"
+          },
+          "exterior": {
+            "anyOf": [
+              {
+                "type": "string",
+                "pattern": "^[A-Z][A-Za-z0-9]*(\\.[A-Za-z0-9]+){2,}$"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "cab": {
+            "anyOf": [
+              {
+                "type": "string",
+                "pattern": "^[A-Z][A-Za-z0-9]*(\\.[A-Za-z0-9]+){2,}$"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "bogie": {
+            "anyOf": [
+              {
+                "type": "string",
+                "pattern": "^[A-Z][A-Za-z0-9]*(\\.[A-Za-z0-9]+){2,}$"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "wheel": {
+            "anyOf": [
+              {
+                "type": "string",
+                "pattern": "^[A-Z][A-Za-z0-9]*(\\.[A-Za-z0-9]+){2,}$"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "lights": {
+            "anyOf": [
+              {
+                "type": "string",
+                "pattern": "^[A-Z][A-Za-z0-9]*(\\.[A-Za-z0-9]+){2,}$"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "animation": {
+            "anyOf": [
+              {
+                "type": "string",
+                "pattern": "^[A-Z][A-Za-z0-9]*(\\.[A-Za-z0-9]+){2,}$"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "audio": {
+            "anyOf": [
+              {
+                "type": "string",
+                "pattern": "^[A-Z][A-Za-z0-9]*(\\.[A-Za-z0-9]+){2,}$"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "materialLod": {
+            "anyOf": [
+              {
+                "type": "string",
+                "pattern": "^[A-Z][A-Za-z0-9]*(\\.[A-Za-z0-9]+){2,}$"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "required": [
+          "definitionId",
+          "definitionVersion",
+          "presentationId",
+          "exterior",
+          "cab",
+          "bogie",
+          "wheel",
+          "lights",
+          "animation",
+          "audio",
+          "materialLod"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "formationBindings": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "formationId": {
+            "type": "string",
+            "pattern": "^[A-Z][A-Za-z0-9]*(\\.[A-Za-z0-9]+){2,}$"
+          },
+          "vehiclePresentationIds": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "pattern": "^[A-Z][A-Za-z0-9]*(\\.[A-Za-z0-9]+){2,}$"
+            },
+            "minItems": 1
+          }
+        },
+        "required": [
+          "formationId",
+          "vehiclePresentationIds"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "stationBindings": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "stationId": {
+            "type": "string",
+            "pattern": "^[A-Z][A-Za-z0-9]*(\\.[A-Za-z0-9]+){2,}$"
+          },
+          "serviceId": {
+            "type": "string",
+            "minLength": 1
+          },
+          "platforms": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "platformId": {
+                  "type": "string",
+                  "pattern": "^[A-Z][A-Za-z0-9]*(\\.[A-Za-z0-9]+){2,}$"
+                },
+                "logicalEdge": {
+                  "type": "integer",
+                  "minimum": 1
+                },
+                "fromMetres": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "toMetres": {
+                  "type": "number",
+                  "minimum": 0
+                }
+              },
+              "required": [
+                "platformId",
+                "logicalEdge",
+                "fromMetres",
+                "toMetres"
+              ],
+              "additionalProperties": false
+            },
+            "minItems": 1
+          },
+          "chunk": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "platformVisualSet": {
+            "anyOf": [
+              {
+                "type": "string",
+                "pattern": "^[A-Z][A-Za-z0-9]*(\\.[A-Za-z0-9]+){2,}$"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "signage": {
+            "anyOf": [
+              {
+                "type": "string",
+                "pattern": "^[A-Z][A-Za-z0-9]*(\\.[A-Za-z0-9]+){2,}$"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "canopy": {
+            "anyOf": [
+              {
+                "type": "string",
+                "pattern": "^[A-Z][A-Za-z0-9]*(\\.[A-Za-z0-9]+){2,}$"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "footbridge": {
+            "anyOf": [
+              {
+                "type": "string",
+                "pattern": "^[A-Z][A-Za-z0-9]*(\\.[A-Za-z0-9]+){2,}$"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "furniture": {
+            "anyOf": [
+              {
+                "type": "string",
+                "pattern": "^[A-Z][A-Za-z0-9]*(\\.[A-Za-z0-9]+){2,}$"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "lighting": {
+            "anyOf": [
+              {
+                "type": "string",
+                "pattern": "^[A-Z][A-Za-z0-9]*(\\.[A-Za-z0-9]+){2,}$"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "peopleActivity": {
+            "anyOf": [
+              {
+                "type": "string",
+                "pattern": "^[A-Z][A-Za-z0-9]*(\\.[A-Za-z0-9]+){2,}$"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "ambientAudio": {
+            "anyOf": [
+              {
+                "type": "string",
+                "pattern": "^[A-Z][A-Za-z0-9]*(\\.[A-Za-z0-9]+){2,}$"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "regionalKit": {
+            "anyOf": [
+              {
+                "type": "string",
+                "pattern": "^[A-Z][A-Za-z0-9]*(\\.[A-Za-z0-9]+){2,}$"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "landmarks": {
+            "anyOf": [
+              {
+                "type": "string",
+                "pattern": "^[A-Z][A-Za-z0-9]*(\\.[A-Za-z0-9]+){2,}$"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "required": [
+          "stationId",
+          "serviceId",
+          "platforms",
+          "chunk",
+          "platformVisualSet",
+          "signage",
+          "canopy",
+          "footbridge",
+          "furniture",
+          "lighting",
+          "peopleActivity",
+          "ambientAudio",
+          "regionalKit",
+          "landmarks"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "routeBindings": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "routeId": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "chunks": {
+            "type": "array",
+            "items": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "minItems": 1
+          },
+          "stationIds": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "pattern": "^[A-Z][A-Za-z0-9]*(\\.[A-Za-z0-9]+){2,}$"
+            }
+          }
+        },
+        "required": [
+          "routeId",
+          "chunks",
+          "stationIds"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "audioProfiles": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "profileId": {
+            "type": "string",
+            "pattern": "^[A-Z][A-Za-z0-9]*(\\.[A-Za-z0-9]+){2,}$"
+          },
+          "layers": {
+            "type": "object",
+            "properties": {
+              "traction": {
+                "type": "object",
+                "properties": {
+                  "asset": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "pattern": "^[A-Z][A-Za-z0-9]*(\\.[A-Za-z0-9]+){2,}$"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "semanticState": {
+                    "enum": [
+                      "handling.tractionForce"
+                    ]
+                  }
+                },
+                "required": [
+                  "asset",
+                  "semanticState"
+                ],
+                "additionalProperties": false
+              },
+              "rolling": {
+                "type": "object",
+                "properties": {
+                  "asset": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "pattern": "^[A-Z][A-Za-z0-9]*(\\.[A-Za-z0-9]+){2,}$"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "semanticState": {
+                    "enum": [
+                      "handling.speed"
+                    ]
+                  }
+                },
+                "required": [
+                  "asset",
+                  "semanticState"
+                ],
+                "additionalProperties": false
+              },
+              "brakes": {
+                "type": "object",
+                "properties": {
+                  "asset": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "pattern": "^[A-Z][A-Za-z0-9]*(\\.[A-Za-z0-9]+){2,}$"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "semanticState": {
+                    "enum": [
+                      "handling.appliedBrake"
+                    ]
+                  }
+                },
+                "required": [
+                  "asset",
+                  "semanticState"
+                ],
+                "additionalProperties": false
+              },
+              "horn": {
+                "type": "object",
+                "properties": {
+                  "asset": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "pattern": "^[A-Z][A-Za-z0-9]*(\\.[A-Za-z0-9]+){2,}$"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "semanticState": {
+                    "enum": [
+                      "command.horn"
+                    ]
+                  }
+                },
+                "required": [
+                  "asset",
+                  "semanticState"
+                ],
+                "additionalProperties": false
+              },
+              "doors": {
+                "type": "object",
+                "properties": {
+                  "asset": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "pattern": "^[A-Z][A-Za-z0-9]*(\\.[A-Za-z0-9]+){2,}$"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "semanticState": {
+                    "enum": [
+                      "service.stationPhase"
+                    ]
+                  }
+                },
+                "required": [
+                  "asset",
+                  "semanticState"
+                ],
+                "additionalProperties": false
+              },
+              "compressorFans": {
+                "type": "object",
+                "properties": {
+                  "asset": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "pattern": "^[A-Z][A-Za-z0-9]*(\\.[A-Za-z0-9]+){2,}$"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "semanticState": {
+                    "enum": [
+                      "presentation.auxiliaryState"
+                    ]
+                  }
+                },
+                "required": [
+                  "asset",
+                  "semanticState"
+                ],
+                "additionalProperties": false
+              },
+              "cabControls": {
+                "type": "object",
+                "properties": {
+                  "asset": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "pattern": "^[A-Z][A-Za-z0-9]*(\\.[A-Za-z0-9]+){2,}$"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "semanticState": {
+                    "enum": [
+                      "command.accepted"
+                    ]
+                  }
+                },
+                "required": [
+                  "asset",
+                  "semanticState"
+                ],
+                "additionalProperties": false
+              },
+              "stationAmbience": {
+                "type": "object",
+                "properties": {
+                  "asset": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "pattern": "^[A-Z][A-Za-z0-9]*(\\.[A-Za-z0-9]+){2,}$"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "semanticState": {
+                    "enum": [
+                      "presentation.stationResidency"
+                    ]
+                  }
+                },
+                "required": [
+                  "asset",
+                  "semanticState"
+                ],
+                "additionalProperties": false
+              },
+              "announcements": {
+                "type": "object",
+                "properties": {
+                  "asset": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "pattern": "^[A-Z][A-Za-z0-9]*(\\.[A-Za-z0-9]+){2,}$"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "semanticState": {
+                    "enum": [
+                      "service.stationPhase"
+                    ]
+                  }
+                },
+                "required": [
+                  "asset",
+                  "semanticState"
+                ],
+                "additionalProperties": false
+              },
+              "environmentAmbience": {
+                "type": "object",
+                "properties": {
+                  "asset": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "pattern": "^[A-Z][A-Za-z0-9]*(\\.[A-Za-z0-9]+){2,}$"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "semanticState": {
+                    "enum": [
+                      "presentation.region"
+                    ]
+                  }
+                },
+                "required": [
+                  "asset",
+                  "semanticState"
+                ],
+                "additionalProperties": false
+              },
+              "rain": {
+                "type": "object",
+                "properties": {
+                  "asset": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "pattern": "^[A-Z][A-Za-z0-9]*(\\.[A-Za-z0-9]+){2,}$"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "semanticState": {
+                    "enum": [
+                      "presentation.weather"
+                    ]
+                  }
+                },
+                "required": [
+                  "asset",
+                  "semanticState"
+                ],
+                "additionalProperties": false
+              }
+            },
+            "required": [
+              "traction",
+              "rolling",
+              "brakes",
+              "horn",
+              "doors",
+              "compressorFans",
+              "cabControls",
+              "stationAmbience",
+              "announcements",
+              "environmentAmbience",
+              "rain"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "required": [
+          "profileId",
+          "layers"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "materialLodProfiles": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "profileId": {
+            "type": "string",
+            "pattern": "^[A-Z][A-Za-z0-9]*(\\.[A-Za-z0-9]+){2,}$"
+          },
+          "status": {
+            "enum": [
+              "PROVISIONAL",
+              "MEASURE",
+              "ACCEPT",
+              "FREEZE"
+            ]
+          },
+          "materialSlotLimit": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "minimum": 1
+          },
+          "textureDimensionLimit": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "minimum": 1
+          },
+          "lodPolicy": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "profileId",
+          "status",
+          "materialSlotLimit",
+          "textureDimensionLimit",
+          "lodPolicy"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "saveCompatibility": {
+      "type": "object",
+      "properties": {
+        "snapshotSchema": {
+          "enum": [
+            1
+          ]
+        },
+        "simulationContentId": {
+          "enum": [
+            "IR-S6-fixture-1"
+          ]
+        },
+        "serviceId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "serviceVersion": {
+          "type": "string",
+          "minLength": 1
+        },
+        "serviceConfigurationPolicy": {
+          "enum": [
+            "exact-S7-header"
+          ]
+        },
+        "vehicleDefinitions": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "integer",
+                "minimum": 1
+              },
+              "version": {
+                "type": "integer",
+                "minimum": 1
+              }
+            },
+            "required": [
+              "id",
+              "version"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "routeContract": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "snapshotSchema",
+        "simulationContentId",
+        "serviceId",
+        "serviceVersion",
+        "serviceConfigurationPolicy",
+        "vehicleDefinitions",
+        "routeContract"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "schemaVersion",
+    "contentId",
+    "contentVersion",
+    "compatiblePreviousVersions",
+    "simulationContentId",
+    "scope",
+    "chunks",
+    "assets",
+    "vehicleBindings",
+    "formationBindings",
+    "stationBindings",
+    "routeBindings",
+    "audioProfiles",
+    "materialLodProfiles",
+    "saveCompatibility"
+  ],
+  "additionalProperties": false,
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:indianrailway:s8:manifest"
+}

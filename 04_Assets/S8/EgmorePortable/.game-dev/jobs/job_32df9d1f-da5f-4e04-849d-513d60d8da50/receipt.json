@@ -1,0 +1,44 @@
+{
+  "schema": "game_dev.receipt.v1",
+  "operation": "package.build",
+  "result": {
+    "schema": "game_dev.package_build_result.v1",
+    "packageId": "pkg_5a8c4d4665ff12b770d4e2d3",
+    "packagePath": "D:\\Project\\IndianRailwayGame\\04_Assets\\S8\\EgmorePortable\\.game-dev\\packages\\egmoreentrance9m\\1.0.0",
+    "manifestPath": "D:\\Project\\IndianRailwayGame\\04_Assets\\S8\\EgmorePortable\\.game-dev\\packages\\egmoreentrance9m\\1.0.0\\manifest.json",
+    "receiptPath": "D:\\Project\\IndianRailwayGame\\04_Assets\\S8\\EgmorePortable\\.game-dev\\packages\\egmoreentrance9m\\1.0.0\\receipt.json",
+    "manifestSha256": "9fd2a7bf0a4b37d988bd67f26c3ca46066687c89f1b2829c5f31316f4b521ca3",
+    "reused": false,
+    "validation": {
+      "passed": true,
+      "errorCount": 0,
+      "warningCount": 0
+    },
+    "catalog": {
+      "packageId": "pkg_5a8c4d4665ff12b770d4e2d3",
+      "assetId": "egmoreentrance9m",
+      "version": "1.0.0",
+      "displayName": "EgmoreEntrance9m",
+      "description": "Original metric Egmore study module; estimated dimensions, visual acceptance and Android integration pending",
+      "license": "LicenseRef-ProjectOriginal",
+      "packagePath": "D:\\Project\\IndianRailwayGame\\04_Assets\\S8\\EgmorePortable\\.game-dev\\packages\\egmoreentrance9m\\1.0.0",
+      "modelPath": "D:\\Project\\IndianRailwayGame\\04_Assets\\S8\\EgmorePortable\\.game-dev\\packages\\egmoreentrance9m\\1.0.0\\model.glb",
+      "modelSha256": "4a15934ca73f9970f65cfd24d68ca4ac74cf40831d1553dd5cb331893488eea4",
+      "manifestSha256": "9fd2a7bf0a4b37d988bd67f26c3ca46066687c89f1b2829c5f31316f4b521ca3",
+      "validationPassed": true,
+      "validationErrors": 0,
+      "validationWarnings": 0,
+      "origin": "authored",
+      "indexedAt": "2026-10-04T03:26:22.224Z"
+    },
+    "evidence": {
+      "portableGlbCopiedAndHashed": true,
+      "staticInspectionCompleted": true,
+      "policyValidationCompleted": true,
+      "blenderNormalizationPerformed": false,
+      "gpuImportTestPerformed": false,
+      "humanVisualReviewPerformed": false
+    }
+  },
+  "completedAt": "2026-10-04T03:26:22.228Z"
+}

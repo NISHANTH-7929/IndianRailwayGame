@@ -1,0 +1,44 @@
+{
+  "assetId": "egmoredome",
+  "description": "Original metric Egmore study module; estimated dimensions, visual acceptance and Android integration pending",
+  "displayName": "EgmoreDome",
+  "files": [
+    {
+      "bytes": 1271228,
+      "kind": "model",
+      "path": "model.glb",
+      "sha256": "dfafa1f6de0782bf39436bccdf8d6d19a480a4b3d4cfd706315676707221eba2"
+    },
+    {
+      "bytes": 2015,
+      "kind": "metadata",
+      "path": "metadata.json",
+      "sha256": "d433b18c5012100188374fb2b3b71d2a5a9aff58caf507d41d98d5cabbcae326"
+    },
+    {
+      "bytes": 620,
+      "kind": "provenance",
+      "path": "provenance.json",
+      "sha256": "60a4504098695b4746e87d749e19d1824eb6f777beaac6cab9ff66d12c080801"
+    },
+    {
+      "bytes": 4281,
+      "kind": "validation",
+      "path": "validation.json",
+      "sha256": "a0cb5be12db05a779a7ca1c6a4939d87010791c1c4837afbc5e652045411b965"
+    }
+  ],
+  "license": "LicenseRef-ProjectOriginal",
+  "model": "model.glb",
+  "packageId": "pkg_974ef9510f148603e59b16ca",
+  "provenance": {
+    "origin": "authored"
+  },
+  "schema": "game_dev.asset_package.v1",
+  "validation": {
+    "errorCount": 0,
+    "passed": true,
+    "warningCount": 0
+  },
+  "version": "1.1.0"
+}

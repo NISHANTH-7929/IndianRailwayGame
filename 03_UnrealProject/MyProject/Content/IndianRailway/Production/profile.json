@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "profileId": "Profile.Foundation.01",
+  "device": "iQOO Neo 9 Pro",
+  "androidApi": 36,
+  "abi": "arm64-v8a",
+  "renderer": "Vulkan",
+  "textureFormat": "ASTC",
+  "captureFrames": 6000,
+  "warmupSeconds": 10,
+  "endSeconds": 170,
+  "frameCap": 30,
+  "repetitions": 3,
+  "metrics": [
+    "FPS",
+    "FrameTime",
+    "GameThreadTime",
+    "RenderThreadTime",
+    "RHIThreadTime",
+    "GPUTime",
+    "RailS6/SimulationStepMs",
+    "RailS7/ServiceUpdateMs",
+    "PSS",
+    "loadLatency",
+    "residency",
+    "activationCounts",
+    "thermalStatus",
+    "packageBytes"
+  ],
+  "workloadId": "Workload.Representative.01",
+  "scope": "foundation-S7-fixture",
+  "finalBudgetClaim": false
+}

@@ -1,0 +1,23 @@
+{
+  "completedAt": "2026-10-04T09:08:03.480Z",
+  "destination": {
+    "assetId": "egmoreplatformboard",
+    "version": "1.3.0"
+  },
+  "evidence": {
+    "blenderNormalizationPerformed": false,
+    "gpuImportTestPerformed": false,
+    "humanVisualReviewPerformed": false,
+    "modelBytesCopiedAndHashed": true,
+    "policyValidationCompleted": true,
+    "staticInspectionCompleted": true
+  },
+  "manifestSha256": "297fcacbf79342debfff802651424db54c9a1b2be660dd69429534cc5e2c85b7",
+  "packageId": "pkg_8497d9d5926a7c8c31c55055",
+  "schema": "game_dev.package_receipt.v1",
+  "source": {
+    "bytes": 3664684,
+    "fileName": "EgmorePlatformBoard.glb",
+    "sha256": "215907627e326676bda20ea70e5a50a9f66f8ef2da10faf9205010d516efaa3d"
+  }
+}

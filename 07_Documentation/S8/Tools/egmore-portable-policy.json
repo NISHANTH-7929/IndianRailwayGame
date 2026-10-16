@@ -1,0 +1,10 @@
+{
+  "requireUVs": true,
+  "requireNormals": true,
+  "requireTangentsWithNormalMap": true,
+  "requireBaseColorTexture": true,
+  "minTextureSize": 512,
+  "requirePowerOfTwoTextures": true,
+  "maxDimensionMeters": 15,
+  "minDimensionMeters": 0.001
+}

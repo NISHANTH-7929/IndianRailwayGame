@@ -1,0 +1,594 @@
+{
+  "type": "object",
+  "properties": {
+    "assetId": {
+      "type": "string",
+      "pattern": "^[A-Z][A-Za-z0-9]*(\\.[A-Za-z0-9]+){2,}$"
+    },
+    "checks": {
+      "type": "object",
+      "properties": {
+        "stableAssetId": {
+          "type": "object",
+          "properties": {
+            "status": {
+              "enum": [
+                "pending",
+                "passed",
+                "not-applicable",
+                "failed"
+              ]
+            },
+            "evidence": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "reason": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "status",
+            "evidence",
+            "reason"
+          ],
+          "additionalProperties": false
+        },
+        "sourceRecorded": {
+          "type": "object",
+          "properties": {
+            "status": {
+              "enum": [
+                "pending",
+                "passed",
+                "not-applicable",
+                "failed"
+              ]
+            },
+            "evidence": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "reason": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "status",
+            "evidence",
+            "reason"
+          ],
+          "additionalProperties": false
+        },
+        "licenseVerified": {
+          "type": "object",
+          "properties": {
+            "status": {
+              "enum": [
+                "pending",
+                "passed",
+                "not-applicable",
+                "failed"
+              ]
+            },
+            "evidence": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "reason": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "status",
+            "evidence",
+            "reason"
+          ],
+          "additionalProperties": false
+        },
+        "commercialUseVerified": {
+          "type": "object",
+          "properties": {
+            "status": {
+              "enum": [
+                "pending",
+                "passed",
+                "not-applicable",
+                "failed"
+              ]
+            },
+            "evidence": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "reason": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "status",
+            "evidence",
+            "reason"
+          ],
+          "additionalProperties": false
+        },
+        "modificationRightsVerified": {
+          "type": "object",
+          "properties": {
+            "status": {
+              "enum": [
+                "pending",
+                "passed",
+                "not-applicable",
+                "failed"
+              ]
+            },
+            "evidence": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "reason": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "status",
+            "evidence",
+            "reason"
+          ],
+          "additionalProperties": false
+        },
+        "scale": {
+          "type": "object",
+          "properties": {
+            "status": {
+              "enum": [
+                "pending",
+                "passed",
+                "not-applicable",
+                "failed"
+              ]
+            },
+            "evidence": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "reason": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "status",
+            "evidence",
+            "reason"
+          ],
+          "additionalProperties": false
+        },
+        "orientation": {
+          "type": "object",
+          "properties": {
+            "status": {
+              "enum": [
+                "pending",
+                "passed",
+                "not-applicable",
+                "failed"
+              ]
+            },
+            "evidence": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "reason": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "status",
+            "evidence",
+            "reason"
+          ],
+          "additionalProperties": false
+        },
+        "pivot": {
+          "type": "object",
+          "properties": {
+            "status": {
+              "enum": [
+                "pending",
+                "passed",
+                "not-applicable",
+                "failed"
+              ]
+            },
+            "evidence": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "reason": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "status",
+            "evidence",
+            "reason"
+          ],
+          "additionalProperties": false
+        },
+        "materials": {
+          "type": "object",
+          "properties": {
+            "status": {
+              "enum": [
+                "pending",
+                "passed",
+                "not-applicable",
+                "failed"
+              ]
+            },
+            "evidence": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "reason": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "status",
+            "evidence",
+            "reason"
+          ],
+          "additionalProperties": false
+        },
+        "textures": {
+          "type": "object",
+          "properties": {
+            "status": {
+              "enum": [
+                "pending",
+                "passed",
+                "not-applicable",
+                "failed"
+              ]
+            },
+            "evidence": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "reason": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "status",
+            "evidence",
+            "reason"
+          ],
+          "additionalProperties": false
+        },
+        "lods": {
+          "type": "object",
+          "properties": {
+            "status": {
+              "enum": [
+                "pending",
+                "passed",
+                "not-applicable",
+                "failed"
+              ]
+            },
+            "evidence": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "reason": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "status",
+            "evidence",
+            "reason"
+          ],
+          "additionalProperties": false
+        },
+        "collisionProxy": {
+          "type": "object",
+          "properties": {
+            "status": {
+              "enum": [
+                "pending",
+                "passed",
+                "not-applicable",
+                "failed"
+              ]
+            },
+            "evidence": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "reason": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "status",
+            "evidence",
+            "reason"
+          ],
+          "additionalProperties": false
+        },
+        "animationBinding": {
+          "type": "object",
+          "properties": {
+            "status": {
+              "enum": [
+                "pending",
+                "passed",
+                "not-applicable",
+                "failed"
+              ]
+            },
+            "evidence": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "reason": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "status",
+            "evidence",
+            "reason"
+          ],
+          "additionalProperties": false
+        },
+        "audioBinding": {
+          "type": "object",
+          "properties": {
+            "status": {
+              "enum": [
+                "pending",
+                "passed",
+                "not-applicable",
+                "failed"
+              ]
+            },
+            "evidence": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "reason": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "status",
+            "evidence",
+            "reason"
+          ],
+          "additionalProperties": false
+        },
+        "streaming": {
+          "type": "object",
+          "properties": {
+            "status": {
+              "enum": [
+                "pending",
+                "passed",
+                "not-applicable",
+                "failed"
+              ]
+            },
+            "evidence": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "reason": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "status",
+            "evidence",
+            "reason"
+          ],
+          "additionalProperties": false
+        },
+        "platformTier": {
+          "type": "object",
+          "properties": {
+            "status": {
+              "enum": [
+                "pending",
+                "passed",
+                "not-applicable",
+                "failed"
+              ]
+            },
+            "evidence": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "reason": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "status",
+            "evidence",
+            "reason"
+          ],
+          "additionalProperties": false
+        },
+        "android": {
+          "type": "object",
+          "properties": {
+            "status": {
+              "enum": [
+                "pending",
+                "passed",
+                "not-applicable",
+                "failed"
+              ]
+            },
+            "evidence": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "reason": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "status",
+            "evidence",
+            "reason"
+          ],
+          "additionalProperties": false
+        },
+        "regression": {
+          "type": "object",
+          "properties": {
+            "status": {
+              "enum": [
+                "pending",
+                "passed",
+                "not-applicable",
+                "failed"
+              ]
+            },
+            "evidence": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "reason": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "status",
+            "evidence",
+            "reason"
+          ],
+          "additionalProperties": false
+        },
+        "finalApproval": {
+          "type": "object",
+          "properties": {
+            "status": {
+              "enum": [
+                "pending",
+                "passed",
+                "not-applicable",
+                "failed"
+              ]
+            },
+            "evidence": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "reason": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "status",
+            "evidence",
+            "reason"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "stableAssetId",
+        "sourceRecorded",
+        "licenseVerified",
+        "commercialUseVerified",
+        "modificationRightsVerified",
+        "scale",
+        "orientation",
+        "pivot",
+        "materials",
+        "textures",
+        "lods",
+        "collisionProxy",
+        "animationBinding",
+        "audioBinding",
+        "streaming",
+        "platformTier",
+        "android",
+        "regression",
+        "finalApproval"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "assetId",
+    "checks"
+  ],
+  "additionalProperties": false,
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:indianrailway:s8:readiness"
+}

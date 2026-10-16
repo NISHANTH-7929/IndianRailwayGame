@@ -1,0 +1,339 @@
+{
+  "sourceSha256": "2047f104d9b34f90fe16ca40b50d04e2be2a0f010ef57fa064a43ee8b1f928c9",
+  "candidateIndex": 0,
+  "sourceStart": 2481259038,
+  "sourceEnd": 1936491013,
+  "sourceWays": [
+    {
+      "id": 209558572,
+      "tags": {
+        "railway": "rail"
+      }
+    },
+    {
+      "id": 209558556,
+      "tags": {
+        "railway": "rail"
+      }
+    },
+    {
+      "id": 1123933732,
+      "tags": {
+        "railway": "rail"
+      }
+    },
+    {
+      "id": 240340278,
+      "tags": {
+        "electrified": "contact_line",
+        "frequency": "50",
+        "gauge": "1676",
+        "passenger_lines": "4",
+        "railway": "rail",
+        "railway:etcs": "1",
+        "usage": "main",
+        "voltage": "25000"
+      }
+    },
+    {
+      "id": 1267319778,
+      "tags": {
+        "electrified": "contact_line",
+        "frequency": "50",
+        "gauge": "1676",
+        "layer": "-1",
+        "passenger_lines": "4",
+        "railway": "rail",
+        "railway:etcs": "1",
+        "tunnel": "yes",
+        "usage": "main",
+        "voltage": "25000"
+      }
+    },
+    {
+      "id": 1267319777,
+      "tags": {
+        "electrified": "contact_line",
+        "frequency": "50",
+        "gauge": "1676",
+        "passenger_lines": "4",
+        "railway": "rail",
+        "railway:etcs": "1",
+        "usage": "main",
+        "voltage": "25000"
+      }
+    },
+    {
+      "id": 240340279,
+      "tags": {
+        "bridge": "yes",
+        "electrified": "contact_line",
+        "frequency": "50",
+        "gauge": "1676",
+        "passenger_lines": "4",
+        "railway": "rail",
+        "railway:etcs": "1",
+        "usage": "main",
+        "voltage": "25000"
+      }
+    },
+    {
+      "id": 240340270,
+      "tags": {
+        "electrified": "contact_line",
+        "frequency": "50",
+        "gauge": "1676",
+        "passenger_lines": "4",
+        "railway": "rail",
+        "railway:etcs": "1",
+        "usage": "main",
+        "voltage": "25000"
+      }
+    },
+    {
+      "id": 240340263,
+      "tags": {
+        "electrified": "contact_line",
+        "frequency": "50",
+        "gauge": "1676",
+        "passenger_lines": "4",
+        "railway": "rail",
+        "railway:etcs": "1",
+        "usage": "main",
+        "voltage": "25000"
+      }
+    },
+    {
+      "id": 661546313,
+      "tags": {
+        "electrified": "contact_line",
+        "frequency": "50",
+        "gauge": "1676",
+        "passenger_lines": "4",
+        "railway": "rail",
+        "railway:etcs": "1",
+        "usage": "main",
+        "voltage": "25000"
+      }
+    },
+    {
+      "id": 240340259,
+      "tags": {
+        "electrified": "contact_line",
+        "frequency": "50",
+        "gauge": "1676",
+        "passenger_lines": "4",
+        "railway": "rail",
+        "railway:etcs": "1",
+        "usage": "main",
+        "voltage": "25000"
+      }
+    },
+    {
+      "id": 240340262,
+      "tags": {
+        "bridge": "yes",
+        "electrified": "contact_line",
+        "frequency": "50",
+        "gauge": "1676",
+        "layer": "1",
+        "passenger_lines": "4",
+        "railway": "rail",
+        "railway:etcs": "1",
+        "usage": "main",
+        "voltage": "25000"
+      }
+    },
+    {
+      "id": 1270466102,
+      "tags": {
+        "electrified": "contact_line",
+        "frequency": "50",
+        "gauge": "1676",
+        "passenger_lines": "4",
+        "railway": "rail",
+        "railway:etcs": "1",
+        "usage": "main",
+        "voltage": "25000"
+      }
+    },
+    {
+      "id": 1270466103,
+      "tags": {
+        "bridge": "yes",
+        "electrified": "contact_line",
+        "frequency": "50",
+        "gauge": "1676",
+        "layer": "1",
+        "passenger_lines": "4",
+        "railway": "rail",
+        "railway:etcs": "1",
+        "usage": "main",
+        "voltage": "25000"
+      }
+    },
+    {
+      "id": 240340325,
+      "tags": {
+        "electrified": "contact_line",
+        "frequency": "50",
+        "gauge": "1676",
+        "passenger_lines": "4",
+        "railway": "rail",
+        "railway:etcs": "1",
+        "usage": "main",
+        "voltage": "25000"
+      }
+    },
+    {
+      "id": 240340261,
+      "tags": {
+        "bridge": "yes",
+        "electrified": "contact_line",
+        "frequency": "50",
+        "gauge": "1676",
+        "layer": "1",
+        "passenger_lines": "4",
+        "railway": "rail",
+        "usage": "main",
+        "voltage": "25000"
+      }
+    },
+    {
+      "id": 30970277,
+      "tags": {
+        "electrified": "contact_line",
+        "frequency": "50",
+        "gauge": "1676",
+        "passenger_lines": "4",
+        "railway": "rail",
+        "usage": "main",
+        "voltage": "25000"
+      }
+    },
+    {
+      "id": 1080320432,
+      "tags": {
+        "electrified": "contact_line",
+        "frequency": "50",
+        "gauge": "1676",
+        "railway": "rail",
+        "voltage": "25000"
+      }
+    },
+    {
+      "id": 1080320429,
+      "tags": {
+        "bridge": "yes",
+        "electrified": "contact_line",
+        "frequency": "50",
+        "gauge": "1676",
+        "layer": "1",
+        "railway": "rail",
+        "voltage": "25000"
+      }
+    },
+    {
+      "id": 235834942,
+      "tags": {
+        "electrified": "contact_line",
+        "frequency": "50",
+        "gauge": "1676",
+        "railway": "rail",
+        "voltage": "25000"
+      }
+    },
+    {
+      "id": 25619964,
+      "tags": {
+        "electrified": "contact_line",
+        "frequency": "50",
+        "gauge": "1676",
+        "railway": "rail",
+        "usage": "main",
+        "voltage": "25000"
+      }
+    },
+    {
+      "id": 661546310,
+      "tags": {
+        "electrified": "contact_line",
+        "frequency": "50",
+        "gauge": "1676",
+        "railway": "rail",
+        "usage": "main",
+        "voltage": "25000"
+      }
+    },
+    {
+      "id": 517515626,
+      "tags": {
+        "electrified": "contact_line",
+        "frequency": "50",
+        "gauge": "1676",
+        "railway": "rail",
+        "usage": "main",
+        "voltage": "25000"
+      }
+    },
+    {
+      "id": 517515612,
+      "tags": {
+        "electrified": "contact_line",
+        "frequency": "50",
+        "gauge": "1676",
+        "passenger_lines": "4",
+        "railway": "rail",
+        "voltage": "25000"
+      }
+    },
+    {
+      "id": 551165455,
+      "tags": {
+        "railway": "rail"
+      }
+    },
+    {
+      "id": 517515634,
+      "tags": {
+        "electrified": "contact_line",
+        "frequency": "50",
+        "gauge": "1676",
+        "passenger_lines": "4",
+        "railway": "rail",
+        "usage": "main",
+        "voltage": "25000"
+      }
+    }
+  ],
+  "sourceLength": 24781.581,
+  "authoredLength": 25374.143323255725,
+  "pieces": 141,
+  "stationMetres": {
+    "MS": 333.6882061062129,
+    "MSC": 2412.1160339829594,
+    "NBK": 3969.227534962982,
+    "MKK": 5563.181214357787,
+    "MBM": 7110.072245260277,
+    "SP": 8810.272077327278,
+    "GDY": 10904.04376159746,
+    "STM": 13116.70827766875,
+    "PZA": 14411.84345774649,
+    "MN": 15951.579882313723,
+    "TLM": 17064.634838039317,
+    "PV": 19131.339002687266,
+    "CMP": 21208.272929256378,
+    "TBMS": 23247.23031073393,
+    "TBM": 25124.381349630657
+  },
+  "maximumSourceNodeDeviationMetres": 2.0766212218740305,
+  "minimumCurveRadius": 226.48784370113967,
+  "attribution": "\u00a9 OpenStreetMap contributors",
+  "licence": "ODbL-1.0",
+  "limitations": [
+    "Endpoint candidate selected for continuous corridor shape, not verified platform assignment or direction.",
+    "Source polyline simplified to 2m tolerance, fillets tangent-continuous; radius not a surveyed railway radius.",
+    "No source elevations: grade and cant zero. Parallel tracks and station envelopes representative.",
+    "300m authored extensions at both endpoints; station POIs projected OFFLINE only; runtime follows graph station."
+  ]
+}

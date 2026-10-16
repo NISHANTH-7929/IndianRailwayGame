@@ -1,0 +1,23 @@
+{
+  "completedAt": "2026-10-04T09:07:55.826Z",
+  "destination": {
+    "assetId": "egmoredome",
+    "version": "1.3.0"
+  },
+  "evidence": {
+    "blenderNormalizationPerformed": false,
+    "gpuImportTestPerformed": false,
+    "humanVisualReviewPerformed": false,
+    "modelBytesCopiedAndHashed": true,
+    "policyValidationCompleted": true,
+    "staticInspectionCompleted": true
+  },
+  "manifestSha256": "4043641d4d1424bc2ebca06070f65e528862e26bc48566f1ab0f6d1f3fe752f6",
+  "packageId": "pkg_388661381b0aa881fb81d594",
+  "schema": "game_dev.package_receipt.v1",
+  "source": {
+    "bytes": 1271228,
+    "fileName": "EgmoreDome.glb",
+    "sha256": "dfafa1f6de0782bf39436bccdf8d6d19a480a4b3d4cfd706315676707221eba2"
+  }
+}

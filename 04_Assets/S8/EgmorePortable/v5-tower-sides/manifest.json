@@ -1,0 +1,102 @@
+{
+  "sourceSha256": "f1194d28460189586205f7c7bc64c05f93419a3808162d4a46c780841729732c",
+  "modules": [
+    {
+      "id": "Station.Kit.EgmoreArcade6m",
+      "file": "EgmoreArcade6m.glb",
+      "sha256": "a873fd04e377bda553a27b99425290d2daceccbfa876c4014c7a07378eb78856",
+      "units": "metres",
+      "source": "D:\\Project\\IndianRailwayGame\\04_Assets\\S8\\EgmoreKit\\EgmoreKit.blend",
+      "estimatedDimensions": true
+    },
+    {
+      "id": "Station.Kit.EgmoreTower4m",
+      "file": "EgmoreTower4m.glb",
+      "sha256": "955143a7f9ec8a84d7ea60b5876b1df910e04eefdc40bdd36e4060e857ee8106",
+      "units": "metres",
+      "source": "D:\\Project\\IndianRailwayGame\\04_Assets\\S8\\EgmoreKit\\EgmoreKit.blend",
+      "estimatedDimensions": true
+    },
+    {
+      "id": "Station.Kit.EgmoreDome",
+      "file": "EgmoreDome.glb",
+      "sha256": "dfafa1f6de0782bf39436bccdf8d6d19a480a4b3d4cfd706315676707221eba2",
+      "units": "metres",
+      "source": "D:\\Project\\IndianRailwayGame\\04_Assets\\S8\\EgmoreKit\\EgmoreKit.blend",
+      "estimatedDimensions": true
+    },
+    {
+      "id": "Station.Kit.EgmoreEntrance9m",
+      "file": "EgmoreEntrance9m.glb",
+      "sha256": "1ddf0b0618923c18180aeb6c8a9ef8a6a8c1d4613ea9ae60fcfa0a938cd57195",
+      "units": "metres",
+      "source": "D:\\Project\\IndianRailwayGame\\04_Assets\\S8\\EgmoreKit\\EgmoreKit.blend",
+      "estimatedDimensions": true
+    },
+    {
+      "id": "Station.Kit.EgmoreCanopy6m",
+      "file": "EgmoreCanopy6m.glb",
+      "sha256": "5383951d62d7628370163c5a0fd6ae764599b07b2f6e72d27d8a78d15340685e",
+      "units": "metres",
+      "source": "D:\\Project\\IndianRailwayGame\\04_Assets\\S8\\EgmoreKit\\EgmoreKit.blend",
+      "estimatedDimensions": true
+    },
+    {
+      "id": "Station.Kit.EgmorePlatformBench",
+      "file": "EgmorePlatformBench.glb",
+      "sha256": "8285cfca62f917a1f69b44bb6fde3e9fae425a9fc13471906e26e50e07315224",
+      "units": "metres",
+      "source": "D:\\Project\\IndianRailwayGame\\04_Assets\\S8\\EgmoreKit\\EgmoreKit.blend",
+      "estimatedDimensions": true
+    },
+    {
+      "id": "Station.Kit.EgmoreWaterPoint",
+      "file": "EgmoreWaterPoint.glb",
+      "sha256": "8f09e0328bb175a75aa0379e48768e4f8531c9acbfee4d6a93a50ad792badae2",
+      "units": "metres",
+      "source": "D:\\Project\\IndianRailwayGame\\04_Assets\\S8\\EgmoreKit\\EgmoreKit.blend",
+      "estimatedDimensions": true
+    },
+    {
+      "id": "Station.Kit.EgmoreLitterBins",
+      "file": "EgmoreLitterBins.glb",
+      "sha256": "e82a6e1aba7f12e13a1c01d9ac98f25cdf696dac1da11bb439b733643209912c",
+      "units": "metres",
+      "source": "D:\\Project\\IndianRailwayGame\\04_Assets\\S8\\EgmoreKit\\EgmoreKit.blend",
+      "estimatedDimensions": true
+    },
+    {
+      "id": "Station.Kit.EgmorePlatformBoard",
+      "file": "EgmorePlatformBoard.glb",
+      "sha256": "9025cc50ded338efb8bfc257960883b925ca844d28560e3b6ac23f650e32a209",
+      "units": "metres",
+      "source": "D:\\Project\\IndianRailwayGame\\04_Assets\\S8\\EgmoreKit\\EgmoreKit.blend",
+      "estimatedDimensions": true
+    },
+    {
+      "id": "Station.Kit.EgmoreDrain3m",
+      "file": "EgmoreDrain3m.glb",
+      "sha256": "7e80831d048a758f0203016b87885b5a9007c16a0702e106cb8de9e595b7a109",
+      "units": "metres",
+      "source": "D:\\Project\\IndianRailwayGame\\04_Assets\\S8\\EgmoreKit\\EgmoreKit.blend",
+      "estimatedDimensions": true
+    },
+    {
+      "id": "Station.Kit.EgmoreCeilingFan",
+      "file": "EgmoreCeilingFan.glb",
+      "sha256": "c31c0c05351d08cd97e522453dc25fb13d3eca03c6141727265024c54294dc5c",
+      "units": "metres",
+      "source": "D:\\Project\\IndianRailwayGame\\04_Assets\\S8\\EgmoreKit\\EgmoreKit.blend",
+      "estimatedDimensions": true
+    },
+    {
+      "id": "Station.Kit.EgmoreBallast3m",
+      "file": "EgmoreBallast3m.glb",
+      "sha256": "2a8d7dda005c98e30a206d90351af1bdbab8508980678ea686de2aff1760f62f",
+      "units": "metres",
+      "source": "D:\\Project\\IndianRailwayGame\\04_Assets\\S8\\EgmoreKit\\EgmoreKit.blend",
+      "estimatedDimensions": true
+    }
+  ],
+  "status": "inspection candidate; Unreal FBX remains runtime source"
+}

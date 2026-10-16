@@ -1,0 +1,23 @@
+{
+  "completedAt": "2026-10-04T08:44:32.431Z",
+  "destination": {
+    "assetId": "egmoredrain3m",
+    "version": "1.2.0"
+  },
+  "evidence": {
+    "blenderNormalizationPerformed": false,
+    "gpuImportTestPerformed": false,
+    "humanVisualReviewPerformed": false,
+    "modelBytesCopiedAndHashed": true,
+    "policyValidationCompleted": true,
+    "staticInspectionCompleted": true
+  },
+  "manifestSha256": "6be36e6ce2eea5b4340770e447bce55dbde19237f0a05a01cc87380095792f3d",
+  "packageId": "pkg_a374cc6a864add8045208ee7",
+  "schema": "game_dev.package_receipt.v1",
+  "source": {
+    "bytes": 2670932,
+    "fileName": "EgmoreDrain3m.glb",
+    "sha256": "e2f790b06658f5ea963ff68dbe7d82295d2da9278202c6d59bcb65f1fa657f35"
+  }
+}

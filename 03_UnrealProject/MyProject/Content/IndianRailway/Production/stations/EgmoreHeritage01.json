@@ -1,0 +1,753 @@
+{
+  "asset_id": "Station.Egmore.Heritage.01",
+  "version": 1,
+  "units": "metres",
+  "source": "Independent reference-based geometry; Egmore photographs listed in EGMORE_REFERENCE_REGISTER.md",
+  "status": "architectural study; estimated dimensions; not yet imported or validated for gameplay",
+  "parts": [
+    {
+      "name": "EgmoreArcade6m",
+      "asset_id": "Station.Kit.EgmoreArcade6m",
+      "role": "scenery",
+      "location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "triangles": 45450,
+      "dimensions_m": [
+        6.0,
+        1.7400004863739014,
+        10.0649995803833
+      ],
+      "bounds_m": [
+        [
+          -3.0,
+          -0.5199999809265137,
+          0.0
+        ],
+        [
+          3.0,
+          1.2200005054473877,
+          10.0649995803833
+        ]
+      ],
+      "dimensionalEvidence": "estimated architectural dimensions; metric authored, not surveyed",
+      "asset": "/Game/IndianRailway/S8/Stations/EgmoreHeritage01/Meshes/SM_Station_EgmoreArcade6m.SM_Station_EgmoreArcade6m",
+      "rotation_axis": [
+        0,
+        1,
+        0
+      ],
+      "imported_bounds_m": [
+        [
+          -3.000000305175781,
+          -0.5200004577636719,
+          0.0
+        ],
+        [
+          3.0,
+          1.22,
+          10.064999389648438
+        ]
+      ],
+      "lod_triangles": [
+        45430,
+        24986,
+        11358
+      ]
+    },
+    {
+      "name": "EgmoreTower4m",
+      "asset_id": "Station.Kit.EgmoreTower4m",
+      "role": "scenery",
+      "location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "triangles": 29538,
+      "dimensions_m": [
+        5.039999961853027,
+        4.789999961853027,
+        12.170000076293945
+      ],
+      "bounds_m": [
+        [
+          -2.5199999809265137,
+          -0.7549996376037598,
+          0.0
+        ],
+        [
+          2.5200002193450928,
+          4.035000324249268,
+          12.170000076293945
+        ]
+      ],
+      "dimensionalEvidence": "estimated architectural dimensions; metric authored, not surveyed",
+      "asset": "/Game/IndianRailway/S8/Stations/EgmoreHeritage01/Meshes/SM_Station_EgmoreTower4m.SM_Station_EgmoreTower4m",
+      "rotation_axis": [
+        0,
+        1,
+        0
+      ],
+      "imported_bounds_m": [
+        [
+          -2.5200006103515626,
+          -0.7549999237060547,
+          0.0
+        ],
+        [
+          2.519999694824219,
+          4.035,
+          12.17
+        ]
+      ],
+      "lod_triangles": [
+        29526,
+        16240,
+        7382
+      ]
+    },
+    {
+      "name": "EgmoreDome",
+      "asset_id": "Station.Kit.EgmoreDome",
+      "role": "scenery",
+      "location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "triangles": 1004,
+      "dimensions_m": [
+        3.700000047683716,
+        3.700000047683716,
+        3.1500000953674316
+      ],
+      "bounds_m": [
+        [
+          -1.850000023841858,
+          -1.850000023841858,
+          0.0
+        ],
+        [
+          1.850000023841858,
+          1.850000023841858,
+          3.1500000953674316
+        ]
+      ],
+      "dimensionalEvidence": "estimated architectural dimensions; metric authored, not surveyed",
+      "asset": "/Game/IndianRailway/S8/Stations/EgmoreHeritage01/Meshes/SM_Station_EgmoreDome.SM_Station_EgmoreDome",
+      "rotation_axis": [
+        0,
+        1,
+        0
+      ],
+      "imported_bounds_m": [
+        [
+          -1.85,
+          -1.85,
+          0.0
+        ],
+        [
+          1.85,
+          1.85,
+          3.15
+        ]
+      ],
+      "lod_triangles": [
+        908,
+        500,
+        226
+      ]
+    },
+    {
+      "name": "EgmoreEntrance9m",
+      "asset_id": "Station.Kit.EgmoreEntrance9m",
+      "role": "scenery",
+      "location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "triangles": 14072,
+      "dimensions_m": [
+        9.440000534057617,
+        5.619999885559082,
+        11.889999389648438
+      ],
+      "bounds_m": [
+        [
+          -4.720000267028809,
+          -1.9200000762939453,
+          0.0
+        ],
+        [
+          4.720000267028809,
+          3.700000047683716,
+          11.889999389648438
+        ]
+      ],
+      "dimensionalEvidence": "estimated architectural dimensions; metric authored, not surveyed",
+      "asset": "/Game/IndianRailway/S8/Stations/EgmoreHeritage01/Meshes/SM_Station_EgmoreEntrance9m.SM_Station_EgmoreEntrance9m",
+      "rotation_axis": [
+        0,
+        1,
+        0
+      ],
+      "imported_bounds_m": [
+        [
+          -4.72,
+          -1.920000762939453,
+          0.0
+        ],
+        [
+          4.720000610351563,
+          3.700000915527344,
+          11.89
+        ]
+      ],
+      "lod_triangles": [
+        14072,
+        7740,
+        3518
+      ]
+    },
+    {
+      "name": "EgmoreCanopy6m",
+      "asset_id": "Station.Kit.EgmoreCanopy6m",
+      "role": "scenery",
+      "location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "triangles": 9476,
+      "dimensions_m": [
+        6.200000286102295,
+        8.280000686645508,
+        5.5920000076293945
+      ],
+      "bounds_m": [
+        [
+          -0.10000000894069672,
+          -0.13999998569488525,
+          -7.450580596923828e-08
+        ],
+        [
+          6.100000381469727,
+          8.140000343322754,
+          5.5920000076293945
+        ]
+      ],
+      "dimensionalEvidence": "estimated architectural dimensions; metric authored, not surveyed",
+      "asset": "/Game/IndianRailway/S8/Stations/EgmoreHeritage01/Meshes/SM_Station_EgmoreCanopy6m.SM_Station_EgmoreCanopy6m",
+      "rotation_axis": [
+        0,
+        1,
+        0
+      ],
+      "imported_bounds_m": [
+        [
+          -0.10000127792358399,
+          -0.13999998092651367,
+          -7.450580596923828e-08
+        ],
+        [
+          6.100000610351563,
+          8.140001220703125,
+          5.592000122070313
+        ]
+      ],
+      "lod_triangles": [
+        9428,
+        5186,
+        2356
+      ]
+    },
+    {
+      "name": "EgmorePlatformBench",
+      "asset_id": "Station.Kit.EgmorePlatformBench",
+      "role": "scenery",
+      "location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "triangles": 1620,
+      "dimensions_m": [
+        1.7999999523162842,
+        0.5525000095367432,
+        1.03000009059906
+      ],
+      "bounds_m": [
+        [
+          -0.8999999761581421,
+          -0.2750000059604645,
+          0.0
+        ],
+        [
+          0.8999999761581421,
+          0.2775000035762787,
+          1.03000009059906
+        ]
+      ],
+      "dimensionalEvidence": "estimated architectural dimensions; metric authored, not surveyed",
+      "asset": "/Game/IndianRailway/S8/Stations/EgmoreHeritage01/Meshes/SM_Station_EgmorePlatformBench.SM_Station_EgmorePlatformBench",
+      "rotation_axis": [
+        0,
+        1,
+        0
+      ],
+      "imported_bounds_m": [
+        [
+          -0.9,
+          -0.2750001335144043,
+          0.0
+        ],
+        [
+          0.9,
+          0.2775001525878906,
+          1.0300000762939454
+        ]
+      ],
+      "lod_triangles": [
+        1620,
+        890,
+        404
+      ]
+    },
+    {
+      "name": "EgmoreWaterPoint",
+      "asset_id": "Station.Kit.EgmoreWaterPoint",
+      "role": "scenery",
+      "location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "triangles": 3100,
+      "dimensions_m": [
+        1.7999999523162842,
+        0.9175000190734863,
+        1.659999966621399
+      ],
+      "bounds_m": [
+        [
+          -0.8999999761581421,
+          -0.5674999952316284,
+          0.0
+        ],
+        [
+          0.8999999761581421,
+          0.3499999940395355,
+          1.659999966621399
+        ]
+      ],
+      "dimensionalEvidence": "estimated architectural dimensions; metric authored, not surveyed",
+      "asset": "/Game/IndianRailway/S8/Stations/EgmoreHeritage01/Meshes/SM_Station_EgmoreWaterPoint.SM_Station_EgmoreWaterPoint",
+      "rotation_axis": [
+        0,
+        1,
+        0
+      ],
+      "imported_bounds_m": [
+        [
+          -0.9,
+          -0.5675000762939453,
+          0.0
+        ],
+        [
+          0.9,
+          0.35000015258789063,
+          1.66
+        ]
+      ],
+      "lod_triangles": [
+        3100,
+        1704,
+        774
+      ]
+    },
+    {
+      "name": "EgmoreLitterBins",
+      "asset_id": "Station.Kit.EgmoreLitterBins",
+      "role": "scenery",
+      "location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "triangles": 908,
+      "dimensions_m": [
+        1.2100000381469727,
+        0.5149999856948853,
+        0.9399999380111694
+      ],
+      "bounds_m": [
+        [
+          -0.6050000190734863,
+          -0.25999999046325684,
+          -0.03999999165534973
+        ],
+        [
+          0.6050000190734863,
+          0.2549999952316284,
+          0.8999999761581421
+        ]
+      ],
+      "dimensionalEvidence": "estimated architectural dimensions; metric authored, not surveyed",
+      "asset": "/Game/IndianRailway/S8/Stations/EgmoreHeritage01/Meshes/SM_Station_EgmoreLitterBins.SM_Station_EgmoreLitterBins",
+      "rotation_axis": [
+        0,
+        1,
+        0
+      ],
+      "imported_bounds_m": [
+        [
+          -0.605,
+          -0.260000057220459,
+          -0.039999990463256835
+        ],
+        [
+          0.605,
+          0.255000057220459,
+          0.9
+        ]
+      ],
+      "lod_triangles": [
+        860,
+        472,
+        214
+      ]
+    },
+    {
+      "name": "EgmorePlatformBoard",
+      "asset_id": "Station.Kit.EgmorePlatformBoard",
+      "role": "scenery",
+      "location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "triangles": 1504,
+      "dimensions_m": [
+        1.25,
+        0.19500000774860382,
+        1.5500000715255737
+      ],
+      "bounds_m": [
+        [
+          -0.625,
+          -0.10500000417232513,
+          1.100000023841858
+        ],
+        [
+          0.625,
+          0.09000000357627869,
+          2.6500000953674316
+        ]
+      ],
+      "dimensionalEvidence": "estimated architectural dimensions; metric authored, not surveyed",
+      "asset": "/Game/IndianRailway/S8/Stations/EgmoreHeritage01/Meshes/SM_Station_EgmorePlatformBoard.SM_Station_EgmorePlatformBoard",
+      "rotation_axis": [
+        0,
+        1,
+        0
+      ],
+      "imported_bounds_m": [
+        [
+          -0.625,
+          -0.10500006675720215,
+          1.1
+        ],
+        [
+          0.625,
+          0.0900001049041748,
+          2.65
+        ]
+      ],
+      "lod_triangles": [
+        1504,
+        828,
+        376
+      ]
+    },
+    {
+      "name": "EgmoreDrain3m",
+      "asset_id": "Station.Kit.EgmoreDrain3m",
+      "role": "scenery",
+      "location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "triangles": 3024,
+      "dimensions_m": [
+        3.0,
+        0.3880000114440918,
+        0.22300000488758087
+      ],
+      "bounds_m": [
+        [
+          0.0,
+          -0.1940000057220459,
+          -0.20000000298023224
+        ],
+        [
+          3.0,
+          0.1940000057220459,
+          0.023000001907348633
+        ]
+      ],
+      "dimensionalEvidence": "estimated architectural dimensions; metric authored, not surveyed",
+      "asset": "/Game/IndianRailway/S8/Stations/EgmoreHeritage01/Meshes/SM_Station_EgmoreDrain3m.SM_Station_EgmoreDrain3m",
+      "rotation_axis": [
+        0,
+        1,
+        0
+      ],
+      "imported_bounds_m": [
+        [
+          -3.111785190412775e-08,
+          -0.19399999618530273,
+          -0.2
+        ],
+        [
+          3.0,
+          0.19400049209594727,
+          0.023000001907348633
+        ]
+      ],
+      "lod_triangles": [
+        3024,
+        1664,
+        756
+      ]
+    },
+    {
+      "name": "EgmoreCeilingFan",
+      "asset_id": "Station.Kit.EgmoreCeilingFan",
+      "role": "scenery",
+      "location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "triangles": 488,
+      "dimensions_m": [
+        0.862690806388855,
+        0.9931055307388306,
+        0.9300000071525574
+      ],
+      "bounds_m": [
+        [
+          -0.3226907551288605,
+          -0.49655279517173767,
+          -0.17000001668930054
+        ],
+        [
+          0.5400000214576721,
+          0.4965527653694153,
+          0.7599999904632568
+        ]
+      ],
+      "dimensionalEvidence": "estimated architectural dimensions; metric authored, not surveyed",
+      "asset": "/Game/IndianRailway/S8/Stations/EgmoreHeritage01/Meshes/SM_Station_EgmoreCeilingFan.SM_Station_EgmoreCeilingFan",
+      "rotation_axis": [
+        0,
+        1,
+        0
+      ],
+      "imported_bounds_m": [
+        [
+          -0.3226908111572266,
+          -0.496552848815918,
+          -0.17000001907348633
+        ],
+        [
+          0.5400000381469726,
+          0.496552734375,
+          0.76
+        ]
+      ],
+      "lod_triangles": [
+        416,
+        228,
+        104
+      ]
+    },
+    {
+      "name": "EgmoreBallast3m",
+      "asset_id": "Station.Kit.EgmoreBallast3m",
+      "role": "scenery",
+      "location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "triangles": 10412,
+      "dimensions_m": [
+        3.016568899154663,
+        3.5,
+        0.33925673365592957
+      ],
+      "bounds_m": [
+        [
+          -0.001755841076374054,
+          -1.75,
+          -0.5699999928474426
+        ],
+        [
+          3.01481294631958,
+          1.75,
+          -0.23074325919151306
+        ]
+      ],
+      "dimensionalEvidence": "estimated architectural dimensions; metric authored, not surveyed",
+      "asset": "/Game/IndianRailway/S8/Stations/EgmoreHeritage01/Meshes/SM_Station_EgmoreBallast3m.SM_Station_EgmoreBallast3m",
+      "rotation_axis": [
+        0,
+        1,
+        0
+      ],
+      "imported_bounds_m": [
+        [
+          -0.001755748987197876,
+          -1.75,
+          -0.57
+        ],
+        [
+          3.0148126220703126,
+          1.7500004577636719,
+          -0.23074325561523437
+        ]
+      ],
+      "lod_triangles": [
+        10412,
+        5726,
+        2602
+      ]
+    }
+  ]
+}

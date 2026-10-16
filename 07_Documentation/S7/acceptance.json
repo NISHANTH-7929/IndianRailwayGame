@@ -1,0 +1,223 @@
+{
+  "result": "FAIL",
+  "accepted": 34,
+  "total": 36,
+  "gates": [
+    {
+      "id": 1,
+      "title": "A player can select a service.",
+      "status": "PASS",
+      "reason": "See required-tests.json and implementation report"
+    },
+    {
+      "id": 2,
+      "title": "A player can start a valid service.",
+      "status": "PASS",
+      "reason": "See required-tests.json and implementation report"
+    },
+    {
+      "id": 3,
+      "title": "A complete service itinerary exists.",
+      "status": "PASS",
+      "reason": "See required-tests.json and implementation report"
+    },
+    {
+      "id": 4,
+      "title": "The player can drive the train.",
+      "status": "PASS",
+      "reason": "See required-tests.json and implementation report"
+    },
+    {
+      "id": 5,
+      "title": "AI traffic genuinely interacts with the player.",
+      "status": "PASS",
+      "reason": "See required-tests.json and implementation report"
+    },
+    {
+      "id": 6,
+      "title": "The interaction uses S4/S5 railway truth.",
+      "status": "PASS",
+      "reason": "See required-tests.json and implementation report"
+    },
+    {
+      "id": 7,
+      "title": "The player sees/understands the resulting restriction.",
+      "status": "PENDING",
+      "reason": "Real participant comprehension/observations not supplied"
+    },
+    {
+      "id": 8,
+      "title": "The player can approach a functional station.",
+      "status": "PASS",
+      "reason": "See required-tests.json and implementation report"
+    },
+    {
+      "id": 9,
+      "title": "Platform/formation compatibility is validated.",
+      "status": "PASS",
+      "reason": "See required-tests.json and implementation report"
+    },
+    {
+      "id": 10,
+      "title": "The train can berth correctly.",
+      "status": "PASS",
+      "reason": "See required-tests.json and implementation report"
+    },
+    {
+      "id": 11,
+      "title": "Dwell is logically completed.",
+      "status": "PASS",
+      "reason": "See required-tests.json and implementation report"
+    },
+    {
+      "id": 12,
+      "title": "Departure is logically completed.",
+      "status": "PASS",
+      "reason": "See required-tests.json and implementation report"
+    },
+    {
+      "id": 13,
+      "title": "Objectives evaluate from authoritative state.",
+      "status": "PASS",
+      "reason": "See required-tests.json and implementation report"
+    },
+    {
+      "id": 14,
+      "title": "Safety failures are consequential.",
+      "status": "PASS",
+      "reason": "See required-tests.json and implementation report"
+    },
+    {
+      "id": 15,
+      "title": "Retry works.",
+      "status": "PASS",
+      "reason": "See required-tests.json and implementation report"
+    },
+    {
+      "id": 16,
+      "title": "Result/grade is produced.",
+      "status": "PASS",
+      "reason": "See required-tests.json and implementation report"
+    },
+    {
+      "id": 17,
+      "title": "Result explains important outcomes.",
+      "status": "PASS",
+      "reason": "See required-tests.json and implementation report"
+    },
+    {
+      "id": 18,
+      "title": "Traffic-caused delay is not treated as player-caused delay.",
+      "status": "PASS",
+      "reason": "See required-tests.json and implementation report"
+    },
+    {
+      "id": 19,
+      "title": "One reputation/unlock transaction works.",
+      "status": "PASS",
+      "reason": "See required-tests.json and implementation report"
+    },
+    {
+      "id": 20,
+      "title": "Progression settlement is duplicate-safe.",
+      "status": "PASS",
+      "reason": "See required-tests.json and implementation report"
+    },
+    {
+      "id": 21,
+      "title": "Pause works.",
+      "status": "PASS",
+      "reason": "See required-tests.json and implementation report"
+    },
+    {
+      "id": 22,
+      "title": "Background/foreground works.",
+      "status": "PASS",
+      "reason": "See required-tests.json and implementation report"
+    },
+    {
+      "id": 23,
+      "title": "Cold resume works.",
+      "status": "PASS",
+      "reason": "See required-tests.json and implementation report"
+    },
+    {
+      "id": 24,
+      "title": "Offline complete-loop operation works.",
+      "status": "PASS",
+      "reason": "See required-tests.json and implementation report"
+    },
+    {
+      "id": 25,
+      "title": "Replay/continue works.",
+      "status": "PASS",
+      "reason": "See required-tests.json and implementation report"
+    },
+    {
+      "id": 26,
+      "title": "S2 regression passes.",
+      "status": "PASS",
+      "reason": "See required-tests.json and implementation report"
+    },
+    {
+      "id": 27,
+      "title": "S3 regression passes.",
+      "status": "PASS",
+      "reason": "See required-tests.json and implementation report"
+    },
+    {
+      "id": 28,
+      "title": "S4 regression passes.",
+      "status": "PASS",
+      "reason": "See required-tests.json and implementation report"
+    },
+    {
+      "id": 29,
+      "title": "S5 regression passes.",
+      "status": "PASS",
+      "reason": "See required-tests.json and implementation report"
+    },
+    {
+      "id": 30,
+      "title": "S6 regression passes.",
+      "status": "PASS",
+      "reason": "See required-tests.json and implementation report"
+    },
+    {
+      "id": 31,
+      "title": "Unreal Automation passes.",
+      "status": "PASS",
+      "reason": "See required-tests.json and implementation report"
+    },
+    {
+      "id": 32,
+      "title": "Android full-loop verification passes.",
+      "status": "PASS",
+      "reason": "See required-tests.json and implementation report"
+    },
+    {
+      "id": 33,
+      "title": "Usability check is completed.",
+      "status": "PENDING",
+      "reason": "Real participant comprehension/observations not supplied"
+    },
+    {
+      "id": 34,
+      "title": "No production-scale visual content was unnecessarily developed.",
+      "status": "PASS",
+      "reason": "See required-tests.json and implementation report"
+    },
+    {
+      "id": 35,
+      "title": "No S8/S9 systems were implemented prematurely.",
+      "status": "PASS",
+      "reason": "See required-tests.json and implementation report"
+    },
+    {
+      "id": 36,
+      "title": "The complete vertical slice is repeatable.",
+      "status": "PASS",
+      "reason": "See required-tests.json and implementation report"
+    }
+  ]
+}

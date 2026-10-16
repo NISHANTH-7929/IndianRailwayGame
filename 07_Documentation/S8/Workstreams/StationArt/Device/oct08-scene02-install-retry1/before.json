@@ -1,0 +1,14 @@
+{
+  "serial": "10BE1Y2EL40003J",
+  "model": "I2304",
+  "installedApkSha256": "2b75ffb51eeeaa3ec163ce37b34db3c7852b5b7da1cb9b21cb6a13c02f61d33d",
+  "wake": "0",
+  "saves": {
+    "/sdcard/Android/data/com.indianrailway.s1harness/files/UnrealGame/MyProject/MyProject/Saved/S7/checkpoint-0.irs": "356967cedc0035fd8764186a096e37dd0137c5e86a44e87a8146ccd044c1d741",
+    "/sdcard/Android/data/com.indianrailway.s1harness/files/UnrealGame/MyProject/MyProject/Saved/S7/checkpoint-1.irs": "0b5859ab3c6841bac4bc1f9b06b6ff001dc8b47542804be09d4aa3ab57dad967",
+    "/sdcard/Android/data/com.indianrailway.s1harness/files/UnrealGame/MyProject/MyProject/Saved/S8/LHB/Service/checkpoint-0.irs": "f3fdf1ec0060cfb3bac907f019e79985294733fc327c53006d11009b890e3d1f",
+    "/sdcard/Android/data/com.indianrailway.s1harness/files/UnrealGame/MyProject/MyProject/Saved/S8/LHB/Service/checkpoint-1.irs": "55a5b63b1143ea368126824090dd6c92f095ed3eb8b098f4d4a9ce6a4a767d70",
+    "/sdcard/Android/data/com.indianrailway.s1harness/files/UnrealGame/MyProject/MyProject/Saved/S8/Station/Service/checkpoint-0.irs": "7f71b94dc59870a09d5b7faf229c2ad99123b4b839bb6eac91ee758e1ebee9e0",
+    "/sdcard/Android/data/com.indianrailway.s1harness/files/UnrealGame/MyProject/MyProject/Saved/S8/Station/Service/checkpoint-1.irs": "d69b52d953b84885215a9af76e0df95aa34c79e0fbcdf1082917e77ce6d4d1c9"
+  }
+}

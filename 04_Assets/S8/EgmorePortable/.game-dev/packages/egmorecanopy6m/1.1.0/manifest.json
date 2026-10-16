@@ -1,0 +1,44 @@
+{
+  "assetId": "egmorecanopy6m",
+  "description": "Original metric Egmore study module; estimated dimensions, visual acceptance and Android integration pending",
+  "displayName": "EgmoreCanopy6m",
+  "files": [
+    {
+      "bytes": 8141372,
+      "kind": "model",
+      "path": "model.glb",
+      "sha256": "2c45ddb173b6d0ba07dcf02707163ac49a1351df89441ed69ec72b486a80b27d"
+    },
+    {
+      "bytes": 4336,
+      "kind": "metadata",
+      "path": "metadata.json",
+      "sha256": "99baf222dffd8f2b694cc466f3226a871bf3ad9aa295973e3e73ada5e6a12854"
+    },
+    {
+      "bytes": 624,
+      "kind": "provenance",
+      "path": "provenance.json",
+      "sha256": "7c90c6c879c79a517b1e417da5be2bd8527c5b7f42a49d21ac79f488491b214d"
+    },
+    {
+      "bytes": 4304,
+      "kind": "validation",
+      "path": "validation.json",
+      "sha256": "da7a8d1dd3c739270b38800bdd4688c205220f0c2b293eee8a1b288e44f45eb4"
+    }
+  ],
+  "license": "LicenseRef-ProjectOriginal",
+  "model": "model.glb",
+  "packageId": "pkg_8500dc56b9055f3a22c3daf0",
+  "provenance": {
+    "origin": "authored"
+  },
+  "schema": "game_dev.asset_package.v1",
+  "validation": {
+    "errorCount": 0,
+    "passed": true,
+    "warningCount": 0
+  },
+  "version": "1.1.0"
+}

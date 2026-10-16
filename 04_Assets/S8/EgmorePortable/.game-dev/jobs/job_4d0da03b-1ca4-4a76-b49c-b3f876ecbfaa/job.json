@@ -1,0 +1,24 @@
+{
+  "schema": "game_dev.job.v1",
+  "id": "job_4d0da03b-1ca4-4a76-b49c-b3f876ecbfaa",
+  "operation": "package.verify",
+  "status": "completed",
+  "request": {
+    "positionals": [
+      "package",
+      "verify",
+      "D:\\Project\\IndianRailwayGame\\04_Assets\\S8\\EgmorePortable\\.game-dev\\packages\\egmorewaterpoint\\1.0.0"
+    ],
+    "flags": {
+      "output-dir": "04_Assets/S8/EgmorePortable"
+    }
+  },
+  "attempts": 1,
+  "eventCount": 1,
+  "artifacts": [],
+  "createdAt": "2026-10-04T03:26:26.076Z",
+  "updatedAt": "2026-10-04T03:26:26.112Z",
+  "startedAt": "2026-10-04T03:26:26.081Z",
+  "completedAt": "2026-10-04T03:26:26.112Z",
+  "receiptPath": "D:\\Project\\IndianRailwayGame\\04_Assets\\S8\\EgmorePortable\\.game-dev\\jobs\\job_4d0da03b-1ca4-4a76-b49c-b3f876ecbfaa\\receipt.json"
+}

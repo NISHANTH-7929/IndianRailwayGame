@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "checks": {
+    "allSoundsLoaded": true,
+    "noMissingSounds": true,
+    "runningRail": true,
+    "runningStation": true
+  },
+  "stateSamples": 96,
+  "scope": "packaged asset loading and reported loop playback; not audible quality or horn/brake interaction acceptance"
+}

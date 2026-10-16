@@ -1,0 +1,78 @@
+# Unreal Engine generated files (including archived project copies)
+**/Binaries/
+**/DerivedDataCache/
+**/Intermediate/
+**/Saved/
+**/Build/**/FileOpenOrder/
+
+# Packaged builds and downloaded SDKs
+/08_Builds/
+
+# Local editor and agent configuration
+/.codex/
+.vs/
+.vscode/
+.idea/
+*.sln
+*.suo
+*.sdf
+*.opensdf
+*.VC.db
+*.VC.opendb
+*.vcxproj
+*.vcxproj.filters
+*.vcxproj.user
+
+# Generated tool output and caches
+**/bin/
+**/obj/
+**/__pycache__/
+*.py[cod]
+node_modules/
+*.log
+*.tmp
+*.temp
+*.bak
+*.pdb
+*.ilk
+*.exe
+*.dll
+*.apk
+*.aab
+*.obb
+*.pak
+*.ucas
+*.utoc
+
+# Credentials and local environment overrides
+.env
+.env.*
+!.env.example
+!.env.sample
+*.pem
+*.key
+*.p12
+*.pfx
+*.keystore
+*.jks
+credentials.json
+client_secret*.json
+
+# OS metadata
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Blender autosaves
+*.blend1
+*.blend2
+# Local Python environments and tool installations
+.venv/
+venv/
+.art-python/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+# Generated validation captures and copied milestone baselines
+/07_Documentation/**/Evidence/
+/07_Documentation/**/Baseline/

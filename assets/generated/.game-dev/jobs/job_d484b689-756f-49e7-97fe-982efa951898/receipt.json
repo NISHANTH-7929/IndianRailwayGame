@@ -1,0 +1,59 @@
+{
+  "schema": "game_dev.receipt.v1",
+  "operation": "package.verify",
+  "result": {
+    "schema": "game_dev.package_verification.v1",
+    "packagePath": "D:\\Project\\IndianRailwayGame\\04_Assets\\S8\\EgmorePortable\\.game-dev\\packages\\egmorelitterbins\\1.2.0",
+    "manifest": {
+      "assetId": "egmorelitterbins",
+      "description": "Original Egmore architectural study with platform-facing facade details; estimated dimensions, visual acceptance pending",
+      "displayName": "EgmoreLitterBins",
+      "files": [
+        {
+          "bytes": 5745668,
+          "kind": "model",
+          "path": "model.glb",
+          "sha256": "3a6d770568bfa68775eca57c32d59b0a7e98418f8c505cd81e1fb59d1c35312c"
+        },
+        {
+          "bytes": 3906,
+          "kind": "metadata",
+          "path": "metadata.json",
+          "sha256": "b68c5d9c626d289a14b399b33e959a5389b2f51dd68b31536f32fd0ff8ee8470"
+        },
+        {
+          "bytes": 626,
+          "kind": "provenance",
+          "path": "provenance.json",
+          "sha256": "ada1cd83f9cd6c72c62a3205dd5667c8cf31ecf63911ec6b2575323d1274468b"
+        },
+        {
+          "bytes": 4317,
+          "kind": "validation",
+          "path": "validation.json",
+          "sha256": "1ef72b66ca171ad73ed6e92d802d8dfbb18e40f93cc1a5b56d4f5db6748b0da0"
+        }
+      ],
+      "license": "LicenseRef-ProjectOriginal",
+      "model": "model.glb",
+      "packageId": "pkg_ccb798de7e1920dca5704ff0",
+      "provenance": {
+        "origin": "authored"
+      },
+      "schema": "game_dev.asset_package.v1",
+      "validation": {
+        "errorCount": 0,
+        "passed": true,
+        "warningCount": 0
+      },
+      "version": "1.2.0"
+    },
+    "hashesVerified": true,
+    "evidence": {
+      "packageBytesVerified": true,
+      "gpuImportTestPerformed": false,
+      "humanVisualReviewPerformed": false
+    }
+  },
+  "completedAt": "2026-10-04T08:44:36.643Z"
+}

@@ -1,0 +1,44 @@
+{
+  "assetId": "egmorearcade6m",
+  "description": "Original Egmore study with rear facade and aggregate ballast material; estimated dimensions, visual acceptance pending",
+  "displayName": "EgmoreArcade6m",
+  "files": [
+    {
+      "bytes": 10334060,
+      "kind": "model",
+      "path": "model.glb",
+      "sha256": "8198bfbcd1e40e4c01bfebc6cb3ca08b65d669aa04787fd2f29d35d584d9f88f"
+    },
+    {
+      "bytes": 3373,
+      "kind": "metadata",
+      "path": "metadata.json",
+      "sha256": "48d3fd5d914e2c617ba853f1c39ea30983f6b53b369f5008f2b1a912ceaea467"
+    },
+    {
+      "bytes": 625,
+      "kind": "provenance",
+      "path": "provenance.json",
+      "sha256": "c9ef1d736c1163c1625c6064b00253d8d941b544646d632348258c66592d60d5"
+    },
+    {
+      "bytes": 4319,
+      "kind": "validation",
+      "path": "validation.json",
+      "sha256": "f2a9a84849bbd6359fb01b674d8e46c83ac5142b2eddb9a3d8bcc245e9d44c6c"
+    }
+  ],
+  "license": "LicenseRef-ProjectOriginal",
+  "model": "model.glb",
+  "packageId": "pkg_c890e50b63064113cad4317e",
+  "provenance": {
+    "origin": "authored"
+  },
+  "schema": "game_dev.asset_package.v1",
+  "validation": {
+    "errorCount": 0,
+    "passed": true,
+    "warningCount": 0
+  },
+  "version": "1.3.0"
+}

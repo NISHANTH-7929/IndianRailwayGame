@@ -1,0 +1,56 @@
+{
+  "passed": true,
+  "stages": [
+    "Approaching",
+    "Arrival",
+    "Berthing",
+    "Dwelling",
+    "ReadyToDepart",
+    "Departed",
+    "Completed"
+  ],
+  "service": {
+    "serviceId": "S8-Egmore-01",
+    "run": 2,
+    "phase": "Result",
+    "station": "Completed",
+    "mode": 1,
+    "ticks": 11652,
+    "trafficTicks": 29,
+    "trafficSeen": true,
+    "trafficCleared": true,
+    "dwellTicks": 300,
+    "arrivalTick": 5665,
+    "departureTick": 6825,
+    "departureAuthorized": true,
+    "berthError": -1.4048240228569284,
+    "overspeedTicks": 0,
+    "harshTicks": 0,
+    "playerDelaySeconds": 36.53333333333333,
+    "score": 86.4193753841286,
+    "grade": "B",
+    "success": true,
+    "settled": false,
+    "settlementId": "S8-Egmore-01/2",
+    "reason": "Service completed. Traffic hold time is excluded from player lateness",
+    "objectives": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "profile": {
+      "nextRun": 3,
+      "lastSettledRun": 1,
+      "awards": 1,
+      "reputation": 10,
+      "unlocked": true
+    }
+  },
+  "scope": "scripted Standard UI inputs; reward not settled"
+}

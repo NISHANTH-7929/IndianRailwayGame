@@ -1,0 +1,44 @@
+{
+  "assetId": "egmorecanopy6m",
+  "description": "Original Egmore study with rear facade and aggregate ballast material; estimated dimensions, visual acceptance pending",
+  "displayName": "EgmoreCanopy6m",
+  "files": [
+    {
+      "bytes": 8141372,
+      "kind": "model",
+      "path": "model.glb",
+      "sha256": "e68fca7ab944104a5ab84079953506fe7f893d29c10c72611d6419fd4506b0ba"
+    },
+    {
+      "bytes": 4346,
+      "kind": "metadata",
+      "path": "metadata.json",
+      "sha256": "2758afb759022d3666c15098628050861aaacf265bd2fed60015cd2c5ecf982c"
+    },
+    {
+      "bytes": 624,
+      "kind": "provenance",
+      "path": "provenance.json",
+      "sha256": "5d164bee0a781aba880acfffa02faa1319a4a21ba18925e95ebbcfb1ad50ffc0"
+    },
+    {
+      "bytes": 4304,
+      "kind": "validation",
+      "path": "validation.json",
+      "sha256": "da7a8d1dd3c739270b38800bdd4688c205220f0c2b293eee8a1b288e44f45eb4"
+    }
+  ],
+  "license": "LicenseRef-ProjectOriginal",
+  "model": "model.glb",
+  "packageId": "pkg_0df479c079bfd613ad507b0c",
+  "provenance": {
+    "origin": "authored"
+  },
+  "schema": "game_dev.asset_package.v1",
+  "validation": {
+    "errorCount": 0,
+    "passed": true,
+    "warningCount": 0
+  },
+  "version": "1.3.0"
+}

@@ -1,0 +1,5 @@
+WAP 7 Indian Locomotive Low Poly model by knitro_vedant
+https://sketchfab.com/3d-models/1935cec9ac9446e3b2524ad73f0902a4
+Licensed under CC BY 4.0: https://creativecommons.org/licenses/by/4.0/
+Source archive provided by user, 2026-10-01.
+Changes: Blender import; game conversion details recorded in preparation report.

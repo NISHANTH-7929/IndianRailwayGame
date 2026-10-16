@@ -1,0 +1,1621 @@
+{
+  "asset_id": "Station.Kit.01",
+  "version": 1,
+  "units": "metres",
+  "source": "Independent scripted geometry and procedural PBR; public previews comparison only",
+  "status": "candidate; visual, Unreal, LOD, collision and Android validation pending",
+  "parts": [
+    {
+      "name": "Platform5m",
+      "asset_id": "Station.Kit.Platform5m",
+      "role": "scenery",
+      "location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "triangles": 336,
+      "dimensions_m": [
+        5.0,
+        5.0,
+        0.8420000076293945
+      ],
+      "bounds_m": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          5.0,
+          5.0,
+          0.8420000076293945
+        ]
+      ],
+      "dimensionalEvidence": "estimated architectural dimensions; metric authored, not surveyed",
+      "asset": "/Game/IndianRailway/S8/Stations/Kit01/Meshes/SM_Station_Platform5m.SM_Station_Platform5m",
+      "rotation_axis": [
+        0,
+        1,
+        0
+      ],
+      "imported_bounds_m": [
+        [
+          -8.126483589876443e-07,
+          1.9550620322661417e-09,
+          0.0
+        ],
+        [
+          5.0,
+          5.000000915527344,
+          0.8419999694824218
+        ]
+      ],
+      "lod_triangles": [
+        336,
+        184,
+        84
+      ]
+    },
+    {
+      "name": "Apron5m",
+      "asset_id": "Station.Kit.Apron5m",
+      "role": "scenery",
+      "location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "triangles": 216,
+      "dimensions_m": [
+        5.0,
+        5.0,
+        0.8400000333786011
+      ],
+      "bounds_m": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          5.0,
+          5.0,
+          0.8400000333786011
+        ]
+      ],
+      "dimensionalEvidence": "estimated architectural dimensions; metric authored, not surveyed",
+      "asset": "/Game/IndianRailway/S8/Stations/Kit01/Meshes/SM_Station_Apron5m.SM_Station_Apron5m",
+      "rotation_axis": [
+        0,
+        1,
+        0
+      ],
+      "imported_bounds_m": [
+        [
+          -8.126483589876443e-07,
+          1.9550620322661417e-09,
+          0.0
+        ],
+        [
+          5.0,
+          5.000000915527344,
+          0.84
+        ]
+      ],
+      "lod_triangles": [
+        216,
+        118,
+        64
+      ]
+    },
+    {
+      "name": "BridgePier",
+      "asset_id": "Station.Kit.BridgePier",
+      "role": "scenery",
+      "location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "triangles": 540,
+      "dimensions_m": [
+        0.75,
+        3.75,
+        7.5400004386901855
+      ],
+      "bounds_m": [
+        [
+          -0.375,
+          -1.875,
+          0.0
+        ],
+        [
+          0.375,
+          1.875,
+          7.5400004386901855
+        ]
+      ],
+      "dimensionalEvidence": "estimated architectural dimensions; metric authored, not surveyed",
+      "asset": "/Game/IndianRailway/S8/Stations/Kit01/Meshes/SM_Station_BridgePier.SM_Station_BridgePier",
+      "rotation_axis": [
+        0,
+        1,
+        0
+      ],
+      "imported_bounds_m": [
+        [
+          -0.37500030517578126,
+          -1.875,
+          0.0
+        ],
+        [
+          0.37500030517578126,
+          1.875,
+          7.540000610351562
+        ]
+      ],
+      "lod_triangles": [
+        540,
+        296,
+        134
+      ]
+    },
+    {
+      "name": "ContactWire3m",
+      "asset_id": "Station.Kit.ContactWire3m",
+      "role": "scenery",
+      "location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "triangles": 108,
+      "dimensions_m": [
+        3.0,
+        0.012000130489468575,
+        0.012000130489468575
+      ],
+      "bounds_m": [
+        [
+          -8.741708051873687e-11,
+          -0.006000065710395575,
+          -0.006000065244734287
+        ],
+        [
+          3.0,
+          0.006000065244734287,
+          0.006000065710395575
+        ]
+      ],
+      "dimensionalEvidence": "estimated architectural dimensions; metric authored, not surveyed",
+      "asset": "/Game/IndianRailway/S8/Stations/Kit01/Meshes/SM_Station_ContactWire3m.SM_Station_ContactWire3m",
+      "rotation_axis": [
+        0,
+        1,
+        0
+      ],
+      "imported_bounds_m": [
+        [
+          -2.5032704797922635e-10,
+          -0.006000064611434937,
+          -0.006000065207481384
+        ],
+        [
+          3.0,
+          0.006000553369522095,
+          0.006000065803527832
+        ]
+      ],
+      "lod_triangles": [
+        108,
+        64,
+        64
+      ]
+    },
+    {
+      "name": "Canopy6m",
+      "asset_id": "Station.Kit.Canopy6m",
+      "role": "scenery",
+      "location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "triangles": 14172,
+      "dimensions_m": [
+        6.400000095367432,
+        5.482663631439209,
+        4.4131059646606445
+      ],
+      "bounds_m": [
+        [
+          -0.20000000298023224,
+          -0.2413320541381836,
+          0.0
+        ],
+        [
+          6.200000286102295,
+          5.241331577301025,
+          4.4131059646606445
+        ]
+      ],
+      "dimensionalEvidence": "estimated architectural dimensions; metric authored, not surveyed",
+      "asset": "/Game/IndianRailway/S8/Stations/Kit01/Meshes/SM_Station_Canopy6m.SM_Station_Canopy6m",
+      "rotation_axis": [
+        0,
+        1,
+        0
+      ],
+      "imported_bounds_m": [
+        [
+          -0.20000047683715821,
+          -0.2413320541381836,
+          0.0
+        ],
+        [
+          6.2,
+          5.241332397460938,
+          4.413106079101563
+        ]
+      ],
+      "lod_triangles": [
+        14172,
+        7794,
+        3542
+      ]
+    },
+    {
+      "name": "Bench",
+      "asset_id": "Station.Kit.Bench",
+      "role": "scenery",
+      "location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "triangles": 972,
+      "dimensions_m": [
+        1.899999976158142,
+        0.5779628157615662,
+        1.0375925302505493
+      ],
+      "bounds_m": [
+        [
+          -0.949999988079071,
+          -0.23999999463558197,
+          0.0
+        ],
+        [
+          0.949999988079071,
+          0.3379628360271454,
+          1.0375925302505493
+        ]
+      ],
+      "dimensionalEvidence": "estimated architectural dimensions; metric authored, not surveyed",
+      "asset": "/Game/IndianRailway/S8/Stations/Kit01/Meshes/SM_Station_Bench.SM_Station_Bench",
+      "rotation_axis": [
+        0,
+        1,
+        0
+      ],
+      "imported_bounds_m": [
+        [
+          -0.95,
+          -0.24000011444091796,
+          0.0
+        ],
+        [
+          0.95,
+          0.3379629516601563,
+          1.037592544555664
+        ]
+      ],
+      "lod_triangles": [
+        972,
+        534,
+        242
+      ]
+    },
+    {
+      "name": "Railing3m",
+      "asset_id": "Station.Kit.Railing3m",
+      "role": "scenery",
+      "location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "triangles": 456,
+      "dimensions_m": [
+        3.070000171661377,
+        0.07000000029802322,
+        1.100000023841858
+      ],
+      "bounds_m": [
+        [
+          -0.03500000014901161,
+          -0.03500000014901161,
+          0.0
+        ],
+        [
+          3.0350000858306885,
+          0.03500000014901161,
+          1.100000023841858
+        ]
+      ],
+      "dimensionalEvidence": "estimated architectural dimensions; metric authored, not surveyed",
+      "asset": "/Game/IndianRailway/S8/Stations/Kit01/Meshes/SM_Station_Railing3m.SM_Station_Railing3m",
+      "rotation_axis": [
+        0,
+        1,
+        0
+      ],
+      "imported_bounds_m": [
+        [
+          -0.035,
+          -0.035,
+          0.0
+        ],
+        [
+          3.035,
+          0.03500048875808716,
+          1.1
+        ]
+      ],
+      "lod_triangles": [
+        456,
+        250,
+        114
+      ]
+    },
+    {
+      "name": "StairFlight",
+      "asset_id": "Station.Kit.StairFlight",
+      "role": "scenery",
+      "location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "triangles": 3208,
+      "dimensions_m": [
+        6.425000190734863,
+        2.5299999713897705,
+        4.689999580383301
+      ],
+      "bounds_m": [
+        [
+          -0.02250000275671482,
+          -1.2649999856948853,
+          -0.2199999988079071
+        ],
+        [
+          6.402500152587891,
+          1.2649999856948853,
+          4.46999979019165
+        ]
+      ],
+      "dimensionalEvidence": "estimated architectural dimensions; metric authored, not surveyed",
+      "asset": "/Game/IndianRailway/S8/Stations/Kit01/Meshes/SM_Station_StairFlight.SM_Station_StairFlight",
+      "rotation_axis": [
+        0,
+        1,
+        0
+      ],
+      "imported_bounds_m": [
+        [
+          -0.02250020742416382,
+          -1.265,
+          -0.22
+        ],
+        [
+          6.402500610351563,
+          1.265000991821289,
+          4.469999694824219
+        ]
+      ],
+      "lod_triangles": [
+        3208,
+        1764,
+        802
+      ]
+    },
+    {
+      "name": "Footbridge6m",
+      "asset_id": "Station.Kit.Footbridge6m",
+      "role": "scenery",
+      "location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "triangles": 2808,
+      "dimensions_m": [
+        6.090000152587891,
+        3.0,
+        2.7299997806549072
+      ],
+      "bounds_m": [
+        [
+          -0.04500007629394531,
+          -1.5,
+          -0.10000000149011612
+        ],
+        [
+          6.045000076293945,
+          1.5,
+          2.629999876022339
+        ]
+      ],
+      "dimensionalEvidence": "estimated architectural dimensions; metric authored, not surveyed",
+      "asset": "/Game/IndianRailway/S8/Stations/Kit01/Meshes/SM_Station_Footbridge6m.SM_Station_Footbridge6m",
+      "rotation_axis": [
+        0,
+        1,
+        0
+      ],
+      "imported_bounds_m": [
+        [
+          -0.045000309944152835,
+          -1.5,
+          -0.1
+        ],
+        [
+          6.045000610351562,
+          1.5000009155273437,
+          2.63
+        ]
+      ],
+      "lod_triangles": [
+        2808,
+        1544,
+        702
+      ]
+    },
+    {
+      "name": "VendorKiosk",
+      "asset_id": "Station.Kit.VendorKiosk",
+      "role": "scenery",
+      "location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "triangles": 3252,
+      "dimensions_m": [
+        3.4000000953674316,
+        2.7750000953674316,
+        2.7100000381469727
+      ],
+      "bounds_m": [
+        [
+          -1.7000000476837158,
+          -1.4249999523162842,
+          0.0
+        ],
+        [
+          1.7000000476837158,
+          1.350000023841858,
+          2.7100000381469727
+        ]
+      ],
+      "dimensionalEvidence": "estimated architectural dimensions; metric authored, not surveyed",
+      "asset": "/Game/IndianRailway/S8/Stations/Kit01/Meshes/SM_Station_VendorKiosk.SM_Station_VendorKiosk",
+      "rotation_axis": [
+        0,
+        1,
+        0
+      ],
+      "imported_bounds_m": [
+        [
+          -1.7000003051757813,
+          -1.4250001525878906,
+          0.0
+        ],
+        [
+          1.7000003051757813,
+          1.3500003051757812,
+          2.71
+        ]
+      ],
+      "lod_triangles": [
+        3252,
+        1788,
+        812
+      ]
+    },
+    {
+      "name": "WaitingShelter",
+      "asset_id": "Station.Kit.WaitingShelter",
+      "role": "scenery",
+      "location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "triangles": 432,
+      "dimensions_m": [
+        4.5,
+        2.5999999046325684,
+        2.8999998569488525
+      ],
+      "bounds_m": [
+        [
+          -2.25,
+          -1.2999999523162842,
+          0.0
+        ],
+        [
+          2.25,
+          1.2999999523162842,
+          2.8999998569488525
+        ]
+      ],
+      "dimensionalEvidence": "estimated architectural dimensions; metric authored, not surveyed",
+      "asset": "/Game/IndianRailway/S8/Stations/Kit01/Meshes/SM_Station_WaitingShelter.SM_Station_WaitingShelter",
+      "rotation_axis": [
+        0,
+        1,
+        0
+      ],
+      "imported_bounds_m": [
+        [
+          -2.2500001525878908,
+          -1.3000003051757814,
+          0.0
+        ],
+        [
+          2.2500001525878908,
+          1.3000003051757814,
+          2.9
+        ]
+      ],
+      "lod_triangles": [
+        432,
+        238,
+        108
+      ]
+    },
+    {
+      "name": "StationFacade6m",
+      "asset_id": "Station.Kit.StationFacade6m",
+      "role": "scenery",
+      "location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "triangles": 3392,
+      "dimensions_m": [
+        6.400000095367432,
+        4.400000095367432,
+        3.7750000953674316
+      ],
+      "bounds_m": [
+        [
+          -3.200000047683716,
+          -2.200000047683716,
+          0.0
+        ],
+        [
+          3.200000047683716,
+          2.200000047683716,
+          3.7750000953674316
+        ]
+      ],
+      "dimensionalEvidence": "estimated architectural dimensions; metric authored, not surveyed",
+      "asset": "/Game/IndianRailway/S8/Stations/Kit01/Meshes/SM_Station_StationFacade6m.SM_Station_StationFacade6m",
+      "rotation_axis": [
+        0,
+        1,
+        0
+      ],
+      "imported_bounds_m": [
+        [
+          -3.2000003051757813,
+          -2.2000006103515624,
+          0.0
+        ],
+        [
+          3.2000003051757813,
+          2.2000006103515624,
+          3.775
+        ]
+      ],
+      "lod_triangles": [
+        3392,
+        1866,
+        848
+      ]
+    },
+    {
+      "name": "StationBoard",
+      "asset_id": "Station.Kit.StationBoard",
+      "role": "scenery",
+      "location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "triangles": 5796,
+      "dimensions_m": [
+        2.799999713897705,
+        0.12999999523162842,
+        2.5749998092651367
+      ],
+      "bounds_m": [
+        [
+          -1.399999976158142,
+          -0.06499999761581421,
+          0.0
+        ],
+        [
+          1.3999998569488525,
+          0.06499999761581421,
+          2.5749998092651367
+        ]
+      ],
+      "dimensionalEvidence": "estimated architectural dimensions; metric authored, not surveyed",
+      "asset": "/Game/IndianRailway/S8/Stations/Kit01/Meshes/SM_Station_StationBoard.SM_Station_StationBoard",
+      "rotation_axis": [
+        0,
+        1,
+        0
+      ],
+      "imported_bounds_m": [
+        [
+          -1.4,
+          -0.06500020027160644,
+          0.0
+        ],
+        [
+          1.3999998474121094,
+          0.06500020027160644,
+          2.5749996948242186
+        ]
+      ],
+      "lod_triangles": [
+        5796,
+        3188,
+        1448
+      ]
+    },
+    {
+      "name": "LampPost",
+      "asset_id": "Station.Kit.LampPost",
+      "role": "scenery",
+      "location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "triangles": 368,
+      "dimensions_m": [
+        0.2800000011920929,
+        1.2050000429153442,
+        5.176107406616211
+      ],
+      "bounds_m": [
+        [
+          -0.14000000059604645,
+          -0.054999999701976776,
+          0.0
+        ],
+        [
+          0.14000000059604645,
+          1.1500000953674316,
+          5.176107406616211
+        ]
+      ],
+      "dimensionalEvidence": "estimated architectural dimensions; metric authored, not surveyed",
+      "asset": "/Game/IndianRailway/S8/Stations/Kit01/Meshes/SM_Station_LampPost.SM_Station_LampPost",
+      "rotation_axis": [
+        0,
+        1,
+        0
+      ],
+      "imported_bounds_m": [
+        [
+          -0.14000019073486328,
+          -0.055,
+          0.0
+        ],
+        [
+          0.13999990463256837,
+          1.1500001525878907,
+          5.176107177734375
+        ]
+      ],
+      "lod_triangles": [
+        344,
+        190,
+        86
+      ]
+    },
+    {
+      "name": "ElectricalCabinet",
+      "asset_id": "Station.Kit.ElectricalCabinet",
+      "role": "scenery",
+      "location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "triangles": 1696,
+      "dimensions_m": [
+        0.800000011920929,
+        0.6499999761581421,
+        1.5
+      ],
+      "bounds_m": [
+        [
+          -0.4000000059604645,
+          -0.32499998807907104,
+          0.0
+        ],
+        [
+          0.4000000059604645,
+          0.32499998807907104,
+          1.5
+        ]
+      ],
+      "dimensionalEvidence": "estimated architectural dimensions; metric authored, not surveyed",
+      "asset": "/Game/IndianRailway/S8/Stations/Kit01/Meshes/SM_Station_ElectricalCabinet.SM_Station_ElectricalCabinet",
+      "rotation_axis": [
+        0,
+        1,
+        0
+      ],
+      "imported_bounds_m": [
+        [
+          -0.40000003814697266,
+          -0.32500003814697265,
+          0.0
+        ],
+        [
+          0.40000003814697266,
+          0.32500003814697265,
+          1.5
+        ]
+      ],
+      "lod_triangles": [
+        1672,
+        920,
+        418
+      ]
+    },
+    {
+      "name": "WhistleBoard",
+      "asset_id": "Station.Kit.WhistleBoard",
+      "role": "scenery",
+      "location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "triangles": 332,
+      "dimensions_m": [
+        0.699999988079071,
+        0.06499999761581421,
+        2.3249998092651367
+      ],
+      "bounds_m": [
+        [
+          -0.3499999940395355,
+          -0.032499998807907104,
+          0.0
+        ],
+        [
+          0.3499999940395355,
+          0.032499998807907104,
+          2.3249998092651367
+        ]
+      ],
+      "dimensionalEvidence": "estimated architectural dimensions; metric authored, not surveyed",
+      "asset": "/Game/IndianRailway/S8/Stations/Kit01/Meshes/SM_Station_WhistleBoard.SM_Station_WhistleBoard",
+      "rotation_axis": [
+        0,
+        1,
+        0
+      ],
+      "imported_bounds_m": [
+        [
+          -0.35,
+          -0.03250000476837158,
+          0.0
+        ],
+        [
+          0.35,
+          0.03250000476837158,
+          2.3249998474121094
+        ]
+      ],
+      "lod_triangles": [
+        332,
+        182,
+        82
+      ]
+    },
+    {
+      "name": "TerminationBoard",
+      "asset_id": "Station.Kit.TerminationBoard",
+      "role": "scenery",
+      "location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "triangles": 532,
+      "dimensions_m": [
+        0.7200000286102295,
+        0.06499999761581421,
+        2.359999895095825
+      ],
+      "bounds_m": [
+        [
+          -0.36000001430511475,
+          -0.032499998807907104,
+          0.0
+        ],
+        [
+          0.36000001430511475,
+          0.032499998807907104,
+          2.359999895095825
+        ]
+      ],
+      "dimensionalEvidence": "estimated architectural dimensions; metric authored, not surveyed",
+      "asset": "/Game/IndianRailway/S8/Stations/Kit01/Meshes/SM_Station_TerminationBoard.SM_Station_TerminationBoard",
+      "rotation_axis": [
+        0,
+        1,
+        0
+      ],
+      "imported_bounds_m": [
+        [
+          -0.36,
+          -0.03250000476837158,
+          0.0
+        ],
+        [
+          0.36,
+          0.03250000476837158,
+          2.3599998474121096
+        ]
+      ],
+      "lod_triangles": [
+        532,
+        292,
+        132
+      ]
+    },
+    {
+      "name": "SpeedBoard",
+      "asset_id": "Station.Kit.SpeedBoard",
+      "role": "scenery",
+      "location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "triangles": 548,
+      "dimensions_m": [
+        0.800000011920929,
+        0.06499999761581421,
+        2.450000047683716
+      ],
+      "bounds_m": [
+        [
+          -0.4000000059604645,
+          -0.032499998807907104,
+          0.0
+        ],
+        [
+          0.4000000059604645,
+          0.032499998807907104,
+          2.450000047683716
+        ]
+      ],
+      "dimensionalEvidence": "estimated architectural dimensions; metric authored, not surveyed",
+      "asset": "/Game/IndianRailway/S8/Stations/Kit01/Meshes/SM_Station_SpeedBoard.SM_Station_SpeedBoard",
+      "rotation_axis": [
+        0,
+        1,
+        0
+      ],
+      "imported_bounds_m": [
+        [
+          -0.4,
+          -0.03250000476837158,
+          0.0
+        ],
+        [
+          0.4,
+          0.03250000476837158,
+          2.45
+        ]
+      ],
+      "lod_triangles": [
+        548,
+        302,
+        137
+      ]
+    },
+    {
+      "name": "EMUBoard",
+      "asset_id": "Station.Kit.EMUBoard",
+      "role": "scenery",
+      "location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "triangles": 1780,
+      "dimensions_m": [
+        0.699999988079071,
+        0.06499999761581421,
+        2.3249998092651367
+      ],
+      "bounds_m": [
+        [
+          -0.3499999940395355,
+          -0.032499998807907104,
+          0.0
+        ],
+        [
+          0.3499999940395355,
+          0.032499998807907104,
+          2.3249998092651367
+        ]
+      ],
+      "dimensionalEvidence": "estimated architectural dimensions; metric authored, not surveyed",
+      "asset": "/Game/IndianRailway/S8/Stations/Kit01/Meshes/SM_Station_EMUBoard.SM_Station_EMUBoard",
+      "rotation_axis": [
+        0,
+        1,
+        0
+      ],
+      "imported_bounds_m": [
+        [
+          -0.35,
+          -0.03250000476837158,
+          0.0
+        ],
+        [
+          0.35,
+          0.03250000476837158,
+          2.3249998474121094
+        ]
+      ],
+      "lod_triangles": [
+        1780,
+        978,
+        444
+      ]
+    },
+    {
+      "name": "OHEMast",
+      "asset_id": "Station.Kit.OHEMast",
+      "role": "scenery",
+      "location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "triangles": 2472,
+      "dimensions_m": [
+        0.800000011920929,
+        3.7057504653930664,
+        7.199999809265137
+      ],
+      "bounds_m": [
+        [
+          -0.4000000059604645,
+          -0.4000000059604645,
+          0.0
+        ],
+        [
+          0.4000000059604645,
+          3.3057503700256348,
+          7.199999809265137
+        ]
+      ],
+      "dimensionalEvidence": "estimated architectural dimensions; metric authored, not surveyed",
+      "asset": "/Game/IndianRailway/S8/Stations/Kit01/Meshes/SM_Station_OHEMast.SM_Station_OHEMast",
+      "rotation_axis": [
+        0,
+        1,
+        0
+      ],
+      "imported_bounds_m": [
+        [
+          -0.4000000762939453,
+          -0.4000000762939453,
+          0.0
+        ],
+        [
+          0.4000000762939453,
+          3.305750427246094,
+          7.2
+        ]
+      ],
+      "lod_triangles": [
+        2472,
+        1360,
+        618
+      ]
+    },
+    {
+      "name": "OHEPortal12m",
+      "asset_id": "Station.Kit.OHEPortal12m",
+      "role": "scenery",
+      "location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "triangles": 4104,
+      "dimensions_m": [
+        12.899999618530273,
+        0.8999999761581421,
+        7.740000247955322
+      ],
+      "bounds_m": [
+        [
+          -0.44999998807907104,
+          -0.44999998807907104,
+          0.0
+        ],
+        [
+          12.449999809265137,
+          0.44999998807907104,
+          7.740000247955322
+        ]
+      ],
+      "dimensionalEvidence": "estimated architectural dimensions; metric authored, not surveyed",
+      "asset": "/Game/IndianRailway/S8/Stations/Kit01/Meshes/SM_Station_OHEPortal12m.SM_Station_OHEPortal12m",
+      "rotation_axis": [
+        0,
+        1,
+        0
+      ],
+      "imported_bounds_m": [
+        [
+          -0.45000007629394534,
+          -0.45000007629394534,
+          0.0
+        ],
+        [
+          12.45,
+          0.4500020217895508,
+          7.74
+        ]
+      ],
+      "lod_triangles": [
+        4104,
+        2258,
+        1026
+      ]
+    },
+    {
+      "name": "Rail3m",
+      "asset_id": "Station.Kit.Rail3m",
+      "role": "scenery",
+      "location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "triangles": 648,
+      "dimensions_m": [
+        3.0,
+        1.8910000324249268,
+        0.18250000476837158
+      ],
+      "bounds_m": [
+        [
+          0.0,
+          -0.9455000162124634,
+          0.0
+        ],
+        [
+          3.0,
+          0.9455000758171082,
+          0.18250000476837158
+        ]
+      ],
+      "dimensionalEvidence": "estimated architectural dimensions; metric authored, not surveyed",
+      "asset": "/Game/IndianRailway/S8/Stations/Kit01/Meshes/SM_Station_Rail3m.SM_Station_Rail3m",
+      "rotation_axis": [
+        0,
+        1,
+        0
+      ],
+      "imported_bounds_m": [
+        [
+          -1.5338982848334126e-07,
+          -0.9455000305175781,
+          0.0
+        ],
+        [
+          3.000000305175781,
+          0.9455005645751953,
+          0.1825
+        ]
+      ],
+      "lod_triangles": [
+        648,
+        356,
+        162
+      ]
+    },
+    {
+      "name": "Sleeper",
+      "asset_id": "Station.Kit.Sleeper",
+      "role": "scenery",
+      "location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "triangles": 436,
+      "dimensions_m": [
+        0.25,
+        2.700000047683716,
+        0.24249999225139618
+      ],
+      "bounds_m": [
+        [
+          -0.125,
+          -1.350000023841858,
+          -0.17499999701976776
+        ],
+        [
+          0.125,
+          1.350000023841858,
+          0.06749999523162842
+        ]
+      ],
+      "dimensionalEvidence": "estimated architectural dimensions; metric authored, not surveyed",
+      "asset": "/Game/IndianRailway/S8/Stations/Kit01/Meshes/SM_Station_Sleeper.SM_Station_Sleeper",
+      "rotation_axis": [
+        0,
+        1,
+        0
+      ],
+      "imported_bounds_m": [
+        [
+          -0.12500021934509278,
+          -1.35,
+          -0.175
+        ],
+        [
+          0.12500021934509278,
+          1.35,
+          0.06749999523162842
+        ]
+      ],
+      "lod_triangles": [
+        436,
+        240,
+        108
+      ]
+    },
+    {
+      "name": "Ballast3m",
+      "asset_id": "Station.Kit.Ballast3m",
+      "role": "scenery",
+      "location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "triangles": 108,
+      "dimensions_m": [
+        3.0,
+        3.4000000953674316,
+        0.3199999928474426
+      ],
+      "bounds_m": [
+        [
+          0.0,
+          -1.7000000476837158,
+          -0.46000000834465027
+        ],
+        [
+          3.0,
+          1.7000000476837158,
+          -0.14000001549720764
+        ]
+      ],
+      "dimensionalEvidence": "estimated architectural dimensions; metric authored, not surveyed",
+      "asset": "/Game/IndianRailway/S8/Stations/Kit01/Meshes/SM_Station_Ballast3m.SM_Station_Ballast3m",
+      "rotation_axis": [
+        0,
+        1,
+        0
+      ],
+      "imported_bounds_m": [
+        [
+          -2.557854713813867e-07,
+          -1.7,
+          -0.46
+        ],
+        [
+          3.000000305175781,
+          1.7000004577636718,
+          -0.14000001907348633
+        ]
+      ],
+      "lod_triangles": [
+        108,
+        64,
+        64
+      ]
+    },
+    {
+      "name": "Ground50m",
+      "asset_id": "Station.Kit.Ground50m",
+      "role": "scenery",
+      "location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "triangles": 12,
+      "dimensions_m": [
+        50.0,
+        50.0,
+        0.1499999761581421
+      ],
+      "bounds_m": [
+        [
+          -25.0,
+          -25.0,
+          -0.625
+        ],
+        [
+          25.0,
+          25.0,
+          -0.4750000238418579
+        ]
+      ],
+      "dimensionalEvidence": "estimated architectural dimensions; metric authored, not surveyed",
+      "asset": "/Game/IndianRailway/S8/Stations/Kit01/Meshes/SM_Station_Ground50m.SM_Station_Ground50m",
+      "rotation_axis": [
+        0,
+        1,
+        0
+      ],
+      "imported_bounds_m": [
+        [
+          -25.0000048828125,
+          -25.0000048828125,
+          -0.625
+        ],
+        [
+          25.0000048828125,
+          25.0000048828125,
+          -0.47500003814697267
+        ]
+      ],
+      "lod_triangles": [
+        12,
+        12,
+        12
+      ]
+    },
+    {
+      "name": "Boundary3m",
+      "asset_id": "Station.Kit.Boundary3m",
+      "role": "scenery",
+      "location_cm": [
+        0,
+        0,
+        0
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "triangles": 216,
+      "dimensions_m": [
+        3.0,
+        0.3199999928474426,
+        1.4800000190734863
+      ],
+      "bounds_m": [
+        [
+          0.0,
+          -0.1599999964237213,
+          0.0
+        ],
+        [
+          3.0,
+          0.1599999964237213,
+          1.4800000190734863
+        ]
+      ],
+      "dimensionalEvidence": "estimated architectural dimensions; metric authored, not surveyed",
+      "asset": "/Game/IndianRailway/S8/Stations/Kit01/Meshes/SM_Station_Boundary3m.SM_Station_Boundary3m",
+      "rotation_axis": [
+        0,
+        1,
+        0
+      ],
+      "imported_bounds_m": [
+        [
+          -2.411225977994036e-08,
+          -0.15999999046325683,
+          0.0
+        ],
+        [
+          3.0,
+          0.1600004768371582,
+          1.48
+        ]
+      ],
+      "lod_triangles": [
+        216,
+        118,
+        64
+      ]
+    }
+  ]
+}

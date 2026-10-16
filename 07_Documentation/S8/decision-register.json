@@ -1,0 +1,195 @@
+[
+  {
+    "decision": "representative stock",
+    "status": "selected",
+    "evidenceNeeded": "Final combined scene visual acceptance and repeated Android validation; stock choice is settled",
+    "owner": "project owner",
+    "chosenOption": "WAP-7 with LHB AC 3-tier",
+    "alternatives": [
+      "electric",
+      "diesel"
+    ],
+    "reason": "Explicit user selection; WAG-9 and BLC deferred, not completion gates.",
+    "date": "2026-10-07",
+    "affectedSystems": [
+      "vehicles"
+    ]
+  },
+  {
+    "decision": "representative region",
+    "status": "selected",
+    "evidenceNeeded": "Reference-led art and separate playable configuration; station choice is settled",
+    "owner": "project owner",
+    "chosenOption": "Chennai Egmore, Tamil Nadu",
+    "alternatives": [
+      "region A",
+      "region B"
+    ],
+    "reason": "User explicitly requested Chennai Egmore; other supplied station photos are sample visual references.",
+    "date": "2026-10-07",
+    "affectedSystems": [
+      "stations",
+      "route"
+    ]
+  },
+  {
+    "decision": "rendering choice",
+    "status": "pending",
+    "evidenceNeeded": "Android visual and timing captures",
+    "owner": "project owner",
+    "chosenOption": null,
+    "alternatives": [
+      "retain mobile forward",
+      "evaluate alternative"
+    ],
+    "reason": "Requires representative content measurements or owner selection",
+    "date": "2026-09-29",
+    "affectedSystems": [
+      "rendering"
+    ]
+  },
+  {
+    "decision": "Android device matrix",
+    "status": "pending",
+    "evidenceNeeded": "device availability and profiles",
+    "owner": "project owner",
+    "chosenOption": null,
+    "alternatives": [
+      "current iQOO",
+      "additional tiers"
+    ],
+    "reason": "Requires representative content measurements or owner selection",
+    "date": "2026-09-29",
+    "affectedSystems": [
+      "QA"
+    ]
+  },
+  {
+    "decision": "LOD budgets",
+    "status": "pending",
+    "evidenceNeeded": "per-category reductions and visual review",
+    "owner": "project owner",
+    "chosenOption": null,
+    "alternatives": [
+      "shared profiles",
+      "category profiles"
+    ],
+    "reason": "Requires representative content measurements or owner selection",
+    "date": "2026-09-29",
+    "affectedSystems": [
+      "LOD"
+    ]
+  },
+  {
+    "decision": "material budgets",
+    "status": "pending",
+    "evidenceNeeded": "draw-call and GPU captures",
+    "owner": "project owner",
+    "chosenOption": null,
+    "alternatives": [
+      "shared instances",
+      "bespoke materials"
+    ],
+    "reason": "Requires representative content measurements or owner selection",
+    "date": "2026-09-29",
+    "affectedSystems": [
+      "materials"
+    ]
+  },
+  {
+    "decision": "texture budgets",
+    "status": "pending",
+    "evidenceNeeded": "PSS and quality captures",
+    "owner": "project owner",
+    "chosenOption": null,
+    "alternatives": [
+      "ASTC sizes per tier",
+      "shared atlases"
+    ],
+    "reason": "Requires representative content measurements or owner selection",
+    "date": "2026-09-29",
+    "affectedSystems": [
+      "textures"
+    ]
+  },
+  {
+    "decision": "streaming thresholds",
+    "status": "pending",
+    "evidenceNeeded": "load/unload and residency trials",
+    "owner": "project owner",
+    "chosenOption": null,
+    "alternatives": [
+      "retain S6 demand",
+      "measured margins"
+    ],
+    "reason": "Requires representative content measurements or owner selection",
+    "date": "2026-09-29",
+    "affectedSystems": [
+      "streaming"
+    ]
+  },
+  {
+    "decision": "people/activity budgets",
+    "status": "pending",
+    "evidenceNeeded": "busy station profiles",
+    "owner": "project owner",
+    "chosenOption": null,
+    "alternatives": [
+      "instanced proxies",
+      "animated people"
+    ],
+    "reason": "Requires representative content measurements or owner selection",
+    "date": "2026-09-29",
+    "affectedSystems": [
+      "presentation"
+    ]
+  },
+  {
+    "decision": "audio residency",
+    "status": "pending",
+    "evidenceNeeded": "voice/residency profiles",
+    "owner": "project owner",
+    "chosenOption": null,
+    "alternatives": [
+      "stream",
+      "resident"
+    ],
+    "reason": "Requires representative content measurements or owner selection",
+    "date": "2026-09-29",
+    "affectedSystems": [
+      "audio"
+    ]
+  },
+  {
+    "decision": "graphics tiers",
+    "status": "pending",
+    "evidenceNeeded": "three-tier comparison",
+    "owner": "project owner",
+    "chosenOption": null,
+    "alternatives": [
+      "shared defaults",
+      "measured overrides"
+    ],
+    "reason": "Requires representative content measurements or owner selection",
+    "date": "2026-09-29",
+    "affectedSystems": [
+      "graphics"
+    ]
+  },
+  {
+    "decision": "localization scope",
+    "status": "pending",
+    "evidenceNeeded": "Hindi glyph and user review",
+    "owner": "project owner",
+    "chosenOption": null,
+    "alternatives": [
+      "core UI",
+      "broader localization"
+    ],
+    "reason": "Requires representative content measurements or owner selection",
+    "date": "2026-09-29",
+    "affectedSystems": [
+      "UI"
+    ]
+  }
+]

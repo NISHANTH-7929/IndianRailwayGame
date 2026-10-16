@@ -1,0 +1,132 @@
+[
+  {
+    "set": "red_stucco",
+    "resolution": [
+      512,
+      512
+    ],
+    "files": [
+      "T_red_stucco_BC.png",
+      "T_red_stucco_N.png",
+      "T_red_stucco_ORM.png"
+    ],
+    "method": "project-authored seeded procedural tiling maps"
+  },
+  {
+    "set": "cream_lime",
+    "resolution": [
+      512,
+      512
+    ],
+    "files": [
+      "T_cream_lime_BC.png",
+      "T_cream_lime_N.png",
+      "T_cream_lime_ORM.png"
+    ],
+    "method": "project-authored seeded procedural tiling maps"
+  },
+  {
+    "set": "platform_tile",
+    "resolution": [
+      512,
+      512
+    ],
+    "files": [
+      "T_platform_tile_BC.png",
+      "T_platform_tile_N.png",
+      "T_platform_tile_ORM.png"
+    ],
+    "method": "project-authored seeded procedural tiling maps"
+  },
+  {
+    "set": "concrete",
+    "resolution": [
+      512,
+      512
+    ],
+    "files": [
+      "T_concrete_BC.png",
+      "T_concrete_N.png",
+      "T_concrete_ORM.png"
+    ],
+    "method": "project-authored seeded procedural tiling maps"
+  },
+  {
+    "set": "blue_metal",
+    "resolution": [
+      512,
+      512
+    ],
+    "files": [
+      "T_blue_metal_BC.png",
+      "T_blue_metal_N.png",
+      "T_blue_metal_ORM.png"
+    ],
+    "method": "project-authored seeded procedural tiling maps"
+  },
+  {
+    "set": "dark_steel",
+    "resolution": [
+      512,
+      512
+    ],
+    "files": [
+      "T_dark_steel_BC.png",
+      "T_dark_steel_N.png",
+      "T_dark_steel_ORM.png"
+    ],
+    "method": "project-authored seeded procedural tiling maps"
+  },
+  {
+    "set": "ballast",
+    "resolution": [
+      512,
+      512
+    ],
+    "files": [
+      "T_ballast_BC.png",
+      "T_ballast_N.png",
+      "T_ballast_ORM.png"
+    ],
+    "method": "project-authored seeded procedural tiling maps"
+  },
+  {
+    "set": "soil",
+    "resolution": [
+      512,
+      512
+    ],
+    "files": [
+      "T_soil_BC.png",
+      "T_soil_N.png",
+      "T_soil_ORM.png"
+    ],
+    "method": "project-authored seeded procedural tiling maps"
+  },
+  {
+    "set": "foliage",
+    "resolution": [
+      512,
+      512
+    ],
+    "files": [
+      "T_foliage_BC.png",
+      "T_foliage_N.png",
+      "T_foliage_ORM.png"
+    ],
+    "method": "project-authored seeded procedural tiling maps"
+  },
+  {
+    "set": "yellow_edge",
+    "resolution": [
+      512,
+      512
+    ],
+    "files": [
+      "T_yellow_edge_BC.png",
+      "T_yellow_edge_N.png",
+      "T_yellow_edge_ORM.png"
+    ],
+    "method": "project-authored seeded procedural tiling maps"
+  }
+]

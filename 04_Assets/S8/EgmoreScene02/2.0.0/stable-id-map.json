@@ -1,0 +1,883 @@
+{
+  "newFamily": "Station.Egmore.Scene.02",
+  "existingCanonicalIDsModified": false,
+  "rejectedFamily": "Station.Egmore.Scene.01 v1.0.0",
+  "modules": [
+    {
+      "module": "EgmoreWaterPoint",
+      "newAssetId": "Station.Egmore.Scene.02.EgmoreWaterPoint",
+      "sourceAssetId": "Station.Kit.EgmoreWaterPoint",
+      "lodFiles": [
+        {
+          "level": 0,
+          "triangles": 3100,
+          "glb": "Modules/EgmoreWaterPoint_LOD0.glb",
+          "fbx": "Modules/EgmoreWaterPoint_LOD0.fbx"
+        },
+        {
+          "level": 1,
+          "triangles": 1550,
+          "glb": "Modules/EgmoreWaterPoint_LOD1.glb",
+          "fbx": "Modules/EgmoreWaterPoint_LOD1.fbx"
+        },
+        {
+          "level": 2,
+          "triangles": 620,
+          "glb": "Modules/EgmoreWaterPoint_LOD2.glb",
+          "fbx": "Modules/EgmoreWaterPoint_LOD2.fbx"
+        }
+      ]
+    },
+    {
+      "module": "EgmoreTower4m",
+      "newAssetId": "Station.Egmore.Scene.02.EgmoreTower4m",
+      "sourceAssetId": "Station.Kit.EgmoreTower4m",
+      "lodFiles": [
+        {
+          "level": 0,
+          "triangles": 16220,
+          "glb": "Modules/EgmoreTower4m_LOD0.glb",
+          "fbx": "Modules/EgmoreTower4m_LOD0.fbx"
+        },
+        {
+          "level": 1,
+          "triangles": 8110,
+          "glb": "Modules/EgmoreTower4m_LOD1.glb",
+          "fbx": "Modules/EgmoreTower4m_LOD1.fbx"
+        },
+        {
+          "level": 2,
+          "triangles": 3211,
+          "glb": "Modules/EgmoreTower4m_LOD2.glb",
+          "fbx": "Modules/EgmoreTower4m_LOD2.fbx"
+        }
+      ]
+    },
+    {
+      "module": "EgmorePlatformBench",
+      "newAssetId": "Station.Egmore.Scene.02.EgmorePlatformBench",
+      "sourceAssetId": "Station.Kit.EgmorePlatformBench",
+      "lodFiles": [
+        {
+          "level": 0,
+          "triangles": 1620,
+          "glb": "Modules/EgmorePlatformBench_LOD0.glb",
+          "fbx": "Modules/EgmorePlatformBench_LOD0.fbx"
+        },
+        {
+          "level": 1,
+          "triangles": 810,
+          "glb": "Modules/EgmorePlatformBench_LOD1.glb",
+          "fbx": "Modules/EgmorePlatformBench_LOD1.fbx"
+        },
+        {
+          "level": 2,
+          "triangles": 324,
+          "glb": "Modules/EgmorePlatformBench_LOD2.glb",
+          "fbx": "Modules/EgmorePlatformBench_LOD2.fbx"
+        }
+      ]
+    },
+    {
+      "module": "EgmoreLitterBins",
+      "newAssetId": "Station.Egmore.Scene.02.EgmoreLitterBins",
+      "sourceAssetId": "Station.Kit.EgmoreLitterBins",
+      "lodFiles": [
+        {
+          "level": 0,
+          "triangles": 860,
+          "glb": "Modules/EgmoreLitterBins_LOD0.glb",
+          "fbx": "Modules/EgmoreLitterBins_LOD0.fbx"
+        },
+        {
+          "level": 1,
+          "triangles": 430,
+          "glb": "Modules/EgmoreLitterBins_LOD1.glb",
+          "fbx": "Modules/EgmoreLitterBins_LOD1.fbx"
+        },
+        {
+          "level": 2,
+          "triangles": 172,
+          "glb": "Modules/EgmoreLitterBins_LOD2.glb",
+          "fbx": "Modules/EgmoreLitterBins_LOD2.fbx"
+        }
+      ]
+    },
+    {
+      "module": "EgmoreEntrance9m",
+      "newAssetId": "Station.Egmore.Scene.02.EgmoreEntrance9m",
+      "sourceAssetId": "Station.Kit.EgmoreEntrance9m",
+      "lodFiles": [
+        {
+          "level": 0,
+          "triangles": 14068,
+          "glb": "Modules/EgmoreEntrance9m_LOD0.glb",
+          "fbx": "Modules/EgmoreEntrance9m_LOD0.fbx"
+        },
+        {
+          "level": 1,
+          "triangles": 7034,
+          "glb": "Modules/EgmoreEntrance9m_LOD1.glb",
+          "fbx": "Modules/EgmoreEntrance9m_LOD1.fbx"
+        },
+        {
+          "level": 2,
+          "triangles": 2811,
+          "glb": "Modules/EgmoreEntrance9m_LOD2.glb",
+          "fbx": "Modules/EgmoreEntrance9m_LOD2.fbx"
+        }
+      ]
+    },
+    {
+      "module": "EgmoreDrain3m",
+      "newAssetId": "Station.Egmore.Scene.02.EgmoreDrain3m",
+      "sourceAssetId": "Station.Kit.EgmoreDrain3m",
+      "lodFiles": [
+        {
+          "level": 0,
+          "triangles": 362,
+          "glb": "Modules/EgmoreDrain3m_LOD0.glb",
+          "fbx": "Modules/EgmoreDrain3m_LOD0.fbx"
+        },
+        {
+          "level": 1,
+          "triangles": 180,
+          "glb": "Modules/EgmoreDrain3m_LOD1.glb",
+          "fbx": "Modules/EgmoreDrain3m_LOD1.fbx"
+        },
+        {
+          "level": 2,
+          "triangles": 48,
+          "glb": "Modules/EgmoreDrain3m_LOD2.glb",
+          "fbx": "Modules/EgmoreDrain3m_LOD2.fbx"
+        }
+      ]
+    },
+    {
+      "module": "EgmoreDome",
+      "newAssetId": "Station.Egmore.Scene.02.EgmoreDome",
+      "sourceAssetId": "Station.Kit.EgmoreDome",
+      "lodFiles": [
+        {
+          "level": 0,
+          "triangles": 908,
+          "glb": "Modules/EgmoreDome_LOD0.glb",
+          "fbx": "Modules/EgmoreDome_LOD0.fbx"
+        },
+        {
+          "level": 1,
+          "triangles": 454,
+          "glb": "Modules/EgmoreDome_LOD1.glb",
+          "fbx": "Modules/EgmoreDome_LOD1.fbx"
+        },
+        {
+          "level": 2,
+          "triangles": 180,
+          "glb": "Modules/EgmoreDome_LOD2.glb",
+          "fbx": "Modules/EgmoreDome_LOD2.fbx"
+        }
+      ]
+    },
+    {
+      "module": "EgmoreCeilingFan",
+      "newAssetId": "Station.Egmore.Scene.02.EgmoreCeilingFan",
+      "sourceAssetId": "Station.Kit.EgmoreCeilingFan",
+      "lodFiles": [
+        {
+          "level": 0,
+          "triangles": 416,
+          "glb": "Modules/EgmoreCeilingFan_LOD0.glb",
+          "fbx": "Modules/EgmoreCeilingFan_LOD0.fbx"
+        },
+        {
+          "level": 1,
+          "triangles": 208,
+          "glb": "Modules/EgmoreCeilingFan_LOD1.glb",
+          "fbx": "Modules/EgmoreCeilingFan_LOD1.fbx"
+        },
+        {
+          "level": 2,
+          "triangles": 82,
+          "glb": "Modules/EgmoreCeilingFan_LOD2.glb",
+          "fbx": "Modules/EgmoreCeilingFan_LOD2.fbx"
+        }
+      ]
+    },
+    {
+      "module": "EgmoreCanopy6m",
+      "newAssetId": "Station.Egmore.Scene.02.EgmoreCanopy6m",
+      "sourceAssetId": "Station.Kit.EgmoreCanopy6m",
+      "lodFiles": [
+        {
+          "level": 0,
+          "triangles": 3394,
+          "glb": "Modules/EgmoreCanopy6m_LOD0.glb",
+          "fbx": "Modules/EgmoreCanopy6m_LOD0.fbx"
+        },
+        {
+          "level": 1,
+          "triangles": 1694,
+          "glb": "Modules/EgmoreCanopy6m_LOD1.glb",
+          "fbx": "Modules/EgmoreCanopy6m_LOD1.fbx"
+        },
+        {
+          "level": 2,
+          "triangles": 646,
+          "glb": "Modules/EgmoreCanopy6m_LOD2.glb",
+          "fbx": "Modules/EgmoreCanopy6m_LOD2.fbx"
+        }
+      ]
+    },
+    {
+      "module": "EgmoreArcade6m",
+      "newAssetId": "Station.Egmore.Scene.02.EgmoreArcade6m",
+      "sourceAssetId": "Station.Kit.EgmoreArcade6m",
+      "lodFiles": [
+        {
+          "level": 0,
+          "triangles": 15900,
+          "glb": "Modules/EgmoreArcade6m_LOD0.glb",
+          "fbx": "Modules/EgmoreArcade6m_LOD0.fbx"
+        },
+        {
+          "level": 1,
+          "triangles": 7950,
+          "glb": "Modules/EgmoreArcade6m_LOD1.glb",
+          "fbx": "Modules/EgmoreArcade6m_LOD1.fbx"
+        },
+        {
+          "level": 2,
+          "triangles": 3015,
+          "glb": "Modules/EgmoreArcade6m_LOD2.glb",
+          "fbx": "Modules/EgmoreArcade6m_LOD2.fbx"
+        }
+      ]
+    },
+    {
+      "module": "EgmoreNameboard4m",
+      "newAssetId": "Station.Egmore.Scene.02.EgmoreNameboard4m",
+      "sourceAssetId": "Station.Kit.EgmoreNameboard4m",
+      "lodFiles": [
+        {
+          "level": 0,
+          "triangles": 760,
+          "glb": "Modules/EgmoreNameboard4m_LOD0.glb",
+          "fbx": "Modules/EgmoreNameboard4m_LOD0.fbx"
+        },
+        {
+          "level": 1,
+          "triangles": 380,
+          "glb": "Modules/EgmoreNameboard4m_LOD1.glb",
+          "fbx": "Modules/EgmoreNameboard4m_LOD1.fbx"
+        },
+        {
+          "level": 2,
+          "triangles": 152,
+          "glb": "Modules/EgmoreNameboard4m_LOD2.glb",
+          "fbx": "Modules/EgmoreNameboard4m_LOD2.fbx"
+        }
+      ]
+    },
+    {
+      "module": "Platform6x8m",
+      "newAssetId": "Station.Egmore.Scene.02.Platform6x8m",
+      "sourceAssetId": null,
+      "lodFiles": [
+        {
+          "level": 0,
+          "triangles": 70,
+          "glb": "Modules/Platform6x8m_LOD0.glb",
+          "fbx": "Modules/Platform6x8m_LOD0.fbx"
+        },
+        {
+          "level": 1,
+          "triangles": 70,
+          "glb": "Modules/Platform6x8m_LOD1.glb",
+          "fbx": "Modules/Platform6x8m_LOD1.fbx"
+        },
+        {
+          "level": 2,
+          "triangles": 70,
+          "glb": "Modules/Platform6x8m_LOD2.glb",
+          "fbx": "Modules/Platform6x8m_LOD2.fbx"
+        }
+      ]
+    },
+    {
+      "module": "Track6m",
+      "newAssetId": "Station.Egmore.Scene.02.Track6m",
+      "sourceAssetId": null,
+      "lodFiles": [
+        {
+          "level": 0,
+          "triangles": 672,
+          "glb": "Modules/Track6m_LOD0.glb",
+          "fbx": "Modules/Track6m_LOD0.fbx"
+        },
+        {
+          "level": 1,
+          "triangles": 336,
+          "glb": "Modules/Track6m_LOD1.glb",
+          "fbx": "Modules/Track6m_LOD1.fbx"
+        },
+        {
+          "level": 2,
+          "triangles": 88,
+          "glb": "Modules/Track6m_LOD2.glb",
+          "fbx": "Modules/Track6m_LOD2.fbx"
+        }
+      ]
+    },
+    {
+      "module": "Ballast6m",
+      "newAssetId": "Station.Egmore.Scene.02.Ballast6m",
+      "sourceAssetId": null,
+      "lodFiles": [
+        {
+          "level": 0,
+          "triangles": 12,
+          "glb": "Modules/Ballast6m_LOD0.glb",
+          "fbx": "Modules/Ballast6m_LOD0.fbx"
+        },
+        {
+          "level": 1,
+          "triangles": 12,
+          "glb": "Modules/Ballast6m_LOD1.glb",
+          "fbx": "Modules/Ballast6m_LOD1.fbx"
+        },
+        {
+          "level": 2,
+          "triangles": 12,
+          "glb": "Modules/Ballast6m_LOD2.glb",
+          "fbx": "Modules/Ballast6m_LOD2.fbx"
+        }
+      ]
+    },
+    {
+      "module": "BallastScatter6m",
+      "newAssetId": "Station.Egmore.Scene.02.BallastScatter6m",
+      "sourceAssetId": null,
+      "lodFiles": [
+        {
+          "level": 0,
+          "triangles": 960,
+          "glb": "Modules/BallastScatter6m_LOD0.glb",
+          "fbx": "Modules/BallastScatter6m_LOD0.fbx"
+        },
+        {
+          "level": 1,
+          "triangles": 480,
+          "glb": "Modules/BallastScatter6m_LOD1.glb",
+          "fbx": "Modules/BallastScatter6m_LOD1.fbx"
+        },
+        {
+          "level": 2,
+          "triangles": 167,
+          "glb": "Modules/BallastScatter6m_LOD2.glb",
+          "fbx": "Modules/BallastScatter6m_LOD2.fbx"
+        }
+      ]
+    },
+    {
+      "module": "GroundTile24m",
+      "newAssetId": "Station.Egmore.Scene.02.GroundTile24m",
+      "sourceAssetId": null,
+      "lodFiles": [
+        {
+          "level": 0,
+          "triangles": 12,
+          "glb": "Modules/GroundTile24m_LOD0.glb",
+          "fbx": "Modules/GroundTile24m_LOD0.fbx"
+        },
+        {
+          "level": 1,
+          "triangles": 12,
+          "glb": "Modules/GroundTile24m_LOD1.glb",
+          "fbx": "Modules/GroundTile24m_LOD1.fbx"
+        },
+        {
+          "level": 2,
+          "triangles": 12,
+          "glb": "Modules/GroundTile24m_LOD2.glb",
+          "fbx": "Modules/GroundTile24m_LOD2.fbx"
+        }
+      ]
+    },
+    {
+      "module": "RoadTile12m",
+      "newAssetId": "Station.Egmore.Scene.02.RoadTile12m",
+      "sourceAssetId": null,
+      "lodFiles": [
+        {
+          "level": 0,
+          "triangles": 24,
+          "glb": "Modules/RoadTile12m_LOD0.glb",
+          "fbx": "Modules/RoadTile12m_LOD0.fbx"
+        },
+        {
+          "level": 1,
+          "triangles": 24,
+          "glb": "Modules/RoadTile12m_LOD1.glb",
+          "fbx": "Modules/RoadTile12m_LOD1.fbx"
+        },
+        {
+          "level": 2,
+          "triangles": 24,
+          "glb": "Modules/RoadTile12m_LOD2.glb",
+          "fbx": "Modules/RoadTile12m_LOD2.fbx"
+        }
+      ]
+    },
+    {
+      "module": "Forecourt6m",
+      "newAssetId": "Station.Egmore.Scene.02.Forecourt6m",
+      "sourceAssetId": null,
+      "lodFiles": [
+        {
+          "level": 0,
+          "triangles": 24,
+          "glb": "Modules/Forecourt6m_LOD0.glb",
+          "fbx": "Modules/Forecourt6m_LOD0.fbx"
+        },
+        {
+          "level": 1,
+          "triangles": 24,
+          "glb": "Modules/Forecourt6m_LOD1.glb",
+          "fbx": "Modules/Forecourt6m_LOD1.fbx"
+        },
+        {
+          "level": 2,
+          "triangles": 24,
+          "glb": "Modules/Forecourt6m_LOD2.glb",
+          "fbx": "Modules/Forecourt6m_LOD2.fbx"
+        }
+      ]
+    },
+    {
+      "module": "BridgeStairs",
+      "newAssetId": "Station.Egmore.Scene.02.BridgeStairs",
+      "sourceAssetId": null,
+      "lodFiles": [
+        {
+          "level": 0,
+          "triangles": 728,
+          "glb": "Modules/BridgeStairs_LOD0.glb",
+          "fbx": "Modules/BridgeStairs_LOD0.fbx"
+        },
+        {
+          "level": 1,
+          "triangles": 332,
+          "glb": "Modules/BridgeStairs_LOD1.glb",
+          "fbx": "Modules/BridgeStairs_LOD1.fbx"
+        },
+        {
+          "level": 2,
+          "triangles": 112,
+          "glb": "Modules/BridgeStairs_LOD2.glb",
+          "fbx": "Modules/BridgeStairs_LOD2.fbx"
+        }
+      ]
+    },
+    {
+      "module": "BridgeDeck6m",
+      "newAssetId": "Station.Egmore.Scene.02.BridgeDeck6m",
+      "sourceAssetId": null,
+      "lodFiles": [
+        {
+          "level": 0,
+          "triangles": 276,
+          "glb": "Modules/BridgeDeck6m_LOD0.glb",
+          "fbx": "Modules/BridgeDeck6m_LOD0.fbx"
+        },
+        {
+          "level": 1,
+          "triangles": 131,
+          "glb": "Modules/BridgeDeck6m_LOD1.glb",
+          "fbx": "Modules/BridgeDeck6m_LOD1.fbx"
+        },
+        {
+          "level": 2,
+          "triangles": 33,
+          "glb": "Modules/BridgeDeck6m_LOD2.glb",
+          "fbx": "Modules/BridgeDeck6m_LOD2.fbx"
+        }
+      ]
+    },
+    {
+      "module": "BridgeDeckEntry-6",
+      "newAssetId": "Station.Egmore.Scene.02.BridgeDeckEntry-6",
+      "sourceAssetId": null,
+      "lodFiles": [
+        {
+          "level": 0,
+          "triangles": 300,
+          "glb": "Modules/BridgeDeckEntry-6_LOD0.glb",
+          "fbx": "Modules/BridgeDeckEntry-6_LOD0.fbx"
+        },
+        {
+          "level": 1,
+          "triangles": 146,
+          "glb": "Modules/BridgeDeckEntry-6_LOD1.glb",
+          "fbx": "Modules/BridgeDeckEntry-6_LOD1.fbx"
+        },
+        {
+          "level": 2,
+          "triangles": 38,
+          "glb": "Modules/BridgeDeckEntry-6_LOD2.glb",
+          "fbx": "Modules/BridgeDeckEntry-6_LOD2.fbx"
+        }
+      ]
+    },
+    {
+      "module": "BridgeDeckEntry12",
+      "newAssetId": "Station.Egmore.Scene.02.BridgeDeckEntry12",
+      "sourceAssetId": null,
+      "lodFiles": [
+        {
+          "level": 0,
+          "triangles": 300,
+          "glb": "Modules/BridgeDeckEntry12_LOD0.glb",
+          "fbx": "Modules/BridgeDeckEntry12_LOD0.fbx"
+        },
+        {
+          "level": 1,
+          "triangles": 146,
+          "glb": "Modules/BridgeDeckEntry12_LOD1.glb",
+          "fbx": "Modules/BridgeDeckEntry12_LOD1.fbx"
+        },
+        {
+          "level": 2,
+          "triangles": 38,
+          "glb": "Modules/BridgeDeckEntry12_LOD2.glb",
+          "fbx": "Modules/BridgeDeckEntry12_LOD2.fbx"
+        }
+      ]
+    },
+    {
+      "module": "BridgeDeckEntry30",
+      "newAssetId": "Station.Egmore.Scene.02.BridgeDeckEntry30",
+      "sourceAssetId": null,
+      "lodFiles": [
+        {
+          "level": 0,
+          "triangles": 252,
+          "glb": "Modules/BridgeDeckEntry30_LOD0.glb",
+          "fbx": "Modules/BridgeDeckEntry30_LOD0.fbx"
+        },
+        {
+          "level": 1,
+          "triangles": 122,
+          "glb": "Modules/BridgeDeckEntry30_LOD1.glb",
+          "fbx": "Modules/BridgeDeckEntry30_LOD1.fbx"
+        },
+        {
+          "level": 2,
+          "triangles": 31,
+          "glb": "Modules/BridgeDeckEntry30_LOD2.glb",
+          "fbx": "Modules/BridgeDeckEntry30_LOD2.fbx"
+        }
+      ]
+    },
+    {
+      "module": "BridgePier",
+      "newAssetId": "Station.Egmore.Scene.02.BridgePier",
+      "sourceAssetId": null,
+      "lodFiles": [
+        {
+          "level": 0,
+          "triangles": 12,
+          "glb": "Modules/BridgePier_LOD0.glb",
+          "fbx": "Modules/BridgePier_LOD0.fbx"
+        },
+        {
+          "level": 1,
+          "triangles": 12,
+          "glb": "Modules/BridgePier_LOD1.glb",
+          "fbx": "Modules/BridgePier_LOD1.fbx"
+        },
+        {
+          "level": 2,
+          "triangles": 12,
+          "glb": "Modules/BridgePier_LOD2.glb",
+          "fbx": "Modules/BridgePier_LOD2.fbx"
+        }
+      ]
+    },
+    {
+      "module": "OHEPortal",
+      "newAssetId": "Station.Egmore.Scene.02.OHEPortal",
+      "sourceAssetId": null,
+      "lodFiles": [
+        {
+          "level": 0,
+          "triangles": 1152,
+          "glb": "Modules/OHEPortal_LOD0.glb",
+          "fbx": "Modules/OHEPortal_LOD0.fbx"
+        },
+        {
+          "level": 1,
+          "triangles": 572,
+          "glb": "Modules/OHEPortal_LOD1.glb",
+          "fbx": "Modules/OHEPortal_LOD1.fbx"
+        },
+        {
+          "level": 2,
+          "triangles": 190,
+          "glb": "Modules/OHEPortal_LOD2.glb",
+          "fbx": "Modules/OHEPortal_LOD2.fbx"
+        }
+      ]
+    },
+    {
+      "module": "Wire18m",
+      "newAssetId": "Station.Egmore.Scene.02.Wire18m",
+      "sourceAssetId": null,
+      "lodFiles": [
+        {
+          "level": 0,
+          "triangles": 48,
+          "glb": "Modules/Wire18m_LOD0.glb",
+          "fbx": "Modules/Wire18m_LOD0.fbx"
+        },
+        {
+          "level": 1,
+          "triangles": 48,
+          "glb": "Modules/Wire18m_LOD1.glb",
+          "fbx": "Modules/Wire18m_LOD1.fbx"
+        },
+        {
+          "level": 2,
+          "triangles": 48,
+          "glb": "Modules/Wire18m_LOD2.glb",
+          "fbx": "Modules/Wire18m_LOD2.fbx"
+        }
+      ]
+    },
+    {
+      "module": "Cabinet",
+      "newAssetId": "Station.Egmore.Scene.02.Cabinet",
+      "sourceAssetId": null,
+      "lodFiles": [
+        {
+          "level": 0,
+          "triangles": 48,
+          "glb": "Modules/Cabinet_LOD0.glb",
+          "fbx": "Modules/Cabinet_LOD0.fbx"
+        },
+        {
+          "level": 1,
+          "triangles": 48,
+          "glb": "Modules/Cabinet_LOD1.glb",
+          "fbx": "Modules/Cabinet_LOD1.fbx"
+        },
+        {
+          "level": 2,
+          "triangles": 48,
+          "glb": "Modules/Cabinet_LOD2.glb",
+          "fbx": "Modules/Cabinet_LOD2.fbx"
+        }
+      ]
+    },
+    {
+      "module": "CableDuct6m",
+      "newAssetId": "Station.Egmore.Scene.02.CableDuct6m",
+      "sourceAssetId": null,
+      "lodFiles": [
+        {
+          "level": 0,
+          "triangles": 84,
+          "glb": "Modules/CableDuct6m_LOD0.glb",
+          "fbx": "Modules/CableDuct6m_LOD0.fbx"
+        },
+        {
+          "level": 1,
+          "triangles": 84,
+          "glb": "Modules/CableDuct6m_LOD1.glb",
+          "fbx": "Modules/CableDuct6m_LOD1.fbx"
+        },
+        {
+          "level": 2,
+          "triangles": 84,
+          "glb": "Modules/CableDuct6m_LOD2.glb",
+          "fbx": "Modules/CableDuct6m_LOD2.fbx"
+        }
+      ]
+    },
+    {
+      "module": "SignalUnbound",
+      "newAssetId": "Station.Egmore.Scene.02.SignalUnbound",
+      "sourceAssetId": null,
+      "lodFiles": [
+        {
+          "level": 0,
+          "triangles": 540,
+          "glb": "Modules/SignalUnbound_LOD0.glb",
+          "fbx": "Modules/SignalUnbound_LOD0.fbx"
+        },
+        {
+          "level": 1,
+          "triangles": 270,
+          "glb": "Modules/SignalUnbound_LOD1.glb",
+          "fbx": "Modules/SignalUnbound_LOD1.fbx"
+        },
+        {
+          "level": 2,
+          "triangles": 92,
+          "glb": "Modules/SignalUnbound_LOD2.glb",
+          "fbx": "Modules/SignalUnbound_LOD2.fbx"
+        }
+      ]
+    },
+    {
+      "module": "YardLamp",
+      "newAssetId": "Station.Egmore.Scene.02.YardLamp",
+      "sourceAssetId": null,
+      "lodFiles": [
+        {
+          "level": 0,
+          "triangles": 72,
+          "glb": "Modules/YardLamp_LOD0.glb",
+          "fbx": "Modules/YardLamp_LOD0.fbx"
+        },
+        {
+          "level": 1,
+          "triangles": 72,
+          "glb": "Modules/YardLamp_LOD1.glb",
+          "fbx": "Modules/YardLamp_LOD1.fbx"
+        },
+        {
+          "level": 2,
+          "triangles": 72,
+          "glb": "Modules/YardLamp_LOD2.glb",
+          "fbx": "Modules/YardLamp_LOD2.fbx"
+        }
+      ]
+    },
+    {
+      "module": "Boundary6m",
+      "newAssetId": "Station.Egmore.Scene.02.Boundary6m",
+      "sourceAssetId": null,
+      "lodFiles": [
+        {
+          "level": 0,
+          "triangles": 60,
+          "glb": "Modules/Boundary6m_LOD0.glb",
+          "fbx": "Modules/Boundary6m_LOD0.fbx"
+        },
+        {
+          "level": 1,
+          "triangles": 60,
+          "glb": "Modules/Boundary6m_LOD1.glb",
+          "fbx": "Modules/Boundary6m_LOD1.fbx"
+        },
+        {
+          "level": 2,
+          "triangles": 60,
+          "glb": "Modules/Boundary6m_LOD2.glb",
+          "fbx": "Modules/Boundary6m_LOD2.fbx"
+        }
+      ]
+    },
+    {
+      "module": "TreeBroadleaf",
+      "newAssetId": "Station.Egmore.Scene.02.TreeBroadleaf",
+      "sourceAssetId": null,
+      "lodFiles": [
+        {
+          "level": 0,
+          "triangles": 1944,
+          "glb": "Modules/TreeBroadleaf_LOD0.glb",
+          "fbx": "Modules/TreeBroadleaf_LOD0.fbx"
+        },
+        {
+          "level": 1,
+          "triangles": 963,
+          "glb": "Modules/TreeBroadleaf_LOD1.glb",
+          "fbx": "Modules/TreeBroadleaf_LOD1.fbx"
+        },
+        {
+          "level": 2,
+          "triangles": 330,
+          "glb": "Modules/TreeBroadleaf_LOD2.glb",
+          "fbx": "Modules/TreeBroadleaf_LOD2.fbx"
+        }
+      ]
+    },
+    {
+      "module": "UrbanA",
+      "newAssetId": "Station.Egmore.Scene.02.UrbanA",
+      "sourceAssetId": null,
+      "lodFiles": [
+        {
+          "level": 0,
+          "triangles": 168,
+          "glb": "Modules/UrbanA_LOD0.glb",
+          "fbx": "Modules/UrbanA_LOD0.fbx"
+        },
+        {
+          "level": 1,
+          "triangles": 84,
+          "glb": "Modules/UrbanA_LOD1.glb",
+          "fbx": "Modules/UrbanA_LOD1.fbx"
+        },
+        {
+          "level": 2,
+          "triangles": 19,
+          "glb": "Modules/UrbanA_LOD2.glb",
+          "fbx": "Modules/UrbanA_LOD2.fbx"
+        }
+      ]
+    },
+    {
+      "module": "UrbanB",
+      "newAssetId": "Station.Egmore.Scene.02.UrbanB",
+      "sourceAssetId": null,
+      "lodFiles": [
+        {
+          "level": 0,
+          "triangles": 240,
+          "glb": "Modules/UrbanB_LOD0.glb",
+          "fbx": "Modules/UrbanB_LOD0.fbx"
+        },
+        {
+          "level": 1,
+          "triangles": 120,
+          "glb": "Modules/UrbanB_LOD1.glb",
+          "fbx": "Modules/UrbanB_LOD1.fbx"
+        },
+        {
+          "level": 2,
+          "triangles": 30,
+          "glb": "Modules/UrbanB_LOD2.glb",
+          "fbx": "Modules/UrbanB_LOD2.fbx"
+        }
+      ]
+    },
+    {
+      "module": "HeritageRoof6m",
+      "newAssetId": "Station.Egmore.Scene.02.HeritageRoof6m",
+      "sourceAssetId": null,
+      "lodFiles": [
+        {
+          "level": 0,
+          "triangles": 12,
+          "glb": "Modules/HeritageRoof6m_LOD0.glb",
+          "fbx": "Modules/HeritageRoof6m_LOD0.fbx"
+        },
+        {
+          "level": 1,
+          "triangles": 12,
+          "glb": "Modules/HeritageRoof6m_LOD1.glb",
+          "fbx": "Modules/HeritageRoof6m_LOD1.fbx"
+        },
+        {
+          "level": 2,
+          "triangles": 12,
+          "glb": "Modules/HeritageRoof6m_LOD2.glb",
+          "fbx": "Modules/HeritageRoof6m_LOD2.fbx"
+        }
+      ]
+    }
+  ],
+  "placements": "manifest.json placements[].stableId"
+}

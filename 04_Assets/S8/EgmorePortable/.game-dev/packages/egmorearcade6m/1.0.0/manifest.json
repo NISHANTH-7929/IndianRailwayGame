@@ -1,0 +1,44 @@
+{
+  "assetId": "egmorearcade6m",
+  "description": "Original metric Egmore study module; estimated dimensions, visual acceptance and Android integration pending",
+  "displayName": "EgmoreArcade6m",
+  "files": [
+    {
+      "bytes": 7806184,
+      "kind": "model",
+      "path": "model.glb",
+      "sha256": "ecd510787175e62c42c04945f64824d220b63a9bbb68fcfcddf2de10fac0b5cf"
+    },
+    {
+      "bytes": 3361,
+      "kind": "metadata",
+      "path": "metadata.json",
+      "sha256": "306d42f0b714e70a12eea289985b603ce9fc0d9aad99dde9d025e8b5639aefe4"
+    },
+    {
+      "bytes": 624,
+      "kind": "provenance",
+      "path": "provenance.json",
+      "sha256": "bc3947e655d266b065c5ad4771f17b28c73487281a76609ce7754a6b0e2dbc5d"
+    },
+    {
+      "bytes": 4319,
+      "kind": "validation",
+      "path": "validation.json",
+      "sha256": "2eab6d119fc1d7fa0d7eedb718568af20ec2592efbfefb53a80ec6f763042ace"
+    }
+  ],
+  "license": "LicenseRef-ProjectOriginal",
+  "model": "model.glb",
+  "packageId": "pkg_1c2cfc20c51d8ff767205b0b",
+  "provenance": {
+    "origin": "authored"
+  },
+  "schema": "game_dev.asset_package.v1",
+  "validation": {
+    "errorCount": 0,
+    "passed": true,
+    "warningCount": 0
+  },
+  "version": "1.0.0"
+}

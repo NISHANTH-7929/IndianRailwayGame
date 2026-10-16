@@ -1,0 +1,338 @@
+{
+  "assetId": "chennai_egmore_station_art",
+  "category": "architecture",
+  "description": "Representative Chennai Egmore heritage station source scene, validated geometry and modular LOD exports. Source acceptance only; engine and Android acceptance pending.",
+  "displayName": "Chennai Egmore Station Art",
+  "inspection": {
+    "animationCount": 0,
+    "boundingBox": {
+      "max": [
+        144,
+        15.349999904632568,
+        48
+      ],
+      "min": [
+        -144,
+        -0.8199999928474426,
+        -72
+      ],
+      "sizeMeters": [
+        288,
+        16.16999989748001,
+        120
+      ]
+    },
+    "boundingBoxEmpty": false,
+    "fileBytes": 29286084,
+    "filePath": "model.glb",
+    "generator": "glTF-Transform v4.5.1",
+    "hasNormals": true,
+    "hasSkin": false,
+    "hasTangents": true,
+    "hasUVs": true,
+    "materialCount": 25,
+    "meshCount": 35,
+    "pbr": {
+      "hasBaseColorTexture": true,
+      "hasEmissiveTexture": false,
+      "hasMetallicRoughnessTexture": true,
+      "hasNormalTexture": true,
+      "hasOcclusionTexture": false
+    },
+    "primitiveCount": 100,
+    "sceneGraphFallback": false,
+    "textureCount": 40,
+    "textureResolutions": [
+      {
+        "bytes": 2849091,
+        "height": 1024,
+        "mimeType": "image/png",
+        "name": "T_EgmoreStone_N",
+        "width": 1024
+      },
+      {
+        "bytes": 1416677,
+        "height": 1024,
+        "mimeType": "image/png",
+        "name": "T_EgmoreStone_BC",
+        "width": 1024
+      },
+      {
+        "bytes": 1834995,
+        "height": 1024,
+        "mimeType": "image/png",
+        "name": "T_EgmoreStone_ORM",
+        "width": 1024
+      },
+      {
+        "bytes": 390226,
+        "height": 512,
+        "mimeType": "image/png",
+        "name": "T_Concrete_N",
+        "width": 512
+      },
+      {
+        "bytes": 367416,
+        "height": 512,
+        "mimeType": "image/png",
+        "name": "T_Concrete_BC",
+        "width": 512
+      },
+      {
+        "bytes": 434920,
+        "height": 512,
+        "mimeType": "image/png",
+        "name": "T_Concrete_ORM",
+        "width": 512
+      },
+      {
+        "bytes": 390088,
+        "height": 512,
+        "mimeType": "image/png",
+        "name": "T_EgmoreRed_N",
+        "width": 512
+      },
+      {
+        "bytes": 333035,
+        "height": 512,
+        "mimeType": "image/png",
+        "name": "T_EgmoreRed_BC",
+        "width": 512
+      },
+      {
+        "bytes": 436612,
+        "height": 512,
+        "mimeType": "image/png",
+        "name": "T_EgmoreRed_ORM",
+        "width": 512
+      },
+      {
+        "bytes": 389780,
+        "height": 512,
+        "mimeType": "image/png",
+        "name": "T_Cream_N",
+        "width": 512
+      },
+      {
+        "bytes": 402788,
+        "height": 512,
+        "mimeType": "image/png",
+        "name": "T_Cream_BC",
+        "width": 512
+      },
+      {
+        "bytes": 434391,
+        "height": 512,
+        "mimeType": "image/png",
+        "name": "T_Cream_ORM",
+        "width": 512
+      },
+      {
+        "bytes": 389602,
+        "height": 512,
+        "mimeType": "image/png",
+        "name": "T_EgmoreBlue_N",
+        "width": 512
+      },
+      {
+        "bytes": 388812,
+        "height": 512,
+        "mimeType": "image/png",
+        "name": "T_EgmoreBlue_BC",
+        "width": 512
+      },
+      {
+        "bytes": 445704,
+        "height": 512,
+        "mimeType": "image/png",
+        "name": "T_EgmoreBlue_ORM",
+        "width": 512
+      },
+      {
+        "bytes": 389755,
+        "height": 512,
+        "mimeType": "image/png",
+        "name": "T_Galvanized_N",
+        "width": 512
+      },
+      {
+        "bytes": 326189,
+        "height": 512,
+        "mimeType": "image/png",
+        "name": "T_Galvanized_BC",
+        "width": 512
+      },
+      {
+        "bytes": 449269,
+        "height": 512,
+        "mimeType": "image/png",
+        "name": "T_Galvanized_ORM",
+        "width": 512
+      },
+      {
+        "bytes": 389959,
+        "height": 512,
+        "mimeType": "image/png",
+        "name": "T_Black_N",
+        "width": 512
+      },
+      {
+        "bytes": 107689,
+        "height": 512,
+        "mimeType": "image/png",
+        "name": "T_Black_BC",
+        "width": 512
+      },
+      {
+        "bytes": 432894,
+        "height": 512,
+        "mimeType": "image/png",
+        "name": "T_Black_ORM",
+        "width": 512
+      },
+      {
+        "bytes": 389735,
+        "height": 512,
+        "mimeType": "image/png",
+        "name": "T_EgmoreLime_N",
+        "width": 512
+      },
+      {
+        "bytes": 404082,
+        "height": 512,
+        "mimeType": "image/png",
+        "name": "T_EgmoreLime_BC",
+        "width": 512
+      },
+      {
+        "bytes": 428445,
+        "height": 512,
+        "mimeType": "image/png",
+        "name": "T_EgmoreLime_ORM",
+        "width": 512
+      },
+      {
+        "bytes": 389844,
+        "height": 512,
+        "mimeType": "image/png",
+        "name": "T_Glass_N",
+        "width": 512
+      },
+      {
+        "bytes": 318958,
+        "height": 512,
+        "mimeType": "image/png",
+        "name": "T_Glass_BC",
+        "width": 512
+      },
+      {
+        "bytes": 442371,
+        "height": 512,
+        "mimeType": "image/png",
+        "name": "T_Glass_ORM",
+        "width": 512
+      },
+      {
+        "bytes": 389854,
+        "height": 512,
+        "mimeType": "image/png",
+        "name": "T_Wood_N",
+        "width": 512
+      },
+      {
+        "bytes": 321344,
+        "height": 512,
+        "mimeType": "image/png",
+        "name": "T_Wood_BC",
+        "width": 512
+      },
+      {
+        "bytes": 435060,
+        "height": 512,
+        "mimeType": "image/png",
+        "name": "T_Wood_ORM",
+        "width": 512
+      },
+      {
+        "bytes": 390229,
+        "height": 512,
+        "mimeType": "image/png",
+        "name": "T_Steel_N",
+        "width": 512
+      },
+      {
+        "bytes": 256548,
+        "height": 512,
+        "mimeType": "image/png",
+        "name": "T_Steel_BC",
+        "width": 512
+      },
+      {
+        "bytes": 448273,
+        "height": 512,
+        "mimeType": "image/png",
+        "name": "T_Steel_ORM",
+        "width": 512
+      },
+      {
+        "bytes": 389895,
+        "height": 512,
+        "mimeType": "image/png",
+        "name": "T_Yellow_N",
+        "width": 512
+      },
+      {
+        "bytes": 390458,
+        "height": 512,
+        "mimeType": "image/png",
+        "name": "T_Yellow_BC",
+        "width": 512
+      },
+      {
+        "bytes": 434606,
+        "height": 512,
+        "mimeType": "image/png",
+        "name": "T_Yellow_ORM",
+        "width": 512
+      },
+      {
+        "bytes": 1145009,
+        "height": 1024,
+        "mimeType": "image/png",
+        "name": "T_EgmoreName_BC",
+        "width": 2048
+      },
+      {
+        "bytes": 377281,
+        "height": 512,
+        "mimeType": "image/png",
+        "name": "T_Paving_N",
+        "width": 512
+      },
+      {
+        "bytes": 361768,
+        "height": 512,
+        "mimeType": "image/png",
+        "name": "T_Paving_BC",
+        "width": 512
+      },
+      {
+        "bytes": 283308,
+        "height": 512,
+        "mimeType": "image/png",
+        "name": "T_Paving_ORM",
+        "width": 512
+      }
+    ],
+    "triangleCount": 1095960,
+    "undrawnMeshCount": 0,
+    "undrawnPrimitiveCount": 0,
+    "undrawnTriangleCount": 0,
+    "vertexCount": 2914981,
+    "warnings": [
+      "texture is below 1024px on an axis and will blur at close range: T_Concrete_N (512x512), T_Concrete_BC (512x512), T_Concrete_ORM (512x512), T_EgmoreRed_N (512x512) (+32 more)"
+    ]
+  },
+  "license": "LicenseRef-Project-Original",
+  "schema": "game_dev.asset_metadata.v1"
+}

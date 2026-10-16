@@ -1,0 +1,1442 @@
+[
+  {
+    "path": "EgmoreScene.blend",
+    "bytes": 1872945,
+    "sha256": "3ce09338aa4143727802b72f2eb1fff39bb3ab7e2a9757c633aa7a25df3436be"
+  },
+  {
+    "path": "EgmoreScene.blend1",
+    "bytes": 1790382,
+    "sha256": "7406241d5888f24d5c47d43a4e1c2765c12f3d25c6d47078be60ab18cb1abb28"
+  },
+  {
+    "path": "EgmoreScene.glb",
+    "bytes": 29286084,
+    "sha256": "c09777218b90a8d796f4a7a92f90e76905e41f1684d38378ab3712d014766cda"
+  },
+  {
+    "path": "Evidence/binary-audit.json",
+    "bytes": 97319,
+    "sha256": "f1e54f17dc7b863e90605065a8d3a19328a1e68fa258d964ad544adc8f87c89f"
+  },
+  {
+    "path": "Evidence/clearance.json",
+    "bytes": 284,
+    "sha256": "cf32608728a7eb7d03da938615680bc4e65ae1f873b38dcb61e4f282acdb1770"
+  },
+  {
+    "path": "Evidence/game-dev-validation.json",
+    "bytes": 909,
+    "sha256": "f39ce44df4e5d31300e63d2d56b7adc503a7085ee9ed2ad01746786a5ab668a4"
+  },
+  {
+    "path": "Evidence/lookdev.json",
+    "bytes": 768,
+    "sha256": "29be9de727534ac49306cb42d47bec05f051403138f109d99a70a1edfece470c"
+  },
+  {
+    "path": "Evidence/package-build-02.json",
+    "bytes": 2481,
+    "sha256": "49ce9f74fe7c1aa27c82f2973b7aaf8c8083776c759db01177eb8224a4167651"
+  },
+  {
+    "path": "Evidence/package-build.json",
+    "bytes": 220,
+    "sha256": "608b435f895a2a3a716f29aca22110f72de70dcdc0ffae95bec0527124deda9e"
+  },
+  {
+    "path": "Evidence/package-verify-02.json",
+    "bytes": 2150,
+    "sha256": "49ef71b57b8b34d4f776d6b31a6a9e365ad692d55ac8efc1c9d42e8ebc27186a"
+  },
+  {
+    "path": "Evidence/package-verify.json",
+    "bytes": 366,
+    "sha256": "d47070be18592bed7c1ab33101b95eff7e5dac282121d2ec0311d2dbab071116"
+  },
+  {
+    "path": "Evidence/roundtrip.json",
+    "bytes": 26806,
+    "sha256": "29dc7f9d4981d8ba432c344639f8a9fed7081d9d408029b6e196ca8c3e848e40"
+  },
+  {
+    "path": "manifest.json",
+    "bytes": 352813,
+    "sha256": "34c264ad95f34fa873ed35cee72b758345a59b3794e60576d4d27447b5eeb8ca"
+  },
+  {
+    "path": "Modules/Ballast6m_LOD0.fbx",
+    "bytes": 19628,
+    "sha256": "8866917c63b5a9f8523dfee6fd7590c1c8fd1fee689efb5413f4ec0068fb7a4a"
+  },
+  {
+    "path": "Modules/Ballast6m_LOD0.glb",
+    "bytes": 6103808,
+    "sha256": "eb4ca45df6686359fe9df30e6c099dab0fdbcba583d5bae17ffefbb9ede5a147"
+  },
+  {
+    "path": "Modules/Ballast6m_LOD1.fbx",
+    "bytes": 19628,
+    "sha256": "d3a59f042d78a193a097270fb74562385695272cf7987a0f92ccb0df8ec59f0a"
+  },
+  {
+    "path": "Modules/Ballast6m_LOD1.glb",
+    "bytes": 6103808,
+    "sha256": "707a9e85469e50d21b4eb93ce7572d92635910f999698ddd276a7ab499293337"
+  },
+  {
+    "path": "Modules/Ballast6m_LOD2.fbx",
+    "bytes": 19628,
+    "sha256": "2f67a751413125a3f2a3c8f86c665faf32cf017d30b3773e7e2cdaceda5f5173"
+  },
+  {
+    "path": "Modules/Ballast6m_LOD2.glb",
+    "bytes": 6103808,
+    "sha256": "024810bab0bc73690ff68b0b8c5acd8e39e35b62650932984e08c82c791ebbc6"
+  },
+  {
+    "path": "Modules/BallastScatter6m_LOD0.fbx",
+    "bytes": 66492,
+    "sha256": "9fd21630316c9cda65635637e354eab8a3cad0f26f556d441635ca9541e046dd"
+  },
+  {
+    "path": "Modules/BallastScatter6m_LOD0.glb",
+    "bytes": 7440692,
+    "sha256": "44152ee656254f43f0a88fa53755c2d91031f8db21df6ea62bef715a5adacceb"
+  },
+  {
+    "path": "Modules/BallastScatter6m_LOD1.fbx",
+    "bytes": 47820,
+    "sha256": "d3047422a417a2be56589d9bf6cb9005906811c30683c11c1d2ea0173cf15032"
+  },
+  {
+    "path": "Modules/BallastScatter6m_LOD1.glb",
+    "bytes": 7368684,
+    "sha256": "aff7d1a892289e87835e79c9cad9256fa4237fb767ebf93d81e8a4d3678e2ee3"
+  },
+  {
+    "path": "Modules/BallastScatter6m_LOD2.fbx",
+    "bytes": 33532,
+    "sha256": "f2614c330ed92292b0232c462bc32162a0ef34025512df932359f7228449f62b"
+  },
+  {
+    "path": "Modules/BallastScatter6m_LOD2.glb",
+    "bytes": 7321724,
+    "sha256": "1a6ddf87808863cbba9376b930d48b52066df68520d0ed3062866c559738b612"
+  },
+  {
+    "path": "Modules/Boundary6m_LOD0.fbx",
+    "bytes": 23724,
+    "sha256": "c20beeb336678cb903fd8862a3d7fb4df17759298bb4fc07b309818e7d0e1a7c"
+  },
+  {
+    "path": "Modules/Boundary6m_LOD0.glb",
+    "bytes": 2396040,
+    "sha256": "53ca22824035d797d3941558c89218bafc7e761fe02d566c8a40aeb360174ba1"
+  },
+  {
+    "path": "Modules/Boundary6m_LOD1.fbx",
+    "bytes": 23724,
+    "sha256": "5ace6ddc46b1b0e70a5ec5bdb22f3cc6bf5406fa9f11fe45fe3f7ae46abd87f1"
+  },
+  {
+    "path": "Modules/Boundary6m_LOD1.glb",
+    "bytes": 2396040,
+    "sha256": "01d2bca646b3d85b6b52e76594f4d95dcaee96573037e3ddae974007ad2ed2e6"
+  },
+  {
+    "path": "Modules/Boundary6m_LOD2.fbx",
+    "bytes": 23724,
+    "sha256": "f1f965edbbb7131205f4bb1e9baa2326d0ef58e58ef5565f7ae60f7a5722ff10"
+  },
+  {
+    "path": "Modules/Boundary6m_LOD2.glb",
+    "bytes": 2396040,
+    "sha256": "7a4175da24c92cdfbcf8872516c29d6247bbc6ed1b01c7b5c9525f32867c87c3"
+  },
+  {
+    "path": "Modules/BridgeDeck6m_LOD0.fbx",
+    "bytes": 32316,
+    "sha256": "b808b7c4cbb4ecd634db357f3ce622c68b899e0af2a2a8fe6f9ba1aa3438c6c1"
+  },
+  {
+    "path": "Modules/BridgeDeck6m_LOD0.glb",
+    "bytes": 3676452,
+    "sha256": "d38c2c7d7079de94527f1b815e53dc24ce98decb010d77ed5284c60911ebe388"
+  },
+  {
+    "path": "Modules/BridgeDeck6m_LOD1.fbx",
+    "bytes": 30092,
+    "sha256": "20897cc53ab4185297aa2376401dc3386ffe4021e7299f96e712abec2169d92e"
+  },
+  {
+    "path": "Modules/BridgeDeck6m_LOD1.glb",
+    "bytes": 3667376,
+    "sha256": "16d6bd21fe52b74e53fdb03e9913f2494b395af60820ca62052887cac951f75f"
+  },
+  {
+    "path": "Modules/BridgeDeck6m_LOD2.fbx",
+    "bytes": 27612,
+    "sha256": "56be0480680a4bc779c7ede601a0a88721cd83328c615b3d9e139eb6ad8c063d"
+  },
+  {
+    "path": "Modules/BridgeDeck6m_LOD2.glb",
+    "bytes": 3653240,
+    "sha256": "856ac5c146b9debaa7c9508dc60bd8983d9ee5f2feca0715c961d228e39e791f"
+  },
+  {
+    "path": "Modules/BridgeDeckEntry-6_LOD0.fbx",
+    "bytes": 33132,
+    "sha256": "220782835e9cc6d4883f19bc0776eb23549ee7ce01f670f98181a8f65e367e9e"
+  },
+  {
+    "path": "Modules/BridgeDeckEntry-6_LOD0.glb",
+    "bytes": 3678904,
+    "sha256": "a5c4e2bb62c944181dba83aa6332e6aedfde24387d82a2b200ce0cb049f07b9c"
+  },
+  {
+    "path": "Modules/BridgeDeckEntry-6_LOD1.fbx",
+    "bytes": 30636,
+    "sha256": "078b16a5239254f3ff50b3196d0e5eacbf294738c563b66e8c3fc2b80b56cbe3"
+  },
+  {
+    "path": "Modules/BridgeDeckEntry-6_LOD1.glb",
+    "bytes": 3669624,
+    "sha256": "e7983a0ea800b9118a3337714e005929e05f46bbd33c51294615a919116056de"
+  },
+  {
+    "path": "Modules/BridgeDeckEntry-6_LOD2.fbx",
+    "bytes": 27900,
+    "sha256": "f5cf5062131925e5e577a7e7ef5b3339daaa020151018aa86ffe885d6d97fc9f"
+  },
+  {
+    "path": "Modules/BridgeDeckEntry-6_LOD2.glb",
+    "bytes": 3653996,
+    "sha256": "6681554802937d101caa21c3510f05de5b34aaf741c64fce7df1cc52a17d8b5a"
+  },
+  {
+    "path": "Modules/BridgeDeckEntry12_LOD0.fbx",
+    "bytes": 33100,
+    "sha256": "14906d287aa97544a7629f50b20d3253ebf9fab86a8e9bd12b26a1ae8d6cd769"
+  },
+  {
+    "path": "Modules/BridgeDeckEntry12_LOD0.glb",
+    "bytes": 3678904,
+    "sha256": "2e8dc20cd833b2a004dd180fa99ac7fa7e62fd74c11f94c219a3c11c3f4d4770"
+  },
+  {
+    "path": "Modules/BridgeDeckEntry12_LOD1.fbx",
+    "bytes": 30588,
+    "sha256": "99f4c7450b3ec25b284c150b2cc7190100bba98fc3a551d46600dcb6ee388adb"
+  },
+  {
+    "path": "Modules/BridgeDeckEntry12_LOD1.glb",
+    "bytes": 3669624,
+    "sha256": "dd963fb0146265ea035ddc240e7d05909ec3f110149784c7bb6dd6638f1962f2"
+  },
+  {
+    "path": "Modules/BridgeDeckEntry12_LOD2.fbx",
+    "bytes": 27916,
+    "sha256": "698aa3c92abc1cade7b083bd230f081de89076e26a581e8608ad312afff9051b"
+  },
+  {
+    "path": "Modules/BridgeDeckEntry12_LOD2.glb",
+    "bytes": 3653992,
+    "sha256": "7690b61a3f4f7d37ba8be4f631d379f4fbb65f6547cbf565de77f67241863842"
+  },
+  {
+    "path": "Modules/BridgeDeckEntry30_LOD0.fbx",
+    "bytes": 32028,
+    "sha256": "1ecebf7a6f0c5e45deae536325165634ab5132aef5ba18f28032b2b9e73609f2"
+  },
+  {
+    "path": "Modules/BridgeDeckEntry30_LOD0.glb",
+    "bytes": 3674008,
+    "sha256": "878a43f2b8f05f6f00f32b3de4b84d396f0dbce03c5925dda0d4c9ba71785741"
+  },
+  {
+    "path": "Modules/BridgeDeckEntry30_LOD1.fbx",
+    "bytes": 29884,
+    "sha256": "b574252f8d8e84d1626e09427a4614f5e51aa0b8bdc20ff319f27f11f1f80bff"
+  },
+  {
+    "path": "Modules/BridgeDeckEntry30_LOD1.glb",
+    "bytes": 3665928,
+    "sha256": "e5d0fa2c08f9dbbfec43ca11d29653a08eeee3ccc9a0241687cda17b00d1744d"
+  },
+  {
+    "path": "Modules/BridgeDeckEntry30_LOD2.fbx",
+    "bytes": 27660,
+    "sha256": "90493fb7a0cb81b9a0dca93a084afe02f9d40e1e5c48599227bc682f26b015e0"
+  },
+  {
+    "path": "Modules/BridgeDeckEntry30_LOD2.glb",
+    "bytes": 3652944,
+    "sha256": "86622d7b7ccffd8e68cb88fe7d558cdd3ee8155bccaf59adfdbea92e5741cebf"
+  },
+  {
+    "path": "Modules/BridgePier_LOD0.fbx",
+    "bytes": 19532,
+    "sha256": "90635c985ae143eba5df964cc8b765b66d91796c295aa84856fc0347170b085e"
+  },
+  {
+    "path": "Modules/BridgePier_LOD0.glb",
+    "bytes": 1195596,
+    "sha256": "9d892e563f1d26f04db58153a5323b7ebc1cc8e325c80b953e3bf21f7fb47305"
+  },
+  {
+    "path": "Modules/BridgePier_LOD1.fbx",
+    "bytes": 19532,
+    "sha256": "ed2ceab494226a091d9067a6119336882e222b64f5e41580adf275f6a0ed8622"
+  },
+  {
+    "path": "Modules/BridgePier_LOD1.glb",
+    "bytes": 1195596,
+    "sha256": "85d6d610593dcf2a36b5ab4fcfa298c7625408e3f44054d208e29ca44bce3669"
+  },
+  {
+    "path": "Modules/BridgePier_LOD2.fbx",
+    "bytes": 19532,
+    "sha256": "e9c0da87a6117da3573baf1d41394784a279936c8bba475877047ca4b79b7ec2"
+  },
+  {
+    "path": "Modules/BridgePier_LOD2.glb",
+    "bytes": 1195596,
+    "sha256": "ade3f09c919bf0f58689e4b1998d23034d832aef8225815d43c996d9c21b13fb"
+  },
+  {
+    "path": "Modules/BridgeStairs_LOD0.fbx",
+    "bytes": 37820,
+    "sha256": "7c6ea108117a9b0d39a7799673b17f2c422092255bebe36f254457c96ccf9128"
+  },
+  {
+    "path": "Modules/BridgeStairs_LOD0.glb",
+    "bytes": 2427276,
+    "sha256": "b56104bfcd3eafb892f2ef74b6978f8710ae811f4547f22a1d40546619b61c05"
+  },
+  {
+    "path": "Modules/BridgeStairs_LOD1.fbx",
+    "bytes": 31276,
+    "sha256": "29a215d9b6075c54dd3eee4b8739694efc720f785c62d6232ca027d2acfdbb4c"
+  },
+  {
+    "path": "Modules/BridgeStairs_LOD1.glb",
+    "bytes": 2390704,
+    "sha256": "1b794ec60c7cd3d7a913517f1192c5b7e23b5f2cbd92c7ab182f75f3e9d1d2b3"
+  },
+  {
+    "path": "Modules/BridgeStairs_LOD2.fbx",
+    "bytes": 27548,
+    "sha256": "469168a824ab722adc466623ac66608797c5e5b6e8d65749f6e2dba8a3eba2f2"
+  },
+  {
+    "path": "Modules/BridgeStairs_LOD2.glb",
+    "bytes": 2374644,
+    "sha256": "5eeb160c6e70510bb54bd95872408a4a64f593b9120eb07ada1719679dc6f7eb"
+  },
+  {
+    "path": "Modules/Cabinet_LOD0.fbx",
+    "bytes": 30044,
+    "sha256": "6c4ee6c34697813d6e157f55007550c87f04951366c83e69a332e3908f8e4da2"
+  },
+  {
+    "path": "Modules/Cabinet_LOD0.glb",
+    "bytes": 4525744,
+    "sha256": "f3145b8da45d0b8cb3c8e415a72d4665c6a9fadd709cb13684eca1083c8e5626"
+  },
+  {
+    "path": "Modules/Cabinet_LOD1.fbx",
+    "bytes": 30044,
+    "sha256": "d2c1e0fb7bca496d84c5d3837338cd65fab1188fd8c1cf6ab51bbb596b4aec3e"
+  },
+  {
+    "path": "Modules/Cabinet_LOD1.glb",
+    "bytes": 4525744,
+    "sha256": "be91adce736afa77982a54f0380966334097a39622315f64f5e4b2a5495f22cd"
+  },
+  {
+    "path": "Modules/Cabinet_LOD2.fbx",
+    "bytes": 30044,
+    "sha256": "e90f532470578f7dcd5f2c858a944eef7d920cc5da18559993ddc78499db5f73"
+  },
+  {
+    "path": "Modules/Cabinet_LOD2.glb",
+    "bytes": 4525744,
+    "sha256": "f7e8f2a73c03f5e34d407a27329515bcd081834a13c84419c758d1f58dba0046"
+  },
+  {
+    "path": "Modules/CableDuct6m_LOD0.fbx",
+    "bytes": 24108,
+    "sha256": "7217535f40dcb5cf1a8a923c0658fe89f8cdc134836552d8b5ca92644af1a995"
+  },
+  {
+    "path": "Modules/CableDuct6m_LOD0.glb",
+    "bytes": 2134924,
+    "sha256": "2a482df4514af86a77111ddcf7161f7de19d194ba5d4ee120cd933f8cbb85920"
+  },
+  {
+    "path": "Modules/CableDuct6m_LOD1.fbx",
+    "bytes": 24108,
+    "sha256": "17b9f8237d3dd9a91121e98493e53f3888f75d41886b782cde6db4f38f4c1598"
+  },
+  {
+    "path": "Modules/CableDuct6m_LOD1.glb",
+    "bytes": 2134924,
+    "sha256": "5046ff093234930095cd12c920fc3467ba8a9db1a59c638423ce685b28cd0af6"
+  },
+  {
+    "path": "Modules/CableDuct6m_LOD2.fbx",
+    "bytes": 24108,
+    "sha256": "66f5d27762e9b2a7fb0485eb07c2b9789fb122580c08adb6245efe072a856c74"
+  },
+  {
+    "path": "Modules/CableDuct6m_LOD2.glb",
+    "bytes": 2134924,
+    "sha256": "c74c1c8b33ed3d6f33de9f66ea7473fe1c6f60daac6668d76616058c15259ae7"
+  },
+  {
+    "path": "Modules/EgmoreArcade6m_LOD0.fbx",
+    "bytes": 508668,
+    "sha256": "15edb2c3129a483216c967259f193e4e2ec865b6984bd06206b38e9e4e8f4ffd"
+  },
+  {
+    "path": "Modules/EgmoreArcade6m_LOD0.glb",
+    "bytes": 6763432,
+    "sha256": "12e506a61da9f9d31825a52285ed560887b1ded8c3a095c80541703d2bb70bba"
+  },
+  {
+    "path": "Modules/EgmoreArcade6m_LOD1.fbx",
+    "bytes": 331116,
+    "sha256": "58f61a2907b1bb2040cfeb99e5c2bc377f15e11023ee8c846498855355e6bff0"
+  },
+  {
+    "path": "Modules/EgmoreArcade6m_LOD1.glb",
+    "bytes": 5863376,
+    "sha256": "ad671f08b7940e946840bcc1e54a1eb8c575be91524782820c0ec6db599822a2"
+  },
+  {
+    "path": "Modules/EgmoreArcade6m_LOD2.fbx",
+    "bytes": 169516,
+    "sha256": "cc0bed14f2d9f2127791836d2ff16110fda19c4187ea20bffb3177216c3d0e8a"
+  },
+  {
+    "path": "Modules/EgmoreArcade6m_LOD2.glb",
+    "bytes": 5134860,
+    "sha256": "8538e3efd0e65c1268d142499fdde902d8c2b54565fb61740d6e4786e0c29243"
+  },
+  {
+    "path": "Modules/EgmoreCanopy6m_LOD0.fbx",
+    "bytes": 153964,
+    "sha256": "233f2c2714c5679d63fdfcbdfc1b7a882bc3f52ad92cfe256e8947e4d1838f9a"
+  },
+  {
+    "path": "Modules/EgmoreCanopy6m_LOD0.glb",
+    "bytes": 7381516,
+    "sha256": "9a6e5f4e2c73cea0aa01aabdafda821a10cca10adf78798fe2f0ea24d985bf77"
+  },
+  {
+    "path": "Modules/EgmoreCanopy6m_LOD1.fbx",
+    "bytes": 99596,
+    "sha256": "6678aee9b15fd8141490e3542d87c20e2516e4308d5b11db43acd8ca3aed0aa5"
+  },
+  {
+    "path": "Modules/EgmoreCanopy6m_LOD1.glb",
+    "bytes": 7127532,
+    "sha256": "8d3c571231a4a720c52139fe96f7ac2821410c625f71c185cbab342ef646194b"
+  },
+  {
+    "path": "Modules/EgmoreCanopy6m_LOD2.fbx",
+    "bytes": 63724,
+    "sha256": "9e3e99926045adb0bd058f1cd01c82171a23cfe8455bbfecc0f818eb17cb3c00"
+  },
+  {
+    "path": "Modules/EgmoreCanopy6m_LOD2.glb",
+    "bytes": 6970112,
+    "sha256": "58a70d8660f081962c111de831d2e23b9be2782eb44137b46da0e6441ad5d8aa"
+  },
+  {
+    "path": "Modules/EgmoreCeilingFan_LOD0.fbx",
+    "bytes": 37404,
+    "sha256": "b2b860512831aaa6f4f374279d0a515465b2d071385ce33d310072de8dc21800"
+  },
+  {
+    "path": "Modules/EgmoreCeilingFan_LOD0.glb",
+    "bytes": 3538580,
+    "sha256": "25b927e83d80c6cf3cadcddbeba9fac2b1a70a2d5e3c5aafde267bde695a67db"
+  },
+  {
+    "path": "Modules/EgmoreCeilingFan_LOD1.fbx",
+    "bytes": 32284,
+    "sha256": "bbba81ca673a2e0efb2b8661c2dcf1e00b83833e45cb847f643d7630b411f8f6"
+  },
+  {
+    "path": "Modules/EgmoreCeilingFan_LOD1.glb",
+    "bytes": 3514860,
+    "sha256": "da48cd704e433510aa7c7c28ccf8dd8833f066c1bc40f693c8b53fd9017f9801"
+  },
+  {
+    "path": "Modules/EgmoreCeilingFan_LOD2.fbx",
+    "bytes": 28716,
+    "sha256": "4f6ff045d562ed589cf0d97d46b5e7c1f7511f163efb202274e2d7fd8813a34f"
+  },
+  {
+    "path": "Modules/EgmoreCeilingFan_LOD2.glb",
+    "bytes": 3502200,
+    "sha256": "fb492151448f8301df972ce0cb6bcfac120659ba572b4e4f3705c8512deff504"
+  },
+  {
+    "path": "Modules/EgmoreDome_LOD0.fbx",
+    "bytes": 42268,
+    "sha256": "6d26310562f56a36f88195414de745a9df139ed1f5be0e69d73d3451cda5bea6"
+  },
+  {
+    "path": "Modules/EgmoreDome_LOD0.glb",
+    "bytes": 1264792,
+    "sha256": "bfc5946d21a695497827cae9bd9773fd965bb2ffdb4561239d5597b58f00544b"
+  },
+  {
+    "path": "Modules/EgmoreDome_LOD1.fbx",
+    "bytes": 32108,
+    "sha256": "8914c5c5de2286040e96951f140726689b3bcb24955bafc21012d7f4441bd201"
+  },
+  {
+    "path": "Modules/EgmoreDome_LOD1.glb",
+    "bytes": 1244660,
+    "sha256": "eea934c0c4ef4bfc0eb6d1c442736697cf06c8fecbdbe81e63db07395fb172da"
+  },
+  {
+    "path": "Modules/EgmoreDome_LOD2.fbx",
+    "bytes": 24828,
+    "sha256": "8f45c564bc068f372b91176f3edfbedecd3298489d517386416070c0f819d8ad"
+  },
+  {
+    "path": "Modules/EgmoreDome_LOD2.glb",
+    "bytes": 1233560,
+    "sha256": "e19e0c8f3e5cccfeafdd7d85b6167f352879874549ee2a718f658b36eb50d412"
+  },
+  {
+    "path": "Modules/EgmoreDrain3m_LOD0.fbx",
+    "bytes": 36028,
+    "sha256": "532c0bfd571dd21296403a36aa8802c57b0476e079cbb3366189436935d0240b"
+  },
+  {
+    "path": "Modules/EgmoreDrain3m_LOD0.glb",
+    "bytes": 2345232,
+    "sha256": "73cb37bbe2a762af1112cc4514afaaea8041bdc0730cab306357216df5cc9090"
+  },
+  {
+    "path": "Modules/EgmoreDrain3m_LOD1.fbx",
+    "bytes": 29980,
+    "sha256": "751f580af6073473d43ca58df893e91e2be300a33edea063b99983195157e06e"
+  },
+  {
+    "path": "Modules/EgmoreDrain3m_LOD1.glb",
+    "bytes": 2317932,
+    "sha256": "10599f56ff1efe8e40f7b7a37319c6ddf5b9a646d255f875149fb8e24d7dac41"
+  },
+  {
+    "path": "Modules/EgmoreDrain3m_LOD2.fbx",
+    "bytes": 25468,
+    "sha256": "7872445e1adb5827f798fdc803ecf7e13110444786d23dfe86cca27c286f047f"
+  },
+  {
+    "path": "Modules/EgmoreDrain3m_LOD2.glb",
+    "bytes": 2298132,
+    "sha256": "add5797cdb1f5e10615355aa3d4980a584626951174b06d7aee615594e1bd44a"
+  },
+  {
+    "path": "Modules/EgmoreEntrance9m_LOD0.fbx",
+    "bytes": 364844,
+    "sha256": "00b5f67b079dae779696fc5bfba1bce45de1c85141f82733e20fd4823218500f"
+  },
+  {
+    "path": "Modules/EgmoreEntrance9m_LOD0.glb",
+    "bytes": 4840052,
+    "sha256": "aceb35b0f4ac6d5ef623ad4b2a81a7967435fa845a0114218321636ddd580832"
+  },
+  {
+    "path": "Modules/EgmoreEntrance9m_LOD1.fbx",
+    "bytes": 249884,
+    "sha256": "5adc3cf1363425b2ce3d5fa90252942e93b987e8e2dbc920b086f503ee1b8bea"
+  },
+  {
+    "path": "Modules/EgmoreEntrance9m_LOD1.glb",
+    "bytes": 4253232,
+    "sha256": "b9d51a1d340252260cd999ae4101e9041fa3c096df28443e320e67cc67351e4d"
+  },
+  {
+    "path": "Modules/EgmoreEntrance9m_LOD2.fbx",
+    "bytes": 125660,
+    "sha256": "7895f2b342c85a6fbb35beb88b30aba1f992fd6908b1094b0c4966b23419f2d6"
+  },
+  {
+    "path": "Modules/EgmoreEntrance9m_LOD2.glb",
+    "bytes": 3705412,
+    "sha256": "f6f6dfeb6074d0fe6488b12d630913cd30eac7baa406ffae87c0b339c8a5d254"
+  },
+  {
+    "path": "Modules/EgmoreLitterBins_LOD0.fbx",
+    "bytes": 53884,
+    "sha256": "88110a821a3584c3860cfdf01d3c0a8ebe60fc1dac073cf85cedb14797ad5107"
+  },
+  {
+    "path": "Modules/EgmoreLitterBins_LOD0.glb",
+    "bytes": 5741244,
+    "sha256": "85ed027242b4d2759863490e947defed5580d3159a8cdb7724a55c79d5fc5d0f"
+  },
+  {
+    "path": "Modules/EgmoreLitterBins_LOD1.fbx",
+    "bytes": 45500,
+    "sha256": "7cb3b7180a8a2ed419914b19b3c888b19883a04d96be56c2672da10ebde5d8c3"
+  },
+  {
+    "path": "Modules/EgmoreLitterBins_LOD1.glb",
+    "bytes": 5699868,
+    "sha256": "6b9b0cfc5e004bf8e981871bc49099df8af8dd48eccd1c81d82ac5fdaee14e22"
+  },
+  {
+    "path": "Modules/EgmoreLitterBins_LOD2.fbx",
+    "bytes": 38908,
+    "sha256": "bff20fb7aadb25f73f4a1f3322d542cfdac33e36543838e567c3c71f54757392"
+  },
+  {
+    "path": "Modules/EgmoreLitterBins_LOD2.glb",
+    "bytes": 5673912,
+    "sha256": "03ac04d79b694ee3310ada375b099e04699c05a352ec35d739c3eb82d3cf5c14"
+  },
+  {
+    "path": "Modules/EgmoreNameboard4m_LOD0.fbx",
+    "bytes": 43804,
+    "sha256": "166697446df060cd10112fb40081b5a263afde7b93a3fb27490757eaed6a94b1"
+  },
+  {
+    "path": "Modules/EgmoreNameboard4m_LOD0.glb",
+    "bytes": 3651196,
+    "sha256": "12a5e7451f386973f9046c086317a3574a9c2192e06ddce58591475a1b464c3b"
+  },
+  {
+    "path": "Modules/EgmoreNameboard4m_LOD1.fbx",
+    "bytes": 39036,
+    "sha256": "9ddf941b121f3749e1f8378e2b606a059a0cb4fb49ca7cb4c647b135f62a604f"
+  },
+  {
+    "path": "Modules/EgmoreNameboard4m_LOD1.glb",
+    "bytes": 3613580,
+    "sha256": "d1ab2ec408132fc45a98a46196b0a4cc9d754fac193b61c384840f2c5e36dd04"
+  },
+  {
+    "path": "Modules/EgmoreNameboard4m_LOD2.fbx",
+    "bytes": 31340,
+    "sha256": "ee642ed9de434648ca9007ceef905f52787d2c6abd4e7fce60ec622742ce995d"
+  },
+  {
+    "path": "Modules/EgmoreNameboard4m_LOD2.glb",
+    "bytes": 3579604,
+    "sha256": "56e334537a5ca3740952e197889d2404184608523f394011f6fca6eded0af827"
+  },
+  {
+    "path": "Modules/EgmorePlatformBench_LOD0.fbx",
+    "bytes": 68140,
+    "sha256": "2b8e746fd7a3f3335b453d7412eeb317cdd16f376be3ceadd88d3cc7f7aae1de"
+  },
+  {
+    "path": "Modules/EgmorePlatformBench_LOD0.glb",
+    "bytes": 4805440,
+    "sha256": "bae9789124076c18896a5b8992fa98204fe836933f47729b147c313882aaaee9"
+  },
+  {
+    "path": "Modules/EgmorePlatformBench_LOD1.fbx",
+    "bytes": 57228,
+    "sha256": "3732f860dd5b6d123f343ccd942f37fadb2dd93e527b1558a8c47c9e31db2bd0"
+  },
+  {
+    "path": "Modules/EgmorePlatformBench_LOD1.glb",
+    "bytes": 4726088,
+    "sha256": "1c7a27d376d1e3a3163ccae5e70e23883c304158937d424ff52a34141eb0e4bc"
+  },
+  {
+    "path": "Modules/EgmorePlatformBench_LOD2.fbx",
+    "bytes": 42220,
+    "sha256": "37eb23724b6b97669e7aad56182f75e635a5278c46599331b248a05f1b79461e"
+  },
+  {
+    "path": "Modules/EgmorePlatformBench_LOD2.glb",
+    "bytes": 4653980,
+    "sha256": "5775a4f3514d17965496bc2aa6bc9b47ca5497bffad46fdd7b409196d8fbe35e"
+  },
+  {
+    "path": "Modules/EgmoreTower4m_LOD0.fbx",
+    "bytes": 541532,
+    "sha256": "376a9c9c1dba1e5f9beeea7eca7ec099b79698047f2d353d6fed9aba74b85527"
+  },
+  {
+    "path": "Modules/EgmoreTower4m_LOD0.glb",
+    "bytes": 6927928,
+    "sha256": "4c4fa5f55d9e4c4f006d3bbbe212dcbc66a1f02274c9c2e2bd93b5d3da729cfc"
+  },
+  {
+    "path": "Modules/EgmoreTower4m_LOD1.fbx",
+    "bytes": 311084,
+    "sha256": "d8e35b5665adcfacfbf884f5ea5ea403db8af85f32258700adc2c30706f85bfb"
+  },
+  {
+    "path": "Modules/EgmoreTower4m_LOD1.glb",
+    "bytes": 5780844,
+    "sha256": "db67f746a5acc4c55c1f504f1d57357a34892eba17ca1783a081a8c598f84929"
+  },
+  {
+    "path": "Modules/EgmoreTower4m_LOD2.fbx",
+    "bytes": 172844,
+    "sha256": "75e7825ae850cd1095add6d1d51f6e48ab69ae4cf0e556054d6ec5733e3d6d07"
+  },
+  {
+    "path": "Modules/EgmoreTower4m_LOD2.glb",
+    "bytes": 5164216,
+    "sha256": "5339cfd6aaecdc64c48fcbd7f10ba50659cb17f86940338f72f062fe9ff47a17"
+  },
+  {
+    "path": "Modules/EgmoreWaterPoint_LOD0.fbx",
+    "bytes": 114572,
+    "sha256": "de7b55f3091bd3a90cfdcd447f0b33aa18362f33e5c386e64b61a8e9116ddf98"
+  },
+  {
+    "path": "Modules/EgmoreWaterPoint_LOD0.glb",
+    "bytes": 6221168,
+    "sha256": "10495409ab8f51968096286737245ff81b6efbc24461385234e40ea8eb74e8cb"
+  },
+  {
+    "path": "Modules/EgmoreWaterPoint_LOD1.fbx",
+    "bytes": 81916,
+    "sha256": "4e3584a8cb7d7f0888e51f34f30f77827e758efc0e3ae6e2bad9cee6a467ed54"
+  },
+  {
+    "path": "Modules/EgmoreWaterPoint_LOD1.glb",
+    "bytes": 6136024,
+    "sha256": "0f13890f80802e435921f3d74f16c92e86109983ff15765ca3313f66b7d521d5"
+  },
+  {
+    "path": "Modules/EgmoreWaterPoint_LOD2.fbx",
+    "bytes": 56988,
+    "sha256": "b5eabde632d46fd38a634fadbab6d29e909707ec8acfaf94f5ff82cacb763426"
+  },
+  {
+    "path": "Modules/EgmoreWaterPoint_LOD2.glb",
+    "bytes": 6029784,
+    "sha256": "86617ba20ad0d242b73ec056e40d82bc04499139a63d7f6b638151fd747553e9"
+  },
+  {
+    "path": "Modules/Forecourt6m_LOD0.fbx",
+    "bytes": 23036,
+    "sha256": "3fdbe84e9fd62f34c1051a5c6b328fc993b00e8362044ee1a5e9958f4d8aeee8"
+  },
+  {
+    "path": "Modules/Forecourt6m_LOD0.glb",
+    "bytes": 2254956,
+    "sha256": "28048989087340171be6769f78d0c036ca39fc44a13eb8e5df664ffd7756b9fd"
+  },
+  {
+    "path": "Modules/Forecourt6m_LOD1.fbx",
+    "bytes": 23036,
+    "sha256": "2b728875a08f92f8237f50ee30af0176629efe035b3c6f772a72619b2e48745d"
+  },
+  {
+    "path": "Modules/Forecourt6m_LOD1.glb",
+    "bytes": 2254956,
+    "sha256": "fad713415e8d4370365dc8ba6069bd0125a6113b0e5979eb1fcde84105a40a28"
+  },
+  {
+    "path": "Modules/Forecourt6m_LOD2.fbx",
+    "bytes": 23036,
+    "sha256": "d5969dd59e43daababc854a9c0f1a28b58754b761397c7fafcfcfb30679d458f"
+  },
+  {
+    "path": "Modules/Forecourt6m_LOD2.glb",
+    "bytes": 2254956,
+    "sha256": "3a252ff480314830e7d6a9a99b8afe35db13d246e1f3339a0cae7272ad3ab252"
+  },
+  {
+    "path": "Modules/GroundTile24m_LOD0.fbx",
+    "bytes": 19564,
+    "sha256": "e9c55006a6a0000d4797f98cfa1734220388ea7d0f8eb93deaba5506d7022f22"
+  },
+  {
+    "path": "Modules/GroundTile24m_LOD0.glb",
+    "bytes": 6103776,
+    "sha256": "4acc748acc64588dba4077f7ba448363175e0a982b95b77e987b8b0d48c7ae2f"
+  },
+  {
+    "path": "Modules/GroundTile24m_LOD1.fbx",
+    "bytes": 19564,
+    "sha256": "71ad3445e4f58c8791fef0f15796959ca9d77e0bdf28bafe0a6a4f2af099dffe"
+  },
+  {
+    "path": "Modules/GroundTile24m_LOD1.glb",
+    "bytes": 6103776,
+    "sha256": "c424be9785785bc9be1a223bc0d6b27b070dec352f2adefc50463fd41f39649e"
+  },
+  {
+    "path": "Modules/GroundTile24m_LOD2.fbx",
+    "bytes": 19564,
+    "sha256": "37186b4616e3b5e75da76301986d0ad4d10fc8511a5c550d872b3e5077e7058a"
+  },
+  {
+    "path": "Modules/GroundTile24m_LOD2.glb",
+    "bytes": 6103776,
+    "sha256": "e9a347d00c065b67f75fb1bab6620daa1766364a87a9d3e57e2fde0ece32776d"
+  },
+  {
+    "path": "Modules/HeritageRoof6m_LOD0.fbx",
+    "bytes": 19580,
+    "sha256": "ce6165bfc8c6ced85675d5962bdd6d6569fa566c2ce0c0ce01c1b938bf3269a8"
+  },
+  {
+    "path": "Modules/HeritageRoof6m_LOD0.glb",
+    "bytes": 1227112,
+    "sha256": "4dddf9eff9b4b5ea4c7f690110c47fd9d933db9d507ca7c8f6318007fee49dc2"
+  },
+  {
+    "path": "Modules/HeritageRoof6m_LOD1.fbx",
+    "bytes": 19580,
+    "sha256": "8ab9783fb010cb9ae5bf4063c5909927576713969fc6b52b38825641c4424bfe"
+  },
+  {
+    "path": "Modules/HeritageRoof6m_LOD1.glb",
+    "bytes": 1227112,
+    "sha256": "e8767013e252b2a50e204ec2d43a08c7ad960ea6810ad7d0b2b2af1754d5f180"
+  },
+  {
+    "path": "Modules/HeritageRoof6m_LOD2.fbx",
+    "bytes": 19580,
+    "sha256": "fb94cd0682ac916f3a82ca9525bcb50018be55148e8754451ef63aad8a9d9052"
+  },
+  {
+    "path": "Modules/HeritageRoof6m_LOD2.glb",
+    "bytes": 1227112,
+    "sha256": "0f6138c08012d6d75619a31c0a782d5c563198a4c70d2edadfb245edef476d1d"
+  },
+  {
+    "path": "Modules/OHEPortal_LOD0.fbx",
+    "bytes": 51708,
+    "sha256": "f0e846b2d6eeb2698f80c8248daaebf6fa8f6a9bfe3a18cb82594e9d189417f8"
+  },
+  {
+    "path": "Modules/OHEPortal_LOD0.glb",
+    "bytes": 3568204,
+    "sha256": "cf51e4acd2ab8d993444937d4c7c95d99813e31ac101a3db1f8f51f6b84cf6e1"
+  },
+  {
+    "path": "Modules/OHEPortal_LOD1.fbx",
+    "bytes": 44748,
+    "sha256": "dc3160f22e3176d121dbe23dde352de69a4bf978f533725ab2fcffac61b187d1"
+  },
+  {
+    "path": "Modules/OHEPortal_LOD1.glb",
+    "bytes": 3538260,
+    "sha256": "823a8a22255c306a038b19e40b06b662b821a6de1298da947ae5dd23382d1562"
+  },
+  {
+    "path": "Modules/OHEPortal_LOD2.fbx",
+    "bytes": 34524,
+    "sha256": "d7d86cd3a6ccad9eaec02c3bcb14c0477b5c68bbad04a2069c2ba3e9e2f9ef74"
+  },
+  {
+    "path": "Modules/OHEPortal_LOD2.glb",
+    "bytes": 3486000,
+    "sha256": "65e28e9202a5ab9ed889bf745825bb2822eaa039e437ea3e51b864c230cfbc87"
+  },
+  {
+    "path": "Modules/Platform6x8m_LOD0.fbx",
+    "bytes": 30332,
+    "sha256": "770fe259851a0f92c4596c0d348ace1064af4ee08b27e74435f63c542749523c"
+  },
+  {
+    "path": "Modules/Platform6x8m_LOD0.glb",
+    "bytes": 4636872,
+    "sha256": "527ab80f5392dd7f4c77460551b2b23621ed4a47b61671dd4e4768e0cec9587c"
+  },
+  {
+    "path": "Modules/Platform6x8m_LOD1.fbx",
+    "bytes": 30332,
+    "sha256": "c427cad9d64ce3efaa514f01cc9bf6bff6d39d2a703109643e14725767c04525"
+  },
+  {
+    "path": "Modules/Platform6x8m_LOD1.glb",
+    "bytes": 4636872,
+    "sha256": "7a11b6136b33020a452020f7707cbb0bcfdffde2b52612f5e128a3f726e2db6b"
+  },
+  {
+    "path": "Modules/Platform6x8m_LOD2.fbx",
+    "bytes": 30332,
+    "sha256": "03c8646c5884c4f1f9178570b4c415d08bfe6d215f53ace2c5d004dd03c266b9"
+  },
+  {
+    "path": "Modules/Platform6x8m_LOD2.glb",
+    "bytes": 4636872,
+    "sha256": "fdf46f7e74add66ea4f64ff00f75c7870cc8162f88580cd15e79c771b2072dad"
+  },
+  {
+    "path": "Modules/RoadTile12m_LOD0.fbx",
+    "bytes": 20924,
+    "sha256": "1cb55a0578255f7cef4792223a761c0d6515742c0942f4514bffd5afd6b8f411"
+  },
+  {
+    "path": "Modules/RoadTile12m_LOD0.glb",
+    "bytes": 1232000,
+    "sha256": "12c0361323ae0286e95da0eccf2c9943922d7fb8eee6dd166edd9b118798759c"
+  },
+  {
+    "path": "Modules/RoadTile12m_LOD1.fbx",
+    "bytes": 20924,
+    "sha256": "4e96925919421e9f6c498b0207a00e1a1acb46a8bfd1b5f86afffe822c692af3"
+  },
+  {
+    "path": "Modules/RoadTile12m_LOD1.glb",
+    "bytes": 1232000,
+    "sha256": "d3f204c1d266643589407d646be8e8cc2ac370473e3ba0fd8f8b1b0a76fceeeb"
+  },
+  {
+    "path": "Modules/RoadTile12m_LOD2.fbx",
+    "bytes": 20924,
+    "sha256": "391b7ade01eb4d0494fd343761c9826bc2e75a285a92b6e05e3ff9b021dc6c7f"
+  },
+  {
+    "path": "Modules/RoadTile12m_LOD2.glb",
+    "bytes": 1232000,
+    "sha256": "5dc885de4154e13cc4b1b3ace7d18d7b43d7417e94ab955a3be1da65661b2503"
+  },
+  {
+    "path": "Modules/SignalUnbound_LOD0.fbx",
+    "bytes": 41132,
+    "sha256": "9b8207b74a4b222445259599cb6e7b8a25a4c2c81dc9abca83fb280b1820d0b3"
+  },
+  {
+    "path": "Modules/SignalUnbound_LOD0.glb",
+    "bytes": 4496776,
+    "sha256": "6e33b234b89a8b038ce139a79b7213e6430cdb0eb5ba19a6901a992bfa229638"
+  },
+  {
+    "path": "Modules/SignalUnbound_LOD1.fbx",
+    "bytes": 37884,
+    "sha256": "b1e6172874224df695d665b77df21dfa44ed4cd7543d1c5e03b03f8ad882f1fd"
+  },
+  {
+    "path": "Modules/SignalUnbound_LOD1.glb",
+    "bytes": 4484544,
+    "sha256": "2f9787451d1dea4736332c19b8f4882aba0ddf3a2eadac5822c5d358dbee8636"
+  },
+  {
+    "path": "Modules/SignalUnbound_LOD2.fbx",
+    "bytes": 33068,
+    "sha256": "0d786b5ee0e919cd3ac05074d1ccfb25298534217d058286af46f5d49480e900"
+  },
+  {
+    "path": "Modules/SignalUnbound_LOD2.glb",
+    "bytes": 4459504,
+    "sha256": "41767ab493b8048425b248f5f45b211f276cf1b8141f5ed3b97e7b53d3ef5e9f"
+  },
+  {
+    "path": "Modules/Track6m_LOD0.fbx",
+    "bytes": 33708,
+    "sha256": "127c521512fdc0ba1f5884ad232fdc364cdfb9bac972efec2d0747f9ca9bf181"
+  },
+  {
+    "path": "Modules/Track6m_LOD0.glb",
+    "bytes": 1265032,
+    "sha256": "d1a94a3785f0dcfbdd26e25fb14529e2c250c75db3c97300705504399b7b4550"
+  },
+  {
+    "path": "Modules/Track6m_LOD1.fbx",
+    "bytes": 30492,
+    "sha256": "62780aae58543e8f8b5714e212859ea002403757e2acb3e49afd70f46a35d073"
+  },
+  {
+    "path": "Modules/Track6m_LOD1.glb",
+    "bytes": 1241120,
+    "sha256": "ba006e19b4eb53f1aeff68e0a3760ab5435eb71ab5f51e0b3869a5c8f35e2587"
+  },
+  {
+    "path": "Modules/Track6m_LOD2.fbx",
+    "bytes": 25500,
+    "sha256": "807c044a99906ba40795b55b67421b71370e111d6566f625472ba074f6fc90bb"
+  },
+  {
+    "path": "Modules/Track6m_LOD2.glb",
+    "bytes": 1209676,
+    "sha256": "130d3e3770325d1650cbe7c9372882d11836ebbe6319fcb292bfea787f4fbdff"
+  },
+  {
+    "path": "Modules/TreeBroadleaf_LOD0.fbx",
+    "bytes": 97852,
+    "sha256": "ad5f19296508ccc980d548cabc0ab541d5ed600cd4eae49917093c734835efee"
+  },
+  {
+    "path": "Modules/TreeBroadleaf_LOD0.glb",
+    "bytes": 288236,
+    "sha256": "7c5f54e36c08cef60cd6b6bdb0bbf6a26a6e3599ef097c6453d1849d8997f7df"
+  },
+  {
+    "path": "Modules/TreeBroadleaf_LOD1.fbx",
+    "bytes": 65260,
+    "sha256": "277f9658023e1ef6e91b447248a849a92484ce6f3a2dba7d1caeff9ff7f86c3d"
+  },
+  {
+    "path": "Modules/TreeBroadleaf_LOD1.glb",
+    "bytes": 147964,
+    "sha256": "9fdef8baf8aea0b7a0d91b16f723bf249ef482043cf08bb344b338599f42f177"
+  },
+  {
+    "path": "Modules/TreeBroadleaf_LOD2.fbx",
+    "bytes": 37964,
+    "sha256": "68ae9813c815186105374268f31a323cc7dd2e4872c7498f18ac4f62c6c1b364"
+  },
+  {
+    "path": "Modules/TreeBroadleaf_LOD2.glb",
+    "bytes": 52992,
+    "sha256": "e5305462b0973a44dcf8110449ff9ad272c6e8a6eda81ad7fd50cb5b2439a3ab"
+  },
+  {
+    "path": "Modules/UrbanA_LOD0.fbx",
+    "bytes": 26860,
+    "sha256": "6efa240d280fef2c5df94954f8d50a8b7e3a3eedd0b7e719127891d8dd63940b"
+  },
+  {
+    "path": "Modules/UrbanA_LOD0.glb",
+    "bytes": 2399496,
+    "sha256": "c0f7d91f288469125d269d2d33a7ad0f46df61b6a4f2242e9873852677c9cfa1"
+  },
+  {
+    "path": "Modules/UrbanA_LOD1.fbx",
+    "bytes": 26028,
+    "sha256": "512dd69ffeca4b7a48d7aaebc2050abe00e1373a36213c079049dc07c0825b7f"
+  },
+  {
+    "path": "Modules/UrbanA_LOD1.glb",
+    "bytes": 2394380,
+    "sha256": "305edc40cc26bc8fa8b7e3e4d6bb04a3808504452d901f01aae6c6b749da4189"
+  },
+  {
+    "path": "Modules/UrbanA_LOD2.fbx",
+    "bytes": 24508,
+    "sha256": "a5625674986c5417cb3e5c5fe3c0aef97a409bdd54bce5f58924a6b27ff76909"
+  },
+  {
+    "path": "Modules/UrbanA_LOD2.glb",
+    "bytes": 2385188,
+    "sha256": "3bf5dcc85fd69eea8b1c642fd8766e0fad0ef53381cca4bb78c4407624f8d43f"
+  },
+  {
+    "path": "Modules/UrbanB_LOD0.fbx",
+    "bytes": 28060,
+    "sha256": "d18c1a62081728f1f04444299717940a8c4de8153aa50805b122d301222b7e08"
+  },
+  {
+    "path": "Modules/UrbanB_LOD0.glb",
+    "bytes": 2406840,
+    "sha256": "00402619b4465b4a16000449b33817c5815f162e873213673139ea67dca3624d"
+  },
+  {
+    "path": "Modules/UrbanB_LOD1.fbx",
+    "bytes": 27100,
+    "sha256": "b4a600204e9b3484453b7672c21d4c7093f9c0588a9f8d717c68d20069b59798"
+  },
+  {
+    "path": "Modules/UrbanB_LOD1.glb",
+    "bytes": 2399784,
+    "sha256": "71c78783bf4c980e6a9b6cde39b2011573fabb95fad60f52cabb978720c3d4e1"
+  },
+  {
+    "path": "Modules/UrbanB_LOD2.fbx",
+    "bytes": 25004,
+    "sha256": "f910fcc1593f62dee50dff943b72ef84555c139c2329a3644f45929bc105431f"
+  },
+  {
+    "path": "Modules/UrbanB_LOD2.glb",
+    "bytes": 2386856,
+    "sha256": "e5501185d563843c0c7c29cca52e131af45589fab76f7f35d641616c6cc4aaf3"
+  },
+  {
+    "path": "Modules/Wire18m_LOD0.fbx",
+    "bytes": 20876,
+    "sha256": "28dfb16071eba3a955e87c84bb45aa53851e5c9a7a8f948128e2aa116dafe2bb"
+  },
+  {
+    "path": "Modules/Wire18m_LOD0.glb",
+    "bytes": 1101876,
+    "sha256": "e0fa3b1b79c3421528a1c8fb1f971f696b14bc3c67913c71e9b0938afb1e3db1"
+  },
+  {
+    "path": "Modules/Wire18m_LOD1.fbx",
+    "bytes": 20876,
+    "sha256": "1ce41b2a4cb393e8ec25344cbc270a5ecdbb5860a9088fe0d5059595bde54ed0"
+  },
+  {
+    "path": "Modules/Wire18m_LOD1.glb",
+    "bytes": 1101876,
+    "sha256": "a13a6d1ef62c7f16494239b016d97b5505c06412269caf4df9d137e273f52046"
+  },
+  {
+    "path": "Modules/Wire18m_LOD2.fbx",
+    "bytes": 20876,
+    "sha256": "614f6fbfbcbdb4ddc69d455fca7c9b67fa3b55fb4770f2f5037f271b68d4420a"
+  },
+  {
+    "path": "Modules/Wire18m_LOD2.glb",
+    "bytes": 1101876,
+    "sha256": "fa39fef85483c48780c602e005ee93ce201f215e8f5db994c403a90ade539262"
+  },
+  {
+    "path": "Modules/YardLamp_LOD0.fbx",
+    "bytes": 25564,
+    "sha256": "cd29300b9b123c8a2563b86519475a1073104eb871cfaae81d824f8607ba95bc"
+  },
+  {
+    "path": "Modules/YardLamp_LOD0.glb",
+    "bytes": 2368724,
+    "sha256": "94e03a29a2e52a7f3c378fddddf159e56d5617829d27ec782a9023c805ec4648"
+  },
+  {
+    "path": "Modules/YardLamp_LOD1.fbx",
+    "bytes": 25564,
+    "sha256": "9f05234819925cff6e420e16465d43c88cf6e0e46ab5060798217e399755f498"
+  },
+  {
+    "path": "Modules/YardLamp_LOD1.glb",
+    "bytes": 2368724,
+    "sha256": "ee4e3416ca2a8998943f065f9807a9954ca0eee12ca39801714442d82b22d328"
+  },
+  {
+    "path": "Modules/YardLamp_LOD2.fbx",
+    "bytes": 25564,
+    "sha256": "f76b0b1e0064b601176134601666332548978a8133646dbbaab0ba903e6bf709"
+  },
+  {
+    "path": "Modules/YardLamp_LOD2.glb",
+    "bytes": 2368724,
+    "sha256": "58b811e4808bede309625cee1daa5aa55eed157256384de117fcd546665116e0"
+  },
+  {
+    "path": "Previews/BridgePlatform.png",
+    "bytes": 1774223,
+    "sha256": "2396cea489530643a05b4ce4d978856301f29e8fe7e4a647437799ae6a718555"
+  },
+  {
+    "path": "Previews/DayWet.png",
+    "bytes": 1835653,
+    "sha256": "3479df6b4edcf57f0cd63fb27888214da62b40ca21f33722d60f51b6d739e0d0"
+  },
+  {
+    "path": "Previews/HeritageStreet.png",
+    "bytes": 1599896,
+    "sha256": "60511f045168a3d24036442530279c47e78860e3b5f9332afb29f8a4e7d65807"
+  },
+  {
+    "path": "Previews/ImportedGLB_PlatformEye.png",
+    "bytes": 1810027,
+    "sha256": "7f187bdedb906f42dd4ba258a55586f958f2fba98573c73b70ad9aef68743145"
+  },
+  {
+    "path": "Previews/Layout.png",
+    "bytes": 1923561,
+    "sha256": "7e59eae3410331eef998f03ee65599a4d6d4056d787f99c113524aac02fb8cbc"
+  },
+  {
+    "path": "Previews/NightDry.png",
+    "bytes": 1733191,
+    "sha256": "7344970373b98596d0be7f77a57b01949b64cc1fd850b8160864bc220445c3d6"
+  },
+  {
+    "path": "Previews/NightWet.png",
+    "bytes": 1775265,
+    "sha256": "aeb854bbe6fa3ea4502897b3bf4c59f4fe4598c5cbeda386da2f641b7bb441e9"
+  },
+  {
+    "path": "Previews/PlatformEye.png",
+    "bytes": 1809939,
+    "sha256": "5a541f531ad51bf91705c1d86a2d0e0b84ee2b499cc6ef5f8684f0d9317fa104"
+  },
+  {
+    "path": "Previews/TrackArrival.png",
+    "bytes": 1812979,
+    "sha256": "b89791dbcc15bd2c51f0ad8f168ee7c654f6d568e0dc6f98c5af7faa749b61ab"
+  },
+  {
+    "path": "provenance.json",
+    "bytes": 2110,
+    "sha256": "2042180f00587fcbde931ec9d13e1281c9bd76360eeb107a6d850d37d27e6fab"
+  },
+  {
+    "path": "READY.lock",
+    "bytes": 209,
+    "sha256": "240cb75d307062af433cd034b056a9a2ddec1464cba8974a6b7b77cb2a6ceac8"
+  },
+  {
+    "path": "Reproduce/audit_v2.py",
+    "bytes": 4713,
+    "sha256": "0550e37510dad9d08a1bd5924b6175012b7ff15043fe851b9a56bd29aabb392b"
+  },
+  {
+    "path": "Reproduce/build_v2.py",
+    "bytes": 21298,
+    "sha256": "baf9e4866139a9c56e5d1d05ec8762360a306eb733342bc7c3cb05b0e11cab8b"
+  },
+  {
+    "path": "Reproduce/clearance_v2.py",
+    "bytes": 1440,
+    "sha256": "cd65bcfe5629968c3de92ed2f429741c8260a6b34bf556a9b8e1e46859df7510"
+  },
+  {
+    "path": "Reproduce/lookdev_v2.py",
+    "bytes": 1876,
+    "sha256": "2363215fc29f8a6e2a33ec3ee9ee3102abf7579aee167ccd2dd0668bf4225a8c"
+  },
+  {
+    "path": "Reproduce/package_v2.py",
+    "bytes": 3301,
+    "sha256": "77fb9bc75b6f728bbc89688450614ca6886fdec0b83cbb860dedfa0c3ed64e83"
+  },
+  {
+    "path": "Reproduce/policy.json",
+    "bytes": 298,
+    "sha256": "2a73f455b3028e1d419ca562d772a16f04bd92aa29118c41893ea9fc76e364b4"
+  },
+  {
+    "path": "Reproduce/roundtrip_v2.py",
+    "bytes": 2284,
+    "sha256": "117a590990ff728e345d6ea4c2ac2614fb3fe53713e3dd48c698e157a8c96b04"
+  },
+  {
+    "path": "SOURCE_REVIEW.md",
+    "bytes": 3099,
+    "sha256": "5b89bdfc26a3e61d67cce1b75decee68813c7e57a6d42c6d1725c014a1d69389"
+  },
+  {
+    "path": "stable-id-map.json",
+    "bytes": 24922,
+    "sha256": "bcdf9963d76d6e92231d7f3bc956df2814712607a019bbe997461f0771135774"
+  },
+  {
+    "path": "Textures/T_Ballast_BC.png",
+    "bytes": 329123,
+    "sha256": "9f51a1b23dbc151d57579d1a514dd3c70b96ba878be4d2ad532fe0276da42aba"
+  },
+  {
+    "path": "Textures/T_Ballast_N.png",
+    "bytes": 390174,
+    "sha256": "7ff61c5e2e7cdf257dd7cae7dd100c9e8b623ce8fbf9f2476feac96170a3a6be"
+  },
+  {
+    "path": "Textures/T_Ballast_ORM.png",
+    "bytes": 423274,
+    "sha256": "a7c2205c08311e96ad067ad1a488665f15b68e5a0adf82d13ef30e17b7222ace"
+  },
+  {
+    "path": "Textures/T_Black_BC.png",
+    "bytes": 107689,
+    "sha256": "08e843d0b125c01eee38da64f572893e1fb352bf5d0acbfbe5c295c73b7124cd"
+  },
+  {
+    "path": "Textures/T_Black_N.png",
+    "bytes": 389959,
+    "sha256": "4c52c411817eb1c823a0ec97ddf156cf2632c7374601c78a74f8453f65aef52b"
+  },
+  {
+    "path": "Textures/T_Black_ORM.png",
+    "bytes": 432894,
+    "sha256": "fbc595238062e99d70bc72abc82f8b877f9c5aefaf17e855a04ed249486d6a84"
+  },
+  {
+    "path": "Textures/T_Concrete_BC.png",
+    "bytes": 367416,
+    "sha256": "0b4a8529f79f19549b2a4a23f38a101fecbfff56d6a2721cbb39e670bdd2653d"
+  },
+  {
+    "path": "Textures/T_Concrete_N.png",
+    "bytes": 390226,
+    "sha256": "0fcfb2c975740a075018b0c4ba7bbba0d70551b63e313dd9936a0accbc6686df"
+  },
+  {
+    "path": "Textures/T_Concrete_ORM.png",
+    "bytes": 434920,
+    "sha256": "e7d448f98bf95b624fcf2736749f66ada4cd1e3675535e8ff74cbb042772f26e"
+  },
+  {
+    "path": "Textures/T_Cream_BC.png",
+    "bytes": 402788,
+    "sha256": "d82481cca550c82d28f1a3dd141519fb8fc36c9e06b69c026df00b9a33dffb96"
+  },
+  {
+    "path": "Textures/T_Cream_N.png",
+    "bytes": 389780,
+    "sha256": "dbcc446ee496fc0ab092975d4a915e9f58e2ed662fb63a02e228fafdfcb67b37"
+  },
+  {
+    "path": "Textures/T_Cream_ORM.png",
+    "bytes": 434391,
+    "sha256": "e003cb1dc6b42a591c714c8fc8fd7a737a297c8f7bbb17c4f7dad37376cafa32"
+  },
+  {
+    "path": "Textures/T_EgmoreBlue_BC.png",
+    "bytes": 388812,
+    "sha256": "6ddc96d4e01d96e893a2a605c0946eec3da26711ba0a2c097f5998a176a9774b"
+  },
+  {
+    "path": "Textures/T_EgmoreBlue_N.png",
+    "bytes": 389602,
+    "sha256": "2af288041b13d4745df43d03139e81a942dfc52a014dae0913e279917d4d906d"
+  },
+  {
+    "path": "Textures/T_EgmoreBlue_ORM.png",
+    "bytes": 445704,
+    "sha256": "3e99090685a06842e4f98c4977a614681a06c6a800cd4eadca5539d111d452f7"
+  },
+  {
+    "path": "Textures/T_EgmoreLime_BC.png",
+    "bytes": 404082,
+    "sha256": "8eb210969520453feda6bff4b9b877e73fda0b274d416286e7899780d5c1fd0d"
+  },
+  {
+    "path": "Textures/T_EgmoreLime_N.png",
+    "bytes": 389735,
+    "sha256": "d05c9426fde2b947a6c27fae6cd0797122ab8423801b1620734ff74cd63d2889"
+  },
+  {
+    "path": "Textures/T_EgmoreLime_ORM.png",
+    "bytes": 428445,
+    "sha256": "3dec4eebd0a20167ff6fd22c5360e0b705fbce0b1b2a240c88f5aacda54091df"
+  },
+  {
+    "path": "Textures/T_EgmoreName_BC.png",
+    "bytes": 1145009,
+    "sha256": "6ccda1d05c9fe657ce35db7eb52d0b1fc3b17ddcc093611f550c33644958e5a9"
+  },
+  {
+    "path": "Textures/T_EgmoreName_N.png",
+    "bytes": 8535,
+    "sha256": "d7fae9161af2e352e97b34c6d1c03dbc0f2d28677df19cea785d3570da4588d6"
+  },
+  {
+    "path": "Textures/T_EgmoreName_ORM.png",
+    "bytes": 1380483,
+    "sha256": "13084f921c22880fa1e10ec6cff194f6c1f22008d16a1150fd925c1ae0d18219"
+  },
+  {
+    "path": "Textures/T_EgmoreRed_BC.png",
+    "bytes": 333035,
+    "sha256": "b72b99cd525dc526e3e9d1ffe6c4c39cade9408fb01424a8ad961b3467348a07"
+  },
+  {
+    "path": "Textures/T_EgmoreRed_N.png",
+    "bytes": 390088,
+    "sha256": "d455a4e094df51ad2cf32ca6b173de7df2dfa035c014c970b4e257745b4f59bc"
+  },
+  {
+    "path": "Textures/T_EgmoreRed_ORM.png",
+    "bytes": 436612,
+    "sha256": "bbc965c759ab5fbec684f36fbc2e7fbd57b63e61bebdc16335595ad314732759"
+  },
+  {
+    "path": "Textures/T_EgmoreStone_BC.png",
+    "bytes": 1416677,
+    "sha256": "bdddb0b8791ce1c1de7f536e17f17790977d5516398501a63b8a581a880bc8c4"
+  },
+  {
+    "path": "Textures/T_EgmoreStone_N.png",
+    "bytes": 2849091,
+    "sha256": "519efb3d5eab63179d2b6c5c83c14f72d60c021f67d2cc4fd9db072abc88351e"
+  },
+  {
+    "path": "Textures/T_EgmoreStone_ORM.png",
+    "bytes": 1834995,
+    "sha256": "d95a5baa190523b6bc852f5edf02ca4bf46e69e2c326aa02a4357003b6bc0d35"
+  },
+  {
+    "path": "Textures/T_Galvanized_BC.png",
+    "bytes": 326189,
+    "sha256": "75c719f7d79c62454848098a2203936d7613be43f0c6c5aa70f42482d3d9f295"
+  },
+  {
+    "path": "Textures/T_Galvanized_N.png",
+    "bytes": 389755,
+    "sha256": "3649fd878722bdfbbef35c107edaa8916a81503bb3eb993bfc92a1640eed1b11"
+  },
+  {
+    "path": "Textures/T_Galvanized_ORM.png",
+    "bytes": 449269,
+    "sha256": "d4fa01f35a4fb816adf0f8095e2edf3c2191e4d3498fe6a0849adb69762f4cb9"
+  },
+  {
+    "path": "Textures/T_Glass_BC.png",
+    "bytes": 318958,
+    "sha256": "1377d334c8f5f6596aa3da8b3a8e2a5c3998a68122a51f6f185996334036a8b1"
+  },
+  {
+    "path": "Textures/T_Glass_N.png",
+    "bytes": 389844,
+    "sha256": "7a6037e152bb050dd11eebc27382cec1248ac2685a9b5640e35e2e793d64637b"
+  },
+  {
+    "path": "Textures/T_Glass_ORM.png",
+    "bytes": 442371,
+    "sha256": "8d5c25f807346dd8cdeab029d4a50e4a288682dd0abf31d99c0712b42ae10d00"
+  },
+  {
+    "path": "Textures/T_Paving_BC.png",
+    "bytes": 361768,
+    "sha256": "76b09f027b1c7b39b1f563daff0e81e95186be67f48bc397eb4d1e946caca123"
+  },
+  {
+    "path": "Textures/T_Paving_N.png",
+    "bytes": 377281,
+    "sha256": "7a1fefd9d609a1da7c65af70d1c782916486e4b64cda1d078de6f751ecc470b9"
+  },
+  {
+    "path": "Textures/T_Paving_ORM.png",
+    "bytes": 424106,
+    "sha256": "1847aaa364b4e31d354893e4698913a14d6a18cae10949d7d551adf87485fc23"
+  },
+  {
+    "path": "Textures/T_Steel_BC.png",
+    "bytes": 256548,
+    "sha256": "c362f859280f76264d88055ddfee57f8b83cfc5c2f673097b11dff979531f4e8"
+  },
+  {
+    "path": "Textures/T_Steel_N.png",
+    "bytes": 390229,
+    "sha256": "2372d5c61aa4ff81e311f4b4ee1a643bdb89bf759c09e566d09c441ca0ee7cf7"
+  },
+  {
+    "path": "Textures/T_Steel_ORM.png",
+    "bytes": 448273,
+    "sha256": "257d35645684ec7f80f84f2818acba147f16d4ebdd909d810d93f8235ceedc8d"
+  },
+  {
+    "path": "Textures/T_Wood_BC.png",
+    "bytes": 321344,
+    "sha256": "4f51d126262ea6e4e40c5f67a88df824bc9a0ca32c1d0716d74e4ab45cf69081"
+  },
+  {
+    "path": "Textures/T_Wood_N.png",
+    "bytes": 389854,
+    "sha256": "b16a5b1368aa8ac616eb4e6420ae03c3e654727d0ab7a9a455e613da8c2125b7"
+  },
+  {
+    "path": "Textures/T_Wood_ORM.png",
+    "bytes": 435060,
+    "sha256": "15f4b99d7c650f5e46f60adb156014190b3c4ea14cb6bedf159a93c9d03d4589"
+  },
+  {
+    "path": "Textures/T_Yellow_BC.png",
+    "bytes": 390458,
+    "sha256": "8ea65391e496591bd207c2128660b15d35546f22e1e854f30f36f5e0a9976a1c"
+  },
+  {
+    "path": "Textures/T_Yellow_N.png",
+    "bytes": 389895,
+    "sha256": "f7d19792e2d281ea4c7ff4b3f963c1c42e567c32ff219968305c9be9cc08d871"
+  },
+  {
+    "path": "Textures/T_Yellow_ORM.png",
+    "bytes": 434606,
+    "sha256": "6aa7813c32d9da6ff351be15966ae7f3e1a93b08620a1bf4167f1e54ac3c1725"
+  }
+]

@@ -1,0 +1,18 @@
+{
+  "origin": "Original local procedural geometry",
+  "seed": 1301033,
+  "leaves": 260,
+  "triangles": 1040,
+  "dimensions_metres": [
+    0.9965301752090454,
+    1.014955759048462,
+    0.629085123538971
+  ],
+  "paid_provider": false,
+  "external_pixels": false,
+  "botanical_replica": false,
+  "files": {
+    "SM_ChennaiDenseCanopy.fbx": "e1d555e15e689c04b7293f4b2773396b4c73ca27277c7e7bfef0ed01d9b65878",
+    "SM_ChennaiDenseCanopy.glb": "8760ea0040b7129c8d8b2ee0cdcda0707053c5a8ad5111e2a482fb046c1eeedf"
+  }
+}

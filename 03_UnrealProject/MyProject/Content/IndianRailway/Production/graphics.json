@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "status": "PROVISIONAL",
+  "defaultTier": "Low",
+  "tiers": {
+    "Low": {
+      "textureResolution": null,
+      "lodDistance": null,
+      "vegetationDensity": null,
+      "peopleDensity": null,
+      "shadowQuality": null,
+      "vfxDensity": null,
+      "optionalDetail": null
+    },
+    "Medium": {
+      "textureResolution": null,
+      "lodDistance": null,
+      "vegetationDensity": null,
+      "peopleDensity": null,
+      "shadowQuality": null,
+      "vfxDensity": null,
+      "optionalDetail": null
+    },
+    "High": {
+      "textureResolution": null,
+      "lodDistance": null,
+      "vegetationDensity": null,
+      "peopleDensity": null,
+      "shadowQuality": null,
+      "vfxDensity": null,
+      "optionalDetail": null
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "schema": "game_dev.job.v1",
+  "id": "job_22b5e3a4-ea67-4bcf-a7aa-b977b47e9335",
+  "operation": "package.verify",
+  "status": "completed",
+  "request": {
+    "positionals": [
+      "package",
+      "verify",
+      "D:\\Project\\IndianRailwayGame\\04_Assets\\S8\\EgmorePortable\\.game-dev\\packages\\egmoreentrance9m\\1.0.0"
+    ],
+    "flags": {
+      "output-dir": "04_Assets/S8/EgmorePortable"
+    }
+  },
+  "attempts": 1,
+  "eventCount": 1,
+  "artifacts": [],
+  "createdAt": "2026-10-04T03:26:22.533Z",
+  "updatedAt": "2026-10-04T03:26:22.575Z",
+  "startedAt": "2026-10-04T03:26:22.544Z",
+  "completedAt": "2026-10-04T03:26:22.575Z",
+  "receiptPath": "D:\\Project\\IndianRailwayGame\\04_Assets\\S8\\EgmorePortable\\.game-dev\\jobs\\job_22b5e3a4-ea67-4bcf-a7aa-b977b47e9335\\receipt.json"
+}

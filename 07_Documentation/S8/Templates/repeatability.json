@@ -1,0 +1,37 @@
+{
+  "firstContent": "Loco.Pending.01",
+  "secondContent": "Loco.Pending.02",
+  "status": "pending",
+  "contentEvidence": [],
+  "sourceChangeManifest": "pending",
+  "checks": {
+    "samePipeline": {
+      "status": "pending",
+      "evidence": []
+    },
+    "noPhysicsRewrite": {
+      "status": "pending",
+      "evidence": []
+    },
+    "noAuthorityRewrite": {
+      "status": "pending",
+      "evidence": []
+    },
+    "noDuplicateAI": {
+      "status": "pending",
+      "evidence": []
+    },
+    "noDuplicateScoring": {
+      "status": "pending",
+      "evidence": []
+    },
+    "noLevelBlueprintLogic": {
+      "status": "pending",
+      "evidence": []
+    },
+    "noSpecialWidgets": {
+      "status": "pending",
+      "evidence": []
+    }
+  }
+}

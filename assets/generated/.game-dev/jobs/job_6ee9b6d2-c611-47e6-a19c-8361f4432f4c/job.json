@@ -1,0 +1,22 @@
+{
+  "schema": "game_dev.job.v1",
+  "id": "job_6ee9b6d2-c611-47e6-a19c-8361f4432f4c",
+  "operation": "package.verify",
+  "status": "completed",
+  "request": {
+    "positionals": [
+      "package",
+      "verify",
+      "04_Assets/S8/EgmoreSignage/.game-dev/packages/egmorenameboard4m/1.0.0"
+    ],
+    "flags": {}
+  },
+  "attempts": 1,
+  "eventCount": 1,
+  "artifacts": [],
+  "createdAt": "2026-10-05T03:39:15.796Z",
+  "updatedAt": "2026-10-05T03:39:15.830Z",
+  "startedAt": "2026-10-05T03:39:15.801Z",
+  "completedAt": "2026-10-05T03:39:15.830Z",
+  "receiptPath": "D:\\Project\\IndianRailwayGame\\assets\\generated\\.game-dev\\jobs\\job_6ee9b6d2-c611-47e6-a19c-8361f4432f4c\\receipt.json"
+}

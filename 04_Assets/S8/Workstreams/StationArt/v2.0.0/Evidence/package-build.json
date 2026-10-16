@@ -1,0 +1,10 @@
+{
+  "schema": "game_dev.result.v1",
+  "operation": "package.build",
+  "ok": false,
+  "error": {
+    "error": "INVALID_INPUT",
+    "message": "package preview must be a .usdz file",
+    "retryable": false
+  }
+}

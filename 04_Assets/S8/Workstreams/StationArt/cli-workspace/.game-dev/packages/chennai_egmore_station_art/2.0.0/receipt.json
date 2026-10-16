@@ -1,0 +1,23 @@
+{
+  "completedAt": "2026-10-07T12:43:31.254Z",
+  "destination": {
+    "assetId": "chennai_egmore_station_art",
+    "version": "2.0.0"
+  },
+  "evidence": {
+    "blenderNormalizationPerformed": false,
+    "gpuImportTestPerformed": false,
+    "humanVisualReviewPerformed": false,
+    "modelBytesCopiedAndHashed": true,
+    "policyValidationCompleted": true,
+    "staticInspectionCompleted": true
+  },
+  "manifestSha256": "f6fc6862fa084b2f98d302a3ef372abf6dd27a68e6ca2ab6973d1abe6fd06bc8",
+  "packageId": "pkg_99dad883d1882e8e3ec4ab94",
+  "schema": "game_dev.package_receipt.v1",
+  "source": {
+    "bytes": 29286084,
+    "fileName": "EgmoreScene.glb",
+    "sha256": "c09777218b90a8d796f4a7a92f90e76905e41f1684d38378ab3712d014766cda"
+  }
+}

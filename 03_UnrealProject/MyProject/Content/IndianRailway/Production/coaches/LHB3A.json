@@ -1,0 +1,666 @@
+{
+  "asset_id": "Coach.LHB.Acquired01",
+  "content_id": "IR-S8-LHB-3A-1",
+  "definition_id": 3001,
+  "version": 1,
+  "body_length_m": 23.54,
+  "coupled_length_m": 24,
+  "coupling_gap_m": 0,
+  "bogie_offsets_m": [
+    7.45,
+    -7.45
+  ],
+  "bogie_wheelbase_m": 2.56,
+  "wheel_diameter_m": 0.915,
+  "status": "candidate; acceptance requires visual/Unreal/device checks",
+  "corrections": [
+    {
+      "source_object": "Cube",
+      "part": "Body"
+    },
+    {
+      "source_object": "Plane",
+      "part": "Body"
+    },
+    {
+      "source_object": "Plane.001",
+      "part": "Body"
+    },
+    {
+      "source_object": "NurbsPath.001",
+      "part": "Body"
+    },
+    {
+      "source_object": "NurbsPath.003",
+      "part": "Body"
+    },
+    {
+      "source_object": "Plane.002",
+      "part": "Body"
+    },
+    {
+      "source_object": "Plane.003",
+      "part": "Body"
+    },
+    {
+      "source_object": "Plane.004",
+      "part": "Body"
+    },
+    {
+      "source_object": "Plane.006",
+      "part": "Body"
+    },
+    {
+      "source_object": "Cube.001",
+      "part": "Body"
+    },
+    {
+      "source_object": "Cube.002",
+      "part": "Body"
+    },
+    {
+      "source_object": "Circle",
+      "part": "Body"
+    },
+    {
+      "source_object": "Circle.001",
+      "part": "Body"
+    },
+    {
+      "source_object": "Circle.002",
+      "part": "Body"
+    },
+    {
+      "source_object": "Circle.003",
+      "part": "Body"
+    },
+    {
+      "source_object": "Bolt",
+      "part": "Body"
+    },
+    {
+      "source_object": "Bolt.001",
+      "part": "Body"
+    },
+    {
+      "source_object": "Bolt.002",
+      "part": "Body"
+    },
+    {
+      "source_object": "Bolt.003",
+      "part": "Body"
+    },
+    {
+      "source_object": "Beam",
+      "part": "Body"
+    },
+    {
+      "source_object": "Cylinder.001",
+      "part": "Body"
+    },
+    {
+      "source_object": "Cylinder.002",
+      "part": "Body"
+    },
+    {
+      "source_object": "Cylinder.003",
+      "part": "Body"
+    },
+    {
+      "source_object": "Cylinder.004",
+      "part": "Body"
+    },
+    {
+      "source_object": "Cylinder.005",
+      "part": "Body"
+    },
+    {
+      "source_object": "Cylinder.006",
+      "part": "Body"
+    },
+    {
+      "source_object": "Cube.003",
+      "part": "Body"
+    },
+    {
+      "source_object": "Cube.004",
+      "part": "Body"
+    },
+    {
+      "source_object": "NurbsPath.004",
+      "part": "Body"
+    },
+    {
+      "source_object": "Cube.005",
+      "part": "Body"
+    },
+    {
+      "source_object": "Cube.006",
+      "part": "Body"
+    },
+    {
+      "source_object": "NurbsPath.006",
+      "part": "Body"
+    },
+    {
+      "source_object": "Cube.007",
+      "part": "Body"
+    },
+    {
+      "source_object": "Cylinder.009",
+      "part": "Bogie0"
+    },
+    {
+      "source_object": "Cylinder.010",
+      "part": "Bogie0"
+    },
+    {
+      "source_object": "Cylinder.007",
+      "part": "Bogie0"
+    },
+    {
+      "source_object": "Bolt.005",
+      "part": "Bogie0"
+    },
+    {
+      "source_object": "Bolt.008",
+      "part": "Bogie0"
+    },
+    {
+      "source_object": "Cylinder.011",
+      "part": "Wheel3"
+    },
+    {
+      "source_object": "Cube.008",
+      "part": "Body"
+    },
+    {
+      "source_object": "Cylinder.012",
+      "part": "Wheel2"
+    },
+    {
+      "source_object": "Bolt.004",
+      "part": "Bogie1"
+    },
+    {
+      "source_object": "Bolt.006",
+      "part": "Bogie1"
+    },
+    {
+      "source_object": "Cube.009",
+      "part": "Body"
+    },
+    {
+      "source_object": "Bolt.007",
+      "part": "Bogie1"
+    },
+    {
+      "source_object": "Bolt.009",
+      "part": "Bogie1"
+    },
+    {
+      "source_object": "Cube.010",
+      "part": "Body"
+    },
+    {
+      "source_object": "Bolt.010",
+      "part": "Bogie0"
+    },
+    {
+      "source_object": "Bolt.011",
+      "part": "Bogie0"
+    },
+    {
+      "source_object": "Cube.011",
+      "part": "Body"
+    },
+    {
+      "source_object": "Cube.012",
+      "part": "Body"
+    },
+    {
+      "source_object": "NurbsPath.005",
+      "part": "Body"
+    },
+    {
+      "source_object": "Cube.013",
+      "part": "Body"
+    },
+    {
+      "source_object": "Cube.014",
+      "part": "Body"
+    },
+    {
+      "source_object": "Cube.015",
+      "part": "Body"
+    },
+    {
+      "source_object": "NurbsPath.007",
+      "part": "Body"
+    },
+    {
+      "source_object": "NurbsPath.008",
+      "part": "Body"
+    },
+    {
+      "source_object": "Cube.032",
+      "part": "Body"
+    },
+    {
+      "source_object": "Cube.033",
+      "part": "Body"
+    },
+    {
+      "source_object": "Cylinder.026",
+      "part": "Wheel0"
+    },
+    {
+      "source_object": "NurbsPath",
+      "part": "Body"
+    },
+    {
+      "source_object": "Cube.034",
+      "part": "Body"
+    },
+    {
+      "source_object": "Cube.035",
+      "part": "Body"
+    },
+    {
+      "source_object": "Cylinder.027",
+      "part": "Wheel3"
+    },
+    {
+      "source_object": "Cylinder.028",
+      "part": "Wheel2"
+    },
+    {
+      "source_object": "Cylinder.029",
+      "part": "Wheel0"
+    },
+    {
+      "source_object": "Cylinder.008",
+      "part": "Wheel1"
+    },
+    {
+      "source_object": "Cylinder.030",
+      "part": "Wheel1"
+    },
+    {
+      "source_object": "Plane.005",
+      "part": "Body"
+    },
+    {
+      "source_object": "Plane.014",
+      "part": "Body"
+    },
+    {
+      "source_object": "Plane.015",
+      "part": "Body"
+    },
+    {
+      "source_object": "Cube.016",
+      "part": "Body"
+    },
+    {
+      "source_object": "NurbsPath.016",
+      "part": "Body"
+    },
+    {
+      "source_object": "Torus",
+      "part": "Body"
+    },
+    {
+      "source_object": "Torus.001",
+      "part": "Body"
+    },
+    {
+      "source_object": "Cube.043",
+      "part": "Body"
+    }
+  ],
+  "triangles": 203073,
+  "parts": [
+    {
+      "name": "Body",
+      "role": "body",
+      "location_cm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "triangles": 137097,
+      "material_slots": 22,
+      "local_bounds_m": [
+        [
+          -12.0,
+          -1.628000020980835,
+          0.171012282371521
+        ],
+        [
+          12.0,
+          1.628000020980835,
+          4.25
+        ]
+      ],
+      "asset": "/Game/IndianRailway/S8/Coaches/LHB3A/Meshes/SM_LHB3A_Body_LOD0.SM_LHB3A_Body_LOD0",
+      "rotation_axis": [
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "name": "Bogie0",
+      "role": "bogie",
+      "location_cm": [
+        -744.9999809265137,
+        0.0,
+        0.0
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "triangles": 19592,
+      "material_slots": 3,
+      "local_bounds_m": [
+        [
+          -1.8979721069335938,
+          -0.9724397659301758,
+          0.41860532760620117
+        ],
+        [
+          1.8761334419250488,
+          0.8754430413246155,
+          0.7535299062728882
+        ]
+      ],
+      "asset": "/Game/IndianRailway/S8/Coaches/LHB3A/Meshes/SM_LHB3A_Bogie0_LOD0.SM_LHB3A_Bogie0_LOD0",
+      "rotation_axis": [
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "name": "Bogie1",
+      "role": "bogie",
+      "location_cm": [
+        744.9999809265137,
+        0.0,
+        0.0
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "triangles": 18288,
+      "material_slots": 1,
+      "local_bounds_m": [
+        [
+          -1.886202335357666,
+          -0.9724397659301758,
+          0.5860414505004883
+        ],
+        [
+          1.8665218353271484,
+          0.8754430413246155,
+          0.7535299062728882
+        ]
+      ],
+      "asset": "/Game/IndianRailway/S8/Coaches/LHB3A/Meshes/SM_LHB3A_Bogie1_LOD0.SM_LHB3A_Bogie1_LOD0",
+      "rotation_axis": [
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "name": "Wheel0",
+      "role": "wheel",
+      "location_cm": [
+        -872.9999542236328,
+        0.0,
+        45.750001072883606
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "triangles": 7580,
+      "material_slots": 2,
+      "local_bounds_m": [
+        [
+          -0.4974365234375,
+          -1.0408190488815308,
+          -0.49743616580963135
+        ],
+        [
+          0.4974355697631836,
+          1.040818691253662,
+          0.49743619561195374
+        ]
+      ],
+      "asset": "/Game/IndianRailway/S8/Coaches/LHB3A/Meshes/SM_LHB3A_Wheel0_LOD0.SM_LHB3A_Wheel0_LOD0",
+      "rotation_axis": [
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "name": "Wheel1",
+      "role": "wheel",
+      "location_cm": [
+        -617.0000076293945,
+        0.0,
+        45.750001072883606
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "triangles": 7580,
+      "material_slots": 2,
+      "local_bounds_m": [
+        [
+          -0.4974365234375,
+          -1.0356760025024414,
+          -0.4944644868373871
+        ],
+        [
+          0.4974360466003418,
+          1.0356758832931519,
+          0.5004079341888428
+        ]
+      ],
+      "asset": "/Game/IndianRailway/S8/Coaches/LHB3A/Meshes/SM_LHB3A_Wheel1_LOD0.SM_LHB3A_Wheel1_LOD0",
+      "rotation_axis": [
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "name": "Wheel2",
+      "role": "wheel",
+      "location_cm": [
+        617.0000076293945,
+        0.0,
+        45.750001072883606
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "triangles": 6468,
+      "material_slots": 2,
+      "local_bounds_m": [
+        [
+          -0.4974360466003418,
+          -1.0676718950271606,
+          -0.49743616580963135
+        ],
+        [
+          0.4974360466003418,
+          1.0676718950271606,
+          0.49743619561195374
+        ]
+      ],
+      "asset": "/Game/IndianRailway/S8/Coaches/LHB3A/Meshes/SM_LHB3A_Wheel2_LOD0.SM_LHB3A_Wheel2_LOD0",
+      "rotation_axis": [
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "name": "Wheel3",
+      "role": "wheel",
+      "location_cm": [
+        872.9999542236328,
+        0.0,
+        45.750001072883606
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "triangles": 6468,
+      "material_slots": 2,
+      "local_bounds_m": [
+        [
+          -0.4974355697631836,
+          -1.0676718950271606,
+          -0.49743616580963135
+        ],
+        [
+          0.4974365234375,
+          1.067671775817871,
+          0.49743619561195374
+        ]
+      ],
+      "asset": "/Game/IndianRailway/S8/Coaches/LHB3A/Meshes/SM_LHB3A_Wheel3_LOD0.SM_LHB3A_Wheel3_LOD0",
+      "rotation_axis": [
+        0,
+        1,
+        0
+      ]
+    }
+  ],
+  "validation": [
+    {
+      "asset": "/Game/IndianRailway/S8/Coaches/LHB3A/Meshes/SM_LHB3A_Body_LOD0.SM_LHB3A_Body_LOD0",
+      "lod_count": 3,
+      "lod_triangles": [
+        134481,
+        73958,
+        33620
+      ]
+    },
+    {
+      "asset": "/Game/IndianRailway/S8/Coaches/LHB3A/Meshes/SM_LHB3A_Bogie0_LOD0.SM_LHB3A_Bogie0_LOD0",
+      "lod_count": 3,
+      "lod_triangles": [
+        19592,
+        10776,
+        4898
+      ]
+    },
+    {
+      "asset": "/Game/IndianRailway/S8/Coaches/LHB3A/Meshes/SM_LHB3A_Bogie1_LOD0.SM_LHB3A_Bogie1_LOD0",
+      "lod_count": 3,
+      "lod_triangles": [
+        18288,
+        10058,
+        4572
+      ]
+    },
+    {
+      "asset": "/Game/IndianRailway/S8/Coaches/LHB3A/Meshes/SM_LHB3A_Wheel0_LOD0.SM_LHB3A_Wheel0_LOD0",
+      "lod_count": 3,
+      "lod_triangles": [
+        4348,
+        2391,
+        1086
+      ]
+    },
+    {
+      "asset": "/Game/IndianRailway/S8/Coaches/LHB3A/Meshes/SM_LHB3A_Wheel1_LOD0.SM_LHB3A_Wheel1_LOD0",
+      "lod_count": 3,
+      "lod_triangles": [
+        4348,
+        2391,
+        1086
+      ]
+    },
+    {
+      "asset": "/Game/IndianRailway/S8/Coaches/LHB3A/Meshes/SM_LHB3A_Wheel2_LOD0.SM_LHB3A_Wheel2_LOD0",
+      "lod_count": 3,
+      "lod_triangles": [
+        3816,
+        2099,
+        954
+      ]
+    },
+    {
+      "asset": "/Game/IndianRailway/S8/Coaches/LHB3A/Meshes/SM_LHB3A_Wheel3_LOD0.SM_LHB3A_Wheel3_LOD0",
+      "lod_count": 3,
+      "lod_triangles": [
+        3816,
+        2098,
+        954
+      ]
+    }
+  ],
+  "provenance": "04_Assets/S8/Acquired/LHB_Sketchfab_c6c3d431/provenance.json",
+  "streaming_owner": "S6 chunk actor; instance identity follows logical vehicle; no simulation authority",
+  "acceptance": "pending desktop/device validation"
+}

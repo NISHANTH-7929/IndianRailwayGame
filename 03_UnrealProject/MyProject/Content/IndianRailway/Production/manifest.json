@@ -1,0 +1,177 @@
+{
+  "schemaVersion": 1,
+  "contentId": "Content.Foundation.01",
+  "contentVersion": "0.1.0",
+  "compatiblePreviousVersions": [],
+  "simulationContentId": "IR-S6-fixture-1",
+  "scope": "foundation",
+  "chunks": [
+    {
+      "id": 1,
+      "level": "/Game/IndianRailway/S6/L_ChunkA",
+      "rebindKey": "west",
+      "bundle": "route",
+      "essential": true
+    },
+    {
+      "id": 2,
+      "level": "/Game/IndianRailway/S6/L_ChunkB",
+      "rebindKey": "east",
+      "bundle": "route",
+      "essential": true
+    }
+  ],
+  "assets": [],
+  "vehicleBindings": [
+    {
+      "definitionId": 1,
+      "definitionVersion": 1,
+      "presentationId": "Vehicle.Proxy.01",
+      "exterior": null,
+      "cab": null,
+      "bogie": null,
+      "wheel": null,
+      "lights": null,
+      "animation": null,
+      "audio": "Audio.Foundation.01",
+      "materialLod": "Material.Mobile.01"
+    },
+    {
+      "definitionId": 2,
+      "definitionVersion": 1,
+      "presentationId": "Vehicle.Proxy.02",
+      "exterior": null,
+      "cab": null,
+      "bogie": null,
+      "wheel": null,
+      "lights": null,
+      "animation": null,
+      "audio": "Audio.Foundation.01",
+      "materialLod": "Material.Mobile.01"
+    }
+  ],
+  "formationBindings": [
+    {
+      "formationId": "Formation.Foundation.01",
+      "vehiclePresentationIds": [
+        "Vehicle.Proxy.01",
+        "Vehicle.Proxy.02"
+      ]
+    }
+  ],
+  "stationBindings": [
+    {
+      "stationId": "Station.Shantipur.01",
+      "serviceId": "S7-Shantipur-01",
+      "platforms": [
+        {
+          "platformId": "Platform.Shantipur.01",
+          "logicalEdge": 2,
+          "fromMetres": 95,
+          "toMetres": 145
+        }
+      ],
+      "chunk": 2,
+      "platformVisualSet": null,
+      "signage": null,
+      "canopy": null,
+      "footbridge": null,
+      "furniture": null,
+      "lighting": null,
+      "peopleActivity": null,
+      "ambientAudio": "Audio.Foundation.01",
+      "regionalKit": null,
+      "landmarks": null
+    }
+  ],
+  "routeBindings": [
+    {
+      "routeId": 2,
+      "chunks": [
+        1,
+        2
+      ],
+      "stationIds": [
+        "Station.Shantipur.01"
+      ]
+    }
+  ],
+  "audioProfiles": [
+    {
+      "profileId": "Audio.Foundation.01",
+      "layers": {
+        "traction": {
+          "asset": null,
+          "semanticState": "handling.tractionForce"
+        },
+        "rolling": {
+          "asset": null,
+          "semanticState": "handling.speed"
+        },
+        "brakes": {
+          "asset": null,
+          "semanticState": "handling.appliedBrake"
+        },
+        "horn": {
+          "asset": null,
+          "semanticState": "command.horn"
+        },
+        "doors": {
+          "asset": null,
+          "semanticState": "service.stationPhase"
+        },
+        "compressorFans": {
+          "asset": null,
+          "semanticState": "presentation.auxiliaryState"
+        },
+        "cabControls": {
+          "asset": null,
+          "semanticState": "command.accepted"
+        },
+        "stationAmbience": {
+          "asset": null,
+          "semanticState": "presentation.stationResidency"
+        },
+        "announcements": {
+          "asset": null,
+          "semanticState": "service.stationPhase"
+        },
+        "environmentAmbience": {
+          "asset": null,
+          "semanticState": "presentation.region"
+        },
+        "rain": {
+          "asset": null,
+          "semanticState": "presentation.weather"
+        }
+      }
+    }
+  ],
+  "materialLodProfiles": [
+    {
+      "profileId": "Material.Mobile.01",
+      "status": "PROVISIONAL",
+      "materialSlotLimit": null,
+      "textureDimensionLimit": null,
+      "lodPolicy": "LOD0 plus measured reductions; non-mesh exemption requires rationale"
+    }
+  ],
+  "saveCompatibility": {
+    "snapshotSchema": 1,
+    "simulationContentId": "IR-S6-fixture-1",
+    "serviceId": "S7-Shantipur-01",
+    "serviceVersion": "IR-S7-service-1",
+    "serviceConfigurationPolicy": "exact-S7-header",
+    "vehicleDefinitions": [
+      {
+        "id": 1,
+        "version": 1
+      },
+      {
+        "id": 2,
+        "version": 1
+      }
+    ],
+    "routeContract": "IR-S6-fixture-1"
+  }
+}

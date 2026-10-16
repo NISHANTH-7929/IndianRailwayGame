@@ -1,0 +1,59 @@
+{
+  "schema": "game_dev.receipt.v1",
+  "operation": "package.verify",
+  "result": {
+    "schema": "game_dev.package_verification.v1",
+    "packagePath": "D:\\Project\\IndianRailwayGame\\04_Assets\\S8\\EgmorePortable\\.game-dev\\packages\\egmoretower4m\\1.1.0",
+    "manifest": {
+      "assetId": "egmoretower4m",
+      "description": "Original metric Egmore study module; estimated dimensions, visual acceptance and Android integration pending",
+      "displayName": "EgmoreTower4m",
+      "files": [
+        {
+          "bytes": 4568200,
+          "kind": "model",
+          "path": "model.glb",
+          "sha256": "9dfc782792aba095d791794ddac8440c82f3a14877429a83b7be83ee1468e819"
+        },
+        {
+          "bytes": 2949,
+          "kind": "metadata",
+          "path": "metadata.json",
+          "sha256": "7625b404ea471f2486fcd416ffaf387f025a1cb7247ceed00a226f81b56e13e1"
+        },
+        {
+          "bytes": 623,
+          "kind": "provenance",
+          "path": "provenance.json",
+          "sha256": "785b04f0f9b1e700ab7ae16a6a95d2a205fe5084be5c42772430185389214b3d"
+        },
+        {
+          "bytes": 4316,
+          "kind": "validation",
+          "path": "validation.json",
+          "sha256": "57de6269959bbfd850f19f372f3cc3f6088edfec2e2797a69c1cdef3903c4404"
+        }
+      ],
+      "license": "LicenseRef-ProjectOriginal",
+      "model": "model.glb",
+      "packageId": "pkg_713b7112fedf9f26375ef5be",
+      "provenance": {
+        "origin": "authored"
+      },
+      "schema": "game_dev.asset_package.v1",
+      "validation": {
+        "errorCount": 0,
+        "passed": true,
+        "warningCount": 0
+      },
+      "version": "1.1.0"
+    },
+    "hashesVerified": true,
+    "evidence": {
+      "packageBytesVerified": true,
+      "gpuImportTestPerformed": false,
+      "humanVisualReviewPerformed": false
+    }
+  },
+  "completedAt": "2026-10-04T08:04:33.707Z"
+}
