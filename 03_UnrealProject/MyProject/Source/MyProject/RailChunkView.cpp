@@ -1,4 +1,7 @@
 #include "RailChunkView.h"
+#include "ProfilingDebugging/CsvProfiler.h"
+CSV_DEFINE_CATEGORY(RailChunkLoading,true);
+#include "RailJourneyMaterials.h"
 #include "RailWheelPresentation.h"
 #include "RailTambaramCorridorView.h"
 #include "RailTambaramStationView.h"
@@ -46,7 +49,7 @@ void PrepareTambaramEnvironment(UWorld* World,ULevel* Chunk){
  auto* Fill=World->SpawnActor<ASkyLight>(FVector::ZeroVector,FRotator::ZeroRotator,Params);
  if(Fill){Fill->Tags.Add(Tag);auto* Light=Fill->GetLightComponent();Light->SetMobility(EComponentMobility::Movable);
   Light->SourceType=SLS_SpecifiedCubemap;Light->SetCubemap(LoadObject<UTextureCube>(nullptr,TEXT("/Engine/EngineResources/GrayTextureCube.GrayTextureCube")));
-  Light->SetIntensity(1);Light->SetCastShadows(false);Light->RecaptureSky();}
+  Light->SetIntensity(.60f);Light->SetCastShadows(false);Light->RecaptureSky();}
  auto* Haze=World->SpawnActor<AExponentialHeightFog>(FVector(0,0,-100),FRotator::ZeroRotator,Params);
  if(Haze){Haze->Tags.Add(Tag);auto* Fog=Haze->GetComponent();Fog->SetFogDensity(.003f);Fog->SetFogHeightFalloff(.15f);
   Fog->SetStartDistance(3000);Fog->SetFogMaxOpacity(.7f);Fog->SetFogInscatteringColor(FLinearColor(.48f,.57f,.62f));}
@@ -76,6 +79,7 @@ void ARailChunkView::BeginPlay(){
 bool ARailChunkView::LoadCoach(){
  if(FParse::Param(FCommandLine::Get(),TEXT("S8DisableCoach")))return false;
  if(CoachParts.Num()==7)return true;
+ CSV_SCOPED_TIMING_STAT(RailChunkLoading,CoachLoadMs);
  FString Text;TSharedPtr<FJsonObject> Doc;const TArray<TSharedPtr<FJsonValue>>* Parts=nullptr;
  if(!FFileHelper::LoadFileToString(Text,*(FPaths::ProjectContentDir()/TEXT("IndianRailway/Production/coaches/LHB3A.json")))||
     !FJsonSerializer::Deserialize(TJsonReaderFactory<>::Create(Text),Doc)||!Doc||!Doc->TryGetArrayField(TEXT("parts"),Parts)||Parts->Num()!=7)return false;
@@ -86,15 +90,21 @@ bool ARailChunkView::LoadCoach(){
     !Doc->TryGetNumberField(TEXT("coupled_length_m"),Length)||Length!=Rail::FormationContent::CoupledLength||
     !Doc->TryGetNumberField(TEXT("coupling_gap_m"),Gap)||Gap!=0)return false;
  const TCHAR* Expected[]={TEXT("Body"),TEXT("Bogie0"),TEXT("Bogie1"),TEXT("Wheel0"),TEXT("Wheel1"),TEXT("Wheel2"),TEXT("Wheel3")};
- TArray<UStaticMesh*> Meshes;
+ TArray<FString> Paths;
  for(int32 I=0;I<7;++I){const auto O=(*Parts)[I]->AsObject();FString Name,Path;
   if(!O||!O->TryGetStringField(TEXT("name"),Name)||Name!=Expected[I]||!O->TryGetStringField(TEXT("asset"),Path)||!Path.StartsWith(TEXT("/Game/IndianRailway/S8/Coaches/LHB3A/")))return false;
-  auto* Mesh=LoadObject<UStaticMesh>(nullptr,*Path);if(!Mesh)return false;
+  Paths.Add(Path);
+ }
+ // Readiness remains false until every independent part has been loaded.
+ const int32 I=CoachParts.Num();
+ {
+  auto* Mesh=LoadObject<UStaticMesh>(nullptr,*Paths[I]);if(!Mesh)return false;
   if(I<3){const FString DetailPath=I==0?TEXT("/Game/IndianRailway/S8/Coaches/LHB3A/UnderframeV2/SM_LHB_BodyV2.SM_LHB_BodyV2"):TEXT("/Game/IndianRailway/S8/Coaches/LHB3A/UnderframeV2/SM_LHB_BogieV2.SM_LHB_BogieV2");if(auto* Detail=LoadObject<UStaticMesh>(nullptr,*DetailPath))Mesh=Detail;}
   if(I>=3)if(auto* Wheel=LoadObject<UStaticMesh>(nullptr,TEXT("/Game/IndianRailway/S8/RunningGearV2/SM_LHB_Wheelset.SM_LHB_Wheelset")))Mesh=Wheel;
-  Meshes.Add(Mesh);
+  auto* Part=NewObject<UInstancedStaticMeshComponent>(this);AddInstanceComponent(Part);Part->SetupAttachment(RootComponent);Part->SetMobility(EComponentMobility::Movable);Part->SetStaticMesh(Mesh);ApplyJourneyMaterials(Part);Part->SetCollisionEnabled(ECollisionEnabled::NoCollision);Part->SetGenerateOverlapEvents(false);Part->RegisterComponent();CoachParts.Add(Part);
+  CSV_CUSTOM_STAT(RailChunkLoading,CoachPartsBuilt,1,ECsvCustomStatOp::Accumulate);
  }
- for(auto* Mesh:Meshes){auto* Part=NewObject<UInstancedStaticMeshComponent>(this);AddInstanceComponent(Part);Part->SetupAttachment(RootComponent);Part->SetMobility(EComponentMobility::Movable);Part->SetStaticMesh(Mesh);Part->SetCollisionEnabled(ECollisionEnabled::NoCollision);Part->SetGenerateOverlapEvents(false);Part->RegisterComponent();CoachParts.Add(Part);}
+ if(CoachParts.Num()!=7)return false;
  UE_LOG(LogTemp,Display,TEXT("S8_LHB_CHUNK_READY chunk=%d parts=%d"),ChunkId,CoachParts.Num());return true;
 }
 void ARailChunkView::Present(const Rail::OperationsWorld& World,bool DebugLabels,uint64 HiddenLocomotiveTrain,bool RefreshScenery){
@@ -119,8 +129,8 @@ void ARailChunkView::Present(const Rail::OperationsWorld& World,bool DebugLabels
    if(Owns(ChunkId,(A.x+B.x)*.5))DrawDebugLine(W,Cm(A),Cm(B),FColor::Cyan,false,0,0,20);}}
  }
  TArray<FTransform> Transforms;TArray<FTransform> CoachTransforms[7];PresentedLhbVehicles=0;
- const bool CoachReady=Rail::ScenarioContent::UsesLhb(World.ContentId())&&LoadCoach();
- for(uint64 Id:{1ull,2ull,3ull})if(const auto* Train=World.Spatial(Rail::TrainId(Id)))for(const auto& V:Train->Current().vehicles){
+ const bool CoachReady=Rail::ScenarioContent::UsesLhb(World.ContentId())&&(RefreshScenery?LoadCoach():CoachParts.Num()==7);
+ for(uint64 Id=1;Id<=Rail::ScenarioContent::TrainCount(World.ContentId());++Id)if(const auto* Train=World.Spatial(Rail::TrainId(Id)))for(const auto& V:Train->Current().vehicles){
   if((HiddenLocomotiveTrain==Id||(HiddenLocomotiveTrain&&Rail::ScenarioContent::IsS8Route(World.ContentId())))&&V.id==Train->Current().vehicles.front().id)continue;
   if(!Owns(ChunkId,V.bodyCentre.x))continue;
   const FQuat Rotation=FRotationMatrix::MakeFromXZ(FVector(V.bodyForward.x,V.bodyForward.y,V.bodyForward.z),FVector::UpVector).ToQuat();

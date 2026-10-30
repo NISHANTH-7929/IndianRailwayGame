@@ -7,7 +7,19 @@ namespace Rail {
 // One configuration boundary shared by initialization, service and recovery.
 struct ScenarioContent {
  static bool IsEgmore(const std::string& Id){return Id==EgmoreLayout::ReservedContentId;}
- static bool IsTambaram(const std::string& Id){return Id==TambaramRoute::ContentId;}
+ static bool IsLiveJourney(const std::string& Id){return Id=="IR-S9-MSTBM-LIVE-1";}
+ static bool IsTambaram(const std::string& Id){return Id==TambaramRoute::ContentId||IsLiveJourney(Id);}
+ static size_t TrafficTrack(uint64_t Id){return Id==3?1:Id==4?2:3;}
+ static size_t TrafficStart(uint64_t Id){
+  if(Id==3)return TambaramRoute::SegmentCount-1;
+  size_t I=Id==4?60:90;while(I+1<TambaramRoute::SegmentCount&&TambaramRoute::GeometryFor(TrafficTrack(Id),I).lengthMetres<300)++I;return I;
+ }
+ static std::vector<DirectedEdge> PlayerPath(const std::string& Id){
+  if(!IsLiveJourney(Id))return TambaramRoute::Path(1);
+  std::vector<DirectedEdge> P;for(size_t I=0;I<6;++I)P.push_back({TambaramRoute::EdgeFor(1,I),1});
+  P.push_back({EdgeId(90000),1});P.push_back({EdgeId(90001),1});
+  for(size_t I=7;I<TambaramRoute::SegmentCount;++I)P.push_back({TambaramRoute::EdgeFor(0,I),1});return P;
+ }
  static bool IsS8Route(const std::string& Id){return IsEgmore(Id)||IsTambaram(Id);}
  static bool Supports(const std::string& Id){return FormationContent::Supports(Id)||IsS8Route(Id);}
  static bool UsesLhb(const std::string& Id){return Id==FormationContent::LhbId||IsS8Route(Id);}
@@ -16,9 +28,51 @@ struct ScenarioContent {
   if(!IsEgmore(Id))return FormationContent::Resolve(Id,F,Player,Traffic);
   auto R=EgmoreLayout::ResolveSpatial(F,Player);Traffic=Player;return R;
  }
- static unsigned TrainCount(const std::string& Id){return IsTambaram(Id)?3:2;}
+ static unsigned TrainCount(const std::string& Id){return IsLiveJourney(Id)?5:IsTambaram(Id)?3:2;}
  static double Start(const std::string& Id,uint64_t Train){if(IsTambaram(Id))return Train==1?110.0:TambaramRoute::StartHead;return Train==1?200:IsEgmore(Id)?EgmoreLayout::StationMetres(EgmoreLayout::StartHeadX):100;}
+ static OperationsDefinitions LiveOperations(){
+  OperationsDefinitions D;const auto G=TambaramRoute::MakeGraph();
+  auto B=[](size_t T,size_t I){return BlockId(10000+TambaramRoute::EdgeFor(T,I).value);};
+  for(size_t T=0;T<4;++T)for(size_t I=0;I<TambaramRoute::SegmentCount;++I){
+   const auto E=TambaramRoute::EdgeFor(T,I);const double L=G.Find(E)->lengthMetres;
+   uint64_t Owner=(T==1&&(I==4||I==10))?1:(T==0&&I==14)?2:0;
+   for(uint64_t Id=3;Id<=5;++Id)if(T==TrafficTrack(Id)&&(I==14||I==TrafficStart(Id)))Owner=Id;
+   if(T==1&&I==0){D.blocks.emplace(BlockId(3),BlockDefinition{BlockId(3),{{E,0,250}},{},TrainId(2)});D.blocks.emplace(B(T,I),BlockDefinition{B(T,I),{{E,250,L}},{},{}});}
+   else D.blocks.emplace(B(T,I),BlockDefinition{B(T,I),{{E,0,L}},{},TrainId(Owner),T==1&&I==4});
+  }
+  // Merge unbroken plain-line sections; keep holding areas and throat blocks
+  // separate. This bounds occupancy scans without weakening route ownership.
+  for(size_t T=0;T<4;++T){BlockId Previous;
+   for(size_t I=15;I<TambaramRoute::SegmentCount;++I){const auto Id=B(T,I);auto It=D.blocks.find(Id);
+    if(It->second.exclusiveTo.value){Previous={};continue;}
+    if(!Previous.value){Previous=Id;continue;}
+    auto& Into=D.blocks.at(Previous).coverage;Into.insert(Into.end(),It->second.coverage.begin(),It->second.coverage.end());D.blocks.erase(It);
+   }
+  }
+  for(uint64_t E:{90000ull,90001ull})D.blocks.emplace(BlockId(E),BlockDefinition{BlockId(E),{{EdgeId(E),0,G.Find(EdgeId(E))->lengthMetres}},{},{}});
+  const std::set<BlockId> Fouling{B(1,5),B(1,6),B(0,6),B(0,7),BlockId(90000),BlockId(90001)};
+  for(auto A:Fouling)for(auto C:Fouling)if(A!=C)D.blocks.at(A).conflicts.insert(C);
+  D.points.emplace(PointId(1),PointDefinition{PointId(1),{{0,{TambaramRoute::TransitionFor(1,5,false)}},{1,{TransitionId(90000)}}},Fouling});
+  D.points.emplace(PointId(2),PointDefinition{PointId(2),{{0,{TambaramRoute::TransitionFor(0,6,false)}},{1,{TransitionId(90004)}}},Fouling});
+  auto Add=[&](uint64_t Id,uint64_t Train,std::vector<DirectedEdge> P,TrackPosition From,TrackPosition To,BlockId Origin,BlockId Destination,std::map<PointId,int> Points){
+   std::set<BlockId> Blocks;
+   for(auto E:P)for(const auto& Pair:D.blocks)for(const auto& Range:Pair.second.coverage)if(Range.edge==E.edge&&Pair.first!=Origin&&Pair.first!=Destination)Blocks.insert(Pair.first);
+   D.routes.emplace(RouteId(Id),RouteDefinition{RouteId(Id),TrainId(Train),From,To,P,Blocks,Points,Origin,Destination,SignalId(Id)});
+  };
+  std::vector<DirectedEdge> AI;for(size_t I=4;I<=10;++I)AI.push_back({TambaramRoute::EdgeFor(1,I),1});
+  Add(1,1,AI,{AI.front().edge,G.Find(AI.front().edge)->lengthMetres,1},{AI.back().edge,G.Find(AI.back().edge)->lengthMetres-10,1},B(1,4),B(1,10),{{PointId(1),0}});
+  auto P=PlayerPath("IR-S9-MSTBM-LIVE-1");
+  std::vector<DirectedEdge> Throat(P.begin(),P.begin()+16),Onward(P.begin()+15,P.end());
+  Add(2,2,Throat,{P.front().edge,250,1},{Throat.back().edge,500,1},BlockId(3),B(0,14),{{PointId(1),1},{PointId(2),1}});
+  Add(3,2,Onward,{Onward.front().edge,500,1},{Onward.back().edge,G.Find(Onward.back().edge)->lengthMetres-10,1},B(0,14),{},{});
+  for(uint64_t Id=3;Id<=5;++Id){std::vector<DirectedEdge> Path;const auto T=TrafficTrack(Id),Start=TrafficStart(Id);
+   for(size_t I=Start+1;I-->14;)Path.push_back({TambaramRoute::EdgeFor(T,I),-1});
+   Add(Id+1,Id,Path,{Path.front().edge,G.Find(Path.front().edge)->lengthMetres-250,-1},{Path.back().edge,10,-1},B(T,Start),B(T,14),{});
+  }
+  for(const auto& Route:D.routes)D.signals.emplace(Route.second.signal,SignalDefinition{Route.second.signal,Route.second.origin,Route.first});return D;
+ }
  static OperationsDefinitions OperationsFor(const std::string& Id){
+  if(IsLiveJourney(Id))return LiveOperations();
   if(IsTambaram(Id)){
    OperationsDefinitions D;const Graph G=TambaramRoute::MakeGraph();
    // Per-edge blocks keep the short throat release independent of onward track.

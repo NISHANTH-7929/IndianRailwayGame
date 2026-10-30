@@ -1,4 +1,5 @@
 #include "RailLocomotiveView.h"
+#include "RailJourneyMaterials.h"
 #include "RailWheelPresentation.h"
 #include "RailControlPresentation.h"
 #include "Camera/CameraComponent.h"
@@ -16,6 +17,8 @@
 #include "Misc/Paths.h"
 #include "Misc/CommandLine.h"
 #include "Misc/Parse.h"
+#include "Misc/CoreDelegates.h"
+#include "Framework/Application/SlateApplication.h"
 #include "Serialization/JsonReader.h"
 #include "Serialization/JsonSerializer.h"
 #include "Materials/MaterialInstanceDynamic.h"
@@ -36,7 +39,32 @@ ARailLocomotiveView::ARailLocomotiveView(){
  Instruments->SetHorizontalAlignment(EHTA_Center);Instruments->SetWorldSize(3);Instruments->SetTextRenderColor(FColor(100,255,150));
  SpeedReadout=CreateDefaultSubobject<UTextRenderComponent>(TEXT("SpeedRecorderDigital"));SpeedReadout->SetupAttachment(RootComponent);SpeedReadout->SetRelativeLocation(FVector(906,-12,345));SpeedReadout->SetRelativeRotation(FRotator(0,180,0));SpeedReadout->SetWorldSize(2.0f);SpeedReadout->SetHorizontalAlignment(EHTA_Center);SpeedReadout->SetTextRenderColor(FColor(120,220,130));
  CabLight=CreateDefaultSubobject<UPointLightComponent>(TEXT("CabLight"));CabLight->SetupAttachment(RootComponent);CabLight->SetIntensity(1400);CabLight->SetAttenuationRadius(260);CabLight->SetCastShadows(false);CabLight->SetVisibility(false);
+ if(!OriginalCabForVisualReview()){
+  // Calibrated to this corridor's fixed exposure; retain dark panel contrast.
+  CabLight->SetUseInverseSquaredFalloff(true);
+  CabLight->SetIntensityUnits(ELightUnits::Lumens);CabLight->SetIntensity(30);
+  CabLight->SetUseTemperature(true);CabLight->SetTemperature(4000);
+  CabLight->SetSourceRadius(12);CabLight->SetSoftSourceRadius(16);
+ }
  UpdateCamera();
+}
+void ARailLocomotiveView::BeginPlay(){
+ Super::BeginPlay();
+ FCoreDelegates::ApplicationWillDeactivateDelegate.AddUObject(this,&ARailLocomotiveView::CancelCabPointerInput);
+ FCoreDelegates::ApplicationWillEnterBackgroundDelegate.AddUObject(this,&ARailLocomotiveView::CancelCabPointerInput);
+ if(FSlateApplication::IsInitialized())FSlateApplication::Get().OnApplicationActivationStateChanged().AddUObject(this,&ARailLocomotiveView::OnApplicationActivationChanged);
+}
+void ARailLocomotiveView::EndPlay(const EEndPlayReason::Type EndPlayReason){
+ FCoreDelegates::ApplicationWillDeactivateDelegate.RemoveAll(this);
+ FCoreDelegates::ApplicationWillEnterBackgroundDelegate.RemoveAll(this);
+ if(FSlateApplication::IsInitialized())FSlateApplication::Get().OnApplicationActivationStateChanged().RemoveAll(this);
+ CancelCabPointerInput();Super::EndPlay(EndPlayReason);
+}
+void ARailLocomotiveView::CancelCabPointerInput(){CabPointerRouter.Cancel();}
+void ARailLocomotiveView::OnApplicationActivationChanged(bool Active){CancelCabPointerInput();}
+void ARailLocomotiveView::SetDrivingHudInput(bool Enabled,bool BlockAll){
+ if(DrivingHudInput!=Enabled||HudBlocksAllInput!=BlockAll)CancelCabPointerInput();
+ DrivingHudInput=Enabled;HudBlocksAllInput=BlockAll;
 }
 bool ARailLocomotiveView::LoadPresentation(const FString& Id,FString& Diagnostic){
  if(Id!=TEXT("WAP7")){const auto* Sim=GetWorld()->GetSubsystem<URailSimulationSubsystem>();if(Sim&&Sim->IsServiceMode()&&Sim->ReadOnlyService().Definition().contentId==Rail::FormationContent::LhbId){Diagnostic=TEXT("This formation requires WAP-7 presentation");return false;}}
@@ -54,6 +82,9 @@ bool ARailLocomotiveView::LoadPresentation(const FString& Id,FString& Diagnostic
  for(const auto& Value:*Rows){const TSharedPtr<FJsonObject>* O=nullptr;FString Asset,PartRole;FVector L=FVector::ZeroVector,R=FVector::ZeroVector,S=FVector::OneVector;
   if(!Value->TryGetObject(O)||!(*O)->TryGetStringField(TEXT("asset"),Asset)||!Asset.StartsWith(TEXT("/Game/IndianRailway/S8/Locomotives/")+Id+TEXT("/"))||!(*O)->TryGetStringField(TEXT("role"),PartRole)||!Vector(**O,TEXT("location_cm"),L)||!Vector(**O,TEXT("rotation_deg"),R)||!Vector(**O,TEXT("scale"),S)||S.GetMin()<=0){Diagnostic=TEXT("Invalid assembly part");return false;}
   UStaticMesh* Mesh=LoadObject<UStaticMesh>(nullptr,*Asset);if(!Mesh){Diagnostic=TEXT("Missing cooked mesh: ")+Asset;return false;}
+  if(Id==TEXT("WAP7")&&!OriginalCabForVisualReview()&&Mesh->GetName()==TEXT("SM_WAP7_Cab_StaticCore")){
+   if(auto* Cab=LoadObject<UStaticMesh>(nullptr,TEXT("/Game/IndianRailway/S9/CabRealismV1/Meshes/SM_WAP7_Cab_StaticCore_HardwareV1.SM_WAP7_Cab_StaticCore_HardwareV1")))Mesh=Cab;
+  }
   if(Id==TEXT("WAP7")&&PartRole==TEXT("bogie")){
    const FString Replacement=FString::Printf(TEXT("/Game/IndianRailway/S8/RunningGearV2/SM_WAP7_Frame_%s.SM_WAP7_Frame_%s"),L.X>0?TEXT("Front"):TEXT("Rear"),L.X>0?TEXT("Front"):TEXT("Rear"));
    if(auto* Frame=LoadObject<UStaticMesh>(nullptr,*Replacement)){Mesh=Frame;L.Z-=4.79;}
@@ -74,6 +105,7 @@ bool ARailLocomotiveView::LoadPresentation(const FString& Id,FString& Diagnostic
  for(const auto& Part:Parts)if(Part){RemoveInstanceComponent(Part);Part->SetStaticMesh(nullptr);Part->DestroyComponent();}Parts.Empty();LampMaterials.Empty();
  CabOnly=MoveTemp(NewCabOnly);Roles=MoveTemp(NewRoles);Rest=MoveTemp(NewRest);Axes=MoveTemp(NewAxes);Ranges=MoveTemp(NewRanges);PantoBases=MoveTemp(NewBases);PantoElbows=MoveTemp(NewElbows);PantoContacts=MoveTemp(NewContacts);Triangles=MaterialSlots=0;
  for(int32 I=0;I<Meshes.Num();++I){if(const auto* Render=Meshes[I]->GetRenderData())if(!Render->LODResources.IsEmpty())Triangles+=Render->LODResources[0].GetNumTriangles();MaterialSlots+=Meshes[I]->GetStaticMaterials().Num();auto* Part=NewObject<UStaticMeshComponent>(this);AddInstanceComponent(Part);Part->SetupAttachment(RootComponent);Part->SetMobility(EComponentMobility::Movable);Part->SetStaticMesh(Meshes[I]);if(CabOnly[I])Part->SetForcedLodModel(1);Part->SetRelativeTransform(Rest[I]);Part->SetCollisionEnabled(ECollisionEnabled::NoCollision);Part->SetGenerateOverlapEvents(false);Part->SetCastShadow(true);Part->RegisterComponent();Parts.Add(Part);
+  if(Id==TEXT("WAP7"))ApplyJourneyMaterials(Part);
   for(int32 Slot=0;Slot<Part->GetNumMaterials();++Slot)if(Part->GetMaterial(Slot)&&Part->GetMaterial(Slot)->GetName().Contains(TEXT("Lamp")))if(auto* Material=Part->CreateDynamicMaterialInstance(Slot))LampMaterials.Add(Material);
  }
  const TSharedPtr<FJsonObject>* Driver=nullptr;if(Doc->TryGetObjectField(TEXT("driver_camera"),Driver)){Vector(**Driver,TEXT("location_cm"),DriverLocation);FVector R;if(Vector(**Driver,TEXT("rotation_deg"),R))DriverRotation=FRotator(R.X,R.Y,R.Z);}
@@ -85,7 +117,7 @@ bool ARailLocomotiveView::LoadPresentation(const FString& Id,FString& Diagnostic
  if(Doc->TryGetObjectField(TEXT("instrument_display"),Display)){FVector L,R;double Size=1.8;if(Vector(**Display,TEXT("location_cm"),L))Instruments->SetRelativeLocation(L);if(Vector(**Display,TEXT("rotation_deg"),R))Instruments->SetRelativeRotation(FRotator(R.X,R.Y,R.Z));(*Display)->TryGetNumberField(TEXT("size_cm"),Size);Instruments->SetWorldSize(Size);Instruments->SetVerticalAlignment(EVRTA_TextCenter);}
  FVector LightLocation;if(Vector(*Doc,TEXT("cab_light_location_cm"),LightLocation))CabLight->SetRelativeLocation(LightLocation);
  if(Driver){double Fov=78;(*Driver)->TryGetNumberField(TEXT("fov"),Fov);DriverFov=FMath::Clamp(Fov,55.0,95.0);}
- LookOffset=FRotator::ZeroRotator;PointerDown=false;
+ LookOffset=FRotator::ZeroRotator;CancelCabPointerInput();
  PresentationClass=Id;UpdateCamera();LastLoadMilliseconds=(FPlatformTime::Seconds()-Begin)*1000;
  Diagnostic=Id+TEXT(" presentation loaded; existing provisional handling retained");
  UE_LOG(LogTemp,Display,TEXT("S8_LOCOMOTIVE class=%s components=%d loadMs=%.2f"),*Id,Parts.Num(),LastLoadMilliseconds);return true;
@@ -93,15 +125,29 @@ bool ARailLocomotiveView::LoadPresentation(const FString& Id,FString& Diagnostic
 void ARailLocomotiveView::UpdateCamera(){
  // View the station across the train, clear of the platform canopy.
  const bool Station=FParse::Param(FCommandLine::Get(),TEXT("S8Station"));
- Camera->SetRelativeLocation(CabCamera?DriverLocation:FVector(2200,Station?2700:-2700,1150));
- Camera->SetRelativeRotation(CabCamera?(DriverRotation+LookOffset):(FVector(0,0,200)-Camera->GetRelativeLocation()).Rotation());
+ const bool Corridor=FParse::Param(FCommandLine::Get(),TEXT("S8Tambaram"));
+ // Keep the journey's exterior camera inside the roadside tree line, where
+ // the locomotive running gear and first coach remain visible on curves.
+ const FVector Exterior=ExteriorView==1?FVector(-1100,-700,1250):ExteriorView==2?FVector(1400,1250,700):Corridor?FVector(1400,-1250,700):FVector(2200,Station?2700:-2700,1150);
+ const FVector Target=ExteriorView==1?FVector(4200,250,0):FVector(0,0,200);
+ Camera->SetRelativeLocation(CabCamera?DriverLocation:Exterior);
+ Camera->SetRelativeRotation(CabCamera?(DriverRotation+LookOffset):(Target-Camera->GetRelativeLocation()).Rotation());
  Camera->SetFieldOfView(CabCamera&&InstrumentView?55:DriverFov);
  Instruments->SetVisibility(CabCamera);SpeedReadout->SetVisibility(CabCamera);
  for(int32 I=0;I<Parts.Num();++I){const bool Visible=CabOnly[I]?CabCamera:(!CabCamera||Roles[I]!=TEXT("exterior"));Parts[I]->SetVisibility(Visible);Parts[I]->SetCastShadow(Visible);}
  CabLight->SetVisibility(CabCamera&&CabLighting);
 }
-void ARailLocomotiveView::ToggleCamera(){if(CabAvailable){CabCamera=!CabCamera;InstrumentView=false;++CabTransitions;LookOffset=FRotator::ZeroRotator;UpdateCamera();}}
-void ARailLocomotiveView::ToggleInstrumentView(){if(CabCamera){InstrumentView=!InstrumentView;LookOffset=InstrumentView?FRotator(-12,0,0):FRotator::ZeroRotator;UpdateCamera();}}
+void ARailLocomotiveView::ToggleCamera(){if(CabAvailable){CancelCabPointerInput();CabCamera=!CabCamera;ExteriorView=0;InstrumentView=false;++CabTransitions;LookOffset=FRotator::ZeroRotator;UpdateCamera();}}
+FString ARailLocomotiveView::CameraName() const {return CabCamera?TEXT("Cab"):ExteriorView==1?TEXT("Forward route"):ExteriorView==2?TEXT("Right side"):TEXT("Left side");}
+void ARailLocomotiveView::CycleJourneyCamera(){
+ if(!CabAvailable)return;
+ if(CabCamera){CabCamera=false;ExteriorView=1;}
+ else if(ExteriorView==1)ExteriorView=2;
+ else if(ExteriorView==2)ExteriorView=0;
+ else CabCamera=true;
+ InstrumentView=false;CancelCabPointerInput();LookOffset=FRotator::ZeroRotator;++CabTransitions;UpdateCamera();
+}
+void ARailLocomotiveView::ToggleInstrumentView(){if(CabCamera){CancelCabPointerInput();InstrumentView=!InstrumentView;const double Pitch=PresentationClass==TEXT("WAP7")&&!OriginalCabForVisualReview()?-3:-12;LookOffset=InstrumentView?FRotator(Pitch,0,0):FRotator::ZeroRotator;UpdateCamera();}}
 void ARailLocomotiveView::ToggleSwitch(int32 Switch){if(Switch==0)Headlights=!Headlights;else if(Switch==1)PantographUp=!PantographUp;else if(Switch==2)Wipers=!Wipers;else if(Switch==3)CabLighting=!CabLighting;}
 FString ARailLocomotiveView::Display() const {
  if(!CabAvailable)return PresentationClass+TEXT(" exterior | Cab and equipment animation in progress");
@@ -109,6 +155,16 @@ FString ARailLocomotiveView::Display() const {
 }
 FString ARailLocomotiveView::TelemetryJson() const {
  FString Result=FString::Printf(TEXT("{\"ready\":%s,\"class\":\"%s\",\"parts\":%d,\"trianglesLOD0\":%d,\"materialSlots\":%d,\"loadMs\":%.3f,\"cabCamera\":%s,\"cabTransitions\":%d,\"interactions\":%d,\"speedKmh\":%.3f,\"commandThrottle\":%.3f,\"commandBrake\":%.3f,\"direction\":%d"),IsReady()?TEXT("true"):TEXT("false"),*PresentationClass,Parts.Num(),Triangles,MaterialSlots,LastLoadMilliseconds,CabCamera?TEXT("true"):TEXT("false"),CabTransitions,InteractionCount,LastSpeed,LastPower,LastBrake,LastDirection);
+ Result+=FString::Printf(TEXT(",\"cameraView\":\"%s\""),*CameraName());
+ FString CabCore;TSet<FString> CabFinishes;int32 CabTriangles=0;
+ for(int32 I=0;I<Parts.Num();++I)if(CabOnly[I]&&Parts[I]){
+  if(const UStaticMesh* Mesh=Parts[I]->GetStaticMesh()){
+   if(Mesh->GetName().StartsWith(TEXT("SM_WAP7_Cab_StaticCore")))CabCore=Mesh->GetPathName();
+   if(const auto* Render=Mesh->GetRenderData())if(!Render->LODResources.IsEmpty())CabTriangles+=Render->LODResources[0].GetNumTriangles();
+  }
+  for(int32 Slot=0;Slot<Parts[I]->GetNumMaterials();++Slot)if(const auto* Material=Parts[I]->GetMaterial(Slot))if(Material->GetPathName().StartsWith(TEXT("/Game/IndianRailway/S9/CabRealismV1/Materials/")))CabFinishes.Add(Material->GetPathName());
+ }
+ Result+=FString::Printf(TEXT(",\"cabCoreMesh\":\"%s\",\"cabFinishMaterials\":%d,\"cabTrianglesLOD0\":%d"),*CabCore,CabFinishes.Num(),CabTriangles);
  Result+=FString::Printf(TEXT(",\"appliedPower\":%.6f,\"appliedBrake\":%.6f,\"emergency\":%s,\"cabLight\":%s,\"cabLightVisible\":%s,\"instrumentView\":%s,\"cameraFov\":%.2f"),LastAppliedPower,LastAppliedBrake,LastEmergency?TEXT("true"):TEXT("false"),CabLighting?TEXT("true"):TEXT("false"),CabLight->IsVisible()?TEXT("true"):TEXT("false"),InstrumentView?TEXT("true"):TEXT("false"),Camera->FieldOfView);
  int32 ViewWidth=0,ViewHeight=0;if(auto* PC=GetWorld()->GetFirstPlayerController())PC->GetViewportSize(ViewWidth,ViewHeight);
  Result+=FString::Printf(TEXT(",\"viewport\":[%d,%d]"),ViewWidth,ViewHeight);
@@ -126,16 +182,19 @@ void ARailLocomotiveView::Present(const Rail::Simulation& Spatial,const Rail::Lo
  const auto Controls=Rail::ControlPresentation::From(H);LastAppliedPower=Controls.power;LastAppliedBrake=Controls.brake;LastEmergency=Controls.emergency;
  if(const auto* Sim=GetWorld()->GetSubsystem<URailSimulationSubsystem>())if(Sim->IsServiceMode()){LastPower=Sim->ReadOnlyService().Current().requestedPower;LastBrake=Sim->ReadOnlyService().Current().requestedBrake;}
  if(auto* PC=GetWorld()->GetFirstPlayerController()){
-  float X=0,Y=0;bool Touch=false;PC->GetInputTouchState(ETouchIndex::Touch1,X,Y,Touch);bool Down=Touch;
-  if(!Touch){Down=PC->IsInputKeyDown(EKeys::LeftMouseButton);PC->GetMousePosition(X,Y);}
-  int32 W=0,Height=0;PC->GetViewportSize(W,Height);const FVector2D P(X,Y);
-  if(CabCamera&&Down&&!PointerDown&&Y<Height*.86){PointerStart=PointerPrevious=P;PointerDragged=false;PointerDown=true;}
-  else if(PointerDown&&Down){const FVector2D Delta=P-PointerPrevious;if((P-PointerStart).Size()>14)PointerDragged=true;if(PointerDragged){LookOffset.Yaw=FMath::Clamp(LookOffset.Yaw+Delta.X*.07,-65.0,65.0);LookOffset.Pitch=FMath::Clamp(LookOffset.Pitch-Delta.Y*.07,-30.0,25.0);UpdateCamera();}PointerPrevious=P;}
-  else if(PointerDown&&!Down){PointerDown=false;if(CabCamera&&!PointerDragged){FVector Origin,Direction;if(PC->DeprojectScreenPositionToWorld(PointerStart.X,PointerStart.Y,Origin,Direction)){int32 Best=INDEX_NONE;double Distance=18;
+  Rail::HudInputRegions::PointerRouter::Samples Samples{};
+  for(int32 I=0;I<Rail::HudInputRegions::TouchCount;++I){float X=0,Y=0;bool Down=false;PC->GetInputTouchState(static_cast<ETouchIndex::Type>(I),X,Y,Down);Samples[I]={X,Y,Down};}
+  float MouseX=0,MouseY=0;const bool HasMouse=PC->GetMousePosition(MouseX,MouseY);
+  Samples[Rail::HudInputRegions::MousePointer]={MouseX,MouseY,HasMouse&&PC->IsInputKeyDown(EKeys::LeftMouseButton)};
+  int32 W=0,Height=0;PC->GetViewportSize(W,Height);
+  const bool Focused=!FSlateApplication::IsInitialized()||FSlateApplication::Get().IsActive();
+  const auto Gesture=CabPointerRouter.Update(Samples,W,Height,CabCamera&&!Paused&&Focused,DrivingHudInput,HudBlocksAllInput);
+  if(Gesture.Pan){LookOffset.Yaw=FMath::Clamp(LookOffset.Yaw+Gesture.DeltaX*.07,-65.0,65.0);LookOffset.Pitch=FMath::Clamp(LookOffset.Pitch-Gesture.DeltaY*.07,-30.0,25.0);UpdateCamera();}
+  if(Gesture.Tap){FVector Origin,Direction;if(PC->DeprojectScreenPositionToWorld(Gesture.TapX,Gesture.TapY,Origin,Direction)){int32 Best=INDEX_NONE;double Distance=18;
    for(int32 I=0;I<Parts.Num();++I)if(Roles[I]==TEXT("throttle")||Roles[I]==TEXT("train_brake")||Roles[I]==TEXT("reverser")||Roles[I].StartsWith(TEXT("switch_"))){const FVector Target=Parts[I]->GetComponentLocation()+GetActorQuat().RotateVector(Roles[I].StartsWith(TEXT("switch_"))?FVector::ZeroVector:FVector(0,0,12));const FVector D=Target-Origin;const double T=FVector::DotProduct(D,Direction);const double Miss=(D-Direction*T).Size();if(T>0&&Miss<Distance){Distance=Miss;Best=I;}}
    if(Best!=INDEX_NONE){++InteractionCount;GetWorld()->GetSubsystem<URailSimulationSubsystem>()->CabControl(Roles[Best]);}
-  }}}
- }
+  }}
+ }else CancelCabPointerInput();
 
  if(!Spatial.Presentation(Spatial.InterpolationAlpha(),S).ok||S.vehicles.empty())return;
  const auto& V=S.vehicles.front();const FQuat Q=FRotationMatrix::MakeFromXZ(Cm(V.bodyForward).GetSafeNormal(),FVector::UpVector).ToQuat();SetActorLocationAndRotation(Cm(V.bodyCentre),Q);

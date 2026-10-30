@@ -4,6 +4,7 @@
 #include "Simulation/RailTambaramService.h"
 #include "RailChunkView.h"
 #include "RailTambaramCorridorView.h"
+#include "RailTambaramTurnoutView.h"
 #include "RailTambaramStationView.h"
 #include "RailEgmoreSceneView.h"
 #include "RailDrivingWidget.h"
@@ -45,7 +46,7 @@ Rail::ReviewPolicy ReviewPolicy(){
 #if !UE_BUILD_SHIPPING
  return Rail::ReviewPolicy::FromFlags(true,
   FParse::Param(FCommandLine::Get(),TEXT("S8AssetReview")),
-  FParse::Param(FCommandLine::Get(),TEXT("S8Egmore")),
+  FParse::Param(FCommandLine::Get(),TEXT("S8Egmore"))||FParse::Param(FCommandLine::Get(),TEXT("S8Tambaram")),
   FParse::Param(FCommandLine::Get(),TEXT("S8AssetReviewResume")));
 #else
  return {};
@@ -70,6 +71,7 @@ FString Directory(bool ServiceStage=false){
  }
 #endif
  // New traffic content uses separate slots; retain prior ServiceV5 saves intact.
+ if(TambaramContent()&&FParse::Param(FCommandLine::Get(),TEXT("S9LiveJourney"))&&!AssetReview())return FPaths::ProjectSavedDir()/TEXT("S9/EgmoreTambaram/LiveServiceV1");
  if(TambaramContent()&&!AssetReview())return FPaths::ProjectSavedDir()/TEXT("S8/EgmoreTambaram/ServiceV6");
  if(AssetReview()&&FParse::Param(FCommandLine::Get(),TEXT("S8AudioReview")))return FPaths::ProjectSavedDir()/TEXT("S8/AudioReview");if(TambaramContent())return FPaths::ProjectSavedDir()/(AssetReview()?TEXT("S8/EgmoreTambaram/AssetReview"):TEXT("S8/EgmoreTambaram/ServiceV5"));if(EgmoreContent())return FPaths::ProjectSavedDir()/(AssetReview()?TEXT("S8/Egmore/AssetReview"):TEXT("S8/Egmore/Service"));if(FParse::Param(FCommandLine::Get(),TEXT("S8Station")))return FPaths::ProjectSavedDir()/(AssetReview()?TEXT("S8/Station/AssetReview"):TEXT("S8/Station/Service"));if(LhbContent())return FPaths::ProjectSavedDir()/(AssetReview()?TEXT("S8/LHB/AssetReview"):TEXT("S8/LHB/Service"));if(AssetReview())return FPaths::ProjectSavedDir()/TEXT("S8/AssetReview");return FPaths::ProjectSavedDir()/(ServiceStage?TEXT("S7"):TEXT("S6"));}
 FString Slot(unsigned Index,bool ServiceStage=false){return Directory(ServiceStage)/FString::Printf(TEXT("checkpoint-%u.irs"),Index);}
@@ -105,7 +107,7 @@ void URailSimulationSubsystem::InitializeS6(){
  // Runtime content validation and protected operations remain enabled in Shipping.
  if(ServiceMode){
   const auto* Asset=LoadObject<URailServiceDefinition>(nullptr,TEXT("/Game/IndianRailway/S7/DA_Shantipur.DA_Shantipur"));if(!Asset||!Asset->Record().Validate().ok){Active=false;return;}
-  auto Definition=Asset->Record();if(TambaramContent())Definition=Rail::MakeEgmoreTambaramService();else if(EgmoreContent())Definition=Rail::MakeEgmoreService();else if(LhbContent()){Definition.contentId=Rail::FormationContent::LhbId;Definition.berthHead=Rail::FormationContent::ServiceBerthHead;Definition.id="S8-Shantipur-LHB-01";Definition.version="IR-S8-LHB-service-1";Definition.formation="WAP-7 presentation + LHB AC 3-tier";}
+  auto Definition=Asset->Record();if(TambaramContent())Definition=FParse::Param(FCommandLine::Get(),TEXT("S9LiveJourney"))?Rail::MakeLiveTambaramService():Rail::MakeEgmoreTambaramService();else if(EgmoreContent())Definition=Rail::MakeEgmoreService();else if(LhbContent()){Definition.contentId=Rail::FormationContent::LhbId;Definition.berthHead=Rail::FormationContent::ServiceBerthHead;Definition.id="S8-Shantipur-LHB-01";Definition.version="IR-S8-LHB-service-1";Definition.formation="WAP-7 presentation + LHB AC 3-tier";}
   if(!Definition.Validate().ok){Active=false;return;}Service=Rail::ServiceRuntime(Definition);if(!Operations.InitializeContent(Definition.contentId).ok){Active=false;return;}SelectedTrain=Service.Definition().player;
   FFileHelper::SaveStringToFile(UTF8_TO_TCHAR(Service.Definition().Json().c_str()),*(Directory(true)/TEXT("service-definition.json")));
  }else Operations.InitializeAIFixture();
@@ -132,6 +134,8 @@ void URailSimulationSubsystem::InitializeS6(){
  if(LocomotiveView){FString Diagnostic,ClassId=TEXT("WAP7");FParse::Value(FCommandLine::Get(),TEXT("S8LocoClass="),ClassId);if(LocomotiveView->LoadPresentation(ClassId,Diagnostic)){if(FParse::Param(FCommandLine::Get(),TEXT("S8Cab")))LocomotiveView->ToggleCamera();if(auto* PC=GetWorld()->GetFirstPlayerController())PC->SetViewTarget(LocomotiveView);}else UE_LOG(LogRailContinuity,Warning,TEXT("S8 %s; retaining proxy"),*Diagnostic);}
  if(EgmoreContent()||TambaramContent()){EgmoreTrafficLocomotive=GetWorld()->SpawnActor<ARailLocomotiveView>();FString Diagnostic;if(EgmoreTrafficLocomotive&&!EgmoreTrafficLocomotive->LoadPresentation(TEXT("WAP7"),Diagnostic)){Active=false;return;}}
  if(TambaramContent()&&Operations.Spatial(Rail::TrainId(3))){OpposingLocomotive=GetWorld()->SpawnActor<ARailLocomotiveView>();FString Diagnostic;if(!OpposingLocomotive||!OpposingLocomotive->LoadPresentation(TEXT("WAP7"),Diagnostic)){Active=false;return;}}
+ for(uint64 Id=4;Id<=Rail::ScenarioContent::TrainCount(Operations.ContentId());++Id){auto* TrafficView=GetWorld()->SpawnActor<ARailLocomotiveView>();FString Diagnostic;if(!TrafficView||!TrafficView->LoadPresentation(TEXT("WAP7"),Diagnostic)){Active=false;return;}AdditionalTrafficLocomotives.Add(TrafficView);}
+
  if(Policy.Fresh()&&ServiceMode){
   const auto A=Service.Select();const auto B=Service.ConfirmFormation();const auto C=Service.Start(Operations);
   if(A.ok&&B.ok&&C.ok){S6Paused=false;S6Generation=0;SubmitPlayerCommand(Rail::CommandKind::Brake,0);SubmitPlayerCommand(Rail::CommandKind::Throttle,TambaramContent()?1:.35);}
@@ -140,6 +144,8 @@ void URailSimulationSubsystem::InitializeS6(){
  WriteS6Evidence();
 }
 void URailSimulationSubsystem::SaveS6(const FString& Reason){
+ CSV_SCOPED_TIMING_STAT(RailS7,CheckpointMs);
+ if(ServiceMode&&Service.Current().accumulator>4.0/30.0+1e-9){S6SaveStatus=TEXT("Checkpoint retained: restore after frame overload before saving");WriteS6Evidence();return;}
  if(ReviewPolicy().resumeRequired&&S6RecoveryBlocked){S6SaveStatus=TEXT("Save refused: isolated recovery blocked; checkpoint files retained");WriteS6Evidence();return;}
  const double Begin=FPlatformTime::Seconds();Rail::CheckpointCommit Commit;
  const auto Result=ServiceMode?Service.Save(Operations,Files(true),Commit):Rail::CommitCheckpoint(Operations,Files(),Commit);
@@ -173,6 +179,13 @@ void URailSimulationSubsystem::CycleS6Chunks(){
  S6ReloadAfter=FPlatformTime::Seconds()+3;S6Blocked=true;
 }
 void URailSimulationSubsystem::TickS6(float DeltaTime){
+ CSV_SCOPED_TIMING_STAT(RailS7,ContinuityMs);
+ // Record intent before presentation work so loading stalls during travel stay
+ // in the driving sample. Exclude menus, explicit pause, results and background.
+ const bool DrivingFrame=ServiceMode&&Service.Current().phase==Rail::ServicePhase::Running&&!S6Paused&&!AppBackground.Load();
+ CSV_CUSTOM_STAT(RailS7,DrivingFrame,DrivingFrame?1:0,ECsvCustomStatOp::Set);
+ CSV_CUSTOM_STAT(RailS7,PresentationBlocked,0,ECsvCustomStatOp::Set);
+ CSV_CUSTOM_STAT(RailS7,PresentationTransition,0,ECsvCustomStatOp::Set);
  if(CancelInputRequested.Exchange(false)){S6Paused=true;StopServiceAudio();SaveS6(TEXT("deferred-background"));}
  if(AppBackground.Load())return;
  const double Now=FPlatformTime::Seconds();
@@ -224,6 +237,8 @@ void URailSimulationSubsystem::TickS6(float DeltaTime){
  if(Blocked||Transition||S6Blocked){DeltaTime=0;SkipNextDelta.Store(true);}
  else if(SkipResumeDelta)DeltaTime=0;
  S6Blocked=Blocked;S6StreamStatus=Blocked?TEXT("Waiting for essential presentation; logical permission unchanged"):TEXT("Essential presentation ready");
+ CSV_CUSTOM_STAT(RailS7,PresentationBlocked,Blocked?1:0,ECsvCustomStatOp::Set);
+ CSV_CUSTOM_STAT(RailS7,PresentationTransition,Transition?1:0,ECsvCustomStatOp::Set);
  if(!Blocked&&!S6Paused&&!S6RecoveryBlocked&&!Operations.Faulted()){
   const auto BeforePhase=Service.Current().phase;const auto BeforeStation=Service.Current().station;
   const double ApplicationBegin=FPlatformTime::Seconds();
@@ -276,10 +291,13 @@ void URailSimulationSubsystem::TickS6(float DeltaTime){
  if(HasLocomotivePresentation()){const auto* CurrentPlayer=Operations.Spatial(PlayerId);const auto* CurrentHandling=Operations.Handling(PlayerId);if(CurrentPlayer&&CurrentHandling)LocomotiveView->Present(*CurrentPlayer,*CurrentHandling,DeltaTime,S6Paused||S6Blocked);}
  if(EgmoreTrafficLocomotive){const auto* Train=Operations.Spatial(Rail::TrainId(1));const auto* TrafficHandling=Operations.Handling(Rail::TrainId(1));if(Train&&TrafficHandling)EgmoreTrafficLocomotive->Present(*Train,*TrafficHandling,DeltaTime,S6Paused||S6Blocked);}
  if(OpposingLocomotive){const auto* Train=Operations.Spatial(Rail::TrainId(3));const auto* H=Operations.Handling(Rail::TrainId(3));if(Train&&H)OpposingLocomotive->Present(*Train,*H,DeltaTime,S6Paused||S6Blocked);}
+ for(int32 I=0;I<AdditionalTrafficLocomotives.Num();++I){const auto* Train=Operations.Spatial(Rail::TrainId(4+I));const auto* H=Operations.Handling(Rail::TrainId(4+I));if(Train&&H&&AdditionalTrafficLocomotives[I])AdditionalTrafficLocomotives[I]->Present(*Train,*H,DeltaTime,S6Paused||S6Blocked);}
+
  CSV_CUSTOM_STAT(RailS6,ResidentChunks,Views,ECsvCustomStatOp::Set);
  if(Transition||Now-S6LastEvidence>=1){WriteS6Evidence();S6LastEvidence=Now;}
 }
 void URailSimulationSubsystem::WriteS6Evidence(){
+ CSV_SCOPED_TIMING_STAT(RailS7,TelemetryMs);
  S6RetiredViews.RemoveAll([](const auto& ViewRef){return !ViewRef.IsValid();});
  S6RetiredMeshes.RemoveAll([](const auto& MeshRef){return !MeshRef.IsValid();});
  if(S6RetiredViews.Num()>64||S6RetiredMeshes.Num()>64){S6Paused=true;S6StreamStatus=TEXT("Residency audit limit exceeded");}
@@ -293,8 +311,9 @@ void URailSimulationSubsystem::WriteS6Evidence(){
  const FString Loco=TEXT("\"locomotive\":")+(LocomotiveView?LocomotiveView->TelemetryJson():TEXT("{\"ready\":false}"))+TEXT(",");
  FString TambaramViews=TEXT("\"tambaramViews\":[");bool FirstView=true;
  for(const auto& Level:S6Levels)if(Level&&Level->GetLoadedLevel())for(const auto& Actor:Level->GetLoadedLevel()->Actors)if(auto* Chunk=Cast<ARailChunkView>(Actor))if(Chunk->TambaramCorridor){
-  auto* C=Chunk->TambaramCorridor.Get();TambaramViews+=FString::Printf(TEXT("%s{\"chunk\":%d,\"ready\":%s,\"cells\":%d,\"instances\":%d,\"stones\":%d,\"cellBuilds\":%llu,\"cellReleases\":%llu,\"station\":%s}"),FirstView?TEXT(""):TEXT(","),Chunk->ChunkId,Chunk->TambaramReady?TEXT("true"):TEXT("false"),C->ActiveCells,C->InstanceCount,C->StoneInstances,C->RebuildCount,C->ReleasedCells,Chunk->TambaramStation?*Chunk->TambaramStation->TelemetryJson():TEXT("null"));FirstView=false;
- }TambaramViews+=TEXT("],");
+  auto* C=Chunk->TambaramCorridor.Get();TambaramViews+=FString::Printf(TEXT("%s{\"chunk\":%d,\"ready\":%s,\"cells\":%d,\"instances\":%d,\"stones\":%d,\"cellBuilds\":%llu,\"cellReleases\":%llu,\"trackAssets\":%s,\"turnoutFinishes\":%s,\"station\":%s}"),FirstView?TEXT(""):TEXT(","),Chunk->ChunkId,Chunk->TambaramReady?TEXT("true"):TEXT("false"),C->ActiveCells,C->InstanceCount,C->StoneInstances,C->RebuildCount,C->ReleasedCells,*C->TrackAssetTelemetryJson(),Chunk->TambaramTurnout?*Chunk->TambaramTurnout->FinishTelemetryJson():TEXT("[]"),Chunk->TambaramStation?*Chunk->TambaramStation->TelemetryJson():TEXT("null"));FirstView=false;
+ }
+ TambaramViews+=TEXT("],");
  const FString Egmore=EgmoreContent()?TEXT("\"egmoreScene\":")+(IsValid(EgmoreScene)?EgmoreScene->TelemetryJson():TEXT("{\"ready\":false}"))+TEXT(",\"trafficLocomotive\":")+(IsValid(EgmoreTrafficLocomotive)?EgmoreTrafficLocomotive->TelemetryJson():TEXT("{\"ready\":false}"))+TEXT(","):TEXT("");
  const FString Evidence=TEXT("{")+Egmore+TambaramViews+TEXT("\"logicalFingerprint\":\"")+LogicalFingerprint(Operations,ServiceMode?&Service:nullptr)+TEXT("\",")+Application+Loco+FString::Printf(TEXT("\"lhbVehicles\":%d,\"lhbComponents\":%d,"),CoachVehicles,CoachComponents)+Json.Mid(1);
  FFileHelper::SaveStringToFile(Evidence,*(Directory(ServiceMode)/TEXT("telemetry.json")));
@@ -321,11 +340,12 @@ void URailSimulationSubsystem::ServiceAction(int32 Action){
  if(Action==2){if(Service.Current().phase==Rail::ServicePhase::Running)ToggleHandlingPause();return;}
  if(Action==7){SubmitPlayerCommand(Rail::CommandKind::Emergency,1);return;}
  if(Action==8||(Action==1&&Service.Current().phase==Rail::ServicePhase::Running)){
+  if(Service.Current().accumulator>4.0/30.0+1e-9){S6Paused=true;ServiceNotice=TEXT("Your checkpoint is safe. Restore the last checkpoint before saving and exiting.");return;}
   S6Paused=true;SaveS6(TEXT("save-and-exit"));if(S6SaveStatus.EndsWith(TEXT("verified")))UKismetSystemLibrary::QuitGame(this,GetWorld()->GetFirstPlayerController(),EQuitPreference::Quit,false);else ServiceNotice=TEXT("Save failed. Remain paused and retry.");return;
  }
  if(Action==0&&Service.Current().phase==Rail::ServicePhase::Running){
   if(Service.Current().accumulator>4.0/30.0+1e-9){Rail::RecoverySelection Selected;const auto Restored=Service.Recover(Files(true),Operations,Selected);if(Restored.ok){ServiceDispatchWatchdog.Reset();ServiceDispatchTick=Operations.Current().tick;ServiceDispatchNotice.Empty();}ServiceNotice=Restored.ok?TEXT("Last verified checkpoint restored. Resume when ready."):UTF8_TO_TCHAR(Restored.error.c_str());S6Paused=true;SkipNextDelta.Store(true);WriteS6Evidence();return;}
-  S6Paused=false;SkipNextDelta.Store(true);return;
+  S6Paused=false;ServiceNotice.Empty();SkipNextDelta.Store(true);return;
  }
  Rail::CheckpointCommit Commit;Rail::Result Result;
  if(Action==0&&Service.Current().phase==Rail::ServicePhase::Result&&Service.Current().success&&!Service.Current().settled){

@@ -62,6 +62,8 @@ public:
  bool IsLocomotiveCabCamera() const;
  FString ServicePanelText() const;
  FString ServiceHudText() const;
+ const FString& ServiceControlNotice() const {return ServiceNotice;}
+ const FString& DrivingDispatchNotice() const {return ServiceDispatchNotice;}
  FString ServicePrimaryLabel() const;
  void SaveS6Checkpoint();
  void ToggleS6LookBack();
@@ -77,6 +79,7 @@ private:
  UPROPERTY() TObjectPtr<ARailLocomotiveView> LocomotiveView;
  UPROPERTY() TObjectPtr<ARailLocomotiveView> EgmoreTrafficLocomotive;
  UPROPERTY() TObjectPtr<ARailLocomotiveView> OpposingLocomotive;
+ UPROPERTY() TArray<TObjectPtr<ARailLocomotiveView>> AdditionalTrafficLocomotives;
  UPROPERTY() TObjectPtr<ARailEgmoreSceneView> EgmoreScene;
  double S8ReviewSeconds=0;
  int32 S8ReviewPhase=-1;
@@ -109,6 +112,7 @@ private:
  UPROPERTY() TObjectPtr<UAudioComponent> OpposingRollingAudio;
  UPROPERTY() TObjectPtr<UAudioComponent> OpposingMotorAudio;
  Rail::PassingAudioDynamics OpposingHornDynamics,OpposingRollingDynamics;
+ uint64 OpposingAudioTrain=0; // presentation source identity, never serialized
  void UpdateTrafficAudio(float Delta,bool InCab);
  void ApplyTrafficAudio(const FVector& Horn,const FVector& Running,const FVector& Listener,double Speed,double Traction,float Delta,bool InCab,bool Opposing=false);
 #if WITH_EDITOR && WITH_DEV_AUTOMATION_TESTS
@@ -135,6 +139,7 @@ private:
  void SuspendS6();
  FString S6Display() const;
  bool ContinuityMode=false,S6Paused=true,S6Blocked=true,S6LookBack=false,S6Milestone=false;
+ bool ServiceKeepsScreenAwake=false;
  bool S6RecoveryBlocked=false;
  double S6ReloadAfter=0,S6LastEvidence=0,S6SaveMilliseconds=0;
  uint64 S6Generation=0;

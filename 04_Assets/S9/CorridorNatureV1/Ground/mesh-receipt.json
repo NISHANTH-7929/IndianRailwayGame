@@ -1,0 +1,328 @@
+{
+  "revision": "corridor-nature-ground-v1",
+  "records": [
+    {
+      "lod": 0,
+      "triangles": 1968,
+      "fbx": "04_Assets\\S9\\CorridorNatureV1\\Ground\\SM_CorridorVerge12m_LOD0.fbx",
+      "sha256": "ee54fd377c23cef76959df896ee5a528f03a2f6fddb641a0730df2f2ef994cb4",
+      "bounds_m": [
+        [
+          0.0,
+          -4.5,
+          -0.3
+        ],
+        [
+          12.0,
+          4.5,
+          0.1393618300400214
+        ]
+      ],
+      "metric_uv": true,
+      "vertex_color_masks": "R worn path, G damp drainage, B vegetation",
+      "seam_height_m": 0.0,
+      "collision": false
+    },
+    {
+      "lod": 1,
+      "triangles": 552,
+      "fbx": "04_Assets\\S9\\CorridorNatureV1\\Ground\\SM_CorridorVerge12m_LOD1.fbx",
+      "sha256": "cc7ec386092e9b93fb022b75b2d138edcab48b78f918d36a6539078c243f36fa",
+      "bounds_m": [
+        [
+          0.0,
+          -4.5,
+          -0.3
+        ],
+        [
+          12.0,
+          4.5,
+          0.13933379794868786
+        ]
+      ],
+      "metric_uv": true,
+      "vertex_color_masks": "R worn path, G damp drainage, B vegetation",
+      "seam_height_m": 0.0,
+      "collision": false
+    },
+    {
+      "lod": 2,
+      "triangles": 216,
+      "fbx": "04_Assets\\S9\\CorridorNatureV1\\Ground\\SM_CorridorVerge12m_LOD2.fbx",
+      "sha256": "577a9f17a79c09b4955f26cc1f8ef78cff784969c5e3ca5202ed61e980a10f99",
+      "bounds_m": [
+        [
+          0.0,
+          -4.5,
+          -0.3
+        ],
+        [
+          12.0,
+          4.5,
+          0.11395128197505822
+        ]
+      ],
+      "metric_uv": true,
+      "vertex_color_masks": "R worn path, G damp drainage, B vegetation",
+      "seam_height_m": 0.0,
+      "collision": false
+    }
+  ],
+  "units": "metres",
+  "geometry_contract": {
+    "length_m": 12,
+    "width_m": 9,
+    "root_at": "X0 Y0 Z0",
+    "ground_reference_m": -0.65,
+    "skirt_depth_m": 0.3,
+    "collision": false
+  },
+  "height_samples": [
+    {
+      "x": 0.0,
+      "y": -4.5,
+      "height": -0.0
+    },
+    {
+      "x": 0.0,
+      "y": -2.0,
+      "height": 0.0
+    },
+    {
+      "x": 0.0,
+      "y": -1.3,
+      "height": -0.0
+    },
+    {
+      "x": 0.0,
+      "y": 0.0,
+      "height": 0.0
+    },
+    {
+      "x": 0.0,
+      "y": 1.95,
+      "height": -0.0
+    },
+    {
+      "x": 0.0,
+      "y": 3.0,
+      "height": -0.0
+    },
+    {
+      "x": 0.0,
+      "y": 4.5,
+      "height": 0.0
+    },
+    {
+      "x": 1.0,
+      "y": -4.5,
+      "height": 0.0
+    },
+    {
+      "x": 1.0,
+      "y": -2.0,
+      "height": -0.01875321934149035
+    },
+    {
+      "x": 1.0,
+      "y": -1.3,
+      "height": -0.06524090980177515
+    },
+    {
+      "x": 1.0,
+      "y": 0.0,
+      "height": 0.07645879832456352
+    },
+    {
+      "x": 1.0,
+      "y": 1.95,
+      "height": -0.24
+    },
+    {
+      "x": 1.0,
+      "y": 3.0,
+      "height": -0.011803538822525486
+    },
+    {
+      "x": 1.0,
+      "y": 4.5,
+      "height": 0.0
+    },
+    {
+      "x": 3.0,
+      "y": -4.5,
+      "height": 0.0
+    },
+    {
+      "x": 3.0,
+      "y": -2.0,
+      "height": -0.109271573086071
+    },
+    {
+      "x": 3.0,
+      "y": -1.3,
+      "height": -0.034308467711397735
+    },
+    {
+      "x": 3.0,
+      "y": 0.0,
+      "height": 0.040743819446730126
+    },
+    {
+      "x": 3.0,
+      "y": 1.95,
+      "height": -0.19981066082329424
+    },
+    {
+      "x": 3.0,
+      "y": 3.0,
+      "height": 0.016726493774626403
+    },
+    {
+      "x": 3.0,
+      "y": 4.5,
+      "height": 0.0
+    },
+    {
+      "x": 6.0,
+      "y": -4.5,
+      "height": -0.0
+    },
+    {
+      "x": 6.0,
+      "y": -2.0,
+      "height": 0.12404650692181142
+    },
+    {
+      "x": 6.0,
+      "y": -1.3,
+      "height": -0.03316046040411838
+    },
+    {
+      "x": 6.0,
+      "y": 0.0,
+      "height": -0.11106930731192374
+    },
+    {
+      "x": 6.0,
+      "y": 1.95,
+      "height": -0.11647732201419786
+    },
+    {
+      "x": 6.0,
+      "y": 3.0,
+      "height": 0.0073629228652899795
+    },
+    {
+      "x": 6.0,
+      "y": 4.5,
+      "height": -0.0
+    },
+    {
+      "x": 9.0,
+      "y": -4.5,
+      "height": -0.0
+    },
+    {
+      "x": 9.0,
+      "y": -2.0,
+      "height": -0.06529591719148191
+    },
+    {
+      "x": 9.0,
+      "y": -1.3,
+      "height": -0.07175190403516897
+    },
+    {
+      "x": 9.0,
+      "y": 0.0,
+      "height": 0.11364764778322559
+    },
+    {
+      "x": 9.0,
+      "y": 1.95,
+      "height": -0.22937787915238714
+    },
+    {
+      "x": 9.0,
+      "y": 3.0,
+      "height": -0.023157735745034887
+    },
+    {
+      "x": 9.0,
+      "y": 4.5,
+      "height": 0.0
+    },
+    {
+      "x": 11.0,
+      "y": -4.5,
+      "height": 0.0
+    },
+    {
+      "x": 11.0,
+      "y": -2.0,
+      "height": -0.04694160614999433
+    },
+    {
+      "x": 11.0,
+      "y": -1.3,
+      "height": -0.031788089041427346
+    },
+    {
+      "x": 11.0,
+      "y": 0.0,
+      "height": 0.027541161318312427
+    },
+    {
+      "x": 11.0,
+      "y": 1.95,
+      "height": -0.24
+    },
+    {
+      "x": 11.0,
+      "y": 3.0,
+      "height": 0.043764938589611876
+    },
+    {
+      "x": 11.0,
+      "y": 4.5,
+      "height": -0.0
+    },
+    {
+      "x": 12.0,
+      "y": -4.5,
+      "height": 0.0
+    },
+    {
+      "x": 12.0,
+      "y": -2.0,
+      "height": -0.0
+    },
+    {
+      "x": 12.0,
+      "y": -1.3,
+      "height": -0.0
+    },
+    {
+      "x": 12.0,
+      "y": 0.0,
+      "height": -0.0
+    },
+    {
+      "x": 12.0,
+      "y": 1.95,
+      "height": -0.0
+    },
+    {
+      "x": 12.0,
+      "y": 3.0,
+      "height": 0.0
+    },
+    {
+      "x": 12.0,
+      "y": 4.5,
+      "height": -0.0
+    }
+  ],
+  "provenance": "Original locally authored procedural scenery; no third-party pixels or geometry; representative, not surveyed."
+}

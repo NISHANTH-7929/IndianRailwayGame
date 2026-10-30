@@ -1,0 +1,97 @@
+{
+  "revision": "corridor-nature-v2",
+  "originalProjectAuthoredGeometry": true,
+  "generatedImages": false,
+  "botanicalReplica": false,
+  "explanation": "Small leaf planes have varied inclinations and a populated inner crown; no giant leaf sheets or solid shells.",
+  "records": [
+    {
+      "lod": 0,
+      "leaves": 320,
+      "triangles": 664,
+      "sections": 1,
+      "boundsMetres": [
+        [
+          -0.5,
+          -0.5,
+          -0.375
+        ],
+        [
+          0.5,
+          0.5,
+          0.375
+        ]
+      ],
+      "fbx": "04_Assets\\S9\\CorridorNatureV1\\MeshesV2\\SM_CorridorLeafClusterV2_LOD0.fbx",
+      "sha256": "ec0220bda4072dc6392577927eb3e97413bbedc2013137f0f0a56a40a61bd064",
+      "minPlaneInclinationDegrees": 10.530763395104728,
+      "maxPlaneInclinationDegrees": 89.82906190940017,
+      "leavesWithPlaneTiltOver40Degrees": 219,
+      "opaqueShell": false,
+      "originalAuthoredLod": true
+    },
+    {
+      "lod": 1,
+      "leaves": 120,
+      "triangles": 240,
+      "sections": 1,
+      "boundsMetres": [
+        [
+          -0.5,
+          -0.5,
+          -0.375
+        ],
+        [
+          0.5,
+          0.5,
+          0.375
+        ]
+      ],
+      "fbx": "04_Assets\\S9\\CorridorNatureV1\\MeshesV2\\SM_CorridorLeafClusterV2_LOD1.fbx",
+      "sha256": "b66b69e8a327d882116a9638e374f7dfbaa9ca4128651a7efad4a7fa58c55595",
+      "minPlaneInclinationDegrees": 10.530763395104728,
+      "maxPlaneInclinationDegrees": 89.42815084706288,
+      "leavesWithPlaneTiltOver40Degrees": 81,
+      "opaqueShell": false,
+      "originalAuthoredLod": true
+    },
+    {
+      "lod": 2,
+      "leaves": 48,
+      "triangles": 96,
+      "sections": 1,
+      "boundsMetres": [
+        [
+          -0.5,
+          -0.5,
+          -0.375
+        ],
+        [
+          0.5,
+          0.5,
+          0.375
+        ]
+      ],
+      "fbx": "04_Assets\\S9\\CorridorNatureV1\\MeshesV2\\SM_CorridorLeafClusterV2_LOD2.fbx",
+      "sha256": "c16ffd51014999e5930d4ce0671fb32c59b71319aceac595f606216f72eb84da",
+      "minPlaneInclinationDegrees": 10.530763395104728,
+      "maxPlaneInclinationDegrees": 89.42815084706288,
+      "leavesWithPlaneTiltOver40Degrees": 32,
+      "opaqueShell": false,
+      "originalAuthoredLod": true
+    }
+  ],
+  "protectedV1Sha256": {
+    "04_Assets\\S9\\CorridorNatureV1\\mesh-receipt.json": "091f28686252bdaf27b03dbf5ecceee30392cfd2cc59ef22582dfa0e730d6269",
+    "04_Assets\\S9\\CorridorNatureV1\\CorridorNatureV1.blend": "7c18c503e262029d7541998f3be39a41d400c4535812bba66c3687643c91b859",
+    "04_Assets\\S9\\CorridorNatureV1\\Meshes\\SM_CorridorBranchV1_LOD0.fbx": "775e383490f83260c533bcc44c6f201248448c73627667a1a4f1f2eef413fe69",
+    "04_Assets\\S9\\CorridorNatureV1\\Meshes\\SM_CorridorBranchV1_LOD1.fbx": "d2d496edc3910477f5d463d92c9508c7d933f7f6f749d29cb0350432809169d7",
+    "04_Assets\\S9\\CorridorNatureV1\\Meshes\\SM_CorridorBranchV1_LOD2.fbx": "3f4f7e6eed3760a1617c84d60471476a2d320329868518021ed80c893ab66294",
+    "04_Assets\\S9\\CorridorNatureV1\\Meshes\\SM_CorridorGrassPatchV1_LOD0.fbx": "b1f2ef5f2cd4393cc88e115eeba730875d6becf0a5501b9c429258352a156439",
+    "04_Assets\\S9\\CorridorNatureV1\\Meshes\\SM_CorridorGrassPatchV1_LOD1.fbx": "5de31123c48f19f4ced48e9762f45e3a3f983f024bf1caa3c08ee7068342078c",
+    "04_Assets\\S9\\CorridorNatureV1\\Meshes\\SM_CorridorGrassPatchV1_LOD2.fbx": "aca2f461e23c479dae6870b0e08403513a968fe79feacf639092d4437d3b9372",
+    "04_Assets\\S9\\CorridorNatureV1\\Meshes\\SM_CorridorLeafClusterV1_LOD0.fbx": "c7021659f2cf1dc29e702ca0841208b76db5a9cbfef07a86e412d9fbaa285f34",
+    "04_Assets\\S9\\CorridorNatureV1\\Meshes\\SM_CorridorLeafClusterV1_LOD1.fbx": "a7cddc04e4da7fda3c8a5a7a14e345f4ce7440c802184a70e32b08404c087423",
+    "04_Assets\\S9\\CorridorNatureV1\\Meshes\\SM_CorridorLeafClusterV1_LOD2.fbx": "233d70df0684aafc63c9f52d8dfecea0ccd8fd0fb596b4f7f780efe66b0ed0b3"
+  }
+}

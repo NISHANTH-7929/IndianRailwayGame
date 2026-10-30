@@ -64,7 +64,13 @@ bool FRailLhbPresentationTest::RunTest(const FString& Parameters){
  Rail::WorldSnapshotCodec::Capture(Logical,1,Before);
  for(int32 Cycle=0;Cycle<2;++Cycle){int32 Total=0;
   for(int32 Chunk=1;Chunk<=2;++Chunk){auto* View=World->SpawnActor<ARailChunkView>();View->ChunkId=Chunk;
-   TestTrue(TEXT("Coach assets load"),View->LoadCoach());View->Present(Logical,false);Total+=View->PresentedLhbVehicles;
+   for(int32 Part=0;Part<7;++Part){
+    const bool Ready=View->LoadCoach();
+    TestEqual(TEXT("One coach component per loading update"),View->CoachParts.Num(),Part+1);
+    TestEqual(TEXT("Coach readiness requires all seven parts"),Ready,Part==6);
+    if(Part<6){View->Present(Logical,false,0,false);TestEqual(TEXT("Pose refresh cannot load more coach parts"),View->CoachParts.Num(),Part+1);}
+   }
+   TestTrue(TEXT("Completed coach load is idempotent"),View->LoadCoach());View->Present(Logical,false);Total+=View->PresentedLhbVehicles;
    TestEqual(TEXT("Seven independently movable mesh parts"),View->CoachParts.Num(),7);
    if(View->CoachParts.Num()==7)for(const auto& Part:View->CoachParts)TestEqual(TEXT("Part instance count follows owned vehicles"),Part->GetInstanceCount(),View->PresentedLhbVehicles);
    TestTrue(TEXT("Presentation actor destroyed"),View->Destroy());

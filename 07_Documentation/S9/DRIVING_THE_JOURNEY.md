@@ -1,14 +1,37 @@
 # Driving the representative Egmore-Tambaram service
 
-Start the WAP-7/LHB service in Assisted mode for the first trip. Read the briefing, confirm the formation and start. Release the brake, then apply power. Air brakes take time to release; power does not immediately move a fully braked train.
+Use **Start Live Railway Journey.cmd** in the new LiveJourney package for player
+track switching and three opposing services. The original **Start Railway
+Journey.cmd** retains the earlier service and its saves. The new service keeps
+its own progress, so completed original journeys remain available.
+
+After the priority departure clears Egmore, your protected route takes the
+crossover onto the adjacent running line. Observe the 30 km/h throat limit
+until the whole train clears. Points are set and locked by dispatch; they cannot
+be changed underneath your train. Three northbound services use separate
+protected paths along the corridor.
+
+CAMERA cycles **Cab → Forward route → Right side → Left side → Cab**.
+Use Forward route to see the protected crossover ahead, and the side views to
+watch an opposing service pass. The traffic notice identifies its side relative
+to your locomotive. Changing views never changes the points, signals or controls.
+
+In the cab, **LABELS** brings the instrument panel closer; press it again to
+restore the driving view. **CAB LIGHT** adds a warm overhead light. The updated
+close-up keeps the gauge faces in view. You can drag the cab view to look around.
+
+
+Choose Standard mode in the briefing for active power and brake control. Assisted mode automatically regulates cruise and braking and is useful for a relaxed trip or verification. Read the briefing, confirm the formation and start. Release the brake, then apply power. Air brakes take time to release; power does not immediately move a fully braked train.
 
 At Egmore, another train has priority through the shared junction. Your train can approach its holding point, but must wait until the whole conflicting train has cleared. Assisted mode helps regulate speed and stop for the available authority. The wait is part of the service, not a loading screen.
 
 The route display follows the actual position of your train. Intermediate stations are passing locations for this representative service; Tambaram is the scheduled stop. The station name remains while your formation clears the platform area. The applicable limit remains restricted until your whole train clears a restriction.
 
-HUD switches between route detail and a quieter cab view. Speed, applicable limit and authority remain visible; brake/emergency, pause and save/exit controls remain accessible. In the next build, restriction and service notices also remain in the compact view.
+HUD switches between route detail and a quieter cab view. Speed, applicable limit and authority remain visible; brake/emergency, pause and save/exit controls remain accessible. Restriction and service notices also remain in the compact view.
 
 Standard mode leaves braking and power management to you. Reduce power before braking, allow for delayed pneumatic response, and approach Tambaram gradually. Berth with the entire train in the platform and remain stopped for the dwell. No departure from Tambaram is required.
+
+Android09 and Desktop-20261019-02 add explicit Standard-mode overspeed and approaching-restriction warnings, a Tambaram braking advisory, and berth/dwell reminders. The braking cue estimates distance using the scenario's conservative deceleration and response allowance; it is not a guaranteed stopping point. These cues do not operate the controls or change route authority.
 
 After completion, review the result and save the reputation award once. Pause or Save and Exit preserves your service. A recovered journey opens paused.
 

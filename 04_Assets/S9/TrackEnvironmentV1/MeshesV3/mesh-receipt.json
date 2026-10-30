@@ -1,0 +1,226 @@
+{
+  "revision": "track-environment-mesh-v3",
+  "source_reference": "04_Assets\\S8\\Workstreams\\StationArt\\v2.0.0\\Reproduce\\build_v2.py",
+  "source_sha256": "baf9e4866139a9c56e5d1d05ec8762360a306eb733342bc7c3cb05b0e11cab8b",
+  "original_sources_unchanged": true,
+  "units": "metres; UE import with convert_scene_unit=True yields centimetres",
+  "basis": "X longitudinal, Y lateral, Z up; FBX X-forward with Y-reflection compensation",
+  "uv_contract": "Bed MetricUV channel 0 is XY metres on every face; stone uses dominant-axis metric UVs",
+  "geometry_contract": {
+    "length_m": 6,
+    "rail_top_m": 0,
+    "inner_flat_half_width_m": 1.73,
+    "inner_flat_height_m": -0.215,
+    "nominal_outer_half_width_m": 2.32,
+    "nominal_outer_height_m": -0.67,
+    "underside_height_m": -0.7,
+    "ground_overlap_m": 0.05,
+    "seam_collar_m": 0.5,
+    "maximum_half_width_m": 2.44,
+    "collision": false
+  },
+  "records": [
+    {
+      "family": "ballast",
+      "name": "SM_Ballast6m_RealismV3_LOD0",
+      "lod": 0,
+      "triangles": 446,
+      "bounds_m": [
+        [
+          0.0,
+          -2.3837991,
+          -0.7
+        ],
+        [
+          6.0,
+          2.3857296,
+          -0.215
+        ]
+      ],
+      "fbx": "04_Assets\\S9\\TrackEnvironmentV1\\MeshesV3\\SM_Ballast6m_RealismV3_LOD0.fbx",
+      "sha256": "550845dce32f196cc4ea9769d7002da309d73f017125ee5fe9426548db117438",
+      "material_slots": [
+        "M_TrackBallast"
+      ],
+      "closed_manifold": true,
+      "seam_cross_section_m": [
+        [
+          -2.3199999,
+          -0.67
+        ],
+        [
+          -1.96,
+          -0.37
+        ],
+        [
+          -1.73,
+          -0.215
+        ],
+        [
+          0.0,
+          -0.215
+        ],
+        [
+          1.73,
+          -0.215
+        ],
+        [
+          1.96,
+          -0.37
+        ],
+        [
+          2.3199999,
+          -0.67
+        ],
+        [
+          2.3199999,
+          -0.7
+        ],
+        [
+          -2.3199999,
+          -0.7
+        ]
+      ],
+      "seam_matches": true,
+      "all_faces_metric_xy_uv": true,
+      "maximum_metric_xy_uv_error": 0.0
+    },
+    {
+      "family": "ballast",
+      "name": "SM_Ballast6m_RealismV3_LOD1",
+      "lod": 1,
+      "triangles": 230,
+      "bounds_m": [
+        [
+          0.0,
+          -2.3640978,
+          -0.7
+        ],
+        [
+          6.0,
+          2.3857296,
+          -0.215
+        ]
+      ],
+      "fbx": "04_Assets\\S9\\TrackEnvironmentV1\\MeshesV3\\SM_Ballast6m_RealismV3_LOD1.fbx",
+      "sha256": "32f1d30ec8e63ffc330ae7910bab9a6a3f2195e2b737d08835511dc904512c0d",
+      "material_slots": [
+        "M_TrackBallast"
+      ],
+      "closed_manifold": true,
+      "seam_cross_section_m": [
+        [
+          -2.3199999,
+          -0.67
+        ],
+        [
+          -1.96,
+          -0.37
+        ],
+        [
+          -1.73,
+          -0.215
+        ],
+        [
+          0.0,
+          -0.215
+        ],
+        [
+          1.73,
+          -0.215
+        ],
+        [
+          1.96,
+          -0.37
+        ],
+        [
+          2.3199999,
+          -0.67
+        ],
+        [
+          2.3199999,
+          -0.7
+        ],
+        [
+          -2.3199999,
+          -0.7
+        ]
+      ],
+      "seam_matches": true,
+      "all_faces_metric_xy_uv": true,
+      "maximum_metric_xy_uv_error": 0.0
+    },
+    {
+      "family": "ballast",
+      "name": "SM_Ballast6m_RealismV3_LOD2",
+      "lod": 2,
+      "triangles": 122,
+      "bounds_m": [
+        [
+          0.0,
+          -2.3640978,
+          -0.7
+        ],
+        [
+          6.0,
+          2.3857296,
+          -0.215
+        ]
+      ],
+      "fbx": "04_Assets\\S9\\TrackEnvironmentV1\\MeshesV3\\SM_Ballast6m_RealismV3_LOD2.fbx",
+      "sha256": "e1a46764d4171274f3f0bf9d1d7b5ed3a953d05de35f17f8c91fd5e02d4be05a",
+      "material_slots": [
+        "M_TrackBallast"
+      ],
+      "closed_manifold": true,
+      "seam_cross_section_m": [
+        [
+          -2.3199999,
+          -0.67
+        ],
+        [
+          -1.96,
+          -0.37
+        ],
+        [
+          -1.73,
+          -0.215
+        ],
+        [
+          0.0,
+          -0.215
+        ],
+        [
+          1.73,
+          -0.215
+        ],
+        [
+          1.96,
+          -0.37
+        ],
+        [
+          2.3199999,
+          -0.67
+        ],
+        [
+          2.3199999,
+          -0.7
+        ],
+        [
+          -2.3199999,
+          -0.7
+        ]
+      ],
+      "seam_matches": true,
+      "all_faces_metric_xy_uv": true,
+      "maximum_metric_xy_uv_error": 0.0
+    }
+  ],
+  "blend": "04_Assets\\S9\\TrackEnvironmentV1\\MeshesV3\\TrackBedV3.blend",
+  "blend_sha256": "1c7443445b5b59ff8935bee3494ae913b476d503b3da32219419ac8daf19778e",
+  "limitations": [
+    "Presentation estimate, not surveyed railway construction.",
+    "Ballast surface raised to embed PSC sleepers; gauge and rail height unchanged.",
+    "Unreal import, runtime material and in-game checks are separate."
+  ]
+}

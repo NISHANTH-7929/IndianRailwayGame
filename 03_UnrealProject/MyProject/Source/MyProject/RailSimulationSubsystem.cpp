@@ -1,4 +1,5 @@
 #include "RailSimulationSubsystem.h"
+#include "Kismet/KismetSystemLibrary.h"
 #include "RailKernelView.h"
 #include "RailOperationsView.h"
 #include "RailVehicleDefinition.h"
@@ -55,6 +56,9 @@ void URailSimulationSubsystem::OnWorldBeginPlay(UWorld& W){
 }
 void URailSimulationSubsystem::CreateView(){View=GetWorld()->SpawnActor<ARailKernelView>();if(auto* PC=GetWorld()->GetFirstPlayerController()){PC->SetViewTarget(View);PC->SetVirtualJoystickVisibility(false);}}
 void URailSimulationSubsystem::Deinitialize(){
+#if PLATFORM_ANDROID
+ if(ServiceKeepsScreenAwake)UKismetSystemLibrary::ControlScreensaver(true);
+#endif
  DestroyServiceAudio();
  if(ContinuityMode&&!Operations.Faulted())SaveS6(TEXT("world-exit"));
  FCoreDelegates::ApplicationWillEnterBackgroundDelegate.RemoveAll(this);

@@ -16,7 +16,18 @@ public:
  FString TelemetryJson() const;
  int32 RebuildCount=0;
 private:
+ struct FBuildGroup {
+  FString Name,MeshPath,MaterialPath;
+  TArray<FTransform> Transforms;
+ };
+ // Queue contains paths and value data; live components stay GC-visible in Parts.
+ TArray<FBuildGroup> PendingGroups;
+ int32 PendingGroup=0,PendingOffset=0,PendingChunk=0;
+ uint32 PendingStations=0;
+ bool Building=false;
+ bool AdvanceBuild();
  UPROPERTY() TArray<TObjectPtr<UHierarchicalInstancedStaticMeshComponent>> Parts;
+ UPROPERTY() TArray<TObjectPtr<UHierarchicalInstancedStaticMeshComponent>> RetiringParts;
  UPROPERTY() TArray<TObjectPtr<UTextRenderComponent>> Labels;
  int32 BuiltChunk=0,Placements=0;
  uint32 BuiltStations=0;

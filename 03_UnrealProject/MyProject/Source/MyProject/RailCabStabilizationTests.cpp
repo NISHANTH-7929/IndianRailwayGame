@@ -3,6 +3,11 @@
 #include "RailSimulationSubsystem.h"
 #include "Engine/World.h"
 #include "Engine/Engine.h"
+#include "Engine/StaticMesh.h"
+#include "Components/StaticMeshComponent.h"
+#include "Materials/MaterialInterface.h"
+#include "Misc/FileHelper.h"
+#include "Misc/Paths.h"
 #include "Dom/JsonObject.h"
 #include "Serialization/JsonReader.h"
 #include "Serialization/JsonSerializer.h"
@@ -16,6 +21,36 @@ bool FRailCabStabilizationTest::RunTest(const FString& Parameters){
  auto* View=World->SpawnActor<ARailLocomotiveView>();FString Diagnostic;
  if(TestTrue(TEXT("Existing WAP7 loads without changing assembly"),View->LoadPresentation(TEXT("WAP7"),Diagnostic))){
   auto Read=[&](){TSharedPtr<FJsonObject> J;FJsonSerializer::Deserialize(TJsonReaderFactory<>::Create(View->TelemetryJson()),J);return J;};
+  // Inspect the components actually presented to the renderer: successful
+  // assembly loading alone can silently retain the original fallback assets.
+  TArray<UStaticMeshComponent*> MeshComponents;View->GetComponents<UStaticMeshComponent>(MeshComponents);
+  // The editor adds a camera-proxy mesh which is never part of the game cab.
+  MeshComponents.RemoveAll([](const UStaticMeshComponent* Component){return Component&&Component->IsEditorOnly();});
+  int32 CoreCount=0;
+  const FString CandidateCore=TEXT("/Game/IndianRailway/S9/CabRealismV1/Meshes/SM_WAP7_Cab_StaticCore_HardwareV1.SM_WAP7_Cab_StaticCore_HardwareV1");
+  const TCHAR* RequiredMaterials[]={TEXT("DeskEnamel_StaticAO"),TEXT("CabIvory_StaticAO"),TEXT("PanelCharcoal_StaticAO"),TEXT("Rubber_StaticAO"),TEXT("Steel_StaticAO"),TEXT("InstrumentBezel"),TEXT("WindowGlass"),TEXT("InstrumentGlass")};
+  TSet<FString> ObservedMaterials;
+  for(auto* Component:MeshComponents){
+   const UStaticMesh* Mesh=Component?Component->GetStaticMesh().Get():nullptr;if(!Mesh)continue;
+   if(Mesh->GetName().StartsWith(TEXT("SM_WAP7_Cab_StaticCore"))){
+    ++CoreCount;TestEqual(TEXT("Rendered cab uses hardware candidate instead of fallback"),Mesh->GetPathName(),CandidateCore);
+   }
+   if(!Mesh->GetName().StartsWith(TEXT("SM_WAP7_Cab_")))continue;
+   for(int32 Slot=0;Slot<Component->GetNumMaterials();++Slot)if(const auto* Material=Component->GetMaterial(Slot)){
+    for(const TCHAR* Required:RequiredMaterials)if(Material->GetName()==Required){
+     const FString Expected=FString::Printf(TEXT("/Game/IndianRailway/S9/CabRealismV1/Materials/%s.%s"),Required,Required);
+     TestEqual(FString::Printf(TEXT("Rendered %s uses candidate material instead of fallback"),Required),Material->GetPathName(),Expected);
+     ObservedMaterials.Add(Required);
+    }
+   }
+  }
+  TestEqual(TEXT("Hardware replaces exactly one cab core component"),CoreCount,1);
+  for(const TCHAR* Required:RequiredMaterials)TestTrue(FString::Printf(TEXT("Rendered cab contains required %s surface"),Required),ObservedMaterials.Contains(Required));
+  FString ManifestText;TSharedPtr<FJsonObject> Manifest;const TArray<TSharedPtr<FJsonValue>>* ManifestParts=nullptr;
+  if(TestTrue(TEXT("Original assembly remains readable for component budget"),FFileHelper::LoadFileToString(ManifestText,*(FPaths::ProjectContentDir()/TEXT("IndianRailway/Production/locomotives/WAP7.json")))&&FJsonSerializer::Deserialize(TJsonReaderFactory<>::Create(ManifestText),Manifest)&&Manifest.IsValid()&&Manifest->TryGetArrayField(TEXT("parts"),ManifestParts))){
+   TestEqual(TEXT("Cab realism adds no components beyond original assembly and six wheelsets"),MeshComponents.Num(),ManifestParts->Num()+6);
+   TestEqual(TEXT("All presented mesh components belong to the recorded assembly"),View->PartCount(),MeshComponents.Num());
+  }
   // This standalone fixture is deliberately not in service mode: handles use
   // H.command here, while a running service uses its requestedPower/Brake intent.
   // Neither path should use the emergency-adjusted actuators for handle poses.
@@ -76,6 +111,12 @@ bool FRailCabStabilizationTest::RunTest(const FString& Parameters){
   View->ToggleInstrumentView();TestFalse(TEXT("Label action outside cannot change camera"),Read()->GetBoolField(TEXT("instrumentView")));
   View->ToggleCamera();View->Present(S,H,.2f,false);J=Read();TestTrue(TEXT("Cab lamp selection retained on return"),J->GetBoolField(TEXT("cabLightVisible")));TestFalse(TEXT("Return starts in normal driver view"),J->GetBoolField(TEXT("instrumentView")));TestEqual(TEXT("Return keeps normal FOV"),J->GetNumberField(TEXT("cameraFov")),NormalFov);
   View->ToggleSwitch(3);View->Present(S,H,.2f,false);J=Read();TestFalse(TEXT("Cab lamp can be switched off"),J->GetBoolField(TEXT("cabLightVisible")));TestFalse(TEXT("Cab lamp off selection is retained"),J->GetBoolField(TEXT("cabLight")));
+  for(const TCHAR* Name:{TEXT("Forward route"),TEXT("Right side"),TEXT("Left side"),TEXT("Cab")}){
+   View->CycleJourneyCamera();View->Present(S,H,.2f,false);
+   TestEqual(TEXT("Journey camera cycles through route and both train sides"),View->CameraName(),FString(Name));
+   TestEqual(TEXT("Only cab view shows cab controls"),View->IsCabCamera(),FString(Name)==TEXT("Cab"));
+  }
+
  }
  World->DestroyWorld(false);GEngine->DestroyWorldContext(World);return !HasAnyErrors();
 }

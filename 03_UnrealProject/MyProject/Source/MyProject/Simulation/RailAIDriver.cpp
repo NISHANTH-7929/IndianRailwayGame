@@ -40,7 +40,7 @@ AIDecision AIDriver::Decide(const AIObservation& o){
     const double remaining=o.authority.maximumHead-o.head;
     if(o.speed<-.02){safe(AIPhase::FailSafe,"Reverse movement not enabled for forward route intent");return d;}
     const bool endpoint=remaining<=o.speed*o.speed/(2*.45)+2.5*std::abs(o.speed)+3;
-    if(train_==TrainId(3)&&route_==RouteId(4))stopping_|=endpoint;
+    if(train_.value>=3&&train_.value<=5&&route_.value==train_.value+1)stopping_|=endpoint;
     else stopping_=endpoint; // Retain legacy controllers' checkpoint-free behaviour.
     if(stopping_){safe(std::abs(o.speed)<=.02?AIPhase::Stopped:AIPhase::ApproachingAuthorityLimit,"Conservative endpoint braking; S4 retains release ownership");return d;}
     phase_=first?AIPhase::RouteGranted:AIPhase::Driving;reason_="Driving inside matching S4 route authority";

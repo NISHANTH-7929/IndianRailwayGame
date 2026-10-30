@@ -1,0 +1,35 @@
+{
+  "records": [
+    {
+      "lod": 0,
+      "triangles": 992,
+      "fbx": "04_Assets\\S9\\TrackEnvironmentV1\\Rails\\SM_Track6m_RealismV1_LOD0.fbx",
+      "sha256": "6abab06f8e23bfee81df428b45f10611162686a4d9a06ee33e731c78090113bb",
+      "railHeadWebFootPreserved": true
+    },
+    {
+      "lod": 1,
+      "triangles": 192,
+      "fbx": "04_Assets\\S9\\TrackEnvironmentV1\\Rails\\SM_Track6m_RealismV1_LOD1.fbx",
+      "sha256": "5f0ed7e5cffde1a7634994e814e97cab46eae850c4b64b5f7e5c9e3f15956a29",
+      "railHeadWebFootPreserved": true
+    },
+    {
+      "lod": 2,
+      "triangles": 132,
+      "fbx": "04_Assets\\S9\\TrackEnvironmentV1\\Rails\\SM_Track6m_RealismV1_LOD2.fbx",
+      "sha256": "80963f724c302eb223a4cf0e830675bb02a87c85b4d81a117d5229e1cdaa65c5",
+      "railHeadWebFootPreserved": true
+    }
+  ],
+  "gaugeInsideM": 1.676,
+  "railCentresM": [
+    -0.873,
+    0.873
+  ],
+  "railTopM": 0,
+  "sleeperSpacingM": 0.6,
+  "lengthM": 6,
+  "estimatedPresentation": true,
+  "originalS8AssetsModified": false
+}

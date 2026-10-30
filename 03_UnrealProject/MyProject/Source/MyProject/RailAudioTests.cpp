@@ -12,7 +12,7 @@ IMPLEMENT_SIMPLE_AUTOMATION_TEST(FRailAudioBankTest,"IndianRailway.S8.AudioBank"
 bool FRailAudioBankTest::RunTest(const FString& Parameters){
  const TCHAR* Names[]={TEXT("Rail"),TEXT("Station"),TEXT("Horn"),TEXT("Brake"),TEXT("Motor"),TEXT("Coast"),TEXT("Squeal"),TEXT("BrakeRelease"),TEXT("Emergency")};
  for(int32 I=0;I<9;++I){
-  const FString Path=FString::Printf(TEXT("/Game/IndianRailway/S8/Audio/%sSW_%s.SW_%s"),I<4?TEXT(""):TEXT("RealismV2/"),Names[I],Names[I]);
+  const FString Path=FString::Printf(TEXT("/Game/IndianRailway/%sSW_%s.SW_%s"),I<4?TEXT("S8/Audio/"):TEXT("S9/JourneyAudioV3/"),Names[I],Names[I]);
   auto* Sound=LoadObject<USoundWave>(nullptr,*Path);
   if(!TestNotNull(*Path,Sound))continue;
   TestEqual(TEXT("Mono bank"),Sound->NumChannels,1);

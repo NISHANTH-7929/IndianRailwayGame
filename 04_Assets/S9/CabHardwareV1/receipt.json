@@ -1,0 +1,455 @@
+{
+  "revision": "cab-hardware-v1-20261023",
+  "source_sha256": {
+    "04_Assets\\S8\\Cabs\\WAP7\\WAP7_Cab.blend": "fd98d6819a691822684e87923f68a53f4578b8fddf3a4e181ca261a43bcff9f2",
+    "04_Assets\\S8\\Cabs\\WAP7\\assembly.json": "690837fc65de225284b2098382f1c0091a86707cf5b03ece868c4c610c2ddb58"
+  },
+  "source_object": "SM_WAP7_Cab_StaticCore",
+  "replacement_object": "SM_WAP7_Cab_StaticCore_HardwareV1",
+  "baseline_static_triangles": 46569,
+  "final_static_triangles": 47037,
+  "baseline_cab_triangles": 49119,
+  "final_cab_triangles": 49587,
+  "added_triangles": 468,
+  "added_runtime_components": 0,
+  "original_geometry_preserved": true,
+  "original_transforms_preserved": true,
+  "other_parts_preserved": true,
+  "original_uvs_preserved": true,
+  "original_uv_sha256": {
+    "CabContactUV": "3fa2f3ee65dbe916fc0c0cfeb491a33054edff13447141a8fc8f43a16513549a",
+    "DetailUV": "f8e2f4d31cc033c4ad899dc322bf9afdcbb356c21c50ff4543663f8eb8a65c3c",
+    "UVMap": "a7e55853a38959b56c6de1858835293dc1e8ecfe53034a88ac2a94b82eacf9c5"
+  },
+  "materials_added": [],
+  "additions": [
+    {
+      "name": "Visor upper mounting strap",
+      "feature": "visor_mounts",
+      "material": "Steel",
+      "triangles": 12,
+      "centre_metres": [
+        9.414999961853027,
+        -0.9700000286102295,
+        3.9820001125335693
+      ]
+    },
+    {
+      "name": "Visor hinge barrel",
+      "feature": "visor_mounts",
+      "material": "Steel",
+      "triangles": 28,
+      "centre_metres": [
+        9.381999969482422,
+        -0.9700000286102295,
+        3.9579999446868896
+      ]
+    },
+    {
+      "name": "Visor mounting screw",
+      "feature": "visor_mounts",
+      "material": "Steel",
+      "triangles": 20,
+      "centre_metres": [
+        9.37350082397461,
+        -0.9700000286102295,
+        3.9809999465942383
+      ]
+    },
+    {
+      "name": "Visor screw slot",
+      "feature": "visor_mounts",
+      "material": "Rubber",
+      "triangles": 2,
+      "centre_metres": [
+        9.370800018310547,
+        -0.9700000286102295,
+        3.9809999465942383
+      ]
+    },
+    {
+      "name": "Visor upper mounting strap.001",
+      "feature": "visor_mounts",
+      "material": "Steel",
+      "triangles": 12,
+      "centre_metres": [
+        9.414999961853027,
+        -0.3499999940395355,
+        3.9820001125335693
+      ]
+    },
+    {
+      "name": "Visor hinge barrel.001",
+      "feature": "visor_mounts",
+      "material": "Steel",
+      "triangles": 28,
+      "centre_metres": [
+        9.381999969482422,
+        -0.3499999940395355,
+        3.9579999446868896
+      ]
+    },
+    {
+      "name": "Visor mounting screw.001",
+      "feature": "visor_mounts",
+      "material": "Steel",
+      "triangles": 20,
+      "centre_metres": [
+        9.37350082397461,
+        -0.3499999940395355,
+        3.9809999465942383
+      ]
+    },
+    {
+      "name": "Visor screw slot.001",
+      "feature": "visor_mounts",
+      "material": "Rubber",
+      "triangles": 2,
+      "centre_metres": [
+        9.370800018310547,
+        -0.3499999940395355,
+        3.9809999465942383
+      ]
+    },
+    {
+      "name": "Visor upper mounting strap.002",
+      "feature": "visor_mounts",
+      "material": "Steel",
+      "triangles": 12,
+      "centre_metres": [
+        9.414999961853027,
+        0.3499999940395355,
+        3.9820001125335693
+      ]
+    },
+    {
+      "name": "Visor hinge barrel.002",
+      "feature": "visor_mounts",
+      "material": "Steel",
+      "triangles": 28,
+      "centre_metres": [
+        9.381999969482422,
+        0.3499999940395355,
+        3.9579999446868896
+      ]
+    },
+    {
+      "name": "Visor mounting screw.002",
+      "feature": "visor_mounts",
+      "material": "Steel",
+      "triangles": 20,
+      "centre_metres": [
+        9.37350082397461,
+        0.3499999940395355,
+        3.9809999465942383
+      ]
+    },
+    {
+      "name": "Visor screw slot.002",
+      "feature": "visor_mounts",
+      "material": "Rubber",
+      "triangles": 2,
+      "centre_metres": [
+        9.370800018310547,
+        0.3499999940395355,
+        3.9809999465942383
+      ]
+    },
+    {
+      "name": "Visor upper mounting strap.003",
+      "feature": "visor_mounts",
+      "material": "Steel",
+      "triangles": 12,
+      "centre_metres": [
+        9.414999961853027,
+        0.9700000286102295,
+        3.9820001125335693
+      ]
+    },
+    {
+      "name": "Visor hinge barrel.003",
+      "feature": "visor_mounts",
+      "material": "Steel",
+      "triangles": 28,
+      "centre_metres": [
+        9.381999969482422,
+        0.9700000286102295,
+        3.9579999446868896
+      ]
+    },
+    {
+      "name": "Visor mounting screw.003",
+      "feature": "visor_mounts",
+      "material": "Steel",
+      "triangles": 20,
+      "centre_metres": [
+        9.37350082397461,
+        0.9700000286102295,
+        3.9809999465942383
+      ]
+    },
+    {
+      "name": "Visor screw slot.003",
+      "feature": "visor_mounts",
+      "material": "Rubber",
+      "triangles": 2,
+      "centre_metres": [
+        9.370800018310547,
+        0.9700000286102295,
+        3.9809999465942383
+      ]
+    },
+    {
+      "name": "Recorder lower support",
+      "feature": "recorder_mount",
+      "material": "Steel",
+      "triangles": 12,
+      "centre_metres": [
+        9.281999588012695,
+        0.11999999731779099,
+        3.3450000286102295
+      ]
+    },
+    {
+      "name": "Recorder protected conduit 0",
+      "feature": "recorder_mount",
+      "material": "Rubber",
+      "triangles": 28,
+      "centre_metres": [
+        9.270000457763672,
+        0.11999999731779099,
+        3.314500093460083
+      ]
+    },
+    {
+      "name": "Recorder protected conduit 1",
+      "feature": "recorder_mount",
+      "material": "Rubber",
+      "triangles": 28,
+      "centre_metres": [
+        9.260000228881836,
+        0.11999999731779099,
+        3.2825000286102295
+      ]
+    },
+    {
+      "name": "Recorder protected conduit 2",
+      "feature": "recorder_mount",
+      "material": "Rubber",
+      "triangles": 28,
+      "centre_metres": [
+        9.25,
+        0.11999999731779099,
+        3.2360000610351562
+      ]
+    },
+    {
+      "name": "Recorder conduit ferrule",
+      "feature": "recorder_mount",
+      "material": "Steel",
+      "triangles": 28,
+      "centre_metres": [
+        9.270000457763672,
+        0.11999999731779099,
+        3.326000213623047
+      ]
+    },
+    {
+      "name": "Recorder conduit ferrule.001",
+      "feature": "recorder_mount",
+      "material": "Steel",
+      "triangles": 28,
+      "centre_metres": [
+        9.25,
+        0.11999999731779099,
+        3.2179999351501465
+      ]
+    },
+    {
+      "name": "Recorder lower face fastener",
+      "feature": "recorder_mount",
+      "material": "Steel",
+      "triangles": 20,
+      "centre_metres": [
+        9.159500122070312,
+        0.04500000178813934,
+        3.3450000286102295
+      ]
+    },
+    {
+      "name": "Recorder fastener slot",
+      "feature": "recorder_mount",
+      "material": "Rubber",
+      "triangles": 2,
+      "centre_metres": [
+        9.157299995422363,
+        0.04500000178813934,
+        3.3450000286102295
+      ]
+    },
+    {
+      "name": "Recorder lower face fastener.001",
+      "feature": "recorder_mount",
+      "material": "Steel",
+      "triangles": 20,
+      "centre_metres": [
+        9.159500122070312,
+        0.19499999284744263,
+        3.3450000286102295
+      ]
+    },
+    {
+      "name": "Recorder fastener slot.001",
+      "feature": "recorder_mount",
+      "material": "Rubber",
+      "triangles": 2,
+      "centre_metres": [
+        9.157299995422363,
+        0.19499999284744263,
+        3.3450000286102295
+      ]
+    },
+    {
+      "name": "Instrument panel screw slot",
+      "feature": "panel_fastener_recesses",
+      "material": "Rubber",
+      "triangles": 2,
+      "centre_metres": [
+        9.105799674987793,
+        0.925000011920929,
+        2.805000066757202
+      ]
+    },
+    {
+      "name": "Instrument panel screw slot.001",
+      "feature": "panel_fastener_recesses",
+      "material": "Rubber",
+      "triangles": 2,
+      "centre_metres": [
+        9.194600105285645,
+        0.925000011920929,
+        3.174999952316284
+      ]
+    },
+    {
+      "name": "Instrument panel screw slot.002",
+      "feature": "panel_fastener_recesses",
+      "material": "Rubber",
+      "triangles": 2,
+      "centre_metres": [
+        9.066800117492676,
+        1.315000057220459,
+        2.805000066757202
+      ]
+    },
+    {
+      "name": "Instrument panel screw slot.003",
+      "feature": "panel_fastener_recesses",
+      "material": "Rubber",
+      "triangles": 2,
+      "centre_metres": [
+        9.155599594116211,
+        1.315000057220459,
+        3.174999952316284
+      ]
+    },
+    {
+      "name": "Instrument panel screw slot.004",
+      "feature": "panel_fastener_recesses",
+      "material": "Rubber",
+      "triangles": 2,
+      "centre_metres": [
+        9.1072998046875,
+        0.10499999672174454,
+        2.805000066757202
+      ]
+    },
+    {
+      "name": "Instrument panel screw slot.005",
+      "feature": "panel_fastener_recesses",
+      "material": "Rubber",
+      "triangles": 2,
+      "centre_metres": [
+        9.196100234985352,
+        0.10499999672174454,
+        3.174999952316284
+      ]
+    },
+    {
+      "name": "Instrument panel screw slot.006",
+      "feature": "panel_fastener_recesses",
+      "material": "Rubber",
+      "triangles": 2,
+      "centre_metres": [
+        9.1072998046875,
+        0.8550000190734863,
+        2.805000066757202
+      ]
+    },
+    {
+      "name": "Instrument panel screw slot.007",
+      "feature": "panel_fastener_recesses",
+      "material": "Rubber",
+      "triangles": 2,
+      "centre_metres": [
+        9.196100234985352,
+        0.8550000190734863,
+        3.174999952316284
+      ]
+    },
+    {
+      "name": "Instrument panel screw slot.008",
+      "feature": "panel_fastener_recesses",
+      "material": "Rubber",
+      "triangles": 2,
+      "centre_metres": [
+        9.020299911499023,
+        -0.9100000262260437,
+        2.805000066757202
+      ]
+    },
+    {
+      "name": "Instrument panel screw slot.009",
+      "feature": "panel_fastener_recesses",
+      "material": "Rubber",
+      "triangles": 2,
+      "centre_metres": [
+        9.109100341796875,
+        -0.9100000262260437,
+        3.174999952316284
+      ]
+    },
+    {
+      "name": "Instrument panel screw slot.010",
+      "feature": "panel_fastener_recesses",
+      "material": "Rubber",
+      "triangles": 2,
+      "centre_metres": [
+        9.1072998046875,
+        0.05000000074505806,
+        2.805000066757202
+      ]
+    },
+    {
+      "name": "Instrument panel screw slot.011",
+      "feature": "panel_fastener_recesses",
+      "material": "Rubber",
+      "triangles": 2,
+      "centre_metres": [
+        9.196100234985352,
+        0.05000000074505806,
+        3.174999952316284
+      ]
+    }
+  ],
+  "fbx": "04_Assets\\S9\\CabHardwareV1\\SM_WAP7_Cab_StaticCore_HardwareV1.fbx",
+  "blend": "04_Assets\\S9\\CabHardwareV1\\WAP7_Cab_HardwareV1.blend",
+  "output_sha256": {
+    "SM_WAP7_Cab_StaticCore_HardwareV1.fbx": "4660022e66954f238206dd1774f25f82780e7459c7d118681a503df7bdf35992",
+    "WAP7_Cab_HardwareV1.blend": "c6211323ae3eeaa9d4e3208e08e09911134ee83fad7f719a237b11bc23d0360f"
+  },
+  "limitations": [
+    "Small fittings are inferred presentation details; not a measured fleet reproduction.",
+    "No new controls, gauge channels, lights, collisions or moving parts."
+  ]
+}

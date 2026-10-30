@@ -1,0 +1,95 @@
+{
+  "revision": "track-rails-v2",
+  "records": [
+    {
+      "lod": 0,
+      "triangles": 4432,
+      "boundsMetres": [
+        [
+          0.0,
+          -1.375,
+          -0.33500000834465027
+        ],
+        [
+          6.0,
+          1.375,
+          0.0
+        ]
+      ],
+      "fbx": "04_Assets\\S9\\TrackEnvironmentV1\\RailsV2\\SM_Track6m_RealismV2_LOD0.fbx",
+      "sha256": "8e4a44479853badb0163cdeee6b99b58bdcaaa280fd0a94d58a3160dd89b56df",
+      "shapedRailHeadWebFootPreserved": true,
+      "taperedSleeperTopPreserved": true,
+      "fastening": "curved 18 mm rods"
+    },
+    {
+      "lod": 1,
+      "triangles": 968,
+      "boundsMetres": [
+        [
+          0.0,
+          -1.375,
+          -0.33500000834465027
+        ],
+        [
+          6.0,
+          1.375,
+          0.0
+        ]
+      ],
+      "fbx": "04_Assets\\S9\\TrackEnvironmentV1\\RailsV2\\SM_Track6m_RealismV2_LOD1.fbx",
+      "sha256": "e2bf4674c19b83959a8ff4816e6c944b8b1de24927b6b4848073dde8c6551fae",
+      "shapedRailHeadWebFootPreserved": true,
+      "taperedSleeperTopPreserved": true,
+      "fastening": "curved silhouettes"
+    },
+    {
+      "lod": 2,
+      "triangles": 208,
+      "boundsMetres": [
+        [
+          0.0,
+          -1.375,
+          -0.21699999272823334
+        ],
+        [
+          6.0,
+          1.375,
+          0.0
+        ]
+      ],
+      "fbx": "04_Assets\\S9\\TrackEnvironmentV1\\RailsV2\\SM_Track6m_RealismV2_LOD2.fbx",
+      "sha256": "b3f73bf9791ea5e7fe82d77cc50e3ed2e8010e5fb55a6223429e652093b92fc9",
+      "shapedRailHeadWebFootPreserved": true,
+      "taperedSleeperTopPreserved": true,
+      "fastening": "omitted"
+    }
+  ],
+  "gaugeInsideM": 1.676,
+  "railCentresM": [
+    -0.873,
+    0.873
+  ],
+  "railHeadMaxWidthM": 0.07,
+  "railFootWidthM": 0.15,
+  "railTopM": 0.0,
+  "railBaseM": -0.167,
+  "sleeperRailSeatM": -0.175,
+  "railSeatPadThicknessM": 0.008,
+  "sleeperCentreTopM": -0.217,
+  "sleeperEndTopM": -0.19,
+  "sleeperBottomM": -0.335,
+  "sleeperLengthM": 2.75,
+  "sleeperSpacingM": 0.6,
+  "sleepersPerTile": 10,
+  "lengthM": 6.0,
+  "recommendedBallastTopM": -0.215,
+  "elasticClipRodDiameterM": 0.018,
+  "materialSlots": [
+    "RailHead",
+    "RailRust",
+    "Concrete"
+  ],
+  "estimatedPresentation": true,
+  "originalS8AssetsModified": false
+}

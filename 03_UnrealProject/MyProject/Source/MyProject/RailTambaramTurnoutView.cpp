@@ -15,6 +15,11 @@ FVector Side(const Rail::Sample& S){return FVector(-S.tangent.y,S.tangent.x,0);}
 }
 ARailTambaramTurnoutView::ARailTambaramTurnoutView(){PrimaryActorTick.bCanEverTick=false;RootComponent=CreateDefaultSubobject<USceneComponent>(TEXT("Root"));}
 bool ARailTambaramTurnoutView::ReplacesPlainTrack(int32 Track,double D){return Track<2&&D>=Begin(Track)-.001&&D<End(Track)-.001;}
+FString ARailTambaramTurnoutView::FinishTelemetryJson() const {
+ FString Result=TEXT("[");
+ for(int32 I=0;I<Materials.Num();++I){if(I)Result+=TEXT(",");Result+=TEXT("\"")+(Materials[I]?Materials[I]->GetPathName():TEXT(""))+TEXT("\"");}
+ return Result+TEXT("]");
+}
 bool ARailTambaramTurnoutView::LoadAssets(){
  if(Cube&&Materials.Num()==4)return true;
  Cube=LoadObject<UStaticMesh>(nullptr,TEXT("/Engine/BasicShapes/Cube.Cube"));
@@ -23,6 +28,11 @@ bool ARailTambaramTurnoutView::LoadAssets(){
  Materials.Empty();
  const FLinearColor Colors[]={FLinearColor(.34f,.36f,.38f),FLinearColor(.16f,.075f,.038f),FLinearColor(.38f,.37f,.32f),FLinearColor(.075f,.085f,.09f)};
  for(int32 I=0;I<4;++I){auto* M=UMaterialInstanceDynamic::Create(Master,this);M->SetVectorParameterValue(TEXT("Color"),Colors[I]);M->SetScalarParameterValue(TEXT("Roughness"),I==0?.32f:.82f);Materials.Add(M);}
+ const TCHAR* Finishes[]={TEXT("M_RailHead"),TEXT("M_RailRust"),TEXT("M_SleeperConcrete"),TEXT("M_Fastener")};
+ for(int32 I=0;I<4;++I){
+  const FString Path=FString::Printf(TEXT("/Game/IndianRailway/S9/TrackEnvironmentV1/MaterialsV4/%s.%s"),Finishes[I],Finishes[I]);
+  if(auto* Material=LoadObject<UMaterialInterface>(nullptr,*Path))Materials[I]=Material;
+ }
  return true;
 }
 void ARailTambaramTurnoutView::Release(){for(const auto& P:Parts){RemoveInstanceComponent(P.Get());P->DestroyComponent();}Parts.Empty();InstanceCount=0;bBuilt=false;bReady=false;}

@@ -16,6 +16,7 @@ public:
  void Present(const Rail::OperationsWorld& World,int32 ChunkId);
  void Release();
  bool IsReady() const { return bReady; }
+ FString FinishTelemetryJson() const;
  static bool ReplacesPlainTrack(int32 Track,double Chainage);
  int32 InstanceCount=0;
  FString Diagnostic;

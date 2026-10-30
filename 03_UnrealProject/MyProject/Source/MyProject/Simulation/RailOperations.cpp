@@ -140,8 +140,8 @@ Result OperationsWorld::InitializeContent(const std::string& contentId){
     *this=OperationsWorld{};contentId_=selectedContent;definitions_=ScenarioContent::OperationsFor(contentId);r=definitions_.Validate(fixture.graph);if(!r.ok){error_=r.error;return r;}
     for(uint64_t id=1;id<=ScenarioContent::TrainCount(contentId);++id){TrainRuntime t;auto formation=id==2?shortTrain:longTrain;
         if(id>1)for(auto& member:formation.members)member.id=VehicleId(member.id.value+100*(id-1));
-        const bool Opposing=ScenarioContent::IsTambaram(contentId)&&id==3;
-        const EdgeId Initial=Opposing?TambaramRoute::EdgeFor(0,TambaramRoute::SegmentCount-1):ScenarioContent::IsTambaram(contentId)&&id==1?TambaramRoute::EdgeFor(1,4):EdgeId(id==1?1:2);
+        const bool Opposing=ScenarioContent::IsTambaram(contentId)&&id>=3;
+        const EdgeId Initial=Opposing?TambaramRoute::EdgeFor(ScenarioContent::IsLiveJourney(contentId)?ScenarioContent::TrafficTrack(id):0,ScenarioContent::IsLiveJourney(contentId)?ScenarioContent::TrafficStart(id):TambaramRoute::SegmentCount-1):ScenarioContent::IsTambaram(contentId)&&id==1?TambaramRoute::EdgeFor(1,4):EdgeId(id==1?1:2);
         r=t.spatial.Initialize(fixture.graph,fixture.definitions,formation,{Initial,Opposing?-1:1},ScenarioContent::Start(contentId,id),ScenarioContent::IsS8Route(contentId)?Choices{}:fixture.SelectUpper(id==1),TrainId(id));
         auto handling=MakeHandlingDefinitions();
         if(ScenarioContent::UsesLhb(contentId_)){auto coach=handling.at(DefinitionId(2));coach.id=DefinitionId(FormationContent::LhbDefinitionId);handling.emplace(coach.id,coach);auto loco=handling.at(DefinitionId(1));loco.id=DefinitionId(FormationContent::Wap7DefinitionId);handling.emplace(loco.id,loco);}

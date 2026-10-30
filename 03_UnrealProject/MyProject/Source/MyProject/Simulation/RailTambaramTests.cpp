@@ -1,9 +1,12 @@
 #include "RailTambaramService.h"
 #include "RailTambaramDriving.h"
 #include "RailJourneyPresentation.h"
+#include "RailDrivingAdvice.h"
+#include <limits>
 #include "RailEgmoreService.h"
 #include "RailContent.h"
 #include "RailScenarioContent.h"
+#include "RailRouteSampling.h"
 #include <cmath>
 #include <set>
 
@@ -25,7 +28,66 @@ struct TambaramHandlingRig {
 TestReport RunTambaramJourneyTests(){
  TestReport Report;
  auto Check=[&](const char* Name,bool Pass,const std::string& Detail=""){Report.cases.push_back({Name,Pass,0,0,Detail});};
+ {
+  using A=DrivingAdvice;
+  Check("Standard.Advice.OverspeedScoringBoundary",StandardDrivingAdvice(20.1,20,20,5000,2,false)==A::None&&StandardDrivingAdvice(20.101,20,20,5000,2,false)==A::Overspeed);
+  Check("Standard.Advice.RestrictionBeforeEntry",StandardDrivingAdvice(19,20,15,5000,2,false)==A::Restriction&&StandardDrivingAdvice(14,20,15,5000,2,false)==A::None);
+  Check("Standard.Advice.EarlyTerminalBraking",StandardDrivingAdvice(25,28,28,1000,2,false)==A::BrakeForBerth&&StandardDrivingAdvice(25,28,28,1500,2,false)==A::None);
+  Check("Standard.Advice.BerthAndDwell",StandardDrivingAdvice(.2,11,11,5,2,false)==A::PositionAtBerth&&StandardDrivingAdvice(0,11,11,1,2,true)==A::HoldDwell&&StandardDrivingAdvice(0,11,11,100,2,false)==A::None);
+  Check("Standard.Advice.InvalidAndOvershot",StandardDrivingAdvice(std::numeric_limits<double>::quiet_NaN(),20,20,20,2,false)==A::None&&StandardDrivingAdvice(0,11,11,-3,2,false)==A::None);
+ }
+ {
+  const auto D=MakeLiveTambaramService();OperationsWorld W;ServiceRuntime S(D);
+  auto R=D.Validate();Check("LiveJourney.Definition",R.ok,R.error);
+  if(R.ok)R=S.Select();if(R.ok)R=S.ConfirmFormation();if(R.ok)R=S.Start(W);
+  Check("LiveJourney.FiveProtectedTrains",R.ok&&W.Spatial(TrainId(5)),R.error);
+  bool Crossed=false,Locked=false,Recovered=false;
+  double Closest[3]={1e9,1e9,1e9},PassSpeed[3]={0,0,0},PassTick[3]={0,0,0};bool MovingPass[3]={false,false,false};
+  if(R.ok)R=S.Input(W,CommandKind::Brake,0);if(R.ok)R=S.Input(W,CommandKind::Throttle,1);
+  for(unsigned I=0;I<85000&&R.ok&&S.Current().phase==ServicePhase::Running;++I){
+   R=S.Update(W,1.0/30);const auto E=W.Spatial(TrainId(2))->Current().head.edge;
+   Crossed|=E==EdgeId(90000)||E==EdgeId(90001);
+   if(I%30==0){Sample Player;W.Spatial(TrainId(2))->Network().SamplePosition(W.Spatial(TrainId(2))->Current().head,Player);
+    for(uint64_t Id=3;Id<=5;++Id){Sample Other;W.Spatial(TrainId(Id))->Network().SamplePosition(W.Spatial(TrainId(Id))->Current().head,Other);
+     const double Distance=(Other.position-Player.position).Length();if(Distance<Closest[Id-3]){Closest[Id-3]=Distance;PassSpeed[Id-3]=W.Handling(TrainId(Id))->speedMps;PassTick[Id-3]=double(I);}
+     MovingPass[Id-3]|=Distance<80&&W.Handling(TrainId(Id))->speedMps>1;
+    }
+   }
+   if(E==EdgeId(90000))Locked|=W.Current().points.at(PointId(1)).lock.Active()&&W.Current().points.at(PointId(2)).lock.Active();
+   if(Crossed&&!Recovered){SnapshotRecord Record;OperationsWorld Cold;ServiceRuntime Restored(D);
+    R=S.Capture(W,1,Record);if(R.ok)R=ServiceRuntime::Restore(Record,D,Cold,Restored);
+    Recovered=R.ok;if(R.ok){W=std::move(Cold);S=std::move(Restored);W.SetSuspended(false);}
+   }
+  }
+  Check("LiveJourney.PlayerTraversesLockedCrossover",Crossed&&Locked,R.error);
+  Check("LiveJourney.CrossoverColdRecovery",Recovered,R.error);
+  Check("LiveJourney.ThreeMovingOpposingEncounters",MovingPass[0]&&MovingPass[1]&&MovingPass[2],std::to_string(Closest[0])+","+std::to_string(Closest[1])+","+std::to_string(Closest[2])+" speed "+std::to_string(PassSpeed[0])+","+std::to_string(PassSpeed[1])+","+std::to_string(PassSpeed[2])+" ticks "+std::to_string(PassTick[0])+","+std::to_string(PassTick[1])+","+std::to_string(PassTick[2]));
+  SnapshotRecord End;auto Saved=S.Capture(W,5,End);
+  Check("LiveJourney.LegacySaveIdentitySeparated",Saved.ok&&!ServiceRuntime::Compatible(End,MakeEgmoreTambaramService()),Saved.error);
+  OperationsWorld Manual;ServiceRuntime Standard(D);auto M=Standard.Select();if(M.ok)M=Standard.SetMode(DrivingMode::Standard);if(M.ok)M=Standard.ConfirmFormation();if(M.ok)M=Standard.Start(Manual);
+  if(M.ok)M=Standard.Input(Manual,CommandKind::Brake,.25);if(M.ok)M=Standard.Input(Manual,CommandKind::Throttle,.3);
+  for(unsigned I=0;I<15&&M.ok;++I)M=Standard.Update(Manual,1.0/30);
+  Check("LiveJourney.StandardRetainsPlayerControls",M.ok&&Standard.Current().mode==DrivingMode::Standard&&Manual.Handling(TrainId(2))->command.brake==.25&&Manual.Handling(TrainId(2))->command.throttle==.3,M.error);
+  Check("LiveJourney.FullTerminalService",R.ok&&S.Current().success&&S.Current().dwellTicks==D.dwellTicks,R.error+" "+S.Json());
+ }
  const auto Network=TambaramRoute::MakeGraph();const auto Safety=ScenarioContent::OperationsFor(TambaramRoute::ContentId);
+ {
+  bool Equivalent=true,Boundaries=true;double MaxError=0;
+  for(int Track=0;Track<4;++Track){
+   auto Path=TambaramRoute::Path(Track);
+   for(int Direction=0;Direction<2;++Direction){
+    if(Direction){std::reverse(Path.begin(),Path.end());for(auto& E:Path)E=E.Reversed();}
+    const PreparedRouteSampler Cached(Network,Path);const double Length=RouteLength(Network,Path);
+    auto Compare=[&](double D){Sample A,B;const bool X=SampleRoute(Network,Path,D,A).ok,Y=Cached.SampleAt(D,B);if(X!=Y)return false;if(!X)return true;MaxError=std::max(MaxError,std::max((A.position-B.position).Length(),(A.tangent-B.tangent).Length()));return MaxError<1e-10;};
+    for(double D=0;D<Length;D+=.83)Equivalent&=Compare(D);
+    double Boundary=0;for(const auto E:Path){Boundary+=Network.Find(E.edge)->lengthMetres;Boundaries&=Compare(Boundary)&&Compare(Boundary-1e-8)&&Compare(Boundary+1e-8);}
+    Boundaries&=Compare(-1)&&Compare(Length)&&Compare(Length+1);
+   }
+  }
+  Sample S;const PreparedRouteSampler Empty(Network,{}),Broken(Network,{{EdgeId(999999),1}});
+  Check("Tambaram.ScenerySampler.DenseForwardReverseEquivalence",Equivalent,std::to_string(MaxError));
+  Check("Tambaram.ScenerySampler.BoundariesAndInvalidRoutes",Boundaries&&!Empty.SampleAt(0,S)&&!Broken.SampleAt(0,S));
+ }
  {
   const auto Start=JourneyPresentation::At(TambaramRoute::StartHead,189.33);
   const auto Alongside=JourneyPresentation::At(TambaramRoute::StationMetres[4]+100,189.33);

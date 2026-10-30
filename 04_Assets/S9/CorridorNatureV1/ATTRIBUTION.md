@@ -1,0 +1,1 @@
+Original project-authored procedural geometry and vertex colours. No external pixels, AI images, commercial assets or scanned species are used. These are representative broadleaf clusters, verge grass and bark branches, not certified botanical replicas. All three LODs are authored explicitly; branch geometry remains present in every LOD. Existing S8 assets remain unchanged.

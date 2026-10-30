@@ -1,5 +1,5 @@
-#include "RailDispatchDiagnostics.h"
 #include "RailService.h"
+#include "RailDispatchDiagnostics.h"
 #include "RailScenarioContent.h"
 #include "RailSnapshotArchive.h"
 #include "RailRouteSampling.h"
@@ -28,10 +28,10 @@ Result ServiceDefinition::Validate() const {
  if(terminalStop&&!tambaram)return Result::Fail("Terminal contract requires the versioned Tambaram service");
  if(requireTrafficHold==egmore)return Result::Fail("Traffic objective does not match scenario");
  Fixture fixture;Formation shortTrain,longTrain;auto r=ScenarioContent::Resolve(contentId,fixture,shortTrain,longTrain);if(!r.ok)return r;FormationProperties properties;r=shortTrain.Derive(fixture.definitions,properties);if(!r.ok)return r;
- if(tambaram){TrackPosition Berth;auto Binding=PositionOnRoute(fixture.graph,TambaramRoute::Path(1),berthHead,Berth);
+ if(tambaram){TrackPosition Berth;auto Binding=PositionOnRoute(fixture.graph,ScenarioContent::PlayerPath(contentId),berthHead,Berth);
   if(!Binding.ok||platformEdge!=Berth.edge)return Result::Fail("Destination platform edge does not match route berth");
  }else if(platformEdge!=EdgeId(2))return Result::Fail("Unsupported legacy platform binding");
- const double PlatformLimit=tambaram?RouteLength(fixture.graph,TambaramRoute::Path(1)):(egmore?1200:160),FinishLimit=tambaram?PlatformLimit-10:(egmore?1190:165);
+ const double PlatformLimit=tambaram?RouteLength(fixture.graph,ScenarioContent::PlayerPath(contentId)):(egmore?1200:160),FinishLimit=tambaram?PlatformLimit-10:(egmore?1190:165);
  if(startHead!=ScenarioContent::Start(contentId,2)||platformFrom<0||platformTo>PlatformLimit||platformTo-platformFrom<properties.lengthMetres||berthHead-properties.lengthMetres<platformFrom||berthHead>platformTo||berthTolerance<=0||berthTolerance>5||(!terminalStop&&(finishHead<=berthHead+2*berthTolerance||finishHead+berthTolerance>=FinishLimit))||(terminalStop&&finishHead!=berthHead)||assistedCruise<=0||assistedCruise>speedLimit||speedLimit>(tambaram?100.0/3.6:5)||dwellTicks<30||dwellTicks>1800||routeRetryTicks<3||routeRetryTicks>300||!reputationReward||reputationReward>100||departureWindowSeconds<=arrivalWindowSeconds)return Result::Fail("Incompatible platform, timing or formation");
  if(std::abs(completionPoints+safetyPoints+accuracyPoints+speedPoints+punctualityPoints-100)>1e-9)return Result::Fail("Score weights must total 100");
  std::set<ObjectiveKind> seen;for(const auto& o:objectives)if(o.kind<ObjectiveKind::Departure||o.kind>=ObjectiveKind::Count||o.title.empty()||!seen.insert(o.kind).second)return Result::Fail("Invalid objective configuration");
@@ -47,7 +47,7 @@ Result ServiceRuntime::SetMode(DrivingMode mode){if(state_.phase!=ServicePhase::
 Result ServiceRuntime::Start(OperationsWorld& world){
  auto r=definition_.Validate();if(!r.ok)return r;if(state_.phase!=ServicePhase::Briefing||!state_.formationConfirmed||profile_.nextRun>=1000000)return Result::Fail("Confirm formation before starting");
  OperationsWorld candidate;r=candidate.InitializeContent(definition_.contentId);if(r.ok)r=candidate.EnableAI(definition_.traffic,definition_.trafficRoute);
- if(r.ok&&ScenarioContent::IsTambaram(definition_.contentId))r=candidate.EnableAI(TrainId(3),RouteId(4));if(!r.ok)return r;
+ if(ScenarioContent::IsTambaram(definition_.contentId))for(uint64_t Id=3;Id<=ScenarioContent::TrainCount(definition_.contentId)&&r.ok;++Id)r=candidate.EnableAI(TrainId(Id),RouteId(Id+1));if(!r.ok)return r;
  const auto mode=state_.mode;state_=ServiceState{};state_.mode=mode;state_.formationConfirmed=true;state_.phase=ServicePhase::Running;state_.run=profile_.nextRun++;state_.reason=definition_.requireTrafficHold?"Express has priority at the junction; approach the restriction and wait":"Obtain your route, serve "+definition_.station+" and observe adjacent protected traffic";world=std::move(candidate);return {};
 }
 Result ServiceRuntime::Input(OperationsWorld& world,CommandKind kind,double value){
@@ -153,7 +153,7 @@ void ServiceRuntime::Evaluate(const OperationsWorld& world){
 }
 Result ServiceRuntime::Fixed(OperationsWorld& world){
  if(world.Current().tick>=state_.lastRequestTick+definition_.routeRetryTicks&&!world.Current().authorities.at(definition_.player).routeGranted){
-  const bool Onward=ScenarioContent::IsTambaram(definition_.contentId)&&world.Spatial(definition_.player)->Current().head.edge==TambaramRoute::EdgeFor(1,14);
+  const bool Onward=ScenarioContent::IsTambaram(definition_.contentId)&&world.Spatial(definition_.player)->Current().head.edge==TambaramRoute::EdgeFor(ScenarioContent::IsLiveJourney(definition_.contentId)?0:1,14);
   auto r=world.RequestRoute(definition_.player,Onward?RouteId(3):definition_.playerRoute);if(!r.ok)return r;state_.lastRequestTick=world.Current().tick;}
  Assistance(world);
  auto r=world.Update(1.0/30.0);if(!r.ok)return r;++state_.ticks;Evaluate(world);return {};

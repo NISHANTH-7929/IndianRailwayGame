@@ -1,0 +1,6 @@
+{
+  "mode": "built-in image_gen",
+  "source": "Textures/T_DryVerge_BC.png",
+  "prompt": "Use case: photorealistic-natural. Asset type: seamless square albedo texture tile for a realistic railway simulation, viewed exactly orthographically from above, no perspective. A physically small roughly 1.5 metre square of neglected dry tropical trackside ground in Chennai: fine compacted dusty grey-brown soil, tiny angular gravel, scattered very short weathered straw blades and sparse irregular low dry grasses. Approximately 65 percent visible dusty soil, 25 percent faded tan straw, 10 percent muted dusty olive short grass. Detailed individual thin grass blades and crushed plant matter, uneven natural density, no large round clumps, no solid green blotches, no lawn, no flowers, no litter, no tracks or sleepers. Entire frame a uniform-scale tileable ground material with matching opposite edges, no border, no vignette, no horizon, no text. Neutral diffuse overcast illumination, no directional shadows or highlights baked into the image. Natural subdued earthy colours. High frequency sharp surface detail, photoreal material scan appearance, not illustration or 3D render. Opaque background.",
+  "notes": "Generated ground material image, not a photograph or surveyed route evidence. Source PNG copied unmodified; Unreal imports a 1024-pixel mipmapped runtime derivative."
+}

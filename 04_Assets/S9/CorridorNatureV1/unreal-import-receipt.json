@@ -1,0 +1,148 @@
+{
+  "passed": true,
+  "meshes": [
+    {
+      "family": "foliage",
+      "asset": "/Game/IndianRailway/S9/CorridorNatureV1/Meshes/SM_CorridorLeafClusterV1.SM_CorridorLeafClusterV1",
+      "triangles": [
+        672,
+        220,
+        92
+      ],
+      "lodCount": 3,
+      "sections": [
+        1,
+        1,
+        1
+      ],
+      "uvChannels": [
+        1,
+        1,
+        1
+      ],
+      "boundsMetres": [
+        [
+          -0.5,
+          -0.49999996185302736,
+          -0.375
+        ],
+        [
+          0.5,
+          0.49999996185302736,
+          0.375
+        ]
+      ],
+      "importedBoundsErrorMetres": 3.8146972636265986e-08,
+      "screenSizes": [
+        1.0,
+        0.02500000037252903,
+        0.00800000037997961
+      ],
+      "material": "/Game/IndianRailway/S9/CorridorNatureV1/Materials/M_CorridorLeaf.M_CorridorLeaf",
+      "collisionShapes": 0,
+      "vertexColorImportOption": "<VertexColorImportOption.REPLACE: 0>"
+    },
+    {
+      "family": "grass",
+      "asset": "/Game/IndianRailway/S9/CorridorNatureV1/Meshes/SM_CorridorGrassPatchV1.SM_CorridorGrassPatchV1",
+      "triangles": [
+        140,
+        55,
+        18
+      ],
+      "lodCount": 3,
+      "sections": [
+        1,
+        1,
+        1
+      ],
+      "uvChannels": [
+        1,
+        1,
+        1
+      ],
+      "boundsMetres": [
+        [
+          -0.5000000762939453,
+          -0.5,
+          0.0
+        ],
+        [
+          0.5000000381469727,
+          0.49999992370605467,
+          1.0
+        ]
+      ],
+      "importedBoundsErrorMetres": 7.629394532804312e-08,
+      "screenSizes": [
+        1.0,
+        0.03500000014901161,
+        0.012000000104308128
+      ],
+      "material": "/Game/IndianRailway/S9/CorridorNatureV1/Materials/M_CorridorDryGrass.M_CorridorDryGrass",
+      "collisionShapes": 0,
+      "vertexColorImportOption": "<VertexColorImportOption.REPLACE: 0>"
+    },
+    {
+      "family": "branch",
+      "asset": "/Game/IndianRailway/S9/CorridorNatureV1/Meshes/SM_CorridorBranchV1.SM_CorridorBranchV1",
+      "triangles": [
+        48,
+        36,
+        24
+      ],
+      "lodCount": 3,
+      "sections": [
+        1,
+        1,
+        1
+      ],
+      "uvChannels": [
+        1,
+        1,
+        1
+      ],
+      "boundsMetres": [
+        [
+          -0.5,
+          -0.5,
+          -0.5
+        ],
+        [
+          0.5,
+          0.5,
+          0.5
+        ]
+      ],
+      "importedBoundsErrorMetres": 0.0,
+      "screenSizes": [
+        1.0,
+        0.03500000014901161,
+        0.012000000104308128
+      ],
+      "material": "/Game/IndianRailway/S9/CorridorNatureV1/Materials/M_CorridorBark.M_CorridorBark",
+      "collisionShapes": 0,
+      "vertexColorImportOption": "<VertexColorImportOption.REPLACE: 0>"
+    }
+  ],
+  "materials": [
+    "/Game/IndianRailway/S9/CorridorNatureV1/Materials/M_CorridorLeaf.M_CorridorLeaf",
+    "/Game/IndianRailway/S9/CorridorNatureV1/Materials/M_CorridorDryGrass.M_CorridorDryGrass",
+    "/Game/IndianRailway/S9/CorridorNatureV1/Materials/M_CorridorBark.M_CorridorBark"
+  ],
+  "sourceReceiptSha256": "091f28686252bdaf27b03dbf5ecceee30392cfd2cc59ef22582dfa0e730d6269",
+  "sourceFbxSha256": [
+    "c7021659f2cf1dc29e702ca0841208b76db5a9cbfef07a86e412d9fbaa285f34",
+    "b1f2ef5f2cd4393cc88e115eeba730875d6becf0a5501b9c429258352a156439",
+    "775e383490f83260c533bcc44c6f201248448c73627667a1a4f1f2eef413fe69",
+    "a7cddc04e4da7fda3c8a5a7a14e345f4ce7440c802184a70e32b08404c087423",
+    "5de31123c48f19f4ced48e9762f45e3a3f983f024bf1caa3c08ee7068342078c",
+    "d2d496edc3910477f5d463d92c9508c7d933f7f6f749d29cb0350432809169d7",
+    "233d70df0684aafc63c9f52d8dfecea0ccd8fd0fb596b4f7f780efe66b0ed0b3",
+    "aca2f461e23c479dae6870b0e08403513a968fe79feacf639092d4437d3b9372",
+    "3f4f7e6eed3760a1617c84d60471476a2d320329868518021ed80c893ab66294"
+  ],
+  "generatedImages": false,
+  "originalAssetsModified": false,
+  "mobileTested": false
+}

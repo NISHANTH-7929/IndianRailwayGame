@@ -27,7 +27,10 @@ void URailSimulationSubsystem::LocomotiveAction(int32 Action){
   const auto* H=Operations.Handling(ServiceMode?Service.Definition().player:Rail::TrainId(1));
   if(!S6Paused||(H&&FMath::Abs(H->speedMps)>.05)){ServiceNotice=TEXT("Pause at a standstill to change locomotive appearance.");return;}
   FString Diagnostic;LocomotiveView->LoadPresentation(LocomotiveView->ClassName()==TEXT("WAP7")?TEXT("WAG9"):TEXT("WAP7"),Diagnostic);ServiceNotice=Diagnostic;SkipNextDelta.Store(true);
- }else if(Action==0&&HasLocomotivePresentation())LocomotiveView->ToggleCamera();
+ }else if(Action==0&&HasLocomotivePresentation()){
+  if(Rail::ScenarioContent::IsTambaram(Operations.ContentId()))LocomotiveView->CycleJourneyCamera();else LocomotiveView->ToggleCamera();
+  ServiceNotice=TEXT("Camera: ")+LocomotiveView->CameraName()+TEXT(" | CAMERA cycles cab, forward route, right and left sides");
+ }
  else if(Action>=2&&Action<=5)LocomotiveView->ToggleSwitch(Action-2);
  else if(Action==6)LocomotiveView->ToggleInstrumentView();
  if(HasLocomotivePresentation())if(auto* PC=GetWorld()->GetFirstPlayerController())PC->SetViewTarget(LocomotiveView);

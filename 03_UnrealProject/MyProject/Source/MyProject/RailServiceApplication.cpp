@@ -3,12 +3,21 @@
 #include "RailControlPresentation.h"
 #include "Simulation/RailTambaramDriving.h"
 #include "Simulation/RailJourneyPresentation.h"
+#include "Simulation/RailDrivingAdvice.h"
 #include "Simulation/RailScenarioContent.h"
 #include "Components/AudioComponent.h"
 #include "Kismet/GameplayStatics.h"
+#include "Kismet/KismetSystemLibrary.h"
 #include "Sound/SoundWave.h"
 #include "DrawDebugHelpers.h"
 void URailSimulationSubsystem::PresentService(){
+#if PLATFORM_ANDROID
+ const bool KeepAwake=Service.Current().phase==Rail::ServicePhase::Running&&!S6Paused;
+ if(KeepAwake!=ServiceKeepsScreenAwake){
+  UKismetSystemLibrary::ControlScreensaver(!KeepAwake);
+  ServiceKeepsScreenAwake=KeepAwake;
+ }
+#endif
  const auto Tick=Operations.Current().tick,Run=Service.Current().run;
  if(Run!=ServiceDispatchRun||Tick<ServiceDispatchTick){ServiceDispatchWatchdog.Reset();ServiceDispatchTick=0;ServiceDispatchNotice.Empty();ServiceDispatchRun=Run;}
  // Once per simulation second; a pause cannot age the diagnostic clock.
@@ -40,6 +49,10 @@ FString URailSimulationSubsystem::ServicePanelText() const {
   Text=FString::Printf(TEXT("CONFIRM YOUR SERVICE\n%s | %.2f m | Compatible %.0f m platform\nMode: %s. Limit: %.1f km/h. Forward-only itinerary.\n"),UTF8_TO_TCHAR(D.formation.c_str()),Train?Train->Current().properties.lengthMetres:0.0,D.platformTo-D.platformFrom,S.mode==Rail::DrivingMode::Assisted?TEXT("Assisted braking"):TEXT("Standard Loco Pilot"),D.speedLimit*3.6);
   for(const auto& Step:D.tutorial)Text+=FString(UTF8_TO_TCHAR(Step.c_str()))+TEXT("\n");
   Text+=TEXT("To move: release Brake, then apply Power. Pause saves your service.");
+  if(Rail::ScenarioContent::IsTambaram(D.contentId)){
+   Text+=Rail::ScenarioContent::IsLiveJourney(D.contentId)?TEXT("\nTraffic: wait for the priority express, then cross onto your authorised line. Three opposing services run on separate protected tracks."):TEXT("\nTraffic: a crossing express at Egmore and one northbound train on the adjacent line. Your authorised route runs straight through the junction.");
+   Text+=S.mode==Rail::DrivingMode::Assisted?TEXT("\nAssisted mode controls cruise speed and braking after you apply power. Choose Standard below to drive power and brakes yourself."):TEXT("\nStandard: you control acceleration, coasting and braking. Observe signals and stop at Tambaram; no automatic station braking.");
+  }
  }else if(S.phase==Rail::ServicePhase::Running){
   Text=S.accumulator>4.0/30.0+1e-9?TEXT("SERVICE PAUSED: FRAME OVERLOAD\nRestore the last verified checkpoint to continue.\nProgress since that checkpoint will be lost."):TEXT("SERVICE PAUSED\nYour train, traffic, station and objectives are retained.\nResume when ready, or Save and exit.");
  }else{
@@ -76,6 +89,37 @@ FString URailSimulationSubsystem::ServiceHudText() const {
   if(Journey.terminal)Text+=FString::Printf(TEXT("\nTambaram berth: %+.0f m | Dwell %.1f / %.1f s"),D.berthHead-Head,double(S.dwellTicks)/30,double(D.dwellTicks)/30);
   const double Approach=Rail::TambaramDriving::PermittedSpeed(Head,Train->Current().properties.lengthMetres,D.speedLimit)*3.6;
   if(Approach+1<RouteLimit*3.6)Text+=FString::Printf(TEXT("\nRestriction ahead - reduce towards %.0f km/h"),Approach);
+  if(S.mode==Rail::DrivingMode::Standard){
+   switch(Rail::StandardDrivingAdvice(H->speedMps,RouteLimit,Approach/3.6,D.berthHead-Head,D.berthTolerance,S.station==Rail::StationPhase::Dwelling)){
+    case Rail::DrivingAdvice::Overspeed:Text+=TEXT("\nOVERSPEED - cut power and apply brake");break;
+    case Rail::DrivingAdvice::Restriction:Text+=TEXT("\nREDUCE SPEED - brake for the approaching restriction");break;
+    case Rail::DrivingAdvice::BrakeForBerth:Text+=TEXT("\nTAMBARAM APPROACH - cut power and begin braking; judge your stopping distance");break;
+    case Rail::DrivingAdvice::PositionAtBerth:Text+=TEXT("\nBERTH MARKER - creep into position, then hold the brake");break;
+    case Rail::DrivingAdvice::HoldDwell:Text+=TEXT("\nDWELL - remain stopped with the brake applied");break;
+    default:break;
+   }
+  }
+  // Derive encounter information from the live railway, never from a timer or
+  // a decorative spawn. The message cannot grant or change a route.
+  Rail::Sample PlayerHead;
+  if(Train->Network().SamplePosition(Train->Current().head,PlayerHead).ok){
+   for(uint64 Id=3;Id<=Rail::ScenarioContent::TrainCount(D.contentId);++Id)if(const auto* Other=Operations.Spatial(Rail::TrainId(Id))){
+    Rail::Sample OtherHead;
+    if(Other->Network().SamplePosition(Other->Current().head,OtherHead).ok){
+     const auto Delta=OtherHead.position-PlayerHead.position;
+     const double Along=Delta.x*PlayerHead.tangent.x+Delta.y*PlayerHead.tangent.y;
+     const double DistanceToTrain=Delta.Length();
+     const TCHAR* Side=(-PlayerHead.tangent.y*Delta.x+PlayerHead.tangent.x*Delta.y)>=0?TEXT("right"):TEXT("left");
+     if(DistanceToTrain<1400&&Along>0)Text+=FString::Printf(TEXT("\nOncoming train on your %s: %.0f m ahead | CAMERA for side views"),Side,DistanceToTrain);
+     else if(DistanceToTrain<350&&Along+Other->Current().properties.lengthMetres>=-Train->Current().properties.lengthMetres)Text+=FString::Printf(TEXT("\nTrain passing on your %s - maintain your route"),Side);
+    }
+   }
+  }
+  double Junction=0;for(size_t I=0;I<Rail::TambaramRoute::CrossoverSegment;++I)Junction+=Rail::TambaramRoute::GeometryFor(1,I).lengthMetres;
+  if(Head<Junction+180){
+   if(!S.trafficCleared)Text+=TEXT("\nJunction: wait for the priority express to clear");
+   else Text+=Rail::ScenarioContent::IsLiveJourney(D.contentId)?TEXT("\nJunction: protected crossover, 30 km/h | CAMERA: forward route view"):TEXT("\nJunction: points set for your straight route after the express");
+  }
   if(S6Blocked)Text+=TEXT("\nLoading scenery - service safely paused");
  }
  if(!A.routeGranted&&!ServiceDispatchNotice.IsEmpty())Text+=TEXT("\n")+ServiceDispatchNotice;

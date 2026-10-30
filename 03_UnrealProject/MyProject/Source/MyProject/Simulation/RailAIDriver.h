@@ -33,7 +33,7 @@ public:
     uint64_t Sequence() const { return sequence_; }
     // Conservative 36 km/h opposing service stays below every curve limit in
     // the representative corridor; the shared throat shunt remains 10.8 km/h.
-    double TargetSpeed() const { return train_==TrainId(3)&&route_==RouteId(4)?10.0:3.0; }
+    double TargetSpeed() const { return train_.value>=3&&train_.value<=5&&route_.value==train_.value+1?10.0:3.0; }
     const std::string& Reason() const { return reason_; }
     std::string Json() const;
 private:

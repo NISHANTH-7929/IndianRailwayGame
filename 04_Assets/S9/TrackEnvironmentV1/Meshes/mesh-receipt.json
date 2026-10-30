@@ -1,0 +1,298 @@
+{
+  "revision": "track-environment-mesh-v1",
+  "source_reference": "04_Assets\\S8\\Workstreams\\StationArt\\v2.0.0\\Reproduce\\build_v2.py",
+  "source_sha256": "baf9e4866139a9c56e5d1d05ec8762360a306eb733342bc7c3cb05b0e11cab8b",
+  "original_sources_unchanged": true,
+  "units": "metres; UE import with convert_scene_unit=True yields centimetres",
+  "basis": "X longitudinal, Y lateral, Z up; FBX X-forward with Y-reflection compensation",
+  "uv_contract": "MetricUV channel 0: one UV unit = one metre",
+  "geometry_contract": {
+    "length_m": 6,
+    "rail_top_m": 0,
+    "inner_flat_half_width_m": 1.43,
+    "inner_flat_height_m": -0.335,
+    "nominal_outer_half_width_m": 1.95,
+    "nominal_outer_height_m": -0.67,
+    "underside_height_m": -0.7,
+    "ground_overlap_m": 0.05,
+    "seam_collar_m": 0.5,
+    "maximum_half_width_m": 2.08,
+    "collision": false
+  },
+  "records": [
+    {
+      "family": "ballast",
+      "name": "SM_Ballast6m_RealismV1_LOD0",
+      "lod": 0,
+      "triangles": 446,
+      "bounds_m": [
+        [
+          0.0,
+          -2.013799,
+          -0.7
+        ],
+        [
+          6.0,
+          2.0157294,
+          -0.335
+        ]
+      ],
+      "fbx": "04_Assets\\S9\\TrackEnvironmentV1\\Meshes\\SM_Ballast6m_RealismV1_LOD0.fbx",
+      "sha256": "398c33ed72ce309c114d1c4a81d3460e92177d580548547f9b3f78d8c032d566",
+      "material_slots": [
+        "M_TrackBallast"
+      ],
+      "closed_manifold": true,
+      "seam_cross_section_m": [
+        [
+          -1.95,
+          -0.67
+        ],
+        [
+          -1.7,
+          -0.442
+        ],
+        [
+          -1.4299999,
+          -0.335
+        ],
+        [
+          0.0,
+          -0.335
+        ],
+        [
+          1.4299999,
+          -0.335
+        ],
+        [
+          1.7,
+          -0.442
+        ],
+        [
+          1.95,
+          -0.67
+        ],
+        [
+          1.95,
+          -0.7
+        ],
+        [
+          -1.95,
+          -0.7
+        ]
+      ],
+      "seam_matches": true
+    },
+    {
+      "family": "ballast",
+      "name": "SM_Ballast6m_RealismV1_LOD1",
+      "lod": 1,
+      "triangles": 230,
+      "bounds_m": [
+        [
+          0.0,
+          -1.9940977,
+          -0.7
+        ],
+        [
+          6.0,
+          2.0157294,
+          -0.335
+        ]
+      ],
+      "fbx": "04_Assets\\S9\\TrackEnvironmentV1\\Meshes\\SM_Ballast6m_RealismV1_LOD1.fbx",
+      "sha256": "51092a54fd3c76906f6cb8cf88badedc81a2d93082ca07387af8d126e2ce65e7",
+      "material_slots": [
+        "M_TrackBallast"
+      ],
+      "closed_manifold": true,
+      "seam_cross_section_m": [
+        [
+          -1.95,
+          -0.67
+        ],
+        [
+          -1.7,
+          -0.442
+        ],
+        [
+          -1.4299999,
+          -0.335
+        ],
+        [
+          0.0,
+          -0.335
+        ],
+        [
+          1.4299999,
+          -0.335
+        ],
+        [
+          1.7,
+          -0.442
+        ],
+        [
+          1.95,
+          -0.67
+        ],
+        [
+          1.95,
+          -0.7
+        ],
+        [
+          -1.95,
+          -0.7
+        ]
+      ],
+      "seam_matches": true
+    },
+    {
+      "family": "ballast",
+      "name": "SM_Ballast6m_RealismV1_LOD2",
+      "lod": 2,
+      "triangles": 122,
+      "bounds_m": [
+        [
+          0.0,
+          -1.9940977,
+          -0.7
+        ],
+        [
+          6.0,
+          2.0157294,
+          -0.335
+        ]
+      ],
+      "fbx": "04_Assets\\S9\\TrackEnvironmentV1\\Meshes\\SM_Ballast6m_RealismV1_LOD2.fbx",
+      "sha256": "f113e1596629fd3a353aa0631d4637fe6bd1e9b7fb110fa4463c57e1f3abd446",
+      "material_slots": [
+        "M_TrackBallast"
+      ],
+      "closed_manifold": true,
+      "seam_cross_section_m": [
+        [
+          -1.95,
+          -0.67
+        ],
+        [
+          -1.7,
+          -0.442
+        ],
+        [
+          -1.4299999,
+          -0.335
+        ],
+        [
+          0.0,
+          -0.335
+        ],
+        [
+          1.4299999,
+          -0.335
+        ],
+        [
+          1.7,
+          -0.442
+        ],
+        [
+          1.95,
+          -0.67
+        ],
+        [
+          1.95,
+          -0.7
+        ],
+        [
+          -1.95,
+          -0.7
+        ]
+      ],
+      "seam_matches": true
+    },
+    {
+      "family": "stone",
+      "name": "SM_AngularBallastStoneV1_LOD0",
+      "lod": 0,
+      "triangles": 20,
+      "bounds_m": [
+        [
+          -0.5,
+          -0.5,
+          -0.5
+        ],
+        [
+          0.5,
+          0.5,
+          0.5
+        ]
+      ],
+      "fbx": "04_Assets\\S9\\TrackEnvironmentV1\\Meshes\\SM_AngularBallastStoneV1_LOD0.fbx",
+      "sha256": "53802a174cf8264e9c6eb16c8f882d8caa5ea6e0b70098e0b89ac1e9f2f25e7e",
+      "material_slots": [
+        "M_TrackBallast"
+      ],
+      "closed_manifold": true,
+      "seam_cross_section_m": null,
+      "seam_matches": true
+    },
+    {
+      "family": "stone",
+      "name": "SM_AngularBallastStoneV1_LOD1",
+      "lod": 1,
+      "triangles": 12,
+      "bounds_m": [
+        [
+          -0.5,
+          -0.5,
+          -0.5
+        ],
+        [
+          0.5,
+          0.5,
+          0.5
+        ]
+      ],
+      "fbx": "04_Assets\\S9\\TrackEnvironmentV1\\Meshes\\SM_AngularBallastStoneV1_LOD1.fbx",
+      "sha256": "0bd83941dd958d9a98e760ace55b49aaf7b00221feaf9091f55b367db5211f24",
+      "material_slots": [
+        "M_TrackBallast"
+      ],
+      "closed_manifold": true,
+      "seam_cross_section_m": null,
+      "seam_matches": true
+    },
+    {
+      "family": "stone",
+      "name": "SM_AngularBallastStoneV1_LOD2",
+      "lod": 2,
+      "triangles": 8,
+      "bounds_m": [
+        [
+          -0.5,
+          -0.5,
+          -0.5
+        ],
+        [
+          0.5,
+          0.5,
+          0.5
+        ]
+      ],
+      "fbx": "04_Assets\\S9\\TrackEnvironmentV1\\Meshes\\SM_AngularBallastStoneV1_LOD2.fbx",
+      "sha256": "3ea64b5816b1273b162ec1215d7f8db1004bca146d8ef590bbd36f9243b37603",
+      "material_slots": [
+        "M_TrackBallast"
+      ],
+      "closed_manifold": true,
+      "seam_cross_section_m": null,
+      "seam_matches": true
+    }
+  ],
+  "blend": "04_Assets\\S9\\TrackEnvironmentV1\\Meshes\\TrackBedV1.blend",
+  "blend_sha256": "ab5b26ee6917c5588300bd1c8d171dae2d9f7e155f06bd613d99071aa672538c",
+  "limitations": [
+    "Presentation estimate, not surveyed railway construction.",
+    "No rail, sleeper, points, traffic, or collision changes.",
+    "Unreal import, runtime material and in-game checks are separate."
+  ]
+}

@@ -1,0 +1,242 @@
+{
+  "revision": "corridor-nature-v1",
+  "originalProjectAuthoredGeometry": true,
+  "thirdPartyAssets": false,
+  "generatedImages": false,
+  "botanicalReplica": false,
+  "naniteRequired": false,
+  "transparentOverdraw": false,
+  "axes": "X route forward, Y lateral, Z up; metres",
+  "contracts": {
+    "foliage": "one metre XY, 0.75 metre Z, centered origin",
+    "grass": "one metre XYZ, root plane Z=0",
+    "branch": "one metre XYZ, centered origin, long axis Z"
+  },
+  "records": [
+    {
+      "family": "foliage",
+      "name": "SM_CorridorLeafClusterV1",
+      "lod": 0,
+      "triangles": 672,
+      "vertices": 840,
+      "sections": 1,
+      "boundsMetres": [
+        [
+          -0.5,
+          -0.5,
+          -0.375
+        ],
+        [
+          0.5,
+          0.5,
+          0.375
+        ]
+      ],
+      "material": "M_CorridorLeaf",
+      "fbx": "04_Assets\\S9\\CorridorNatureV1\\Meshes\\SM_CorridorLeafClusterV1_LOD0.fbx",
+      "sha256": "c7021659f2cf1dc29e702ca0841208b76db5a9cbfef07a86e412d9fbaa285f34",
+      "originalAuthoredLod": true,
+      "vertexColorPreserved": true
+    },
+    {
+      "family": "grass",
+      "name": "SM_CorridorGrassPatchV1",
+      "lod": 0,
+      "triangles": 140,
+      "vertices": 180,
+      "sections": 1,
+      "boundsMetres": [
+        [
+          -0.5,
+          -0.5,
+          0.0
+        ],
+        [
+          0.5,
+          0.5,
+          1.0
+        ]
+      ],
+      "material": "M_CorridorDryGrass",
+      "fbx": "04_Assets\\S9\\CorridorNatureV1\\Meshes\\SM_CorridorGrassPatchV1_LOD0.fbx",
+      "sha256": "b1f2ef5f2cd4393cc88e115eeba730875d6becf0a5501b9c429258352a156439",
+      "originalAuthoredLod": true,
+      "vertexColorPreserved": true
+    },
+    {
+      "family": "branch",
+      "name": "SM_CorridorBranchV1",
+      "lod": 0,
+      "triangles": 48,
+      "vertices": 26,
+      "sections": 1,
+      "boundsMetres": [
+        [
+          -0.5,
+          -0.5,
+          -0.5
+        ],
+        [
+          0.5,
+          0.5,
+          0.5
+        ]
+      ],
+      "material": "M_CorridorBark",
+      "fbx": "04_Assets\\S9\\CorridorNatureV1\\Meshes\\SM_CorridorBranchV1_LOD0.fbx",
+      "sha256": "775e383490f83260c533bcc44c6f201248448c73627667a1a4f1f2eef413fe69",
+      "originalAuthoredLod": true,
+      "vertexColorPreserved": true
+    },
+    {
+      "family": "foliage",
+      "name": "SM_CorridorLeafClusterV1",
+      "lod": 1,
+      "triangles": 220,
+      "vertices": 440,
+      "sections": 1,
+      "boundsMetres": [
+        [
+          -0.5,
+          -0.5,
+          -0.375
+        ],
+        [
+          0.5,
+          0.5,
+          0.375
+        ]
+      ],
+      "material": "M_CorridorLeaf",
+      "fbx": "04_Assets\\S9\\CorridorNatureV1\\Meshes\\SM_CorridorLeafClusterV1_LOD1.fbx",
+      "sha256": "a7cddc04e4da7fda3c8a5a7a14e345f4ce7440c802184a70e32b08404c087423",
+      "originalAuthoredLod": true,
+      "vertexColorPreserved": true
+    },
+    {
+      "family": "grass",
+      "name": "SM_CorridorGrassPatchV1",
+      "lod": 1,
+      "triangles": 55,
+      "vertices": 77,
+      "sections": 1,
+      "boundsMetres": [
+        [
+          -0.5,
+          -0.5,
+          0.0
+        ],
+        [
+          0.5,
+          0.5,
+          1.0
+        ]
+      ],
+      "material": "M_CorridorDryGrass",
+      "fbx": "04_Assets\\S9\\CorridorNatureV1\\Meshes\\SM_CorridorGrassPatchV1_LOD1.fbx",
+      "sha256": "5de31123c48f19f4ced48e9762f45e3a3f983f024bf1caa3c08ee7068342078c",
+      "originalAuthoredLod": true,
+      "vertexColorPreserved": true
+    },
+    {
+      "family": "branch",
+      "name": "SM_CorridorBranchV1",
+      "lod": 1,
+      "triangles": 36,
+      "vertices": 20,
+      "sections": 1,
+      "boundsMetres": [
+        [
+          -0.5,
+          -0.5,
+          -0.5
+        ],
+        [
+          0.5,
+          0.5,
+          0.5
+        ]
+      ],
+      "material": "M_CorridorBark",
+      "fbx": "04_Assets\\S9\\CorridorNatureV1\\Meshes\\SM_CorridorBranchV1_LOD1.fbx",
+      "sha256": "d2d496edc3910477f5d463d92c9508c7d933f7f6f749d29cb0350432809169d7",
+      "originalAuthoredLod": true,
+      "vertexColorPreserved": true
+    },
+    {
+      "family": "foliage",
+      "name": "SM_CorridorLeafClusterV1",
+      "lod": 2,
+      "triangles": 92,
+      "vertices": 184,
+      "sections": 1,
+      "boundsMetres": [
+        [
+          -0.5,
+          -0.5,
+          -0.375
+        ],
+        [
+          0.5,
+          0.5,
+          0.375
+        ]
+      ],
+      "material": "M_CorridorLeaf",
+      "fbx": "04_Assets\\S9\\CorridorNatureV1\\Meshes\\SM_CorridorLeafClusterV1_LOD2.fbx",
+      "sha256": "233d70df0684aafc63c9f52d8dfecea0ccd8fd0fb596b4f7f780efe66b0ed0b3",
+      "originalAuthoredLod": true,
+      "vertexColorPreserved": true
+    },
+    {
+      "family": "grass",
+      "name": "SM_CorridorGrassPatchV1",
+      "lod": 2,
+      "triangles": 18,
+      "vertices": 30,
+      "sections": 1,
+      "boundsMetres": [
+        [
+          -0.5,
+          -0.5,
+          0.0
+        ],
+        [
+          0.5,
+          0.5,
+          1.0
+        ]
+      ],
+      "material": "M_CorridorDryGrass",
+      "fbx": "04_Assets\\S9\\CorridorNatureV1\\Meshes\\SM_CorridorGrassPatchV1_LOD2.fbx",
+      "sha256": "aca2f461e23c479dae6870b0e08403513a968fe79feacf639092d4437d3b9372",
+      "originalAuthoredLod": true,
+      "vertexColorPreserved": true
+    },
+    {
+      "family": "branch",
+      "name": "SM_CorridorBranchV1",
+      "lod": 2,
+      "triangles": 24,
+      "vertices": 14,
+      "sections": 1,
+      "boundsMetres": [
+        [
+          -0.5,
+          -0.5,
+          -0.5
+        ],
+        [
+          0.5,
+          0.5,
+          0.5
+        ]
+      ],
+      "material": "M_CorridorBark",
+      "fbx": "04_Assets\\S9\\CorridorNatureV1\\Meshes\\SM_CorridorBranchV1_LOD2.fbx",
+      "sha256": "3f4f7e6eed3760a1617c84d60471476a2d320329868518021ed80c893ab66294",
+      "originalAuthoredLod": true,
+      "vertexColorPreserved": true
+    }
+  ]
+}

@@ -3,6 +3,34 @@
 #include <cmath>
 
 namespace Rail {
+// Immutable presentation snapshot: validate the ordered route once, then reuse
+// its geometry for dense scenery placement. Never used for movement authority.
+class PreparedRouteSampler {
+ struct Segment { Geometry geometry; double length; int direction; };
+ std::vector<Segment> segments_;
+public:
+ PreparedRouteSampler(const Graph& graph,const std::vector<DirectedEdge>& path){
+  for(size_t i=0;i<path.size();++i){
+   const auto d=path[i];const auto* e=graph.Find(d.edge);
+   if(!e||!std::isfinite(e->lengthMetres)||e->lengthMetres<=0||
+      (d.direction!=1&&d.direction!=-1)||(d.direction==1?!e->allowForward:!e->allowReverse)||
+      (i&&!graph.Connection(path[i-1],d))){segments_.clear();return;}
+   segments_.push_back({e->geometry,e->lengthMetres,d.direction});
+  }
+ }
+ bool SampleAt(double station,Sample& out) const {
+  if(!std::isfinite(station)||station<0)return false;
+  for(size_t i=0;i<segments_.size();++i){
+   const auto& s=segments_[i];
+   if(station<s.length||(i+1==segments_.size()&&station<=s.length)){
+    out=s.geometry.At(s.direction==1?station:s.length-station);
+    out.tangent=out.tangent*double(s.direction);return true;
+   }
+   station-=s.length;
+  }
+  return false;
+ }
+};
 // Resolve authored path distance, never nearest-spline/world-axis projection.
 inline Result PositionOnRoute(const Graph& graph,const std::vector<DirectedEdge>& path,
                               double station,TrackPosition& out){

@@ -2,6 +2,7 @@
 #include "RailService.h"
 #include "RailTambaramRoute.h"
 #include "RailRouteSampling.h"
+#include "RailScenarioContent.h"
 namespace Rail {
 TestReport RunTambaramJourneyTests();
 inline ServiceDefinition MakeEgmoreTambaramService(){
@@ -21,4 +22,16 @@ inline ServiceDefinition MakeEgmoreTambaramService(){
  D.tutorial[3]="The service ends at Tambaram after dwell. Review the result and save the reward; no departure is required.";
  return D;
 }
+inline ServiceDefinition MakeLiveTambaramService(){
+ auto D=MakeEgmoreTambaramService();D.id="S9-MS-TBM-LIVE-01";D.version="IR-S9-MSTBM-live-service-1";D.contentId="IR-S9-MSTBM-LIVE-1";
+ D.name="Egmore to Tambaram - crossover and opposing traffic";
+ const auto G=TambaramRoute::MakeGraph();const auto P=ScenarioContent::PlayerPath(D.contentId);
+ const double Offset=RouteLength(G,P)-RouteLength(G,TambaramRoute::Path(1));
+ D.platformFrom+=Offset;D.platformTo+=Offset;D.berthHead+=Offset;D.finishHead=D.berthHead;
+ TrackPosition Berth;if(PositionOnRoute(G,P,D.berthHead,Berth).ok)D.platformEdge=Berth.edge;
+ D.objectives[8].title="Wait for priority traffic, then cross on the protected route";
+ D.tutorial[1]="Wait at the Egmore throat. Once cleared, follow the crossover at the restricted speed. Three opposing services use separate protected tracks.";
+ return D;
+}
+
 }

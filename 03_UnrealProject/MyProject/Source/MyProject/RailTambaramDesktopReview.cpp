@@ -2,6 +2,7 @@
 #if WITH_EDITOR && WITH_DEV_AUTOMATION_TESTS
 #include "RailSimulationSubsystem.h"
 #include "RailTambaramCorridorView.h"
+#include "RailTambaramTurnoutView.h"
 #include "RailTambaramStationView.h"
 #include "RailChunkView.h"
 #include "RailWheelPresentation.h"
@@ -15,6 +16,10 @@
 #include "Camera/CameraActor.h"
 #include "Camera/PlayerCameraManager.h"
 #include "Components/InstancedStaticMeshComponent.h"
+#include "Engine/StaticMesh.h"
+#include "StaticMeshResources.h"
+#include "Engine/Texture2D.h"
+#include "Materials/Material.h"
 #include "Containers/Ticker.h"
 #include "HAL/IConsoleManager.h"
 #include "HAL/FileManager.h"
@@ -26,6 +31,9 @@
 #include "UnrealClient.h"
 #include "ShaderCompiler.h"
 #include "AudioMixerBlueprintLibrary.h"
+#include "Dom/JsonObject.h"
+#include "Serialization/JsonReader.h"
+#include "Serialization/JsonSerializer.h"
 
 
 namespace {
@@ -33,7 +41,134 @@ struct FTambaramReview {
  FString Output,Pending;double Started=FPlatformTime::Seconds(),LastCapture=0;
  int32 Captures=0;bool Full=false,Boundary=false,Cycled=false,Resumed=false,CyclePending=false,ReloadVerified=false;
  FString BeforeCycle;
+ bool SceneryOnly=false,CabOnly=false,TrackOnly=false,TrackCrossover=false;
+ FString SceneryState;
  int32 CaptureWarmup=0,PendingCameraMode=0;
+ double CabWideFov=0;
+ bool CheckTrackAssets(UWorld* W){
+  // Inspect the materials actually assigned to populated render components.
+  // A successful LoadObject alone would miss an override/family mapping bug.
+  const FString Root=TEXT("/Game/IndianRailway/S9/TrackEnvironmentV1/");
+  const auto AssetPath=[&Root](const TCHAR* Folder,const TCHAR* Name){return Root+Folder+TEXT("/")+Name+TEXT(".")+Name;};
+  const FString Bed=AssetPath(TEXT("Meshes"),TEXT("SM_Ballast6m_RealismV3"));
+  const FString Stone=AssetPath(TEXT("Meshes"),TEXT("SM_AngularBallastStoneV1"));
+  const FString Track=AssetPath(TEXT("Meshes"),TEXT("SM_Track6m_RealismV2"));
+  const FString Ballast=AssetPath(TEXT("MaterialsV4"),TEXT("M_TrackBallast")),StoneFinish=AssetPath(TEXT("MaterialsV4"),TEXT("M_TrackStone"));
+  const FString Ground=AssetPath(TEXT("MaterialsV4"),TEXT("M_DryGround"));
+  const FString NatureRoot=TEXT("/Game/IndianRailway/S9/CorridorNatureV1/");
+  const TCHAR* NatureMeshes[]={TEXT("SM_CorridorLeafClusterV2"),TEXT("SM_CorridorVerge12m"),TEXT("SM_CorridorGrassPatchV1"),TEXT("SM_CorridorBranchV1")};
+  const TCHAR* NatureMaterials[]={TEXT("M_CorridorLeaf"),TEXT("M_CorridorNatureGround"),TEXT("M_CorridorDryGrass"),TEXT("M_CorridorBark")};
+  int32 NatureAssigned[4]={0,0,0,0};bool NatureLODs=true,NatureCollision=true;
+  const TCHAR* FinishNames[]={TEXT("M_RailHead"),TEXT("M_RailRust"),TEXT("M_SleeperConcrete"),TEXT("M_Fastener")};
+  int32 Beds=0,Stones=0,Grounds=0,Tracks=0,Turnouts=0;
+  int32 OrdinaryFinish[3]={0,0,0},TurnoutFinish[4]={0,0,0,0};
+  TMap<FString,int32> MeshCounts,MaterialCounts;
+  TSet<FString> CheckedMaterials;bool TextureBindingsPassed=true;
+  bool BedUVChecked=false;double MaximumBedLateralUVError=0;
+  int32 VegetatedGroundInstances=0;
+  auto UsedTextureJson=MakeShared<FJsonObject>();
+  TArray<TSharedPtr<FJsonValue>> Components;
+  for(TActorIterator<AActor> It(W);It;++It){
+   const bool Corridor=It->IsA<ARailTambaramCorridorView>(),Turnout=It->IsA<ARailTambaramTurnoutView>();
+   if(!Corridor&&!Turnout)continue;
+   TInlineComponentArray<UStaticMeshComponent*> Parts;It->GetComponents(Parts);
+   for(auto* Part:Parts){
+    const UStaticMesh* Mesh=Part->GetStaticMesh();if(!Mesh||!Part->IsRegistered()||!Part->IsVisible())continue;
+    const auto* Instanced=Cast<UInstancedStaticMeshComponent>(Part);
+    const int32 Count=Instanced?Instanced->GetInstanceCount():1;if(Count==0)continue;
+    const FString MeshPath=Mesh->GetPathName();MeshCounts.FindOrAdd(MeshPath)+=Count;
+    if(MeshPath==Bed&&!BedUVChecked){
+     const auto* Data=Mesh->GetRenderData();
+     if(Data&&!Data->LODResources.IsEmpty()){
+      const auto& Buffers=Data->LODResources[0].VertexBuffers;
+      if(Buffers.PositionVertexBuffer.GetNumVertices()>0&&Buffers.StaticMeshVertexBuffer.GetNumTexCoords()>0){
+       BedUVChecked=true;
+       for(uint32 V=0;V<Buffers.PositionVertexBuffer.GetNumVertices();++V){
+        const double Y=Buffers.PositionVertexBuffer.VertexPosition(V).Y*.01;
+        const double Decoded=1.-Buffers.StaticMeshVertexBuffer.GetVertexUV(V,0).Y;
+        MaximumBedLateralUVError=FMath::Max(MaximumBedLateralUVError,FMath::Abs(Y-Decoded));
+       }
+      }
+     }
+    }
+    TArray<TSharedPtr<FJsonValue>> Slots;TSet<FString> Assigned;
+    for(int32 Slot=0;Slot<Part->GetNumMaterials();++Slot){
+     auto* Interface=Part->GetMaterial(Slot);auto* Material=Interface?Interface->GetMaterial():nullptr;
+     const FString Path=Material?Material->GetPathName():TEXT("null");Assigned.Add(Path);MaterialCounts.FindOrAdd(Path)+=Count;
+     if(Path==Ground&&Interface){float Coverage=0;if(Interface->GetScalarParameterValue(FMaterialParameterInfo(TEXT("VegetationCoverage")),Coverage)&&Coverage>0)VegetatedGroundInstances+=Count;}
+     if(Material&&Path.StartsWith(Root+TEXT("MaterialsV4/"))&&!CheckedMaterials.Contains(Path)){
+      CheckedMaterials.Add(Path);TArray<UTexture*> Used;Material->GetUsedTextures(Used);
+      TArray<TSharedPtr<FJsonValue>> TexturePaths;TextureBindingsPassed&=!Used.IsEmpty();
+      for(auto* Texture:Used){
+       const auto* T=Cast<UTexture2D>(Texture);
+       TextureBindingsPassed&=T&&T->GetPathName().StartsWith(Root+TEXT("TexturesV2/"))&&T->GetNumMips()>1;
+       TexturePaths.Add(MakeShared<FJsonValueString>(Texture?Texture->GetPathName():TEXT("null")));
+      }
+      UsedTextureJson->SetArrayField(Path,TexturePaths);
+     }
+     auto Entry=MakeShared<FJsonObject>();Entry->SetNumberField(TEXT("slot"),Slot);Entry->SetStringField(TEXT("interface"),Interface?Interface->GetPathName():TEXT("null"));Entry->SetStringField(TEXT("baseMaterial"),Path);Slots.Add(MakeShared<FJsonValueObject>(Entry));
+    }
+    auto Entry=MakeShared<FJsonObject>();Entry->SetStringField(TEXT("actor"),It->GetName());Entry->SetStringField(TEXT("component"),Part->GetName());Entry->SetStringField(TEXT("mesh"),MeshPath);Entry->SetNumberField(TEXT("instances"),Count);Entry->SetArrayField(TEXT("materials"),Slots);Components.Add(MakeShared<FJsonValueObject>(Entry));
+    if(Corridor){
+     for(int32 I=0;I<4;++I)if(MeshPath==NatureRoot+TEXT("Meshes/")+NatureMeshes[I]+TEXT(".")+NatureMeshes[I]){
+      const FString Expected=NatureRoot+TEXT("Materials/")+NatureMaterials[I]+TEXT(".")+NatureMaterials[I];
+      if(Assigned.Contains(Expected))NatureAssigned[I]+=Count;
+      NatureLODs&=Mesh->GetNumLODs()==3;
+      NatureCollision&=Part->GetCollisionEnabled()==ECollisionEnabled::NoCollision;
+     }
+     if(MeshPath==Bed&&Assigned.Contains(Ballast))Beds+=Count;
+     if(MeshPath==Stone&&Assigned.Contains(StoneFinish))Stones+=Count;
+     if(Assigned.Contains(Ground))Grounds+=Count;
+     if(MeshPath==Track){Tracks+=Count;for(int32 I=0;I<3;++I)if(Assigned.Contains(AssetPath(TEXT("MaterialsV4"),FinishNames[I])))OrdinaryFinish[I]+=Count;}
+    }else{
+     Turnouts+=Count;for(int32 I=0;I<4;++I)if(Assigned.Contains(AssetPath(TEXT("MaterialsV4"),FinishNames[I])))TurnoutFinish[I]+=Count;
+    }
+   }
+  }
+  bool Passed=Beds>0&&Stones>0&&Grounds>0&&Tracks>0&&TextureBindingsPassed&&BedUVChecked&&MaximumBedLateralUVError<.003&&VegetatedGroundInstances>0;
+  bool NaturePassed=NatureLODs&&NatureCollision;
+  for(int32 Count:NatureAssigned)NaturePassed&=Count>0;
+  Passed&=NaturePassed;
+  // Every ordinary track instance must have all three shared finishes.
+  for(int32 I=0;I<3;++I)Passed&=OrdinaryFinish[I]==Tracks;
+  const bool CheckTurnout=TrackCrossover||Turnouts>0;
+  if(CheckTurnout)for(int32 I=0;I<4;++I)Passed&=TurnoutFinish[I]>0;
+  auto Json=MakeShared<FJsonObject>();Json->SetBoolField(TEXT("passed"),Passed);Json->SetBoolField(TEXT("actualPopulatedComponents"),true);Json->SetBoolField(TEXT("turnoutRequired"),TrackCrossover);Json->SetBoolField(TEXT("turnoutAssessed"),CheckTurnout);Json->SetNumberField(TEXT("bedInstancesWithNewMaterial"),Beds);Json->SetNumberField(TEXT("stoneInstancesWithNewMaterial"),Stones);Json->SetNumberField(TEXT("groundInstancesWithNewMaterial"),Grounds);Json->SetNumberField(TEXT("ordinaryTrackInstances"),Tracks);Json->SetNumberField(TEXT("turnoutInstances"),Turnouts);
+  auto Meshes=MakeShared<FJsonObject>(),Materials=MakeShared<FJsonObject>(),Ordinary=MakeShared<FJsonObject>(),Junction=MakeShared<FJsonObject>();
+  for(const auto& Entry:MeshCounts)Meshes->SetNumberField(Entry.Key,Entry.Value);
+  for(const auto& Entry:MaterialCounts)Materials->SetNumberField(Entry.Key,Entry.Value);
+  for(int32 I=0;I<4;++I){Junction->SetNumberField(FinishNames[I],TurnoutFinish[I]);if(I<3)Ordinary->SetNumberField(FinishNames[I],OrdinaryFinish[I]);}
+  Json->SetObjectField(TEXT("meshInstanceCounts"),Meshes);Json->SetObjectField(TEXT("materialSlotInstanceCounts"),Materials);Json->SetObjectField(TEXT("ordinaryFinishInstances"),Ordinary);Json->SetObjectField(TEXT("turnoutFinishInstances"),Junction);Json->SetArrayField(TEXT("components"),Components);
+  Json->SetBoolField(TEXT("compiledMaterialTextureBindingsPassed"),TextureBindingsPassed);Json->SetObjectField(TEXT("usedTextures"),UsedTextureJson);
+  Json->SetBoolField(TEXT("bedImportedUVChecked"),BedUVChecked);Json->SetNumberField(TEXT("maximumBedLateralUVErrorMetres"),MaximumBedLateralUVError);Json->SetNumberField(TEXT("vegetatedGroundInstances"),VegetatedGroundInstances);
+  auto Nature=MakeShared<FJsonObject>();for(int32 I=0;I<4;++I)Nature->SetNumberField(NatureMeshes[I],NatureAssigned[I]);
+  Json->SetObjectField(TEXT("natureAssignedInstances"),Nature);Json->SetBoolField(TEXT("natureAssetsPassed"),NaturePassed);Json->SetBoolField(TEXT("natureThreeLODs"),NatureLODs);Json->SetBoolField(TEXT("natureCollisionDisabled"),NatureCollision);
+  FString Encoded;FJsonSerializer::Serialize(Json,TJsonWriterFactory<>::Create(&Encoded));
+  return FFileHelper::SaveStringToFile(Encoded,*(Output/TEXT("track-assets.json")))&&Passed;
+ }
+ bool ConfigureCabView(ARailLocomotiveView* Loco,int32 Mode){
+  if(!Loco||!Loco->IsReady())return false;
+  TSharedPtr<FJsonObject> State;bool Lamp=false;
+  if(!FJsonSerializer::Deserialize(TJsonReaderFactory<>::Create(Loco->TelemetryJson()),State)||!State.IsValid()||!State->TryGetBoolField(TEXT("cabLight"),Lamp))return false;
+  if(Lamp!=(Mode>=19))Loco->ToggleSwitch(3);
+  // Returning through exterior resets the look offset and zoom without
+  // changing any driving command. Apply the lamp before UpdateCamera runs.
+  if(Loco->IsCabCamera())Loco->ToggleCamera();
+  Loco->ToggleCamera();
+  if(!Loco->IsCabCamera())return false;
+  if(!FJsonSerializer::Deserialize(TJsonReaderFactory<>::Create(Loco->TelemetryJson()),State)||!State.IsValid()||!State->TryGetNumberField(TEXT("cameraFov"),CabWideFov))return false;
+  if(Mode==18||Mode==20)Loco->ToggleInstrumentView();
+  return true;
+ }
+ bool CabFrameValid(const FString& Telemetry)const{
+  TSharedPtr<FJsonObject> State;bool Cab=false,Lamp=false,Visible=false,Zoom=false;double Fov=0;
+  return FJsonSerializer::Deserialize(TJsonReaderFactory<>::Create(Telemetry),State)&&State.IsValid()
+   &&State->TryGetBoolField(TEXT("cabCamera"),Cab)&&Cab
+   &&State->TryGetBoolField(TEXT("cabLight"),Lamp)&&Lamp==(PendingCameraMode>=19)
+   &&State->TryGetBoolField(TEXT("cabLightVisible"),Visible)&&Visible==Lamp
+   &&State->TryGetBoolField(TEXT("instrumentView"),Zoom)&&Zoom==(PendingCameraMode==18||PendingCameraMode==20)
+   &&State->TryGetNumberField(TEXT("cameraFov"),Fov)&&FMath::Abs(Fov-(Zoom?55.:CabWideFov))<.01;
+ }
  double CycleStarted=0;
  int32 TerminalCaptures=0;
  int32 NextStation=1,SceneryCaptures=0,BridgeCaptures=0;
@@ -145,8 +280,16 @@ struct FTambaramReview {
   FFileHelper::SaveStringToFile(FString::Printf(TEXT("{\"passed\":%s,\"maximumBogiePositionErrorCm\":%.6f,\"toleranceCm\":2}"),BogiePresentationPassed?TEXT("true"):TEXT("false"),MaximumBogieErrorCm),*(Output/TEXT("bogie-presentation.json")));
   FFileHelper::SaveStringToFile(FString::Printf(TEXT("{\"passed\":%s,\"maximumWheelPositionErrorCm\":%.6f,\"maximumPhaseErrorRadians\":%.6f,\"positionToleranceCm\":0.1,\"phaseToleranceRadians\":0.002,\"physicalContactSolver\":false}"),WheelPresentationPassed?TEXT("true"):TEXT("false"),MaximumWheelErrorCm,MaximumWheelAngleError),*(Output/TEXT("wheel-presentation.json")));
   Passed&=BogiePresentationPassed&&WheelPresentationPassed;
+  const bool Interrupted=Sim.IsValid()&&Sim->ReadOnlyService().Current().phase==Rail::ServicePhase::Running&&(Sim->IsServicePaused()||Sim->IsPresentationBlocked());
+  // Explicit static review: never count a paused picture as a moving journey.
+  // The ordinary/full journey guard remains strict.
+  const bool StaticUnchanged=SceneryOnly&&Sim.IsValid()&&Sim->IsServicePaused()&&!Sim->IsPresentationBlocked()&&!SceneryState.IsEmpty()&&SceneryState==UTF8_TO_TCHAR(Sim->ReadOnlyOperations().Json().c_str());
+  Passed&=SceneryOnly?StaticUnchanged:!Interrupted;
+  if(SceneryOnly)FFileHelper::SaveStringToFile(FString::Printf(TEXT("{\"staticVisualReview\":true,\"reviewKind\":\"%s\",\"liveJourneyQualification\":false,\"stateUnchanged\":%s}"),CabOnly?TEXT("cab"):TrackOnly?TEXT("track"):TEXT("scenery"),StaticUnchanged?TEXT("true"):TEXT("false")),*(Output/TEXT("review-scope.json")));
+  if(SceneryOnly)FFileHelper::SaveStringToFile(TEXT("{\"assessed\":false,\"reason\":\"Static views do not verify moving traffic\"}"),*(Output/TEXT("passing-service.json")));
+  const FString FinalReason=SceneryOnly?(Passed?(CabOnly?TEXT("Isolated static cab, instrument zoom and lamp review; not a live traversal"):TrackOnly?TEXT("Isolated static track detail and assigned material review; not a live traversal"):TEXT("Isolated static scenery and camera review; not a live traversal")):Reason):(Interrupted?TEXT("Review interrupted by a paused or blocked running service"):Reason);
   FString State=Sim.IsValid()?UTF8_TO_TCHAR(Sim->ReadOnlyService().Json().c_str()):TEXT("null");
-  const FString Json=FString::Printf(TEXT("{\"passed\":%s,\"fullJourneyRequested\":%s,\"boundarySeen\":%s,\"cycleRequested\":%s,\"captures\":%d,\"reason\":\"%s\",\"service\":%s,\"androidTested\":false,\"realTimePerformanceClaimed\":false}"),Passed?TEXT("true"):TEXT("false"),Full?TEXT("true"):TEXT("false"),Boundary?TEXT("true"):TEXT("false"),Cycled?TEXT("true"):TEXT("false"),Captures,*Reason,*State);
+  const FString Json=FString::Printf(TEXT("{\"passed\":%s,\"fullJourneyRequested\":%s,\"boundarySeen\":%s,\"cycleRequested\":%s,\"captures\":%d,\"reason\":\"%s\",\"service\":%s,\"androidTested\":false,\"realTimePerformanceClaimed\":false}"),Passed?TEXT("true"):TEXT("false"),Full?TEXT("true"):TEXT("false"),Boundary?TEXT("true"):TEXT("false"),Cycled?TEXT("true"):TEXT("false"),Captures,*FinalReason,*State);
   FFileHelper::SaveStringToFile(Json,*(Output/TEXT("result.json")));FPlatformMisc::RequestExit(false);return false;
  }
  bool Tick(float){
@@ -167,7 +310,14 @@ struct FTambaramReview {
   const auto Tick=World.Current().tick;if(Tick!=LastTick){LastTick=Tick;LastProgress=Now;}
   if(Now-LastProgress>150)return Finish(false,TEXT("No logical progress for 150 seconds"));
   bool Ready=false;for(TActorIterator<ARailTambaramCorridorView> It(W);It;++It)Ready|=It->IsReady();
-  if(!Ready||!S->HasLocomotivePresentation())return true;
+  if(!Ready||!S->HasLocomotivePresentation()||S->IsPresentationBlocked())return true;
+  if(SceneryOnly&&SceneryState.IsEmpty()){
+   FString ExpectedState;
+   if(!FFileHelper::LoadFileToString(ExpectedState,*(Output+TEXT("-logical.json")))||ExpectedState!=UTF8_TO_TCHAR(World.Json().c_str()))return Finish(false,TEXT("Recovered static review fixture differs from exported state"));
+   if(Service.Current().phase!=Rail::ServicePhase::Running||Service.Current().accumulator>4./30.+1e-9)return Finish(false,TEXT("Static review requires a valid recovered running checkpoint"));
+   if(!S->IsServicePaused())S->ServiceAction(2);
+   SceneryState=UTF8_TO_TCHAR(World.Json().c_str());
+  }
   const auto* Train=World.Spatial(Service.Definition().player);if(!Train)return true;
   const double Head=Train->Current().headStationMetres;
   ObservePassing(W,World,*Train);
@@ -192,10 +342,13 @@ struct FTambaramReview {
     if(--CaptureWarmup==0){
      CheckBogies(W,*Train);
      CheckWheels(W,*Train);
-     const FString Frame=FString::Printf(TEXT("{\"label\":\"%s\",\"headMetres\":%.6f,\"cameraMode\":%d,\"tick\":%llu,\"cameraWarmupFrames\":8}"),*FPaths::GetBaseFilename(Pending),Head,PendingCameraMode,World.Current().tick);
+     const auto* Loco=S->PlayerLocomotive();const FString CabTelemetry=Loco?Loco->TelemetryJson():TEXT("null");
+     FFileHelper::SaveStringToFile(CabTelemetry,*(Output/FString::Printf(TEXT("%02d-locomotive.json"),Captures-1)));
+     if((CabOnly||(TrackOnly&&PendingCameraMode==17))&&!CabFrameValid(CabTelemetry))return Finish(false,TEXT("Cab camera, instrument zoom or lamp differs from requested view"));
+     const FString Frame=FString::Printf(TEXT("{\"label\":\"%s\",\"headMetres\":%.6f,\"cameraMode\":%d,\"tick\":%llu,\"cameraWarmupFrames\":%d}"),*FPaths::GetBaseFilename(Pending),Head,PendingCameraMode,World.Current().tick,(CabOnly||TrackOnly)?30:8);
      FFileHelper::SaveStringToFile(Frame,*(Output/FString::Printf(TEXT("%02d-frame.json"),Captures-1)));
      FFileHelper::SaveStringToFile(UTF8_TO_TCHAR(World.Json().c_str()),*(Output/FString::Printf(TEXT("%02d-logical.json"),Captures-1)));
-     FScreenshotRequest::RequestScreenshot(Pending,!Full,false);
+     FScreenshotRequest::RequestScreenshot(Pending,!Full&&!SceneryOnly,false);
     }
     return true;
    }
@@ -238,7 +391,10 @@ struct FTambaramReview {
    if(!Service.Current().settled){S->ServiceAction(0);if(!S->ReadOnlyService().Current().settled)return Finish(false,TEXT("Terminal settlement failed; review saves retained"));return true;}
    return Finish(Full&&Boundary&&ReloadVerified&&NextStation==14&&SceneryCaptures>=7&&BridgeCaptures==2&&BoundaryAfter&&JunctionCaptured,TEXT("Terminal result settled with station, bridge and corridor captures"));
   }
-  if(!Full&&Captures>=4)return Finish(true,TEXT("Origin presentation smoke review only"));
+  if(!Full&&Captures>=4){
+   if((TrackOnly||SceneryOnly)&&!CheckTrackAssets(W))return Finish(false,TEXT("Required track/nature meshes or assigned materials missing from populated components"));
+   return Finish(true,TEXT("Origin presentation smoke review only"));
+  }
   const bool StationDue=Full&&NextStation<14&&Head>Rail::TambaramRoute::StationMetres[NextStation]-120;
   const double BridgeStarts[]={3675.88,9606.31};
   const bool BridgeDue=Full&&BridgeCaptures<2&&Head>BridgeStarts[BridgeCaptures]+25;
@@ -264,7 +420,27 @@ struct FTambaramReview {
   else {Label=TEXT("tambaram-approach");CameraMode=0;ApproachCaptured=true;}
   if(FParse::Param(FCommandLine::Get(),TEXT("TambaramWheelReview"))&&Label==TEXT("origin")){const int32 Modes[]={7,4,10,4};CameraMode=Modes[Captures];Label=TEXT("wheel-detail");}
   if(FParse::Param(FCommandLine::Get(),TEXT("TambaramArtReview"))&&Label==TEXT("origin")){const int32 Modes[]={8,9,8,1};CameraMode=Modes[Captures];Label=TEXT("art-detail");}
-  if(CameraMode==0){
+  if(SceneryOnly){const int32 Modes[]={13,14,15,16};CameraMode=Modes[Captures];Label=TEXT("scenery");}
+  if(CabOnly){
+   const TCHAR* Labels[]={TEXT("cab-wide-lamp-off"),TEXT("cab-instruments-lamp-off"),TEXT("cab-wide-lamp-on"),TEXT("cab-instruments-lamp-on")};
+   CameraMode=17+Captures;Label=Labels[Captures];
+  }
+  if(TrackOnly){
+   const int32 Modes[]={17,15,21,TrackCrossover?9:22};
+   const TCHAR* Labels[]={TEXT("track-from-cab"),TEXT("track-forward"),TEXT("track-sleepers-gravel"),TrackCrossover?TEXT("track-crossover"):TEXT("track-shoulder-ground")};
+   CameraMode=Modes[Captures];Label=Labels[Captures];
+  }
+  if(CabOnly||(TrackOnly&&CameraMode==17)){
+   FollowEnabled=false;auto* Loco=S->PlayerLocomotive();
+   if(!ConfigureCabView(Loco,CameraMode))return Finish(false,TEXT("Could not configure the actual cab camera for review"));
+   PC->SetViewTarget(Loco);
+  }else if(CameraMode==15||CameraMode==16){
+   FollowEnabled=false;
+   if(auto* Loco=S->PlayerLocomotive()){
+    if(!Loco->IsCabCamera())Loco->ToggleCamera();
+    Loco->CycleJourneyCamera();if(CameraMode==16)Loco->CycleJourneyCamera();PC->SetViewTarget(Loco);
+   }
+  }else if(CameraMode==0){
    FollowEnabled=false;
    if(auto* Loco=S->PlayerLocomotive())if(Loco->IsReady()){
     if(!Loco->IsCabCamera())Loco->ToggleCamera();PC->SetViewTarget(Loco);
@@ -275,13 +451,23 @@ struct FTambaramReview {
    const auto& V=(CameraMode==6&&Traffic?Traffic:Train)->Current().vehicles.front();const FVector P(V.bodyCentre.x*100,V.bodyCentre.y*100,V.bodyCentre.z*100);
    const FVector Forward(V.bodyForward.x,V.bodyForward.y,V.bodyForward.z),Right(-Forward.Y,Forward.X,0);
    FVector Location=P+Right*(CameraMode==1?-2100:4500)-Forward*2500+FVector(0,0,1400),Target=P+FVector(0,0,180);
+   if(CameraMode==13||CameraMode==14){const double Side=CameraMode==13?-1:1;Location=P+Right*Side*900+FVector(0,0,680);Target=P+Forward*1800+Right*Side*5000+FVector(0,0,220);}
    if(CameraMode==3){Location=P-Forward*1200+Right*750+FVector(0,0,420);Target=P-Forward*11000+FVector(0,0,100);}
    if(CameraMode==12){Location=P-Forward*2200+Right*4200+FVector(0,0,1200);Target=P+Forward*(PassingStage==1?15000:PassingStage==3?-15000:0)+FVector(0,0,180);}
    if(CameraMode==4&&Train->Current().vehicles.size()>3){const auto& Coach=Train->Current().vehicles[3];Target=FVector(Coach.frontBogie.x*100,Coach.frontBogie.y*100,Coach.frontBogie.z*100)+FVector(0,0,75);Location=Target-Right*580-Forward*280+FVector(0,0,70);}
    if(CameraMode==10&&Train->Current().vehicles.size()>3){const auto& Coach=Train->Current().vehicles[3];Target=FVector(Coach.bodyCentre.x*100,Coach.bodyCentre.y*100,Coach.bodyCentre.z*100)+FVector(0,0,150);Location=Target-Right*2000-Forward*1100+FVector(0,0,250);}
    if(CameraMode==7){Target=P+Forward*580+FVector(0,0,60);Location=Target-Right*480-Forward*190+FVector(0,0,60);}
    if(CameraMode==8){const auto Board=Rail::TambaramRoute::SampleRoute(1,Rail::TambaramRoute::StationMetres[0]-60);const FVector F(Board.tangent.x,Board.tangent.y,0),R(-F.Y,F.X,0);Target=FVector(Board.position.x*100,Board.position.y*100,Board.position.z*100)-R*580+FVector(0,0,240);Location=Target+R*(Captures==2?650:-650)+FVector(0,0,30);}
-   if(CameraMode==9){const auto Toe=Rail::TambaramRoute::CrossoverGeometry(false).At(12);const FVector F(Toe.tangent.x,Toe.tangent.y,0),R(-F.Y,F.X,0);Target=FVector(Toe.position.x*100,Toe.position.y*100,Toe.position.z*100);Location=Target-R*850-F*900+FVector(0,0,500);}
+   if(CameraMode==9){const auto Toe=Rail::TambaramRoute::CrossoverGeometry(false).At(12);const FVector F(Toe.tangent.x,Toe.tangent.y,0),R(-F.Y,F.X,0);Target=FVector(Toe.position.x*100,Toe.position.y*100,Toe.position.z*100);Location=Target+(TrackOnly?R*1500:R*-850)-F*(TrackOnly?1100:900)+FVector(0,0,TrackOnly?1600:500);}
+   if(CameraMode==21||CameraMode==22){
+    // Adjacent ordinary track, close to the recovered player and within its
+    // streamed cells. This avoids the locomotive occluding sleepers/shoulders.
+    const auto Detail=Rail::TambaramRoute::SampleRoute(0,Head+(CameraMode==21?18.:35.));
+    const FVector Centre(Detail.position.x*100,Detail.position.y*100,Detail.position.z*100);
+    const FVector F(Detail.tangent.x,Detail.tangent.y,Detail.tangent.z),R(-F.Y,F.X,0);
+    if(CameraMode==21){Target=Centre+F*200+FVector(0,0,5);Location=Centre-F*500+R*260+FVector(0,0,170);}
+    else{Target=Centre+F*450-R*175+FVector(0,0,-35);Location=Centre-F*150-R*280+FVector(0,0,80);}
+   }
    if(CameraMode==11){
     const auto Bridge=Rail::TambaramRoute::SampleRoute(1,BridgeStarts[BridgeCaptures-1]+40);
     const FVector F(Bridge.tangent.x,Bridge.tangent.y,0),R(-F.Y,F.X,0);
@@ -296,7 +482,7 @@ struct FTambaramReview {
      Location=Centre+R*5500-F*15000+FVector(0,0,2600);Target=Centre+R*1300;
     }
    }
-   FollowTraffic=CameraMode==6;FollowVehicle=(CameraMode==4||CameraMode==10)?3:0;FollowEnabled=CameraMode!=5&&CameraMode!=8&&CameraMode!=9&&CameraMode!=11;
+   FollowTraffic=CameraMode==6;FollowVehicle=(CameraMode==4||CameraMode==10)?3:0;FollowEnabled=CameraMode!=5&&CameraMode!=8&&CameraMode!=9&&CameraMode!=11&&CameraMode!=21&&CameraMode!=22;
    const auto& Anchor=(FollowTraffic?Traffic:Train)->Current().vehicles[FollowVehicle];
    const FVector AnchorP(Anchor.bodyCentre.x*100,Anchor.bodyCentre.y*100,Anchor.bodyCentre.z*100);
    const FQuat AnchorQ=FRotationMatrix::MakeFromXZ(FVector(Anchor.bodyForward.x,Anchor.bodyForward.y,Anchor.bodyForward.z),FVector::UpVector).ToQuat();
@@ -308,9 +494,9 @@ struct FTambaramReview {
   const FString Frame=FString::Printf(TEXT("{\"label\":\"%s\",\"headMetres\":%.6f,\"cameraMode\":%d,\"tick\":%llu}"),*Label,Head,CameraMode,World.Current().tick);
   FFileHelper::SaveStringToFile(Frame,*(Output/FString::Printf(TEXT("%02d-frame.json"),Captures-1)));
   FFileHelper::SaveStringToFile(UTF8_TO_TCHAR(World.Json().c_str()),*(Output/FString::Printf(TEXT("%02d-logical.json"),Captures-1)));
-  PendingCameraMode=CameraMode;CaptureWarmup=8;
+  PendingCameraMode=CameraMode;CaptureWarmup=(CabOnly||TrackOnly)?30:8;
   if(PC->PlayerCameraManager)PC->PlayerCameraManager->SetGameCameraCutThisFrame();
-  if(Spanning&&!Cycled)CyclePending=true;
+  if(Spanning&&!Cycled&&!SceneryOnly)CyclePending=true;
   return true;
  }
 };
@@ -386,6 +572,10 @@ void BeginTambaramReview(){
  if(IFileManager::Get().DirectoryExists(*Out)||!IFileManager::Get().MakeDirectory(*Out,true))return;
  if(FParse::Param(FCommandLine::Get(),TEXT("TambaramMotionReview"))){auto Motion=MakeShared<FWheelMotionReview>();Motion->Output=Out;FTSTicker::GetCoreTicker().AddTicker(FTickerDelegate::CreateLambda([Motion](float Dt){return Motion->Tick(Dt);}));return;}
  auto Review=MakeShared<FTambaramReview>();Review->Output=Out;Review->Full=FParse::Param(FCommandLine::Get(),TEXT("TambaramFullJourney"));
+ Review->CabOnly=FParse::Param(FCommandLine::Get(),TEXT("TambaramCabReview"));
+ Review->TrackOnly=FParse::Param(FCommandLine::Get(),TEXT("TambaramTrackReview"));
+ Review->TrackCrossover=Review->TrackOnly&&FParse::Param(FCommandLine::Get(),TEXT("TambaramTrackCrossover"));
+ Review->SceneryOnly=Review->CabOnly||Review->TrackOnly||FParse::Param(FCommandLine::Get(),TEXT("TambaramSceneryReview"));if(Review->SceneryOnly)Review->Full=false;
  FTSTicker::GetCoreTicker().AddTicker(FTickerDelegate::CreateLambda([Review](float Dt){return Review->Tick(Dt);}));
 }
 FAutoConsoleCommand TambaramReviewCommand(TEXT("Rail.TambaramDesktopReview"),TEXT("Isolated route desktop review; normal simulation movement only"),FConsoleCommandDelegate::CreateStatic(&BeginTambaramReview));

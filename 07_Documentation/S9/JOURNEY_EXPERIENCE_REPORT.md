@@ -12,14 +12,36 @@ Implemented:
 
 Tests: JourneyExperience-20261016-02 passes62 cases, including five new presentation boundary/audio-fade checks. JourneyExperience-Shipping-20261016-01 build/cook passed. Packaged selection/briefing/confirmation/start/release/power/HUD and protected wait exercised through UI. Early120s PresentMon sample records17281 intervals,p957.5347ms,p997.9558ms,max42.9882ms,no>50ms. Scope is departure/junction only on this machine, not hardware-floor or whole-journey acceptance.
 
-Current verification: trip saved at tick9366/head1279.786m to build two UI fixes (origin label and notices retained in compact mode), then resume the same isolated checkpoint. Latest run and pending work: JOURNEY_EXPERIENCE_CONTINUATION.md. Do not mark full packaged trip complete until terminal/result/reward recovery evidence exists.
+Latest verification: recovered terminal completion and reward recovery verified below. See JOURNEY_EXPERIENCE_CONTINUATION.md for remaining gameplay work.
 
 Compatibility: contentIR-S8-MSTBM-6/service-7/ServiceV6 unchanged. Presentation is derived and cannot grant authority, change occupancy or advance station dwell. Source additions do not alter handling calibration.
 
 Realism still requires: reviewed WAP-7/LHB recordings and mix, stock/glazing/underframe improvements, less repetitive scenery, human cab/driving review, dated operating data and a broader desktop qualification matrix. Current task excludes Android and new stock/corridors.
 
-## Latest packaged result
 
-Shipping02 also built/cooked successfully and includes all UI corrections. Cold recovery from Shipping01 preserved tick9366 and the complete logical fingerprint, restoring generation37 paused. All118 baseline checkpoint hashes remain unchanged. The packaged process is paused because the computer-use helper cannot activate its window (failed after refresh/retry); user asked to restore MyProject manually. Full trip/settlement and sustained performance verification remain incomplete. No invented PASS.
 
-Latest playable archive:08_Builds/S9_JourneyExperience-Shipping-20261016-02/Windows. Start Railway Journey.cmd supplies the corridor/cab flags and uses normal local saves; isolated verification used its separate UserDir. Package manifest retains hashes including launcher and readme.
+## Verified completion — 17 October 2026
+
+Shipping JourneyRealism-Shipping-20261017-02 completed the recovered Assisted
+service at tick 54882. All 15 station chainages were observed in combined
+samples; terminal dwell was 300 ticks (10 seconds), berth error -0.5955 m,
+grade A / 95.5337 points. Protected traffic delay was 158.93 seconds, with zero
+recorded overspeed or player lateness.
+
+Saved reward through the UI, closed and restarted with the same isolated
+UserDir. Result, one award, reputation 10 and mastery unlock survived. Settled
+fingerprint aad576dcbfeebd4b matched exactly after cold recovery. Pre-settlement
+fingerprint differs because the fingerprint includes profile state. All 118
+baseline checkpoint files remain unchanged.
+
+Evidence: Evidence/JourneyCompletion-20261017-01/journey-summary-reviewed.json
+and terminal-result.png, settled-result.png, reloaded-result.png. Combined
+samples retain both earlier overload incidents: this is recovered completion,
+not an uninterrupted performance pass. Maximum sampled cells per view: 92;
+maximum sampled working set: 1,615,634,432 bytes. Startup includes blocked/loading,
+so all-samples-ready is false. Five-second sampling cannot exclude transient stalls.
+
+Latest package: 08_Builds/S9_JourneyRealism-Shipping-20261017-02/Windows.
+Both Assisted and Standard remain selectable. Player turnout movements,
+additional protected traffic encounters and authentic stock recordings remain
+unfinished; see GAMEPLAY_GAPS.md. No full-realism acceptance is claimed.

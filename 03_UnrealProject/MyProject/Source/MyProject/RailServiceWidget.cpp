@@ -1,5 +1,7 @@
 #include "RailServiceWidget.h"
 #include "RailControlIcon.h"
+#include "RailDrivingHud.h"
+#include "RailLocomotiveView.h"
 #include "RailSimulationSubsystem.h"
 #include "Simulation/RailScenarioContent.h"
 #include "Blueprint/WidgetTree.h"
@@ -67,7 +69,11 @@ Row=WidgetTree->ConstructWidget<UHorizontalBox>();Controls->AddChildToVerticalBo
  DirectionRow=Row;
  ADD(Reverse,"REVERSE");ADD(Neutral,"NEUTRAL");ADD(Forward,"FORWARD");
 #undef ADD
- if(Rail::ScenarioContent::IsS8Route(GetWorld()->GetSubsystem<URailSimulationSubsystem>()->ReadOnlyOperations().ContentId()))BuildEgmoreControls(Canvas);
+ const auto& Content=GetWorld()->GetSubsystem<URailSimulationSubsystem>()->ReadOnlyOperations().ContentId();
+ if(Rail::ScenarioContent::IsTambaram(Content)){
+  DrivingHud=WidgetTree->ConstructWidget<URailDrivingHud>();
+  auto* DrivingSlot=Canvas->AddChildToCanvas(DrivingHud);DrivingSlot->SetAnchors(FAnchors(0,0,1,1));DrivingSlot->SetOffsets(FMargin(0));DrivingSlot->SetZOrder(3);
+ }else if(Rail::ScenarioContent::IsS8Route(Content))BuildEgmoreControls(Canvas);
  if(!Rail::ScenarioContent::UsesLhb(GetWorld()->GetSubsystem<URailSimulationSubsystem>()->ReadOnlyOperations().ContentId())){MenuButton(Label,&URailServiceWidget::LocoClass,TEXT("LocoClass"));Label->SetText(FText::FromString(TEXT("WAP7 / WAG9 (paused at standstill)")));}
 }
 void URailServiceWidget::BuildEgmoreControls(UCanvasPanel* Canvas){
@@ -114,6 +120,12 @@ void URailServiceWidget::NativeTick(const FGeometry& G,float Dt){
  PowerRow->SetVisibility(Cab?ESlateVisibility::Collapsed:ESlateVisibility::Visible);DirectionRow->SetVisibility(Cab?ESlateVisibility::Collapsed:ESlateVisibility::Visible);
  if(EgmoreControls){Controls->SetVisibility(ESlateVisibility::Collapsed);EgmoreControls->SetVisibility(Driving?ESlateVisibility::Visible:ESlateVisibility::Collapsed);}
  else if(auto* Layout=Cast<UCanvasPanelSlot>(Controls->Slot))Layout->SetOffsets(FMargin(15,0,15,Cab?92:176));
+ if(DrivingHud){
+  Controls->SetVisibility(ESlateVisibility::Collapsed);Hud->SetVisibility(ESlateVisibility::Collapsed);
+  DrivingHud->SetVisibility(Driving?ESlateVisibility::Visible:ESlateVisibility::Collapsed);
+  DrivingHud->Synchronize(S,Driving);
+  if(auto* Loco=S->PlayerLocomotive())Loco->SetDrivingHudInput(true,!Driving||DrivingHud->IsCabDrawerOpen());
+ }
  FString HudText=S->ServiceHudText();
  // Hide only the two routine journey rows, never notices or approaching restrictions.
  if(bQuietHud&&Rail::ScenarioContent::IsTambaram(S->ReadOnlyOperations().ContentId())){
@@ -121,7 +133,8 @@ void URailServiceWidget::NativeTick(const FGeometry& G,float Dt){
   if(Lines.Num()>=4){HudText=Lines[0]+TEXT("\n")+Lines[1];for(int32 I=4;I<Lines.Num();++I)HudText+=TEXT("\n")+Lines[I];}
  }
  Hud->SetText(FText::FromString(HudText));PanelText->SetText(FText::FromString(S->ServicePanelText()));PrimaryText->SetText(FText::FromString(S->ServicePrimaryLabel()));
- SecondaryButton->SetVisibility(Phase==Rail::ServicePhase::Briefing||Running?ESlateVisibility::Visible:ESlateVisibility::Collapsed);SecondaryText->SetText(FText::FromString(Running?TEXT("SAVE AND EXIT"):TEXT("SWITCH ASSISTED / STANDARD")));
+ const bool NeedsRestore=Running&&S->ReadOnlyService().Current().accumulator>4.0/30.0+1e-9;
+ SecondaryButton->SetVisibility(Phase==Rail::ServicePhase::Briefing||(Running&&!NeedsRestore)?ESlateVisibility::Visible:ESlateVisibility::Collapsed);SecondaryText->SetText(FText::FromString(Running?TEXT("SAVE AND EXIT"):TEXT("SWITCH ASSISTED / STANDARD")));
 }
 void URailServiceWidget::ToggleAudioSettings(){bAudioSettingsOpen=!bAudioSettingsOpen;}
 void URailServiceWidget::ToggleHud(){bQuietHud=!bQuietHud;}

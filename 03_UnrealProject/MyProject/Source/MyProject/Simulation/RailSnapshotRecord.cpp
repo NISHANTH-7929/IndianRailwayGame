@@ -3,6 +3,7 @@
 #include "RailScenarioContent.h"
 #include <algorithm>
 #include <limits>
+#include <array>
 
 namespace Rail {
 namespace {
@@ -14,8 +15,14 @@ uint64_t Get(const std::vector<uint8_t>& bytes,size_t offset,unsigned count) {
     uint64_t value=0;for(unsigned i=0;i<count;++i)value|=uint64_t(bytes[offset+i])<<(8*i);return value;
 }
 uint32_t Checksum(const std::vector<uint8_t>& bytes,size_t count) {
+    // Same reflected CRC32 and wire format; eight bit steps are precomputed.
+    static constexpr auto table=[](){
+        std::array<uint32_t,256> values{};
+        for(uint32_t i=0;i<256;++i){uint32_t crc=i;for(unsigned bit=0;bit<8;++bit)crc=(crc>>1)^((crc&1)?0xedb88320u:0u);values[i]=crc;}
+        return values;
+    }();
     uint32_t crc=0xffffffffu;
-    for(size_t i=0;i<count;++i){crc^=bytes[i];for(unsigned bit=0;bit<8;++bit)crc=(crc>>1)^((crc&1)?0xedb88320u:0u);}
+    for(size_t i=0;i<count;++i)crc=(crc>>8)^table[(crc^bytes[i])&0xffu];
     return ~crc;
 }
 // Fixed header: magic[8], schema u32, generation u64, content length u32,
@@ -77,6 +84,13 @@ TestReport RunSnapshotRecordTests() {
     recordCheck("S6-record-create",SnapshotRecord::Create(1,{1,2,3},first).ok&&SnapshotRecord::Create(2,{4,5,6},second).ok);
     recordCheck("S6-record-roundtrip",SnapshotRecord::Read(first.Bytes(),read).ok&&read.Bytes()==first.Bytes()&&read.Payload()==first.Payload());
     auto valid=[](const SnapshotRecord&){return Result{};};RecoverySelection selected;
+    auto reference=[](const std::vector<uint8_t>& bytes,size_t count){uint32_t crc=0xffffffffu;for(size_t i=0;i<count;++i){crc^=bytes[i];for(unsigned b=0;b<8;++b)crc=(crc>>1)^((crc&1)?0xedb88320u:0u);}return ~crc;};
+    std::vector<uint8_t> checksumBytes(65536);uint32_t seed=42;
+    for(auto& byte:checksumBytes){seed=1664525u*seed+1013904223u;byte=static_cast<uint8_t>(seed>>24);}
+    bool equivalent=true;for(size_t count=0;count<=512;++count)equivalent&=Checksum(checksumBytes,count)==reference(checksumBytes,count);
+    for(size_t count:{size_t(4096),size_t(33079),size_t(65536)})equivalent&=Checksum(checksumBytes,count)==reference(checksumBytes,count);
+    recordCheck("S6-record-crc-reference-equivalence",equivalent);
+    recordCheck("S6-record-crc-known-vector",Checksum({'1','2','3','4','5','6','7','8','9'},9)==0xcbf43926u);
     recordCheck("S6-record-newest",SelectSnapshot({first.Bytes(),second.Bytes()},valid,selected).ok&&selected.slot==1);
     auto corrupted=second.Bytes();corrupted[corrupted.size()-5]^=1;
     recordCheck("S6-record-corrupt-fallback",SelectSnapshot({first.Bytes(),corrupted},valid,selected).ok&&selected.slot==0);

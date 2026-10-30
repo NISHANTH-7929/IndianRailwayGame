@@ -9,6 +9,7 @@ class UBorder;
 class UHorizontalBox;
 class UCanvasPanel;
 class USlider;
+class URailDrivingHud;
 UCLASS()
 class MYPROJECT_API URailServiceWidget : public UUserWidget {
  GENERATED_BODY()
@@ -34,6 +35,7 @@ private:
  UPROPERTY() TObjectPtr<UHorizontalBox> DirectionRow;
  UPROPERTY() TObjectPtr<UButton> SecondaryButton;
  UPROPERTY() TObjectPtr<UCanvasPanel> EgmoreControls;
+ UPROPERTY() TObjectPtr<URailDrivingHud> DrivingHud;
  void BuildEgmoreControls(UCanvasPanel* Canvas);
  UFUNCTION() void Primary();
  UFUNCTION() void Secondary();

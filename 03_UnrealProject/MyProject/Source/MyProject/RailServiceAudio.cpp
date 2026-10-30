@@ -78,17 +78,17 @@ void URailSimulationSubsystem::InitializeServiceAudio(){
  ServiceHornAudio=Create(TEXT("/Game/IndianRailway/S8/Audio/SW_Horn.SW_Horn"),.65f);
  ServiceBrakeAudio=Create(TEXT("/Game/IndianRailway/S8/Audio/SW_Brake.SW_Brake"),.35f);
  ServiceCueAudio=Create(TEXT("/Game/IndianRailway/S7/SW_StationCue.SW_StationCue"),.18f);
- ServiceMotorAudio=Create(TEXT("/Game/IndianRailway/S8/Audio/RealismV2/SW_Motor.SW_Motor"),0);
- ServiceCoastAudio=Create(TEXT("/Game/IndianRailway/S8/Audio/RealismV2/SW_Coast.SW_Coast"),0);
- ServiceSquealAudio=Create(TEXT("/Game/IndianRailway/S8/Audio/RealismV2/SW_Squeal.SW_Squeal"),0);
- ServiceBrakeReleaseAudio=Create(TEXT("/Game/IndianRailway/S8/Audio/RealismV2/SW_BrakeRelease.SW_BrakeRelease"),.3f);
- ServiceEmergencyAudio=Create(TEXT("/Game/IndianRailway/S8/Audio/RealismV2/SW_Emergency.SW_Emergency"),.45f);
+ ServiceMotorAudio=Create(TEXT("/Game/IndianRailway/S9/JourneyAudioV3/SW_Motor.SW_Motor"),0);
+ ServiceCoastAudio=Create(TEXT("/Game/IndianRailway/S9/JourneyAudioV3/SW_Coast.SW_Coast"),0);
+ ServiceSquealAudio=Create(TEXT("/Game/IndianRailway/S9/JourneyAudioV3/SW_Squeal.SW_Squeal"),0);
+ ServiceBrakeReleaseAudio=Create(TEXT("/Game/IndianRailway/S9/JourneyAudioV3/SW_BrakeRelease.SW_BrakeRelease"),.3f);
+ ServiceEmergencyAudio=Create(TEXT("/Game/IndianRailway/S9/JourneyAudioV3/SW_Emergency.SW_Emergency"),.45f);
  TrafficHornAudio=Create(TEXT("/Game/IndianRailway/S8/Audio/SW_Horn.SW_Horn"),0);
  TrafficRollingAudio=Create(TEXT("/Game/IndianRailway/S8/Audio/SW_Rail.SW_Rail"),0);
- TrafficMotorAudio=Create(TEXT("/Game/IndianRailway/S8/Audio/RealismV2/SW_Motor.SW_Motor"),0);
+ TrafficMotorAudio=Create(TEXT("/Game/IndianRailway/S9/JourneyAudioV3/SW_Motor.SW_Motor"),0);
  OpposingHornAudio=Create(TEXT("/Game/IndianRailway/S8/Audio/SW_Horn.SW_Horn"),0);
  OpposingRollingAudio=Create(TEXT("/Game/IndianRailway/S8/Audio/SW_Rail.SW_Rail"),0);
- OpposingMotorAudio=Create(TEXT("/Game/IndianRailway/S8/Audio/RealismV2/SW_Motor.SW_Motor"),0);
+ OpposingMotorAudio=Create(TEXT("/Game/IndianRailway/S9/JourneyAudioV3/SW_Motor.SW_Motor"),0);
  FSoundAttenuationSettings Spatial;
  Spatial.bSpatialize=true;Spatial.bAttenuate=false;Spatial.bAttenuateWithLPF=false;
  for(auto* Component:{TrafficHornAudio.Get(),TrafficRollingAudio.Get(),TrafficMotorAudio.Get(),OpposingHornAudio.Get(),OpposingRollingAudio.Get(),OpposingMotorAudio.Get()})if(Component){
@@ -162,7 +162,25 @@ void URailSimulationSubsystem::UpdateServiceAudio(){
 
 void URailSimulationSubsystem::UpdateTrafficAudio(float Delta,bool InCab){
  for(bool Opposing:{false,true}){
- const auto TrafficId=Opposing?Rail::TrainId(3):Service.Definition().traffic;
+ auto TrafficId=Opposing?Rail::TrainId(3):Service.Definition().traffic;
+ // Keep the two bounded traffic voices, selecting the nearest actual opposing
+ // formation. Distance/Doppler envelopes reject source-switch discontinuities.
+ if(Opposing&&Rail::ScenarioContent::IsLiveJourney(Operations.ContentId())){
+  const auto* Player=Operations.Spatial(Service.Definition().player);double Nearest=TNumericLimits<double>::Max();
+  if(Player&&!Player->Current().vehicles.empty())for(uint64 Id=3;Id<=Rail::ScenarioContent::TrainCount(Operations.ContentId());++Id){
+   const auto* Other=Operations.Spatial(Rail::TrainId(Id));if(!Other||Other->Current().vehicles.empty())continue;
+   const double Distance=(Other->Current().vehicles.front().bodyCentre-Player->Current().vehicles.front().bodyCentre).Length();
+   if(Distance<Nearest){Nearest=Distance;TrafficId=Rail::TrainId(Id);}
+  }
+ }
+ // A new formation must not inherit the previous horn latch or Doppler
+ // history. Pausing the same formation still retains its encounter latch.
+ if(Opposing&&OpposingAudioTrain!=TrafficId.value){
+  OpposingAudioTrain=TrafficId.value;
+  OpposingHornDynamics=Rail::PassingAudioDynamics{};
+  OpposingRollingDynamics=Rail::PassingAudioDynamics{};
+  for(auto* Audio:{OpposingHornAudio.Get(),OpposingRollingAudio.Get(),OpposingMotorAudio.Get()})if(Audio)Audio->Stop();
+ }
  const auto* Traffic=Operations.Spatial(TrafficId);
  const auto* TrafficHandling=Operations.Handling(TrafficId);
  auto* Controller=GetWorld()?GetWorld()->GetFirstPlayerController():nullptr;
