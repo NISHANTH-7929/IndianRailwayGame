@@ -26,25 +26,25 @@ bool FRailCabStabilizationTest::RunTest(const FString& Parameters){
   TArray<UStaticMeshComponent*> MeshComponents;View->GetComponents<UStaticMeshComponent>(MeshComponents);
   // The editor adds a camera-proxy mesh which is never part of the game cab.
   MeshComponents.RemoveAll([](const UStaticMeshComponent* Component){return Component&&Component->IsEditorOnly();});
+  // Cab V2 (S10): one static shell built to the exterior's openings, using the shared cab
+  // materials so the journey finish overrides still apply to the painted surfaces.
   int32 CoreCount=0;
-  const FString CandidateCore=TEXT("/Game/IndianRailway/S9/CabRealismV1/Meshes/SM_WAP7_Cab_StaticCore_HardwareV1.SM_WAP7_Cab_StaticCore_HardwareV1");
-  const TCHAR* RequiredMaterials[]={TEXT("DeskEnamel_StaticAO"),TEXT("CabIvory_StaticAO"),TEXT("PanelCharcoal_StaticAO"),TEXT("Rubber_StaticAO"),TEXT("Steel_StaticAO"),TEXT("InstrumentBezel"),TEXT("WindowGlass"),TEXT("InstrumentGlass")};
+  const FString CandidateCore=TEXT("/Game/IndianRailway/S8/Locomotives/WAP7/CabV2/SM_WAP7_CabV2_Static.SM_WAP7_CabV2_Static");
+  const TCHAR* JourneyFinishes[]={TEXT("DeskEnamel"),TEXT("CabIvory"),TEXT("PanelCharcoal"),TEXT("WindowGlass")};
+  const TCHAR* RequiredMaterials[]={TEXT("DeskEnamel"),TEXT("CabIvory"),TEXT("PanelCharcoal"),TEXT("Rubber"),TEXT("Steel"),TEXT("DialIvory"),TEXT("WindowGlass")};
   TSet<FString> ObservedMaterials;
   for(auto* Component:MeshComponents){
    const UStaticMesh* Mesh=Component?Component->GetStaticMesh().Get():nullptr;if(!Mesh)continue;
-   if(Mesh->GetName().StartsWith(TEXT("SM_WAP7_Cab_StaticCore"))){
-    ++CoreCount;TestEqual(TEXT("Rendered cab uses hardware candidate instead of fallback"),Mesh->GetPathName(),CandidateCore);
-   }
-   if(!Mesh->GetName().StartsWith(TEXT("SM_WAP7_Cab_")))continue;
+   TestFalse(TEXT("Retired S8/S9 cab shell is not presented"),Mesh->GetName().StartsWith(TEXT("SM_WAP7_Cab_")));
+   if(Mesh->GetName()==TEXT("SM_WAP7_CabV2_Static")){++CoreCount;TestEqual(TEXT("Rendered cab uses the V2 shell"),Mesh->GetPathName(),CandidateCore);}
+   if(!Mesh->GetName().StartsWith(TEXT("SM_WAP7_CabV2_")))continue;
    for(int32 Slot=0;Slot<Component->GetNumMaterials();++Slot)if(const auto* Material=Component->GetMaterial(Slot)){
-    for(const TCHAR* Required:RequiredMaterials)if(Material->GetName()==Required){
-     const FString Expected=FString::Printf(TEXT("/Game/IndianRailway/S9/CabRealismV1/Materials/%s.%s"),Required,Required);
-     TestEqual(FString::Printf(TEXT("Rendered %s uses candidate material instead of fallback"),Required),Material->GetPathName(),Expected);
-     ObservedMaterials.Add(Required);
-    }
+    ObservedMaterials.Add(Material->GetName());
+    for(const TCHAR* Finish:JourneyFinishes)if(Material->GetName()==Finish)
+     TestEqual(FString::Printf(TEXT("%s uses the cab realism finish"),Finish),Material->GetPathName(),FString::Printf(TEXT("/Game/IndianRailway/S9/CabRealismV1/Materials/%s.%s"),Finish,Finish));
    }
   }
-  TestEqual(TEXT("Hardware replaces exactly one cab core component"),CoreCount,1);
+  TestEqual(TEXT("Exactly one V2 cab shell component"),CoreCount,1);
   for(const TCHAR* Required:RequiredMaterials)TestTrue(FString::Printf(TEXT("Rendered cab contains required %s surface"),Required),ObservedMaterials.Contains(Required));
   FString ManifestText;TSharedPtr<FJsonObject> Manifest;const TArray<TSharedPtr<FJsonValue>>* ManifestParts=nullptr;
   if(TestTrue(TEXT("Original assembly remains readable for component budget"),FFileHelper::LoadFileToString(ManifestText,*(FPaths::ProjectContentDir()/TEXT("IndianRailway/Production/locomotives/WAP7.json")))&&FJsonSerializer::Deserialize(TJsonReaderFactory<>::Create(ManifestText),Manifest)&&Manifest.IsValid()&&Manifest->TryGetArrayField(TEXT("parts"),ManifestParts))){
@@ -55,6 +55,13 @@ bool FRailCabStabilizationTest::RunTest(const FString& Parameters){
   // H.command here, while a running service uses its requestedPower/Brake intent.
   // Neither path should use the emergency-adjusted actuators for handle poses.
   if(auto* Subsystem=World->GetSubsystem<URailSimulationSubsystem>())TestFalse(TEXT("Standalone pose fixture is not a service"),Subsystem->IsServiceMode());
+  TMap<FString,TPair<FVector,FVector2D>> Motion;
+  if(ManifestParts)for(const auto& Value:*ManifestParts){const auto O=Value->AsObject();if(!O.IsValid())continue;
+   const TArray<TSharedPtr<FJsonValue>>* A=nullptr;const TArray<TSharedPtr<FJsonValue>>* R=nullptr;
+   if(O->TryGetArrayField(TEXT("rotation_axis"),A)&&A->Num()==3&&O->TryGetArrayField(TEXT("rotation_range_deg"),R)&&R->Num()==2)
+    Motion.Add(O->GetStringField(TEXT("role")),{FVector((*A)[0]->AsNumber(),(*A)[1]->AsNumber(),(*A)[2]->AsNumber()).GetSafeNormal(),FVector2D((*R)[0]->AsNumber(),(*R)[1]->AsNumber())});}
+  auto Axis=[&](const TCHAR* Role){const auto* M=Motion.Find(Role);return M?M->Key:FVector(0,1,0);};
+  auto At=[&](const TCHAR* Role,double Fraction){const auto* M=Motion.Find(Role);return M?FMath::Lerp(M->Value.X,M->Value.Y,Fraction):0.0;};
   auto CheckPose=[&](const TSharedPtr<FJsonObject>& State,const TCHAR* Role,const FVector& Axis,double Degrees){
    if(!TestTrue(TEXT("Pose telemetry is valid"),State.IsValid()))return;
    const TArray<TSharedPtr<FJsonValue>>* Poses=nullptr;
@@ -78,10 +85,10 @@ bool FRailCabStabilizationTest::RunTest(const FString& Parameters){
   TestEqual(TEXT("Emergency power cutout presented"),J->GetNumberField(TEXT("appliedPower")),0.0);
   TestTrue(TEXT("Emergency indication follows handling latch"),J->GetBoolField(TEXT("emergency")));
   TestEqual(TEXT("Speed gauge source is actual speed"),J->GetNumberField(TEXT("speedKmh")),18.0);
-  CheckPose(J,TEXT("gauge_speed"),FVector(-1,0,0),-104);
-  CheckPose(J,TEXT("throttle"),FVector(0,1,0),12);
-  CheckPose(J,TEXT("train_brake"),FVector(0,0,1),-30);
-  CheckPose(J,TEXT("reverser"),FVector(0,1,0),18);
+  CheckPose(J,TEXT("gauge_speed"),Axis(TEXT("gauge_speed")),At(TEXT("gauge_speed"),.1));
+  CheckPose(J,TEXT("throttle"),Axis(TEXT("throttle")),At(TEXT("throttle"),.75));
+  CheckPose(J,TEXT("train_brake"),Axis(TEXT("train_brake")),At(TEXT("train_brake"),0));
+  CheckPose(J,TEXT("reverser"),Axis(TEXT("reverser")),At(TEXT("reverser"),1));
   // The authored emergency button has [0,0] rotation: verify its indication,
   // but do not invent lever motion for this fixed push-button presentation.
   CheckPose(J,TEXT("switch_emergency"),FVector(0,1,0),0);
@@ -93,10 +100,10 @@ bool FRailCabStabilizationTest::RunTest(const FString& Parameters){
    // Deliberately distinct from handle intent, including release/application lag.
    H.appliedThrottle=.1;H.appliedBrake=.3;
    View->Present(S,H,.2f,false);J=Read();
-   CheckPose(J,TEXT("throttle"),FVector(0,1,0),-24+48*C.Power);
-   CheckPose(J,TEXT("train_brake"),FVector(0,0,1),-30+70*C.Brake);
-   CheckPose(J,TEXT("reverser"),FVector(0,1,0),18*C.Direction);
-   CheckPose(J,TEXT("gauge_speed"),FVector(-1,0,0),-130+260*FMath::Clamp(FMath::Abs(C.SpeedMps)*3.6/180,0.0,1.0));
+   CheckPose(J,TEXT("throttle"),Axis(TEXT("throttle")),At(TEXT("throttle"),C.Power));
+   CheckPose(J,TEXT("train_brake"),Axis(TEXT("train_brake")),At(TEXT("train_brake"),C.Brake));
+   CheckPose(J,TEXT("reverser"),Axis(TEXT("reverser")),At(TEXT("reverser"),(C.Direction+1)*.5));
+   CheckPose(J,TEXT("gauge_speed"),Axis(TEXT("gauge_speed")),At(TEXT("gauge_speed"),FMath::Clamp(FMath::Abs(C.SpeedMps)*3.6/180,0.0,1.0)));
    TestEqual(TEXT("Actual power remains distinct from handle intent"),J->GetNumberField(TEXT("appliedPower")),.1);
    TestEqual(TEXT("Actual brake remains distinct from handle intent"),J->GetNumberField(TEXT("appliedBrake")),.3);
    TestFalse(TEXT("Reset clears emergency indication"),J->GetBoolField(TEXT("emergency")));

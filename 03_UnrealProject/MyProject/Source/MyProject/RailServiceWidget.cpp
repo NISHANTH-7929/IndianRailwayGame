@@ -1,6 +1,8 @@
 #include "RailServiceWidget.h"
 #include "RailControlIcon.h"
 #include "RailDrivingHud.h"
+#include "Misc/CommandLine.h"
+#include "Misc/Parse.h"
 #include "RailLocomotiveView.h"
 #include "RailSimulationSubsystem.h"
 #include "Simulation/RailScenarioContent.h"
@@ -108,7 +110,14 @@ void URailServiceWidget::BuildEgmoreControls(UCanvasPanel* Canvas){
 }
 void URailServiceWidget::NativeTick(const FGeometry& G,float Dt){
  Super::NativeTick(G,Dt);auto* S=GetWorld()->GetSubsystem<URailSimulationSubsystem>();const auto Phase=S->ReadOnlyService().Current().phase;
- const bool Running=Phase==Rail::ServicePhase::Running;const bool Driving=Running&&!S->IsServicePaused();
+ const bool Running=Phase==Rail::ServicePhase::Running;
+#if !UE_BUILD_SHIPPING
+ // Review captures show the driving interface over the paused, unchanged service state.
+ static const bool HudReview=FParse::Param(FCommandLine::Get(),TEXT("TambaramHudReview"));
+#else
+ constexpr bool HudReview=false;
+#endif
+ const bool Driving=Running&&(!S->IsServicePaused()||HudReview);
  if(Driving)bAudioSettingsOpen=false;
  ServiceMenu->SetVisibility(bAudioSettingsOpen?ESlateVisibility::Collapsed:ESlateVisibility::Visible);
  AudioControls->SetVisibility(bAudioSettingsOpen?ESlateVisibility::Visible:ESlateVisibility::Collapsed);

@@ -20,11 +20,14 @@
 namespace {
 enum Action { Power=0,Brake,Horn,Camera,Pause,Emergency,ResetEmergency,Drawer,CloseDrawer,Lamps,Pantograph,Wipers,CabLamp,Instruments,Reverse,Neutral,DirectionForward,Depart,PowerMinus,PowerPlus,BrakeMinus,BrakePlus };
 struct FDriveDisplay {
- double Speed=0,Limit=0,Power=0,Brake=1,AppliedPower=0,AppliedBrake=1,Progress=0;
+ double Speed=0,Limit=0,Power=0,Brake=1,AppliedPower=0,AppliedBrake=1,Progress=0,TractionKn=0;
  bool Assisted=false,Emergency=false,CanReset=false,CanDepart=false,Enabled=false,Alert=false;
  FString Station,Location,Status,Detail,Time,Direction,Feedback;
 };
-const FLinearColor Ink(.012f,.017f,.025f,.87f),Edge(.30f,.36f,.41f,.60f),White(.94f,.96f,.98f,1),Muted(.57f,.65f,.70f,1),Amber(1.f,.56f,.16f,1),Mint(.28f,.86f,.72f,1),Red(1.f,.19f,.15f,1);
+// Cab-instrument palette: smoked glass, hairlines, DDU green numerals, amber for the air brake.
+const FLinearColor Glass(.016f,.02f,.024f,.62f),Hair(1,1,1,.16f),White(.93f,.95f,.96f,1),Muted(.62f,.68f,.72f,1),
+ Amber(1.f,.62f,.18f,1),Lcd(.47f,.95f,.62f,1),Red(.95f,.16f,.12f,1),Screen(.006f,.014f,.012f,.86f);
+constexpr double FullServiceBc=3.8; // kg/cm2 brake cylinder at full service; indicated from applied brake
 struct FHit { int32 Kind;FSlateRect Rect;FHit(int32 K,float L,float T,float R,float B):Kind(K),Rect(L,T,R,B){} };
 struct FHold {int32 Kind;double StartY,Value;};
 FString DistanceText(double Metres){return FMath::Abs(Metres)>=1000?FString::Printf(TEXT("%.1f km"),FMath::Abs(Metres)/1000):FString::Printf(TEXT("%.0f m"),FMath::Abs(Metres));}
@@ -87,82 +90,118 @@ public:
    FSlateDrawElement::MakeText(Out,Layer++,G.ToPaintGeometry(Extent,FSlateLayoutTransform(FVector2D(X,Y))),Value,Font,ESlateDrawEffect::None,Color);
   };
   auto Fitted=[&](FString Value,float X,float Y,int Size,float Width,const FLinearColor& Color){const auto Font=FCoreStyle::GetDefaultFontStyle(TEXT("Regular"),Size);const auto Measure=FSlateApplication::Get().GetRenderer()->GetFontMeasureService();if(Measure->Measure(Value,Font).X>Width){while(Value.Len()>1&&Measure->Measure(Value+TEXT("…"),Font).X>Width)Value.LeftChopInline(1);Value+=TEXT("…");}Text(Value,X,Y,Size,Color);};
-  auto DetailLines=[&](const FString& Value,float X,float Y,float Width){
-   TArray<FString> Words;Value.ParseIntoArray(Words,TEXT(" "),true);FString First,Second;bool Next=false;
-   const auto Font=FCoreStyle::GetDefaultFontStyle(TEXT("Regular"),12);const auto Measure=FSlateApplication::Get().GetRenderer()->GetFontMeasureService();
-   for(const FString& Word:Words){const FString Candidate=First.IsEmpty()?Word:First+TEXT(" ")+Word;if(!Next&&Measure->Measure(Candidate,Font).X<=Width)First=Candidate;else{Next=true;Second+=(Second.IsEmpty()?TEXT(""):TEXT(" "))+Word;}}
-   Fitted(First,X,Y,12,Width,Muted);if(!Second.IsEmpty())Fitted(Second,X,Y+20,12,Width,Muted);
-  };
   auto Arc=[&](FVector2D C,float Radius,float Start,float End,const FLinearColor& Color,float Width){TArray<FVector2D> P;for(int I=0;I<=48;++I){const float A=FMath::DegreesToRadians(FMath::Lerp(Start,End,I/48.f));P.Add(C+FVector2D(FMath::Cos(A),FMath::Sin(A))*Radius);}Line(P,Color,Width);};
-  auto Button=[&](int Kind,const FString& Label,const FLinearColor& Color=White){for(const auto& Hit:Layout(W))if(Hit.Kind==Kind){const auto& R=Hit.Rect;Box(R.Left,R.Top,R.Right-R.Left,R.Bottom-R.Top,Ink);Line({{R.Left+8,R.Bottom-1},{R.Right-8,R.Bottom-1}},Color.CopyWithNewOpacity(.6f),1.f);Text(Label,(R.Left+R.Right)/2,R.Top+(R.Bottom-R.Top-20)/2,14,Color,true);}};
 
-  // Journey information occupies one corner; the windscreen is the background.
-  Box(24,24,382,96,Ink,5);Box(24,24,3,96,Amber,0);
-  Text(TEXT("CHENNAI EGMORE  /  TAMBARAM"),40,34,12,Muted);
-  Text(Data.Station,40,54,24);Text(Data.Location,40,88,13,Muted);
-  Box(24,119,382,2,Edge,0);Box(24,119,382*float(Data.Progress),2,Amber,0);
-  Text(Data.Assisted?TEXT("ASSISTED"):TEXT("LOCO PILOT"),W-224,29,13,White,true);Text(Data.Time,W-224,50,18,White,true);Text(Data.Direction,W-224,79,12,Muted,true);
-  Button(Pause,TEXT("II"));Button(Drawer,TEXT("CAB"));
-
-  auto Lever=[&](bool IsPower){
-   const float X=IsPower?W-132:28;
-   const double Requested=IsPower?Data.Power:Data.Brake,Applied=IsPower?Data.AppliedPower:Data.AppliedBrake;
-   const FLinearColor Color=IsPower?Mint:Amber;
-   Box(X,229,104,316,Ink,5);Box(X,229,104,2,Color.CopyWithNewOpacity(.8f),0);
-   Text(IsPower?(Data.Assisted?TEXT("POWER LIMIT"):TEXT("POWER")):TEXT("TRAIN BRAKE"),X+52,240,12,White,true);
-   Text(FString::Printf(TEXT("%.0f"),Requested*100),X+49,259,27,White,true);Text(TEXT("%"),X+75,273,12,Muted);
-   const float Top=316,Bottom=493,Travel=Bottom-Top;
-   Box(X+44,Top-4,16,Travel+8,FLinearColor(.004f,.006f,.009f,.96f),7);
-   for(int I=0;I<=10;++I){const float Y=Bottom-Travel*I/10.f;Line({{X+15,Y},{X+(I%5?25:32),Y}},I%5?Edge:Muted,1);}
-   Box(X+78,Bottom-Travel*float(Applied),3,FMath::Max(3.f,Travel*float(Applied)),Color,1);
-   const float HandleY=Bottom-Travel*float(Requested);
-   Box(X+15,HandleY-18,74,38,FLinearColor(0,0,0,.7f),5);
-   Box(X+16,HandleY-19,72,32,FLinearColor(.14f,.18f,.22f,1),4);
-   Box(X+18,HandleY-18,68,3,FLinearColor(.45f,.51f,.55f,1),1);
-   Box(X+18,HandleY+7,68,5,FLinearColor(.035f,.045f,.055f,1),1);
-   Box(X+38,HandleY-10,28,3,Color,1);
-   Line({{X+37,HandleY-2},{X+67,HandleY-2}},FLinearColor(.04f,.055f,.07f,1),2);
-   Text(FString::Printf(TEXT("APPLIED %.0f%%"),Applied*100),X+52,516,11,Muted,true);
-   Button(IsPower?PowerMinus:BrakeMinus,TEXT("−"));Button(IsPower?PowerPlus:BrakePlus,TEXT("+"));
+  auto Mono=[&](const FString& Value,float X,float Y,int Size,const FLinearColor& Color,int Align=0){
+   const FSlateFontInfo Font=FCoreStyle::GetDefaultFontStyle(TEXT("Mono"),Size);
+   const FVector2D Extent=FSlateApplication::Get().GetRenderer()->GetFontMeasureService()->Measure(Value,Font);
+   X-=Align==1?Extent.X*.5f:Align==2?Extent.X:0;
+   FSlateDrawElement::MakeText(Out,Layer++,G.ToPaintGeometry(Extent,FSlateLayoutTransform(FVector2D(X,Y))),Value,Font,ESlateDrawEffect::None,Color);
   };
-  Lever(false);Lever(true);
+  auto Frame=[&](float X,float Y,float Width,float Height,const FLinearColor& Fill=Glass){Box(X,Y,Width,Height,Fill,2);Line({{X,Y},{X+Width,Y},{X+Width,Y+Height},{X,Y+Height},{X,Y}},Hair,1);};
+  auto Caption=[&](const FString& Value,float X,float Y,int Align=0){Mono(Value,X,Y,9,Muted,Align);};
+  auto Ring=[&](FVector2D C,float R,const FLinearColor& Color,float Width){Arc(C,R,0,360,Color,Width);};
+  auto Rect=[&](int Kind,FSlateRect& R){for(const auto& Hit:Layout(W))if(Hit.Kind==Kind){R=Hit.Rect;return true;}return false;};
 
-  // Speed dial: actual speed, current whole-train limit and direction remain
-  // readable independently of cab camera angle or physical gauge visibility.
-  const FVector2D C(248,622);Box(C.X-77,C.Y-77,154,154,Ink,77);
-  Arc(C,64,140,400,Edge,3);Arc(C,64,140,140+260*FMath::Clamp(float(Data.Speed/160.),0.f,1.f),Data.Speed>Data.Limit+.36?Red:White,3);
-  for(int I=0;I<=16;++I){const float A=FMath::DegreesToRadians(140.f+260.f*I/16.f);const FVector2D V(FMath::Cos(A),FMath::Sin(A));Line({C+V*(I%4?56:52),C+V*60},Muted,I%4?1:2);}
-  const float LimitAngle=FMath::DegreesToRadians(140.f+260.f*FMath::Clamp(float(Data.Limit/160.),0.f,1.f));
-  const FVector2D LimitV(FMath::Cos(LimitAngle),FMath::Sin(LimitAngle));Line({C+LimitV*61,C+LimitV*70},Amber,4);
-  Text(FString::Printf(TEXT("%.0f"),Data.Speed),C.X,C.Y-31,40,White,true);Text(TEXT("km/h"),C.X,C.Y+19,12,Muted,true);
-  Text(FString::Printf(TEXT("LIMIT %.0f"),Data.Limit),C.X,C.Y+47,13,Amber,true);
-  Button(Horn,TEXT("HORN"));Button(Camera,TEXT("VIEW"));Button(Emergency,TEXT("EMERGENCY"),Red);
-  if(Data.CanReset)Button(ResetEmergency,TEXT("RESET BRAKE"),Amber);
+  // Route strip, top left, over the cab ceiling rather than the track.
+  Frame(16,14,300,56);Box(16,14,2,56,Amber,0);
+  Caption(Data.Assisted?TEXT("ASSISTED   NEXT"):TEXT("LOCO PILOT   NEXT"),28,20);Mono(Data.Time,306,20,10,Muted,2);
+  Fitted(Data.Station.ToUpper(),28,34,15,180,White);Mono(Data.Location,306,38,10,Muted,2);
+  Box(28,62,278,1,Hair,0);Box(28,62,278*float(Data.Progress),1,Amber,0);
 
-  const float CentreWidth=FMath::Clamp(W-720.f,300.f,680.f),CentreX=(W-CentreWidth)*.5f;
-  Box(CentreX,613,CentreWidth,82,Ink,5);Box(CentreX,613,3,82,Data.Alert?Amber:Edge,0);
-  const float NoticeWidth=CentreWidth-(Data.CanDepart?154:32);
-  Fitted(Data.Status,CentreX+16,623,16,NoticeWidth,Data.Alert?Amber:White);DetailLines(Data.Detail,CentreX+16,650,NoticeWidth);
-  if(Data.CanDepart)Button(Depart,TEXT("DEPART"),Mint);
+  // DDU strip, top centre: speed, direction, maximum permissible speed and the message line.
+  const float DduW=FMath::Clamp(W-760.f,380.f,460.f),DduX=(W-DduW)*.5f,DduY=12;
+  Frame(DduX-4,DduY-4,DduW+8,104,FLinearColor(.05f,.055f,.06f,.78f));Box(DduX,DduY,DduW,96,Screen,2);
+  const bool Over=Data.Speed>Data.Limit+.36;
+  Mono(FString::Printf(TEXT("%3.0f"),Data.Speed),DduX+10,DduY+2,30,Over?Red:Lcd);Mono(TEXT("km/h"),DduX+86,DduY+22,9,Lcd.CopyWithNewOpacity(.7f));
+  Mono(Data.Direction.Left(1),DduX+DduW*.5f,DduY+8,16,Lcd,1);
+  Mono(TEXT("MPS"),DduX+DduW-74,DduY+8,9,Amber.CopyWithNewOpacity(.75f),2);Mono(FString::Printf(TEXT("%3.0f"),Data.Limit),DduX+DduW-10,DduY+2,24,Amber,2);
+  const float BarX=DduX+10,BarW=DduW-20,BarY=DduY+44;
+  Box(BarX,BarY,BarW,4,FLinearColor(1,1,1,.08f),1);
+  Box(BarX,BarY,BarW*FMath::Clamp(float(Data.Speed/140.),0.f,1.f),4,Over?Red:Lcd,1);
+  Box(BarX+BarW*FMath::Clamp(float(Data.Limit/140.),0.f,1.f)-1,BarY-4,3,12,Amber,0);
+  const bool ShowFeedback=!Data.Feedback.IsEmpty()&&FPlatformTime::Seconds()<FeedbackUntil;
+  Fitted(ShowFeedback?Data.Feedback:Data.Status.ToUpper(),DduX+10,DduY+54,11,DduW-20,Data.Alert||ShowFeedback?Amber:Lcd);
+  Fitted(Data.Detail,DduX+10,DduY+73,9,DduW-20,Muted);
+
+  // Icon keys, top right: cab switches, view, pause.
+  for(int Kind:{(int)Drawer,(int)Camera,(int)Pause}){FSlateRect R;if(!Rect(Kind,R))continue;
+   const FVector2D C((R.Left+R.Right)/2,(R.Top+R.Bottom)/2-5);Frame(R.Left,R.Top,R.Right-R.Left,R.Bottom-R.Top);
+   if(Kind==Pause){Box(C.X-7,C.Y-8,4,16,White,0);Box(C.X+3,C.Y-8,4,16,White,0);}
+   else if(Kind==Camera){Line({{C.X-11,C.Y-6},{C.X+5,C.Y-6},{C.X+5,C.Y+6},{C.X-11,C.Y+6},{C.X-11,C.Y-6}},White,1.5f);Line({{C.X+5,C.Y-2},{C.X+11,C.Y-6},{C.X+11,C.Y+6},{C.X+5,C.Y+2}},White,1.5f);}
+   else for(int I=0;I<2;++I)for(int J=0;J<2;++J){const float L=C.X-9+I*10.f,T=C.Y-8+J*9.f;Line({{L,T},{L+7,T},{L+7,T+6},{L,T+6},{L,T}},White,1.2f);}
+   Caption(Kind==Pause?TEXT("PAUSE"):Kind==Camera?TEXT("VIEW"):TEXT("CAB"),C.X,R.Bottom-15,1);
+  }
+
+  // Notched gates in the lower corners: handle in a slot, notch scale, and the actual
+  // output beside it (tractive effort in kN, brake-cylinder pressure in kg/cm2).
+  auto Gate=[&](bool IsPower){
+   const float X=IsPower?W-136:16,Top=GateTop,Bottom=GateBottom,Travel=Bottom-Top;
+   const double Requested=IsPower?Data.Power:Data.Brake,Applied=IsPower?Data.AppliedPower:Data.AppliedBrake;
+   const FLinearColor Accent=IsPower?Lcd:Amber;
+   Frame(X,402,120,302,FLinearColor(.016f,.02f,.024f,.48f));
+   Caption(IsPower?(Data.Assisted?TEXT("TE LIMIT"):TEXT("MASTER CTRL")):TEXT("A9 BRAKE"),X+60,410,1);
+   const float Slot=IsPower?X+70:X+56,Scale=IsPower?X+18:X+104;
+   Box(Slot-4,Top-6,8,Travel+12,FLinearColor(0,0,0,.85f),3);Line({{Slot,Top-4},{Slot,Bottom+4}},Hair,1);
+   if(IsPower){
+    for(int I=0;I<=10;++I){const float Y=Bottom-Travel*I/10.f;Line({{Slot-8,Y},{Slot-(I%5?14:20),Y}},I%5?Hair:Muted,1);}
+    for(int I:{0,5,10})Mono(FString::FromInt(I),Slot+28,Bottom-Travel*I/10.f-7,9,Muted);
+   }else{
+    for(int I=0;I<=10;++I){const float Y=Bottom-Travel*I/10.f;Line({{Slot+8,Y},{Slot+(I%5?14:20),Y}},I%5?Hair:Muted,1);}
+    const struct {double At;const TCHAR* Name;} Marks[]={{0,TEXT("REL")},{.15,TEXT("MIN")},{1,TEXT("FS")}};
+    for(const auto& M:Marks)Mono(M.Name,Slot-26,Bottom-Travel*float(M.At)-7,9,M.At>=1?Amber:Muted,2);
+   }
+   Box(Scale-2,Top,4,Travel,FLinearColor(1,1,1,.07f),1);
+   Box(Scale-2,Bottom-Travel*float(Applied),4,FMath::Max(2.f,Travel*float(Applied)),Accent.CopyWithNewOpacity(.85f),1);
+   // T-grip handle; the slot stays visible either side of it.
+   const float HandleY=Bottom-Travel*float(Requested);
+   Box(Slot-23,HandleY-10,46,21,FLinearColor(0,0,0,.55f),3);
+   Box(Slot-22,HandleY-11,44,19,FLinearColor(.10f,.11f,.12f,1),3);
+   Box(Slot-22,HandleY-11,44,2,FLinearColor(.44f,.47f,.49f,1),1);
+   Box(Slot-14,HandleY-3,28,2,Accent,0);
+   Mono(FString::Printf(TEXT("%3.0f%%"),Requested*100),X+8,Bottom+20,14,White);
+   Mono(IsPower?FString::Printf(TEXT("%.0fkN"),Data.TractionKn):FString::Printf(TEXT("%.1fkg"),Applied*FullServiceBc),X+112,Bottom+24,10,Accent,2);
+   Caption(IsPower?TEXT("demand   TE"):TEXT("demand   BC"),X+60,Bottom+44,1);
+   for(int Kind:{IsPower?(int)PowerPlus:(int)BrakePlus,IsPower?(int)PowerMinus:(int)BrakeMinus}){FSlateRect R;if(!Rect(Kind,R))continue;
+    Frame(R.Left,R.Top,R.Right-R.Left,R.Bottom-R.Top);const FVector2D C((R.Left+R.Right)/2,(R.Top+R.Bottom)/2);const bool Up=Kind==PowerPlus||Kind==BrakePlus;
+    Line(Up?TArray<FVector2D>{{C.X-8,C.Y+4},{C.X,C.Y-4},{C.X+8,C.Y+4}}:TArray<FVector2D>{{C.X-8,C.Y-4},{C.X,C.Y+4},{C.X+8,C.Y-4}},White,2);
+   }
+  };
+  Gate(false);Gate(true);
+
+  // Push buttons: red emergency mushroom by the brake, horn by the master controller.
+  for(int Kind:{(int)Emergency,(int)Horn}){FSlateRect R;if(!Rect(Kind,R))continue;
+   const FVector2D C((R.Left+R.Right)/2,(R.Top+R.Bottom)/2);const float Radius=(R.Bottom-R.Top)*.5f-2;
+   Box(C.X-Radius,C.Y-Radius,Radius*2,Radius*2,Kind==Emergency?FLinearColor(.30f,.02f,.015f,.92f):Glass,Radius);
+   Ring(C,Radius,Kind==Emergency?Red:Hair,Kind==Emergency?2.f:1.f);
+   if(Kind==Emergency){Box(C.X-Radius*.64f,C.Y-Radius*.64f,Radius*1.28f,Radius*1.28f,Red,Radius*.64f);Mono(TEXT("EMG"),C.X,C.Y-7,10,White,1);}
+   else {Line({{C.X-10,C.Y-4},{C.X-4,C.Y-4},{C.X+8,C.Y-11},{C.X+8,C.Y+11},{C.X-4,C.Y+4},{C.X-10,C.Y+4},{C.X-10,C.Y-4}},White,1.5f);Caption(TEXT("HORN"),C.X,C.Y+14,1);}
+  }
+  {FSlateRect R;if(Rect(ResetEmergency,R)){Frame(R.Left,R.Top,R.Right-R.Left,R.Bottom-R.Top,FLinearColor(.25f,.12f,.02f,.9f));Mono(TEXT("RESET"),(R.Left+R.Right)/2,R.Top+14,11,Amber,1);}}
+  {FSlateRect R;if(Rect(Depart,R)){Frame(R.Left,R.Top,R.Right-R.Left,R.Bottom-R.Top,FLinearColor(.04f,.18f,.09f,.92f));Mono(TEXT("DEPART"),(R.Left+R.Right)/2,R.Top+14,12,Lcd,1);}}
 
   if(CabOpen){
-   Box(0,0,W,720,FLinearColor(0,0,0,.55f),0);
-   const float X=W-486;Box(X,140,462,424,FLinearColor(.018f,.024f,.034f,.99f),7);
-   Text(TEXT("CAB CONTROLS"),X+24,161,23);Text(TEXT("Driving mode is chosen in the service briefing."),X+24,201,13,Muted);
-   Button(CloseDrawer,TEXT("CLOSE"));Button(Lamps,TEXT("HEADLIGHTS"));Button(Pantograph,TEXT("PANTOGRAPH"));Button(Wipers,TEXT("WIPERS"));Button(CabLamp,TEXT("CAB LIGHT"));Button(Instruments,TEXT("INSTRUMENTS"));Button(Reverse,TEXT("REVERSE"));Button(Neutral,TEXT("NEUTRAL"));Button(DirectionForward,TEXT("FORWARD"));
-   Text(TEXT("Direction changes require a stopped train."),X+24,524,13,Muted);
-   Button(Pause,TEXT("II"));Button(Emergency,TEXT("EMERGENCY"),Red);
+   Box(0,0,W,720,FLinearColor(0,0,0,.5f),0);
+   const float X=W-486;Frame(X,140,462,424,FLinearColor(.02f,.024f,.028f,.97f));Box(X,140,462,2,Amber,0);
+   Mono(TEXT("CAB SWITCHES"),X+24,156,16,White);Caption(TEXT("Driving mode is chosen in the service briefing."),X+24,186);
+   auto Key=[&](int Kind,const FString& Label){FSlateRect R;if(Rect(Kind,R)){Frame(R.Left,R.Top,R.Right-R.Left,R.Bottom-R.Top);Mono(Label,(R.Left+R.Right)/2,(R.Top+R.Bottom)/2-8,11,White,1);}};
+   Key(CloseDrawer,TEXT("CLOSE"));Key(Lamps,TEXT("HEADLIGHT"));Key(Pantograph,TEXT("PANTOGRAPH"));Key(Wipers,TEXT("WIPER"));Key(CabLamp,TEXT("CAB LIGHT"));Key(Instruments,TEXT("INSTRUMENT VIEW"));
+   Caption(TEXT("REVERSER"),X+24,436);Key(Reverse,TEXT("R"));Key(Neutral,TEXT("0"));Key(DirectionForward,TEXT("F"));
+   Caption(TEXT("Direction changes require a stopped train."),X+24,524);
   }
-  if(!Data.Feedback.IsEmpty()&&FPlatformTime::Seconds()<FeedbackUntil){Box(CentreX,570,CentreWidth,38,Ink,5);Fitted(Data.Feedback,CentreX+12,579,12,CentreWidth-24,Amber);}
   return Layer;
  }
 private:
  TMap<int32,FHold> Holds;
+ static constexpr float GateTop=442,GateBottom=619; // 177 units of travel, as the drag model expects
  TArray<FHit> Layout(float W)const{
-  if(CabOpen){const float X=W-486;return {{CloseDrawer,W-126,151,W-40,194},{Lamps,X+24,239,X+220,294},{Pantograph,X+238,239,W-48,294},{Wipers,X+24,309,X+220,364},{CabLamp,X+238,309,W-48,364},{Instruments,X+24,379,W-48,434},{Reverse,X+24,454,X+154,506},{Neutral,X+166,454,X+296,506},{DirectionForward,X+308,454,W-48,506},{Pause,W-88,24,W-24,90},{Emergency,W-132,613,W-24,679}};}
-  TArray<FHit> Out{{Pause,W-88,24,W-24,90},{Drawer,W-162,24,W-98,90},{Brake,28,297,132,513},{Power,W-132,297,W-28,513},{BrakeMinus,28,550,77,596},{BrakePlus,83,550,132,596},{PowerMinus,W-132,550,W-83,596},{PowerPlus,W-77,550,W-28,596},{Horn,28,613,132,679},{Emergency,W-132,613,W-24,679}};
-  if(Data.CanReset)Out.Add({ResetEmergency,W-290,613,W-148,679});else Out.Add({Camera,W-210,613,W-148,679});
-  if(Data.CanDepart){const float Right=(W+FMath::Clamp(W-720.f,300.f,680.f))*.5f;Out.Add({Depart,Right-124,613,Right,679});}
+  if(CabOpen){const float X=W-486;return {{CloseDrawer,W-126,151,W-40,194},{Lamps,X+24,214,X+220,269},{Pantograph,X+238,214,W-48,269},{Wipers,X+24,284,X+220,339},{CabLamp,X+238,284,W-48,339},{Instruments,X+24,354,W-48,409},{Reverse,X+24,456,X+154,508},{Neutral,X+166,456,X+296,508},{DirectionForward,X+308,456,W-48,508},{Pause,W-72,14,W-16,70}};}
+  TArray<FHit> Out{{Drawer,W-200,14,W-144,70},{Camera,W-136,14,W-80,70},{Pause,W-72,14,W-16,70},
+   {Brake,18,424,110,632},{Power,W-134,424,W-42,632},
+   {BrakePlus,142,442,196,492},{BrakeMinus,142,569,196,619},{PowerPlus,W-196,442,W-142,492},{PowerMinus,W-196,569,W-142,619},
+   {Emergency,138,634,210,706},{Horn,W-210,634,W-138,706}};
+  if(Data.CanReset)Out.Add({ResetEmergency,222,646,306,694});
+  if(Data.CanDepart)Out.Add({Depart,W*.5f-64,648,W*.5f+64,696});
   return Out;
  }
  void Fire(int32 Kind,double Value=0){if(Data.Emergency&&(Kind==Power||Kind==Brake))return;if(Execute)Execute(Kind,Value);}
@@ -226,7 +265,8 @@ void URailDrivingHud::Synchronize(URailSimulationSubsystem* S,bool Driving){
  D.Assisted=State.mode==Rail::DrivingMode::Assisted;
  D.Direction=Control.direction>0?TEXT("FORWARD"):Control.direction<0?TEXT("REVERSE"):TEXT("NEUTRAL");
  const auto Journey=Rail::JourneyPresentation::At(Head,Length);D.Progress=Journey.progress;D.Station=UTF8_TO_TCHAR(Rail::TambaramRoute::StationNames[Journey.station]);
- D.Location=(Journey.terminal?TEXT("SCHEDULED STOP  /  "):Journey.alongside?TEXT("PASSING STATION  /  "):TEXT("NEXT STATION  /  "))+DistanceText(Journey.distance)+(Journey.distance<0?TEXT(" behind"):TEXT(" ahead"));
+ D.Location=(Journey.terminal?TEXT("STOP "):Journey.alongside?TEXT("PASS "):TEXT(""))+DistanceText(Journey.distance)+(Journey.distance<0?TEXT(" back"):TEXT(""));
+ D.TractionKn=FMath::Abs(Handling->tractionN)/1000;
  D.Time=FString::Printf(TEXT("%02llu:%02llu"),State.ticks/1800,(State.ticks/30)%60);
  D.Status=TEXT("Route authorised");D.Detail=TEXT("Observe lineside signals and speed limits");
  const auto Authority=World.Current().authorities.find(Def.player);

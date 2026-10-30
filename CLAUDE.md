@@ -124,8 +124,10 @@ this list, and update it as gaps close:
   controller behaviour and the regenerative braking (BE) the real loco relies on.
 - **No in-train forces** (coupler slack, buff/draft), curve resistance, wheel
   slip/slide, or weather-dependent adhesion.
-- **Cab procedures**: no pantograph raise / VCB close / reverser / vigilance
-  (VCD) / speedometer-recorder style start-up sequence yet.
+- **Cab procedures**: no pantograph raise / VCB close / vigilance (VCD) start-up
+  sequence yet (Cab V2 has the VCD button and SA9 handle as static geometry).
+- MR/BP/FP gauges show a charged system at rest; BC follows applied brake. Real
+  pneumatic values arrive with the brake model.
 - Scenery: corridor buildings/trees are procedural primitives built in
   `RailTambaramCorridorView.cpp` (HISM families). Photoreal results ultimately need
   real modelled assets (Fab/Megascans, CC0 Poly Haven, commissioned WAP-7/LHB).
@@ -138,6 +140,16 @@ this list, and update it as gaps close:
   humid haze fog, unbound post-process grade. No painted sky sphere.
 - Inside the cab the sky-light is dimmed (`ApplyCabAmbient`, `RailLocomotiveView.cpp`)
   because mobile shading has no sky occlusion.
+- WAP-7 cab is **Cab V2** (`07_Documentation/S10/Tools/build_wap7_cab_v2.py` in Blender →
+  `import_wap7_cab_v2.py` in Unreal → `Production/locomotives/WAP7.json`). Its windscreen,
+  side window, door and roof line are ray-cast from the exterior model; keep them in sync if
+  the exterior changes. Moving-part axes: Blender→Unreal Y mirror means axis (x,y,z) → (-x,y,-z).
+  Flat desk text uses `DESK_TEXT` rotation so it reads upright from the seat.
+- Driving HUD (`RailDrivingHud.cpp`) is cab-style: A9 brake gate (REL/MIN/FS, BC kg/cm²),
+  TE master-controller gate (notches, TE kN), DDU strip at the top, nothing over the centre
+  of the windscreen. Gate travel must stay 177 design units (drag model + automation test).
+- `Review-Visuals.ps1 -Cab -Hud` captures the cab and the HUD (HUD review shows the driving
+  interface over the paused fixture via `-TambaramHudReview`).
 - Facades use `M_ChennaiFacade` (S10/ChennaiFacadeV1): biplanar world-aligned
   weathering mask (rain streaks, faded paint, dust), 2 texture fetches.
 - Corridor has a third housing row and a continuous far skyline band (houses,

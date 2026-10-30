@@ -134,6 +134,9 @@ bool ARailLocomotiveView::LoadPresentation(const FString& Id,FString& Diagnostic
  const TSharedPtr<FJsonObject>* Display=nullptr;
  if(Doc->TryGetObjectField(TEXT("instrument_display"),Display)){FVector L,R;double Size=1.8;if(Vector(**Display,TEXT("location_cm"),L))Instruments->SetRelativeLocation(L);if(Vector(**Display,TEXT("rotation_deg"),R))Instruments->SetRelativeRotation(FRotator(R.X,R.Y,R.Z));(*Display)->TryGetNumberField(TEXT("size_cm"),Size);Instruments->SetWorldSize(Size);Instruments->SetVerticalAlignment(EVRTA_TextCenter);}
  FVector LightLocation;if(Vector(*Doc,TEXT("cab_light_location_cm"),LightLocation))CabLight->SetRelativeLocation(LightLocation);
+ // Cab revisions place the digital speed on their own display and set the instrument glance.
+ const TSharedPtr<FJsonObject>* Readout=nullptr;if(Doc->TryGetObjectField(TEXT("speed_readout"),Readout)){FVector L,R;double Size=2;if(Vector(**Readout,TEXT("location_cm"),L))SpeedReadout->SetRelativeLocation(L);if(Vector(**Readout,TEXT("rotation_deg"),R))SpeedReadout->SetRelativeRotation(FRotator(R.X,R.Y,R.Z));(*Readout)->TryGetNumberField(TEXT("size_cm"),Size);SpeedReadout->SetWorldSize(Size);SpeedReadout->SetVerticalAlignment(EVRTA_TextCenter);}
+ InstrumentPitch=Id==TEXT("WAP7")&&!OriginalCabForVisualReview()?-3:-12;Doc->TryGetNumberField(TEXT("instrument_view_pitch_deg"),InstrumentPitch);
  if(Driver){double Fov=78;(*Driver)->TryGetNumberField(TEXT("fov"),Fov);DriverFov=FMath::Clamp(Fov,55.0,95.0);}
  LookOffset=FRotator::ZeroRotator;CancelCabPointerInput();
  PresentationClass=Id;UpdateCamera();LastLoadMilliseconds=(FPlatformTime::Seconds()-Begin)*1000;
@@ -166,7 +169,7 @@ void ARailLocomotiveView::CycleJourneyCamera(){
  else CabCamera=true;
  InstrumentView=false;CancelCabPointerInput();LookOffset=FRotator::ZeroRotator;++CabTransitions;UpdateCamera();
 }
-void ARailLocomotiveView::ToggleInstrumentView(){if(CabCamera){CancelCabPointerInput();InstrumentView=!InstrumentView;const double Pitch=PresentationClass==TEXT("WAP7")&&!OriginalCabForVisualReview()?-3:-12;LookOffset=InstrumentView?FRotator(Pitch,0,0):FRotator::ZeroRotator;UpdateCamera();}}
+void ARailLocomotiveView::ToggleInstrumentView(){if(CabCamera){CancelCabPointerInput();InstrumentView=!InstrumentView;LookOffset=InstrumentView?FRotator(InstrumentPitch,0,0):FRotator::ZeroRotator;UpdateCamera();}}
 void ARailLocomotiveView::ToggleSwitch(int32 Switch){if(Switch==0)Headlights=!Headlights;else if(Switch==1)PantographUp=!PantographUp;else if(Switch==2)Wipers=!Wipers;else if(Switch==3)CabLighting=!CabLighting;}
 FString ARailLocomotiveView::Display() const {
  if(!CabAvailable)return PresentationClass+TEXT(" exterior | Cab and equipment animation in progress");
@@ -248,7 +251,7 @@ void ARailLocomotiveView::Present(const Rail::Simulation& Spatial,const Rail::Lo
    }else T.SetLocation(Target);
   }
   if(PartRole==TEXT("pantograph")){if(Ranges[I]!=FVector2D(0,1))T.SetRotation(T.GetRotation()*FQuat(Axes[I],FMath::DegreesToRadians(PantographUp?Ranges[I].Y:Ranges[I].X)));else {T.SetScale3D(T.GetScale3D()*FVector(1,1,PantographUp?1:.25));}}
-  if(PartRole==TEXT("wiper"))T.SetRotation(T.GetRotation()*FQuat(Axes[I],FMath::DegreesToRadians(Wipers?FMath::Sin(WiperTime*5)*35:0)));
+  if(PartRole==TEXT("wiper"))T.SetRotation(T.GetRotation()*FQuat(Axes[I],FMath::DegreesToRadians(Wipers?Ranges[I].Y*.5*(1-FMath::Cos(WiperTime*3)):0)));
   double Fraction=-1;if(PartRole==TEXT("throttle"))Fraction=LastPower;else if(PartRole==TEXT("train_brake"))Fraction=LastBrake;else if(PartRole==TEXT("reverser"))Fraction=(H.command.direction+1)*.5;
   else if(PartRole==TEXT("gauge_speed"))Fraction=FMath::Clamp(FMath::Abs(H.speedMps)*3.6/180,0.0,1.0);else if(PartRole==TEXT("gauge_brake"))Fraction=H.appliedBrake;else if(PartRole==TEXT("gauge_power"))Fraction=H.appliedThrottle;
   if(PartRole==TEXT("switch_lamps"))Fraction=Headlights?1:0;else if(PartRole==TEXT("switch_wipers"))Fraction=Wipers?1:0;else if(PartRole==TEXT("switch_cablight"))Fraction=CabLighting?1:0;
@@ -257,7 +260,7 @@ void ARailLocomotiveView::Present(const Rail::Simulation& Spatial,const Rail::Lo
  }
  for(const auto& Material:LampMaterials)Material->SetScalarParameterValue(TEXT("LampIntensity"),Headlights?4:0);
  CabLight->SetVisibility(CabCamera&&CabLighting);
- InstrumentClock+=Dt;if(InstrumentClock>=.1){InstrumentClock=0;SpeedReadout->SetText(FText::FromString(FString::Printf(TEXT("%05.1f"),LastSpeed)));Instruments->SetText(FText::FromString(FString::Printf(TEXT("T%03.0f B%03.0f  %s"),Controls.power*100,Controls.brake*100,Controls.emergency?TEXT("EMG"):Controls.direction>0?TEXT("FWD"):Controls.direction<0?TEXT("REV"):TEXT("NEU"))));}
+ InstrumentClock+=Dt;if(InstrumentClock>=.1){InstrumentClock=0;SpeedReadout->SetText(FText::FromString(FString::Printf(TEXT("%03.0f km/h"),LastSpeed)));Instruments->SetText(FText::FromString(FString::Printf(TEXT("TE %3.0f%%  BRK %3.0f%%  %s"),Controls.power*100,Controls.brake*100,Controls.emergency?TEXT("EMG"):Controls.direction>0?TEXT("FWD"):Controls.direction<0?TEXT("REV"):TEXT("NEU"))));}
 
  CSV_CUSTOM_STAT(RailS8,LocomotiveParts,Parts.Num(),ECsvCustomStatOp::Set);CSV_CUSTOM_STAT(RailS8,LocomotivePresentMs,(FPlatformTime::Seconds()-Begin)*1000,ECsvCustomStatOp::Set);CSV_CUSTOM_STAT(RailS8,LocomotiveLoadMs,LastLoadMilliseconds,ECsvCustomStatOp::Set);
 }

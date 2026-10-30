@@ -19,6 +19,21 @@ tested evidence and is committed separately.
 - Pastel emulsion palette plus `M_ChennaiFacade`: monsoon rain streaks under
   slab lines, faded paint and storey-base dust (original procedural mask).
 
+## Done in S10 slice 2 — cab that matches the locomotive, loco-style controls
+
+- Cab V2 rebuilt from ray-cast measurements of the exterior: single 2.30 x 0.55 m
+  windscreen at 2.83-3.38 m on the 16 deg nose, sliding side window and narrow door
+  where the exterior has them, cab length 2.1 m (the S8 cab ran 0.4 m into the
+  machine room and had 0.85 m tall windows 0.25 m too high, plus grilles the
+  exterior does not have).
+- Seated driver eye 1.3 m behind the screen; desk and hooded binnacle below the
+  sight line; MR/BP/FP/BC gauges, speed indicator, TE meter, DDU with live speed;
+  A9/SA9 brake pedestal on the left, TE/BE master controller, reverser, VCD/horn
+  and emergency button on the desk; wipers park on the sill.
+- HUD redesigned: A9 brake gate (REL/MIN/FS, BC kg/cm2), TE master-controller gate
+  (notches, live TE kN), DDU strip (speed, MPS, direction, messages) at the top,
+  icon keys; the centre of the windscreen stays clear.
+
 ## Next slices
 
 1. **IR automatic block signalling (gameplay).** Four-aspect colour-light

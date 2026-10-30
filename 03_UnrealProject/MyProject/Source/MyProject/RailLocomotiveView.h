@@ -60,7 +60,7 @@ private:
  FRotator LookOffset=FRotator::ZeroRotator;
  double InstrumentClock=0;
  double LastSpeed=0,LastPower=0,LastBrake=0;
- double LastAppliedPower=0,LastAppliedBrake=0,DriverFov=95;
+ double LastAppliedPower=0,LastAppliedBrake=0,DriverFov=95,InstrumentPitch=-12;
  bool LastEmergency=false,InstrumentView=false;
  int32 LastDirection=0,CabTransitions=0,InteractionCount=0;
  bool CabCamera=false,Headlights=true,PantographUp=true,Wipers=false,CabLighting=false;

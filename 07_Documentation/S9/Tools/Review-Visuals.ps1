@@ -2,6 +2,7 @@ param(
     [Parameter(Mandatory=$true)][string]$RunId,
     [string[]]$Scenes=@('urban','suburban','riverside','opposing-4'),
     [switch]$Cab,
+    [switch]$Hud,
     [string]$FixtureSet='SceneryFixtures-20261023-03'
 )
 # Renders scenery (and optionally cab) review frames from isolated fixture saves into a fresh
@@ -16,6 +17,7 @@ New-Item -ItemType Directory -Path $e | Out-Null
 $editor='C:/Program Files/Epic Games/UE_5.8/Engine/Binaries/Win64/UnrealEditor-Cmd.exe'
 $jobs=@($Scenes | ForEach-Object {@{scene=$_;mode='-TambaramSceneryReview'}})
 if($Cab){$jobs+=@{scene='cab';fixture='urban';mode='-TambaramCabReview'}}
+if($Hud){$jobs+=@{scene='hud';fixture='urban';mode='-TambaramHudReview'}}
 $rows=@()
 foreach($job in $jobs){
     $scene=$job.scene;$fixture=if($job.fixture){$job.fixture}else{$scene}

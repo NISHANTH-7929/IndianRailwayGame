@@ -11,16 +11,16 @@
   },
   "driver_camera": {
     "location_cm": [
-      780,
-      -65,
-      335
+      835.9999656677246,
+      -62.00000047683716,
+      306.9999933242798
     ],
     "rotation_deg": [
-      -12,
-      0,
+      -4,
+      6,
       0
     ],
-    "fov": 95
+    "fov": 78
   },
   "wheel_radius_cm": 58.35094,
   "cab_available": true,
@@ -29,7 +29,7 @@
     "Pantographs, wipers and lights retained as authored static geometry; not rigged.",
     "Full original mesh and textures retained; Android cost unmeasured."
   ],
-  "triangles": 388854,
+  "triangles": 416668,
   "parts": [
     {
       "name": "Exterior",
@@ -128,43 +128,11 @@
       "asset": "/Game/IndianRailway/S8/Locomotives/WAP7/Selected/Meshes/SM_WAP7_Selected_Bogie_Rear_LOD0.SM_WAP7_Selected_Bogie_Rear_LOD0"
     },
     {
-      "name": "Glazing",
       "role": "cab_static",
       "location_cm": [
         0.0,
         -0.0,
         0.0
-      ],
-      "rotation_deg": [
-        0,
-        0,
-        0
-      ],
-      "scale": [
-        1,
-        1,
-        1
-      ],
-      "cab_only": true,
-      "rotation_axis": [
-        1,
-        0,
-        0
-      ],
-      "rotation_range_deg": [
-        0,
-        0
-      ],
-      "triangles": 242,
-      "asset": "/Game/IndianRailway/S8/Locomotives/WAP7/Cab/Meshes/SM_WAP7_Cab_Glazing.SM_WAP7_Cab_Glazing"
-    },
-    {
-      "name": "gauge_speed",
-      "role": "gauge_speed",
-      "location_cm": [
-        907.6000213623047,
-        -11.999999731779099,
-        357.99999237060547
       ],
       "rotation_deg": [
         0,
@@ -183,19 +151,78 @@
         0
       ],
       "rotation_range_deg": [
+        0,
+        0
+      ],
+      "triangles": 26164,
+      "asset": "/Game/IndianRailway/S8/Locomotives/WAP7/CabV2/SM_WAP7_CabV2_Static.SM_WAP7_CabV2_Static"
+    },
+    {
+      "role": "gauge_brake",
+      "location_cm": [
+        919.1819190979004,
+        -103.99999618530273,
+        269.0781593322754
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "cab_only": true,
+      "rotation_axis": [
+        -0.8727582693099976,
+        0.0,
+        0.4881526827812195
+      ],
+      "rotation_range_deg": [
+        -130,
+        -31.200000000000003
+      ],
+      "triangles": 72,
+      "asset": "/Game/IndianRailway/S8/Locomotives/WAP7/CabV2/SM_WAP7_CabV2_gauge_brake.SM_WAP7_CabV2_gauge_brake"
+    },
+    {
+      "role": "gauge_speed",
+      "location_cm": [
+        923.5753059387207,
+        -62.00000047683716,
+        276.9329786300659
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "cab_only": true,
+      "rotation_axis": [
+        -0.8727582693099976,
+        0.0,
+        0.4881526827812195
+      ],
+      "rotation_range_deg": [
         -130,
         130
       ],
-      "triangles": 216,
-      "asset": "/Game/IndianRailway/S8/Locomotives/WAP7/Cab/Meshes/SM_WAP7_Cab_gauge_speed.SM_WAP7_Cab_gauge_speed"
+      "triangles": 72,
+      "asset": "/Game/IndianRailway/S8/Locomotives/WAP7/CabV2/SM_WAP7_CabV2_gauge_speed.SM_WAP7_CabV2_gauge_speed"
     },
     {
-      "name": "switch_emergency",
-      "role": "switch_emergency",
+      "role": "gauge_power",
       "location_cm": [
-        905.5000305175781,
-        1.9999999552965164,
-        290.00000953674316
+        925.2838134765625,
+        -86.00000143051147,
+        279.98762130737305
       ],
       "rotation_deg": [
         0,
@@ -209,24 +236,23 @@
       ],
       "cab_only": true,
       "rotation_axis": [
-        1,
-        0,
-        0
+        -0.8727582693099976,
+        0.0,
+        0.4881526827812195
       ],
       "rotation_range_deg": [
-        0,
-        0
+        -130,
+        130
       ],
-      "triangles": 188,
-      "asset": "/Game/IndianRailway/S8/Locomotives/WAP7/Cab/Meshes/SM_WAP7_Cab_switch_emergency.SM_WAP7_Cab_switch_emergency"
+      "triangles": 72,
+      "asset": "/Game/IndianRailway/S8/Locomotives/WAP7/CabV2/SM_WAP7_CabV2_gauge_power.SM_WAP7_CabV2_gauge_power"
     },
     {
-      "name": "switch_lamps",
       "role": "switch_lamps",
       "location_cm": [
-        906.0000419616699,
-        91.00000262260437,
-        307.99999237060547
+        920.7571029663086,
+        62.00000047683716,
+        271.06337547302246
       ],
       "rotation_deg": [
         0,
@@ -240,24 +266,23 @@
       ],
       "cab_only": true,
       "rotation_axis": [
-        1,
-        0,
-        0
+        -0.8725069761276245,
+        0.0,
+        0.4886016547679901
       ],
       "rotation_range_deg": [
         -25,
         25
       ],
       "triangles": 108,
-      "asset": "/Game/IndianRailway/S8/Locomotives/WAP7/Cab/Meshes/SM_WAP7_Cab_switch_lamps.SM_WAP7_Cab_switch_lamps"
+      "asset": "/Game/IndianRailway/S8/Locomotives/WAP7/CabV2/SM_WAP7_CabV2_switch_lamps.SM_WAP7_CabV2_switch_lamps"
     },
     {
-      "name": "switch_wipers",
       "role": "switch_wipers",
       "location_cm": [
-        906.0000419616699,
-        101.49999856948853,
-        307.99999237060547
+        920.7571029663086,
+        76.99999809265137,
+        271.06337547302246
       ],
       "rotation_deg": [
         0,
@@ -271,24 +296,23 @@
       ],
       "cab_only": true,
       "rotation_axis": [
-        1,
-        0,
-        0
+        -0.8725069761276245,
+        0.0,
+        0.4886016547679901
       ],
       "rotation_range_deg": [
         -25,
         25
       ],
       "triangles": 108,
-      "asset": "/Game/IndianRailway/S8/Locomotives/WAP7/Cab/Meshes/SM_WAP7_Cab_switch_wipers.SM_WAP7_Cab_switch_wipers"
+      "asset": "/Game/IndianRailway/S8/Locomotives/WAP7/CabV2/SM_WAP7_CabV2_switch_wipers.SM_WAP7_CabV2_switch_wipers"
     },
     {
-      "name": "switch_cablight",
       "role": "switch_cablight",
       "location_cm": [
-        906.0000419616699,
-        112.00000047683716,
-        307.99999237060547
+        920.7571029663086,
+        92.00000166893005,
+        271.06337547302246
       ],
       "rotation_deg": [
         0,
@@ -302,24 +326,23 @@
       ],
       "cab_only": true,
       "rotation_axis": [
-        1,
-        0,
-        0
+        -0.8725069761276245,
+        0.0,
+        0.4886016547679901
       ],
       "rotation_range_deg": [
         -25,
         25
       ],
       "triangles": 108,
-      "asset": "/Game/IndianRailway/S8/Locomotives/WAP7/Cab/Meshes/SM_WAP7_Cab_switch_cablight.SM_WAP7_Cab_switch_cablight"
+      "asset": "/Game/IndianRailway/S8/Locomotives/WAP7/CabV2/SM_WAP7_CabV2_switch_cablight.SM_WAP7_CabV2_switch_cablight"
     },
     {
-      "name": "throttle",
       "role": "throttle",
       "location_cm": [
-        886.9999885559082,
-        21.99999988079071,
-        277.30000019073486
+        900.0,
+        -28.00000011920929,
+        260.9999895095825
       ],
       "rotation_deg": [
         0,
@@ -338,50 +361,18 @@
         0
       ],
       "rotation_range_deg": [
-        -24,
-        24
+        -28,
+        32
       ],
-      "triangles": 484,
-      "asset": "/Game/IndianRailway/S8/Locomotives/WAP7/Cab/Meshes/SM_WAP7_Cab_throttle.SM_WAP7_Cab_throttle"
+      "triangles": 144,
+      "asset": "/Game/IndianRailway/S8/Locomotives/WAP7/CabV2/SM_WAP7_CabV2_throttle.SM_WAP7_CabV2_throttle"
     },
     {
-      "name": "train_brake",
-      "role": "train_brake",
-      "location_cm": [
-        856.9999694824219,
-        -114.99999761581421,
-        283.80000591278076
-      ],
-      "rotation_deg": [
-        0,
-        0,
-        0
-      ],
-      "scale": [
-        1,
-        1,
-        1
-      ],
-      "cab_only": true,
-      "rotation_axis": [
-        0,
-        0,
-        1
-      ],
-      "rotation_range_deg": [
-        -30,
-        40
-      ],
-      "triangles": 484,
-      "asset": "/Game/IndianRailway/S8/Locomotives/WAP7/Cab/Meshes/SM_WAP7_Cab_train_brake.SM_WAP7_Cab_train_brake"
-    },
-    {
-      "name": "reverser",
       "role": "reverser",
       "location_cm": [
-        893.9999580383301,
-        -81.00000023841858,
-        279.9999952316284
+        902.0000457763672,
+        -46.00000083446503,
+        264.0000104904175
       ],
       "rotation_deg": [
         0,
@@ -400,19 +391,18 @@
         0
       ],
       "rotation_range_deg": [
-        -18,
-        18
+        -20,
+        20
       ],
-      "triangles": 484,
-      "asset": "/Game/IndianRailway/S8/Locomotives/WAP7/Cab/Meshes/SM_WAP7_Cab_reverser.SM_WAP7_Cab_reverser"
+      "triangles": 144,
+      "asset": "/Game/IndianRailway/S8/Locomotives/WAP7/CabV2/SM_WAP7_CabV2_reverser.SM_WAP7_CabV2_reverser"
     },
     {
-      "name": "wiper_cab_-1",
-      "role": "wiper",
+      "role": "switch_emergency",
       "location_cm": [
-        969.6000099182129,
-        44.999998807907104,
-        313.0000114440918
+        906.0000419616699,
+        5.999999865889549,
+        263.0000114440918
       ],
       "rotation_deg": [
         0,
@@ -426,24 +416,23 @@
       ],
       "cab_only": true,
       "rotation_axis": [
-        1,
+        -1,
         0,
         0
       ],
       "rotation_range_deg": [
-        -30,
-        30
+        0,
+        0
       ],
-      "triangles": 64,
-      "asset": "/Game/IndianRailway/S8/Locomotives/WAP7/Cab/Meshes/SM_WAP7_Cab_wiper_cab__1.SM_WAP7_Cab_wiper_cab__1"
+      "triangles": 288,
+      "asset": "/Game/IndianRailway/S8/Locomotives/WAP7/CabV2/SM_WAP7_CabV2_switch_emergency.SM_WAP7_CabV2_switch_emergency"
     },
     {
-      "name": "wiper_cab_1",
-      "role": "wiper",
+      "role": "train_brake",
       "location_cm": [
-        969.6000099182129,
-        -44.999998807907104,
-        313.0000114440918
+        896.0000038146973,
+        -117.99999475479126,
+        269.0000057220459
       ],
       "rotation_deg": [
         0,
@@ -457,19 +446,18 @@
       ],
       "cab_only": true,
       "rotation_axis": [
-        1,
         0,
-        0
+        0,
+        -1
       ],
       "rotation_range_deg": [
-        -30,
-        30
+        -40,
+        40
       ],
-      "triangles": 64,
-      "asset": "/Game/IndianRailway/S8/Locomotives/WAP7/Cab/Meshes/SM_WAP7_Cab_wiper_cab_1.SM_WAP7_Cab_wiper_cab_1"
+      "triangles": 324,
+      "asset": "/Game/IndianRailway/S8/Locomotives/WAP7/CabV2/SM_WAP7_CabV2_train_brake.SM_WAP7_CabV2_train_brake"
     },
     {
-      "name": "StaticCore",
       "role": "cab_static",
       "location_cm": [
         0.0,
@@ -488,7 +476,7 @@
       ],
       "cab_only": true,
       "rotation_axis": [
-        1,
+        -1,
         0,
         0
       ],
@@ -496,36 +484,106 @@
         0,
         0
       ],
-      "triangles": 46569,
-      "asset": "/Game/IndianRailway/S8/Locomotives/WAP7/Cab/Meshes/SM_WAP7_Cab_StaticCore.SM_WAP7_Cab_StaticCore"
+      "triangles": 10,
+      "asset": "/Game/IndianRailway/S8/Locomotives/WAP7/CabV2/SM_WAP7_CabV2_Glazing.SM_WAP7_CabV2_Glazing"
+    },
+    {
+      "role": "wiper",
+      "location_cm": [
+        978.076171875,
+        -98.00000190734863,
+        285.9999895095825
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "cab_only": true,
+      "rotation_axis": [
+        0.9611203074455261,
+        -0.0,
+        0.2761298418045044
+      ],
+      "rotation_range_deg": [
+        0,
+        80
+      ],
+      "triangles": 100,
+      "asset": "/Game/IndianRailway/S8/Locomotives/WAP7/CabV2/SM_WAP7_CabV2_wiper_cab_1.SM_WAP7_CabV2_wiper_cab_1"
+    },
+    {
+      "role": "wiper",
+      "location_cm": [
+        978.076171875,
+        98.00000190734863,
+        285.9999895095825
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "cab_only": true,
+      "rotation_axis": [
+        -0.9611203074455261,
+        0.0,
+        -0.2761298418045044
+      ],
+      "rotation_range_deg": [
+        0,
+        80
+      ],
+      "triangles": 100,
+      "asset": "/Game/IndianRailway/S8/Locomotives/WAP7/CabV2/SM_WAP7_CabV2_wiper_cab_m1.SM_WAP7_CabV2_wiper_cab_m1"
     }
   ],
   "instrument_display": {
     "location_cm": [
-      907,
-      43,
-      307
+      923.0191230773926,
+      -30.000001192092896,
+      272.6608991622925
     ],
     "rotation_deg": [
-      0,
+      29.21923473391883,
       180,
       0
     ],
-    "size_cm": 2.4
+    "size_cm": 1.5
   },
   "cab_light_location_cm": [
-    835,
+    819.9999999999999,
     0,
-    390
+    380.0
   ],
   "cab_reference_limits": [
-    "Traditional desk reference, not verified specific to exterior fleet number.",
-    "Cab dimensions inferred to fit source exterior; no measured engineering drawing.",
-    "Pressure/electrical dial channels are parked; S3/S7 does not simulate these quantities. Small bellows control identity is not legible; direction mapping is a gameplay adaptation.",
-    "Rear bulkhead, seat mechanism, small labels and assistant side partly inferred.",
-    "Instrument markings use a restrained always-powered presentation backlight, independent of the overhead cab lamp; no electrical supply circuit or exact prototype illumination is simulated.",
-    "Fine printed labels use restrained neutral presentation backlighting for mobile contrast; this is not a verified prototype lighting circuit. Physical type size is retained and fine print may require a closer view.",
-    "Interior side windows adjusted to traditional WAP7 photo proportions; dimensions remain inferred, not fleet-certified. Existing instrument bank geometry retained."
+    "Openings and roof line measured from the CC BY 4.0 exterior model, not a CLW drawing.",
+    "Desk layout follows the conventional IR left-hand driving desk (A9/SA9 left, TE/BE controller right); exact WAP-7 panel legends are representative.",
+    "MR/BP/FP needles show a charged system at rest; BC follows applied brake until the pneumatic model exists."
   ],
-  "cab_presentation_revision": "cab-stabilization-20261010"
+  "cab_presentation_revision": "wap7-cab-v2",
+  "speed_readout": {
+    "location_cm": [
+      926.1920928955078,
+      -30.000001192092896,
+      278.33383083343506
+    ],
+    "rotation_deg": [
+      29.21923473391883,
+      180,
+      0
+    ],
+    "size_cm": 3.2
+  },
+  "instrument_view_pitch_deg": -17
 }

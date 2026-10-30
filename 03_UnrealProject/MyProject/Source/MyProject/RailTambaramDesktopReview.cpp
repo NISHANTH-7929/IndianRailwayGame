@@ -41,7 +41,7 @@ struct FTambaramReview {
  FString Output,Pending;double Started=FPlatformTime::Seconds(),LastCapture=0;
  int32 Captures=0;bool Full=false,Boundary=false,Cycled=false,Resumed=false,CyclePending=false,ReloadVerified=false;
  FString BeforeCycle;
- bool SceneryOnly=false,CabOnly=false,TrackOnly=false,TrackCrossover=false;
+ bool SceneryOnly=false,CabOnly=false,TrackOnly=false,TrackCrossover=false,HudReview=false;
  FString SceneryState;
  int32 CaptureWarmup=0,PendingCameraMode=0;
  double CabWideFov=0;
@@ -348,7 +348,7 @@ struct FTambaramReview {
      const FString Frame=FString::Printf(TEXT("{\"label\":\"%s\",\"headMetres\":%.6f,\"cameraMode\":%d,\"tick\":%llu,\"cameraWarmupFrames\":%d}"),*FPaths::GetBaseFilename(Pending),Head,PendingCameraMode,World.Current().tick,(CabOnly||TrackOnly)?30:8);
      FFileHelper::SaveStringToFile(Frame,*(Output/FString::Printf(TEXT("%02d-frame.json"),Captures-1)));
      FFileHelper::SaveStringToFile(UTF8_TO_TCHAR(World.Json().c_str()),*(Output/FString::Printf(TEXT("%02d-logical.json"),Captures-1)));
-     FScreenshotRequest::RequestScreenshot(Pending,!Full&&!SceneryOnly,false);
+     FScreenshotRequest::RequestScreenshot(Pending,(!Full&&!SceneryOnly)||HudReview,false);
     }
     return true;
    }
@@ -572,7 +572,9 @@ void BeginTambaramReview(){
  if(IFileManager::Get().DirectoryExists(*Out)||!IFileManager::Get().MakeDirectory(*Out,true))return;
  if(FParse::Param(FCommandLine::Get(),TEXT("TambaramMotionReview"))){auto Motion=MakeShared<FWheelMotionReview>();Motion->Output=Out;FTSTicker::GetCoreTicker().AddTicker(FTickerDelegate::CreateLambda([Motion](float Dt){return Motion->Tick(Dt);}));return;}
  auto Review=MakeShared<FTambaramReview>();Review->Output=Out;Review->Full=FParse::Param(FCommandLine::Get(),TEXT("TambaramFullJourney"));
- Review->CabOnly=FParse::Param(FCommandLine::Get(),TEXT("TambaramCabReview"));
+ // HUD review: the cab views with the driving interface composited into the capture.
+ Review->HudReview=FParse::Param(FCommandLine::Get(),TEXT("TambaramHudReview"));
+ Review->CabOnly=Review->HudReview||FParse::Param(FCommandLine::Get(),TEXT("TambaramCabReview"));
  Review->TrackOnly=FParse::Param(FCommandLine::Get(),TEXT("TambaramTrackReview"));
  Review->TrackCrossover=Review->TrackOnly&&FParse::Param(FCommandLine::Get(),TEXT("TambaramTrackCrossover"));
  Review->SceneryOnly=Review->CabOnly||Review->TrackOnly||FParse::Param(FCommandLine::Get(),TEXT("TambaramSceneryReview"));if(Review->SceneryOnly)Review->Full=false;
