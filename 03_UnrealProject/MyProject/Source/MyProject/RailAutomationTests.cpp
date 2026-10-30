@@ -1,3 +1,4 @@
+#include "Simulation/RailAutomaticSignals.h"
 #include "Misc/AutomationTest.h"
 #include "Simulation/RailKernel.h"
 #include "Simulation/RailHandling.h"
@@ -50,6 +51,8 @@ IMPLEMENT_SIMPLE_AUTOMATION_TEST(FRailContinuityTest,"IndianRailway.S6.Continuit
 bool FRailContinuityTest::RunTest(const FString& Parameters){bool Passed=true;const Rail::TestReport Reports[]={Rail::RunContentTests(),Rail::RunSnapshotRecordTests(),Rail::RunWorldSnapshotTests(),Rail::RunCheckpointTests()};for(const auto& Report:Reports){Passed&=Report.Passed();for(const auto& C:Report.cases)TestTrue(UTF8_TO_TCHAR(C.name.c_str()),C.passed);}return Passed;}
 IMPLEMENT_SIMPLE_AUTOMATION_TEST(FRailServiceTest,"IndianRailway.S7.Service",EAutomationTestFlags::EditorContext|EAutomationTestFlags::EngineFilter)
 bool FRailServiceTest::RunTest(const FString& Parameters){const auto Report=Rail::RunServiceTests();for(const auto& C:Report.cases)TestTrue(UTF8_TO_TCHAR(C.name.c_str()),C.passed);return Report.Passed();}
+IMPLEMENT_SIMPLE_AUTOMATION_TEST(FRailSignalTest,"IndianRailway.S10.AutomaticSignals",EAutomationTestFlags::EditorContext|EAutomationTestFlags::EngineFilter)
+bool FRailSignalTest::RunTest(const FString& Parameters){const auto Report=Rail::RunSignalTests();for(const auto& C:Report.cases)TestTrue(UTF8_TO_TCHAR((C.name+(C.detail.empty()?std::string():" "+C.detail)).c_str()),C.passed);return Report.Passed();}
 #include "RailChunkView.h"
 #include "Engine/World.h"
 #include "Engine/Engine.h"

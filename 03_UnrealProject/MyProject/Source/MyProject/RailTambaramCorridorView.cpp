@@ -3,6 +3,7 @@
 #include "Simulation/RailTambaramRoute.h"
 #include "Simulation/RailRouteSampling.h"
 #include "Simulation/RailScenarioContent.h"
+#include "Simulation/RailAutomaticSignals.h"
 #include "Components/HierarchicalInstancedStaticMeshComponent.h"
 #include "Engine/StaticMesh.h"
 #include "Engine/Texture2D.h"
@@ -953,38 +954,60 @@ void ARailTambaramCorridorView::BuildCell(const Rail::Graph& Graph,int32 Track,i
 }
 bool ARailTambaramCorridorView::PresentSignals(const Rail::OperationsWorld& World,int32 ChunkId){
  const auto* Train=World.Spatial(Rail::TrainId(2));if(!Train)return false;
- TArray<uint64> Ids;TArray<FTransform> Poses;TArray<bool> Proceed;
- for(const auto& Entry:World.DefinitionsView().signals){
-  Rail::Sample S;const auto State=World.Current().signals.find(Entry.first);
-  if(State==World.Current().signals.end()||!Train->Network().SamplePosition(Entry.second.boundary,S).ok)return false;
-  if(!Owns(ChunkId,S.position.x))continue;
-  const FVector Forward=Cm(S.tangent).GetSafeNormal(),Right(-Forward.Y,Forward.X,0);
-  Ids.Add(Entry.first.value);Poses.Add(FTransform(FRotator(0,Forward.Rotation().Yaw+90,0),Cm(S.position)-Right*270));
-  Proceed.Add(State->second.aspect==Rail::SignalAspect::Proceed);
+ // Every lineside signal is infrastructure from the route plan; its aspect is evaluated from the
+ // authoritative operations state each frame. Instances are rebuilt only when an aspect changes.
+ const auto& Plan=Rail::SignalPlanFor(World);const auto Aspects=Rail::EvaluateSignals(Plan,World);
+ TArray<int32> Sites;TArray<uint8> Shown;TArray<FTransform> Poses;
+ for(const auto& Site:Plan.sites){
+  Rail::Sample S;if(!Train->Network().SamplePosition(Site.position,S).ok||!Owns(ChunkId,S.position.x))continue;
+  Sites.Add(int32(Site.index));Shown.Add(uint8(Aspects[Site.index])|(Site.role==Rail::SignalRole::Automatic?8:0));
+  Poses.Add(FTransform(Facing(S.tangent),Cm(S.position)));
  }
- if(Ids!=SignalIds){
-  auto* Housing=LoadObject<UStaticMesh>(nullptr,TEXT("/Game/IndianRailway/S8/Stations/EgmoreScene02/Meshes/SM_SignalUnbound.SM_SignalUnbound"));
-  auto* Lens=LoadObject<UStaticMesh>(nullptr,TEXT("/Engine/BasicShapes/Sphere.Sphere"));
-  auto* Material=LoadObject<UMaterialInterface>(nullptr,TEXT("/Game/IndianRailway/S8/Egmore/M_SignalLens.M_SignalLens"));
-  if(!Housing||!Lens||!Material)return false;
-  for(const auto& Part:SignalParts){RemoveInstanceComponent(Part.Get());Part->DestroyComponent();}
-  SignalParts.Empty();SignalLamps.Empty();SignalIds=Ids;
-  for(int32 I=0;I<Ids.Num();++I)for(int32 P=0;P<4;++P){
-   auto* Part=NewObject<UStaticMeshComponent>(this);AddInstanceComponent(Part);Part->SetupAttachment(RootComponent);
-   Part->SetMobility(EComponentMobility::Movable);Part->SetStaticMesh(P?Lens:Housing);Part->SetCollisionEnabled(ECollisionEnabled::NoCollision);
-   Part->SetCastShadow(P==0);Part->SetCullDistance(100000);Part->RegisterComponent();SignalParts.Add(Part);
-   if(P){auto* Lamp=UMaterialInstanceDynamic::Create(Material,this);Part->SetMaterial(0,Lamp);SignalLamps.Add(Lamp);}
+ if(SignalHisms.Num()!=9){
+  auto* Cube=LoadObject<UStaticMesh>(nullptr,TEXT("/Engine/BasicShapes/Cube.Cube"));
+  auto* Cylinder=LoadObject<UStaticMesh>(nullptr,TEXT("/Engine/BasicShapes/Cylinder.Cylinder"));
+  auto* Sphere=LoadObject<UStaticMesh>(nullptr,TEXT("/Engine/BasicShapes/Sphere.Sphere"));
+  auto* Lens=LoadObject<UMaterialInterface>(nullptr,TEXT("/Game/IndianRailway/S8/Egmore/M_SignalLens.M_SignalLens"));
+  if(!Cube||!Cylinder||!Sphere||!Lens||Materials.Num()<9)return false;
+  // Lit lens colours are emissive; dark lenses keep a faint glass sheen.
+  const FLinearColor LensColours[]={FLinearColor(9.f,.25f,.12f),FLinearColor(9.f,4.6f,.15f),FLinearColor(.15f,8.f,2.6f),FLinearColor(.012f,.012f,.012f)};
+  for(const auto& Colour:LensColours){auto* M=UMaterialInstanceDynamic::Create(Lens,this);M->SetVectorParameterValue(TEXT("Color"),Colour);SignalLamps.Add(M);}
+  // 0 post (galvanised), 1 head and 2 hoods (black), 3 'A' plate (cream), 4 glyph (black), 5-8 lenses.
+  UStaticMesh* Mesh[]={Cylinder,Cube,Cube,Cylinder,Cube,Sphere,Sphere,Sphere,Sphere};
+  UMaterialInterface* Finish[]={Materials[1],Materials[8],Materials[8],Materials[3],Materials[8],SignalLamps[0],SignalLamps[1],SignalLamps[2],SignalLamps[3]};
+  for(int32 I=0;I<9;++I){
+   auto* Part=NewObject<UHierarchicalInstancedStaticMeshComponent>(this);AddInstanceComponent(Part);Part->SetupAttachment(RootComponent);
+   Part->SetMobility(EComponentMobility::Movable);Part->SetStaticMesh(Mesh[I]);Part->SetMaterial(0,Finish[I]);
+   Part->SetCollisionEnabled(ECollisionEnabled::NoCollision);Part->SetCastShadow(I<3);Part->SetCullDistances(150000,180000);
+   Part->RegisterComponent();SignalHisms.Add(Part);
+  }
+  SignalSitesShown.Reset();
+ }
+ if(Sites==SignalSitesShown&&Shown==SignalAspectsShown)return true;
+ for(const auto& Part:SignalHisms)Part->ClearInstances();
+ TArray<FTransform> Parts[9];
+ // Site frame: X along the direction of travel, Y to the right; IR signals stand left of the line.
+ // Head: four lenses, top to bottom Yellow, Green, Yellow, Red, facing the approaching driver.
+ constexpr double PostY=-285,HeadZ=470,Pitch=27;
+ const double LensZ[]={HeadZ+1.5*Pitch,HeadZ+.5*Pitch,HeadZ-.5*Pitch,HeadZ-1.5*Pitch};
+ for(int32 I=0;I<Sites.Num();++I){
+  const FTransform& P=Poses[I];auto Put=[&](int32 Family,FVector L,FVector Scale,FRotator R=FRotator::ZeroRotator){Parts[Family].Add(FTransform(R,L,Scale)*P);};
+  Put(0,FVector(0,PostY,260),FVector(.15,.15,5.2));
+  Put(1,FVector(0,PostY,HeadZ),FVector(.30,.40,1.24));
+  for(double Z:LensZ)Put(2,FVector(-24,PostY,Z+10),FVector(.20,.30,.025));
+  const auto Aspect=Rail::LinesideAspect(Shown[I]&7);
+  const bool Lit[]={Aspect==Rail::LinesideAspect::Attention,Aspect==Rail::LinesideAspect::Proceed,
+   Aspect==Rail::LinesideAspect::Caution||Aspect==Rail::LinesideAspect::Attention,Aspect==Rail::LinesideAspect::Stop};
+  const int32 LitFamily[]={6,7,6,5};
+  for(int32 L=0;L<4;++L)Put(Lit[L]?LitFamily[L]:8,FVector(-16,PostY,LensZ[L]),FVector(.05,.19,.19));
+  if(Shown[I]&8){ // automatic stop signal: circular 'A' marker below the head
+   Put(3,FVector(-14,PostY,HeadZ-105),FVector(.34,.34,.02),FRotator(90,0,0));
+   for(double Side:{-1.,1.})Put(4,FVector(-16.5,PostY+Side*5,HeadZ-105),FVector(.012,.025,.22),FRotator(0,0,Side*-18));
+   Put(4,FVector(-16.5,PostY,HeadZ-109),FVector(.012,.09,.022));
   }
  }
- for(int32 I=0;I<Ids.Num();++I){
-  SignalParts[I*4]->SetWorldTransform(Poses[I]);
-  for(int32 L=0;L<3;++L){
-   SignalParts[I*4+L+1]->SetWorldTransform(FTransform(Poses[I].GetRotation(),Poses[I].TransformPosition(FVector(0,19,330+45*L)),FVector(.25,.025,.25)));
-   const auto Color=L==0&&!Proceed[I]?FLinearColor(6,0,0):L==2&&Proceed[I]?FLinearColor(0,6,0):FLinearColor(.005f,.005f,.005f);
-   SignalLamps[I*3+L]->SetVectorParameterValue(TEXT("Color"),Color);
-  }
- }
- return true;
+ for(int32 Family=0;Family<9;++Family)if(Parts[Family].Num())SignalHisms[Family]->AddInstances(Parts[Family],false,true);
+ SignalSitesShown=Sites;SignalAspectsShown=Shown;return true;
 }
 void ARailTambaramCorridorView::Present(const Rail::OperationsWorld& World,int32 ChunkId){
  if(!Rail::ScenarioContent::IsTambaram(World.ContentId())){if(Cells.Num())Release();return;}

@@ -34,6 +34,13 @@ tested evidence and is committed separately.
   (notches, live TE kN), DDU strip (speed, MPS, direction, messages) at the top,
   icon keys; the centre of the windscreen stays clear.
 
+## Done in S10 slice 3 — real surfaces and Indian automatic signalling
+
+- CC0 Poly Haven ground (laterite + grass), concrete, asphalt and plaster materials.
+- Four-aspect automatic block signalling (see `SIGNALLING.md`): station signals at route
+  origins, 'A'-marker automatic signals every ~1 km, aspects derived from occupancy and
+  reservations with the GR 9.01 120 m overlap, lineside heads, DDU signal indicator, TPWS notice.
+
 ## Next slices
 
 1. **IR automatic block signalling (gameplay).** Four-aspect colour-light

@@ -47,9 +47,10 @@ private:
  UPROPERTY(Transient) TObjectPtr<UStaticMesh> BallastStone;
  UPROPERTY(Transient) TArray<TObjectPtr<UMaterialInterface>> TrackFinishes;
  UPROPERTY(Transient) TArray<TObjectPtr<UTexture2D>> TrackTextures;
- UPROPERTY(Transient) TArray<TObjectPtr<UStaticMeshComponent>> SignalParts;
+ // Lineside MACLS heads: post, head, hoods, 'A' plate and glyph, then lit red/yellow/green and dark lamps.
+ UPROPERTY(Transient) TArray<TObjectPtr<UHierarchicalInstancedStaticMeshComponent>> SignalHisms;
  UPROPERTY(Transient) TArray<TObjectPtr<UMaterialInstanceDynamic>> SignalLamps;
- TArray<uint64> SignalIds;
+ TArray<int32> SignalSitesShown;TArray<uint8> SignalAspectsShown;
  bool PresentSignals(const Rail::OperationsWorld& World,int32 ChunkId);
  bool bReady=false,bAssetsAttempted=false;
  int32 OwnerChunk=0;

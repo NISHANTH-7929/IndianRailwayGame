@@ -110,10 +110,12 @@ evidence; save-format or content-id changes need a new version, not a silent edi
 Highest-leverage areas for the "very realistic" goal — verify before relying on
 this list, and update it as gaps close:
 
-- **Signalling**: `SignalAspect` is only `Stop`/`Proceed`. Indian Railways uses
-  multi-aspect colour-light signalling (Red / Yellow / Double Yellow / Green),
-  route indicators, calling-on, permissive/automatic signals, distant/home/
-  starter roles, and the absolute/automatic block systems.
+- **Signalling**: four-aspect automatic block signalling is implemented
+  (`Simulation/RailAutomaticSignals`, see `07_Documentation/S10/SIGNALLING.md`): lineside
+  aspects are *derived* from the operations snapshot (never saved). Still missing: passing an
+  automatic signal at danger (GR 9.02), route indicators, calling-on/shunt signals, and the
+  surveyed signal plan. The route-level `SignalAspect` (Stop/Proceed) remains the dispatcher's
+  internal state used by AI.
 - **Brakes**: modelled as one lumped first-order lag. Missing: brake-pipe
   pressure propagation along the rake, separate automatic (train) and
   independent (loco) brakes, graduated release, and WAP-7 regenerative braking.

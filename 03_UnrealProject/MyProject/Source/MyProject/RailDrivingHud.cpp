@@ -6,6 +6,7 @@
 #include "Simulation/RailDrivingAdvice.h"
 #include "Simulation/RailJourneyPresentation.h"
 #include "Simulation/RailTambaramDriving.h"
+#include "Simulation/RailAutomaticSignals.h"
 #include "Widgets/SLeafWidget.h"
 #include "Rendering/DrawElements.h"
 #include "Brushes/SlateRoundedBoxBrush.h"
@@ -20,8 +21,9 @@
 namespace {
 enum Action { Power=0,Brake,Horn,Camera,Pause,Emergency,ResetEmergency,Drawer,CloseDrawer,Lamps,Pantograph,Wipers,CabLamp,Instruments,Reverse,Neutral,DirectionForward,Depart,PowerMinus,PowerPlus,BrakeMinus,BrakePlus };
 struct FDriveDisplay {
- double Speed=0,Limit=0,Power=0,Brake=1,AppliedPower=0,AppliedBrake=1,Progress=0,TractionKn=0;
- bool Assisted=false,Emergency=false,CanReset=false,CanDepart=false,Enabled=false,Alert=false;
+ double Speed=0,Limit=0,Power=0,Brake=1,AppliedPower=0,AppliedBrake=1,Progress=0,TractionKn=0,SignalDistance=0;
+ bool Assisted=false,Emergency=false,CanReset=false,CanDepart=false,Enabled=false,Alert=false,SignalFound=false,SignalAutomatic=false;
+ int32 SignalAspect=0; // Rail::LinesideAspect
  FString Station,Location,Status,Detail,Time,Direction,Feedback;
 };
 // Cab-instrument palette: smoked glass, hairlines, DDU green numerals, amber for the air brake.
@@ -114,7 +116,17 @@ public:
   Frame(DduX-4,DduY-4,DduW+8,104,FLinearColor(.05f,.055f,.06f,.78f));Box(DduX,DduY,DduW,96,Screen,2);
   const bool Over=Data.Speed>Data.Limit+.36;
   Mono(FString::Printf(TEXT("%3.0f"),Data.Speed),DduX+10,DduY+2,30,Over?Red:Lcd);Mono(TEXT("km/h"),DduX+86,DduY+22,9,Lcd.CopyWithNewOpacity(.7f));
-  Mono(Data.Direction.Left(1),DduX+DduW*.5f,DduY+8,16,Lcd,1);
+  Mono(Data.Direction.Left(1),DduX+122,DduY+16,13,Lcd);
+  if(Data.SignalFound){
+   const float HX=DduX+DduW*.5f-58,HY=DduY+4;Box(HX,HY,16,40,FLinearColor(0,0,0,.9f),4);
+   const auto A=Rail::LinesideAspect(Data.SignalAspect);
+   const bool Lit[]={A==Rail::LinesideAspect::Attention,A==Rail::LinesideAspect::Proceed,A==Rail::LinesideAspect::Caution||A==Rail::LinesideAspect::Attention,A==Rail::LinesideAspect::Stop};
+   const FLinearColor Lamp[]={Amber,Lcd,Amber,Red};
+   for(int32 L=0;L<4;++L)Box(HX+4,HY+3+L*9.f,8,8,Lit[L]?Lamp[L]:FLinearColor(.12f,.12f,.12f,1),4);
+   const TCHAR* Names[]={TEXT("DANGER"),TEXT("CAUTION"),TEXT("ATTENTION"),TEXT("PROCEED")};
+   Mono(FString::Printf(TEXT("%s%s"),Names[Data.SignalAspect&3],Data.SignalAutomatic?TEXT("  A"):TEXT("")),HX+24,HY+2,10,Lit[3]?Red:Lit[2]?Amber:Lcd);
+   Mono(FString::Printf(TEXT("SIG %s"),*DistanceText(Data.SignalDistance)),HX+24,HY+20,12,White);
+  }
   Mono(TEXT("MPS"),DduX+DduW-74,DduY+8,9,Amber.CopyWithNewOpacity(.75f),2);Mono(FString::Printf(TEXT("%3.0f"),Data.Limit),DduX+DduW-10,DduY+2,24,Amber,2);
   const float BarX=DduX+10,BarW=DduW-20,BarY=DduY+44;
   Box(BarX,BarY,BarW,4,FLinearColor(1,1,1,.08f),1);
@@ -269,6 +281,17 @@ void URailDrivingHud::Synchronize(URailSimulationSubsystem* S,bool Driving){
  D.TractionKn=FMath::Abs(Handling->tractionN)/1000;
  D.Time=FString::Printf(TEXT("%02llu:%02llu"),State.ticks/1800,(State.ticks/30)%60);
  D.Status=TEXT("Route authorised");D.Detail=TEXT("Observe lineside signals and speed limits");
+ // Lineside signal ahead, from the same authoritative state that drives the lineside heads.
+ const auto& Plan=Rail::SignalPlanFor(World);const auto Aspects=Rail::EvaluateSignals(Plan,World);
+ const auto Ahead=Rail::NextSignal(Plan,Aspects,World,Def.player);
+ D.SignalFound=Ahead.found;D.SignalDistance=Ahead.distance;D.SignalAspect=int32(Ahead.aspect);D.SignalAutomatic=Ahead.role==Rail::SignalRole::Automatic;
+ if(Ahead.found&&Ahead.distance<2500)switch(Ahead.aspect){
+  case Rail::LinesideAspect::Stop:D.Status=Ahead.role==Rail::SignalRole::Manual?TEXT("Station signal at danger"):TEXT("Automatic signal at danger");
+   D.Detail=TEXT("Stop before the signal ")+DistanceText(Ahead.distance)+TEXT(" ahead");D.Alert=true;break;
+  case Rail::LinesideAspect::Caution:D.Status=TEXT("Caution - single yellow");D.Detail=TEXT("Be prepared to stop at the next signal");D.Alert=true;break;
+  case Rail::LinesideAspect::Attention:D.Status=TEXT("Attention - double yellow");D.Detail=TEXT("Be prepared to pass the next signal at restricted speed");break;
+  default:D.Status=TEXT("Signal clear - proceed");D.Detail=TEXT("Observe the speed limit and the next signal");break;
+ }
  const auto Authority=World.Current().authorities.find(Def.player);
  const bool RouteHeld=Authority!=World.Current().authorities.end()&&!Authority->second.routeGranted;
  if(D.Power>0&&D.AppliedBrake>.02){D.Status=TEXT("Traction held");D.Detail=TEXT("Brakes are still applied. Release before powering.");}
@@ -285,6 +308,11 @@ void URailDrivingHud::Synchronize(URailSimulationSubsystem* S,bool Driving){
   default:break;
  }
  if(!S->ServiceControlNotice().IsEmpty()&&!S->ServiceControlNotice().StartsWith(TEXT("Camera:")))D.Feedback=S->ServiceControlNotice();
+ // The protection system brakes any train inside its stopping curve to the end of authority
+ // (a signal at danger). Tell the driver when it is overriding a release or power demand.
+ if(Authority!=World.Current().authorities.end()&&Authority->second.valid&&Handling->speedMps>.5&&(State.requestedBrake<1||State.requestedPower>0)&&
+    Authority->second.maximumHead-Head<=Rail::TambaramDriving::AuthorityStoppingDistance(Handling->speedMps)){
+  D.Status=TEXT("TPWS brake intervention");D.Detail=TEXT("Train protection is stopping you short of the signal at danger");D.Alert=true;}
  if(D.Emergency){D.Status=TEXT("Emergency brake applied");D.Detail=D.CanReset?TEXT("Stopped — reset is available"):TEXT("Power cut. Wait until the train is stopped.");D.Alert=true;}
  if(S->IsPresentationBlocked()){D.Status=TEXT("Loading scenery");D.Detail=TEXT("Service paused while the route loads");D.Alert=true;}
  DrivingSlate->Update(D);
