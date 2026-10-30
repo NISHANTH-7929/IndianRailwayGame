@@ -1,6 +1,9 @@
 #include "RailSimulationSubsystem.h"
+#include "RailLocoSoundComponent.h"
 #include "Simulation/RailJourneyPresentation.h"
 #include "Simulation/RailScenarioContent.h"
+#include "Simulation/RailFormationContent.h"
+#include "Simulation/RailTrackJoints.h"
 #include "Components/AudioComponent.h"
 #include "Engine/World.h"
 #include "Sound/SoundWave.h"
@@ -13,6 +16,30 @@
 #include "SubmixEffects/AudioMixerSubmixEffectDynamicsProcessor.h"
 #include "GameFramework/PlayerController.h"
 #include "Sound/SoundAttenuation.h"
+
+namespace {
+// Wheel strikes due within the next ~0.6 s: every axle of the train at every real joint on its
+// path (insulated joints at signals, switch and crossing nose at turnouts), heard from the cab.
+void CollectWheelStrikes(const Rail::OperationsWorld& World,Rail::TrainId Train,double Odometer,double Speed,TArray<Rail::WheelStrike>& Out){
+ const auto* S=World.Spatial(Train);if(!S||Speed<.3||S->Current().commandedSpeedMps<0)return;
+ const auto& Snap=S->Current();const double Head=Snap.headStationMetres,Window=Speed*.6+3;
+ const auto Joints=Rail::JointsBetween(World,Train,Head-Snap.properties.lengthMetres-1,Head+Window);
+ if(Joints.empty())return;
+ uint64 Axle=0;
+ for(const auto& Vehicle:Snap.vehicles){
+  const bool Loco=Vehicle.definition==Rail::DefinitionId(Rail::FormationContent::Wap7DefinitionId);
+  const double Bogie=Loco?Rail::FormationContent::Wap7BogieOffset:Rail::FormationContent::BogieOffset;
+  const double Pitch=Loco?Rail::Wap7AxlePitch:Rail::FormationContent::BogieWheelbase;
+  for(double Side:{1.0,-1.0})for(int K=0;K<(Loco?3:2);++K){
+   const double Station=Vehicle.centreStationMetres+Side*Bogie+Pitch*(Loco?K-1:K-.5);
+   const double Gain=Rail::StrikeGain(Head-Station,Loco);++Axle;
+   for(const auto& J:Joints){const double Ahead=J.station-Station;if(Ahead<=0||Ahead>=Window)continue;
+    const auto Kind=J.kind==Rail::JointKind::CrossingNose?Rail::StrikeKind::CrossingNose:J.kind==Rail::JointKind::Switch?Rail::StrikeKind::Switch:Rail::StrikeKind::Joint;
+    Out.Add({J.key*64+Axle,Odometer+Ahead,Gain,Kind});}
+  }
+ }
+}
+}
 
 float URailSimulationSubsystem::GetServiceAudioVolume(int32 Channel) const {
  if(!ServiceAudioPreferencesLoaded){
@@ -73,56 +100,55 @@ void URailSimulationSubsystem::InitializeServiceAudio(){
   UE_LOG(LogTemp,Display,TEXT("RAIL_AUDIO loaded %s duration=%.3f looping=%d"),Path,Sound->Duration,Sound->bLooping);
   return Component;
  };
- ServiceMovementAudio=Create(TEXT("/Game/IndianRailway/S8/Audio/SW_Rail.SW_Rail"),0);
- ServiceStationAudio=Create(TEXT("/Game/IndianRailway/S8/Audio/SW_Station.SW_Station"),0);
- ServiceHornAudio=Create(TEXT("/Game/IndianRailway/S8/Audio/SW_Horn.SW_Horn"),.65f);
- ServiceBrakeAudio=Create(TEXT("/Game/IndianRailway/S8/Audio/SW_Brake.SW_Brake"),.35f);
- ServiceCueAudio=Create(TEXT("/Game/IndianRailway/S7/SW_StationCue.SW_StationCue"),.18f);
- ServiceMotorAudio=Create(TEXT("/Game/IndianRailway/S9/JourneyAudioV3/SW_Motor.SW_Motor"),0);
- ServiceCoastAudio=Create(TEXT("/Game/IndianRailway/S9/JourneyAudioV3/SW_Coast.SW_Coast"),0);
- ServiceSquealAudio=Create(TEXT("/Game/IndianRailway/S9/JourneyAudioV3/SW_Squeal.SW_Squeal"),0);
- ServiceBrakeReleaseAudio=Create(TEXT("/Game/IndianRailway/S9/JourneyAudioV3/SW_BrakeRelease.SW_BrakeRelease"),.3f);
- ServiceEmergencyAudio=Create(TEXT("/Game/IndianRailway/S9/JourneyAudioV3/SW_Emergency.SW_Emergency"),.45f);
- TrafficHornAudio=Create(TEXT("/Game/IndianRailway/S8/Audio/SW_Horn.SW_Horn"),0);
- TrafficRollingAudio=Create(TEXT("/Game/IndianRailway/S8/Audio/SW_Rail.SW_Rail"),0);
- TrafficMotorAudio=Create(TEXT("/Game/IndianRailway/S9/JourneyAudioV3/SW_Motor.SW_Motor"),0);
- OpposingHornAudio=Create(TEXT("/Game/IndianRailway/S8/Audio/SW_Horn.SW_Horn"),0);
- OpposingRollingAudio=Create(TEXT("/Game/IndianRailway/S8/Audio/SW_Rail.SW_Rail"),0);
- OpposingMotorAudio=Create(TEXT("/Game/IndianRailway/S9/JourneyAudioV3/SW_Motor.SW_Motor"),0);
  FSoundAttenuationSettings Spatial;
  Spatial.bSpatialize=true;Spatial.bAttenuate=false;Spatial.bAttenuateWithLPF=false;
- for(auto* Component:{TrafficHornAudio.Get(),TrafficRollingAudio.Get(),TrafficMotorAudio.Get(),OpposingHornAudio.Get(),OpposingRollingAudio.Get(),OpposingMotorAudio.Get()})if(Component){
+ auto Synth=[&](uint32 Seed,uint32 Layers,bool Spatialized)->URailLocoSoundComponent*{
+  auto* Component=NewObject<URailLocoSoundComponent>(this);
+  Component->Configure(Seed,Layers);Component->SoundClass=ServiceAudioClass;Component->bIsUISound=false;
+  Component->bAllowSpatialization=Spatialized;
+  if(Spatialized){Component->bOverrideAttenuation=true;Component->AttenuationOverrides=Spatial;}
+  Component->RegisterComponentWithWorld(GetWorld());
+  return Component;
+ };
+ ServiceStationAudio=Create(TEXT("/Game/IndianRailway/S10/AudioV1/SW_StationChatter.SW_StationChatter"),0);
+ ServiceHornAudio=Create(TEXT("/Game/IndianRailway/S10/AudioV1/SW_Wap7HornLoop.SW_Wap7HornLoop"),.65f);
+ ServiceBrakeAudio=Create(TEXT("/Game/IndianRailway/S8/Audio/SW_Brake.SW_Brake"),.35f);
+ ServiceCueAudio=Create(TEXT("/Game/IndianRailway/S7/SW_StationCue.SW_StationCue"),.18f);
+ ServiceLocoSound=Synth(11,Rail::SoundAll,false);
+ TrafficHornAudio=Create(TEXT("/Game/IndianRailway/S10/AudioV1/SW_TrafficHorn.SW_TrafficHorn"),0);
+ OpposingHornAudio=Create(TEXT("/Game/IndianRailway/S10/AudioV1/SW_TrafficHorn.SW_TrafficHorn"),0);
+ TrafficLocoSound=Synth(31,Rail::SoundDrive|Rail::SoundAuxiliaries|Rail::SoundAir,true);
+ TrafficRollingSound=Synth(37,Rail::SoundRunning,true);
+ OpposingLocoSound=Synth(47,Rail::SoundDrive|Rail::SoundAuxiliaries|Rail::SoundAir,true);
+ OpposingRollingSound=Synth(53,Rail::SoundRunning,true);
+ for(auto* Component:{TrafficHornAudio.Get(),OpposingHornAudio.Get()})if(Component){
   Component->bAllowSpatialization=true;Component->AdjustAttenuation(Spatial);
  }
 }
 
 void URailSimulationSubsystem::StopServiceAudio(){
- for(auto* Audio:{OpposingHornAudio.Get(),OpposingRollingAudio.Get(),OpposingMotorAudio.Get()})if(IsValid(Audio))Audio->Stop();
+ for(auto* Audio:{OpposingHornAudio.Get(),TrafficHornAudio.Get()})if(IsValid(Audio))Audio->Stop();
+ for(auto* Sound:{OpposingLocoSound.Get(),OpposingRollingSound.Get(),TrafficLocoSound.Get(),TrafficRollingSound.Get(),ServiceLocoSound.Get()})if(IsValid(Sound))Sound->Stop();
  OpposingHornDynamics.Suspend();OpposingRollingDynamics.Suspend();
- for(auto* Audio:{TrafficHornAudio.Get(),TrafficRollingAudio.Get(),TrafficMotorAudio.Get()})if(IsValid(Audio))Audio->Stop();
  TrafficHornDynamics.Suspend();TrafficRollingDynamics.Suspend();
- for(auto* Audio:{ServiceMovementAudio.Get(),ServiceStationAudio.Get(),ServiceHornAudio.Get(),ServiceBrakeAudio.Get(),ServiceCueAudio.Get(),
-     ServiceMotorAudio.Get(),ServiceCoastAudio.Get(),ServiceSquealAudio.Get(),ServiceBrakeReleaseAudio.Get(),ServiceEmergencyAudio.Get()})if(IsValid(Audio))Audio->Stop();
- ServiceAudioWasRunning=false;ServiceRailGain=0;ServiceStationGain=0;ServiceRailPitch=1;
- ServiceAudioDynamics.Reset();
+ for(auto* Audio:{ServiceStationAudio.Get(),ServiceHornAudio.Get(),ServiceBrakeAudio.Get(),ServiceCueAudio.Get()})if(IsValid(Audio))Audio->Stop();
+ ServiceAudioWasRunning=false;ServiceStationGain=0;ServiceHornHeld=false;ServiceHornUntil=0;
+ ServiceAudioDynamics.Reset();ServiceStrikes.Reset();
 }
 
 void URailSimulationSubsystem::DestroyServiceAudio(){
  StopServiceAudio();
- for(auto* Audio:{OpposingHornAudio.Get(),OpposingRollingAudio.Get(),OpposingMotorAudio.Get()})if(IsValid(Audio))Audio->DestroyComponent();
- OpposingHornAudio=nullptr;OpposingRollingAudio=nullptr;OpposingMotorAudio=nullptr;
+ for(auto* Audio:{OpposingHornAudio.Get(),TrafficHornAudio.Get(),ServiceStationAudio.Get(),ServiceHornAudio.Get(),ServiceBrakeAudio.Get(),ServiceCueAudio.Get()})if(IsValid(Audio))Audio->DestroyComponent();
+ for(auto* Sound:{OpposingLocoSound.Get(),OpposingRollingSound.Get(),TrafficLocoSound.Get(),TrafficRollingSound.Get(),ServiceLocoSound.Get()})if(IsValid(Sound))Sound->DestroyComponent();
+ OpposingHornAudio=nullptr;OpposingLocoSound=nullptr;OpposingRollingSound=nullptr;
  OpposingHornDynamics={};OpposingRollingDynamics={};
- for(auto* Audio:{TrafficHornAudio.Get(),TrafficRollingAudio.Get(),TrafficMotorAudio.Get()})if(IsValid(Audio))Audio->DestroyComponent();
- TrafficHornAudio=nullptr;TrafficRollingAudio=nullptr;TrafficMotorAudio=nullptr;
+ TrafficHornAudio=nullptr;TrafficLocoSound=nullptr;TrafficRollingSound=nullptr;
  TrafficHornDynamics={};TrafficRollingDynamics={};
 #if WITH_EDITOR && WITH_DEV_AUTOMATION_TESTS
  TrafficReviewSeconds=0;TrafficReviewLastLoggedSecond=-1;
 #endif
- for(auto* Audio:{ServiceMovementAudio.Get(),ServiceStationAudio.Get(),ServiceHornAudio.Get(),ServiceBrakeAudio.Get(),ServiceCueAudio.Get(),
-     ServiceMotorAudio.Get(),ServiceCoastAudio.Get(),ServiceSquealAudio.Get(),ServiceBrakeReleaseAudio.Get(),ServiceEmergencyAudio.Get()})if(IsValid(Audio))Audio->DestroyComponent();
- ServiceMovementAudio=nullptr;ServiceStationAudio=nullptr;ServiceHornAudio=nullptr;ServiceBrakeAudio=nullptr;ServiceCueAudio=nullptr;
- ServiceMotorAudio=nullptr;ServiceCoastAudio=nullptr;ServiceSquealAudio=nullptr;ServiceBrakeReleaseAudio=nullptr;ServiceEmergencyAudio=nullptr;
- ServiceSounds.Reset();ServiceAudioLoaded=false;
+ ServiceStationAudio=nullptr;ServiceHornAudio=nullptr;ServiceBrakeAudio=nullptr;ServiceCueAudio=nullptr;ServiceLocoSound=nullptr;
+ ServiceOdometer={};ServiceSounds.Reset();ServiceAudioLoaded=false;
  if(GetWorld())if(auto Device=GetWorld()->GetAudioDevice()){
   if(ServiceAudioClass)Device->UnregisterSoundClass(ServiceAudioClass);
   if(ServiceAudioSubmix)Device->UnregisterSoundSubmix(ServiceAudioSubmix,false);
@@ -130,17 +156,26 @@ void URailSimulationSubsystem::DestroyServiceAudio(){
  ServiceAudioClass=nullptr;ServiceAudioSubmix=nullptr;
 }
 
-void URailSimulationSubsystem::PlayServiceHorn(){
+void URailSimulationSubsystem::ServiceHorn(bool Down){
+ if(Down){PlayServiceHorn(true);return;}
+ // Released: the valve closes now, but a tap still gives a short blast.
+ ServiceHornHeld=false;
+}
+
+void URailSimulationSubsystem::PlayServiceHorn(bool Held){
  if(S6Paused||S6Blocked||AppBackground.Load()||Service.Current().phase!=Rail::ServicePhase::Running)return;
  InitializeServiceAudio();
- // One owned voice prevents rapid taps from stacking horn recordings.
- if(IsValid(ServiceHornAudio)&&!ServiceHornAudio->IsPlaying()){
-  const auto AudioPerspective=ServiceAudioDynamics.Perspective(IsLocomotiveCabCamera(),0);
-  ServiceHornAudio->SetVolumeMultiplier(float(AudioPerspective.hornGain)*GetServiceAudioVolume(0)*GetServiceAudioVolume(2));
-  ServiceHornAudio->SetLowPassFilterEnabled(true);
-  ServiceHornAudio->SetLowPassFilterFrequency(float(AudioPerspective.lowPassHz));
-  ServiceHornAudio->Play();UE_LOG(LogTemp,Display,TEXT("RAIL_AUDIO horn"));
- }
+ if(!IsValid(ServiceHornAudio)||!GetWorld())return;
+ // The horn sounds while the switch is held (minimum 0.35 s); a one-shot request is a 1 s blast.
+ // ServiceHornUntil < 0 marks a blast already fading out; a new press restarts the horn.
+ const double Now=GetWorld()->GetRealTimeSeconds();
+ const bool Sounding=ServiceHornAudio->IsPlaying()&&ServiceHornUntil>=0;
+ ServiceHornHeld=Held;ServiceHornUntil=FMath::Max(Sounding?ServiceHornUntil:0.,Now+(Held?.35:1.0));
+ const auto AudioPerspective=ServiceAudioDynamics.Perspective(IsLocomotiveCabCamera(),0);
+ ServiceHornAudio->SetLowPassFilterEnabled(true);
+ ServiceHornAudio->SetLowPassFilterFrequency(float(AudioPerspective.lowPassHz));
+ ServiceHornAudio->SetVolumeMultiplier(float(AudioPerspective.hornGain)*GetServiceAudioVolume(0)*GetServiceAudioVolume(2));
+ if(!Sounding){ServiceHornAudio->FadeIn(.04f,1.f);UE_LOG(LogTemp,Display,TEXT("RAIL_AUDIO horn held=%d"),Held);}
 }
 
 void URailSimulationSubsystem::UpdateServiceAudio(){
@@ -151,11 +186,16 @@ void URailSimulationSubsystem::UpdateServiceAudio(){
  InitializeServiceAudio();
  if(!ServiceAudioWasRunning){ServiceLastCue=State.cue;ServiceAudioWasRunning=true;}
  if(State.cue!=ServiceLastCue){ServiceLastCue=State.cue;if(ServiceCueAudio){ServiceCueAudio->SetVolumeMultiplier(.18f*GetServiceAudioVolume(0)*GetServiceAudioVolume(2));ServiceCueAudio->Play();}}
+ if(IsValid(ServiceHornAudio)&&ServiceHornAudio->IsPlaying()&&ServiceHornUntil>=0&&!ServiceHornHeld&&GetWorld()->GetRealTimeSeconds()>=ServiceHornUntil){
+  ServiceHornAudio->FadeOut(.25f,0.f);ServiceHornUntil=-1; // the valve closes: the blast dies away
+ }
  const float Delta=FMath::Clamp(GetWorld()->GetDeltaSeconds(),0.f,.1f);
  const bool InCab=IsLocomotiveCabCamera();
  const auto* Edge=Train->Network().Find(Train->Current().head.edge);
  const float Distance=float(FMath::Abs(Train->Current().headStationMetres-(Definition.platformFrom+Definition.platformTo)*.5));
  const float Near=Rail::ScenarioContent::IsTambaram(Definition.contentId)?float(Rail::JourneyPresentation::StationAmbience(Train->Current().headStationMetres)):FMath::Clamp(1.f-Distance/120.f,0.f,1.f);
+ ServiceOdometer.Advance(Definition.player.value,Train->Current().headStationMetres);
+ ServiceStrikes.Reset();CollectWheelStrikes(Operations,Definition.player,ServiceOdometer.metres,FMath::Abs(H->speedMps),ServiceStrikes);
  ApplyServiceAudio(*H,Edge?Edge->geometry.curvaturePerMetre:0,Delta,Near,InCab);
  UpdateTrafficAudio(Delta,InCab);
 }
@@ -173,19 +213,24 @@ void URailSimulationSubsystem::UpdateTrafficAudio(float Delta,bool InCab){
    if(Distance<Nearest){Nearest=Distance;TrafficId=Rail::TrainId(Id);}
   }
  }
+ auto* HornVoice=Opposing?OpposingHornAudio.Get():TrafficHornAudio.Get();
+ auto* LocoVoice=Opposing?OpposingLocoSound.Get():TrafficLocoSound.Get();
+ auto* RollingVoice=Opposing?OpposingRollingSound.Get():TrafficRollingSound.Get();
  // A new formation must not inherit the previous horn latch or Doppler
  // history. Pausing the same formation still retains its encounter latch.
  if(Opposing&&OpposingAudioTrain!=TrafficId.value){
   OpposingAudioTrain=TrafficId.value;
   OpposingHornDynamics=Rail::PassingAudioDynamics{};
   OpposingRollingDynamics=Rail::PassingAudioDynamics{};
-  for(auto* Audio:{OpposingHornAudio.Get(),OpposingRollingAudio.Get(),OpposingMotorAudio.Get()})if(Audio)Audio->Stop();
+  if(HornVoice)HornVoice->Stop();
+  for(auto* Sound:{LocoVoice,RollingVoice})if(Sound)Sound->Stop();
  }
  const auto* Traffic=Operations.Spatial(TrafficId);
  const auto* TrafficHandling=Operations.Handling(TrafficId);
  auto* Controller=GetWorld()?GetWorld()->GetFirstPlayerController():nullptr;
  if(!Traffic||!TrafficHandling||!Controller||Traffic->Current().vehicles.empty()||Service.Definition().player==TrafficId){
-  for(auto* Audio:{Opposing?OpposingHornAudio.Get():TrafficHornAudio.Get(),Opposing?OpposingRollingAudio.Get():TrafficRollingAudio.Get(),Opposing?OpposingMotorAudio.Get():TrafficMotorAudio.Get()})if(Audio)Audio->Stop();
+  if(HornVoice)HornVoice->Stop();
+  for(auto* Sound:{LocoVoice,RollingVoice})if(Sound)Sound->Stop();
   (Opposing?OpposingHornDynamics:TrafficHornDynamics).Suspend();(Opposing?OpposingRollingDynamics:TrafficRollingDynamics).Suspend();continue;
  }
  FVector Listener,Front,Right;Controller->GetAudioListenerPosition(Listener,Front,Right);
@@ -200,27 +245,36 @@ void URailSimulationSubsystem::UpdateTrafficAudio(float Delta,bool InCab){
   const double Distance=FVector::DistSquared(Point,Listener);
   if(Distance<Best){Best=Distance;Running=Point;}
  }
- ApplyTrafficAudio(Horn,Running,Listener,FMath::Abs(TrafficHandling->speedMps),TrafficHandling->tractionN,Delta,InCab,Opposing);
+ ApplyTrafficAudio(Horn,Running,Listener,*TrafficHandling,Delta,InCab,Opposing);
  }
 }
 
-void URailSimulationSubsystem::ApplyTrafficAudio(const FVector& Horn,const FVector& Running,const FVector& Listener,double Speed,double Traction,float Delta,bool InCab,bool Opposing){
+void URailSimulationSubsystem::ApplyTrafficAudio(const FVector& Horn,const FVector& Running,const FVector& Listener,const Rail::LongitudinalState& Traffic,float Delta,bool InCab,bool Opposing){
  auto* HornVoice=Opposing?OpposingHornAudio.Get():TrafficHornAudio.Get();
- auto* RollingVoice=Opposing?OpposingRollingAudio.Get():TrafficRollingAudio.Get();
- auto* MotorVoice=Opposing?OpposingMotorAudio.Get():TrafficMotorAudio.Get();
+ auto* LocoVoice=Opposing?OpposingLocoSound.Get():TrafficLocoSound.Get();
+ auto* RollingVoice=Opposing?OpposingRollingSound.Get():TrafficRollingSound.Get();
+ const double Speed=FMath::Abs(Traffic.speedMps);
  const auto HornMix=(Opposing?OpposingHornDynamics:TrafficHornDynamics).Update(FVector::Distance(Horn,Listener)/100,Delta,Speed>.5);
  const auto RollMix=(Opposing?OpposingRollingDynamics:TrafficRollingDynamics).Update(FVector::Distance(Running,Listener)/100,Delta,Speed>.5,false);
  const auto Perspective=ServiceAudioDynamics.Perspective(InCab,0);
- const float Master=GetServiceAudioVolume(0),Effects=Master*GetServiceAudioVolume(2),Engine=Master*GetServiceAudioVolume(1);
- auto Set=[&](UAudioComponent* Audio,const FVector& Position,double Gain,double Pitch){
-  if(!Audio)return;Audio->SetWorldLocation(Position);Audio->SetVolumeMultiplier(float(Gain));Audio->SetPitchMultiplier(float(Pitch));
-  Audio->SetLowPassFilterEnabled(true);Audio->SetLowPassFilterFrequency(float(Perspective.lowPassHz));
+ const float Master=GetServiceAudioVolume(0),Effects=Master*GetServiceAudioVolume(2);
+ // The other train is heard from outside its own body: exterior balance, filtered into the cab.
+ Rail::LocoSoundInput In;In.speedMps=Traffic.speedMps;In.effort=FMath::Clamp(Traffic.tractionN/Rail::Wap7Drive::StartingTractionN,-1.0,1.0);
+ In.brakeCylinder=Traffic.appliedBrake;In.cab=0;In.engineGain=GetServiceAudioVolume(1);In.effectsGain=GetServiceAudioVolume(2);
+ auto Voice=[&](URailLocoSoundComponent* Sound,const FVector& Position,double Gain,double Pitch){
+  if(!Sound)return;Sound->SetWorldLocation(Position);
+  const float Volume=float(Gain*Perspective.outsideGain*Master);
+  if(Volume>.0001f){if(!Sound->IsPlaying())Sound->Start();}else{if(Sound->IsPlaying())Sound->Stop();return;}
+  Sound->SetVolumeMultiplier(Volume);Sound->SetLowPassFilterEnabled(true);Sound->SetLowPassFilterFrequency(float(Perspective.lowPassHz));
+  if(auto* Audio=Sound->GetAudioComponent())Audio->SetPitchMultiplier(float(Pitch));
+  Sound->Push(In,{});
  };
- Set(HornVoice,Horn,HornMix.gain*.65*Perspective.outsideGain*Effects,HornMix.pitch);
- Set(RollingVoice,Running,RollMix.gain*.40*std::sqrt(std::clamp(Speed/30.,0.,1.))*Perspective.outsideGain*Effects,RollMix.pitch*(.72+.68*std::clamp(Speed/35.,0.,1.)));
- const double Load=std::clamp(FMath::Abs(Traction)/240000.,0.,1.);
- Set(MotorVoice,Horn,HornMix.gain*.30*Load*Perspective.outsideGain*Engine,HornMix.pitch*(.65+1.1*std::clamp(Speed/32.,0.,1.)));
- for(auto* Audio:{RollingVoice,MotorVoice})if(Audio){if(Audio->VolumeMultiplier>.0001f){if(!Audio->IsPlaying())Audio->Play();}else Audio->Stop();}
+ Voice(LocoVoice,Horn,HornMix.gain*1.2,HornMix.pitch);
+ Voice(RollingVoice,Running,RollMix.gain*1.4,RollMix.pitch);
+ if(HornVoice){
+  HornVoice->SetWorldLocation(Horn);HornVoice->SetVolumeMultiplier(float(HornMix.gain*.65*Perspective.outsideGain*Effects));HornVoice->SetPitchMultiplier(float(HornMix.pitch));
+  HornVoice->SetLowPassFilterEnabled(true);HornVoice->SetLowPassFilterFrequency(float(Perspective.lowPassHz));
+ }
  if(HornMix.horn&&HornVoice){HornVoice->Play();UE_LOG(LogTemp,Display,TEXT("RAIL_AUDIO traffic approach horn distance=%.1fm opposing=%d"),FVector::Distance(Horn,Listener)/100,Opposing);}
 }
 
@@ -232,7 +286,8 @@ void URailSimulationSubsystem::PresentReviewAudio(const Rail::LongitudinalState&
  if(FParse::Param(FCommandLine::Get(),TEXT("TambaramPassingAudioReview"))){
   // Editor-only synthetic acoustic fixture, never a route/simulation mutation.
   // Use precisely the runtime source mixer and the real camera audio listener.
-  for(auto* Audio:{ServiceMovementAudio.Get(),ServiceStationAudio.Get(),ServiceHornAudio.Get(),ServiceBrakeAudio.Get(),ServiceCueAudio.Get(),ServiceMotorAudio.Get(),ServiceCoastAudio.Get(),ServiceSquealAudio.Get(),ServiceBrakeReleaseAudio.Get(),ServiceEmergencyAudio.Get()})if(Audio)Audio->Stop();
+  for(auto* Audio:{ServiceStationAudio.Get(),ServiceHornAudio.Get(),ServiceBrakeAudio.Get(),ServiceCueAudio.Get()})if(Audio)Audio->Stop();
+  if(ServiceLocoSound)ServiceLocoSound->Stop();
   auto* Controller=GetWorld()?GetWorld()->GetFirstPlayerController():nullptr;
   if(!Controller)return;
   FVector Listener,Front,Right;Controller->GetAudioListenerPosition(Listener,Front,Right);
@@ -242,7 +297,8 @@ void URailSimulationSubsystem::PresentReviewAudio(const Rail::LongitudinalState&
   const FVector Horn=Listener+Axis*(Head*100)+Across*500+FVector(0,0,150);
   const FVector Running=Listener+Axis*(std::clamp(0.,Head,Head+190)*100)+Across*500-FVector(0,0,120);
   ServiceAudioDynamics.Perspective(InCab,Delta);
-  ApplyTrafficAudio(Horn,Running,Listener,40,180000,Delta,InCab);
+  Rail::LongitudinalState Pass;Pass.speedMps=40;Pass.tractionN=180000;Pass.massKg=403000;
+  ApplyTrafficAudio(Horn,Running,Listener,Pass,Delta,InCab);
   const int32 Second=FMath::FloorToInt(TrafficReviewSeconds);
   if(Second!=TrafficReviewLastLoggedSecond){
    TrafficReviewLastLoggedSecond=Second;
@@ -262,45 +318,45 @@ void URailSimulationSubsystem::PresentReviewAudio(const Rail::LongitudinalState&
 #endif
 
 void URailSimulationSubsystem::ApplyServiceAudio(const Rail::LongitudinalState& State,double Curvature,float Delta,float Near,bool InCab){
- const float Speed=float(FMath::Abs(State.speedMps));
  const auto AudioPerspective=ServiceAudioDynamics.Perspective(InCab,Delta);
  const float Cab=float(AudioPerspective.outsideGain);
- const float Master=GetServiceAudioVolume(0),Engine=Master*GetServiceAudioVolume(1),Effects=Master*GetServiceAudioVolume(2);
- // Filter external sound consistently, including one-shots already in progress.
- // The station cue remains an unfiltered gameplay notification.
- for(auto* Audio:{ServiceMovementAudio.Get(),ServiceStationAudio.Get(),ServiceHornAudio.Get(),ServiceBrakeAudio.Get(),
-     ServiceMotorAudio.Get(),ServiceCoastAudio.Get(),ServiceSquealAudio.Get(),ServiceBrakeReleaseAudio.Get(),ServiceEmergencyAudio.Get()}){
+ const float Master=GetServiceAudioVolume(0),Effects=Master*GetServiceAudioVolume(2);
+ // Recordings of the outside world are filtered by the closed cab; the train's own voice carries
+ // its cab balance inside the synth, so its in-cab air and desk sounds stay unfiltered.
+ for(auto* Audio:{ServiceStationAudio.Get(),ServiceHornAudio.Get(),ServiceBrakeAudio.Get()}){
   if(IsValid(Audio)){Audio->SetLowPassFilterEnabled(true);Audio->SetLowPassFilterFrequency(float(AudioPerspective.lowPassHz));}
  }
- const auto Mix=ServiceAudioDynamics.Update(State,Curvature,Delta);
+ const auto Mix=ServiceAudioDynamics.Update(State,Delta);
  ServiceBrakeEngaged=State.appliedBrake>.02;
- ServiceRailGain=float(Mix.rail)*Cab;ServiceRailPitch=float(Mix.railPitch);
  const float Duck=ServiceHornAudio&&ServiceHornAudio->IsPlaying()?.4f:1.f;
  ServiceStationGain=FMath::FInterpTo(ServiceStationGain,Near*Near*.3f*Cab*Duck,Delta,2.f);
- auto Loop=[](UAudioComponent* Audio,float Gain,float Pitch){
-  if(!IsValid(Audio))return;Audio->SetVolumeMultiplier(Gain);Audio->SetPitchMultiplier(Pitch);
-  if(Gain>.001f){if(!Audio->IsPlaying())Audio->Play();}else Audio->Stop();
- };
- Loop(ServiceMovementAudio,ServiceRailGain*Effects*1.25f,ServiceRailPitch);Loop(ServiceStationAudio,ServiceStationGain*Effects,1.f);
- Loop(ServiceMotorAudio,float(Mix.motor)*float(AudioPerspective.motorGain)*Engine*1.6f,float(Mix.motorPitch));
- Loop(ServiceCoastAudio,float(Mix.coast)*Cab*Effects,.85f+FMath::Clamp(Speed/60.f,0.f,.35f));
- Loop(ServiceSquealAudio,float(Mix.squeal)*Cab*Effects,.9f+FMath::Clamp(Speed/100.f,0.f,.2f));
+ if(IsValid(ServiceStationAudio)){ServiceStationAudio->SetVolumeMultiplier(ServiceStationGain*Effects);if(ServiceStationGain*Effects>.001f){if(!ServiceStationAudio->IsPlaying())ServiceStationAudio->Play();}else ServiceStationAudio->Stop();}
+ if(IsValid(ServiceLocoSound)){
+  Rail::LocoSoundInput In;
+  In.speedMps=State.speedMps;In.effort=FMath::Clamp(State.tractionN/Rail::Wap7Drive::StartingTractionN,-1.0,1.0);
+  In.curvature=Curvature;In.brakeCylinder=State.appliedBrake;
+  In.applyFlow=Mix.applyFlow;In.releaseFlow=Mix.releaseFlow;In.ventFlow=Mix.ventFlow;
+  In.odometer=ServiceOdometer.metres;In.cab=ServiceAudioDynamics.cabBlend;
+  In.engineGain=GetServiceAudioVolume(1);In.effectsGain=GetServiceAudioVolume(2);
+  if(Master>.0001f){if(!ServiceLocoSound->IsPlaying())ServiceLocoSound->Start();}else if(ServiceLocoSound->IsPlaying())ServiceLocoSound->Stop();
+  ServiceLocoSound->SetVolumeMultiplier(Master);
+  ServiceLocoSound->Push(In,MoveTemp(ServiceStrikes));ServiceStrikes.Reset();
+ }
  if(IsValid(ServiceCueAudio))ServiceCueAudio->SetVolumeMultiplier(.18f*Effects);
  if(IsValid(ServiceHornAudio))ServiceHornAudio->SetVolumeMultiplier(float(AudioPerspective.hornGain)*Effects);
- if(IsValid(ServiceBrakeAudio))ServiceBrakeAudio->SetVolumeMultiplier(.3f*Cab*Effects);
- if(IsValid(ServiceBrakeReleaseAudio))ServiceBrakeReleaseAudio->SetVolumeMultiplier(.26f*Cab*Effects);
- if(IsValid(ServiceEmergencyAudio))ServiceEmergencyAudio->SetVolumeMultiplier(.45f*Cab*Effects);
- auto OneShot=[Cab,Effects](UAudioComponent* Audio,float Gain){if(IsValid(Audio)){Audio->Stop();Audio->SetVolumeMultiplier(Gain*Cab*Effects);Audio->Play();}};
+ // The distributor exhausts the cylinder on release: the recorded exhaust starts it, the synth
+ // carries the flow for as long as the simulated cylinder keeps falling.
  if(Mix.emergency){
   if(IsValid(ServiceBrakeAudio))ServiceBrakeAudio->Stop();
-  if(IsValid(ServiceBrakeReleaseAudio))ServiceBrakeReleaseAudio->Stop();
-  OneShot(ServiceEmergencyAudio,.45f);UE_LOG(LogTemp,Display,TEXT("RAIL_AUDIO emergency applied"));
+  UE_LOG(LogTemp,Display,TEXT("RAIL_AUDIO emergency applied"));
  }else if(Mix.brakeApply){
-  if(IsValid(ServiceBrakeReleaseAudio))ServiceBrakeReleaseAudio->Stop();
-  OneShot(ServiceBrakeAudio,.3f);UE_LOG(LogTemp,Display,TEXT("RAIL_AUDIO brake apply"));
+  UE_LOG(LogTemp,Display,TEXT("RAIL_AUDIO brake apply"));
  }else if(Mix.brakeRelease){
-  if(IsValid(ServiceBrakeAudio))ServiceBrakeAudio->Stop();
-  if(IsValid(ServiceEmergencyAudio))ServiceEmergencyAudio->Stop();
-  OneShot(ServiceBrakeReleaseAudio,.26f);UE_LOG(LogTemp,Display,TEXT("RAIL_AUDIO brake release"));
+  // Only a charged cylinder gives the recorded burst (scaled by its pressure); small corrections
+  // are carried by the synthesised flow alone, so brake jitter never machine-guns the recording.
+  if(IsValid(ServiceBrakeAudio)&&State.appliedBrake>.2&&!ServiceBrakeAudio->IsPlaying()){
+   ServiceBrakeAudio->SetVolumeMultiplier(.3f*Cab*Effects*float(FMath::Min(1.0,State.appliedBrake*1.4)));ServiceBrakeAudio->Play();
+  }
+  UE_LOG(LogTemp,Display,TEXT("RAIL_AUDIO brake release"));
  }
 }

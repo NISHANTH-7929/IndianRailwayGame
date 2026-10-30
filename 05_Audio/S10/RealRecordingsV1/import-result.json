@@ -1,0 +1,17 @@
+[
+  {
+    "asset": "/Game/IndianRailway/S10/AudioV1/SW_Wap7HornLoop",
+    "duration": 4.400000095367432,
+    "looping": true
+  },
+  {
+    "asset": "/Game/IndianRailway/S10/AudioV1/SW_TrafficHorn",
+    "duration": 6.099999904632568,
+    "looping": false
+  },
+  {
+    "asset": "/Game/IndianRailway/S10/AudioV1/SW_StationChatter",
+    "duration": 16.399999618530273,
+    "looping": true
+  }
+]

@@ -69,6 +69,8 @@ RouteId Governing(const SignalPlan& plan,const SignalSite& site,const Operations
 }
 }
 
+bool PathStation(const PathHistory& history,TrackPosition position,double& station){return HistoryStation(history,position,station);}
+
 const char* LinesideAspectName(LinesideAspect aspect){
     switch(aspect){case LinesideAspect::Caution:return "Caution";case LinesideAspect::Attention:return "Attention";
     case LinesideAspect::Proceed:return "Proceed";default:return "Stop";}

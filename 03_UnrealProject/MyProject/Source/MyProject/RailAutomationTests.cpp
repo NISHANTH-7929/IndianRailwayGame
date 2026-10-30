@@ -1,4 +1,5 @@
 #include "Simulation/RailAutomaticSignals.h"
+#include "Simulation/RailTrackJoints.h"
 #include "Misc/AutomationTest.h"
 #include "Simulation/RailKernel.h"
 #include "Simulation/RailHandling.h"
@@ -55,6 +56,8 @@ IMPLEMENT_SIMPLE_AUTOMATION_TEST(FRailAirBrakeTest,"IndianRailway.S10.AirBrake",
 bool FRailAirBrakeTest::RunTest(const FString& Parameters){const auto Report=Rail::RunAirBrakeTests();for(const auto& C:Report.cases)TestTrue(UTF8_TO_TCHAR((C.name+(C.detail.empty()?std::string():" "+C.detail)).c_str()),C.passed);return Report.Passed();}
 IMPLEMENT_SIMPLE_AUTOMATION_TEST(FRailSignalTest,"IndianRailway.S10.AutomaticSignals",EAutomationTestFlags::EditorContext|EAutomationTestFlags::EngineFilter)
 bool FRailSignalTest::RunTest(const FString& Parameters){const auto Report=Rail::RunSignalTests();for(const auto& C:Report.cases)TestTrue(UTF8_TO_TCHAR((C.name+(C.detail.empty()?std::string():" "+C.detail)).c_str()),C.passed);return Report.Passed();}
+IMPLEMENT_SIMPLE_AUTOMATION_TEST(FRailTrackJointTest,"IndianRailway.S10.TrackJoints",EAutomationTestFlags::EditorContext|EAutomationTestFlags::EngineFilter)
+bool FRailTrackJointTest::RunTest(const FString& Parameters){const auto Report=Rail::RunTrackJointTests();for(const auto& C:Report.cases)TestTrue(UTF8_TO_TCHAR((C.name+(C.detail.empty()?std::string():" "+C.detail)).c_str()),C.passed);return Report.Passed();}
 #include "RailChunkView.h"
 #include "Engine/World.h"
 #include "Engine/Engine.h"

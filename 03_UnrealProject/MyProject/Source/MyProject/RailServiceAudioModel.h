@@ -28,9 +28,10 @@ struct PassingAudioDynamics {
         return {gain,pitch,trigger};
     }
 };
-// Presentation only. No fabricated pneumatic pressure or wheel-slip state.
+// Presentation only. Air flows follow the simulated brake-cylinder rate (no fabricated pressure);
+// the train's continuous sound itself is synthesised by LocoSoundSynth (RailLocoSound.h).
 struct ServiceAudioMix {
-    double rail = 0, railPitch = 1, motor = 0, motorPitch = 1, coast = 0, squeal = 0;
+    double applyFlow = 0, releaseFlow = 0, ventFlow = 0; // A9 service exhaust, distributor release, emergency vent
     bool brakeApply = false, brakeRelease = false, emergency = false;
 };
 struct ServiceAudioPerspective {
@@ -42,7 +43,7 @@ struct ServiceAudioDynamics {
     bool initialized = false, emergencyPlayed = false, trendPlayed = false;
     int brakeTrend = 0;
     double previousBrake = 0, trendStartBrake = 0, steadySeconds = 0, eventCooldown = 0;
-    ServiceAudioMix smoothed;
+    double applyFlow = 0, releaseFlow = 0, ventFlow = 0;
     void Reset() { *this = ServiceAudioDynamics{}; }
     ServiceAudioPerspective Perspective(bool inCab, double dt) {
         dt = std::isfinite(dt) ? std::clamp(dt, 0.0, .1) : 0;
@@ -54,10 +55,9 @@ struct ServiceAudioDynamics {
         return {1 - .35 * cabBlend, 1 - .20 * cabBlend, .65 - .20 * cabBlend,
             20000 * std::pow(3200.0 / 20000, cabBlend)};
     }
-    ServiceAudioMix Update(const LongitudinalState& h, double curvaturePerMetre, double dt) {
+    ServiceAudioMix Update(const LongitudinalState& h, double dt) {
         dt = std::isfinite(dt) ? std::clamp(dt, 0.0, .1) : 0;
         const auto unit = [](double x) { return std::isfinite(x) ? std::clamp(x, 0.0, 1.0) : 0.0; };
-        const double speed = std::isfinite(h.speedMps) ? std::abs(h.speedMps) : 0;
         const double brake = unit(h.appliedBrake);
         const bool first = !initialized;
         if (first) {
@@ -66,34 +66,16 @@ struct ServiceAudioDynamics {
             // Recovery/resume reconstructs state; never replay an old emergency.
             emergencyPlayed = h.command.emergency;
         }
-        ServiceAudioMix target;
-        const double moving = unit(speed / 1.5);
-        const double speedBody = std::sqrt(unit(speed / 30.0));
-        const bool powering = !h.command.emergency && h.command.direction != 0 && brake < .01 &&
-            std::isfinite(h.tractionN) && std::abs(h.tractionN) > 1;
-        const double forceLoad = h.massKg > 0 ? unit(std::abs(h.tractionN) / h.massKg / .6) : 0;
-        const double load = powering ? unit(h.appliedThrottle) * (.35 + .65 * forceLoad) : 0;
-        target.rail = moving * (.12 + .33 * speedBody);
-        target.railPitch = .72 + .68 * unit(speed / 35.0);
-        target.motor = load * (.18 + .12 * moving);
-        target.motorPitch = .65 + 1.1 * unit(speed / 32.0);
-        target.coast = moving * speedBody * (.045 + .08 * (1 - load));
-        // Curve contact and brake friction are audible approximations, not simulated slip.
-        const double curve = std::isfinite(curvaturePerMetre) ? unit((std::abs(curvaturePerMetre) - .0006) / .006) : 0;
-        const double brakeForce = h.massKg > 0 ? unit(std::abs(h.brakingN) / h.massKg) : 0;
-        target.squeal = moving * std::max(.12 * curve, .10 * brake * brakeForce);
-        const double gainAlpha = 1 - std::exp(-dt * 4), pitchAlpha = 1 - std::exp(-dt * 2);
-        auto smooth = [](double& value, double goal, double alpha) { value += (goal - value) * alpha; };
-        smooth(smoothed.rail, target.rail, gainAlpha);
-        smooth(smoothed.motor, target.motor, gainAlpha);
-        smooth(smoothed.coast, target.coast, gainAlpha);
-        smooth(smoothed.squeal, target.squeal, gainAlpha);
-        smooth(smoothed.railPitch, target.railPitch, pitchAlpha);
-        smooth(smoothed.motorPitch, target.motorPitch, pitchAlpha);
-        ServiceAudioMix result = smoothed;
+        ServiceAudioMix result;
         if (!first && dt > 0) {
             eventCooldown = std::max(0.0, eventCooldown - dt);
             const double change = brake - previousBrake;
+            // Exhaust flow follows the cylinder: normalised to a full-service fill (~4 s) and the
+            // 18 s graduated release; the emergency vent decays as the brake pipe empties (~2.5 s).
+            const double alpha = 1 - std::exp(-dt / .1), rate = change / dt;
+            applyFlow += ((h.command.emergency ? 0 : unit(rate / .25)) - applyFlow) * alpha;
+            releaseFlow += (unit(-rate * 18) - releaseFlow) * alpha;
+            ventFlow = h.command.emergency ? (emergencyPlayed ? ventFlow * std::exp(-dt / 2.5) : 1.0) : 0.0;
             // Compare rates so the 18-second release is detected at high FPS.
             const double threshold = .005 * dt;
             const int trend = change > threshold ? 1 : (change < -threshold ? -1 : 0);
@@ -118,6 +100,9 @@ struct ServiceAudioDynamics {
             }
         }
         previousBrake = brake;
+        result.applyFlow = applyFlow;
+        result.releaseFlow = releaseFlow * (.3 + .7 * brake);
+        result.ventFlow = ventFlow;
         return result;
     }
 };

@@ -43,6 +43,8 @@ std::vector<LinesideAspect> EvaluateSignals(const SignalPlan& plan,const Operati
 struct SignalAhead { bool found=false; uint32_t site=0; double distance=0; LinesideAspect aspect=LinesideAspect::Stop; SignalRole role=SignalRole::Manual; };
 // Nearest signal in front of a train's head, located along its committed path history.
 SignalAhead NextSignal(const SignalPlan& plan,const std::vector<LinesideAspect>& aspects,const OperationsWorld& world,TrainId train);
+// Station of a track position along a train's committed path (false when absent or ambiguous).
+bool PathStation(const PathHistory& history,TrackPosition position,double& station);
 // Built once per content and graph; presentation and HUD share the same plan.
 const SignalPlan& SignalPlanFor(const OperationsWorld& world);
 TestReport RunSignalTests();

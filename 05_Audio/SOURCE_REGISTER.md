@@ -43,3 +43,18 @@ that additional third-party rights may apply.
 Keep original recordings and provenance under `05_Audio/`; runtime imports belong
 in the Unreal project's scoped audio folders, as specified by
 `02_TechnicalArchitecture/ARCHITECTURE_REVIEW_AND_BLUEPRINT.md`.
+
+## S10 re-cut (2026-10-30)
+
+`S10/RealRecordingsV1/` re-cuts the same authorized originals; no new sources were added
+(`prepare.py`, `manifest.json` with source and prepared hashes, trims and filters):
+
+- `SW_Wap7HornLoop`: sustain 5.60-10.40 s of the TanwerAman horn, high-passed at 300 Hz to remove
+  the recording's idling-engine rumble, equal-power loop; the held cab horn.
+- `SW_TrafficHorn`: the separate blast at 14.15-20.25 s of the same recording; other trains.
+- `SW_StationChatter`: 0.20-17.60 s of the arunangshubanerjee station ambience, crowd chatter only.
+  The original's horn (18 s) and train arrival (25-33 s) are excluded so no phantom train sounds.
+
+The vestibule loop and the synthetic `S9/JourneyAudioV3` textures are no longer used: train sound
+is synthesised from the simulation (`07_Documentation/S10/AUDIO.md`). Recommended next downloads
+are listed there.

@@ -79,7 +79,12 @@ tested evidence and is committed separately.
    laterite + weed ground material with texture detail.
 6. **In-train forces, curve resistance, wheel slip on wet rail** after brakes.
 7. **Audio from real recordings** (WAP-7 traction motors, compressor, horn,
-   LHB bogie rhythm), licensed or field-recorded.
+   LHB bogie rhythm), licensed or field-recorded. *Partly done 2026-10-30
+   (`AUDIO.md`): train sound is now synthesised from the simulation (converter,
+   gear, transformer, blowers, rolling, wheel strikes at real joints, air from
+   the brake cylinder) with a held horn and distinct voices per train. Still
+   needs WAP-7 field recordings to calibrate, compressor (MR model) and
+   station announcements.*
 
 ## Sources consulted
 

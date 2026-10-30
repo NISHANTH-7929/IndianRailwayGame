@@ -55,13 +55,14 @@ public:
  double FeedbackUntil=0;
  void Update(const FDriveDisplay& Display){
   if(!Display.Enabled||Display.Emergency!=Data.Emergency){Holds.Empty();CabOpen=false;}
+  if(!Display.Enabled)ReleaseHorn();
   if(Display.Feedback!=Data.Feedback)FeedbackUntil=FPlatformTime::Seconds()+6;
   Data=Display;Invalidate(EInvalidateWidgetReason::Paint);
  }
  virtual FVector2D ComputeDesiredSize(float)const override{return FVector2D(1280,720);}
  virtual bool SupportsKeyboardFocus()const override{return true;}
- virtual void OnFocusLost(const FFocusEvent&) override{if(TraceHudInput())UE_LOG(LogTemp,Display,TEXT("HUD_INPUT focus-lost holds=%d"),Holds.Num());Holds.Empty();}
- virtual void OnMouseCaptureLost(const FCaptureLostEvent& E) override{if(TraceHudInput())UE_LOG(LogTemp,Display,TEXT("HUD_INPUT capture-lost pointer=%u holds=%d"),uint32(E.PointerIndex),Holds.Num());Holds.Remove(uint32(E.PointerIndex)==FSlateApplication::CursorPointerIndex?100:E.PointerIndex);}
+ virtual void OnFocusLost(const FFocusEvent&) override{if(TraceHudInput())UE_LOG(LogTemp,Display,TEXT("HUD_INPUT focus-lost holds=%d"),Holds.Num());Holds.Empty();ReleaseHorn();}
+ virtual void OnMouseCaptureLost(const FCaptureLostEvent& E) override{if(TraceHudInput())UE_LOG(LogTemp,Display,TEXT("HUD_INPUT capture-lost pointer=%u holds=%d"),uint32(E.PointerIndex),Holds.Num());const int32 K=uint32(E.PointerIndex)==FSlateApplication::CursorPointerIndex?100:E.PointerIndex;Holds.Remove(K);if(HornPointer==K)ReleaseHorn();}
  virtual FReply OnMouseButtonDown(const FGeometry& G,const FPointerEvent& E)override{return E.GetEffectingButton()==EKeys::LeftMouseButton?Begin(G,E):FReply::Unhandled();}
  virtual FReply OnMouseMove(const FGeometry& G,const FPointerEvent& E)override{return Move(G,E);}
  virtual FReply OnMouseButtonUp(const FGeometry& G,const FPointerEvent& E)override{return E.GetEffectingButton()==EKeys::LeftMouseButton?End(G,E):FReply::Unhandled();}
@@ -77,7 +78,11 @@ public:
   if(Key==EKeys::Down){Fire(Power,GateToDemand(Rail::DrivingControl::StepValue(DemandToGate(Data.Power),-1)));return FReply::Handled();}
   if(Key==EKeys::Right){Fire(Brake,Rail::DrivingControl::StepValue(Data.Brake,1));return FReply::Handled();}
   if(Key==EKeys::Left){Fire(Brake,Rail::DrivingControl::StepValue(Data.Brake,-1));return FReply::Handled();}
-  if(Key==EKeys::SpaceBar&&!E.IsRepeat()){Fire(Horn);return FReply::Handled();}
+  if(Key==EKeys::SpaceBar&&!E.IsRepeat()){HornPointer=-2;Fire(Horn,1);return FReply::Handled();}
+  return FReply::Unhandled();
+ }
+ virtual FReply OnKeyUp(const FGeometry&,const FKeyEvent& E)override{
+  if(E.GetKey()==EKeys::SpaceBar&&HornPointer==-2){ReleaseHorn();return FReply::Handled();}
   return FReply::Unhandled();
  }
  virtual int32 OnPaint(const FPaintArgs&,const FGeometry& Geometry,const FSlateRect&,FSlateWindowElementList& Out,int32 Layer,const FWidgetStyle&,bool)const override{
@@ -230,6 +235,9 @@ private:
   if(Data.CanDepart)Out.Add({Depart,W*.5f-64,648,W*.5f+64,696});
   return Out;
  }
+ // The horn switch sounds while held: -1 released, -2 space bar, otherwise the pointer holding it.
+ int32 HornPointer=-1;
+ void ReleaseHorn(){if(HornPointer!=-1){HornPointer=-1;Fire(Horn,0);}}
  void Fire(int32 Kind,double Value=0){if(Data.Emergency&&(Kind==Power||Kind==Brake))return;if(Execute)Execute(Kind,Value);}
  static int32 Key(const FPointerEvent& E){return E.IsTouchEvent()?int32(E.GetPointerIndex()):100;}
  FVector2D Position(const FGeometry& G,const FPointerEvent& E)const{return G.AbsoluteToLocal(E.GetScreenSpacePosition())/(G.GetLocalSize().Y/720.f);}
@@ -245,6 +253,7 @@ private:
     Holds.Add(Key(E),{Kind,P.Y,Kind==Power?DemandToGate(Data.Power):Data.Brake});
     return FReply::Handled().CaptureMouse(SharedThis(this)).SetUserFocus(SharedThis(this));
    }
+   if(Kind==Horn){HornPointer=Key(E);Fire(Horn,1);return FReply::Handled().CaptureMouse(SharedThis(this)).SetUserFocus(SharedThis(this));}
    if(Kind==Drawer||Kind==CloseDrawer){CabOpen=Kind==Drawer;Holds.Empty();}
    else if(Kind==PowerMinus||Kind==PowerPlus)Fire(Power,GateToDemand(Rail::DrivingControl::StepValue(DemandToGate(Data.Power),Kind==PowerPlus?1:-1)));
    else if(Kind==BrakeMinus||Kind==BrakePlus)Fire(Brake,Rail::DrivingControl::StepValue(Data.Brake,Kind==BrakePlus?1:-1));
@@ -263,6 +272,7 @@ private:
  }
  FReply End(const FGeometry& G,const FPointerEvent& E){
   if(TraceHudInput())UE_LOG(LogTemp,Display,TEXT("HUD_INPUT end key=%d y=%.1f holds=%d"),Key(E),Position(G,E).Y,Holds.Num());
+  if(HornPointer==Key(E)){ReleaseHorn();return FReply::Handled().ReleaseMouseCapture();}
   if(const auto* Hold=Holds.Find(Key(E))){
    // Fast pointer gestures can begin/end within one frame, coalescing every
    // move event. Commit the release position before relinquishing capture.
@@ -338,7 +348,7 @@ void URailDrivingHud::Dispatch(int32 Kind,double Value){
  switch(Kind){
   case Power:S->SubmitPlayerCommand(Rail::CommandKind::Throttle,Value);break;
   case Brake:S->SubmitPlayerCommand(Rail::CommandKind::Brake,Value);break;
-  case Horn:S->ServiceAction(4);break;
+  case Horn:S->ServiceHorn(Value>0);break;
   case Camera:S->LocomotiveAction(0);break;
   case Pause:S->ServiceAction(2);break;
   case Emergency:S->SubmitPlayerCommand(Rail::CommandKind::Throttle,0);S->ServiceAction(7);break;

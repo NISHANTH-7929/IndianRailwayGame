@@ -7,6 +7,7 @@
 #include "Simulation/RailService.h"
 #include "Simulation/RailDispatchDiagnostics.h"
 #include "RailServiceAudioModel.h"
+#include "RailLocoSound.h"
 #include "RailSimulationSubsystem.generated.h"
 class ARailKernelView;
 class URailDrivingWidget;
@@ -47,6 +48,8 @@ public:
  const Rail::ServiceRuntime& ReadOnlyService() const {return Service;}
  const Rail::OperationsWorld& ReadOnlyOperations() const {return Operations;}
  void ServiceAction(int32 Action);
+ // Horn valve: sounds while held (minimum short blast), as on the cab horn switch.
+ void ServiceHorn(bool Down);
  float GetServiceAudioVolume(int32 Channel) const;
  void SetServiceAudioVolume(int32 Channel,float Value);
 #if WITH_EDITOR && WITH_DEV_AUTOMATION_TESTS
@@ -93,28 +96,30 @@ private:
  FString ServiceNotice;
  UPROPERTY() TObjectPtr<URailServiceWidget> ServiceWidget;
  UPROPERTY() TObjectPtr<ARailServiceView> ServiceView;
- UPROPERTY() TObjectPtr<UAudioComponent> ServiceMovementAudio;
+ // Recordings: platform chatter, held WAP-7 horn, distributor release exhaust, station cue.
  UPROPERTY() TObjectPtr<UAudioComponent> ServiceStationAudio;
  UPROPERTY() TObjectPtr<UAudioComponent> ServiceHornAudio;
  UPROPERTY() TObjectPtr<UAudioComponent> ServiceBrakeAudio;
  UPROPERTY() TObjectPtr<UAudioComponent> ServiceCueAudio;
- UPROPERTY() TObjectPtr<UAudioComponent> ServiceMotorAudio;
- UPROPERTY() TObjectPtr<UAudioComponent> ServiceCoastAudio;
- UPROPERTY() TObjectPtr<UAudioComponent> ServiceSquealAudio;
- UPROPERTY() TObjectPtr<UAudioComponent> ServiceBrakeReleaseAudio;
- UPROPERTY() TObjectPtr<UAudioComponent> ServiceEmergencyAudio;
+ // The player's train: one procedural voice driven by the simulation (RailLocoSound.h).
+ UPROPERTY() TObjectPtr<class URailLocoSoundComponent> ServiceLocoSound;
  Rail::ServiceAudioDynamics ServiceAudioDynamics;
+ Rail::TrainOdometer ServiceOdometer;
+ TArray<Rail::WheelStrike> ServiceStrikes;
+ bool ServiceHornHeld=false;double ServiceHornUntil=0;
+ // Other trains: their own horn recording, a locomotive voice at the loco and a rolling voice at
+ // the nearest bogie of the rake, each seeded per train so no two trains sound identical.
  UPROPERTY() TObjectPtr<UAudioComponent> TrafficHornAudio;
- UPROPERTY() TObjectPtr<UAudioComponent> TrafficRollingAudio;
- UPROPERTY() TObjectPtr<UAudioComponent> TrafficMotorAudio;
+ UPROPERTY() TObjectPtr<class URailLocoSoundComponent> TrafficLocoSound;
+ UPROPERTY() TObjectPtr<class URailLocoSoundComponent> TrafficRollingSound;
  Rail::PassingAudioDynamics TrafficHornDynamics,TrafficRollingDynamics;
  UPROPERTY() TObjectPtr<UAudioComponent> OpposingHornAudio;
- UPROPERTY() TObjectPtr<UAudioComponent> OpposingRollingAudio;
- UPROPERTY() TObjectPtr<UAudioComponent> OpposingMotorAudio;
+ UPROPERTY() TObjectPtr<class URailLocoSoundComponent> OpposingLocoSound;
+ UPROPERTY() TObjectPtr<class URailLocoSoundComponent> OpposingRollingSound;
  Rail::PassingAudioDynamics OpposingHornDynamics,OpposingRollingDynamics;
  uint64 OpposingAudioTrain=0; // presentation source identity, never serialized
  void UpdateTrafficAudio(float Delta,bool InCab);
- void ApplyTrafficAudio(const FVector& Horn,const FVector& Running,const FVector& Listener,double Speed,double Traction,float Delta,bool InCab,bool Opposing=false);
+ void ApplyTrafficAudio(const FVector& Horn,const FVector& Running,const FVector& Listener,const Rail::LongitudinalState& Traffic,float Delta,bool InCab,bool Opposing=false);
 #if WITH_EDITOR && WITH_DEV_AUTOMATION_TESTS
  double TrafficReviewSeconds=0;
  int32 TrafficReviewLastLoggedSecond=-1;
@@ -125,13 +130,13 @@ private:
  mutable bool ServiceAudioPreferencesLoaded=false;
  mutable float ServiceAudioVolumes[3]={1.f,1.f,1.f};
  bool ServiceAudioLoaded=false,ServiceAudioWasRunning=false,ServiceBrakeEngaged=false;
- float ServiceRailGain=0,ServiceStationGain=0,ServiceRailPitch=1;
+ float ServiceStationGain=0;
  void InitializeServiceAudio();
  void UpdateServiceAudio();
  void ApplyServiceAudio(const Rail::LongitudinalState& State,double Curvature,float Delta,float Near,bool InCab);
  void StopServiceAudio();
  void DestroyServiceAudio();
- void PlayServiceHorn();
+ void PlayServiceHorn(bool Held=false);
  void InitializeS6();
  void TickS6(float DeltaTime);
  void WriteS6Evidence();

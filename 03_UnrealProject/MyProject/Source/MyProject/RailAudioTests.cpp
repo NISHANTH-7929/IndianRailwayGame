@@ -1,6 +1,8 @@
 #include "Misc/AutomationTest.h"
 #include "Sound/SoundWave.h"
 #include "RailSimulationSubsystem.h"
+#include "RailLocoSoundComponent.h"
+#include "RailLocoSound.h"
 #include "Engine/World.h"
 #include "Engine/Engine.h"
 #include "Components/AudioComponent.h"
@@ -10,13 +12,15 @@
 #if WITH_DEV_AUTOMATION_TESTS
 IMPLEMENT_SIMPLE_AUTOMATION_TEST(FRailAudioBankTest,"IndianRailway.S8.AudioBank",EAutomationTestFlags::EditorContext|EAutomationTestFlags::EngineFilter)
 bool FRailAudioBankTest::RunTest(const FString& Parameters){
- const TCHAR* Names[]={TEXT("Rail"),TEXT("Station"),TEXT("Horn"),TEXT("Brake"),TEXT("Motor"),TEXT("Coast"),TEXT("Squeal"),TEXT("BrakeRelease"),TEXT("Emergency")};
- for(int32 I=0;I<9;++I){
-  const FString Path=FString::Printf(TEXT("/Game/IndianRailway/%sSW_%s.SW_%s"),I<4?TEXT("S8/Audio/"):TEXT("S9/JourneyAudioV3/"),Names[I],Names[I]);
-  auto* Sound=LoadObject<USoundWave>(nullptr,*Path);
-  if(!TestNotNull(*Path,Sound))continue;
+ // Recordings only: the trains' continuous sound is synthesised from the simulation (RailLocoSound.h).
+ const struct {const TCHAR* Path;bool Loop;} Bank[]={
+  {TEXT("/Game/IndianRailway/S10/AudioV1/SW_StationChatter.SW_StationChatter"),true},{TEXT("/Game/IndianRailway/S10/AudioV1/SW_Wap7HornLoop.SW_Wap7HornLoop"),true},
+  {TEXT("/Game/IndianRailway/S10/AudioV1/SW_TrafficHorn.SW_TrafficHorn"),false},{TEXT("/Game/IndianRailway/S8/Audio/SW_Brake.SW_Brake"),false}};
+ for(const auto& Entry:Bank){
+  auto* Sound=LoadObject<USoundWave>(nullptr,Entry.Path);
+  if(!TestNotNull(Entry.Path,Sound))continue;
   TestEqual(TEXT("Mono bank"),Sound->NumChannels,1);
-  TestEqual(TEXT("Only continuous textures loop"),bool(Sound->bLooping),I<2||(I>=4&&I<=6));
+  TestEqual(TEXT("Only continuous textures loop"),bool(Sound->bLooping),Entry.Loop);
   TestTrue(TEXT("Finite short mobile sample"),FMath::IsFinite(Sound->Duration)&&Sound->Duration>1&&Sound->Duration<40);
   TestEqual(TEXT("No hidden asset gain boost"),Sound->Volume,1.f);
  }
@@ -35,7 +39,10 @@ bool FRailAudioLifecycleTest::RunTest(const FString& Parameters){
   System->Service.Select();System->Service.ConfirmFormation();TestTrue(TEXT("Service starts"),System->Service.Start(System->Operations).ok);
   System->S6Paused=false;System->S6Blocked=false;System->UpdateServiceAudio();
   TestTrue(TEXT("Running audio state"),System->ServiceAudioWasRunning);
-  TestEqual(TEXT("Exactly ten resident sounds"),System->ServiceSounds.Num(),10);
+  TestEqual(TEXT("Exactly five resident recordings"),System->ServiceSounds.Num(),5);
+  TestNotNull(TEXT("Player train voice"),System->ServiceLocoSound.Get());
+  TestTrue(TEXT("Distinct traffic and opposing voices"),System->TrafficLocoSound&&System->OpposingLocoSound&&System->TrafficLocoSound!=System->OpposingLocoSound&&System->TrafficRollingSound&&System->OpposingRollingSound);
+  TestTrue(TEXT("Player voice renders every layer, traffic split loco/rolling"),System->ServiceLocoSound->Layers==Rail::SoundAll&&!(System->TrafficLocoSound->Layers&Rail::SoundRunning)&&System->TrafficRollingSound->Layers==Rail::SoundRunning);
   TestNotNull(TEXT("Dedicated protected audio bus"),System->ServiceAudioSubmix.Get());
   TestEqual(TEXT("Limiter owned by service bus"),System->ServiceAudioSubmix->SubmixEffectChain.Num(),1);
   auto* Limiter=Cast<USubmixEffectDynamicsProcessorPreset>(System->ServiceAudioSubmix->SubmixEffectChain[0]);
@@ -45,10 +52,11 @@ bool FRailAudioLifecycleTest::RunTest(const FString& Parameters){
    TestEqual(TEXT("Limiter has overlap headroom"),Limiter->Settings.ThresholdDb,-6.f);
    TestEqual(TEXT("Limiter has final output headroom"),Limiter->Settings.OutputGainDb,-3.f);
   }
-  TestTrue(TEXT("Voices routed through service class"),System->ServiceMotorAudio->SoundClassOverride==System->ServiceAudioClass);
+  TestTrue(TEXT("Voices routed through service class"),System->ServiceLocoSound->SoundClass==System->ServiceAudioClass&&System->ServiceHornAudio->SoundClassOverride==System->ServiceAudioClass);
   TestTrue(TEXT("Class routes to protected bus"),System->ServiceAudioClass->Properties.DefaultSubmix==System->ServiceAudioSubmix);
   TestTrue(TEXT("Traffic horn spatialized"),System->TrafficHornAudio->bAllowSpatialization);
   TestTrue(TEXT("Opposing horn spatialized"),System->OpposingHornAudio->bAllowSpatialization);
+  TestTrue(TEXT("Traffic voices spatialized, player voice not"),System->TrafficLocoSound->bAllowSpatialization&&System->OpposingRollingSound->bAllowSpatialization&&!System->ServiceLocoSound->bAllowSpatialization);
   TestTrue(TEXT("Opposing horn shares protected bus"),System->OpposingHornAudio->SoundClassOverride==System->ServiceAudioClass);
   TestTrue(TEXT("Traffic horn shares protected bus"),System->TrafficHornAudio->SoundClassOverride==System->ServiceAudioClass);
   System->TrafficHornDynamics.hornPlayed=true;
@@ -58,46 +66,48 @@ bool FRailAudioLifecycleTest::RunTest(const FString& Parameters){
   System->ServiceAudioVolumes[0]=0;
   Rail::LongitudinalState Audible;Audible.massKg=400000;Audible.speedMps=20;Audible.appliedThrottle=1;Audible.tractionN=200000;
   System->ApplyServiceAudio(Audible,0,.1f,1,false);
-  TestEqual(TEXT("Master zero mutes motor"),System->ServiceMotorAudio->VolumeMultiplier,0.f);
-  TestEqual(TEXT("Master zero mutes rail"),System->ServiceMovementAudio->VolumeMultiplier,0.f);
+  TestFalse(TEXT("Master zero silences the train voice"),System->ServiceLocoSound->IsPlaying());
   TestEqual(TEXT("Master zero mutes alerts"),System->ServiceCueAudio->VolumeMultiplier,0.f);
+  TestEqual(TEXT("Master zero mutes horn"),System->ServiceHornAudio->VolumeMultiplier,0.f);
   System->ServiceAudioVolumes[0]=1;System->ServiceAudioVolumes[1]=0;
   System->ApplyServiceAudio(Audible,0,.1f,1,false);
-  TestEqual(TEXT("Engine category mutes traction"),System->ServiceMotorAudio->VolumeMultiplier,0.f);
-  TestTrue(TEXT("Engine category retains effects"),System->ServiceMovementAudio->VolumeMultiplier>0);
+  TestEqual(TEXT("Engine category mutes traction"),System->ServiceLocoSound->LastInput.engineGain,0.0);
+  TestTrue(TEXT("Engine category retains effects"),System->ServiceLocoSound->LastInput.effectsGain>0);
   System->ServiceAudioVolumes[1]=1;System->ServiceAudioVolumes[2]=0;
   System->ApplyServiceAudio(Audible,0,.1f,1,false);
-  TestTrue(TEXT("Effects category retains engine"),System->ServiceMotorAudio->VolumeMultiplier>0);
-  TestEqual(TEXT("Effects zero mutes rolling"),System->ServiceMovementAudio->VolumeMultiplier,0.f);
-  TestEqual(TEXT("Effects zero mutes emergency"),System->ServiceEmergencyAudio->VolumeMultiplier,0.f);
+  TestTrue(TEXT("Effects category retains engine"),System->ServiceLocoSound->LastInput.engineGain>0);
+  TestEqual(TEXT("Effects zero mutes rolling and air"),System->ServiceLocoSound->LastInput.effectsGain,0.0);
+  TestTrue(TEXT("Realised effort reaches the voice"),FMath::Abs(System->ServiceLocoSound->LastInput.effort-200000/Rail::Wap7Drive::StartingTractionN)<1e-9);
   System->ServiceAudioVolumes[2]=1;
   for(int32 Reason=0;Reason<3;++Reason){
    System->S6Paused=Reason==0;System->S6Blocked=Reason==1;System->AppBackground.Store(Reason==2);
    System->UpdateServiceAudio();TestFalse(TEXT("Pause/block/background stops running state"),System->ServiceAudioWasRunning);
-   for(auto* Audio:{System->ServiceMovementAudio.Get(),System->ServiceStationAudio.Get(),System->ServiceHornAudio.Get(),System->ServiceBrakeAudio.Get(),System->ServiceCueAudio.Get(),
-       System->ServiceMotorAudio.Get(),System->ServiceCoastAudio.Get(),System->ServiceSquealAudio.Get(),System->ServiceBrakeReleaseAudio.Get(),System->ServiceEmergencyAudio.Get()}){
+   for(auto* Audio:{System->ServiceStationAudio.Get(),System->ServiceHornAudio.Get(),System->ServiceBrakeAudio.Get(),System->ServiceCueAudio.Get()}){
     if(TestNotNull(TEXT("Owned voice"),Audio))TestFalse(TEXT("Suspended voice stopped"),Audio->IsPlaying());
    }
-   TestEqual(TEXT("Rail gain resets"),System->ServiceRailGain,0.f);
+   TestFalse(TEXT("Suspended train voice stopped"),System->ServiceLocoSound->IsPlaying());
+   TestFalse(TEXT("Suspension releases the horn switch"),System->ServiceHornHeld);
    TestEqual(TEXT("Station gain resets"),System->ServiceStationGain,0.f);
    TestTrue(TEXT("Pause preserves traffic encounter latch"),System->TrafficHornDynamics.hornPlayed);
    TestFalse(TEXT("Traffic horn stops on suspension"),System->TrafficHornAudio->IsPlaying());
-   TestFalse(TEXT("Traffic rolling stops on suspension"),System->TrafficRollingAudio->IsPlaying());
-   TestFalse(TEXT("Traffic motor stops on suspension"),System->TrafficMotorAudio->IsPlaying());
+   TestFalse(TEXT("Traffic rolling stops on suspension"),System->TrafficRollingSound->IsPlaying());
+   TestFalse(TEXT("Traffic loco stops on suspension"),System->TrafficLocoSound->IsPlaying());
    TestTrue(TEXT("Opposing encounter retained during suspension"),System->OpposingHornDynamics.hornPlayed);
-   for(auto* Voice:{System->OpposingHornAudio.Get(),System->OpposingRollingAudio.Get(),System->OpposingMotorAudio.Get()})TestFalse(TEXT("Opposing voice stops on suspension"),Voice->IsPlaying());
+   TestFalse(TEXT("Opposing horn stops on suspension"),System->OpposingHornAudio->IsPlaying());
+   for(auto* Voice:{System->OpposingLocoSound.Get(),System->OpposingRollingSound.Get()})TestFalse(TEXT("Opposing voice stops on suspension"),Voice->IsPlaying());
    System->S6Paused=false;System->S6Blocked=false;System->AppBackground.Store(false);System->UpdateServiceAudio();
    TestTrue(TEXT("Resume audio state"),System->ServiceAudioWasRunning);
-   TestEqual(TEXT("Resume reuses bank"),System->ServiceSounds.Num(),10);
+   TestEqual(TEXT("Resume reuses bank"),System->ServiceSounds.Num(),5);
   }
-  TWeakObjectPtr<UAudioComponent> RetiredMotor=System->ServiceMotorAudio;
+  TWeakObjectPtr<URailLocoSoundComponent> RetiredMotor=System->ServiceLocoSound;
   System->DestroyServiceAudio();
   TestFalse(TEXT("Teardown releases bank"),System->ServiceAudioLoaded);
   TestEqual(TEXT("Teardown clears sound references"),System->ServiceSounds.Num(),0);
   TestNull(TEXT("Teardown clears traffic horn"),System->TrafficHornAudio.Get());
   TestNull(TEXT("Teardown clears opposing horn"),System->OpposingHornAudio.Get());
-  TestNull(TEXT("Teardown clears opposing rolling"),System->OpposingRollingAudio.Get());
-  TestNull(TEXT("Teardown clears opposing motor"),System->OpposingMotorAudio.Get());
+  TestNull(TEXT("Teardown clears opposing rolling"),System->OpposingRollingSound.Get());
+  TestNull(TEXT("Teardown clears opposing loco"),System->OpposingLocoSound.Get());
+  TestNull(TEXT("Teardown clears player voice"),System->ServiceLocoSound.Get());
   TestTrue(TEXT("Teardown destroys registered component"),!RetiredMotor.IsValid()||!RetiredMotor->IsRegistered());
   System->DestroyServiceAudio(); // Idempotent during world teardown.
  }else AddError(TEXT("No simulation subsystem"));
@@ -107,50 +117,42 @@ IMPLEMENT_SIMPLE_AUTOMATION_TEST(FRailAudioDynamicsTest,"IndianRailway.S8.AudioD
 bool FRailAudioDynamicsTest::RunTest(const FString& Parameters){
  Rail::LongitudinalState H;H.massKg=400000;
  Rail::ServiceAudioDynamics Audio;
- auto Mix=Audio.Update(H,0,.033);
- TestEqual(TEXT("No moving texture at rest"),Mix.rail+Mix.motor+Mix.coast+Mix.squeal,0.0);
+ auto Mix=Audio.Update(H,.033);
+ TestEqual(TEXT("No air at rest"),Mix.applyFlow+Mix.releaseFlow+Mix.ventFlow,0.0);
  TestFalse(TEXT("No startup transient"),Mix.brakeApply||Mix.brakeRelease||Mix.emergency);
- H.speedMps=20;H.appliedThrottle=.8;H.tractionN=180000;
- for(int I=0;I<60;++I)Mix=Audio.Update(H,0,1.0/30);
- const auto Powered=Mix;
- TestTrue(TEXT("Motion and real traction audible"),Mix.rail>.1&&Mix.motor>.05);
- TestEqual(TEXT("Straight unbraked has no squeal"),Mix.squeal,0.0);
- H.appliedThrottle=0;H.tractionN=0;
- for(int I=0;I<60;++I)Mix=Audio.Update(H,0,1.0/30);
- TestTrue(TEXT("Coast removes power and raises running air"),Mix.motor<.001&&Mix.coast>Powered.coast);
- for(int I=0;I<60;++I)Mix=Audio.Update(H,.004,1.0/30);
- TestTrue(TEXT("Actual curved edge activates contact approximation"),Mix.squeal>.01);
- Rail::ServiceAudioDynamics Reverse;H.speedMps=-20;
- for(int I=0;I<60;++I)Mix=Reverse.Update(H,0,1.0/30);
- TestTrue(TEXT("Reverse running still audible"),Mix.rail>.1);
- H.speedMps=0;H.appliedBrake=0;Audio.Reset();Audio.Update(H,0,.033);
- int Apply=0,Release=0,Emergency=0;
- for(int I=1;I<=30;++I){H.appliedBrake=double(I)/30;Mix=Audio.Update(H,0,1.0/30);Apply+=Mix.brakeApply;}
- for(int I=0;I<30;++I){Mix=Audio.Update(H,0,1.0/30);Apply+=Mix.brakeApply;}
- for(int I=29;I>=0;--I){H.appliedBrake=double(I)/30;Mix=Audio.Update(H,0,1.0/30);Release+=Mix.brakeRelease;}
+ int Apply=0,Release=0,Emergency=0;double PeakApply=0,PeakRelease=0;
+ for(int I=1;I<=120;++I){H.appliedBrake=FMath::Min(double(I)/120,1.0);Mix=Audio.Update(H,1.0/30);Apply+=Mix.brakeApply;PeakApply=FMath::Max(PeakApply,Mix.applyFlow);}
+ TestTrue(TEXT("A full-service fill exhausts the A9 at full flow"),PeakApply>.9&&Mix.releaseFlow<1e-6);
+ for(int I=0;I<30;++I){Mix=Audio.Update(H,1.0/30);Apply+=Mix.brakeApply;}
+ TestTrue(TEXT("Exhaust stops when the cylinder is steady"),Mix.applyFlow<.01);
+ for(int I=539;I>=0;--I){
+  H.appliedBrake=double(I)/540;Mix=Audio.Update(H,1.0/30);Release+=Mix.brakeRelease;PeakRelease=FMath::Max(PeakRelease,Mix.releaseFlow);
+  if(I==135)TestTrue(TEXT("Release exhaust falls with cylinder pressure"),Mix.releaseFlow<PeakRelease*.8&&Mix.releaseFlow>.3);
+ }
+ TestTrue(TEXT("The 18 s graduated release exhausts throughout"),PeakRelease>.9&&Mix.applyFlow<1e-6);
  TestEqual(TEXT("Continuous brake application emits once"),Apply,1);
  TestEqual(TEXT("Continuous brake release emits once"),Release,1);
- Rail::ServiceAudioDynamics HighFps;H.appliedBrake=1;HighFps.Update(H,0,1.0/120);
+ Rail::ServiceAudioDynamics HighFps;H.appliedBrake=1;HighFps.Update(H,1.0/120);
  int SlowRelease=0;
- for(int I=1;I<=2160;++I){H.appliedBrake=1.-double(I)/2160;SlowRelease+=HighFps.Update(H,0,1.0/120).brakeRelease;}
+ for(int I=1;I<=2160;++I){H.appliedBrake=1.-double(I)/2160;SlowRelease+=HighFps.Update(H,1.0/120).brakeRelease;}
  TestEqual(TEXT("18-second release emits once at 120 FPS"),SlowRelease,1);
  H.command.emergency=true;H.appliedBrake=0;
- Mix=Audio.Update(H,0,.033);TestFalse(TEXT("Emergency waits for application"),Mix.emergency);
- for(int I=1;I<=60;++I){H.appliedBrake=FMath::Min(double(I)/15,1.0);Mix=Audio.Update(H,0,1.0/30);Emergency+=Mix.emergency;}
+ Mix=Audio.Update(H,.033);TestFalse(TEXT("Emergency waits for application"),Mix.emergency);
+ TestEqual(TEXT("Emergency vents the brake pipe at once"),Mix.ventFlow,1.0);
+ for(int I=1;I<=60;++I){H.appliedBrake=FMath::Min(double(I)/15,1.0);Mix=Audio.Update(H,1.0/30);Emergency+=Mix.emergency;}
  TestEqual(TEXT("Emergency latch emits once"),Emergency,1);
- Audio.Reset();Mix=Audio.Update(H,0,.033);
+ TestTrue(TEXT("Emergency vent dies away as the pipe empties"),Mix.ventFlow<.6&&Mix.ventFlow>.2&&Mix.applyFlow<1e-6);
+ Audio.Reset();Mix=Audio.Update(H,.033);
  TestFalse(TEXT("Restore held emergency silently"),Mix.emergency||Mix.brakeApply||Mix.brakeRelease);
- TestEqual(TEXT("Restore gain begins with no stationary rolling"),Mix.rail,0.0);
- H.command.emergency=false;H.appliedBrake=0;Audio.Update(H,0,.1);
- H.command.emergency=true;H.appliedBrake=.1;Mix=Audio.Update(H,0,.1);
+ TestEqual(TEXT("Restore does not replay the vent"),Audio.Update(H,.033).ventFlow,0.0);
+ H.command.emergency=false;H.appliedBrake=0;Audio.Update(H,.1);
+ H.command.emergency=true;H.appliedBrake=.1;Mix=Audio.Update(H,.1);
  TestTrue(TEXT("New emergency after reset audible"),Mix.emergency);
- Rail::ServiceAudioDynamics Slow,Fast;H.command.emergency=false;H.appliedBrake=0;H.speedMps=20;
- Rail::ServiceAudioMix A,B;
- for(int I=0;I<30;++I)A=Slow.Update(H,0,1.0/30);
- for(int I=0;I<120;++I)B=Fast.Update(H,0,1.0/120);
- TestTrue(TEXT("Fade independent of rendering cadence"),FMath::Abs(A.rail-B.rail)<1e-8);
- H.speedMps=3;for(int I=0;I<120;++I)B=Fast.Update(H,0,1.0/30);
- TestTrue(TEXT("Deceleration lowers wheel rate and running gain"),B.rail<A.rail&&B.railPitch<A.railPitch);
+ Rail::ServiceAudioDynamics Slow,Fast;H.command.emergency=false;H.appliedBrake=0;
+ Rail::ServiceAudioMix A,B;Slow.Update(H,1.0/30);Fast.Update(H,1.0/120);
+ for(int I=1;I<=30;++I){H.appliedBrake=I/120.0;A=Slow.Update(H,1.0/30);}
+ for(int I=1;I<=120;++I){H.appliedBrake=I/480.0;B=Fast.Update(H,1.0/120);}
+ TestTrue(TEXT("Air flow independent of rendering cadence"),FMath::Abs(A.applyFlow-B.applyFlow)<.02);
  Rail::ServiceAudioDynamics CabSlow,CabFast;
  auto Outside=CabSlow.Perspective(false,0);
  CabFast.Perspective(false,0);
@@ -166,6 +168,53 @@ bool FRailAudioDynamicsTest::RunTest(const FString& Parameters){
  TestTrue(TEXT("Cab exit progressively restores gain and bandwidth"),MidExit.outsideGain>VF.outsideGain&&MidExit.lowPassHz>VF.lowPassHz&&MidExit.lowPassHz<20000);
  CabFast.Reset();const auto RestoredCab=CabFast.Perspective(true,0);
  TestTrue(TEXT("Resume inside cab starts with cab balance"),FMath::Abs(RestoredCab.outsideGain-.65)<1e-8&&FMath::Abs(RestoredCab.lowPassHz-3200)<1e-7);
+ return !HasAnyErrors();
+}
+IMPLEMENT_SIMPLE_AUTOMATION_TEST(FRailLocoSoundTest,"IndianRailway.S10.LocoSound",EAutomationTestFlags::EditorContext|EAutomationTestFlags::EngineFilter)
+bool FRailLocoSoundTest::RunTest(const FString& Parameters){
+ // Goertzel power at one frequency, normalised to the block length.
+ auto Power=[](const TArray<float>& X,double Hz,double Rate){const double W=2*PI*Hz/Rate,C=2*FMath::Cos(W);double S1=0,S2=0;for(float V:X){const double S0=V+C*S1-S2;S2=S1;S1=S0;}return (S1*S1+S2*S2-C*S1*S2)/double(X.Num())/double(X.Num());};
+ auto Run=[](Rail::LocoSoundSynth& Synth,const Rail::LocoSoundInput& In,double Seconds){
+  TArray<float> Out;Out.SetNumZeroed(int32(Seconds*48000));
+  for(int32 At=0;At<Out.Num();At+=1600){Rail::LocoSoundInput Step=In;Step.odometer+=In.speedMps*At/48000.;Synth.Submit(Step);Synth.Render(Out.GetData()+At,FMath::Min(1600,Out.Num()-At));}
+  return Out;
+ };
+ auto Tail=[](const TArray<float>& X,int32 From){return TArray<float>(X.GetData()+From,X.Num()-From);};
+ const double Speed=71/3.6;
+ TestTrue(TEXT("Drive train: 71 km/h is the 1283 rpm continuous rating"),FMath::Abs(Rail::Wap7Drive::MotorRps(Speed)*60-1283)<8);
+ Rail::LocoSoundInput Powering;Powering.speedMps=Speed;Powering.effort=.7;Powering.cab=1;
+ Rail::LocoSoundSynth A(5),B(5),Idle(5),Other(6);
+ const auto X=Run(A,Powering,2),Y=Run(B,Powering,2);
+ TestTrue(TEXT("Deterministic per seed"),X==Y);
+ TestTrue(TEXT("Another train's seed sounds different"),Run(Other,Powering,2)!=X);
+ bool Finite=true;float Peak=0;for(float V:X){Finite&=FMath::IsFinite(V);Peak=FMath::Max(Peak,FMath::Abs(V));}
+ TestTrue(TEXT("Bounded finite output"),Finite&&Peak<1&&Peak>.01f);
+ const double Mesh=A.MeshHz();
+ TestTrue(TEXT("Gear mesh follows wheel speed (20-tooth pinion)"),FMath::Abs(Mesh-Rail::Wap7Drive::MotorRps(Speed)*20)<1e-6);
+ Rail::LocoSoundInput Coasting=Powering;Coasting.effort=0;
+ const auto Z=Run(Idle,Coasting,2);const auto Loaded=Tail(X,48000),Coast=Tail(Z,48000);
+ TestTrue(TEXT("Converter tones need torque (square-wave 5th harmonic)"),Power(Loaded,5*A.StatorHz(),48000)>20*Power(Coast,5*Idle.StatorHz(),48000));
+ TestTrue(TEXT("Gear mesh louder under torque"),Power(Loaded,Mesh,48000)>2*Power(Coast,Mesh,48000));
+ TestEqual(TEXT("Square-wave operation above base speed"),Rail::Wap7Drive::ModulationFor(A.StatorHz()).pulses,1);
+ TestEqual(TEXT("Asynchronous PWM when starting"),Rail::Wap7Drive::ModulationFor(Rail::Wap7Drive::StatorHz(2,1)).pulses,0);
+ // Wheel strikes fire once each, in order, when the odometer reaches them.
+ Rail::LocoSoundSynth W(9);Rail::LocoSoundInput Run20;Run20.speedMps=20;Run20.cab=1;W.Submit(Run20);
+ for(int K=0;K<6;++K){W.Schedule({uint64_t(100+K),5+1.9*K,1,Rail::StrikeKind::Joint});W.Schedule({uint64_t(100+K),5+1.9*K,1,Rail::StrikeKind::Joint});}
+ TestEqual(TEXT("Duplicate strikes are ignored"),W.Pending(),6);
+ TArray<float> Buffer;Buffer.SetNumZeroed(4800);int32 FirstAt=-1;
+ for(int32 Block=0;Block<10;++Block){Rail::LocoSoundInput Step=Run20;Step.odometer=Block*.1*20;W.Submit(Step);W.Render(Buffer.GetData(),4800);if(FirstAt<0&&W.StrikesFired()>0)FirstAt=Block;}
+ TestEqual(TEXT("Every axle strikes once"),W.StrikesFired(),6);
+ TestEqual(TEXT("First strike at 5 m (0.25 s at 20 m/s)"),FirstAt,2);
+ W.Schedule({100,W.Odometer()+1,1,Rail::StrikeKind::Joint});TestEqual(TEXT("A sounded strike is not repeated"),W.Pending(),0);
+ // Energised standstill: transformer hum and blowers; de-energised: silence.
+ Rail::LocoSoundSynth Still(3),Dead(3);Rail::LocoSoundInput Stand;Stand.cab=1;
+ const auto Hum=Tail(Run(Still,Stand,1.5),24000);
+ TestTrue(TEXT("Energised standstill: 100 Hz transformer hum"),Power(Hum,100,48000)>50*Power(Hum,137,48000));
+ Stand.energized=false;const auto Off=Tail(Run(Dead,Stand,1.5),24000);float OffPeak=0;for(float V:Off)OffPeak=FMath::Max(OffPeak,FMath::Abs(V));
+ TestTrue(TEXT("De-energised standstill is silent"),OffPeak<1e-4f);
+ Rail::TrainOdometer Odo;Odo.Advance(2,100);const double Base=Odo.metres;Odo.Advance(2,103.5);
+ TestTrue(TEXT("Odometer follows the head"),FMath::Abs(Odo.metres-Base-3.5)<1e-9);
+ Odo.Advance(2,900);TestTrue(TEXT("A jump moves past the synth snap distance"),Odo.metres-Base>50);
  return !HasAnyErrors();
 }
 IMPLEMENT_SIMPLE_AUTOMATION_TEST(FRailPassingAudioTest,"IndianRailway.S8.PassingAudio",EAutomationTestFlags::EditorContext|EAutomationTestFlags::EngineFilter)

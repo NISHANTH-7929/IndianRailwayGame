@@ -25,6 +25,7 @@
 #include "Engine/StaticMesh.h"
 #include "Components/InstancedStaticMeshComponent.h"
 #include "Components/AudioComponent.h"
+#include "RailLocoSoundComponent.h"
 #include "Camera/CameraActor.h"
 #include "Camera/CameraComponent.h"
 #include "GameFramework/PlayerController.h"
@@ -319,7 +320,7 @@ void URailSimulationSubsystem::WriteS6Evidence(){
  FFileHelper::SaveStringToFile(Evidence,*(Directory(ServiceMode)/TEXT("telemetry.json")));
  UE_LOG(LogRailContinuity,Display,TEXT("S6_STATE tick=%llu levels=%d actors=%d generation=%llu paused=%d blocked=%d"),Operations.Current().tick,Levels,Actors,S6Generation,S6Paused,S6Blocked);
  if(ServiceMode&&AssetReview()&&FParse::Param(FCommandLine::Get(),TEXT("S8AudioReview"))){
-  UE_LOG(LogRailContinuity,Display,TEXT("RAIL_AUDIO_STATE running=%d rail=%d station=%d horn=%d brake=%d railGain=%.4f stationGain=%.4f pitch=%.3f"),ServiceAudioWasRunning,ServiceMovementAudio&&ServiceMovementAudio->IsPlaying(),ServiceStationAudio&&ServiceStationAudio->IsPlaying(),ServiceHornAudio&&ServiceHornAudio->IsPlaying(),ServiceBrakeAudio&&ServiceBrakeAudio->IsPlaying(),ServiceRailGain,ServiceStationGain,ServiceRailPitch);
+  UE_LOG(LogRailContinuity,Display,TEXT("RAIL_AUDIO_STATE running=%d loco=%d station=%d horn=%d brake=%d speed=%.2f effort=%.3f strikes=%d stationGain=%.4f"),ServiceAudioWasRunning,ServiceLocoSound&&ServiceLocoSound->IsPlaying(),ServiceStationAudio&&ServiceStationAudio->IsPlaying(),ServiceHornAudio&&ServiceHornAudio->IsPlaying(),ServiceBrakeAudio&&ServiceBrakeAudio->IsPlaying(),ServiceLocoSound?ServiceLocoSound->LastInput.speedMps:0.,ServiceLocoSound?ServiceLocoSound->LastInput.effort:0.,ServiceLocoSound?ServiceLocoSound->StrikesQueued:0,ServiceStationGain);
  }
 }
 FString URailSimulationSubsystem::S6Display() const {

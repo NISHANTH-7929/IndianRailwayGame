@@ -1,0 +1,77 @@
+{
+  "schema": 1,
+  "clips": [
+    {
+      "name": "Wap7HornLoop",
+      "use": "Sustain of a twin-tone Indian locomotive horn blast (390/482 Hz family); held horn in the player cab.",
+      "source": "05_Audio/Pixabay_20261009/Originals/tanweraman-train-horn-337875.mp3",
+      "sourceSha256": "c67fce199588dfca093ead82c9a184deb483f52edb8213b999796db2dff5611d",
+      "trimSeconds": [
+        5.6,
+        10.4
+      ],
+      "highpassHz": 300,
+      "looping": true,
+      "crossfadeSeconds": 0.4,
+      "prepared": "Prepared/SW_Wap7HornLoop.wav",
+      "preparedSha256": "7dccf33552646964e819e26dc27adfd79ecb318f5df53024d2b9193077a9711a",
+      "durationSeconds": 4.4,
+      "sampleRate": 48000,
+      "channels": 1,
+      "peak": 0.5,
+      "rms": 0.13133187056180726,
+      "seamDelta": 0.005507488045207315,
+      "asset": "/Game/IndianRailway/S10/AudioV1/SW_Wap7HornLoop",
+      "license": "Pixabay Content License (see 05_Audio/SOURCE_REGISTER.md)",
+      "authenticity": "Indian railway field recording; locomotive class unverified"
+    },
+    {
+      "name": "TrafficHorn",
+      "use": "Separate long blast from the same session; approaching traffic trains (one-shot with natural decay).",
+      "source": "05_Audio/Pixabay_20261009/Originals/tanweraman-train-horn-337875.mp3",
+      "sourceSha256": "c67fce199588dfca093ead82c9a184deb483f52edb8213b999796db2dff5611d",
+      "trimSeconds": [
+        14.15,
+        20.25
+      ],
+      "highpassHz": 300,
+      "looping": false,
+      "crossfadeSeconds": 0,
+      "prepared": "Prepared/SW_TrafficHorn.wav",
+      "preparedSha256": "4544d13e6d269a03df1f31a6061b41676374289b366677133a88eabc028cf1e4",
+      "durationSeconds": 6.1,
+      "sampleRate": 48000,
+      "channels": 1,
+      "peak": 0.5,
+      "rms": 0.111496913409645,
+      "seamDelta": 0.0,
+      "asset": "/Game/IndianRailway/S10/AudioV1/SW_TrafficHorn",
+      "license": "Pixabay Content License (see 05_Audio/SOURCE_REGISTER.md)",
+      "authenticity": "Indian railway field recording; locomotive class unverified"
+    },
+    {
+      "name": "StationChatter",
+      "use": "Platform crowd chatter only; the recording's horn (18 s) and train arrival (25-33 s) are excluded.",
+      "source": "05_Audio/Pixabay_20261009/Originals/arunangshubanerjee-indian-railway-station-ambience-crowd-chatter-and-train-arrival-331012.mp3",
+      "sourceSha256": "eaa057bdc054e694fa2d528adfe1761d4390e6429d738e94e4aeaba16eb8158a",
+      "trimSeconds": [
+        0.2,
+        17.6
+      ],
+      "highpassHz": 60,
+      "looping": true,
+      "crossfadeSeconds": 1.0,
+      "prepared": "Prepared/SW_StationChatter.wav",
+      "preparedSha256": "e795f6aa9bc45bf3ec0af951d3d46be6ac8ad5337a4e76084ce0441bfdf9ef11",
+      "durationSeconds": 16.4,
+      "sampleRate": 48000,
+      "channels": 1,
+      "peak": 0.35,
+      "rms": 0.045740355895040094,
+      "seamDelta": 0.0005088831642193134,
+      "asset": "/Game/IndianRailway/S10/AudioV1/SW_StationChatter",
+      "license": "Pixabay Content License (see 05_Audio/SOURCE_REGISTER.md)",
+      "authenticity": "Indian railway field recording; locomotive class unverified"
+    }
+  ]
+}

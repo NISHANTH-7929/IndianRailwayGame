@@ -133,7 +133,11 @@ this list, and update it as gaps close:
 - Scenery: corridor buildings/trees are procedural primitives built in
   `RailTambaramCorridorView.cpp` (HISM families). Photoreal results ultimately need
   real modelled assets (Fab/Megascans, CC0 Poly Haven, commissioned WAP-7/LHB).
-- Audio is generic, not WAP-7/LHB field recordings.
+- Audio: train sound is synthesised from the simulation (`RailLocoSound.h`, see
+  `07_Documentation/S10/AUDIO.md`): converter/gear/transformer/blowers from motor speed and TE/BE,
+  rolling from speed, wheel strikes at real joints, air from the brake cylinder. The converter pulse
+  pattern and all levels are provisional until WAP-7 field recordings exist; horn and platform are
+  Indian recordings of unverified class. No compressor (MR not simulated) or station announcements yet.
 
 ## Visual baseline (2026-10-30 overhaul)
 
