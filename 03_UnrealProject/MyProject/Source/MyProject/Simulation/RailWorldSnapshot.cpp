@@ -60,8 +60,9 @@ Result WorldSnapshotCodec::ValidateAndRebuild(OperationsWorld& w){
         if(!same(savedHead,s.current_.head)||!same(savedLeading,s.current_.leadingEnd))return fail("Saved topology position disagrees with path history");
         Snapshot previous=s.current_;result=Place(s.graph_,s.definitions_,s.formation_,s.history_,s.previousHead_,previous);if(!result.ok)return result;
         const auto& state=h.state_;const auto& command=state.command;
-        if(command.throttle<0||command.throttle>1||command.brake<0||command.brake>1||command.direction< -1||command.direction>1||
-            state.appliedThrottle<0||state.appliedThrottle>1||state.appliedBrake<0||state.appliedBrake>1||state.massKg!=s.current_.properties.massKg||
+        const double minimumThrottle=ScenarioContent::IsTambaram(w.ContentId())?-1:0; // regenerative braking
+        if(command.throttle<minimumThrottle||command.throttle>1||command.brake<0||command.brake>1||command.direction< -1||command.direction>1||
+            state.appliedThrottle<minimumThrottle||state.appliedThrottle>1||state.appliedBrake<0||state.appliedBrake>1||state.massKg!=s.current_.properties.massKg||
             state.speedMps!=s.current_.commandedSpeedMps||state.lastAppliedSequence>h.lastSubmittedSequence_||h.lastSubmittedSequence_>pair.second.commandSequence||h.queue_.size()>256)return fail("Invalid saved handling state");
         uint64_t lastSequence=state.lastAppliedSequence,lastTick=w.state_.snapshot.tick;
         for(const auto& commandItem:h.queue_){
@@ -69,7 +70,7 @@ Result WorldSnapshotCodec::ValidateAndRebuild(OperationsWorld& w){
                 commandItem.applyTick<=w.state_.snapshot.tick||commandItem.applyTick<lastTick||commandItem.applyTick-w.state_.snapshot.tick>18000)return fail("Invalid queued train command");
             if(commandItem.kind<CommandKind::Throttle||commandItem.kind>CommandKind::Emergency)return fail("Unknown queued command kind");
             const auto value=commandItem.value;
-            if(commandItem.kind==CommandKind::Direction?(value!= -1&&value!=0&&value!=1):(value<0||value>1))return fail("Invalid queued command value");
+            if(commandItem.kind==CommandKind::Direction?(value!= -1&&value!=0&&value!=1):(value<(commandItem.kind==CommandKind::Throttle?minimumThrottle:0)||value>1))return fail("Invalid queued command value");
             lastSequence=commandItem.sequence;lastTick=commandItem.applyTick;
         }
     }

@@ -21,7 +21,7 @@
 namespace {
 enum Action { Power=0,Brake,Horn,Camera,Pause,Emergency,ResetEmergency,Drawer,CloseDrawer,Lamps,Pantograph,Wipers,CabLamp,Instruments,Reverse,Neutral,DirectionForward,Depart,PowerMinus,PowerPlus,BrakeMinus,BrakePlus };
 struct FDriveDisplay {
- double Speed=0,Limit=0,Power=0,Brake=1,AppliedPower=0,AppliedBrake=1,Progress=0,TractionKn=0,SignalDistance=0;
+ double Speed=0,Limit=0,Power=0,Brake=1,AppliedPower=0,AppliedBrake=1,Progress=0,TractionKn=0,SignalDistance=0,BrakePipe=5;
  bool Assisted=false,Emergency=false,CanReset=false,CanDepart=false,Enabled=false,Alert=false,SignalFound=false,SignalAutomatic=false;
  int32 SignalAspect=0; // Rail::LinesideAspect
  FString Station,Location,Status,Detail,Time,Direction,Feedback;
@@ -29,7 +29,10 @@ struct FDriveDisplay {
 // Cab-instrument palette: smoked glass, hairlines, DDU green numerals, amber for the air brake.
 const FLinearColor Glass(.016f,.02f,.024f,.62f),Hair(1,1,1,.16f),White(.93f,.95f,.96f,1),Muted(.62f,.68f,.72f,1),
  Amber(1.f,.62f,.18f,1),Lcd(.47f,.95f,.62f,1),Red(.95f,.16f,.12f,1),Screen(.006f,.014f,.012f,.86f);
-constexpr double FullServiceBc=3.8; // kg/cm2 brake cylinder at full service; indicated from applied brake
+// The WAP-7 master controller is centre-zero: forward for tractive effort, back for regenerative
+// braking. The gate position g in 0..1 maps to the demand 2g-1, with a detent around zero.
+double GateToDemand(double g){const double d=2*g-1;return FMath::Abs(d)<.04?0:FMath::Clamp(d,-1.0,1.0);}
+double DemandToGate(double d){return (FMath::Clamp(d,-1.0,1.0)+1)*.5;}
 struct FHit { int32 Kind;FSlateRect Rect;FHit(int32 K,float L,float T,float R,float B):Kind(K),Rect(L,T,R,B){} };
 struct FHold {int32 Kind;double StartY,Value;};
 FString DistanceText(double Metres){return FMath::Abs(Metres)>=1000?FString::Printf(TEXT("%.1f km"),FMath::Abs(Metres)/1000):FString::Printf(TEXT("%.0f m"),FMath::Abs(Metres));}
@@ -70,8 +73,8 @@ public:
   const FKey Key=E.GetKey();
   if(Key==EKeys::Escape){if(CabOpen){CabOpen=false;Holds.Empty();}else Fire(Pause);return FReply::Handled();}
   if(CabOpen)return FReply::Unhandled();
-  if(Key==EKeys::Up){Fire(Power,Rail::DrivingControl::StepValue(Data.Power,1));return FReply::Handled();}
-  if(Key==EKeys::Down){Fire(Power,Rail::DrivingControl::StepValue(Data.Power,-1));return FReply::Handled();}
+  if(Key==EKeys::Up){Fire(Power,GateToDemand(Rail::DrivingControl::StepValue(DemandToGate(Data.Power),1)));return FReply::Handled();}
+  if(Key==EKeys::Down){Fire(Power,GateToDemand(Rail::DrivingControl::StepValue(DemandToGate(Data.Power),-1)));return FReply::Handled();}
   if(Key==EKeys::Right){Fire(Brake,Rail::DrivingControl::StepValue(Data.Brake,1));return FReply::Handled();}
   if(Key==EKeys::Left){Fire(Brake,Rail::DrivingControl::StepValue(Data.Brake,-1));return FReply::Handled();}
   if(Key==EKeys::SpaceBar&&!E.IsRepeat()){Fire(Horn);return FReply::Handled();}
@@ -149,31 +152,42 @@ public:
   // output beside it (tractive effort in kN, brake-cylinder pressure in kg/cm2).
   auto Gate=[&](bool IsPower){
    const float X=IsPower?W-136:16,Top=GateTop,Bottom=GateBottom,Travel=Bottom-Top;
-   const double Requested=IsPower?Data.Power:Data.Brake,Applied=IsPower?Data.AppliedPower:Data.AppliedBrake;
+   const double Requested=IsPower?DemandToGate(Data.Power):Data.Brake;
    const FLinearColor Accent=IsPower?Lcd:Amber;
    Frame(X,402,120,302,FLinearColor(.016f,.02f,.024f,.48f));
    Caption(IsPower?(Data.Assisted?TEXT("TE LIMIT"):TEXT("MASTER CTRL")):TEXT("A9 BRAKE"),X+60,410,1);
    const float Slot=IsPower?X+70:X+56,Scale=IsPower?X+18:X+104;
    Box(Slot-4,Top-6,8,Travel+12,FLinearColor(0,0,0,.85f),3);Line({{Slot,Top-4},{Slot,Bottom+4}},Hair,1);
    if(IsPower){
-    for(int I=0;I<=10;++I){const float Y=Bottom-Travel*I/10.f;Line({{Slot-8,Y},{Slot-(I%5?14:20),Y}},I%5?Hair:Muted,1);}
-    for(int I:{0,5,10})Mono(FString::FromInt(I),Slot+28,Bottom-Travel*I/10.f-7,9,Muted);
+    const float Zero=Bottom-Travel*.5f;
+    for(int I=-10;I<=10;++I){const float Y=Zero-Travel*.5f*I/10.f;Line({{Slot-8,Y},{Slot-(I%5?13:20),Y}},I==0?White:I%5?Hair:Muted,1);}
+    Mono(TEXT("TE"),Slot+28,Top-7,9,Lcd);Mono(TEXT("0"),Slot+28,Zero-7,9,White);Mono(TEXT("BE"),Slot+28,Bottom-7,9,Amber);
    }else{
     for(int I=0;I<=10;++I){const float Y=Bottom-Travel*I/10.f;Line({{Slot+8,Y},{Slot+(I%5?14:20),Y}},I%5?Hair:Muted,1);}
-    const struct {double At;const TCHAR* Name;} Marks[]={{0,TEXT("REL")},{.15,TEXT("MIN")},{1,TEXT("FS")}};
+    const struct {double At;const TCHAR* Name;} Marks[]={{0,TEXT("REL")},{Rail::AirBrake::RunningZone,TEXT("MIN")},{1,TEXT("FS")}};
     for(const auto& M:Marks)Mono(M.Name,Slot-26,Bottom-Travel*float(M.At)-7,9,M.At>=1?Amber:Muted,2);
    }
    Box(Scale-2,Top,4,Travel,FLinearColor(1,1,1,.07f),1);
-   Box(Scale-2,Bottom-Travel*float(Applied),4,FMath::Max(2.f,Travel*float(Applied)),Accent.CopyWithNewOpacity(.85f),1);
+   if(IsPower){ // realised effort from the centre: up for TE, down for BE
+    const float Zero=Bottom-Travel*.5f,Amount=Travel*.5f*float(FMath::Clamp(FMath::Abs(Data.AppliedPower),0.0,1.0));
+    if(Data.AppliedPower>=0)Box(Scale-2,Zero-Amount,4,FMath::Max(2.f,Amount),Lcd.CopyWithNewOpacity(.85f),1);
+    else Box(Scale-2,Zero,4,FMath::Max(2.f,Amount),Amber.CopyWithNewOpacity(.85f),1);
+   }else Box(Scale-2,Bottom-Travel*float(Data.AppliedBrake),4,FMath::Max(2.f,Travel*float(Data.AppliedBrake)),Accent.CopyWithNewOpacity(.85f),1);
    // T-grip handle; the slot stays visible either side of it.
    const float HandleY=Bottom-Travel*float(Requested);
    Box(Slot-23,HandleY-10,46,21,FLinearColor(0,0,0,.55f),3);
    Box(Slot-22,HandleY-11,44,19,FLinearColor(.10f,.11f,.12f,1),3);
    Box(Slot-22,HandleY-11,44,2,FLinearColor(.44f,.47f,.49f,1),1);
    Box(Slot-14,HandleY-3,28,2,Accent,0);
-   Mono(FString::Printf(TEXT("%3.0f%%"),Requested*100),X+8,Bottom+20,14,White);
-   Mono(IsPower?FString::Printf(TEXT("%.0fkN"),Data.TractionKn):FString::Printf(TEXT("%.1fkg"),Applied*FullServiceBc),X+112,Bottom+24,10,Accent,2);
-   Caption(IsPower?TEXT("demand   TE"):TEXT("demand   BC"),X+60,Bottom+44,1);
+   if(IsPower){
+    Mono(Data.Power<0?FString::Printf(TEXT("BE %.0f%%"),-Data.Power*100):FString::Printf(TEXT("TE %.0f%%"),Data.Power*100),X+8,Bottom+20,13,White);
+    Mono(FString::Printf(TEXT("%.0fkN"),FMath::Abs(Data.TractionKn)),X+112,Bottom+24,10,Data.TractionKn<0?Amber:Lcd,2);
+    Caption(Data.TractionKn<0?TEXT("demand   BE"):TEXT("demand   TE"),X+60,Bottom+44,1);
+   }else{
+    Mono(FString::Printf(TEXT("BP %.1f"),Data.BrakePipe),X+8,Bottom+22,11,Data.BrakePipe<4.95?Amber:White);
+    Mono(FString::Printf(TEXT("BC %.1f"),Data.AppliedBrake*Rail::AirBrake::MaxCylinder),X+112,Bottom+22,11,Accent,2);
+    Caption(TEXT("kg/cm2"),X+60,Bottom+44,1);
+   }
    for(int Kind:{IsPower?(int)PowerPlus:(int)BrakePlus,IsPower?(int)PowerMinus:(int)BrakeMinus}){FSlateRect R;if(!Rect(Kind,R))continue;
     Frame(R.Left,R.Top,R.Right-R.Left,R.Bottom-R.Top);const FVector2D C((R.Left+R.Right)/2,(R.Top+R.Bottom)/2);const bool Up=Kind==PowerPlus||Kind==BrakePlus;
     Line(Up?TArray<FVector2D>{{C.X-8,C.Y+4},{C.X,C.Y-4},{C.X+8,C.Y+4}}:TArray<FVector2D>{{C.X-8,C.Y-4},{C.X,C.Y+4},{C.X+8,C.Y-4}},White,2);
@@ -228,11 +242,11 @@ private:
    if(Kind==Power||Kind==Brake){
     if(Data.Emergency)return FReply::Handled();
     for(const auto& Pair:Holds)if(Pair.Value.Kind==Kind)return FReply::Handled();
-    Holds.Add(Key(E),{Kind,P.Y,Kind==Power?Data.Power:Data.Brake});
+    Holds.Add(Key(E),{Kind,P.Y,Kind==Power?DemandToGate(Data.Power):Data.Brake});
     return FReply::Handled().CaptureMouse(SharedThis(this)).SetUserFocus(SharedThis(this));
    }
    if(Kind==Drawer||Kind==CloseDrawer){CabOpen=Kind==Drawer;Holds.Empty();}
-   else if(Kind==PowerMinus||Kind==PowerPlus)Fire(Power,Rail::DrivingControl::StepValue(Data.Power,Kind==PowerPlus?1:-1));
+   else if(Kind==PowerMinus||Kind==PowerPlus)Fire(Power,GateToDemand(Rail::DrivingControl::StepValue(DemandToGate(Data.Power),Kind==PowerPlus?1:-1)));
    else if(Kind==BrakeMinus||Kind==BrakePlus)Fire(Brake,Rail::DrivingControl::StepValue(Data.Brake,Kind==BrakePlus?1:-1));
    else {if(Kind==Pause||Kind==Emergency)Holds.Empty();Fire(Kind);}
    Invalidate(EInvalidateWidgetReason::Paint);return FReply::Handled().SetUserFocus(SharedThis(this));
@@ -245,14 +259,14 @@ private:
   if(!Data.Enabled||Data.Emergency){Holds.Empty();return FReply::Handled().ReleaseMouseCapture();}
   const double Value=Rail::DrivingControl::DragValue(Hold->Value,Hold->StartY,Position(G,E).Y,177);
   if(TraceHudInput())UE_LOG(LogTemp,Display,TEXT("HUD_INPUT move key=%d kind=%d start=%.1f y=%.1f value=%.2f"),Key(E),Hold->Kind,Hold->StartY,Position(G,E).Y,Value);
-  Fire(Hold->Kind,Value);return FReply::Handled();
+  Fire(Hold->Kind,Hold->Kind==Power?GateToDemand(Value):Value);return FReply::Handled();
  }
  FReply End(const FGeometry& G,const FPointerEvent& E){
   if(TraceHudInput())UE_LOG(LogTemp,Display,TEXT("HUD_INPUT end key=%d y=%.1f holds=%d"),Key(E),Position(G,E).Y,Holds.Num());
   if(const auto* Hold=Holds.Find(Key(E))){
    // Fast pointer gestures can begin/end within one frame, coalescing every
    // move event. Commit the release position before relinquishing capture.
-   if(Data.Enabled&&!Data.Emergency)Fire(Hold->Kind,Rail::DrivingControl::DragValue(Hold->Value,Hold->StartY,Position(G,E).Y,177));
+   if(Data.Enabled&&!Data.Emergency){const double Value=Rail::DrivingControl::DragValue(Hold->Value,Hold->StartY,Position(G,E).Y,177);Fire(Hold->Kind,Hold->Kind==Power?GateToDemand(Value):Value);}
    Holds.Remove(Key(E));return FReply::Handled().ReleaseMouseCapture();
   }
   return FReply::Unhandled();
@@ -278,7 +292,8 @@ void URailDrivingHud::Synchronize(URailSimulationSubsystem* S,bool Driving){
  D.Direction=Control.direction>0?TEXT("FORWARD"):Control.direction<0?TEXT("REVERSE"):TEXT("NEUTRAL");
  const auto Journey=Rail::JourneyPresentation::At(Head,Length);D.Progress=Journey.progress;D.Station=UTF8_TO_TCHAR(Rail::TambaramRoute::StationNames[Journey.station]);
  D.Location=(Journey.terminal?TEXT("STOP "):Journey.alongside?TEXT("PASS "):TEXT(""))+DistanceText(Journey.distance)+(Journey.distance<0?TEXT(" back"):TEXT(""));
- D.TractionKn=FMath::Abs(Handling->tractionN)/1000;
+ D.TractionKn=Handling->tractionN/1000; // negative = regenerative braking effort
+ D.BrakePipe=Rail::AirBrake::BrakePipe(Handling->command.brake,Handling->command.emergency);
  D.Time=FString::Printf(TEXT("%02llu:%02llu"),State.ticks/1800,(State.ticks/30)%60);
  D.Status=TEXT("Route authorised");D.Detail=TEXT("Observe lineside signals and speed limits");
  // Lineside signal ahead, from the same authoritative state that drives the lineside heads.
@@ -294,7 +309,8 @@ void URailDrivingHud::Synchronize(URailSimulationSubsystem* S,bool Driving){
  }
  const auto Authority=World.Current().authorities.find(Def.player);
  const bool RouteHeld=Authority!=World.Current().authorities.end()&&!Authority->second.routeGranted;
- if(D.Power>0&&D.AppliedBrake>.02){D.Status=TEXT("Traction held");D.Detail=TEXT("Brakes are still applied. Release before powering.");}
+ if(D.Power>0&&D.BrakePipe<Rail::AirBrake::TractionInterlockPipe){D.Status=TEXT("Traction held");D.Detail=TEXT("Brake pipe below 4.7 - release the A9 before powering.");}
+ if(D.Power<0&&D.Speed<10){D.Status=TEXT("Regeneration fading");D.Detail=TEXT("Below 10 km/h use the air brake to stop.");}
  if(D.Assisted&&D.Power>0&&D.Brake==0&&D.AppliedBrake>.02){D.Status=TEXT("Assistance braking");D.Detail=TEXT("Your power setting is the ceiling; brake overrides assist.");}
  if(Control.direction==0){D.Status=TEXT("Neutral selected");D.Detail=TEXT("Select Forward in CAB before applying power");}
  if(RouteHeld){D.Status=TEXT("Route held");D.Detail=UTF8_TO_TCHAR(Service.HoldReason(World).c_str());D.Alert=true;if(!S->DrivingDispatchNotice().IsEmpty()){D.Status=TEXT("Dispatcher hold");D.Detail=S->DrivingDispatchNotice();}}

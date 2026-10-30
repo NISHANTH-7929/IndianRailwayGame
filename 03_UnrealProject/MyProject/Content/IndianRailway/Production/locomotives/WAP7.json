@@ -29,7 +29,7 @@
     "Pantographs, wipers and lights retained as authored static geometry; not rigged.",
     "Full original mesh and textures retained; Android cost unmeasured."
   ],
-  "triangles": 416668,
+  "triangles": 416750,
   "parts": [
     {
       "name": "Exterior",
@@ -154,8 +154,38 @@
         0,
         0
       ],
-      "triangles": 26164,
+      "triangles": 26174,
       "asset": "/Game/IndianRailway/S8/Locomotives/WAP7/CabV2/SM_WAP7_CabV2_Static.SM_WAP7_CabV2_Static"
+    },
+    {
+      "role": "gauge_bp",
+      "location_cm": [
+        925.5279541015625,
+        -103.99999618530273,
+        280.42402267456055
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "cab_only": true,
+      "rotation_axis": [
+        -0.8727582693099976,
+        0.0,
+        0.4881526827812195
+      ],
+      "rotation_range_deg": [
+        -130,
+        130
+      ],
+      "triangles": 72,
+      "asset": "/Game/IndianRailway/S8/Locomotives/WAP7/CabV2/SM_WAP7_CabV2_gauge_bp.SM_WAP7_CabV2_gauge_bp"
     },
     {
       "role": "gauge_brake",
@@ -182,7 +212,7 @@
       ],
       "rotation_range_deg": [
         -130,
-        -31.200000000000003
+        -52.0
       ],
       "triangles": 72,
       "asset": "/Game/IndianRailway/S8/Locomotives/WAP7/CabV2/SM_WAP7_CabV2_gauge_brake.SM_WAP7_CabV2_gauge_brake"
@@ -361,8 +391,8 @@
         0
       ],
       "rotation_range_deg": [
-        -28,
-        32
+        -30,
+        30
       ],
       "triangles": 144,
       "asset": "/Game/IndianRailway/S8/Locomotives/WAP7/CabV2/SM_WAP7_CabV2_throttle.SM_WAP7_CabV2_throttle"

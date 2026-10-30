@@ -113,7 +113,7 @@
         0,
         0
       ],
-      "triangles": 26164,
+      "triangles": 26174,
       "materials": [
         "Floor",
         "Rubber",
@@ -129,6 +129,42 @@
         "Green",
         "Brass",
         "SeatBlue"
+      ]
+    },
+    {
+      "name": "gauge_bp",
+      "mesh": "SM_WAP7_CabV2_gauge_bp",
+      "role": "gauge_bp",
+      "fbx": "Parts/SM_WAP7_CabV2_gauge_bp.fbx",
+      "location_cm": [
+        925.5279541015625,
+        -103.99999618530273,
+        280.42402267456055
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "cab_only": true,
+      "rotation_axis": [
+        -0.8727582693099976,
+        0.0,
+        0.4881526827812195
+      ],
+      "rotation_range_deg": [
+        -130,
+        130
+      ],
+      "triangles": 72,
+      "materials": [
+        "Red",
+        "Steel"
       ]
     },
     {
@@ -159,7 +195,7 @@
       ],
       "rotation_range_deg": [
         -130,
-        -31.200000000000003
+        -52.0
       ],
       "triangles": 72,
       "materials": [
@@ -371,8 +407,8 @@
         0
       ],
       "rotation_range_deg": [
-        -28,
-        32
+        -30,
+        30
       ],
       "triangles": 144,
       "materials": [
@@ -595,7 +631,7 @@
       ]
     }
   ],
-  "triangles": 27814,
+  "triangles": 27896,
   "limitations": [
     "Openings and roof line measured from the CC BY 4.0 exterior model, not a CLW drawing.",
     "Desk layout follows the conventional IR left-hand driving desk (A9/SA9 left, TE/BE controller right); exact WAP-7 panel legends are representative.",

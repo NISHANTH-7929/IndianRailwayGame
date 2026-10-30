@@ -14,7 +14,10 @@ struct TambaramDriving {
   L.serviceBrakeNPerKg=.65;L.emergencyBrakeNPerKg=1.0;
   L.brakeApplySeconds=4;L.brakeReleaseSeconds=18;L.emergencyApplySeconds=3;
   L.rollingNPerKg=.015;L.aeroNPerMpsSquared=25;
-  auto C=L;C.id=DefinitionId(FormationContent::LhbDefinitionId);C.maxTractionN=0;C.maxPowerWatts=0;C.aeroNPerMpsSquared=2.5;
+  // S10 graded air brake on loco and LHB; WAP-7 regenerative braking effort ~182 kN (provisional:
+  // IR three-phase loco handbook column matching 6120 hp / 322 kN).
+  L.gradedAirBrake=true;L.maxRegenN=182000;
+  auto C=L;C.id=DefinitionId(FormationContent::LhbDefinitionId);C.maxTractionN=0;C.maxPowerWatts=0;C.aeroNPerMpsSquared=2.5;C.maxRegenN=0;
   H.emplace(L.id,L);H.emplace(C.id,C);return H;
  }
  static double LocalLimit(double D,double Ceiling){

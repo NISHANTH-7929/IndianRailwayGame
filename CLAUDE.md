@@ -116,20 +116,20 @@ this list, and update it as gaps close:
   automatic signal at danger (GR 9.02), route indicators, calling-on/shunt signals, and the
   surveyed signal plan. The route-level `SignalAspect` (Stop/Proceed) remains the dispatcher's
   internal state used by AI.
-- **Brakes**: modelled as one lumped first-order lag. Missing: brake-pipe
-  pressure propagation along the rake, separate automatic (train) and
-  independent (loco) brakes, graduated release, and WAP-7 regenerative braking.
+- **Brakes**: WAP-7/LHB use the graduated twin-pipe air brake and regenerative braking
+  (`AirBrake`, `RegenerativeEffortN` in `RailHandling.h`; `07_Documentation/S10/BRAKES.md`).
+  Throttle in Tambaram content ranges −1..1 (negative = BE). Still missing: SA9 independent
+  brake (needs a save-schema bump), per-vehicle pipe propagation, wheel slide, coupler forces.
 - **Traction**: continuous throttle. The service WAP-7 (`RailTambaramDriving.h`)
   uses 323 kN / 4.5 MW, close to published figures (322.4 kN starting,
   228 kN continuous at 71 km/h, 6120 hp continuous); the generic test fixture in
-  `RailHandling.cpp` (150 kN / 900 kW) is a placeholder. Missing: TE/BE
-  controller behaviour and the regenerative braking (BE) the real loco relies on.
+  `RailHandling.cpp` (150 kN / 900 kW) is a placeholder. The master controller is
+  centre-zero TE/BE; TE is continuous (no notch steps).
 - **No in-train forces** (coupler slack, buff/draft), curve resistance, wheel
   slip/slide, or weather-dependent adhesion.
 - **Cab procedures**: no pantograph raise / VCB close / vigilance (VCD) start-up
   sequence yet (Cab V2 has the VCD button and SA9 handle as static geometry).
-- MR/BP/FP gauges show a charged system at rest; BC follows applied brake. Real
-  pneumatic values arrive with the brake model.
+- Cab BP and BC needles follow the brake model; MR/FP show a charged supply (no compressor cycling).
 - Scenery: corridor buildings/trees are procedural primitives built in
   `RailTambaramCorridorView.cpp` (HISM families). Photoreal results ultimately need
   real modelled assets (Fab/Megascans, CC0 Poly Haven, commissioned WAP-7/LHB).

@@ -13,8 +13,33 @@ struct HandlingDefinition {
     double serviceBrakeNPerKg = .8, emergencyBrakeNPerKg = 1.2;
     double tractionResponseSeconds = .5, brakeApplySeconds = 1.5, brakeReleaseSeconds = 2;
     double emergencyApplySeconds = .5;
+    // S10: graduated twin-pipe air brake (A9 handle -> brake pipe -> distributor -> cylinder) and
+    // regenerative braking from the master controller pulled back past zero. Off/zero keeps the
+    // earlier lumped brake, so fixtures and their evidence are unchanged.
+    bool gradedAirBrake = false; double maxRegenN = 0;
     Result Validate() const;
 };
+// Indian Railways twin-pipe graduated-release air brake on LHB stock (kg/cm2). Sources:
+// IRIMEE/RDSO LHB air brake handbook (BP 5.0; application 3-5 s; release 15-20 s; LHB BC limited
+// to 3.0 by the pressure converter) and the CRS question bank (full service reduction 1.0-1.5).
+// The minimum reduction and distributor ratio are provisional engineering values.
+struct AirBrake {
+    static constexpr double ChargedPipe=5.0,FeedPipe=6.0,MainReservoir=8.5;
+    static constexpr double MinimumReduction=.4,FullServiceReduction=1.5,RunningZone=.08;
+    static constexpr double DistributorRatio=2.5,MaxCylinder=3.0,TractionInterlockPipe=4.7;
+    // A9 handle (0..1): Release/Running below RunningZone, then minimum to full service reduction.
+    static double BrakePipe(double handle,bool emergency){
+        if(emergency)return 0;if(handle<RunningZone)return ChargedPipe;
+        return ChargedPipe-(MinimumReduction+(FullServiceReduction-MinimumReduction)*(handle-RunningZone)/(1-RunningZone));
+    }
+    // Distributor valve: cylinder follows pipe reduction (graduated application and release).
+    static double CylinderFraction(double brakePipe){
+        const double c=DistributorRatio*(ChargedPipe-brakePipe)/MaxCylinder;return c<0?0:c>1?1:c;
+    }
+};
+// Regenerative (electric) braking effort available at a speed: constant up to the power limit,
+// fading out below ~10 km/h as the traction motors lose regeneration voltage.
+double RegenerativeEffortN(const HandlingDefinition& d,double speedMps,double adhesionN);
 using HandlingDefinitions = std::map<DefinitionId,HandlingDefinition>;
 enum class CommandKind { Throttle, Brake, Direction, Emergency };
 struct TrainCommand {
@@ -62,4 +87,5 @@ private:
 };
 HandlingDefinitions MakeHandlingDefinitions();
 TestReport RunHandlingTests();
+TestReport RunAirBrakeTests();
 }

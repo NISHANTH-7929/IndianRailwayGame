@@ -252,15 +252,15 @@ void ARailLocomotiveView::Present(const Rail::Simulation& Spatial,const Rail::Lo
   }
   if(PartRole==TEXT("pantograph")){if(Ranges[I]!=FVector2D(0,1))T.SetRotation(T.GetRotation()*FQuat(Axes[I],FMath::DegreesToRadians(PantographUp?Ranges[I].Y:Ranges[I].X)));else {T.SetScale3D(T.GetScale3D()*FVector(1,1,PantographUp?1:.25));}}
   if(PartRole==TEXT("wiper"))T.SetRotation(T.GetRotation()*FQuat(Axes[I],FMath::DegreesToRadians(Wipers?Ranges[I].Y*.5*(1-FMath::Cos(WiperTime*3)):0)));
-  double Fraction=-1;if(PartRole==TEXT("throttle"))Fraction=LastPower;else if(PartRole==TEXT("train_brake"))Fraction=LastBrake;else if(PartRole==TEXT("reverser"))Fraction=(H.command.direction+1)*.5;
-  else if(PartRole==TEXT("gauge_speed"))Fraction=FMath::Clamp(FMath::Abs(H.speedMps)*3.6/180,0.0,1.0);else if(PartRole==TEXT("gauge_brake"))Fraction=H.appliedBrake;else if(PartRole==TEXT("gauge_power"))Fraction=H.appliedThrottle;
+  double Fraction=-1;if(PartRole==TEXT("throttle"))Fraction=PresentationClass==TEXT("WAP7")?(LastPower+1)*.5:LastPower;/* WAP-7 master controller is centre-zero: BE back, TE forward */else if(PartRole==TEXT("train_brake"))Fraction=LastBrake;else if(PartRole==TEXT("reverser"))Fraction=(H.command.direction+1)*.5;
+  else if(PartRole==TEXT("gauge_speed"))Fraction=FMath::Clamp(FMath::Abs(H.speedMps)*3.6/180,0.0,1.0);else if(PartRole==TEXT("gauge_brake"))Fraction=H.appliedBrake;else if(PartRole==TEXT("gauge_power"))Fraction=FMath::Clamp(FMath::Abs(H.appliedThrottle),0.0,1.0);else if(PartRole==TEXT("gauge_bp"))Fraction=Rail::AirBrake::BrakePipe(H.command.brake,H.command.emergency)/10;
   if(PartRole==TEXT("switch_lamps"))Fraction=Headlights?1:0;else if(PartRole==TEXT("switch_wipers"))Fraction=Wipers?1:0;else if(PartRole==TEXT("switch_cablight"))Fraction=CabLighting?1:0;
   if(Fraction>=0){const FVector2D R=Ranges[I]==FVector2D(0,1)?FVector2D(-35,35):Ranges[I];T.SetRotation(T.GetRotation()*FQuat(Axes[I],FMath::DegreesToRadians(FMath::Lerp(R.X,R.Y,Fraction))));}
   Parts[I]->SetRelativeTransform(T);
  }
  for(const auto& Material:LampMaterials)Material->SetScalarParameterValue(TEXT("LampIntensity"),Headlights?4:0);
  CabLight->SetVisibility(CabCamera&&CabLighting);
- InstrumentClock+=Dt;if(InstrumentClock>=.1){InstrumentClock=0;SpeedReadout->SetText(FText::FromString(FString::Printf(TEXT("%03.0f km/h"),LastSpeed)));Instruments->SetText(FText::FromString(FString::Printf(TEXT("TE %3.0f%%  BRK %3.0f%%  %s"),Controls.power*100,Controls.brake*100,Controls.emergency?TEXT("EMG"):Controls.direction>0?TEXT("FWD"):Controls.direction<0?TEXT("REV"):TEXT("NEU"))));}
+ InstrumentClock+=Dt;if(InstrumentClock>=.1){InstrumentClock=0;SpeedReadout->SetText(FText::FromString(FString::Printf(TEXT("%03.0f km/h"),LastSpeed)));Instruments->SetText(FText::FromString(FString::Printf(TEXT("%s %3.0fkN  BP %.1f  BC %.1f  %s"),H.tractionN<0?TEXT("BE"):TEXT("TE"),FMath::Abs(H.tractionN)/1000,Rail::AirBrake::BrakePipe(H.command.brake,H.command.emergency),H.appliedBrake*Rail::AirBrake::MaxCylinder,Controls.emergency?TEXT("EMG"):Controls.direction>0?TEXT("FWD"):Controls.direction<0?TEXT("REV"):TEXT("NEU"))));}
 
  CSV_CUSTOM_STAT(RailS8,LocomotiveParts,Parts.Num(),ECsvCustomStatOp::Set);CSV_CUSTOM_STAT(RailS8,LocomotivePresentMs,(FPlatformTime::Seconds()-Begin)*1000,ECsvCustomStatOp::Set);CSV_CUSTOM_STAT(RailS8,LocomotiveLoadMs,LastLoadMilliseconds,ECsvCustomStatOp::Set);
 }

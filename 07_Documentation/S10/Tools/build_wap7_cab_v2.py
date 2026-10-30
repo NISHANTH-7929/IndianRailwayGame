@@ -233,10 +233,10 @@ with Frame(B_BOTTOM, PHI_D) as f:
     # Brake/air gauges on the left of the binnacle (kg/cm2 dials). BC follows the applied
     # brake; the others show a charged system at rest until the pneumatic model exists.
     gauge(f, 1.18, .215, .052, 'MR', 10, rest=8.5)
-    gauge(f, 1.04, .215, .052, 'BP', 10, rest=5.0)
+    gauge(f, 1.04, .215, .052, 'BP', 10, role='gauge_bp')   # brake pipe, 0-10 kg/cm2 full sweep
     gauge(f, 1.18, .085, .052, 'FP', 10, rest=6.0)
-    # BC: full service ~3.8 kg/cm2 of a 0-10 dial.
-    gauge(f, 1.04, .085, .052, 'BC', 10, role='gauge_brake', rest=(-130, -130+260*.38))
+    # BC: LHB cylinder limit 3.0 kg/cm2 of a 0-10 dial (applied brake fraction 0..1).
+    gauge(f, 1.04, .085, .052, 'BC', 10, role='gauge_brake', rest=(-130, -130+260*.30))
     # Speed indicator directly ahead of the driver, 0-180 km/h (class limit 140).
     gauge(f, .62, .175, .088, 'km/h', 180, role='gauge_speed')
     # Tractive effort meter.
@@ -289,10 +289,10 @@ box('Controller slot', (MC.x, MC.y, Z+.013), (.24, .02, .004), 'Rubber', bevel=.
 for i in range(11):
     x = MC.x - .11 + i*.022
     box('Notch mark', (x, MC.y+.035, Z+.0135), (.003, .02 if i % 5 else .03, .001), 'Lettering', bevel=0)
-text('TE', (MC.x+.13, MC.y+.06, Z+.014), .014, rot=DESK_TEXT); text('0', (MC.x-.12, MC.y+.06, Z+.014), .012, rot=DESK_TEXT)
+text('TE', (MC.x+.13, MC.y+.06, Z+.014), .014, rot=DESK_TEXT); text('0', (MC.x, MC.y+.06, Z+.014), .012, rot=DESK_TEXT); text('BE', (MC.x-.13, MC.y+.06, Z+.014), .014, rot=DESK_TEXT)
 rod('Master controller lever', (MC.x, MC.y, Z+.01), (MC.x, MC.y, Z+.14), .008, 'Steel', 'throttle')
 box('Master controller T-grip', (MC.x, MC.y, Z+.15), (.035, .11, .028), 'Rubber', 'throttle', .012)
-register('throttle', 'throttle', (MC.x, MC.y, Z+.01), (0, 1, 0), (-28, 32))
+register('throttle', 'throttle', (MC.x, MC.y, Z+.01), (0, 1, 0), (-30, 30))  # centre-zero: back BE, forward TE
 # Reverser (direction) key beside the controller.
 RV = Vector((9.02, .46, Z))
 cyl('Reverser drum', (RV.x, RV.y, Z+.02), .035, .04, 'PanelCharcoal', verts=24)

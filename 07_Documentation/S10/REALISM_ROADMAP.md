@@ -41,6 +41,12 @@ tested evidence and is committed separately.
   origins, 'A'-marker automatic signals every ~1 km, aspects derived from occupancy and
   reservations with the GR 9.01 120 m overlap, lineside heads, DDU signal indicator, TPWS notice.
 
+## Done in S10 slice 4 — air brake and regenerative braking
+
+- Graduated twin-pipe A9 air brake (BP 5.0 → 3.5 full service, LHB BC 3.0, 3–5 s application,
+  15–20 s release, graduated release, traction interlock below BP 4.7) and WAP-7 regenerative
+  braking up to 182 kN on a centre-zero TE/BE controller; real BP/BC needles; see `BRAKES.md`.
+
 ## Next slices
 
 1. **IR automatic block signalling (gameplay).** Four-aspect colour-light

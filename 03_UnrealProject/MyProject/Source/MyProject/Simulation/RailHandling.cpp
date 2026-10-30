@@ -23,7 +23,7 @@ struct Forces {
 Result HandlingDefinition::Validate() const {
     const double values[]={maxTractionN,maxPowerWatts,tractionCutoffMps,adhesiveMassFraction,
         adhesionCoefficient,rollingNPerKg,aeroNPerMpsSquared,serviceBrakeNPerKg,emergencyBrakeNPerKg,
-        tractionResponseSeconds,brakeApplySeconds,brakeReleaseSeconds,emergencyApplySeconds};
+        tractionResponseSeconds,brakeApplySeconds,brakeReleaseSeconds,emergencyApplySeconds,maxRegenN};
     for(double v:values)if(!std::isfinite(v)||v<0)return Result::Fail("Nonfinite/negative handling parameter");
     if(!id.value||!version||tractionCutoffMps<=0||adhesiveMassFraction>1||adhesionCoefficient>1||
        serviceBrakeNPerKg<=0||emergencyBrakeNPerKg<serviceBrakeNPerKg||
@@ -31,6 +31,11 @@ Result HandlingDefinition::Validate() const {
        (maxTractionN>0 && (maxPowerWatts<=0||adhesiveMassFraction<=0)))
         return Result::Fail("Invalid handling definition");
     return {};
+}
+double RegenerativeEffortN(const HandlingDefinition& d,double speedMps,double adhesionN){
+    if(d.maxRegenN<=0)return 0;const double v=std::abs(speedMps);
+    const double fade=std::clamp((v-.55)/(2.8-.55),0.0,1.0); // ~2 to 10 km/h
+    return std::min({d.maxRegenN,d.maxPowerWatts/std::max(v,.1),adhesionN})*fade;
 }
 Result HandlingModel::Initialize(const Simulation& spatial,Definitions vehicles,Formation formation,
                                 HandlingDefinitions definitions,uint64_t source) {
@@ -60,7 +65,11 @@ Result HandlingModel::Submit(const Simulation& spatial,const TrainCommand& c) {
         return reject("Invalid sequence/tick or full command queue");
     if(!std::isfinite(c.value))return reject("Nonfinite command");
     switch(c.kind){
-        case CommandKind::Throttle:case CommandKind::Brake:
+        case CommandKind::Throttle:{
+            // Negative demand is regenerative braking: only for formations that can regenerate.
+            bool regen=false;for(const auto& m:formation_.members)regen|=definitions_.at(m.definition).maxRegenN>0;
+            if(c.value<(regen?-1:0)||c.value>1)return reject("Command outside allowed range");break;}
+        case CommandKind::Brake:
             if(c.value<0||c.value>1)return reject("Command outside zero to one");break;
         case CommandKind::Direction:
             if(c.value!=-1&&c.value!=0&&c.value!=1)return reject("Invalid reverser direction");break;
@@ -115,11 +124,21 @@ Result HandlingModel::Step(Simulation& spatial,double dt){
         applySeconds=std::max(applySeconds,d.brakeApplySeconds);releaseSeconds=std::max(releaseSeconds,d.brakeReleaseSeconds);
         emergencySeconds=std::max(emergencySeconds,d.emergencyApplySeconds);
     }
-    const double brakeTarget=next.command.emergency?1:next.command.brake;
+    bool air=!formation_.members.empty(),regen=false;
+    for(const auto& member:formation_.members){const auto& d=definitions_.at(member.definition);air&=d.gradedAirBrake;regen|=d.maxRegenN>0;}
+    // appliedBrake is the cylinder fill fraction. With the graded air brake the A9 handle sets the
+    // brake pipe, and the distributor's target follows its reduction; fill/release use the rates above.
+    const double pipe=AirBrake::BrakePipe(next.command.brake,next.command.emergency);
+    const double brakeTarget=air?AirBrake::CylinderFraction(pipe):(next.command.emergency?1:next.command.brake);
     const double brakeSeconds=brakeTarget>next.appliedBrake?(next.command.emergency?emergencySeconds:applySeconds):releaseSeconds;
     next.appliedBrake=Approach(next.appliedBrake,brakeTarget,dt/brakeSeconds);
-    const bool cutout=next.command.emergency||next.command.brake>0||next.appliedBrake>1e-9||next.command.direction==0;
-    next.appliedThrottle=Approach(next.appliedThrottle,cutout?0:next.command.throttle,dt/tractionSeconds);
+    // Traction interlock: the air-braked loco cuts TE while the pipe is reduced below 4.7 (a releasing
+    // cylinder still drags); the lumped brake keeps its earlier full-release interlock.
+    const bool cutout=next.command.emergency||next.command.direction==0||
+        (air?pipe<AirBrake::TractionInterlockPipe:(next.command.brake>0||next.appliedBrake>1e-9));
+    const double demand=next.command.throttle;
+    const double tractionTarget=demand>=0?(cutout?0:demand):(regen&&!next.command.emergency&&next.command.direction!=0?demand:0);
+    next.appliedThrottle=Approach(next.appliedThrottle,tractionTarget,dt/tractionSeconds);
     double grade=0,rolling=0,aero=0,brakeCapacity=0;
     for(size_t i=0;i<formation_.members.size();++i){const auto id=formation_.members[i].definition;
         const auto& v=vehicles_.at(id);const auto& d=definitions_.at(id);Sample point;
@@ -131,7 +150,12 @@ Result HandlingModel::Step(Simulation& spatial,double dt){
     }
     auto evaluate=[&](double speed){
         Forces force;force.grade=grade;
-        if(!cutout){for(const auto& member:formation_.members){const auto& v=vehicles_.at(member.definition);const auto& d=definitions_.at(member.definition);
+        // Regenerative braking opposes motion (reported as negative tractive effort), blending with air.
+        if(next.appliedThrottle<0&&std::abs(speed)>1e-12)for(const auto& member:formation_.members){const auto& v=vehicles_.at(member.definition);const auto& d=definitions_.at(member.definition);
+            if(!v.powered)continue;
+            force.traction-=Sign(speed)*(-next.appliedThrottle)*RegenerativeEffortN(d,speed,d.adhesionCoefficient*v.massKg*d.adhesiveMassFraction*Gravity);
+        }
+        if(!cutout&&next.appliedThrottle>0){for(const auto& member:formation_.members){const auto& v=vehicles_.at(member.definition);const auto& d=definitions_.at(member.definition);
             if(!v.powered||d.maxTractionN==0)continue;
             const double magnitude=std::abs(speed);
             const double base=d.version>=2?d.tractionCutoffMps*.95:std::min(d.tractionCutoffMps*.5,d.maxPowerWatts/d.maxTractionN);

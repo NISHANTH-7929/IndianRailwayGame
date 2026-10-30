@@ -86,7 +86,7 @@ bool FRailCabStabilizationTest::RunTest(const FString& Parameters){
   TestTrue(TEXT("Emergency indication follows handling latch"),J->GetBoolField(TEXT("emergency")));
   TestEqual(TEXT("Speed gauge source is actual speed"),J->GetNumberField(TEXT("speedKmh")),18.0);
   CheckPose(J,TEXT("gauge_speed"),Axis(TEXT("gauge_speed")),At(TEXT("gauge_speed"),.1));
-  CheckPose(J,TEXT("throttle"),Axis(TEXT("throttle")),At(TEXT("throttle"),.75));
+  CheckPose(J,TEXT("throttle"),Axis(TEXT("throttle")),At(TEXT("throttle"),(.75+1)*.5)); // centre-zero TE/BE controller
   CheckPose(J,TEXT("train_brake"),Axis(TEXT("train_brake")),At(TEXT("train_brake"),0));
   CheckPose(J,TEXT("reverser"),Axis(TEXT("reverser")),At(TEXT("reverser"),1));
   // The authored emergency button has [0,0] rotation: verify its indication,
@@ -100,7 +100,7 @@ bool FRailCabStabilizationTest::RunTest(const FString& Parameters){
    // Deliberately distinct from handle intent, including release/application lag.
    H.appliedThrottle=.1;H.appliedBrake=.3;
    View->Present(S,H,.2f,false);J=Read();
-   CheckPose(J,TEXT("throttle"),Axis(TEXT("throttle")),At(TEXT("throttle"),C.Power));
+   CheckPose(J,TEXT("throttle"),Axis(TEXT("throttle")),At(TEXT("throttle"),(C.Power+1)*.5));
    CheckPose(J,TEXT("train_brake"),Axis(TEXT("train_brake")),At(TEXT("train_brake"),C.Brake));
    CheckPose(J,TEXT("reverser"),Axis(TEXT("reverser")),At(TEXT("reverser"),(C.Direction+1)*.5));
    CheckPose(J,TEXT("gauge_speed"),Axis(TEXT("gauge_speed")),At(TEXT("gauge_speed"),FMath::Clamp(FMath::Abs(C.SpeedMps)*3.6/180,0.0,1.0)));
