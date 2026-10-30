@@ -93,6 +93,15 @@ Scripts live under `07_Documentation/S8/Tools/` and `07_Documentation/S9/Tools/`
   Android: `Package-AndroidJourney.ps1`.
 - See `07_Documentation/S8/REPRODUCTION.md` for the full pipeline.
 
+- Visual review loop (renders real frames offscreen from isolated fixture saves):
+  `07_Documentation/S9/Tools/Review-Visuals.ps1 -RunId <fresh-label> -Scenes urban,suburban -Cab`
+  → PNGs in `07_Documentation/S9/Evidence/<label>/<scene>/`. Build the editor
+  target first. A run takes a few minutes per scene.
+- Editor-side asset authoring (materials/texture import) runs as a Python
+  commandlet: `UnrealEditor-Cmd.exe <uproject> -run=pythonscript -script=<abs .py> -unattended -nullrhi`.
+  New runtime-loaded content directories must be added to `DirectoriesToAlwaysCook`
+  in `Config/DefaultGame.ini`.
+
 Rules: do not overwrite or delete user save checkpoints; use new labels for new
 evidence; save-format or content-id changes need a new version, not a silent edit.
 
@@ -108,14 +117,31 @@ this list, and update it as gaps close:
 - **Brakes**: modelled as one lumped first-order lag. Missing: brake-pipe
   pressure propagation along the rake, separate automatic (train) and
   independent (loco) brakes, graduated release, and WAP-7 regenerative braking.
-- **Traction**: continuous throttle; WAP-7 has a notch/tractive-effort controller
-  and published TE/speed curves (start TE ~322 kN, 6120 hp) — current fixture
-  values (150 kN / 900 kW) are placeholders.
+- **Traction**: continuous throttle. The service WAP-7 (`RailTambaramDriving.h`)
+  uses 323 kN / 4.5 MW, close to published figures (322.4 kN starting,
+  228 kN continuous at 71 km/h, 6120 hp continuous); the generic test fixture in
+  `RailHandling.cpp` (150 kN / 900 kW) is a placeholder. Missing: TE/BE
+  controller behaviour and the regenerative braking (BE) the real loco relies on.
 - **No in-train forces** (coupler slack, buff/draft), curve resistance, wheel
   slip/slide, or weather-dependent adhesion.
 - **Cab procedures**: no pantograph raise / VCB close / reverser / vigilance
   (VCD) / speedometer-recorder style start-up sequence yet.
-- Scenery is sparse/repetitive; audio is generic, not WAP-7/LHB field recordings.
+- Scenery: corridor buildings/trees are procedural primitives built in
+  `RailTambaramCorridorView.cpp` (HISM families). Photoreal results ultimately need
+  real modelled assets (Fab/Megascans, CC0 Poly Haven, commissioned WAP-7/LHB).
+- Audio is generic, not WAP-7/LHB field recordings.
+
+## Visual baseline (2026-10-30 overhaul)
+
+- Lighting is runtime-spawned in `PrepareTambaramEnvironment` (`RailChunkView.cpp`):
+  SkyAtmosphere + atmosphere sun (Chennai ~09:30), real-time captured sky light,
+  humid haze fog, unbound post-process grade. No painted sky sphere.
+- Inside the cab the sky-light is dimmed (`ApplyCabAmbient`, `RailLocomotiveView.cpp`)
+  because mobile shading has no sky occlusion.
+- Facades use `M_ChennaiFacade` (S10/ChennaiFacadeV1): biplanar world-aligned
+  weathering mask (rain streaks, faded paint, dust), 2 texture fetches.
+- Corridor has a third housing row and a continuous far skyline band (houses,
+  black rooftop tanks, coconut palms, canopy) so the horizon is never empty.
 
 ## Working agreement
 

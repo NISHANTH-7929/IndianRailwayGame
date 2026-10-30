@@ -23,6 +23,9 @@
 #include "Serialization/JsonSerializer.h"
 #include "Materials/MaterialInstanceDynamic.h"
 #include "ProfilingDebugging/CsvProfiler.h"
+#include "Engine/SkyLight.h"
+#include "Components/SkyLightComponent.h"
+#include "EngineUtils.h"
 CSV_DEFINE_CATEGORY(RailS8,true);
 namespace {
 FVector Cm(Rail::Vec3 V){return FVector(V.x*100,V.y*100,V.z*100);}
@@ -30,6 +33,21 @@ bool Vector(const FJsonObject& O,const TCHAR* Key,FVector& Out){
  const TArray<TSharedPtr<FJsonValue>>* A=nullptr;if(!O.TryGetArrayField(Key,A)||A->Num()!=3)return false;
  double V[3];for(int I=0;I<3;++I)if(!(*A)[I]->TryGetNumber(V[I])||!FMath::IsFinite(V[I]))return false;
  Out=FVector(V[0],V[1],V[2]);return true;
+}
+// Mobile shading has no sky occlusion, so an open-sky ambient floods the enclosed cab with
+// blue. Only the view that entered the cab dims the captured-sky fill, and only it restores
+// it; sunlight through the glazing stays physical. Scaling keeps low-light reviews intact.
+constexpr float CabAmbientScale=.36f;
+TWeakObjectPtr<AActor> CabAmbientOwner;
+void ApplyCabAmbient(AActor* View,bool Cab){
+ const bool Owner=CabAmbientOwner.Get()==View;
+ if(Cab==Owner||(Cab&&CabAmbientOwner.IsValid()))return;
+ bool Found=false;
+ for(TActorIterator<ASkyLight> It(View->GetWorld());It;++It)if(It->ActorHasTag(TEXT("TambaramRuntimeEnvironment"))){
+  auto* Light=It->GetLightComponent();Light->SetIntensity(Light->Intensity*(Cab?CabAmbientScale:1/CabAmbientScale));Found=true;
+ }
+ // The runtime environment may spawn after the cab opens; Present retries until it exists.
+ if(Found||!Cab)CabAmbientOwner=Cab?View:nullptr;
 }
 }
 ARailLocomotiveView::ARailLocomotiveView(){
@@ -58,7 +76,7 @@ void ARailLocomotiveView::EndPlay(const EEndPlayReason::Type EndPlayReason){
  FCoreDelegates::ApplicationWillDeactivateDelegate.RemoveAll(this);
  FCoreDelegates::ApplicationWillEnterBackgroundDelegate.RemoveAll(this);
  if(FSlateApplication::IsInitialized())FSlateApplication::Get().OnApplicationActivationStateChanged().RemoveAll(this);
- CancelCabPointerInput();Super::EndPlay(EndPlayReason);
+ ApplyCabAmbient(this,false);CancelCabPointerInput();Super::EndPlay(EndPlayReason);
 }
 void ARailLocomotiveView::CancelCabPointerInput(){CabPointerRouter.Cancel();}
 void ARailLocomotiveView::OnApplicationActivationChanged(bool Active){CancelCabPointerInput();}
@@ -136,6 +154,7 @@ void ARailLocomotiveView::UpdateCamera(){
  Instruments->SetVisibility(CabCamera);SpeedReadout->SetVisibility(CabCamera);
  for(int32 I=0;I<Parts.Num();++I){const bool Visible=CabOnly[I]?CabCamera:(!CabCamera||Roles[I]!=TEXT("exterior"));Parts[I]->SetVisibility(Visible);Parts[I]->SetCastShadow(Visible);}
  CabLight->SetVisibility(CabCamera&&CabLighting);
+ ApplyCabAmbient(this,CabCamera);
 }
 void ARailLocomotiveView::ToggleCamera(){if(CabAvailable){CancelCabPointerInput();CabCamera=!CabCamera;ExteriorView=0;InstrumentView=false;++CabTransitions;LookOffset=FRotator::ZeroRotator;UpdateCamera();}}
 FString ARailLocomotiveView::CameraName() const {return CabCamera?TEXT("Cab"):ExteriorView==1?TEXT("Forward route"):ExteriorView==2?TEXT("Right side"):TEXT("Left side");}
@@ -196,6 +215,7 @@ void ARailLocomotiveView::Present(const Rail::Simulation& Spatial,const Rail::Lo
   }}
  }else CancelCabPointerInput();
 
+ ApplyCabAmbient(this,CabCamera);
  if(!Spatial.Presentation(Spatial.InterpolationAlpha(),S).ok||S.vehicles.empty())return;
  const auto& V=S.vehicles.front();const FQuat Q=FRotationMatrix::MakeFromXZ(Cm(V.bodyForward).GetSafeNormal(),FVector::UpVector).ToQuat();SetActorLocationAndRotation(Cm(V.bodyCentre),Q);
  if(!Paused)WiperTime+=FMath::Clamp(double(Dt),0.0,.1);

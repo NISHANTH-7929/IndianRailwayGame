@@ -69,7 +69,7 @@ FString ARailTambaramCorridorView::TrackAssetTelemetryJson() const {
  return FString::Printf(TEXT("{\"rails\":\"%s\",\"bed\":\"%s\",\"stone\":\"%s\",\"ground\":\"%s\",\"finishes\":%s,\"textures\":%s,\"nature\":%s}"),*Rails,*Bed,*Stone,*Ground,*Finishes,*Textures,*Nature);
 }
 bool ARailTambaramCorridorView::LoadAssets(){
- if(bAssetsAttempted)return Meshes.Num()==6&&Materials.Num()==22;
+ if(bAssetsAttempted)return Meshes.Num()==6&&Materials.Num()==28;
  bAssetsAttempted=true;
  LeafCluster=LoadObject<UStaticMesh>(nullptr,TEXT("/Game/IndianRailway/S8/Chennai/SM_ChennaiLeafCluster.SM_ChennaiLeafCluster"));
  LeafMaterial=LoadObject<UMaterialInterface>(nullptr,TEXT("/Game/IndianRailway/S8/Chennai/M_ChennaiLeafSurface.M_ChennaiLeafSurface"));
@@ -112,12 +112,23 @@ bool ARailTambaramCorridorView::LoadAssets(){
  // Original project-authored lit colour master; optional during asset migration.
  auto* Tint=LoadObject<UMaterialInterface>(nullptr,TEXT("/Game/IndianRailway/S8/Chennai/M_SceneryTint.M_SceneryTint"));
  if(auto* Finish=LoadObject<UMaterialInterface>(nullptr,TEXT("/Game/IndianRailway/S9/CorridorFinishV2/M_CorridorFinish.M_CorridorFinish")))Tint=Finish;
+ // Last six: the weathered emulsion pastels that dominate Chennai suburban housing (lemon,
+ // sky blue, rose, mint, off-white, peach). Linear values, sun-faded rather than catalogue new.
  const FLinearColor Colors[]={FLinearColor(.36f,.53f,.58f),FLinearColor(.64f,.38f,.32f),FLinearColor(.44f,.54f,.36f),
   FLinearColor(.075f,.19f,.035f),FLinearColor(.16f,.27f,.045f),FLinearColor(.12f,.075f,.035f),
   FLinearColor(.11f,.17f,.14f),FLinearColor(.07f,.075f,.075f),FLinearColor(.68f,.66f,.55f),
-  FLinearColor(.20f,.25f,.11f),FLinearColor(.38f,.30f,.18f)};
- for(const auto& Color:Colors){
-  if(Tint){auto* MID=UMaterialInstanceDynamic::Create(Tint,this);MID->SetVectorParameterValue(TEXT("Color"),Color);Materials.Add(MID);}
+  FLinearColor(.20f,.25f,.11f),FLinearColor(.38f,.30f,.18f),
+  FLinearColor(.66f,.58f,.30f),FLinearColor(.40f,.55f,.64f),FLinearColor(.64f,.42f,.43f),
+  FLinearColor(.46f,.60f,.47f),FLinearColor(.70f,.69f,.63f),FLinearColor(.70f,.48f,.33f)};
+ // Painted walls (teal, terracotta, green and the six pastels) get monsoon streaks, faded
+ // paint and storey-base dust from a biplanar world-aligned mask: two fetches, mobile-safe.
+ auto* Facade=LoadObject<UMaterialInterface>(nullptr,TEXT("/Game/IndianRailway/S10/ChennaiFacadeV1/M_ChennaiFacade.M_ChennaiFacade"));
+ for(int32 Index=0;Index<UE_ARRAY_COUNT(Colors);++Index){
+  const bool Wall=Index<3||Index>=11;
+  auto* Parent=Wall&&Facade?Facade:Tint;
+  if(Parent){auto* MID=UMaterialInstanceDynamic::Create(Parent,this);MID->SetVectorParameterValue(TEXT("Color"),Colors[Index]);
+   if(Parent==Facade)MID->SetScalarParameterValue(TEXT("GrimeAmount"),1.25f); // a few monsoons since repaint
+   Materials.Add(MID);}
   else Materials.Add(Materials[3]);
  }
  // Material count is constant during travel: twelve foliage shades and six
@@ -127,16 +138,17 @@ bool ARailTambaramCorridorView::LoadAssets(){
   const FLinearColor Base=Kind==0?FLinearColor(.022f,.065f,.018f):Kind==1?FLinearColor(.045f,.085f,.026f):FLinearColor(.036f,.057f,.019f);
   Material->SetVectorParameterValue(TEXT("Color"),Base*(.78f+.22f*Shade/3.f));LeafPalette.Add(Material);
  }
- const FLinearColor GroundColors[]={FLinearColor(.20f,.16f,.095f),FLinearColor(.14f,.105f,.06f),FLinearColor(.075f,.12f,.035f),FLinearColor(.19f,.22f,.075f),FLinearColor(.055f,.065f,.035f),FLinearColor(.24f,.20f,.135f)};
+ const FLinearColor GroundColors[]={FLinearColor(.14f,.125f,.07f),FLinearColor(.14f,.105f,.06f),FLinearColor(.075f,.12f,.035f),FLinearColor(.19f,.22f,.075f),FLinearColor(.055f,.065f,.035f),FLinearColor(.24f,.20f,.135f)};
  if(GroundMaterial)for(const auto& Color:GroundColors){
   auto* Material=UMaterialInstanceDynamic::Create(GroundMaterial,this);
   Material->SetVectorParameterValue(TEXT("Color"),Color);
-  Material->SetScalarParameterValue(TEXT("VegetationCoverage"),GroundPalette.IsEmpty()?.48f:0.f);GroundPalette.Add(Material);
+  Material->SetScalarParameterValue(TEXT("VegetationCoverage"),GroundPalette.IsEmpty()?.62f:0.f);GroundPalette.Add(Material);
  }
  if(GroundMaterial){
   OuterGroundMaterial=UMaterialInstanceDynamic::Create(OuterGroundSurface?OuterGroundSurface:GroundMaterial,this);
-  OuterGroundMaterial->SetVectorParameterValue(TEXT("Color"),FLinearColor(.18f,.155f,.10f));
-  OuterGroundMaterial->SetScalarParameterValue(TEXT("VegetationCoverage"),.73f);
+  // Post-monsoon Chennai backland: weedy green over red-brown laterite, not bare desert.
+  OuterGroundMaterial->SetVectorParameterValue(TEXT("Color"),FLinearColor(.085f,.095f,.04f));
+  OuterGroundMaterial->SetScalarParameterValue(TEXT("VegetationCoverage"),.95f);
  }
  Diagnostic=TEXT("Ready: bounded graph-sampled corridor cells");return true;
 }
@@ -157,7 +169,7 @@ void ARailTambaramCorridorView::BuildCell(const Rail::Graph& Graph,int32 Track,i
  if(End<=Start)return;
  // Family order: track, shaped ballast, close stones, OHE steel, ground, cream buildings,
  // oxide buildings, trees. No collision and no gameplay state in any family.
- constexpr int32 FamilyCount=34; // ground relief, grass tufts and a shared exterior soil finish
+ constexpr int32 FamilyCount=40; // ground relief, grass tufts, exterior soil finish and six facade pastels
  TArray<FTransform> Instances[FamilyCount];
  const Rail::PreparedRouteSampler Sampler(Graph,Path);
  auto Sample=[&](double D,Rail::Sample& S){return Sampler.SampleAt(D,S);};
@@ -509,8 +521,9 @@ void ARailTambaramCorridorView::BuildCell(const Rail::Graph& Graph,int32 Track,i
   // not reset every street to the same first house. These are representative
   // streetscapes, not surveyed plots. All variation stays beyond the clearance.
   const double District=.5+.5*FMath::Sin(Mid*.0019+Side*2.3);
-  const double Density=Airport?.35:Industrial?.62:.70+.25*District;
-  for(double D=Start+Rng.FRandRange(10.f,23.f);D<End-10;D+=Rng.FRandRange(23.f,38.f)){
+  // Chennai suburbs are packed plot-to-plot; gaps are the exception, not the rule.
+  const double Density=Airport?.35:Industrial?.66:.86+.12*District;
+  for(double D=Start+Rng.FRandRange(10.f,23.f);D<End-10;D+=Rng.FRandRange(17.f,27.f)){
    if(AtWater(BaseChainage(Track,D),45))continue;
    const double Plot=BaseChainage(Track,D);
    const bool OpenStretch=!NearStation&&!Terminal&&
@@ -544,7 +557,9 @@ void ARailTambaramCorridorView::BuildCell(const Rail::Graph& Graph,int32 Track,i
    const double H=Floors*3.0,Base=-.48;
    const int32 Style=Rng.RandRange(0,5);
    const int32 Palette=(int32(FMath::FloorToDouble(Plot/670))+Track)%3;
-   const int32 Wall=Style<2?5:Style==2?6:14+(Style+Palette)%3;
+   // Mostly pastel emulsion, with cream, teal, terracotta and red-oxide minorities.
+   static constexpr int32 WallChoices[]={34,35,36,37,38,39,5,14,15,6};
+   const int32 Wall=WallChoices[(Style*3+Palette*5+int32(FMath::Abs(Plot)/31))%10];
    auto Box=[&](int32 F,double X,double Y,double Z,double SX,double SY,double SZ){Add(F,S,FVector(X,Side*(Setback+Y),Base+Z),FVector(SX,SY,SZ));};
    const bool Shed=Industrial&&Rng.FRand()<.6f;
    if(Shed){
@@ -754,6 +769,75 @@ void ARailTambaramCorridorView::BuildCell(const Rail::Graph& Graph,int32 Track,i
     }
    }
   }
+  // Chennai never shows an empty horizon from a suburban line: beyond the trackside rows the
+  // land is packed with low-rise houses, coconut palms and rain-tree/neem canopy. A compact
+  // house (pastel walls, flat roof, parapet, chajja-shaded windows, stair room and black
+  // polyethylene tank) fills a third row and a continuous far band out to the 176m soil edge.
+  // Independent streams: nothing above reshuffles. Facades face the railway; backs stay plain.
+  auto CompactHouse=[&](const Rail::Sample& S,FRandomStream& R,double X,double Y,double W,double Depth,int32 Floors,bool Far){
+   static constexpr int32 Pastels[]={34,35,36,37,38,39,34,38,5,14};
+   const int32 Paint=Pastels[R.RandRange(0,9)];
+   const double H=Floors*3.05,Base=-.55,Front=Y-Depth*.5;
+   auto Box=[&](int32 F,double BX,double BY,double Z,double SX,double SY,double SZ){Add(F,S,FVector(X+BX,Side*BY,Base+Z),FVector(SX,SY,SZ));};
+   Box(Paint,0,Y,H*.5,W,Depth,H);
+   Box(8,0,Y,H+.1,W+.2,Depth+.2,.2);
+   for(double E:{-1.,1.}){Box(Paint,E*(W*.5-.08),Y,H+.5,.16,Depth,.8);Box(Paint,0,Y+E*(Depth*.5-.08),H+.5,W,.16,.8);}
+   const int32 Bays=FMath::Max(1,FMath::FloorToInt(W/(Far?3.2:2.7)));
+   for(int32 Floor=0;Floor<Floors;++Floor)for(int32 Bay=0;Bay<Bays;++Bay){
+    const double BX=-W*.5+(Bay+.5)*W/Bays,Z=Floor*3.05;
+    Box(9,BX,Front-.04,Z+1.55,1.3,.08,1.3);
+    if(!Far||Floor<2)Box(5,BX,Front-.32,Z+2.36,1.7,.6,.09); // chajja sunshade
+   }
+   if(R.FRand()<.8f){
+    const double TX=R.FRandRange(-.3f,.3f)*W,TY=Y+R.FRandRange(-.2f,.2f)*Depth;
+    Add(20,S,FVector(X+TX,Side*TY,Base+H+.85),FVector(1.25,1.25,1.1));
+    Add(20,S,FVector(X+TX,Side*TY,Base+H+1.45),FVector(1.3,1.3,.08));
+   }
+   if(!Far||R.FRand()<.6f)Box(Paint,R.FRandRange(-.25f,.25f)*W,Y+Depth*.15,H+1.1,2.6,2.7,2.2);
+  };
+  auto Palm=[&](const Rail::Sample& S,FRandomStream& R,double X,double Y,double H){
+   const double Lean=R.FRandRange(-.6f,.6f),Yaw=R.FRandRange(0.f,6.283185f);
+   const FVector Root(X,Y,-.65),Crown(X+Lean,Y,H);
+   Limb(S,Root,FVector(X+Lean*.35,Y,H*.55),.24);Limb(S,FVector(X+Lean*.35,Y,H*.55),Crown,.20);
+   for(int32 Frond=0;Frond<7;++Frond){
+    const double A=Yaw+Frond*6.283185/7;const FVector Dir(FMath::Cos(A),FMath::Sin(A),0);
+    for(int32 K=0;K<2;++K){
+     const double T=K?.78:.35;
+     Add(17+Frond%2,S,Crown+Dir*(T*3.1)+FVector(0,0,.9*FMath::Sin(T*3.14159)-T*1.1),FVector(1.5,.42,.32),FRotator(20-50*T,FMath::RadiansToDegrees(A),0));
+    }
+   }
+  };
+  if(!Terminal){
+   FRandomStream Fabric(88317+Track*67000+CellIndex*211);
+   // Third row: 62-100m, mostly residential; open airport land keeps its gaps.
+   for(double D=Start+Fabric.FRandRange(4.f,12.f);D<End-6;D+=Fabric.FRandRange(13.f,21.f)){
+    const double Plot=BaseChainage(Track,D);
+    if(AtWater(Plot,60)||Fabric.FRand()>(Airport?.25:Industrial?.55:.85))continue;
+    Rail::Sample S;if(!Sample(D,S))continue;
+    const double W=Fabric.FRandRange(7.f,12.f),Depth=Fabric.FRandRange(8.f,12.f);
+    CompactHouse(S,Fabric,Fabric.FRandRange(-2.f,2.f),Fabric.FRandRange(64.f,96.f),W,Depth,Fabric.RandRange(1,3+(District>.55?1:0)),false);
+    if(Fabric.FRand()<.35f)Palm(S,Fabric,Fabric.FRandRange(-5.f,5.f),Side*Fabric.FRandRange(58.f,100.f),Fabric.FRandRange(9.f,14.f));
+   }
+   // Far band: 112-172m, closed skyline of taller blocks, palms above canopy and tree mass.
+   for(double D=Start+Fabric.FRandRange(2.f,8.f);D<End-4;D+=Fabric.FRandRange(9.f,15.f)){
+    const double Plot=BaseChainage(Track,D);
+    if(AtWater(Plot,80))continue;
+    Rail::Sample S;if(!Sample(D,S))continue;
+    if(Fabric.FRand()<(Airport?.15:Industrial?.5:.7)){
+     const int32 Floors=Airport?Fabric.RandRange(1,2):Fabric.RandRange(2,District>.5?6:4);
+     CompactHouse(S,Fabric,Fabric.FRandRange(-1.5f,1.5f),Fabric.FRandRange(118.f,162.f),Fabric.FRandRange(9.f,16.f),Fabric.FRandRange(9.f,14.f),Floors,true);
+    }
+    const int32 Crowns=Fabric.RandRange(1,3);
+    for(int32 Crown=0;Crown<Crowns;++Crown){
+     const double CY=Side*Fabric.FRandRange(108.f,172.f),CH=Fabric.FRandRange(6.f,12.f),CW=Fabric.FRandRange(5.f,9.f);
+     const double CX=Fabric.FRandRange(-5.f,5.f);
+     Limb(S,FVector(CX,CY,-.65),FVector(CX,CY,CH-CW*.15),.28);
+     Add(17+Crown%2,S,FVector(CX,CY,CH),FVector(CW,CW*.85,CW*.55),FRotator(0,Fabric.FRandRange(0.f,360.f),0));
+     Add(18-Crown%2,S,FVector(CX+CW*.2,CY,CH-CW*.22),FVector(CW*.8,CW*.75,CW*.45),FRotator(0,Fabric.FRandRange(0.f,360.f),0));
+    }
+    if(Fabric.FRand()<.45f)Palm(S,Fabric,Fabric.FRandRange(-4.f,4.f),Side*Fabric.FRandRange(110.f,168.f),Fabric.FRandRange(11.f,17.f));
+   }
+  }
   // Independent dry grass patches and occasional woody scrub occupy the
   // neglected verge. Grass blades grow from ground level instead of scaling
   // tree crowns into flat green pancakes. The cable route and drain stay clear.
@@ -814,8 +898,8 @@ void ARailTambaramCorridorView::BuildCell(const Rail::Graph& Graph,int32 Track,i
    }
   }
  }
- const int32 MeshIndex[]={0,1,2,2,2,2,2,3,2,2,2,2,2,2,2,2,2,4,4,5,5,2,2,2,2,2,2,2,4,2,2,2,4,2};
- const int32 MaterialIndex[]={-1,-1,0,1,2,3,4,-1,5,6,7,8,9,10,11,12,13,14,15,16,8,17,18,19,20,21,5,20,14,21,0,-1,-1,2};
+ const int32 MeshIndex[]={0,1,2,2,2,2,2,3,2,2,2,2,2,2,2,2,2,4,4,5,5,2,2,2,2,2,2,2,4,2,2,2,4,2,2,2,2,2,2,2};
+ const int32 MaterialIndex[]={-1,-1,0,1,2,3,4,-1,5,6,7,8,9,10,11,12,13,14,15,16,8,17,18,19,20,21,5,20,14,21,0,-1,-1,2,22,23,24,25,26,27};
  for(int32 Family=0;Family<FamilyCount;++Family){
   if(Instances[Family].IsEmpty())continue;
   auto* Part=NewObject<UHierarchicalInstancedStaticMeshComponent>(this);AddInstanceComponent(Part);Part->SetupAttachment(RootComponent);

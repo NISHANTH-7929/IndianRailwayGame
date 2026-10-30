@@ -13,6 +13,8 @@ CSV_DEFINE_CATEGORY(RailChunkLoading,true);
 #include "Engine/SkyLight.h"
 #include "Engine/ExponentialHeightFog.h"
 #include "Components/ExponentialHeightFogComponent.h"
+#include "Components/SkyAtmosphereComponent.h"
+#include "Engine/PostProcessVolume.h"
 #include "Engine/TextureCube.h"
 #include "Components/SkyLightComponent.h"
 #include "Engine/Light.h"
@@ -43,21 +45,41 @@ void PrepareTambaramEnvironment(UWorld* World,ULevel* Chunk){
   }
  for(TActorIterator<ADirectionalLight> It(World);It;++It)if(It->ActorHasTag(Tag))return;
  FActorSpawnParameters Params;Params.OverrideLevel=World->PersistentLevel;
+ // Chennai mid-morning (13.1 N, ~09:30): sun ~42 deg high in the south-east. Physically based
+ // sky (mobile base pass supports SkyAtmosphere aerial perspective), sun tinted by atmospheric
+ // transmittance, ambient captured from that sky and a humid coastal haze. Replaces the old
+ // grey-cubemap fill and painted sky sphere that made every surface flat.
+ auto* Atmosphere=World->SpawnActor<ASkyAtmosphere>(FVector::ZeroVector,FRotator::ZeroRotator,Params);
+ if(Atmosphere){Atmosphere->Tags.Add(Tag);auto* Air=Atmosphere->GetComponent();
+  Air->SetMieScatteringScale(.013f);Air->SetMieAnisotropy(.80f);    // humid coastal aerosol, ~3x default
+  Air->SetGroundAlbedo(FColor(110,98,80));Air->SetAerialPespectiveViewDistanceScale(2.2f);
+  Air->SetHeightFogContribution(.6f);}
  auto* Sun=World->SpawnActor<ADirectionalLight>(FVector(0,0,2500),FRotator(-42,-35,0),Params);
  if(Sun){Sun->Tags.Add(Tag);auto* Light=Cast<UDirectionalLightComponent>(Sun->GetLightComponent());
-  Light->SetMobility(EComponentMobility::Movable);Light->SetIntensity(3);Light->SetAtmosphereSunLight(false);}
+  Light->SetMobility(EComponentMobility::Movable);Light->SetIntensity(3.6f);Light->SetAtmosphereSunLight(true);
+  Light->SetAtmosphereSunLightIndex(0);Light->SetLightSourceAngle(.5357f);
+  Light->SetDynamicShadowDistanceMovableLight(25000);Light->SetDynamicShadowCascades(3);}
  auto* Fill=World->SpawnActor<ASkyLight>(FVector::ZeroVector,FRotator::ZeroRotator,Params);
  if(Fill){Fill->Tags.Add(Tag);auto* Light=Fill->GetLightComponent();Light->SetMobility(EComponentMobility::Movable);
-  Light->SourceType=SLS_SpecifiedCubemap;Light->SetCubemap(LoadObject<UTextureCube>(nullptr,TEXT("/Engine/EngineResources/GrayTextureCube.GrayTextureCube")));
-  Light->SetIntensity(.60f);Light->SetCastShadows(false);Light->RecaptureSky();}
+  // Real-time capture falls back to a one-off capture where the Effects tier disables it.
+  Light->SourceType=SLS_CapturedScene;Light->SetRealTimeCapture(true);
+  Light->bLowerHemisphereIsBlack=true;Light->SetLowerHemisphereColor(FLinearColor(.16f,.13f,.09f)); // sun-lit laterite bounce
+  Light->SetIntensity(1.f);Light->SetCastShadows(false);Light->RecaptureSky();}
  auto* Haze=World->SpawnActor<AExponentialHeightFog>(FVector(0,0,-100),FRotator::ZeroRotator,Params);
- if(Haze){Haze->Tags.Add(Tag);auto* Fog=Haze->GetComponent();Fog->SetFogDensity(.003f);Fog->SetFogHeightFalloff(.15f);
-  Fog->SetStartDistance(3000);Fog->SetFogMaxOpacity(.7f);Fog->SetFogInscatteringColor(FLinearColor(.48f,.57f,.62f));}
- auto* Sky=World->SpawnActor<AStaticMeshActor>(FVector::ZeroVector,FRotator::ZeroRotator,Params);
- if(Sky){Sky->Tags.Add(Tag);auto* Mesh=Sky->GetStaticMeshComponent();Mesh->SetMobility(EComponentMobility::Movable);
-  Mesh->SetStaticMesh(LoadObject<UStaticMesh>(nullptr,TEXT("/Engine/BasicShapes/Sphere.Sphere")));
-  Mesh->SetMaterial(0,LoadObject<UMaterialInterface>(nullptr,TEXT("/Game/IndianRailway/S8/Stations/Kit01/Materials/M_DaySky.M_DaySky")));
-  Mesh->SetCastShadow(false);Mesh->SetCollisionEnabled(ECollisionEnabled::NoCollision);Sky->SetActorScale3D(FVector(100000));}
+ if(Haze){Haze->Tags.Add(Tag);auto* Fog=Haze->GetComponent();Fog->SetFogDensity(.009f);Fog->SetFogHeightFalloff(.20f);
+  Fog->SetStartDistance(2500);Fog->SetFogMaxOpacity(.85f);Fog->SetFogInscatteringColor(FLinearColor(.16f,.18f,.20f));
+  Fog->SetDirectionalInscatteringExponent(6);Fog->SetDirectionalInscatteringStartDistance(8000);
+  Fog->SetDirectionalInscatteringColor(FLinearColor(.30f,.24f,.15f));}
+ // Unbound grade: humid tropical daylight is soft and warm, never the neutral grey of the
+ // engine default. Bloom is a no-op where the device profile sets r.BloomQuality=0.
+ auto* Grade=World->SpawnActor<APostProcessVolume>(FVector::ZeroVector,FRotator::ZeroRotator,Params);
+ if(Grade){Grade->Tags.Add(Tag);Grade->bUnbound=true;Grade->Priority=-1;auto& P=Grade->Settings;
+  P.bOverride_BloomIntensity=true;P.BloomIntensity=.35f;P.bOverride_BloomThreshold=true;P.BloomThreshold=1.2f;
+  P.bOverride_WhiteTemp=true;P.WhiteTemp=6900; // >6500 warms the image
+  P.bOverride_ColorSaturation=true;P.ColorSaturation=FVector4(1.04,1.03,.96,1);
+  P.bOverride_ColorContrast=true;P.ColorContrast=FVector4(1.04,1.04,1.04,1);
+  P.bOverride_ColorGammaShadows=true;P.ColorGammaShadows=FVector4(1.0,1.0,1.03,1);
+  P.bOverride_VignetteIntensity=true;P.VignetteIntensity=.3f;}
 }
 }
 ARailChunkView::ARailChunkView(){

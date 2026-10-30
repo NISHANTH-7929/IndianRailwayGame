@@ -1,0 +1,65 @@
+# S10 realism roadmap (started 2026-10-30)
+
+Goal: the most authentic Indian Railways loco-pilot experience on Android —
+"Monoposto for Indian trains". Realism means the whole railway behaves
+consistently: physics, cab, signalling, traffic, stations, environment, sound.
+
+Ordered by player-perceived impact ÷ effort. Each slice ships with rendered or
+tested evidence and is committed separately.
+
+## Done in S10 slice 1 — visual baseline overhaul
+
+- Physically based Chennai daylight: SkyAtmosphere + atmosphere sun (~09:30),
+  real-time captured sky ambient, humid coastal haze, warm unbound grade.
+- Cab interior no longer flooded by open-sky ambient (mobile has no sky
+  occlusion): sky fill is dimmed only while the camera is in the cab.
+- Corridor density: front-row plots packed like Chennai suburbs, a third
+  housing row, and a continuous far skyline (houses, black rooftop tanks,
+  coconut palms above canopy) so the horizon is never an empty plain.
+- Pastel emulsion palette plus `M_ChennaiFacade`: monsoon rain streaks under
+  slab lines, faded paint and storey-base dust (original procedural mask).
+
+## Next slices
+
+1. **IR automatic block signalling (gameplay).** Four-aspect colour-light
+   signals at each block boundary on the suburban lines (Egmore–Tambaram is
+   automatic territory): Red / Yellow (caution: be prepared to stop at next
+   signal) / Double Yellow (attention: pass next signal at restricted speed) /
+   Green. Aspects derived in the pure simulation from block occupancy and
+   reservations; AI obeys them; HUD shows next aspect + distance; passing Red
+   is a SPAD (emergency, penalty). Automatic signals carry the "A" marker:
+   after stopping at Red, a train may proceed after the prescribed wait at
+   restricted speed (G&SR automatic-signal rule) — verify exact figures against
+   the current G&SR / Southern Railway SR before implementing.
+2. **Brake realism.** Separate A9 (automatic/train) and SA9 (independent/loco)
+   brakes; brake-pipe pressure (5.0 kg/cm² charged) with propagation delay
+   along the rake; brake-cylinder pressure; graduated release; regenerative
+   braking (BE) on the WAP-7 with its own speed-dependent limit. Cab gauges
+   (BP, BC, MR, FP) driven by these pressures.
+3. **Cab procedures.** Pantograph raise, VCB close, reverser, TE/BE master
+   controller notches, vigilance control device (periodic acknowledgement
+   pedal/button), DDU screen showing demanded vs realised TE/BE, OHE kV and
+   primary current, speed with class limit.
+4. **Environment assets.** Procedural primitives have a ceiling. For photoreal
+   results bring in real assets: Fab/Megascans (free with UE, needs the
+   developer's Epic account), CC0 Poly Haven textures/HDRIs, and a
+   commissioned or purchased WAP-7 + LHB set. Prosopis juliflora scrub along
+   the formation, coconut/neem/rain trees, compound walls, hoardings, power
+   poles with sagging wires, people at stations and level crossings.
+5. **Ground and verge.** `M_CorridorOuterGround` is referenced in code but the
+   asset was never created (falls back to `M_DryGround`). Author a proper
+   laterite + weed ground material with texture detail.
+6. **In-train forces, curve resistance, wheel slip on wet rail** after brakes.
+7. **Audio from real recordings** (WAP-7 traction motors, compressor, horn,
+   LHB bogie rhythm), licensed or field-recorded.
+
+## Sources consulted
+
+- WAP-7 ratings (6120 hp continuous, 322.4 kN starting TE, 228 kN at 71 km/h,
+  air + regenerative loco brake): https://en.wikipedia.org/wiki/Indian_locomotive_class_WAP-7
+- DDU screen contents (TE/BE demanded vs realised, OHE voltage, class speed
+  limit): https://manualedistruzioni.it/arc/monitor/ddu-v50/user-manual/tu9n
+- IR colour-light signalling overview (2/3/4-aspect, double yellow):
+  https://railsigns.uk/overseas/india1.html — secondary; confirm against the
+  official G&SR before implementing rules.
+- WAP-7 cab photographs: https://irfca.org/gallery/Locos/Electric/electric_cab_photos

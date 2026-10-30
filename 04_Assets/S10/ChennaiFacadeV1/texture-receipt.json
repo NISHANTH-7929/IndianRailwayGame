@@ -1,0 +1,16 @@
+{
+  "revision": "chennai-facade-v1",
+  "originalProcedural": true,
+  "importedImagery": false,
+  "channels": {
+    "R": "rain streaks",
+    "G": "paint mottle multiplier",
+    "B": "storey-base dust"
+  },
+  "tileMetres": [
+    4.0,
+    3.05
+  ],
+  "seed": 20261030,
+  "sha256": "bb6e6c75bfeb7bf68ec4cf2b55667273955c3655fa890067babd9ebc55cd6b5c"
+}
