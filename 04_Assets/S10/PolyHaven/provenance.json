@@ -1,0 +1,177 @@
+{
+  "source": "Poly Haven",
+  "license": "CC0 1.0 (https://polyhaven.com/license)",
+  "assets": [
+    {
+      "asset": "red_laterite_soil_stones",
+      "purpose": "Corridor backland and verges: Tamil Nadu red laterite soil",
+      "source": "https://polyhaven.com/a/red_laterite_soil_stones",
+      "license": "CC0 1.0",
+      "authors": [
+        "Amal Kumar"
+      ],
+      "real_size_m": [
+        2.0,
+        2.0
+      ],
+      "resolution": "1k",
+      "maps": {
+        "diff": {
+          "file": "04_Assets\\S10\\PolyHaven\\red_laterite_soil_stones\\red_laterite_soil_stones_diff_1k.jpg",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/red_laterite_soil_stones/red_laterite_soil_stones_diff_1k.jpg",
+          "bytes": 906764,
+          "sha256": "949cd648409b30e2267d89066965605d22dba4ce73d601673e155046c41e1219"
+        },
+        "nor_dx": {
+          "file": "04_Assets\\S10\\PolyHaven\\red_laterite_soil_stones\\red_laterite_soil_stones_nor_dx_1k.jpg",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/red_laterite_soil_stones/red_laterite_soil_stones_nor_dx_1k.jpg",
+          "bytes": 1496816,
+          "sha256": "afb6caf695c3b2b11059030cefe9363214be7eb88f31aa4fb2c1ca0cb5a6599e"
+        },
+        "arm": {
+          "file": "04_Assets\\S10\\PolyHaven\\red_laterite_soil_stones\\red_laterite_soil_stones_arm_1k.jpg",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/red_laterite_soil_stones/red_laterite_soil_stones_arm_1k.jpg",
+          "bytes": 1056919,
+          "sha256": "74e2cbc1caf978746153738e9fe7310a522376689ffc14966b3008b3cf603549"
+        }
+      }
+    },
+    {
+      "asset": "sparse_grass",
+      "purpose": "Weedy grass layer blended over the laterite",
+      "source": "https://polyhaven.com/a/sparse_grass",
+      "license": "CC0 1.0",
+      "authors": [
+        "Amal Kumar"
+      ],
+      "real_size_m": [
+        2.0,
+        2.0
+      ],
+      "resolution": "1k",
+      "maps": {
+        "diff": {
+          "file": "04_Assets\\S10\\PolyHaven\\sparse_grass\\sparse_grass_diff_1k.jpg",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/sparse_grass/sparse_grass_diff_1k.jpg",
+          "bytes": 955945,
+          "sha256": "ae94f2b34597b9108eefd88217f55eccaec6d6b382e858a478ee92df90e66617"
+        },
+        "nor_dx": {
+          "file": "04_Assets\\S10\\PolyHaven\\sparse_grass\\sparse_grass_nor_dx_1k.jpg",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/sparse_grass/sparse_grass_nor_dx_1k.jpg",
+          "bytes": 1432599,
+          "sha256": "52bf18e78e2b24c9d0900012ba4c70ee1805fa2ddd32dfc87a7bcc127324af33"
+        },
+        "arm": {
+          "file": "04_Assets\\S10\\PolyHaven\\sparse_grass\\sparse_grass_arm_1k.jpg",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/sparse_grass/sparse_grass_arm_1k.jpg",
+          "bytes": 978007,
+          "sha256": "209f6793060a176272ace42cabab21fdf21fe963f79267988320614b374414a8"
+        }
+      }
+    },
+    {
+      "asset": "painted_plaster_wall",
+      "purpose": "Detail for painted residential walls (tinted per building)",
+      "source": "https://polyhaven.com/a/painted_plaster_wall",
+      "license": "CC0 1.0",
+      "authors": [
+        "Amal Kumar"
+      ],
+      "real_size_m": [
+        2.0,
+        2.0
+      ],
+      "resolution": "1k",
+      "maps": {
+        "diff": {
+          "file": "04_Assets\\S10\\PolyHaven\\painted_plaster_wall\\painted_plaster_wall_diff_1k.jpg",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/painted_plaster_wall/painted_plaster_wall_diff_1k.jpg",
+          "bytes": 686726,
+          "sha256": "440310f05af089f2c93353167573403cbc3f805948203237b5d26431eeb9e19c"
+        },
+        "nor_dx": {
+          "file": "04_Assets\\S10\\PolyHaven\\painted_plaster_wall\\painted_plaster_wall_nor_dx_1k.jpg",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/painted_plaster_wall/painted_plaster_wall_nor_dx_1k.jpg",
+          "bytes": 903207,
+          "sha256": "9e6d5ee04ece7b491eafa68042a7f8e42537c678cd1ceeaf2bcb4f34cdddec9b"
+        },
+        "arm": {
+          "file": "04_Assets\\S10\\PolyHaven\\painted_plaster_wall\\painted_plaster_wall_arm_1k.jpg",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/painted_plaster_wall/painted_plaster_wall_arm_1k.jpg",
+          "bytes": 511105,
+          "sha256": "2f13ed444e3e8f13087bca0890969d30795ed074bcfb11737d1ad6f5f0b53992"
+        }
+      }
+    },
+    {
+      "asset": "concrete_wall_008",
+      "purpose": "Boundary walls, drains and platform faces",
+      "source": "https://polyhaven.com/a/concrete_wall_008",
+      "license": "CC0 1.0",
+      "authors": [
+        "Dario Barresi",
+        "Charlotte Baglioni"
+      ],
+      "real_size_m": [
+        2.7100000381469727,
+        2.7100000381469727
+      ],
+      "resolution": "1k",
+      "maps": {
+        "diff": {
+          "file": "04_Assets\\S10\\PolyHaven\\concrete_wall_008\\concrete_wall_008_diff_1k.jpg",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/concrete_wall_008/concrete_wall_008_diff_1k.jpg",
+          "bytes": 623051,
+          "sha256": "a203166d280d3cfc6a91bbc9ffdae406eb9555b4a4f658cd92619063eb17c147"
+        },
+        "nor_dx": {
+          "file": "04_Assets\\S10\\PolyHaven\\concrete_wall_008\\concrete_wall_008_nor_dx_1k.jpg",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/concrete_wall_008/concrete_wall_008_nor_dx_1k.jpg",
+          "bytes": 515128,
+          "sha256": "b8bd12cc3b79f9ff2d434c91b49c74a8eba633719249bd600fbae6a3cb8ecb5c"
+        },
+        "arm": {
+          "file": "04_Assets\\S10\\PolyHaven\\concrete_wall_008\\concrete_wall_008_arm_1k.jpg",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/concrete_wall_008/concrete_wall_008_arm_1k.jpg",
+          "bytes": 667023,
+          "sha256": "12b8b88bd0a9b303150f45cf0080371d78b7f04744d4ab14030b8958ec7dc2e3"
+        }
+      }
+    },
+    {
+      "asset": "asphalt_02",
+      "purpose": "Service roads alongside the railway",
+      "source": "https://polyhaven.com/a/asphalt_02",
+      "license": "CC0 1.0",
+      "authors": [
+        "Rob Tuytel"
+      ],
+      "real_size_m": [
+        3.000000238418579,
+        3.0
+      ],
+      "resolution": "1k",
+      "maps": {
+        "diff": {
+          "file": "04_Assets\\S10\\PolyHaven\\asphalt_02\\asphalt_02_diff_1k.jpg",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/asphalt_02/asphalt_02_diff_1k.jpg",
+          "bytes": 731707,
+          "sha256": "1aa5ce99f58a625c71d48cfc3e68b65ca85ccb00f39e045c0a928608a0ea25ed"
+        },
+        "nor_dx": {
+          "file": "04_Assets\\S10\\PolyHaven\\asphalt_02\\asphalt_02_nor_dx_1k.jpg",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/asphalt_02/asphalt_02_nor_dx_1k.jpg",
+          "bytes": 1259681,
+          "sha256": "789ceaee56f6e85b7e5837e8b0fd472ff3637ec7c72b1002b7b56eaf667d9b8c"
+        },
+        "arm": {
+          "file": "04_Assets\\S10\\PolyHaven\\asphalt_02\\asphalt_02_arm_1k.jpg",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/asphalt_02/asphalt_02_arm_1k.jpg",
+          "bytes": 296770,
+          "sha256": "56bd8e591a3db579846fcb5185f60b0651e0bd4ea85c3529c339e6746243c9cf"
+        }
+      }
+    }
+  ]
+}

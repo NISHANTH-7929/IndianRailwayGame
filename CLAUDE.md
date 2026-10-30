@@ -155,6 +155,18 @@ this list, and update it as gaps close:
 - Corridor has a third housing row and a continuous far skyline band (houses,
   black rooftop tanks, coconut palms, canopy) so the horizon is never empty.
 
+## Third-party assets
+
+- **Poly Haven (CC0)**: `04_Assets/S10/PolyHaven/` (+ `provenance.json`), fetched by
+  `07_Documentation/S10/Tools/fetch_polyhaven_v1.py`, materials authored by
+  `import_polyhaven_materials_v1.py` into `/Game/IndianRailway/S10/PolyHavenV1`
+  (`M_ChennaiGround`, `M_ChennaiConcrete`, `M_ChennaiAsphalt`; `M_ChennaiFacade` reuses the
+  plaster map). 1K maps only, for the Android budget.
+- **Fab / Megascans**: downloaded by the developer while signed in to Epic (Claude cannot
+  sign in). They land under `Content/Fab/`; check each item's licence on Fab, record it in a
+  provenance file next to where it is used, and import at Medium quality for Android.
+- Every runtime-loaded content folder needs a `DirectoriesToAlwaysCook` entry.
+
 ## Working agreement
 
 - Before a major system: understand → dependencies → propose architecture →

@@ -1,0 +1,24 @@
+{
+  "materials": [
+    {
+      "material": "/Game/IndianRailway/S10/PolyHavenV1/M_ChennaiGround",
+      "textures": 5,
+      "samples": 6
+    },
+    {
+      "material": "/Game/IndianRailway/S10/ChennaiFacadeV1/M_ChennaiFacade",
+      "textures": 2,
+      "samples": 2
+    },
+    {
+      "material": "/Game/IndianRailway/S10/PolyHavenV1/M_ChennaiConcrete",
+      "textures": 2,
+      "samples": 2
+    },
+    {
+      "material": "/Game/IndianRailway/S10/PolyHavenV1/M_ChennaiAsphalt",
+      "textures": 2,
+      "samples": 2
+    }
+  ]
+}

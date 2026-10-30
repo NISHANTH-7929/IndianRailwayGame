@@ -55,6 +55,8 @@ struct FTambaramReview {
   const FString Track=AssetPath(TEXT("Meshes"),TEXT("SM_Track6m_RealismV2"));
   const FString Ballast=AssetPath(TEXT("MaterialsV4"),TEXT("M_TrackBallast")),StoneFinish=AssetPath(TEXT("MaterialsV4"),TEXT("M_TrackStone"));
   const FString Ground=AssetPath(TEXT("MaterialsV4"),TEXT("M_DryGround"));
+  // S10 photographic laterite/grass ground supersedes the procedural dry ground where loaded.
+  const FString ChennaiGround=TEXT("/Game/IndianRailway/S10/PolyHavenV1/M_ChennaiGround.M_ChennaiGround");
   const FString NatureRoot=TEXT("/Game/IndianRailway/S9/CorridorNatureV1/");
   const TCHAR* NatureMeshes[]={TEXT("SM_CorridorLeafClusterV2"),TEXT("SM_CorridorVerge12m"),TEXT("SM_CorridorGrassPatchV1"),TEXT("SM_CorridorBranchV1")};
   const TCHAR* NatureMaterials[]={TEXT("M_CorridorLeaf"),TEXT("M_CorridorNatureGround"),TEXT("M_CorridorDryGrass"),TEXT("M_CorridorBark")};
@@ -95,7 +97,7 @@ struct FTambaramReview {
     for(int32 Slot=0;Slot<Part->GetNumMaterials();++Slot){
      auto* Interface=Part->GetMaterial(Slot);auto* Material=Interface?Interface->GetMaterial():nullptr;
      const FString Path=Material?Material->GetPathName():TEXT("null");Assigned.Add(Path);MaterialCounts.FindOrAdd(Path)+=Count;
-     if(Path==Ground&&Interface){float Coverage=0;if(Interface->GetScalarParameterValue(FMaterialParameterInfo(TEXT("VegetationCoverage")),Coverage)&&Coverage>0)VegetatedGroundInstances+=Count;}
+     if((Path==Ground||Path==ChennaiGround)&&Interface){float Coverage=0;if(Interface->GetScalarParameterValue(FMaterialParameterInfo(TEXT("VegetationCoverage")),Coverage)&&Coverage>0)VegetatedGroundInstances+=Count;}
      if(Material&&Path.StartsWith(Root+TEXT("MaterialsV4/"))&&!CheckedMaterials.Contains(Path)){
       CheckedMaterials.Add(Path);TArray<UTexture*> Used;Material->GetUsedTextures(Used);
       TArray<TSharedPtr<FJsonValue>> TexturePaths;TextureBindingsPassed&=!Used.IsEmpty();
@@ -118,7 +120,7 @@ struct FTambaramReview {
      }
      if(MeshPath==Bed&&Assigned.Contains(Ballast))Beds+=Count;
      if(MeshPath==Stone&&Assigned.Contains(StoneFinish))Stones+=Count;
-     if(Assigned.Contains(Ground))Grounds+=Count;
+     if(Assigned.Contains(Ground)||Assigned.Contains(ChennaiGround))Grounds+=Count;
      if(MeshPath==Track){Tracks+=Count;for(int32 I=0;I<3;++I)if(Assigned.Contains(AssetPath(TEXT("MaterialsV4"),FinishNames[I])))OrdinaryFinish[I]+=Count;}
     }else{
      Turnouts+=Count;for(int32 I=0;I<4;++I)if(Assigned.Contains(AssetPath(TEXT("MaterialsV4"),FinishNames[I])))TurnoutFinish[I]+=Count;

@@ -150,6 +150,20 @@ bool ARailTambaramCorridorView::LoadAssets(){
   OuterGroundMaterial->SetVectorParameterValue(TEXT("Color"),FLinearColor(.085f,.095f,.04f));
   OuterGroundMaterial->SetScalarParameterValue(TEXT("VegetationCoverage"),.95f);
  }
+ // S10 photographic surfaces (CC0 Poly Haven maps, world-aligned): red laterite and weedy
+ // grass ground, weathered concrete for slabs/walls/posts/drains, cracked asphalt roads.
+ // Optional during migration: absent assets leave the procedural finishes above in place.
+ if(auto* Ground=LoadObject<UMaterialInterface>(nullptr,TEXT("/Game/IndianRailway/S10/PolyHavenV1/M_ChennaiGround.M_ChennaiGround"))){
+  // Exposed laterite under Chennai dust reads brown-red, not the saturated orange of a fresh cut.
+  const FLinearColor Dust(.80f,.86f,.92f);
+  auto* Trackside=UMaterialInstanceDynamic::Create(Ground,this);Trackside->SetScalarParameterValue(TEXT("VegetationCoverage"),.40f); // trodden, dusty
+  Trackside->SetVectorParameterValue(TEXT("Tint"),Dust);
+  if(GroundPalette.Num())GroundPalette[0]=Trackside;
+  OuterGroundMaterial=UMaterialInstanceDynamic::Create(Ground,this);OuterGroundMaterial->SetScalarParameterValue(TEXT("VegetationCoverage"),.74f);
+  OuterGroundMaterial->SetVectorParameterValue(TEXT("Tint"),Dust);
+ }
+ if(auto* Concrete=LoadObject<UMaterialInterface>(nullptr,TEXT("/Game/IndianRailway/S10/PolyHavenV1/M_ChennaiConcrete.M_ChennaiConcrete")))Materials[5]=Concrete;
+ if(auto* Asphalt=LoadObject<UMaterialInterface>(nullptr,TEXT("/Game/IndianRailway/S10/PolyHavenV1/M_ChennaiAsphalt.M_ChennaiAsphalt")))Materials[18]=Asphalt;
  Diagnostic=TEXT("Ready: bounded graph-sampled corridor cells");return true;
 }
 void ARailTambaramCorridorView::RemoveCell(int32 Key){
