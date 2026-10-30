@@ -76,3 +76,6 @@ venv/
 # Generated validation captures and copied milestone baselines
 /07_Documentation/**/Evidence/
 /07_Documentation/**/Baseline/
+# Local browser-automation scratch output
+/.playwright-cli/
+/output/
